@@ -8,7 +8,7 @@ public class Automate {
     private ArrayList listeJoueurs ;
 
     public Automate(Joueur listeJoueurs){
-       
+
     }
 
     public void Evolue() {
