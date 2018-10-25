@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class LanceDesInitial extends Etat {
+public class LanceDesInitial implements Etat {
 
     public void LancerDes () {
 

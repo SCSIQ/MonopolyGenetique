@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class PiocherUneCarte extends Etat {
+public class PiocherUneCarte implements Etat {
 
     public void ContenuCarte(){
 

@@ -1,4 +1,4 @@
 package Metier.Automate;
 
-public class ChoixProprietePossede extends Etat {
+public class ChoixProprietePossede implements Etat {
 }

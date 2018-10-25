@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class StatsPartie extends Etat {
+public class StatsPartie implements Etat {
 
     public void Afficher(){
 

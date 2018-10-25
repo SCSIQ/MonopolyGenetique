@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class LacerDesJoueur extends Etat {
+public class LacerDesJoueur implements Etat {
 
     public void LancementDes(){
     }

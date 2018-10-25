@@ -1,4 +1,5 @@
 package Metier.Automate;
 
-public class AcheterMaison extends Etat {
+public class AcheterMaison implements Etat {
+
 }

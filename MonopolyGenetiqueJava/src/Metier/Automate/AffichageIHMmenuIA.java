@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class AffichageIHMmenuIA extends Etat {
+public class AffichageIHMmenuIA implements Etat {
 
     public void LancerIHM(){
 

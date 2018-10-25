@@ -2,7 +2,7 @@ package Metier.Automate;
 
 import Entites.Joueur;
 
-public class PerdreArgent extends Etat {
+public class PerdreArgent implements Etat {
 
     public void DiminuerSolde (Joueur j ){
 

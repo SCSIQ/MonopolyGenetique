@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class EchangerPropriete extends Etat {
+public class EchangerPropriete implements Etat {
 
     public void Echanger(){
 

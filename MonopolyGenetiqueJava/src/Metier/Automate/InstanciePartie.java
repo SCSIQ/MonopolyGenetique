@@ -1,5 +1,5 @@
 package Metier.Automate;
 
-public class InstanciePartie extends Etat{
+public class InstanciePartie implements Etat{
     
 }

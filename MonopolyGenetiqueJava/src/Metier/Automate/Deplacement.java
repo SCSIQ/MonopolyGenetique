@@ -1,6 +1,8 @@
 package Metier.Automate;
 
-public class Deplacement extends Etat {
+import Entites.Pion;
+
+public class Deplacement implements Etat {
 
     public void Deplacer (Pion p ){
 

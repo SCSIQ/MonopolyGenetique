@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-public class VendreMaison extends Etat {
+public class VendreMaison implements Etat {
 
     public VendreMaison(){
 

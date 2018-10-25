@@ -2,7 +2,7 @@ package Metier.Automate;
 
 import Metier.Plateau.Proprietes;
 
-public class VendrePropriete extends Etat {
+public class VendrePropriete implements Etat {
 
     public void Vendre(Proprietes p ){
 

@@ -1,4 +1,4 @@
 package Metier.Automate;
 
-public class FinTour extends Etat {
+public class FinTour implements Etat {
 }
