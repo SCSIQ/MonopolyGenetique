@@ -4,11 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 
 public class Accueil extends Parent {
 
-    public Accueil(){
+    public Accueil(Stage primaryStage){
+
+
         Button solo = new Button("Solo") ;
         Button HumainVShumain = new Button("Humain VS Humain");
         Button iaVSia = new Button("IA VS IA");
@@ -28,6 +31,7 @@ public class Accueil extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 Solo MenuSolo = new Solo() ;
+                primaryStage.close();
             }
         });
 
@@ -35,7 +39,8 @@ public class Accueil extends Parent {
         HumainVShumain.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                HumainVShumain MenuHumain = new HumainVShumain();
+                primaryStage.close();
             }
         });
 
@@ -43,7 +48,8 @@ public class Accueil extends Parent {
         iaVSia.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                IaVSia MenuIa = new IaVSia() ;
+                primaryStage.close();
             }
         });
 
