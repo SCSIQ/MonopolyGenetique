@@ -1,8 +1,8 @@
 package IHM.Plateau.CartePiocher;
 
-import IHM.Plateau.CartePiocher.CaseCarte;
+import IHM.Plateau.Cases;
 
-public class CaisseCommune extends CaseCarte {
+public class CaisseCommune extends Cases {
 
     public void PiocherCarteCaisseCommune(){
 
