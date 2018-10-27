@@ -4,8 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+
 
 
 public class Solo extends Parent {
@@ -27,6 +30,11 @@ public class Solo extends Parent {
         //couleur
         Text t_couleur = new Text(50, 130, "Choisissez votre couleur : ");
 
+        ColorPicker couleur = new ColorPicker();
+        couleur.setValue(Color.RED);
+        couleur.setTranslateX(300);
+        couleur.setTranslateY(110);
+
         //nombre de tours
         Text t_tours = new Text(50, 190, "Choisissez le nombre de  : ");
 
@@ -38,6 +46,8 @@ public class Solo extends Parent {
         );
         nb_tours.setTranslateX(300);
         nb_tours.setTranslateY(170);
+
+
 
         //boutons
         Button menu_principal = new Button("MENU PRINCIPAL");
@@ -56,6 +66,7 @@ public class Solo extends Parent {
         this.getChildren().add(t_adv);
         this.getChildren().add(nb_adversaires);
         this.getChildren().add(t_couleur);
+        this.getChildren().add(couleur);
         this.getChildren().add(t_tours);
         this.getChildren().add(nb_tours);
         this.getChildren().add(menu_principal);
