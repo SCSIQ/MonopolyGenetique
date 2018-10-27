@@ -1,4 +1,4 @@
 package IHM.Fenetre;
 
-public class Menu {
+public class Accueil {
 }
