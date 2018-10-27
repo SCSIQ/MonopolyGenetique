@@ -1,6 +1,5 @@
 package IHM.Fenetre;
 
-<<<<<<< HEAD
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -11,10 +10,9 @@ import javafx.scene.text.Text;
 
 public class Solo extends Parent {
 
-    public Solo()
-    {
+    public Solo() {
         //nombre d'adversaires
-        Text t_adv = new Text(50,50,"Choisissez le nombre d'adversaires : ") ;
+        Text t_adv = new Text(50, 50, "Choisissez le nombre d'adversaires : ");
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
@@ -42,7 +40,7 @@ public class Solo extends Parent {
         nb_tours.setTranslateY(170);
 
         //boutons
-        Button menu_principal =  new Button("MENU PRINCIPAL");
+        Button menu_principal = new Button("MENU PRINCIPAL");
         menu_principal.setTranslateX(40);
         menu_principal.setTranslateY(250);
 
@@ -62,14 +60,6 @@ public class Solo extends Parent {
         this.getChildren().add(nb_tours);
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
-=======
 
-import javafx.scene.Parent;
-
-public class Solo extends Parent {
-
-    public Solo(){
-        
->>>>>>> 052f2431c35647cee654088042774fa2c3e891ca
     }
 }

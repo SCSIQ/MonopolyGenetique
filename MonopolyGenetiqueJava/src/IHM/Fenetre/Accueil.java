@@ -10,9 +10,11 @@ import javafx.stage.Stage;
 
 public class Accueil extends Parent {
     Solo solo_fenetre;
+    HumainVShumain humain_fenetre ;
 
 
-    public Accueil(){
+    public Accueil(Stage primaryStage){
+
         Button solo = new Button("Solo") ;
         Button HumainVShumain = new Button("Humain VS Humain");
         Button iaVSia = new Button("IA VS IA");
@@ -38,6 +40,7 @@ public class Accueil extends Parent {
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
                 nouvelle_fenetre.show();
+                primaryStage.close() ;
             }
         });
 
@@ -45,7 +48,14 @@ public class Accueil extends Parent {
         HumainVShumain.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+               //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
+                HumainVShumain humain_fenetre = new HumainVShumain();
+                Scene nouvelle_scene = new Scene(humain_fenetre,500,300);
+                Stage nouvelle_fenetre = new Stage();
+                nouvelle_fenetre.setScene(nouvelle_scene);
+                //on montre la nouvelle fenêtre
+                nouvelle_fenetre.show();
+                primaryStage.close() ;
             }
         });
 
@@ -53,7 +63,8 @@ public class Accueil extends Parent {
         iaVSia.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                IaVSia MenuIa = new IaVSia() ;
+                primaryStage.close();
             }
         });
 
