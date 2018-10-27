@@ -10,19 +10,24 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) {
+
 
         primaryStage.setTitle("Monopoly Génétique");
         Group root = new Group() ;
 
-        Accueil accueil = new Accueil() ;
+        Accueil accueil = new Accueil(primaryStage) ;
 
         primaryStage.setScene(new Scene(root, 300, 275));
 
         root.getChildren().add(accueil) ;
         primaryStage.show();
+
     }
+
 
 
     public static void main(String[] args) {

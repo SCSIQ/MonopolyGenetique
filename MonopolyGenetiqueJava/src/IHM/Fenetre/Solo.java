@@ -1,5 +1,6 @@
 package IHM.Fenetre;
 
+<<<<<<< HEAD
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -61,5 +62,14 @@ public class Solo extends Parent {
         this.getChildren().add(nb_tours);
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
+=======
+
+import javafx.scene.Parent;
+
+public class Solo extends Parent {
+
+    public Solo(){
+        
+>>>>>>> 052f2431c35647cee654088042774fa2c3e891ca
     }
 }
