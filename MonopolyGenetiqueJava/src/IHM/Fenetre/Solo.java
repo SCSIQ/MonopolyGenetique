@@ -1,20 +1,22 @@
 package IHM.Fenetre;
 
-<<<<<<< HEAD
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+
 
 
 public class Solo extends Parent {
 
-    public Solo()
-    {
+    public Solo() {
         //nombre d'adversaires
-        Text t_adv = new Text(50,50,"Choisissez le nombre d'adversaires : ") ;
+        Text t_adv = new Text(50, 50, "Choisissez le nombre d'adversaires : ");
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
@@ -29,6 +31,11 @@ public class Solo extends Parent {
         //couleur
         Text t_couleur = new Text(50, 130, "Choisissez votre couleur : ");
 
+        ColorPicker couleur = new ColorPicker();
+        couleur.setValue(Color.RED);
+        couleur.setTranslateX(300);
+        couleur.setTranslateY(110);
+
         //nombre de tours
         Text t_tours = new Text(50, 190, "Choisissez le nombre de  : ");
 
@@ -41,8 +48,10 @@ public class Solo extends Parent {
         nb_tours.setTranslateX(300);
         nb_tours.setTranslateY(170);
 
+
+
         //boutons
-        Button menu_principal =  new Button("MENU PRINCIPAL");
+        Button menu_principal = new Button("MENU PRINCIPAL");
         menu_principal.setTranslateX(40);
         menu_principal.setTranslateY(250);
 
@@ -58,18 +67,10 @@ public class Solo extends Parent {
         this.getChildren().add(t_adv);
         this.getChildren().add(nb_adversaires);
         this.getChildren().add(t_couleur);
+        this.getChildren().add(couleur);
         this.getChildren().add(t_tours);
         this.getChildren().add(nb_tours);
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
-=======
-
-import javafx.scene.Parent;
-
-public class Solo extends Parent {
-
-    public Solo(){
-        
->>>>>>> 052f2431c35647cee654088042774fa2c3e891ca
     }
 }

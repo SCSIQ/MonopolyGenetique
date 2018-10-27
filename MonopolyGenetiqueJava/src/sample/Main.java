@@ -19,7 +19,7 @@ public class Main extends Application {
         primaryStage.setTitle("Monopoly Génétique");
         Group root = new Group() ;
 
-        Accueil accueil = new Accueil(primaryStage) ;
+        Accueil accueil = new Accueil(/*primaryStage*/) ;
 
         primaryStage.setScene(new Scene(root, 300, 275));
 
