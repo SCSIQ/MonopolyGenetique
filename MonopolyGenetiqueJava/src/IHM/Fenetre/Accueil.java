@@ -27,7 +27,7 @@ public class Accueil extends Parent {
         solo.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                Solo MenuSolo = new Solo() ;
             }
         });
 
