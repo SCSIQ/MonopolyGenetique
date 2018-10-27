@@ -85,14 +85,121 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1601727761">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="899" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="899" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-757045254">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1587" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1587" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MonopolyGenetiqueJava" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/TaxeDeLuxe.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+
+            <state relative-caret-position="172">
+              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+              <folding>
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+              </folding>
+
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/Accueil.java">
+          <provider selected="true" editor-type-id="text-editor">
+
+            <state relative-caret-position="204">
+              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/Solo.java">
+          <provider selected="true" editor-type-id="text-editor">
+
+
+            <state relative-caret-position="323">
+              <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/HumainVShumain.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="34">
               <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+=======
+            <state relative-caret-position="793">
+              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
             </state>
           </provider>
         </entry>
@@ -118,19 +225,42 @@
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Plateau/ServicePublic.java" />
         <option value="$PROJECT_DIR$/src/Plateau/TaxeDeLuxe.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/TaxeDeLuxe.java" />
+        <option value="$PROJECT_DIR$/src/Metier/Automate/Argent/GagnerArgent.java" />
+        <option value="$PROJECT_DIR$/src/Metier/Automate/Argent/PerdreArgent.java" />
+        <option value="$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixPossibles.java" />
+        <option value="$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixProprietePossede.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Robinet.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/Menu.java" />
+
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/Accueil.java" />
+
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/Solo.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/Accueil.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/HumainVShumain.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
+=======
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,27 +277,14 @@
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entites" type="462c0819:PsiDirectoryNode" />
+              <item name="IHM" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="CartePiocher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="LieuPublic" type="462c0819:PsiDirectoryNode" />
+              <item name="IHM" type="462c0819:PsiDirectoryNode" />
+              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
@@ -181,6 +298,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Metier" type="462c0819:PsiDirectoryNode" />
               <item name="Automate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Metier" type="462c0819:PsiDirectoryNode" />
+              <item name="Automate" type="462c0819:PsiDirectoryNode" />
+              <item name="Argent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Metier" type="462c0819:PsiDirectoryNode" />
+              <item name="Automate" type="462c0819:PsiDirectoryNode" />
+              <item name="Argent" type="462c0819:PsiDirectoryNode" />
+              <item name="Maison" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Metier" type="462c0819:PsiDirectoryNode" />
+              <item name="Automate" type="462c0819:PsiDirectoryNode" />
+              <item name="Choix" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
@@ -211,12 +353,15 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540562917552" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540646906333" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -270,26 +415,38 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.86427146" visible="true" weight="0.0" />
+      <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.0037821482" />
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.13572854" side_tool="true" weight="0.21406959" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17868853" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32907802" />
+=======
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32569557" />
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -315,13 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Automate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -370,10 +520,33 @@
     <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/CartePiocher/Prison.java" />
     <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/CartePiocher/ParcGratuit.java" />
     <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/CartePiocher/CaisseCommune.java" />
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Argent/Maison/AcheterMaison.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/PerdreArgent.java" />
+    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/TaxeDeLuxe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/EchangerPropriete.java" />
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Argent/GagnerArgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -384,10 +557,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java">
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Argent/Maison/AcheterMaison.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Argent/PerdreArgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Automate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixPossibles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixProprietePossede.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -398,21 +602,96 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/AffichageIHMmenuIA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/TaxeDeLuxe.java">
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/DebutTour.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/EtreEnPrison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+<<<<<<< HEAD
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+=======
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Robinet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/Menu.java" />
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/Accueil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/Solo.java">
+      <provider selected="true" editor-type-id="text-editor">
+               <state relative-caret-position="204">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+
+          <folding>
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/Accueil.java">
+      <provider selected="true" editor-type-id="text-editor">
+
+
+        <state relative-caret-position="323">
+          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/HumainVShumain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+>>>>>>> 0f485b1cebc8bd337db1c756d1e54d4a55aa2141
         </state>
       </provider>
     </entry>
