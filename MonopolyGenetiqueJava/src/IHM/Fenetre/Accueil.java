@@ -3,10 +3,14 @@ package IHM.Fenetre;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 
 public class Accueil extends Parent {
+    Solo solo_fenetre;
+
 
     public Accueil(){
         Button solo = new Button("Solo") ;
@@ -27,7 +31,13 @@ public class Accueil extends Parent {
         solo.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
+                Solo solo_fenetre = new Solo();
+                Scene nouvelle_scene = new Scene(solo_fenetre,500,300);
+                Stage nouvelle_fenetre = new Stage();
+                nouvelle_fenetre.setScene(nouvelle_scene);
+                //on montre la nouvelle fenêtre
+                nouvelle_fenetre.show();
             }
         });
 
