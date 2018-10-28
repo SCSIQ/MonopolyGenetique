@@ -1,5 +1,6 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import IHM.Fenetre.FenetreParties.Jeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -9,7 +10,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class IaVSia extends Parent {
+public class IaVSia extends Parent{
 
     public IaVSia(Stage primaryStage, Stage nouvelle_fenetre)
     {
@@ -76,6 +77,14 @@ public class IaVSia extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
+                Stage nouvelle_fenetre_plateau = new Stage();
+                Jeu fenetre_jeu = new Jeu() ;
+                Scene nouvelle_scene = new Scene(fenetre_jeu,1478.4,2230.9);
+
+                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
+                //on montre la nouvelle fenêtre
+                nouvelle_fenetre_plateau.show();
+                nouvelle_fenetre.close();
 
             }
         });
