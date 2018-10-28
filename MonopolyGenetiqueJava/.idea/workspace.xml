@@ -87,12 +87,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1176" />
+          <entry key="java" value="1802" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1176" />
+          <entry key="JAVA" value="1802" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -133,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="105" column="40" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="105" selection-end-column="40" />
+            <state relative-caret-position="171">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="e#3162#3163#0" expanded="true" />
                 <element signature="e#3214#3215#0" expanded="true" />
@@ -143,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+            <state relative-caret-position="358">
+              <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,26 +158,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="1076">
               <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="408" column="99" lean-forward="true" selection-start-line="408" selection-start-column="99" selection-end-line="408" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="239">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
@@ -203,19 +194,19 @@
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/IaVSia.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/Accueil.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="584" />
-    <option name="width" value="789" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -276,7 +267,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540736051058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540738034031" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -308,7 +299,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09682299" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09682299" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -317,7 +308,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32733223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32733223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,27 +366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="105" column="40" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="105" selection-end-column="40" />
-          <folding>
-            <element signature="e#3162#3163#0" expanded="true" />
-            <element signature="e#3214#3215#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -406,24 +376,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="72">
+          <caret line="401" column="99" lean-forward="true" selection-start-line="401" selection-start-column="99" selection-end-line="401" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="408" column="99" lean-forward="true" selection-start-line="408" selection-start-column="99" selection-end-line="408" selection-end-column="99" />
+        <state relative-caret-position="1076">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="239">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="e#3162#3163#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
