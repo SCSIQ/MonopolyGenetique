@@ -24,16 +24,16 @@ public class Solo extends Parent {
                 "4",
                 "5"
         );
-        nb_adversaires.setTranslateX(300);
-        nb_adversaires.setTranslateY(30);
+        nb_adversaires.setLayoutX(300);
+        nb_adversaires.setLayoutY(30);
 
         //couleur
         Text t_couleur = new Text(50, 130, "Choisissez votre couleur : ");
 
         ColorPicker couleur = new ColorPicker();
         couleur.setValue(Color.RED);
-        couleur.setTranslateX(300);
-        couleur.setTranslateY(110);
+        couleur.setLayoutX(300);
+        couleur.setLayoutY(110);
 
         //nombre de tours
         Text t_tours = new Text(50, 190, "Choisissez le nombre de  : ");
@@ -44,8 +44,8 @@ public class Solo extends Parent {
                 "30",
                 "40"
         );
-        nb_tours.setTranslateX(300);
-        nb_tours.setTranslateY(170);
+        nb_tours.setLayoutX(300);
+        nb_tours.setLayoutY(170);
 
 
 
@@ -58,9 +58,27 @@ public class Solo extends Parent {
         commencer_partie.setTranslateX(300);
         commencer_partie.setTranslateY(250);
 
+        //ACTION SI BOUTON MENU PRINCIPAL
+        menu_principal.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        //ACTION SI BOUTON COMMENCER PARTIE
+        commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+
+            }
+        });
+
+
         //position
-        /*this.setTranslateX(20);
-        this.setTranslateY(20);*/
+        this.setTranslateX(20);
+        this.setTranslateY(5);
 
         //ajout des éléments à la fenêtre
         this.getChildren().add(t_adv);

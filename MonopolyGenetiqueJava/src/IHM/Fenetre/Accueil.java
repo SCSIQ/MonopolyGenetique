@@ -18,6 +18,7 @@ public class Accueil extends Parent {
         Button solo = new Button("Solo") ;
         Button HumainVShumain = new Button("Humain VS Humain");
         Button iaVSia = new Button("IA VS IA");
+        Button quitter = new Button("QUITTER");
 
         //POSITION DES BOUTONS
         solo.setLayoutX(50);
@@ -28,6 +29,15 @@ public class Accueil extends Parent {
 
         iaVSia.setLayoutX(50);
         iaVSia.setLayoutY(80);
+
+        quitter.setLayoutX(50);
+        quitter.setLayoutY(140);
+
+        //TAILLE DES BOUTONS
+        solo.setPrefSize(150,10);
+        HumainVShumain.setPrefSize(150,10);
+        iaVSia.setPrefSize(150,10);
+        quitter.setPrefSize(150,10);
 
         //ACTION : SI ON APPUIE SUR SOLO
         solo.setOnAction(new EventHandler<ActionEvent>() {
@@ -53,7 +63,7 @@ public class Accueil extends Parent {
                 Scene nouvelle_scene = new Scene(humain_fenetre,500,300);
                 Stage nouvelle_fenetre = new Stage();
                 nouvelle_fenetre.setScene(nouvelle_scene);
-                //on montre la nouvelle fenêtre
+                //on montre la nouvelle fenêtre et on ferme l'ancienne
                 nouvelle_fenetre.show();
                 primaryStage.close() ;
             }
@@ -64,6 +74,18 @@ public class Accueil extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 IaVSia MenuIa = new IaVSia() ;
+                Scene nouvelle_scene = new Scene(MenuIa,500,300);
+                Stage nouvelle_fenetre = new Stage();
+                nouvelle_fenetre.setScene(nouvelle_scene);
+                nouvelle_fenetre.show();
+                primaryStage.close();
+            }
+        });
+
+        //ACTION : SI ON APPUIE SUR QUITTER
+        quitter.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
                 primaryStage.close();
             }
         });
@@ -76,6 +98,7 @@ public class Accueil extends Parent {
         this.getChildren().add(solo);
         this.getChildren().add(HumainVShumain);
         this.getChildren().add(iaVSia);
+        this.getChildren().add(quitter);
     }
 
 
