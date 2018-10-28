@@ -17,11 +17,12 @@ public class Jeu extends Parent {
         Rectangle rect_terrain = new Rectangle();
         Rectangle rect_gare = new Rectangle();
         Rectangle rect_compagnie = new Rectangle();
+        Rectangle rect_cartePrison = new Rectangle() ;
 
         //BOUTONS
-        Button bt_menu = new Button() ;
-        Button bt_lancerDes = new Button() ;
-        Button bt_tourSuivant = new Button() ;
+        Button bt_menu = new Button("Menu") ;
+        Button bt_lancerDes = new Button("Lancer les dés") ;
+        Button bt_tourSuivant = new Button("Tour suivant") ;
 
 
         //APPEL DES FONCTIONS POUR TAILLES, COULEURS ET POSITION
@@ -32,13 +33,10 @@ public class Jeu extends Parent {
         RectangleTerrain(rect_terrain);
         RectangleGare( rect_gare);
         RectangleCompagnies(rect_compagnie);
-
-
-        //TAILLE DES BOUTONS
-        bt_menu.setPrefSize(150,10);
-        bt_lancerDes.setPrefSize(150,10);
-        bt_tourSuivant.setPrefSize(150,10);
-
+        RectangleCartePrison(rect_cartePrison);
+        boutonMenu(bt_menu);
+        boutonLancerDes(bt_lancerDes);
+        boutonTourSuivant(bt_tourSuivant);
 
 
 
@@ -50,11 +48,13 @@ public class Jeu extends Parent {
         this.getChildren().add(rect_terrain);
         this.getChildren().add(rect_gare);
         this.getChildren().add(rect_compagnie);
-        /*this.getChildren().add(bt_menu);
+        this.getChildren().add(rect_cartePrison);
+        this.getChildren().add(bt_menu);
         this.getChildren().add(bt_lancerDes);
-        this.getChildren().add(bt_tourSuivant);*/
+        this.getChildren().add(bt_tourSuivant);
 
     }
+    //*********************************************AFFICHAGE DES RECTANGLES /BOUTONS***************************************************************************//
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
 
@@ -156,4 +156,46 @@ public class Jeu extends Parent {
         rect_compagnie.setFill(Color.TRANSPARENT);
         rect_compagnie.setStroke(Color.BLACK);
     }
+
+    public void RectangleCartePrison(Rectangle rect_cartePrison){
+
+        //TAILLE DU RECTANGLE ET POSITION
+
+        rect_cartePrison.setHeight(50);
+        rect_cartePrison.setWidth(305);
+        rect_cartePrison.setX(950);
+        rect_cartePrison.setY(535);
+
+        //COULEUR ET CONTOUR
+        rect_cartePrison.setFill(Color.TRANSPARENT);
+        rect_cartePrison.setStroke(Color.BLACK);
+    }
+
+    public void boutonMenu(Button bt_menu){
+
+        //TAILLE DES BOUTONS
+        bt_menu.setPrefSize(150,10);
+        bt_menu.setLayoutX(1105);
+        bt_menu.setLayoutY(50);
+
+    }
+
+    public void boutonLancerDes(Button bt_lancerDes){
+
+        //TAILLE DES BOUTONS
+        bt_lancerDes.setPrefSize(150,10);
+        bt_lancerDes.setLayoutX(950);
+        bt_lancerDes.setLayoutY(600);
+
+    }
+
+    public void boutonTourSuivant(Button bt_tourSuivant){
+
+        //TAILLE DES BOUTONS
+        bt_tourSuivant.setPrefSize(150,10);
+        bt_tourSuivant.setLayoutX(1105);
+        bt_tourSuivant.setLayoutY(600);
+
+    }
+
 }
