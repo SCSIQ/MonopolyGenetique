@@ -45,6 +45,10 @@ public class IaVSia extends Parent {
                 "40",
                 "50"
         );
+            //affichage du premier élément
+        nb_adversaires.getSelectionModel().selectFirst();
+        nb_equipes.getSelectionModel().selectFirst();
+        nb_tours.getSelectionModel().selectFirst();
 
         nb_adversaires.setLayoutX(400);
         nb_adversaires.setLayoutY(60);
@@ -76,7 +80,7 @@ public class IaVSia extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-
+                nouvelle_fenetre.close();
             }
         });
 

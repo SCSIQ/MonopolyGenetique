@@ -1,5 +1,6 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import IHM.Fenetre.FenetreParties.Jeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -33,6 +34,9 @@ public class Solo extends Parent {
                 "4",
                 "5"
         );
+
+        nb_adversaires.getSelectionModel().selectFirst();
+
         nb_adversaires.setLayoutX(300);
         nb_adversaires.setLayoutY(50);
 
@@ -53,8 +57,12 @@ public class Solo extends Parent {
                 "30",
                 "40"
         );
+
+        nb_tours.getSelectionModel().selectFirst();
+
         nb_tours.setLayoutX(300);
         nb_tours.setLayoutY(170);
+
 
 
 
@@ -81,6 +89,7 @@ public class Solo extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
+                nouvelle_fenetre.close();
 
             }
         });

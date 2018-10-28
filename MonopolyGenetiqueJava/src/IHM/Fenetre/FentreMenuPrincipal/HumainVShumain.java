@@ -29,6 +29,9 @@ public class HumainVShumain extends Parent {
                 "4",
                 "5"
         );
+
+        nb_adversaires.getSelectionModel().selectFirst();
+
         nb_adversaires.setLayoutX(300);
         nb_adversaires.setLayoutY(60);
 
@@ -42,6 +45,9 @@ public class HumainVShumain extends Parent {
                 "30",
                 "40"
         );
+
+        nb_tours.getSelectionModel().selectFirst();
+
         nb_tours.setTranslateX(300);
         nb_tours.setTranslateY(170);
 
@@ -69,7 +75,7 @@ public class HumainVShumain extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-
+                nouvelle_fenetre.close();
             }
         });
 
