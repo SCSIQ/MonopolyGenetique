@@ -1,5 +1,7 @@
 package IHM.Fenetre;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,9 +13,14 @@ import javafx.stage.Stage;
 
 public class HumainVShumain extends Parent {
 
-    public HumainVShumain(){
+    public HumainVShumain(Stage primaryStage){
 
-        Text t_adv = new Text(50, 50, "Choisissez le nombre d'adversaires : ");
+        //titre
+        Text t_titre = new Text(130,20,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
+        t_titre.setScaleX(2);
+        t_titre.setScaleY(2);
+
+        Text t_adv = new Text(50, 80, "Choisissez le nombre d'adversaires : ");
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
@@ -22,12 +29,12 @@ public class HumainVShumain extends Parent {
                 "4",
                 "5"
         );
-        nb_adversaires.setTranslateX(300);
-        nb_adversaires.setTranslateY(30);
+        nb_adversaires.setLayoutX(300);
+        nb_adversaires.setLayoutY(60);
 
 
         //nombre de tours
-        Text t_tours = new Text(50, 190, "Choisissez le nombre de  : ");
+        Text t_tours = new Text(50, 190, "Choisissez le nombre de tours : ");
 
         ComboBox nb_tours = new ComboBox();
         nb_tours.getItems().addAll(
@@ -38,20 +45,42 @@ public class HumainVShumain extends Parent {
         nb_tours.setTranslateX(300);
         nb_tours.setTranslateY(170);
 
-        //boutons
+        //BOUTONS MENU PRINCIPAL ET COMMENCER PARTIE
         Button menu_principal = new Button("MENU PRINCIPAL");
-        menu_principal.setTranslateX(40);
-        menu_principal.setTranslateY(250);
+        menu_principal.setLayoutX(40);
+        menu_principal.setLayoutY(250);
 
         Button commencer_partie = new Button("COMMENCER PARTIE");
-        commencer_partie.setTranslateX(300);
-        commencer_partie.setTranslateY(250);
+        commencer_partie.setLayoutX(300);
+        commencer_partie.setLayoutY(250);
+
+        //ACTION SI BOUTON MENU PRINCIPAL
+        menu_principal.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                Accueil accueil = new Accueil(primaryStage) ;
+                Scene nouvelle_scene = new Scene(accueil,300,275);
+                Stage nouvelle_fenetre = new Stage();
+                nouvelle_fenetre.setScene(nouvelle_scene);
+                nouvelle_fenetre.show();
+            }
+        });
+
+        //ACTION SI BOUTON COMMENCER PARTIE
+        commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+
+            }
+        });
 
         //position
-        /*this.setTranslateX(20);
-        this.setTranslateY(20);*/
+        this.setTranslateX(20);
+        this.setTranslateY(10);
 
         //ajout des éléments à la fenêtre
+        this.getChildren().add(t_titre);
         this.getChildren().add(t_adv);
         this.getChildren().add(nb_adversaires);
         this.getChildren().add(t_tours);

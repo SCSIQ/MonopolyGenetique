@@ -59,7 +59,7 @@ public class Accueil extends Parent {
             @Override
             public void handle(ActionEvent event) {
                //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
-                HumainVShumain humain_fenetre = new HumainVShumain();
+                HumainVShumain humain_fenetre = new HumainVShumain(primaryStage);
                 Scene nouvelle_scene = new Scene(humain_fenetre,500,300);
                 Stage nouvelle_fenetre = new Stage();
                 nouvelle_fenetre.setScene(nouvelle_scene);
