@@ -40,7 +40,7 @@ public class Accueil extends Parent {
         iaVSia.setLayoutY(200);
 
         quitter.setLayoutX(25);
-        quitter.setLayoutY(260);  
+        quitter.setLayoutY(260);
 
         //TAILLE DES BOUTONS
         solo.setPrefSize(150,10);
@@ -92,7 +92,7 @@ public class Accueil extends Parent {
             public void handle(ActionEvent event) {
                 Stage nouvelle_fenetre = new Stage();
                 IaVSia MenuIa = new IaVSia(primaryStage, nouvelle_fenetre) ;
-                Scene nouvelle_scene = new Scene(MenuIa,500,300);
+                Scene nouvelle_scene = new Scene(MenuIa,520,300);
 
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 nouvelle_fenetre.show();

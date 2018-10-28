@@ -13,15 +13,24 @@ public class IaVSia extends Parent {
 
     public IaVSia(Stage primaryStage, Stage nouvelle_fenetre)
     {
-        //TITRE
-        Text t_titre = new Text(190,20,"NOUVELLE PARTIE IA VS IA");
+////////TEXTE
+        Text t_titre = new Text(190,30,"NOUVELLE PARTIE IA VS IA");
+        Text t_nbJoueurs =  new Text(70,80,"Choisissez le nombre de joueurs : ");
+        Text t_nbEquipes = new Text(90,140,"Choisissez le nombre d'équipes pour le tournoi : ");
+        Text t_nbTours = new Text(70,200,"Choisissez le nombre de tours : ");
+
+        //taille
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
-////////TEXTE
-        Text t_nbJoueurs =  new Text(50,80,"Choisissez le nombre de joueurs : ");
-        Text t_nbEquipes = new Text(50,140,"Choisissez le nombre d'équipes pour le tournoi : ");
-        Text t_nbTours = new Text(50,200,"Choisissez le nombre de tours : ");
+        t_nbJoueurs.setScaleX(1.5);
+        t_nbJoueurs.setScaleY(1.5);
+
+        t_nbEquipes.setScaleX(1.5);
+        t_nbEquipes.setScaleY(1.5);
+
+        t_nbTours.setScaleX(1.5);
+        t_nbTours.setScaleY(1.5);
 
 ////////COMBO BOX
             //création des combo box
@@ -52,12 +61,17 @@ public class IaVSia extends Parent {
         nb_tours.getSelectionModel().selectFirst();
 
             //positionnement des combo box
-        nb_adversaires.setLayoutX(400);
+        nb_adversaires.setLayoutX(430);
         nb_adversaires.setLayoutY(60);
-        nb_equipes.setLayoutX(400);
+        nb_equipes.setLayoutX(430);
         nb_equipes.setLayoutY(120);
-        nb_tours.setLayoutX(400);
+        nb_tours.setLayoutX(430);
         nb_tours.setLayoutY(180);
+
+            //taille
+        nb_adversaires.setPrefSize(60,10);
+        nb_equipes.setPrefSize(60,10);
+        nb_tours.setPrefSize(60, 10);
 
 ////////BOUTONS quitter et lancer partie
             //création des boutons
@@ -65,10 +79,15 @@ public class IaVSia extends Parent {
         Button commencer_partie = new Button("COMMENCER LE TOURNOI");
 
             //positionnement
-        menu_principal.setTranslateX(40);
+        menu_principal.setTranslateX(30);
         menu_principal.setTranslateY(250);
-        commencer_partie.setTranslateX(300);
+
+        commencer_partie.setTranslateX(290);
         commencer_partie.setTranslateY(250);
+
+            //taille
+        menu_principal.setPrefSize(200,10);
+        commencer_partie.setPrefSize(200,10);
 
             //ACTION SI BOUTON MENU PRINCIPAL
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
