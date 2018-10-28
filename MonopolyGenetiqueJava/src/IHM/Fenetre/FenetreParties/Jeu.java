@@ -31,6 +31,7 @@ public class Jeu extends Parent {
         RectanglePlateau(rect_plateau);
         RectangleAdversaire(rect_adversaire);
         RectanglePossession(rect_possession);
+        RectangleTerrain(rect_terrain);
 
 
         //TAILLE DES BOUTONS
@@ -46,8 +47,8 @@ public class Jeu extends Parent {
         this.getChildren().add(rect_plateau);
         this.getChildren().add(rect_adversaire);
         this.getChildren().add(rect_possession);
-        /* this.getChildren().add(rect_terrain);
-        this.getChildren().add(rect_gare);
+        this.getChildren().add(rect_terrain);
+        /*this.getChildren().add(rect_gare);
         this.getChildren().add(rect_compagnie);
         this.getChildren().add(bt_menu);
         this.getChildren().add(bt_lancerDes);
@@ -89,10 +90,10 @@ public class Jeu extends Parent {
 
         //TAILLE DU RECTANGLE ET POSITION
 
-        rect_adversaire.setHeight(200);
+        rect_adversaire.setHeight(150);
         rect_adversaire.setWidth(630);
         rect_adversaire.setX(630);
-        rect_adversaire.setY(130);
+        rect_adversaire.setY(120);
 
         //COULEUR ET CONTOUR
         rect_adversaire.setFill(Color.TRANSPARENT);
@@ -103,14 +104,28 @@ public class Jeu extends Parent {
 
         //TAILLE DU RECTANGLE ET POSITION
 
-        rect_possession.setHeight(500);
-        rect_possession.setWidth(300);
+        rect_possession.setHeight(425);
+        rect_possession.setWidth(630);
         rect_possession.setX(630);
-        rect_possession.setY(130);
+        rect_possession.setY(275);
 
         //COULEUR ET CONTOUR
         rect_possession.setFill(Color.TRANSPARENT);
         rect_possession.setStroke(Color.BLACK);
+    }
+
+    public void RectangleTerrain(Rectangle rect_terrain){
+
+        //TAILLE DU RECTANGLE ET POSITION
+
+        rect_terrain.setHeight(350);
+        rect_terrain.setWidth(315);
+        rect_terrain.setX(635);
+        rect_terrain.setY(345);
+
+        //COULEUR ET CONTOUR
+        rect_terrain.setFill(Color.TRANSPARENT);
+        rect_terrain.setStroke(Color.BLACK);
     }
 
 }
