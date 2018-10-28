@@ -1,10 +1,8 @@
 package sample;
 
-import IHM.Fenetre.Accueil;
+import IHM.Fenetre.FentreMenuPrincipal.Accueil;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 

@@ -1,4 +1,4 @@
-package IHM.Fenetre;
+package IHM.Fenetre.FentreMenuPrincipal;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
