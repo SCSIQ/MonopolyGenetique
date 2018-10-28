@@ -20,6 +20,7 @@ public class HumainVShumain extends Parent {
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
+        //ADVERSAIRES
         Text t_adv = new Text(50, 80, "Choisissez le nombre d'adversaires : ");
 
         ComboBox nb_adversaires = new ComboBox();
@@ -36,7 +37,7 @@ public class HumainVShumain extends Parent {
         nb_adversaires.setLayoutY(60);
 
 
-        //nombre de tours
+        //TOURS
         Text t_tours = new Text(50, 190, "Choisissez le nombre de tours : ");
 
         ComboBox nb_tours = new ComboBox();
