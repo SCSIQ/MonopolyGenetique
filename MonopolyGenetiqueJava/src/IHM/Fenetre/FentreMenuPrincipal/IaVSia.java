@@ -1,5 +1,6 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import IHM.Fenetre.FenetreParties.Jeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -102,7 +103,13 @@ public class IaVSia extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+                Stage nouvelle_fenetre_plateau = new Stage();
+                Jeu fenentre_jeu = new Jeu() ;
+                Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
+                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
+                //on montre la nouvelle fenêtre
+                nouvelle_fenetre_plateau.show();
                 nouvelle_fenetre.close();
             }
         });

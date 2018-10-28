@@ -97,7 +97,7 @@ public class Accueil extends Parent {
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 nouvelle_fenetre.show();
                 primaryStage.close();
-            }
+            } 
         });
 
         //ACTION : SI ON APPUIE SUR QUITTER
