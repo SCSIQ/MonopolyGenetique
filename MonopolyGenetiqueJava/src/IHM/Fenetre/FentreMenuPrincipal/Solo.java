@@ -17,15 +17,27 @@ public class Solo extends Parent {
 
     public Solo(Stage primaryStage, Stage nouvelle_fenetre) {
 
+////////TEXTE
 
+        Text t_titre = new Text(200,30,"NOUVELLE PARTIE SOLO");
+        Text t_adv = new Text(76, 80, "Choisissez le nombre d'adversaires : ");
+        Text t_couleur = new Text(64, 140, "Choisissez votre couleur : ");
+        Text t_tours = new Text(74, 200, "Choisissez le nombre de  tours : ");
 
-        //titre
-        Text t_titre = new Text(150,15,"NOUVELLE PARTIE SOLO");
+            //taille
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
-        //nombre d'adversaires
-        Text t_adv = new Text(50, 70, "Choisissez le nombre d'adversaires : ");
+        t_adv.setScaleX(1.5);
+        t_adv.setScaleY(1.5);
+
+        t_couleur.setScaleX(1.5);
+        t_couleur.setScaleY(1.5);
+
+        t_tours.setScaleX(1.5);
+        t_tours.setScaleY(1.5);
+
+////////COMBOBOX
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
@@ -34,23 +46,6 @@ public class Solo extends Parent {
                 "4",
                 "5"
         );
-
-        nb_adversaires.getSelectionModel().selectFirst();
-
-        nb_adversaires.setLayoutX(300);
-        nb_adversaires.setLayoutY(50);
-
-        //couleur
-        Text t_couleur = new Text(50, 130, "Choisissez votre couleur : ");
-
-        ColorPicker couleur = new ColorPicker();
-        couleur.setValue(Color.RED);
-        couleur.setLayoutX(300);
-        couleur.setLayoutY(110);
-
-        //nombre de tours
-        Text t_tours = new Text(50, 190, "Choisissez le nombre de  tours : ");
-
         ComboBox nb_tours = new ComboBox();
         nb_tours.getItems().addAll(
                 "20",
@@ -58,24 +53,50 @@ public class Solo extends Parent {
                 "40"
         );
 
+        //selection premier élément
+        nb_adversaires.getSelectionModel().selectFirst();
         nb_tours.getSelectionModel().selectFirst();
 
-        nb_tours.setLayoutX(300);
-        nb_tours.setLayoutY(170);
+        //position
+        nb_adversaires.setLayoutX(430);
+        nb_adversaires.setLayoutY(60);
 
+        nb_tours.setLayoutX(430);
+        nb_tours.setLayoutY(180);
 
+        //taille
+        nb_adversaires.setPrefSize(60,10);
+        nb_tours.setPrefSize(60, 10);
 
+////////COLORPICKER
 
-        //boutons
+        ColorPicker couleur = new ColorPicker();
+        couleur.setValue(Color.RED);
+
+            //position
+        couleur.setLayoutX(430);
+        couleur.setLayoutY(120);
+
+            //taille
+        couleur.setPrefSize(60,25);
+
+////////BOUTONS
+        //création des boutons
         Button menu_principal = new Button("MENU PRINCIPAL");
-        menu_principal.setTranslateX(40);
+        Button commencer_partie = new Button("COMMENCER LA PARTIE");
+
+        //positionnement
+        menu_principal.setTranslateX(30);
         menu_principal.setTranslateY(250);
 
-        Button commencer_partie = new Button("COMMENCER PARTIE");
-        commencer_partie.setTranslateX(300);
+        commencer_partie.setTranslateX(290);
         commencer_partie.setTranslateY(250);
 
-        //ACTION SI BOUTON MENU PRINCIPAL
+        //taille
+        menu_principal.setPrefSize(200,10);
+        commencer_partie.setPrefSize(200,10);
+
+////////ACTION SI BOUTON MENU PRINCIPAL
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -101,12 +122,7 @@ public class Solo extends Parent {
             }
         });
 
-
-        //position
-        this.setTranslateX(20);
-        this.setTranslateY(5);
-
-        //ajout des éléments à la fenêtre
+////////ajout des éléments à la fenêtre
         this.getChildren().add(t_titre);
         this.getChildren().add(t_adv);
         this.getChildren().add(nb_adversaires);
