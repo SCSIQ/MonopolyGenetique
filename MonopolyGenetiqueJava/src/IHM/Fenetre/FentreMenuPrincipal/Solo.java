@@ -29,7 +29,7 @@ public class Solo extends Parent {
         t_titre.setScaleY(2);
 
         t_adv.setScaleX(1.5);
-        t_adv.setScaleY(1.5); 
+        t_adv.setScaleY(1.5);
 
         t_couleur.setScaleX(1.5);
         t_couleur.setScaleY(1.5);
@@ -110,13 +110,13 @@ public class Solo extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                Stage nouvelle_fenetre_plateau = new Stage();
+                /*Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenentre_jeu = new Jeu() ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
-                nouvelle_fenetre_plateau.show();
+                nouvelle_fenetre_plateau.show();*/
                 nouvelle_fenetre.close();
 
             }
