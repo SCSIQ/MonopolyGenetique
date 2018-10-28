@@ -30,6 +30,7 @@ public class Jeu extends Parent {
         RectangleInfoJoueur(rect_infosJoueur);
         RectanglePlateau(rect_plateau);
         RectangleAdversaire(rect_adversaire);
+        RectanglePossession(rect_possession);
 
 
         //TAILLE DES BOUTONS
@@ -44,8 +45,8 @@ public class Jeu extends Parent {
         this.getChildren().add(rect_infosJoueur);
         this.getChildren().add(rect_plateau);
         this.getChildren().add(rect_adversaire);
-       /* this.getChildren().add(rect_possession);
-        this.getChildren().add(rect_terrain);
+        this.getChildren().add(rect_possession);
+        /* this.getChildren().add(rect_terrain);
         this.getChildren().add(rect_gare);
         this.getChildren().add(rect_compagnie);
         this.getChildren().add(bt_menu);
@@ -96,6 +97,20 @@ public class Jeu extends Parent {
         //COULEUR ET CONTOUR
         rect_adversaire.setFill(Color.TRANSPARENT);
         rect_adversaire.setStroke(Color.BLACK);
+    }
+
+    public void RectanglePossession(Rectangle rect_possession){
+
+        //TAILLE DU RECTANGLE ET POSITION
+
+        rect_possession.setHeight(500);
+        rect_possession.setWidth(300);
+        rect_possession.setX(630);
+        rect_possession.setY(130);
+
+        //COULEUR ET CONTOUR
+        rect_possession.setFill(Color.TRANSPARENT);
+        rect_possession.setStroke(Color.BLACK);
     }
 
 }
