@@ -34,6 +34,9 @@ public class Solo extends Parent {
                 "4",
                 "5"
         );
+
+        nb_adversaires.getSelectionModel().selectFirst();
+
         nb_adversaires.setLayoutX(300);
         nb_adversaires.setLayoutY(50);
 
@@ -54,8 +57,12 @@ public class Solo extends Parent {
                 "30",
                 "40"
         );
+
+        nb_tours.getSelectionModel().selectFirst();
+
         nb_tours.setLayoutX(300);
         nb_tours.setLayoutY(170);
+
 
 
 
@@ -90,6 +97,7 @@ public class Solo extends Parent {
                 //on montre la nouvelle fenêtre
                 nouvelle_fenetre_plateau.show();
                 nouvelle_fenetre.close() ;
+
 
             }
         });
