@@ -1,6 +1,5 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
-import IHM.Fenetre.FenetreParties.Jeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -21,6 +20,7 @@ public class HumainVShumain extends Parent {
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
+        //ADVERSAIRES
         Text t_adv = new Text(50, 80, "Choisissez le nombre d'adversaires : ");
 
         ComboBox nb_adversaires = new ComboBox();
@@ -37,7 +37,7 @@ public class HumainVShumain extends Parent {
         nb_adversaires.setLayoutY(60);
 
 
-        //nombre de tours
+        //TOURS
         Text t_tours = new Text(50, 190, "Choisissez le nombre de tours : ");
 
         ComboBox nb_tours = new ComboBox();
@@ -76,16 +76,7 @@ public class HumainVShumain extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenetre_jeu = new Jeu() ;
-                Scene nouvelle_scene = new Scene(fenetre_jeu,1478.4,2230.9);
-
-                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
-                //on montre la nouvelle fenêtre
-                nouvelle_fenetre_plateau.show();
                 nouvelle_fenetre.close();
-
-
             }
         });
 

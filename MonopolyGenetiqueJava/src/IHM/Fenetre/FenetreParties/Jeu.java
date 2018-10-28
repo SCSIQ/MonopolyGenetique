@@ -97,4 +97,5 @@ public class Jeu extends Parent {
         rect_adversaire.setFill(Color.TRANSPARENT);
         rect_adversaire.setStroke(Color.BLACK);
     }
+
 }

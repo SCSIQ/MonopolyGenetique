@@ -1,6 +1,5 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
-import IHM.Fenetre.FenetreParties.Jeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -10,21 +9,22 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class IaVSia extends Parent{
+public class IaVSia extends Parent {
 
     public IaVSia(Stage primaryStage, Stage nouvelle_fenetre)
     {
-        //titre
+        //TITRE
         Text t_titre = new Text(190,20,"NOUVELLE PARTIE IA VS IA");
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
-        //texte
+////////TEXTE
         Text t_nbJoueurs =  new Text(50,80,"Choisissez le nombre de joueurs : ");
         Text t_nbEquipes = new Text(50,140,"Choisissez le nombre d'équipes pour le tournoi : ");
         Text t_nbTours = new Text(50,200,"Choisissez le nombre de tours : ");
 
-        //COMBO BOX
+////////COMBO BOX
+            //création des combo box
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
                 "2",
@@ -46,11 +46,12 @@ public class IaVSia extends Parent{
                 "40",
                 "50"
         );
-            //affichage du premier élément
+            //affichage du premier élément des combo box
         nb_adversaires.getSelectionModel().selectFirst();
         nb_equipes.getSelectionModel().selectFirst();
         nb_tours.getSelectionModel().selectFirst();
 
+            //positionnement des combo box
         nb_adversaires.setLayoutX(400);
         nb_adversaires.setLayoutY(60);
         nb_equipes.setLayoutX(400);
@@ -58,16 +59,18 @@ public class IaVSia extends Parent{
         nb_tours.setLayoutX(400);
         nb_tours.setLayoutY(180);
 
-        //BOUTONS quitter et lancer partie
+////////BOUTONS quitter et lancer partie
+            //création des boutons
         Button menu_principal = new Button("MENU PRINCIPAL");
+        Button commencer_partie = new Button("COMMENCER LE TOURNOI");
+
+            //positionnement
         menu_principal.setTranslateX(40);
         menu_principal.setTranslateY(250);
-
-        Button commencer_partie = new Button("COMMENCER LE TOURNOI");
         commencer_partie.setTranslateX(300);
         commencer_partie.setTranslateY(250);
 
-        //ACTION SI BOUTON MENU PRINCIPAL
+            //ACTION SI BOUTON MENU PRINCIPAL
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -76,24 +79,16 @@ public class IaVSia extends Parent{
             }
         });
 
-        //ACTION SI BOUTON COMMENCER PARTIE
+            //ACTION SI BOUTON COMMENCER PARTIE
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
 
-                Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenetre_jeu = new Jeu() ;
-                Scene nouvelle_scene = new Scene(fenetre_jeu,1478.4,2230.9);
-
-                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
-                //on montre la nouvelle fenêtre
-                nouvelle_fenetre_plateau.show();
                 nouvelle_fenetre.close();
-
             }
         });
 
-        //ajout
+////////AJOUT
         this.getChildren().add(t_titre);
         this.getChildren().add(t_nbJoueurs);
         this.getChildren().add(t_nbEquipes);
