@@ -29,7 +29,7 @@ public class Solo extends Parent {
         t_titre.setScaleY(2);
 
         t_adv.setScaleX(1.5);
-        t_adv.setScaleY(1.5);
+        t_adv.setScaleY(1.5); 
 
         t_couleur.setScaleX(1.5);
         t_couleur.setScaleY(1.5);
