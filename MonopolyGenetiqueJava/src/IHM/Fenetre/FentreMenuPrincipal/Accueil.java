@@ -40,7 +40,7 @@ public class Accueil extends Parent {
         iaVSia.setLayoutY(200);
 
         quitter.setLayoutX(25);
-        quitter.setLayoutY(260);
+        quitter.setLayoutY(260);  
 
         //TAILLE DES BOUTONS
         solo.setPrefSize(150,10);
