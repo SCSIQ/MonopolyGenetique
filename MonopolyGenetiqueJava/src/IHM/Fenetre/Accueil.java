@@ -44,7 +44,7 @@ public class Accueil extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
-                Solo solo_fenetre = new Solo();
+                Solo solo_fenetre = new Solo(primaryStage);
                 Scene nouvelle_scene = new Scene(solo_fenetre,500,300);
                 Stage nouvelle_fenetre = new Stage();
                 nouvelle_fenetre.setScene(nouvelle_scene);
@@ -73,7 +73,7 @@ public class Accueil extends Parent {
         iaVSia.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                IaVSia MenuIa = new IaVSia() ;
+                IaVSia MenuIa = new IaVSia(primaryStage) ;
                 Scene nouvelle_scene = new Scene(MenuIa,500,300);
                 Stage nouvelle_fenetre = new Stage();
                 nouvelle_fenetre.setScene(nouvelle_scene);

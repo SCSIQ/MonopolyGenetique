@@ -3,19 +3,26 @@ package IHM.Fenetre;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-
+import javafx.stage.Stage;
 
 
 public class Solo extends Parent {
 
-    public Solo() {
+    public Solo(Stage primaryStage) {
+
+        //titre
+        Text t_titre = new Text(150,15,"NOUVELLE PARTIE SOLO");
+        t_titre.setScaleX(2);
+        t_titre.setScaleY(2);
+
         //nombre d'adversaires
-        Text t_adv = new Text(50, 50, "Choisissez le nombre d'adversaires : ");
+        Text t_adv = new Text(50, 70, "Choisissez le nombre d'adversaires : ");
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
@@ -25,7 +32,7 @@ public class Solo extends Parent {
                 "5"
         );
         nb_adversaires.setLayoutX(300);
-        nb_adversaires.setLayoutY(30);
+        nb_adversaires.setLayoutY(50);
 
         //couleur
         Text t_couleur = new Text(50, 130, "Choisissez votre couleur : ");
@@ -62,7 +69,11 @@ public class Solo extends Parent {
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-
+                Accueil accueil = new Accueil(primaryStage) ;
+                Scene nouvelle_scene = new Scene(accueil,300,275);
+                Stage nouvelle_fenetre = new Stage();
+                nouvelle_fenetre.setScene(nouvelle_scene);
+                nouvelle_fenetre.show();
             }
         });
 
@@ -81,6 +92,7 @@ public class Solo extends Parent {
         this.setTranslateY(5);
 
         //ajout des éléments à la fenêtre
+        this.getChildren().add(t_titre);
         this.getChildren().add(t_adv);
         this.getChildren().add(nb_adversaires);
         this.getChildren().add(t_couleur);
