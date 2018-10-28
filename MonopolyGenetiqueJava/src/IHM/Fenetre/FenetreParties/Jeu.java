@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
@@ -54,7 +55,8 @@ public class Jeu extends Parent {
         this.getChildren().add(bt_tourSuivant);
 
     }
-    //*********************************************AFFICHAGE DES RECTANGLES /BOUTONS***************************************************************************//
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
 
@@ -101,6 +103,13 @@ public class Jeu extends Parent {
     }
 
     public void RectanglePossession(Rectangle rect_possession){
+
+        //Ajout d'un label "POSSESSION"
+        Label textPossession = new Label("POSSESSION");
+        textPossession.setLayoutX(930);
+        textPossession.setLayoutY(290);
+
+        this.getChildren().add(textPossession);
 
         //TAILLE DU RECTANGLE ET POSITION
 
