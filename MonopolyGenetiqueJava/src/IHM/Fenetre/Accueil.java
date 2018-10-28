@@ -44,12 +44,15 @@ public class Accueil extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
-                Solo solo_fenetre = new Solo(primaryStage);
-                Scene nouvelle_scene = new Scene(solo_fenetre,500,300);
                 Stage nouvelle_fenetre = new Stage();
+                Solo solo_fenetre = new Solo(primaryStage, nouvelle_fenetre);
+                Scene nouvelle_scene = new Scene(solo_fenetre,500,300);
+
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
                 nouvelle_fenetre.show();
+
+                //FERMETURE DE LA FENETRE ACCUEIL
                 primaryStage.close() ;
             }
         });
@@ -58,10 +61,11 @@ public class Accueil extends Parent {
         HumainVShumain.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-               //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
-                HumainVShumain humain_fenetre = new HumainVShumain(primaryStage);
-                Scene nouvelle_scene = new Scene(humain_fenetre,500,300);
+                //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
                 Stage nouvelle_fenetre = new Stage();
+                HumainVShumain humain_fenetre = new HumainVShumain(primaryStage, nouvelle_fenetre );
+                Scene nouvelle_scene = new Scene(humain_fenetre,500,300);
+
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre et on ferme l'ancienne
                 nouvelle_fenetre.show();
@@ -73,9 +77,10 @@ public class Accueil extends Parent {
         iaVSia.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                IaVSia MenuIa = new IaVSia(primaryStage) ;
-                Scene nouvelle_scene = new Scene(MenuIa,500,300);
                 Stage nouvelle_fenetre = new Stage();
+                IaVSia MenuIa = new IaVSia(primaryStage, nouvelle_fenetre) ;
+                Scene nouvelle_scene = new Scene(MenuIa,500,300);
+
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 nouvelle_fenetre.show();
                 primaryStage.close();

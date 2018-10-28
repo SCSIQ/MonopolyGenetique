@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class IaVSia extends Parent {
 
-    public IaVSia(Stage primaryStage)
+    public IaVSia(Stage primaryStage, Stage nouvelle_fenetre)
     {
         //titre
         Text t_titre = new Text(190,20,"NOUVELLE PARTIE IA VS IA");
@@ -66,11 +66,8 @@ public class IaVSia extends Parent {
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                Accueil accueil = new Accueil(primaryStage) ;
-                Scene nouvelle_scene = new Scene(accueil,300,275);
-                Stage nouvelle_fenetre = new Stage();
-                nouvelle_fenetre.setScene(nouvelle_scene);
-                nouvelle_fenetre.show();
+                primaryStage.show();
+                nouvelle_fenetre.close();
             }
         });
 

@@ -14,7 +14,9 @@ import javafx.stage.Stage;
 
 public class Solo extends Parent {
 
-    public Solo(Stage primaryStage) {
+    public Solo(Stage primaryStage, Stage nouvelle_fenetre) {
+
+
 
         //titre
         Text t_titre = new Text(150,15,"NOUVELLE PARTIE SOLO");
@@ -43,7 +45,7 @@ public class Solo extends Parent {
         couleur.setLayoutY(110);
 
         //nombre de tours
-        Text t_tours = new Text(50, 190, "Choisissez le nombre de  : ");
+        Text t_tours = new Text(50, 190, "Choisissez le nombre de  tours : ");
 
         ComboBox nb_tours = new ComboBox();
         nb_tours.getItems().addAll(
@@ -69,11 +71,8 @@ public class Solo extends Parent {
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                Accueil accueil = new Accueil(primaryStage) ;
-                Scene nouvelle_scene = new Scene(accueil,300,275);
-                Stage nouvelle_fenetre = new Stage();
-                nouvelle_fenetre.setScene(nouvelle_scene);
-                nouvelle_fenetre.show();
+                primaryStage.show() ;
+                nouvelle_fenetre.close();
             }
         });
 

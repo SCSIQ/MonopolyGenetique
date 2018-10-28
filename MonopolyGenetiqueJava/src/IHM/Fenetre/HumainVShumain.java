@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 public class HumainVShumain extends Parent {
 
-    public HumainVShumain(Stage primaryStage){
+    public HumainVShumain(Stage primaryStage, Stage nouvelle_fenetre){
 
         //titre
         Text t_titre = new Text(130,20,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
@@ -58,11 +58,9 @@ public class HumainVShumain extends Parent {
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                Accueil accueil = new Accueil(primaryStage) ;
-                Scene nouvelle_scene = new Scene(accueil,300,275);
-                Stage nouvelle_fenetre = new Stage();
-                nouvelle_fenetre.setScene(nouvelle_scene);
-                nouvelle_fenetre.show();
+                   primaryStage.show();
+                   nouvelle_fenetre.close() ;
+
             }
         });
 
