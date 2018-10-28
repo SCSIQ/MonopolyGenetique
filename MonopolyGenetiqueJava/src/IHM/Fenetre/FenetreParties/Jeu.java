@@ -1,15 +1,13 @@
 package IHM.Fenetre.FenetreParties;
 
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
+import javafx.scene.Parent;
 
 public class Jeu extends Parent {
-
     public Jeu(){
+
 
         //DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
