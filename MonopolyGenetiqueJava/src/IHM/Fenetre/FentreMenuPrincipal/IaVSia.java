@@ -104,7 +104,7 @@ public class IaVSia extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu() ;
+                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);

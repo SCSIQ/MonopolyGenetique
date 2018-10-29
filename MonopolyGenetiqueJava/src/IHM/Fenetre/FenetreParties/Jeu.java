@@ -1,13 +1,20 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Jeu extends Parent {
-    public Jeu(){
+    public Jeu(Stage primaryStage, Stage nouvelle_fenetre){
 
 
         //DEFINITIONS DES RECTANGLES DANS LE JEU
@@ -39,6 +46,30 @@ public class Jeu extends Parent {
         boutonLancerDes(bt_lancerDes);
         boutonTourSuivant(bt_tourSuivant);
 
+        ///ACTION SI BOUTON MENU
+        bt_menu.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+                Stage nouvelle_fenetre_menu = new Stage();
+                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre);
+
+                Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
+
+                nouvelle_fenetre_menu.setScene(nouvelle_scene);
+                nouvelle_fenetre_menu.show();
+
+                //opacité fenetre du plateau
+                nouvelle_fenetre.setOpacity(0.5);
+
+                //BLOQUER TOUTES INTERACTIONS AVEC PLATEAU
+               /* if(nouvelle_fenetre_menu.isShowing()==true)
+                {
+                    nouvelle_fenetre.initModality(Modality.APPLICATION_MODAL);
+                }*/
+
+            }
+        });
 
 
         // AJOUT A L'ECRAN

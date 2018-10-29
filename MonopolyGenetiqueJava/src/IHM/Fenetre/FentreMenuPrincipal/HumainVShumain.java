@@ -16,13 +16,23 @@ public class HumainVShumain extends Parent {
 
     public HumainVShumain(Stage primaryStage, Stage nouvelle_fenetre){
 
-        //titre
-        Text t_titre = new Text(130,20,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
+////////TEXTE
+        Text t_titre = new Text(140,30,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
+        Text t_adv = new Text(80, 90, "Choisissez le nombre de joueurs : ");
+        Text t_tours = new Text(80, 190, "Choisissez le nombre de tours : ");
+
+        //TAILLE
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
-        //ADVERSAIRES
-        Text t_adv = new Text(50, 80, "Choisissez le nombre d'adversaires : ");
+        t_adv.setScaleX(1.5);
+        t_adv.setScaleY(1.5);
+
+        t_tours.setScaleX(1.5);
+        t_tours.setScaleY(1.5);
+
+
+////////COMBO BOX
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
@@ -31,16 +41,6 @@ public class HumainVShumain extends Parent {
                 "4",
                 "5"
         );
-
-        nb_adversaires.getSelectionModel().selectFirst();
-
-        nb_adversaires.setLayoutX(300);
-        nb_adversaires.setLayoutY(60);
-
-
-        //TOURS
-        Text t_tours = new Text(50, 190, "Choisissez le nombre de tours : ");
-
         ComboBox nb_tours = new ComboBox();
         nb_tours.getItems().addAll(
                 "20",
@@ -48,26 +48,45 @@ public class HumainVShumain extends Parent {
                 "40"
         );
 
+        //SELECTION DU PREMIER ELEMENT DE LA LISTE
+        nb_adversaires.getSelectionModel().selectFirst();
         nb_tours.getSelectionModel().selectFirst();
 
-        nb_tours.setTranslateX(300);
-        nb_tours.setTranslateY(170);
+        //POSITION
+        nb_adversaires.setLayoutX(440);
+        nb_adversaires.setLayoutY(70);
+
+        nb_tours.setLayoutX(440);
+        nb_tours.setLayoutY(170);
+
+        //TAILLE COMBO BOX
+        nb_adversaires.setPrefSize(60,10);
+        nb_tours.setPrefSize(60, 10);
+
+////////BOUTONS
 
         //BOUTONS MENU PRINCIPAL ET COMMENCER PARTIE
         Button menu_principal = new Button("MENU PRINCIPAL");
+        Button commencer_partie = new Button("COMMENCER PARTIE");
+
+        //POSITION
         menu_principal.setLayoutX(40);
         menu_principal.setLayoutY(250);
-
-        Button commencer_partie = new Button("COMMENCER PARTIE");
         commencer_partie.setLayoutX(300);
         commencer_partie.setLayoutY(250);
+
+        //TAILLE BOUTONS
+        menu_principal.setPrefSize(200,10);
+        commencer_partie.setPrefSize(200,10);
+
+////////ACTION BOUTON
 
         //ACTION SI BOUTON MENU PRINCIPAL
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                   primaryStage.show();
-                   nouvelle_fenetre.close() ;
+                primaryStage.show();
+                nouvelle_fenetre.close() ;
 
             }
         });
@@ -77,7 +96,7 @@ public class HumainVShumain extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu() ;
+                Jeu fenentre_jeu = new Jeu(primaryStage, nouvelle_fenetre_plateau) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
@@ -87,9 +106,7 @@ public class HumainVShumain extends Parent {
             }
         });
 
-        //position
-        this.setTranslateX(20);
-        this.setTranslateY(10);
+////////AJOUT
 
         //ajout des éléments à la fenêtre
         this.getChildren().add(t_titre);
