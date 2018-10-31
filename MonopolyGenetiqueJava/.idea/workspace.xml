@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d6fde2d-492d-4b0e-8f13-28c830ad9946" name="Default Changelist" comment="LancerDeInitial">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/MonopolyGenetiqueJava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,32 +23,45 @@
         <counts>
           <entry key="fxml" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="23" />
+          <entry key="java" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="23" />
+          <entry key="JAVA" value="25" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="140" />
+          <entry key="dummy" value="2" />
+          <entry key="java" value="194" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="140" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="JAVA" value="194" />
+          <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Chance.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,28 +126,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Automate.java">
+        <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesInitial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="17" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LacerDesJoueur.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,6 +155,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java" />
+        <option value="$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java" />
       </list>
     </option>
   </component>
@@ -223,7 +224,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540996585138" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540997570430" />
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -240,50 +241,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/AcheterPropriete.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/AffichageIHMmenuIA.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/GagnerArgent.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/Maison/AcheterMaison.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/Maison/VendreMaison.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/PerdreArgent.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Automate.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Choix/ChoixPossibles.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Choix/ChoixProprietePossede.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/DebutTour.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Deplacement.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Des/LacerDesJoueur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Des/LanceDesInitial.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/EchangerPropriete.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Etat.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/EtreEnPrison.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/FinTour.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/InstanciePartie.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/PiocherUneCarte.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/StatsPartie.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/VendrePropriete.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/VerifNbjetNbTours.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/AffichageIHMmenuIA.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/GagnerArgent.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/Maison/AcheterMaison.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/Maison/VendreMaison.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/PerdreArgent.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/Proprietes/AcheterPropriete.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/Proprietes/EchangerPropriete.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Argent/Proprietes/VendrePropriete.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Automate.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixPossibles.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixProprietePossede.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/DebutTour.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Deplacement.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Des/LacerDesJoueur.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/Etat.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/EtreEnPrison.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/FinTour.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/InstanciePartie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/PiocherUneCarte.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/StatsPartie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Metier/Automate/VerifNbjetNbTours.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -425,7 +383,28 @@
       <option name="project" value="LOCAL" />
       <updated>1540996083725</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="LancerDeInitial">
+      <created>1540996618993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540996618993</updated>
+    </task>
+    <task id="LOCAL-00003" summary="LancerDeInitial">
+      <created>1540996952840</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540996952840</updated>
+    </task>
+    <task id="LOCAL-00004" summary="LancerDeInitial">
+      <created>1540997433514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540997433514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -437,15 +416,15 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" sideWeight="0.49924356" weight="0.32923076" />
+      <window_info anchor="bottom" id="Version Control" sideWeight="0.49924356" weight="0.3276923" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50075644" side_tool="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Messages" sideWeight="0.49924356" weight="0.3276923" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33384615" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33384615" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -521,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LacerDesJoueur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Automate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -584,10 +556,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesInitial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
