@@ -90,7 +90,7 @@ public class Jeu extends Parent {
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
-
+        
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_infosJoueur.setHeight(85);
