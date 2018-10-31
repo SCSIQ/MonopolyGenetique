@@ -148,6 +148,14 @@ public class Jeu extends Parent {
 
     public void RectangleAdversaire(Rectangle rect_adversaire){
 
+        //Ajout label adversaire
+        Label adversaire = new Label("ADVERSAIRES");
+        adversaire.setLayoutX(1100);
+        adversaire.setLayoutY(225);
+        adversaire.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+        this.getChildren().add(adversaire);
+
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_adversaire.setHeight(150);
