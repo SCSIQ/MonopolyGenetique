@@ -223,6 +223,12 @@ public class Jeu extends Parent {
     }
 
     public void RectangleCartePrison(Rectangle rect_cartePrison){
+        //Ajout d'un label "Vous êtes libéré de prison"
+        Label textPrison = new Label("Carte \"Vous êtes libéré de prison \":");
+        textPrison.setLayoutX(995);
+        textPrison.setLayoutY(550);
+        textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(textPrison);
 
         //TAILLE DU RECTANGLE ET POSITION
 
