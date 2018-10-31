@@ -257,7 +257,7 @@ public class Jeu extends Parent {
 
     public void RectangleCartePrison(Rectangle rect_cartePrison){
         //Ajout d'un label "Vous êtes libéré de prison"
-        Label textPrison = new Label("Carte \"Vous êtes libéré de prison \":");
+        Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" :");
         textPrison.setLayoutX(995);
         textPrison.setLayoutY(550);
         textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
