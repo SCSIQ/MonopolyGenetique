@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -90,7 +92,7 @@ public class Jeu extends Parent {
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
-        
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_infosJoueur.setHeight(85);
@@ -139,6 +141,8 @@ public class Jeu extends Parent {
         Label textPossession = new Label("POSSESSIONS");
         textPossession.setLayoutX(930);
         textPossession.setLayoutY(290);
+        textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+
 
         this.getChildren().add(textPossession);
 
@@ -155,10 +159,11 @@ public class Jeu extends Parent {
     }
 
     public void RectangleTerrain(Rectangle rect_terrain){
-        //Ajout d'un label "GARE"
+        //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
         textTerrain.setLayoutX(750);
         textTerrain.setLayoutY(320);
+        textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textTerrain);
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -176,8 +181,9 @@ public class Jeu extends Parent {
 
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
-        textGare.setLayoutX(1090);
+        textGare.setLayoutX(1080);
         textGare.setLayoutY(320);
+        textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textGare);
 
 
@@ -197,8 +203,9 @@ public class Jeu extends Parent {
     public void RectangleCompagnies(Rectangle rect_compagnie){
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
-        textCompagnies.setLayoutX(1075);
+        textCompagnies.setLayoutX(1050);
         textCompagnies.setLayoutY(435);
+        textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textCompagnies);
 
         //TAILLE DU RECTANGLE ET POSITION
