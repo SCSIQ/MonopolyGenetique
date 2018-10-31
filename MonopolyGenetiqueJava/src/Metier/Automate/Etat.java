@@ -2,12 +2,14 @@ package Metier.Automate;
 
 import Entites.Joueur;
 
+import java.util.ArrayList;
+
 public abstract class Etat {
 
-    private Joueur joueur;
+    private ArrayList<Joueur> listeJoueurs;
 
-    public Etat(Joueur joueur){
-        this.joueur = joueur;
+    public Etat(ArrayList<Joueur> listeJoueurs){
+        this.listeJoueurs = listeJoueurs;
     }
 
     public abstract void agir();

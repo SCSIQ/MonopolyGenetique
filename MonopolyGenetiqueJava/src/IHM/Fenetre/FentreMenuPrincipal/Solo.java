@@ -2,6 +2,7 @@ package IHM.Fenetre.FentreMenuPrincipal;
 
 import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
+import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -12,6 +13,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 
 public class Solo extends Parent {
@@ -112,7 +115,10 @@ public class Solo extends Parent {
             public void handle(ActionEvent event) {
 
                 //ici ajouter lancement automate avec en param le joueur
-                //Joueur j = new Joueur();
+                Joueur j = new Joueur();
+                ArrayList<Joueur> listeJoueurs = new ArrayList<>();
+                listeJoueurs.add(j);
+                Automate automate = new Automate(listeJoueurs);
 
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau) ;

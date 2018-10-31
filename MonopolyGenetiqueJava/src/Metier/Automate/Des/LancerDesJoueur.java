@@ -3,12 +3,13 @@ package Metier.Automate.Des;
 import Entites.Joueur;
 import Metier.Automate.Etat;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class LancerDesJoueur extends Etat {
 
-    public LancerDesJoueur(Joueur joueur) {
-        super(joueur);
+    public LancerDesJoueur(ArrayList<Joueur> listeJoueurs) {
+        super(listeJoueurs);
     }
 
     public void LancementDes(){
