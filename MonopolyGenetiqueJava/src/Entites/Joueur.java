@@ -8,6 +8,11 @@ public class Joueur {
     private Pion pion ;
     private boolean aLanceDes ;
 
+    public Joueur() {
+        this.solde = 500; //a revoir car valeur fausse
+        this.aLanceDes = false;
+    }
+
     public void LancerDes(){
 
     }
