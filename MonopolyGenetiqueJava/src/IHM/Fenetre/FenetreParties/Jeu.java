@@ -170,6 +170,12 @@ public class Jeu extends Parent {
 
     public void RectangleGare(Rectangle rect_gare){
 
+        //Ajout d'un label "GARE"
+        Label textGare = new Label("GARE");
+        textGare.setLayoutX(1090);
+        textGare.setLayoutY(320);
+        this.getChildren().add(textGare);
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_gare.setHeight(100);
