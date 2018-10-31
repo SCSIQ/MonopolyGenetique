@@ -175,6 +175,7 @@ public class Jeu extends Parent {
         textGare.setLayoutX(1090);
         textGare.setLayoutY(320);
         this.getChildren().add(textGare);
+        
 
         //TAILLE DU RECTANGLE ET POSITION
 
