@@ -93,6 +93,31 @@ public class Jeu extends Parent {
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
 
+        //ajout labels
+        Label argent = new Label("ARGENT :");
+        Label enPrison = new Label("EN PRISON :");
+        Label tour = new Label("TOUR :");
+
+        //ARGENT
+        argent.setLayoutX(300);
+        argent.setLayoutY(50);
+        argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(argent);
+
+        //EN PRISON
+        enPrison.setLayoutX(500);
+        enPrison.setLayoutY(50);
+        enPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(enPrison);
+
+        //TOUR
+        tour.setLayoutX(750);
+        tour.setLayoutY(50);
+        tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(tour);
+
+
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_infosJoueur.setHeight(85);
@@ -138,9 +163,9 @@ public class Jeu extends Parent {
     public void RectanglePossession(Rectangle rect_possession){
 
         //Ajout d'un label "POSSESSION"
-        Label textPossession = new Label("POSSESSION");
-        textPossession.setLayoutX(930);
-        textPossession.setLayoutY(290);
+        Label textPossession = new Label("VOS POSSESSIONS");
+        textPossession.setLayoutX(895);
+        textPossession.setLayoutY(285);
         textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
 
