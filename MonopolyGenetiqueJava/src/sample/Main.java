@@ -2,7 +2,7 @@ package sample;
 
 import Entites.Joueur;
 import IHM.Fenetre.FentreMenuPrincipal.Accueil;
-import Metier.Automate.Des.LancerDesInitial;
+import Metier.Automate.Des.LanceDesInitial;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -17,7 +17,7 @@ public class Main extends Application {
 
         //appels des etats de l'automates pour phases de test
         Joueur j = new Joueur();
-        LancerDesInitial l1 = new LancerDesInitial();
+        LanceDesInitial l1 = new LanceDesInitial();
         l1.LancerDes();
         //fin des appels des etats
 

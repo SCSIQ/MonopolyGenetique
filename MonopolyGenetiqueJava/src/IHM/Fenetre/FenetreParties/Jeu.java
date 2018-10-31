@@ -90,7 +90,7 @@ public class Jeu extends Parent {
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
-
+        
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_infosJoueur.setHeight(85);
@@ -136,7 +136,7 @@ public class Jeu extends Parent {
     public void RectanglePossession(Rectangle rect_possession){
 
         //Ajout d'un label "POSSESSION"
-        Label textPossession = new Label("POSSESSION");
+        Label textPossession = new Label("POSSESSIONS");
         textPossession.setLayoutX(930);
         textPossession.setLayoutY(290);
 
@@ -155,7 +155,11 @@ public class Jeu extends Parent {
     }
 
     public void RectangleTerrain(Rectangle rect_terrain){
-
+        //Ajout d'un label "GARE"
+        Label textTerrain = new Label("TERRAINS");
+        textTerrain.setLayoutX(750);
+        textTerrain.setLayoutY(320);
+        this.getChildren().add(textTerrain);
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_terrain.setHeight(370);
@@ -169,6 +173,13 @@ public class Jeu extends Parent {
     }
 
     public void RectangleGare(Rectangle rect_gare){
+
+        //Ajout d'un label "GARE"
+        Label textGare = new Label("GARES");
+        textGare.setLayoutX(1090);
+        textGare.setLayoutY(320);
+        this.getChildren().add(textGare);
+
 
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -184,6 +195,11 @@ public class Jeu extends Parent {
 
 
     public void RectangleCompagnies(Rectangle rect_compagnie){
+        //Ajout d'un label "COMPAGNIES"
+        Label textCompagnies = new Label("COMPAGNIES");
+        textCompagnies.setLayoutX(1075);
+        textCompagnies.setLayoutY(435);
+        this.getChildren().add(textCompagnies);
 
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -198,6 +214,12 @@ public class Jeu extends Parent {
     }
 
     public void RectangleCartePrison(Rectangle rect_cartePrison){
+
+        //Ajout d'un label "Carte "vous êtes libéré de prison"
+        Label textPrison = new Label("Carte \"vous êtes libéré de prison\" : ");
+        textPrison.setLayoutX(985);
+        textPrison.setLayoutY(550);
+        this.getChildren().add(textPrison);
 
         //TAILLE DU RECTANGLE ET POSITION
 
