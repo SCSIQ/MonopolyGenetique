@@ -138,7 +138,7 @@ public class Jeu extends Parent {
     public void RectanglePossession(Rectangle rect_possession){
 
         //Ajout d'un label "POSSESSION"
-        Label textPossession = new Label("POSSESSIONS");
+        Label textPossession = new Label("POSSESSION");
         textPossession.setLayoutX(930);
         textPossession.setLayoutY(290);
         textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
@@ -165,6 +165,7 @@ public class Jeu extends Parent {
         textTerrain.setLayoutY(320);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textTerrain);
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_terrain.setHeight(370);
@@ -186,7 +187,6 @@ public class Jeu extends Parent {
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textGare);
 
-
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_gare.setHeight(100);
@@ -201,12 +201,14 @@ public class Jeu extends Parent {
 
 
     public void RectangleCompagnies(Rectangle rect_compagnie){
+
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
         textCompagnies.setLayoutX(1050);
         textCompagnies.setLayoutY(435);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textCompagnies);
+
 
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -221,12 +223,6 @@ public class Jeu extends Parent {
     }
 
     public void RectangleCartePrison(Rectangle rect_cartePrison){
-
-        //Ajout d'un label "Carte "vous êtes libéré de prison"
-        Label textPrison = new Label("Carte \"vous êtes libéré de prison\" : ");
-        textPrison.setLayoutX(985);
-        textPrison.setLayoutY(550);
-        this.getChildren().add(textPrison);
 
         //TAILLE DU RECTANGLE ET POSITION
 

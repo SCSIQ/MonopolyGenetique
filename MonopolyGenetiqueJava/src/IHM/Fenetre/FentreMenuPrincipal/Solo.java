@@ -1,5 +1,6 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -109,6 +110,9 @@ public class Solo extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+
+                //ici ajouter lancement automate avec en param le joueur
+                //Joueur j = new Joueur();
 
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau) ;
