@@ -10,7 +10,7 @@ public class LanceDesInitial {
 
         de1=toto.nextInt(6)+1;
         de2=toto.nextInt(6)+1;
-//
+
         System.out.println("Dé1 : "+de1);
         System.out.println("Dé2 : "+de2);
     }
