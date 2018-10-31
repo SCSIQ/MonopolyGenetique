@@ -2,7 +2,7 @@ package Metier.Automate;
 
 import Entites.Pion;
 
-public class Deplacement implements Etat {
+public class Deplacement {
 
     public void Deplacer (Pion p ){
 

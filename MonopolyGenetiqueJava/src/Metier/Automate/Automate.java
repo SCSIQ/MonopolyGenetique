@@ -2,18 +2,19 @@ package Metier.Automate;
 
 import Entites.Joueur;
 
-import java.util.ArrayList;
-
 public class Automate {
-    private ArrayList listeJoueurs ;
+
+    private Etat etatCourant;
+    private Joueur joueur ;
 
     public Automate(Joueur listeJoueurs){
-
+        this.joueur = listeJoueurs;
+        //this.etatCourant = new AffichageIHMmenuIA(this.joueur);
     }
 
-    public void Evolue() {
-
+    public void evoluer(){
+        this.etatCourant.agir();
+        this.etatCourant = this.etatCourant.transition();
     }
-
 
 }

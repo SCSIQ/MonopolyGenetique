@@ -1,4 +1,4 @@
 package Metier.Automate;
 
-public class VerifNbjetNbTours implements Etat {
+public class VerifNbjetNbTours {
 }

@@ -1,7 +1,15 @@
 package Metier.Automate;
 
-public interface Etat {
- /*void Etat() ;
- void Transition ( Event e );*/
+import Entites.Joueur;
 
+public abstract class Etat {
+
+    private Joueur joueur;
+
+    public Etat(Joueur joueur){
+        this.joueur = joueur;
+    }
+
+    public abstract void agir();
+    public abstract Etat transition();
 }

@@ -1,5 +1,5 @@
 package Metier.Automate;
 
-public class DebutTour implements Etat {
+public class DebutTour {
 
 }

@@ -1,9 +1,8 @@
 package Metier.Automate.Argent;
 
 import Entites.Joueur;
-import Metier.Automate.Etat;
 
-public class GagnerArgent implements Etat {
+public class GagnerArgent {
 
     public void AugmenterSolde(Joueur j ){
         
