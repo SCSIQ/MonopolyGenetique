@@ -14,4 +14,12 @@ public abstract class Etat {
 
     public abstract void agir();
     public abstract Etat transition();
+
+    public ArrayList<Joueur> getListeJoueurs() {
+        return listeJoueurs;
+    }
+
+    public void setListeJoueurs(ArrayList<Joueur> listeJoueurs) {
+        this.listeJoueurs = listeJoueurs;
+    }
 }

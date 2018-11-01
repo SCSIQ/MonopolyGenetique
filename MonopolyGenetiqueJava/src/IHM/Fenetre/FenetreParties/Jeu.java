@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -91,6 +93,31 @@ public class Jeu extends Parent {
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
 
+        //ajout labels
+        Label argent = new Label("ARGENT :");
+        Label enPrison = new Label("EN PRISON :");
+        Label tour = new Label("TOUR :");
+
+        //ARGENT
+        argent.setLayoutX(300);
+        argent.setLayoutY(50);
+        argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(argent);
+
+        //EN PRISON
+        enPrison.setLayoutX(500);
+        enPrison.setLayoutY(50);
+        enPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(enPrison);
+
+        //TOUR
+        tour.setLayoutX(750);
+        tour.setLayoutY(50);
+        tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(tour);
+
+
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_infosJoueur.setHeight(85);
@@ -121,6 +148,14 @@ public class Jeu extends Parent {
 
     public void RectangleAdversaire(Rectangle rect_adversaire){
 
+        //Ajout label adversaire
+        Label adversaire = new Label("ADVERSAIRES");
+        adversaire.setLayoutX(1100);
+        adversaire.setLayoutY(225);
+        adversaire.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+        this.getChildren().add(adversaire);
+
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_adversaire.setHeight(150);
@@ -136,9 +171,11 @@ public class Jeu extends Parent {
     public void RectanglePossession(Rectangle rect_possession){
 
         //Ajout d'un label "POSSESSION"
-        Label textPossession = new Label("POSSESSION");
-        textPossession.setLayoutX(930);
-        textPossession.setLayoutY(290);
+        Label textPossession = new Label("VOS POSSESSIONS");
+        textPossession.setLayoutX(895);
+        textPossession.setLayoutY(285);
+        textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+
 
         this.getChildren().add(textPossession);
 
@@ -155,6 +192,12 @@ public class Jeu extends Parent {
     }
 
     public void RectangleTerrain(Rectangle rect_terrain){
+        //Ajout d'un label "TERRAIN"
+        Label textTerrain = new Label("TERRAINS");
+        textTerrain.setLayoutX(750);
+        textTerrain.setLayoutY(320);
+        textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+        this.getChildren().add(textTerrain);
 
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -169,6 +212,13 @@ public class Jeu extends Parent {
     }
 
     public void RectangleGare(Rectangle rect_gare){
+
+        //Ajout d'un label "GARE"
+        Label textGare = new Label("GARES");
+        textGare.setLayoutX(1080);
+        textGare.setLayoutY(320);
+        textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+        this.getChildren().add(textGare);
 
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -185,6 +235,14 @@ public class Jeu extends Parent {
 
     public void RectangleCompagnies(Rectangle rect_compagnie){
 
+        //Ajout d'un label "COMPAGNIES"
+        Label textCompagnies = new Label("COMPAGNIES");
+        textCompagnies.setLayoutX(1050);
+        textCompagnies.setLayoutY(435);
+        textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
+        this.getChildren().add(textCompagnies);
+
+
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_compagnie.setHeight(100);
@@ -198,6 +256,12 @@ public class Jeu extends Parent {
     }
 
     public void RectangleCartePrison(Rectangle rect_cartePrison){
+        //Ajout d'un label "Vous êtes libéré de prison"
+        Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" :");
+        textPrison.setLayoutX(995);
+        textPrison.setLayoutY(550);
+        textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(textPrison);
 
         //TAILLE DU RECTANGLE ET POSITION
 

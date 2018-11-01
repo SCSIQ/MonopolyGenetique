@@ -1,6 +1,7 @@
 package Metier.Automate;
 
 import Entites.Joueur;
+import Metier.Automate.Des.LancerDesInitial;
 import Metier.Automate.Des.LancerDesJoueur;
 
 import java.util.ArrayList;
@@ -12,8 +13,8 @@ public class Automate {
 
     public Automate(ArrayList<Joueur> listeJoueurs){
         this.listeJoueurs = listeJoueurs;
-        this.etatCourant = new LancerDesJoueur(listeJoueurs);
-        this.etatCourant.agir();
+        this.etatCourant = new LancerDesInitial(listeJoueurs);
+        //this.etatCourant.agir();
     }
 
     public void evoluer(){

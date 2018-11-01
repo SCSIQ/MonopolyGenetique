@@ -1,5 +1,4 @@
 package Metier.Automate.Des;
-
 import Entites.Joueur;
 import Metier.Automate.Etat;
 
