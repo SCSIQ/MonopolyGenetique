@@ -1,12 +1,14 @@
 package Entites;
 
 import Metier.Plateau.Proprietes;
+import java.util.ArrayList;
 
 public class Joueur {
 
     private int solde ;
     private Pion pion ;
     private boolean aLanceDes ;
+    private ArrayList<Proprietes> listePropietes;
 
     public Joueur() {
         this.solde = 500; //a revoir car valeur fausse
@@ -44,8 +46,16 @@ public class Joueur {
     public void Gagner(){
 
     }
+
     public void QuitterPartie(){
 
     }
 
+    public ArrayList<Proprietes> getListePropietes() {
+        return listePropietes;
+    }
+
+    public void setListePropietes(ArrayList<Proprietes> listePropietes) {
+        this.listePropietes = listePropietes;
+    }
 }
