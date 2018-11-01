@@ -6,6 +6,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
@@ -15,8 +17,69 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.net.URL;
+
 public class Jeu extends Parent {
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre){
+
+////////IMAGES
+        URL logo_centre = getClass().getResource("logo-centre.png");
+        Image image = new Image(logo_centre.toExternalForm());
+        ImageView imageView = new ImageView(image);
+
+            //Case départ
+        URL depart = getClass().getResource("Case_Depart.png");
+        Image i_depart = new Image(depart.toExternalForm());
+        ImageView c_depart = new ImageView(i_depart);
+
+             //Case prison
+        URL prison = getClass().getResource("Case_Prison.png");
+        Image i_prison = new Image(prison.toExternalForm());
+        ImageView c_prison = new ImageView(i_prison);
+
+            //Case parc
+        URL allez_prison = getClass().getResource("Case_Allez_Prison.png");
+        Image i_aprison = new Image(allez_prison.toExternalForm());
+        ImageView c_aprison = new ImageView(i_aprison);
+
+            //Case allez prison
+        URL parc = getClass().getResource("Case_Parc.png");
+        Image i_parc = new Image(parc.toExternalForm());
+        ImageView c_parc = new ImageView(i_parc);
+
+        //TAILLE DES IMAGES
+            //logo centre
+        imageView.setFitWidth(350);
+        imageView.setPreserveRatio(true);
+            //depart
+        c_depart.setFitWidth(100);
+        c_depart.setPreserveRatio(true);
+            //prison
+        c_prison.setFitWidth(100);
+        c_prison.setPreserveRatio(true);
+            //parc
+        c_parc.setFitWidth(100);
+        c_parc.setPreserveRatio(true);
+            //allez prison
+        c_aprison.setFitWidth(100);
+        c_aprison.setPreserveRatio(true);
+
+        //POSITION IMAGE
+            //logo centre
+        imageView.setX(155);
+        imageView.setY(230);
+            //case départ
+        c_depart.setX(505);
+        c_depart.setY(580);
+            //prison
+        c_prison.setX(55);
+        c_prison.setY(580);
+            //parc
+        c_parc.setX(55);
+        c_parc.setY(130);
+            //allez prison
+        c_aprison.setX(505);
+        c_aprison.setY(130);
 
 
         //DEFINITIONS DES RECTANGLES DANS LE JEU
@@ -75,8 +138,14 @@ public class Jeu extends Parent {
 
 
         // AJOUT A L'ECRAN
+
         this.getChildren().add(rect_infosJoueur);
         this.getChildren().add(rect_plateau);
+        this.getChildren().add(imageView);
+        this.getChildren().add(c_depart);
+        this.getChildren().add(c_prison);
+        this.getChildren().add(c_parc);
+        this.getChildren().add(c_aprison);
         this.getChildren().add(rect_adversaire);
         this.getChildren().add(rect_possession);
         this.getChildren().add(rect_terrain);
