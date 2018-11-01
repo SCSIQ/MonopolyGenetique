@@ -14,7 +14,7 @@ public class Automate {
     public Automate(ArrayList<Joueur> listeJoueurs){
         this.listeJoueurs = listeJoueurs;
         this.etatCourant = new LancerDesInitial(listeJoueurs);
-        //this.etatCourant.agir();
+        this.etatCourant.agir();
     }
 
     public void evoluer(){
