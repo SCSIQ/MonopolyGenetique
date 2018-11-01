@@ -118,6 +118,12 @@ public class Solo extends Parent {
                 Joueur j = new Joueur();
                 ArrayList<Joueur> listeJoueurs = new ArrayList<>();
                 listeJoueurs.add(j);
+
+                System.out.println("Joueurs-1 : "+nb_adversaires.getValue());
+                for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
+                    listeJoueurs.add(new Joueur());
+                }
+                System.out.println("liste : "+listeJoueurs.size()+" joueurs");
                 Automate automate = new Automate(listeJoueurs);
 
                 Stage nouvelle_fenetre_plateau = new Stage();

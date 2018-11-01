@@ -1,9 +1,18 @@
 package Metier.Automate.Des;
+import Entites.Joueur;
+import Metier.Automate.Etat;
+
+import java.util.ArrayList;
 import java.util.Random;
 
-public class LancerDesInitial {
+public class LancerDesInitial extends Etat {
 
-    public void LancerDes () {
+    public LancerDesInitial(ArrayList<Joueur> listeJoueurs) {
+        super(listeJoueurs);
+    }
+
+    @Override
+    public void agir() {
         int de1;
         int de2;
         Random toto = new Random();
@@ -18,4 +27,8 @@ public class LancerDesInitial {
         System.out.println("score joueur : "+score);
     }
 
+    @Override
+    public Etat transition() {
+        return null;
+    }
 }

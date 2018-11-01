@@ -12,9 +12,6 @@ public class LancerDesJoueur extends Etat {
         super(listeJoueurs);
     }
 
-    public void LancementDes(){
-    }
-
     @Override
     public void agir() {
         int de1;
