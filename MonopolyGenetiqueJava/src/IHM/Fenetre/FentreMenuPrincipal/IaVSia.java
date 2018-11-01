@@ -114,6 +114,11 @@ public class IaVSia extends Parent {
             }
         });
 
+////////BLOCAGE REDUCTION
+
+        nouvelle_fenetre.setMinWidth(530);
+        nouvelle_fenetre.setMinHeight(330);
+
 ////////AJOUT
         this.getChildren().add(t_titre);
         this.getChildren().add(t_nbJoueurs);

@@ -136,6 +136,11 @@ public class Solo extends Parent {
             }
         });
 
+////////BLOCAGE REDUCTION
+
+        nouvelle_fenetre.setMinWidth(530);
+        nouvelle_fenetre.setMinHeight(330);
+
 ////////ajout des éléments à la fenêtre
         this.getChildren().add(t_titre);
         this.getChildren().add(t_adv);

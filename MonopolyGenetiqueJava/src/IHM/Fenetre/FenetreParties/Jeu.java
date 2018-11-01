@@ -37,12 +37,12 @@ public class Jeu extends Parent {
         Image i_prison = new Image(prison.toExternalForm());
         ImageView c_prison = new ImageView(i_prison);
 
-            //Case parc
+            //Case allez prison
         URL allez_prison = getClass().getResource("Case_Allez_Prison.png");
         Image i_aprison = new Image(allez_prison.toExternalForm());
         ImageView c_aprison = new ImageView(i_aprison);
 
-            //Case allez prison
+            //Case parc
         URL parc = getClass().getResource("Case_Parc.png");
         Image i_parc = new Image(parc.toExternalForm());
         ImageView c_parc = new ImageView(i_parc);
@@ -136,6 +136,10 @@ public class Jeu extends Parent {
             }
         });
 
+////////BLOCAGE REDUCTION
+
+        nouvelle_fenetre.setMinWidth(1290);
+        nouvelle_fenetre.setMinHeight(750);
 
         // AJOUT A L'ECRAN
 

@@ -109,6 +109,11 @@ public class MenuJeu extends Parent {
             }
         });
 
+
+////////BLOQUAGE DE REDUCTION DE LA FENETRE
+        nouvelle_fenetre.setMinWidth(210);
+        nouvelle_fenetre.setMinHeight(330);
+
 ////////AJOUT
         this.getChildren().add(imageView);
         this.getChildren().add(bt_nouvelle_P);
