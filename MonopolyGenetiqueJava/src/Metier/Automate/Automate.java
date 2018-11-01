@@ -14,12 +14,14 @@ public class Automate {
     public Automate(ArrayList<Joueur> listeJoueurs){
         this.listeJoueurs = listeJoueurs;
         this.etatCourant = new LancerDesInitial(listeJoueurs);
-        this.etatCourant.agir();
+        System.out.println("Etat actuel : "+this.etatCourant.toString());
+        evoluer();
     }
 
     public void evoluer(){
         this.etatCourant.agir();
         this.etatCourant = this.etatCourant.transition();
+        System.out.println("Etat actuel : "+this.etatCourant.toString());
     }
 
 }

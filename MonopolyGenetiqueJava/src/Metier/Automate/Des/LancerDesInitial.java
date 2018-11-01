@@ -1,5 +1,6 @@
 package Metier.Automate.Des;
 import Entites.Joueur;
+import Metier.Automate.Choix.ChoixPossibles;
 import Metier.Automate.Etat;
 import java.util.HashMap;
 import java.util.Map;
@@ -59,6 +60,11 @@ public class LancerDesInitial extends Etat {
 
     @Override
     public Etat transition() {
-        return null;
+        return new ChoixPossibles(super.getListeJoueurs());
+    }
+
+    @Override
+    public String toString() {
+        return "LancerDesInitial{}";
     }
 }
