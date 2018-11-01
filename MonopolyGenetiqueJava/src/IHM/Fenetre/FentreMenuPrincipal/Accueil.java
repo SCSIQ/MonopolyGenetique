@@ -108,8 +108,10 @@ public class Accueil extends Parent {
             }
         });
 
-        /*this.setTranslateX(20);
-        this.setTranslateY(20);*/
+
+////////BLOQUAGE DE REDUCTION DE LA FENETRE
+        primaryStage.setMinWidth(210);
+        primaryStage.setMinHeight(330);
 
 
         // AJOUT A L'ECRAN

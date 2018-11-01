@@ -106,6 +106,11 @@ public class HumainVShumain extends Parent {
             }
         });
 
+////////BLOCAGE REDUCTION
+
+        nouvelle_fenetre.setMinWidth(530);
+        nouvelle_fenetre.setMinHeight(330);
+
 ////////AJOUT
 
         //ajout des éléments à la fenêtre

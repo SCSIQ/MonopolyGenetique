@@ -136,6 +136,10 @@ public class Jeu extends Parent {
             }
         });
 
+////////BLOCAGE REDUCTION
+
+        nouvelle_fenetre.setMinWidth(1290);
+        nouvelle_fenetre.setMinHeight(750);
 
         // AJOUT A L'ECRAN
 
