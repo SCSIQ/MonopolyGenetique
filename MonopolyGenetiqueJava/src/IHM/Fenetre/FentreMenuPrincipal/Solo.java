@@ -121,11 +121,11 @@ public class Solo extends Parent {
                 for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeJoueurs.add(new Joueur());
                 }
-                System.out.println("liste : "+listeJoueurs.size()+" joueurs");
+                System.out.println("Nombre de joueurs : "+listeJoueurs.size());
                 Automate automate = new Automate(listeJoueurs);
 
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue());
+                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue(),automate);
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
