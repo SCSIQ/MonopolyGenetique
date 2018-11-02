@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -18,7 +20,9 @@ import java.net.URL;
 
 public class MenuJeu extends Parent {
 
-    public MenuJeu(Stage primaryStage, Stage nouvelle_fenetre, Stage fenetre_actuelle, Color couleur)
+
+
+    public MenuJeu(Stage primaryStage, Stage nouvelle_fenetre, Stage fenetre_actuelle, Color couleur, Canvas canvas)
     {
 
 ////////IMAGE
@@ -80,8 +84,7 @@ public class MenuJeu extends Parent {
                 nouvelle_fenetre.close();
 
                 //on rend la bonne opacité à la fenêtre
-                fenetre_actuelle.setOpacity(1);
-
+                detruireCanvas(canvas);
 
 
             }
@@ -121,5 +124,14 @@ public class MenuJeu extends Parent {
         this.getChildren().add(bt_rependreP);
         this.getChildren().add(bt_menuP);
 
+    }
+
+
+    public void detruireCanvas(Canvas canvas)
+    {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.PAPAYAWHIP);
+        canvas.setOpacity(0.5);
+        this.getChildren().add(canvas);
     }
 }

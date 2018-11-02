@@ -4,6 +4,8 @@ import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -14,6 +16,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -21,6 +24,8 @@ import javafx.stage.StageStyle;
 import java.net.URL;
 
 public class Jeu extends Parent {
+    private Canvas canvas = new Canvas(1275,1275);
+
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur){
 
 ////////IMAGES
@@ -117,22 +122,18 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                Stage nouvelle_fenetre_menu = new Stage();
+                /*Stage nouvelle_fenetre_menu = new Stage();
                 MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre, couleur);
 
                 Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
 
                 nouvelle_fenetre_menu.setScene(nouvelle_scene);
-                nouvelle_fenetre_menu.show();
+                nouvelle_fenetre_menu.show();*/
 
                 //opacité fenetre du plateau
-                nouvelle_fenetre.setOpacity(0.5);
+               // nouvelle_fenetre.setOpacity(0.5);
 
-                //BLOQUER TOUTES INTERACTIONS AVEC PLATEAU
-               /* if(nouvelle_fenetre_menu.isShowing()==true)
-                {
-                    nouvelle_fenetre.initModality(Modality.APPLICATION_MODAL);
-                }*/
+                choixMenu(primaryStage, nouvelle_fenetre, couleur);
 
             }
         });
@@ -393,5 +394,24 @@ public class Jeu extends Parent {
         bt_tourSuivant.setLayoutY(600);
 
     }
+    public void fenetreNoire()
+    {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.BLACK);
+        canvas.setOpacity(0.5);
+        gc.fillRect(0,0, 1275,1275);
+        this.getChildren().add(canvas);
+    }
 
+    public void choixMenu(Stage primaryStage, Stage fenetre_actuelle, Color couleur) {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_menu = new Stage();
+        MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, fenetre_actuelle, couleur, canvas);
+
+        Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
+
+        nouvelle_fenetre_menu.setScene(nouvelle_scene);
+        nouvelle_fenetre_menu.show();
+    }
 }
