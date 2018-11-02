@@ -1,6 +1,8 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
+import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -10,6 +12,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class IaVSia extends Parent {
 
@@ -104,9 +108,21 @@ public class IaVSia extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+
+                //ici ajouter lancement automate avec en param le joueur
+                Joueur j = new Joueur();
+                ArrayList<Joueur> listeJoueurs = new ArrayList<>();
+                listeJoueurs.add(j);
+                /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
+                    listeJoueurs.add(new Joueur());
+                }*/
+                System.out.println("Nombre de joueurs : "+listeJoueurs.size());
+                Automate automate = new Automate(listeJoueurs);
+
+
                 Color couleur= Color.BLACK;
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur) ;
+                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur,automate) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);

@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
+import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -24,9 +25,18 @@ import javafx.stage.StageStyle;
 import java.net.URL;
 
 public class Jeu extends Parent {
+<<<<<<< HEAD
     private Canvas canvas = new Canvas(1275,1275);
 
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur){
+=======
+
+    private Automate automate;
+
+    public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
+
+        this.automate = automate;
+>>>>>>> 8d38ea87ddda0722be5879a8dae2b46da6a81cce
 
 ////////IMAGES
         URL logo_centre = getClass().getResource("logo-centre.png");
