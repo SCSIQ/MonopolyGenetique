@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -17,7 +18,7 @@ import java.net.URL;
 
 public class MenuJeu extends Parent {
 
-    public MenuJeu(Stage primaryStage, Stage nouvelle_fenetre, Stage fenetre_actuelle)
+    public MenuJeu(Stage primaryStage, Stage nouvelle_fenetre, Stage fenetre_actuelle, Color couleur)
     {
 
 ////////IMAGE
@@ -57,7 +58,7 @@ public class MenuJeu extends Parent {
             public void handle(ActionEvent event) {
 
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau) ;
+                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);

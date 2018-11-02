@@ -125,7 +125,7 @@ public class Solo extends Parent {
                 Automate automate = new Automate(listeJoueurs);
 
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau) ;
+                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue());
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);

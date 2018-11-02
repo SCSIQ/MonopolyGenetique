@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
@@ -20,7 +21,7 @@ import javafx.stage.StageStyle;
 import java.net.URL;
 
 public class Jeu extends Parent {
-    public Jeu(Stage primaryStage, Stage nouvelle_fenetre){
+    public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur){
 
 ////////IMAGES
         URL logo_centre = getClass().getResource("logo-centre.png");
@@ -82,7 +83,7 @@ public class Jeu extends Parent {
         c_aprison.setY(130);
 
 
-        //DEFINITIONS DES RECTANGLES DANS LE JEU
+////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
         Rectangle rect_plateau = new Rectangle();
         Rectangle rect_adversaire = new Rectangle() ;
@@ -99,7 +100,7 @@ public class Jeu extends Parent {
 
 
         //APPEL DES FONCTIONS POUR TAILLES, COULEURS ET POSITION
-        RectangleInfoJoueur(rect_infosJoueur);
+        RectangleInfoJoueur(rect_infosJoueur,couleur);
         RectanglePlateau(rect_plateau);
         RectangleAdversaire(rect_adversaire);
         RectanglePossession(rect_possession);
@@ -117,7 +118,7 @@ public class Jeu extends Parent {
             public void handle(ActionEvent event) {
 
                 Stage nouvelle_fenetre_menu = new Stage();
-                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre);
+                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre, couleur);
 
                 Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
 
@@ -164,12 +165,30 @@ public class Jeu extends Parent {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
-    public void RectangleInfoJoueur(Rectangle rect_infosJoueur){
+    public void RectangleInfoJoueur(Rectangle rect_infosJoueur, Color couleur){
+
+        //ajout rectangle couleur
+        Rectangle r_couleur = new Rectangle();
+        r_couleur.setHeight(50);
+        r_couleur.setWidth(50);
+        r_couleur.setLayoutX(70);
+        r_couleur.setLayoutY(35);
+        r_couleur.setStroke(Color.BLACK);
+        r_couleur.setStrokeWidth(1);
+        r_couleur.setFill(Paint.valueOf(couleur.toString()));
+        this.getChildren().add(r_couleur);
 
         //ajout labels
+        Label nom = new Label("JOUEUR ");
         Label argent = new Label("ARGENT :");
         Label enPrison = new Label("EN PRISON :");
         Label tour = new Label("TOUR :");
+
+        //NOM
+        nom.setLayoutX(130);
+        nom.setLayoutY(50);
+        nom.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        this.getChildren().add(nom);
 
         //ARGENT
         argent.setLayoutX(300);

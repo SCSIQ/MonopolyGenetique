@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -95,8 +96,11 @@ public class HumainVShumain extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+                Color couleur= Color.BLACK;
+
+
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage, nouvelle_fenetre_plateau) ;
+                Jeu fenentre_jeu = new Jeu(primaryStage, nouvelle_fenetre_plateau, couleur) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
