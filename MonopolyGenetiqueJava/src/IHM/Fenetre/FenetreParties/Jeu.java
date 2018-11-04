@@ -33,66 +33,7 @@ public class Jeu extends Parent {
 
         this.automate = automate;
 
-
-////////IMAGES
-        URL logo_centre = getClass().getResource("logo-centre.png");
-        Image image = new Image(logo_centre.toExternalForm());
-        ImageView imageView = new ImageView(image);
-
-            //Case départ
-        URL depart = getClass().getResource("Case_Depart.png");
-        Image i_depart = new Image(depart.toExternalForm());
-        ImageView c_depart = new ImageView(i_depart);
-
-             //Case prison
-        URL prison = getClass().getResource("Case_Prison.png");
-        Image i_prison = new Image(prison.toExternalForm());
-        ImageView c_prison = new ImageView(i_prison);
-
-            //Case allez prison
-        URL allez_prison = getClass().getResource("Case_Allez_Prison.png");
-        Image i_aprison = new Image(allez_prison.toExternalForm());
-        ImageView c_aprison = new ImageView(i_aprison);
-
-            //Case parc
-        URL parc = getClass().getResource("Case_Parc.png");
-        Image i_parc = new Image(parc.toExternalForm());
-        ImageView c_parc = new ImageView(i_parc);
-
-        //TAILLE DES IMAGES
-            //logo centre
-        imageView.setFitWidth(350);
-        imageView.setPreserveRatio(true);
-            //depart
-        c_depart.setFitWidth(100);
-        c_depart.setPreserveRatio(true);
-            //prison
-        c_prison.setFitWidth(100);
-        c_prison.setPreserveRatio(true);
-            //parc
-        c_parc.setFitWidth(100);
-        c_parc.setPreserveRatio(true);
-            //allez prison
-        c_aprison.setFitWidth(100);
-        c_aprison.setPreserveRatio(true);
-
-        //POSITION IMAGE
-            //logo centre
-        imageView.setX(155);
-        imageView.setY(230);
-            //case départ
-        c_depart.setX(505);
-        c_depart.setY(580);
-            //prison
-        c_prison.setX(55);
-        c_prison.setY(580);
-            //parc
-        c_parc.setX(55);
-        c_parc.setY(130);
-            //allez prison
-        c_aprison.setX(505);
-        c_aprison.setY(130);
-
+        plateauJeau();
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -153,11 +94,6 @@ public class Jeu extends Parent {
 
         this.getChildren().add(rect_infosJoueur);
         this.getChildren().add(rect_plateau);
-        this.getChildren().add(imageView);
-        this.getChildren().add(c_depart);
-        this.getChildren().add(c_prison);
-        this.getChildren().add(c_parc);
-        this.getChildren().add(c_aprison);
         this.getChildren().add(rect_adversaire);
         this.getChildren().add(rect_possession);
         this.getChildren().add(rect_terrain);
@@ -400,6 +336,7 @@ public class Jeu extends Parent {
         bt_tourSuivant.setLayoutY(600);
 
     }
+
     public void fenetreNoire()
     {
         GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -419,5 +356,149 @@ public class Jeu extends Parent {
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
         nouvelle_fenetre_menu.show();
+    }
+
+    public void plateauJeau(){
+
+////////IMAGES
+        URL logo_centre = getClass().getResource("logo-centre.png");
+        Image image = new Image(logo_centre.toExternalForm());
+        ImageView imageView = new ImageView(image);
+
+        //Case départ
+        URL depart = getClass().getResource("Case_Depart.png");
+        Image i_depart = new Image(depart.toExternalForm());
+        ImageView c_depart = new ImageView(i_depart);
+
+        //Cases Groupe Violet
+        URL belleville = getClass().getResource("Case_Belleville.png");
+        Image i_Belleville = new Image(belleville.toExternalForm());
+        ImageView c_belleville = new ImageView(i_Belleville);
+
+        URL lecourbe = getClass().getResource("Case_Lecourbe.png");
+        Image i_Lecourbe = new Image(lecourbe.toExternalForm());
+        ImageView c_Lecourbe = new ImageView(i_Lecourbe);
+
+        //Case prison
+        URL prison = getClass().getResource("Case_Prison.png");
+        Image i_prison = new Image(prison.toExternalForm());
+        ImageView c_prison = new ImageView(i_prison);
+
+        //Case allez prison
+        URL allez_prison = getClass().getResource("Case_Allez_Prison.png");
+        Image i_aprison = new Image(allez_prison.toExternalForm());
+        ImageView c_aprison = new ImageView(i_aprison);
+
+        //Case parc
+        URL parc = getClass().getResource("Case_Parc.png");
+        Image i_parc = new Image(parc.toExternalForm());
+        ImageView c_parc = new ImageView(i_parc);
+
+        //Case caisse de communauté
+        URL commu = getClass().getResource("Case_Communaute.png");
+        Image i_com = new Image(commu.toExternalForm());
+        ImageView c_com = new ImageView(i_com);
+
+        //Case impot
+        URL impot = getClass().getResource("Case_Impot.png");
+        Image i_impot = new Image(impot.toExternalForm());
+        ImageView c_impot = new ImageView(i_impot);
+
+        //Case Gares
+            //Gare M
+        URL gareM = getClass().getResource("Case_GareM.png");
+        Image i_gareM = new Image(gareM.toExternalForm());
+        ImageView c_gareM = new ImageView(i_gareM);
+
+        //groupe bleu
+        URL vaugirard = getClass().getResource("Case_Vaugirard.png");
+        Image i_vaugirard = new Image(vaugirard.toExternalForm());
+        ImageView c_vaugirard = new ImageView(i_vaugirard);
+
+/////////TAILLE DES IMAGES
+        //logo centre
+        imageView.setFitWidth(350);
+        imageView.setPreserveRatio(true);
+        //depart
+        c_depart.setFitWidth(90);
+        c_depart.setPreserveRatio(true);
+        //prison
+        c_prison.setFitWidth(90);
+        c_prison.setPreserveRatio(true);
+        //parc
+        c_parc.setFitWidth(90);
+        c_parc.setPreserveRatio(true);
+        //allez prison
+        c_aprison.setFitWidth(90);
+        c_aprison.setPreserveRatio(true);
+        //Caisse commu
+        c_com.setFitWidth(50);
+        c_com.setPreserveRatio(true);
+        //groupe Violet
+        c_belleville.setFitWidth(50);
+        c_belleville.setPreserveRatio(true);
+
+        c_Lecourbe.setFitWidth(50);
+        c_Lecourbe.setPreserveRatio(true);
+        //impôt
+        c_impot.setFitWidth(50);
+        c_impot.setPreserveRatio(true);
+
+        //Gares
+        c_gareM.setFitWidth(50);
+        c_gareM.setPreserveRatio(true);
+
+        //groupe bleu
+        c_vaugirard.setFitWidth(50);
+        c_vaugirard.setPreserveRatio(true);
+
+/////////POSITION IMAGE
+        //logo centre
+        imageView.setX(165);
+        imageView.setY(240);
+        //case départ
+        c_depart.setX(515);
+        c_depart.setY(590);
+        //prison
+        c_prison.setX(55);
+        c_prison.setY(590);
+        //parc
+        c_parc.setX(55);
+        c_parc.setY(130);
+        //allez prison
+        c_aprison.setX(515);
+        c_aprison.setY(130);
+
+        //LIGNE BAS
+        c_belleville.setX(465);
+        c_belleville.setY(590);
+
+        c_com.setX(415);
+        c_com.setY(590);
+
+        c_Lecourbe.setX(365);
+        c_Lecourbe.setY(590);
+
+        c_impot.setX(315);
+        c_impot.setY(590);
+
+        c_gareM.setX(265);
+        c_gareM.setY(590);
+
+        c_vaugirard.setX(215);
+        c_vaugirard.setY(590);
+
+////////AJOUT
+        this.getChildren().add(imageView);
+        this.getChildren().add(c_depart);
+        this.getChildren().add(c_belleville);
+        this.getChildren().add(c_Lecourbe);
+        this.getChildren().add(c_impot);
+        this.getChildren().add(c_gareM);
+        this.getChildren().add(c_vaugirard);
+        this.getChildren().add(c_com);
+        this.getChildren().add(c_prison);
+        this.getChildren().add(c_parc);
+        this.getChildren().add(c_aprison);
     }
 }
