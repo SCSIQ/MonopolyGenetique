@@ -22,6 +22,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+
 import java.net.URL;
 
 public class Jeu extends Parent {
@@ -446,6 +447,10 @@ public class Jeu extends Parent {
         URL gareM = getClass().getResource("Case_GareM.png");
         Image i_gareM = new Image(gareM.toExternalForm());
         ImageView c_gareM = new ImageView(i_gareM);
+
+        //Gare M test
+
+
             //Gare du nord
         URL gareN = getClass().getResource("Case_GareN.png");
         Image i_gareN = new Image(gareN.toExternalForm());
