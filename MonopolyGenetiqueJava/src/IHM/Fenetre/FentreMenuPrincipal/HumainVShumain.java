@@ -115,7 +115,7 @@ public class HumainVShumain extends Parent {
 
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenentre_jeu = new Jeu(primaryStage, nouvelle_fenetre_plateau, couleur,automate) ;
-                Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
+                Scene nouvelle_scene = new Scene(fenentre_jeu,1275,710);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
