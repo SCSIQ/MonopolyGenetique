@@ -22,6 +22,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+
 import java.net.URL;
 
 public class Jeu extends Parent {
@@ -361,188 +362,192 @@ public class Jeu extends Parent {
     public void plateauJeau(){
 
 ////////IMAGES
-        URL logo_centre = getClass().getResource("logo-centre.png");
+        URL logo_centre = getClass().getResource("Images/logo-centre.png");
         Image image = new Image(logo_centre.toExternalForm());
         ImageView imageView = new ImageView(image);
 
         //Case départ
-        URL depart = getClass().getResource("Case_Depart.png");
+        URL depart = getClass().getResource("Images/Case_Depart.png");
         Image i_depart = new Image(depart.toExternalForm());
         ImageView c_depart = new ImageView(i_depart);
 
         //Cases Groupe Violet
-        URL belleville = getClass().getResource("Case_Belleville.png");
+        URL belleville = getClass().getResource("Images/Case_Belleville.png");
         Image i_Belleville = new Image(belleville.toExternalForm());
         ImageView c_belleville = new ImageView(i_Belleville);
 
-        URL lecourbe = getClass().getResource("Case_Lecourbe.png");
+        URL lecourbe = getClass().getResource("Images/Case_Lecourbe.png");
         Image i_Lecourbe = new Image(lecourbe.toExternalForm());
         ImageView c_Lecourbe = new ImageView(i_Lecourbe);
 
         //Case prison
-        URL prison = getClass().getResource("Case_Prison.png");
+        URL prison = getClass().getResource("Images/Case_Prison.png");
         Image i_prison = new Image(prison.toExternalForm());
         ImageView c_prison = new ImageView(i_prison);
 
         //Case allez prison
-        URL allez_prison = getClass().getResource("Case_Allez_Prison.png");
+        URL allez_prison = getClass().getResource("Images/Case_Allez_Prison.png");
         Image i_aprison = new Image(allez_prison.toExternalForm());
         ImageView c_aprison = new ImageView(i_aprison);
 
         //Case parc
-        URL parc = getClass().getResource("Case_Parc.png");
+        URL parc = getClass().getResource("Images/Case_Parc.png");
         Image i_parc = new Image(parc.toExternalForm());
         ImageView c_parc = new ImageView(i_parc);
 
         //Cases caisse de communauté
             //bas
-        URL commu = getClass().getResource("Case_Communaute.png");
+        URL commu = getClass().getResource("Images/Case_Communaute.png");
         Image i_com = new Image(commu.toExternalForm());
         ImageView c_com = new ImageView(i_com);
             //gauche
-        URL commu2 = getClass().getResource("Case_Communaute.png");
+        URL commu2 = getClass().getResource("Images/Case_Communaute.png");
         Image i_com2 = new Image(commu2.toExternalForm());
         ImageView c_com2 = new ImageView(i_com2);
             //droite
-        URL commu3 = getClass().getResource("Case_Communaute.png");
+        URL commu3 = getClass().getResource("Images/Case_Communaute.png");
         Image i_commu3 = new Image(commu3.toExternalForm());
         ImageView c_commu3 = new ImageView(i_commu3);
 
         //Cases chance
             //bas
-        URL chance = getClass().getResource("Case_Chance.png");
+        URL chance = getClass().getResource("Images/Case_Chance.png");
         Image i_chance = new Image(chance.toExternalForm());
         ImageView c_chance = new ImageView(i_chance);
             //haut
-        URL chance3 = getClass().getResource("Case_Chance.png");
+        URL chance3 = getClass().getResource("Images/Case_Chance.png");
         Image i_chance3 = new Image(chance3.toExternalForm());
         ImageView c_chance3 = new ImageView(i_chance3);
             //droite
-        URL chance2 = getClass().getResource("Case_Chance.png");
+        URL chance2 = getClass().getResource("Images/Case_Chance.png");
         Image i_chance2 = new Image(chance2.toExternalForm());
         ImageView c_chance2 = new ImageView(i_chance2);
 
         //Case impot et taxe
-        URL impot = getClass().getResource("Case_Impot.png");
+        URL impot = getClass().getResource("Images/Case_Impot.png");
         Image i_impot = new Image(impot.toExternalForm());
         ImageView c_impot = new ImageView(i_impot);
 
-        URL taxe = getClass().getResource("Case_Taxe.png");
+        URL taxe = getClass().getResource("Images/Case_Taxe.png");
         Image i_taxe = new Image(taxe.toExternalForm());
         ImageView c_taxe = new ImageView(i_taxe);
 
         //Cases compagnies
             //eau
-        URL ceaux = getClass().getResource("Case_CEaux.png");
+        URL ceaux = getClass().getResource("Images/Case_CEaux.png");
         Image i_ceaux = new Image(ceaux.toExternalForm());
         ImageView c_ceaux = new ImageView(i_ceaux);
             //electr
-        URL celectr = getClass().getResource("Case_CElect-15.png");
+        URL celectr = getClass().getResource("Images/Case_CElect-15.png");
         Image i_celectr = new Image(celectr.toExternalForm());
         ImageView c_celectr = new ImageView(i_celectr);
 
         //Cases Gares
             //Gare M
-        URL gareM = getClass().getResource("Case_GareM.png");
+        URL gareM = getClass().getResource("Images/Case_GareM.png");
         Image i_gareM = new Image(gareM.toExternalForm());
         ImageView c_gareM = new ImageView(i_gareM);
+
+        //Gare M test
+
+
             //Gare du nord
-        URL gareN = getClass().getResource("Case_GareN.png");
+        URL gareN = getClass().getResource("Images/Case_GareN.png");
         Image i_gareN = new Image(gareN.toExternalForm());
         ImageView c_gareN = new ImageView(i_gareN);
             //gare de lyon
-        URL gareL = getClass().getResource("Case_GareL.png");
+        URL gareL = getClass().getResource("Images/Case_GareL.png");
         Image i_gareL = new Image(gareL.toExternalForm());
         ImageView c_gareL = new ImageView(i_gareL);
             //gare Saint-Lazare
-        URL gareSL = getClass().getResource("Case_GareSL.png");
+        URL gareSL = getClass().getResource("Images/Case_GareSL.png");
         Image i_gareSL = new Image(gareSL.toExternalForm());
         ImageView c_gareSL = new ImageView(i_gareSL);
 
         //groupe bleu
-        URL vaugirard = getClass().getResource("Case_Vaugirard.png");
+        URL vaugirard = getClass().getResource("Images/Case_Vaugirard.png");
         Image i_vaugirard = new Image(vaugirard.toExternalForm());
         ImageView c_vaugirard = new ImageView(i_vaugirard);
 
-        URL courcelles = getClass().getResource("Case_Courcelles.png");
+        URL courcelles = getClass().getResource("Images/Case_Courcelles.png");
         Image i_courcelles = new Image(courcelles.toExternalForm());
         ImageView c_courcelles = new ImageView(i_courcelles);
 
-        URL republique = getClass().getResource("Case_Republique.png");
+        URL republique = getClass().getResource("Images/Case_Republique.png");
         Image i_republique = new Image(republique.toExternalForm());
         ImageView c_republique = new ImageView(i_republique);
 
         //groupe violete clair
-        URL villette = getClass().getResource("Case_Villette.png");
+        URL villette = getClass().getResource("Images/Case_Villette.png");
         Image i_villette = new Image(villette.toExternalForm());
         ImageView c_villette = new ImageView(i_villette);
 
-        URL neuilly = getClass().getResource("Case_Neuilly.png");
+        URL neuilly = getClass().getResource("Images/Case_Neuilly.png");
         Image i_neuilly = new Image(neuilly.toExternalForm());
         ImageView c_neuilly = new ImageView(i_neuilly);
 
-        URL paradis = getClass().getResource("Case_Paradis.png");
+        URL paradis = getClass().getResource("Images/Case_Paradis.png");
         Image i_paradis = new Image(paradis.toExternalForm());
         ImageView c_paradis = new ImageView(i_paradis);
 
         //groupe orange
-        URL mozart = getClass().getResource("Case_Mozart.png");
+        URL mozart = getClass().getResource("Images/Case_Mozart.png");
         Image i_mozart = new Image(mozart.toExternalForm());
         ImageView c_mozart = new ImageView(i_mozart);
 
-        URL saintM = getClass().getResource("Case_SaintM.png");
+        URL saintM = getClass().getResource("Images/Case_SaintM.png");
         Image i_saintM = new Image(saintM.toExternalForm());
         ImageView c_saintM = new ImageView(i_saintM);
 
-        URL pigalle = getClass().getResource("Case_Pigalle.png");
+        URL pigalle = getClass().getResource("Images/Case_Pigalle.png");
         Image i_pigalle = new Image(pigalle.toExternalForm());
         ImageView c_pigalle = new ImageView(i_pigalle);
 
         //groupe rouge
-        URL matignon = getClass().getResource("Case_Matignon.png");
+        URL matignon = getClass().getResource("Images/Case_Matignon.png");
         Image i_matignon = new Image(matignon.toExternalForm());
         ImageView c_matignon = new ImageView(i_matignon);
 
-        URL malesherbes = getClass().getResource("Case_Malesherbes.png");
+        URL malesherbes = getClass().getResource("Images/Case_Malesherbes.png");
         Image i_malesherbes = new Image(malesherbes.toExternalForm());
         ImageView c_malesherbes = new ImageView(i_malesherbes);
 
-        URL henriM = getClass().getResource("Case_HenriM.png");
+        URL henriM = getClass().getResource("Images/Case_HenriM.png");
         Image i_henriM = new Image(henriM.toExternalForm());
         ImageView c_henriM = new ImageView(i_henriM);
 
         //groupe jaune
-        URL faubourgSH = getClass().getResource("Case_FaubourgSH.png");
+        URL faubourgSH = getClass().getResource("Images/Case_FaubourgSH.png");
         Image i_faubourgSH = new Image(faubourgSH.toExternalForm());
         ImageView c_faubourgSH = new ImageView(i_faubourgSH);
 
-        URL bourse = getClass().getResource("Case_Bourse.png");
+        URL bourse = getClass().getResource("Images/Case_Bourse.png");
         Image i_bourse = new Image(bourse.toExternalForm());
         ImageView c_bourse = new ImageView(i_bourse);
 
-        URL lafayette = getClass().getResource("Case_Lafayette.png");
+        URL lafayette = getClass().getResource("Images/Case_Lafayette.png");
         Image i_lafayette = new Image(lafayette.toExternalForm());
         ImageView c_lafayette = new ImageView(i_lafayette);
 
         //groupe vert
-        URL breteuil = getClass().getResource("Case_Breteuil.png");
+        URL breteuil = getClass().getResource("Images/Case_Breteuil.png");
         Image i_breteuil = new Image(breteuil.toExternalForm());
         ImageView c_breteuil = new ImageView(i_breteuil);
 
-        URL foch = getClass().getResource("Case_Foch.png");
+        URL foch = getClass().getResource("Images/Case_Foch.png");
         Image i_foch = new Image(foch.toExternalForm());
         ImageView c_foch = new ImageView(i_foch);
 
-        URL capucines = getClass().getResource("Case_Capucines.png");
+        URL capucines = getClass().getResource("Images/Case_Capucines.png");
         Image i_capucines = new Image(capucines.toExternalForm());
         ImageView c_capucines = new ImageView(i_capucines);
 
         //groupe bleu foncé
-        URL champsE = getClass().getResource("Case_ChampsE.png");
+        URL champsE = getClass().getResource("Images/Case_ChampsE.png");
         Image i_champsE = new Image(champsE.toExternalForm());
         ImageView c_champsE = new ImageView(i_champsE);
 
-        URL paix = getClass().getResource("Case_Paix.png");
+        URL paix = getClass().getResource("Images/Case_Paix.png");
         Image i_paix = new Image(paix.toExternalForm());
         ImageView c_paix = new ImageView(i_paix);
 
