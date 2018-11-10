@@ -3,7 +3,10 @@ package IHM.Fenetre.FenetreParties;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -11,9 +14,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
+import javafx.scene.input.MouseDragEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -39,6 +44,7 @@ public class Jeu extends Parent {
 
         //plateauJeau();
         caseDuBas() ;
+        caseDeGauche();
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -86,6 +92,26 @@ public class Jeu extends Parent {
                // nouvelle_fenetre.setOpacity(0.5);
 
                 choixMenu(primaryStage, nouvelle_fenetre, couleur);
+
+            }
+        });
+
+        ///ACTION SI BOUTON LANCER DES
+        bt_lancerDes.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+                automate.evoluer("lancerDes");
+
+            }
+        });
+
+        ///ACTION SI BOUTON TOUR SUIVANT
+        bt_tourSuivant.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+                automate.evoluer("tourSuivant");
 
             }
         });
@@ -564,6 +590,194 @@ public class Jeu extends Parent {
 
     }
 
+    public void caseDeGauche() {
+
+///////////////////////////////////////////////////////////////////////////////////GROUPE VIOLET CLAIR
+ ///////CASE DE LA VILETTE
+
+        Pane caseVillette = new Pane();
+
+        caseVillette.setLayoutX(15);
+        caseVillette.setLayoutY(580);
+
+        URL villette = getClass().getResource("Images/Case_Villette.png");
+        Image i_villette = new Image(villette.toExternalForm());
+        ImageView c_villette = new ImageView(i_villette);
+
+        c_villette.setFitHeight(48);
+        c_villette.setPreserveRatio(true);
+
+        caseVillette.getChildren().add(c_villette);
+
+        //Si on clique sur l'image
+        caseVillette.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+
+            }
+        });
+
+        this.getChildren().add(caseVillette);
+
+///////CASE NEUILLY
+
+        Pane caseNeuilly = new Pane();
+
+        caseNeuilly.setLayoutX(15);
+        caseNeuilly.setLayoutY(484);
+
+        URL neuilly = getClass().getResource("Images/Case_Neuilly.png");
+        Image i_neuilly = new Image(neuilly.toExternalForm());
+        ImageView c_neuilly = new ImageView(i_neuilly);
+
+        c_neuilly.setFitHeight(48);
+        c_neuilly.setPreserveRatio(true);
+
+        caseNeuilly.getChildren().add(c_neuilly);
+        this.getChildren().add(caseNeuilly);
+
+///////CASE PARADIS
+
+        Pane caseParadis = new Pane();
+
+        caseParadis.setLayoutX(15);
+        caseParadis.setLayoutY(436);
+
+        URL paradis = getClass().getResource("Images/Case_Paradis.png");
+        Image i_paradis = new Image(paradis.toExternalForm());
+        ImageView c_paradis = new ImageView(i_paradis);
+
+        c_paradis.setFitHeight(48);
+        c_paradis.setPreserveRatio(true);
+
+        caseParadis.getChildren().add(c_paradis);
+        this.getChildren().add(caseParadis);
+
+///////////////////////////////////////////////////////////////////////////////////COMPAGNIE ELECTRICITE
+
+        Pane caseCElectr = new Pane();
+
+        caseCElectr.setLayoutX(15);
+        caseCElectr.setLayoutY(532);
+
+        URL celectr = getClass().getResource("Images/Case_CElect-15.png");
+        Image i_celectr = new Image(celectr.toExternalForm());
+        ImageView c_celectr = new ImageView(i_celectr);
+
+        c_celectr.setFitHeight(48);
+        c_celectr.setPreserveRatio(true);
+
+        caseCElectr.getChildren().add(c_celectr);
+        this.getChildren().add(caseCElectr);
+
+///////////////////////////////////////////////////////////////////////////////////GARE DE LYON
+
+        Pane caseGareL = new Pane();
+
+        caseGareL.setLayoutX(15);
+        caseGareL.setLayoutY(388);
+
+
+        URL gareL = getClass().getResource("Images/Case_GareL.png");
+        Image i_gareL = new Image(gareL.toExternalForm());
+        ImageView c_gareL = new ImageView(i_gareL);
+
+        caseGareL.setBackground(new Background(new BackgroundImage(i_gareL,BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT,BackgroundPosition.CENTER,BackgroundSize.DEFAULT)));
+
+        c_gareL.setFitHeight(48);
+        c_gareL.setPreserveRatio(true);
+
+
+        caseGareL.getChildren().add(c_gareL);
+        this.getChildren().add(caseGareL);
+///////////////////////////////////////////////////////////////////////////////////GROUPE ORANGE
+///////CASE Mozart
+
+        Pane caseMozart = new Pane();
+
+        caseMozart.setLayoutX(15);
+        caseMozart.setLayoutY(340);
+
+        URL mozart = getClass().getResource("Images/Case_Mozart.png");
+        Image i_mozart = new Image(mozart.toExternalForm());
+        ImageView c_mozart = new ImageView(i_mozart);
+
+        c_mozart.setFitHeight(48);
+        c_mozart.setPreserveRatio(true);
+
+        caseMozart.getChildren().add(c_mozart);
+        this.getChildren().add(caseMozart);
+
+///////CASE SAINT MICHELLE
+
+        Pane caseSaintM = new Pane();
+
+        caseSaintM.setLayoutX(15);
+        caseSaintM.setLayoutY(244);
+
+        URL saintM = getClass().getResource("Images/Case_SaintM.png");
+        Image i_saintM = new Image(saintM.toExternalForm());
+        ImageView c_saintM = new ImageView(i_saintM);
+
+        c_saintM.setFitHeight(48);
+        c_saintM.setPreserveRatio(true);
+
+        caseSaintM.getChildren().add(c_saintM);
+        this.getChildren().add(caseSaintM);
+
+///////CASE PIGALLE
+
+        Pane casePigalle = new Pane();
+
+        casePigalle.setLayoutX(15);
+        casePigalle.setLayoutY(196);
+
+        URL pigalle = getClass().getResource("Images/Case_Pigalle.png");
+        Image i_pigalle = new Image(pigalle.toExternalForm());
+        ImageView c_pigalle = new ImageView(i_pigalle);
+
+        c_pigalle.setFitHeight(48);
+        c_pigalle.setPreserveRatio(true);
+
+        casePigalle.getChildren().add(c_pigalle);
+        this.getChildren().add(casePigalle);
+
+///////////////////////////////////////////////////////////////////////////////////CAISSE COMMUNAUTEE
+
+        Pane caseCommunautee = new Pane();
+
+        caseCommunautee.setLayoutX(35);
+        caseCommunautee.setLayoutY(272);
+
+        URL commu = getClass().getResource("Images/Case_Communaute.png");
+        Image i_com = new Image(commu.toExternalForm());
+        ImageView c_com = new ImageView(i_com);
+
+        c_com.setRotate(90);
+        c_com.setFitWidth(48);
+        c_com.setPreserveRatio(true);
+
+        caseCommunautee.getChildren().add(c_com);
+        this.getChildren().add(caseCommunautee);
+
+///////////////////////////////////////////////////////////////////////////////////PARC GRATUIT
+
+        Pane caseParc = new Pane();
+
+        caseParc.setLayoutX(15);
+        caseParc.setLayoutY(110);
+
+        URL parc = getClass().getResource("Images/Case_Parc.png");
+        Image i_parc = new Image(parc.toExternalForm());
+        ImageView c_parc = new ImageView(i_parc);
+
+        c_parc.setFitWidth(87);
+        c_parc.setPreserveRatio(true);
+
+        caseParc.getChildren().add(c_parc);
+        this.getChildren().add(caseParc);
+
+    }
 
     public void CaseDuHaut()
     {

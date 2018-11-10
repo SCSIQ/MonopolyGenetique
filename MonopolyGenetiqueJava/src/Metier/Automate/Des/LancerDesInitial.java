@@ -1,5 +1,6 @@
 package Metier.Automate.Des;
 import Entites.Joueur;
+import Metier.Automate.Automate;
 import Metier.Automate.Choix.ChoixPossibles;
 import Metier.Automate.Etat;
 import java.util.HashMap;
@@ -9,8 +10,8 @@ import java.util.*;
 
 public class LancerDesInitial extends Etat {
 
-    public LancerDesInitial(ArrayList<Joueur> listeJoueurs) {
-        super(listeJoueurs);
+    public LancerDesInitial(Automate automate, ArrayList<Joueur> listeJoueurs) {
+        super(automate, listeJoueurs);
     }
 
     private static Object getKeyFromValue(Map hm, Object value){
@@ -23,7 +24,7 @@ public class LancerDesInitial extends Etat {
     }
 
     @Override
-    public void agir() {
+    public void agir(String event) {
 
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();
 
@@ -59,8 +60,8 @@ public class LancerDesInitial extends Etat {
     }
 
     @Override
-    public Etat transition() {
-        return new ChoixPossibles(super.getListeJoueurs());
+    public Etat transition(String event) {
+        return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
     }
 
     @Override
