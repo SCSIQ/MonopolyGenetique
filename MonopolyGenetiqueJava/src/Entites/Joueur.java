@@ -11,9 +11,9 @@ public class Joueur {
     private boolean aLanceDes = false;
     private ArrayList<Proprietes> listePropietes;
 
-    public Joueur(Cases position) {
+    public Joueur(Cases position, CouleurPion couleur) {
         this.solde = 500; //a revoir car valeur fausse
-        this.pion = new Pion(this, null, null);
+        this.pion = new Pion(this, position, couleur);
     }
 
     public void LancerDes(){

@@ -1,8 +1,10 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import Entites.CouleurPion;
 import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.InitialisationPartie;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -114,15 +116,14 @@ public class Solo extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                //ici ajouter lancement automate avec en param le joueur
-                Joueur j = new Joueur(null);
-                ArrayList<Joueur> listeJoueurs = new ArrayList<>();
-                listeJoueurs.add(j);
-                for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeJoueurs.add(new Joueur(null));
+                //début initialisation automate
+                InitialisationPartie initialisationPartie = new InitialisationPartie();
+                ArrayList<CouleurPion> listeCouleurs = new ArrayList<>();
+                for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
+                    listeCouleurs.add(CouleurPion.rouge);
                 }
-                System.out.println("Nombre de joueurs : "+listeJoueurs.size());
-                Automate automate = new Automate(listeJoueurs);
+                Automate automate = initialisationPartie.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
+                //fin initialisation automate
 
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue(),automate);

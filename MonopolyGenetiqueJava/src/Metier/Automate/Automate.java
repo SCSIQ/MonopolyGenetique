@@ -2,7 +2,6 @@ package Metier.Automate;
 
 import Entites.Joueur;
 import Metier.Automate.Des.LancerDesInitial;
-import Metier.Automate.Des.LancerDesJoueur;
 
 import java.util.ArrayList;
 

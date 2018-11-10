@@ -103,7 +103,7 @@ public class HumainVShumain extends Parent {
                 Color couleur= Color.BLACK;
 
                 //ici ajouter lancement automate avec en param le joueur
-                Joueur j = new Joueur(null);
+                Joueur j = new Joueur(null, null);
                 ArrayList<Joueur> listeJoueurs = new ArrayList<>();
                 listeJoueurs.add(j);
                 /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
