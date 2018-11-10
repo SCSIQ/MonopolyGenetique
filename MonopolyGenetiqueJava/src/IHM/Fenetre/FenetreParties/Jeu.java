@@ -3,7 +3,9 @@ package IHM.Fenetre.FenetreParties;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -11,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseDragEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -39,6 +43,7 @@ public class Jeu extends Parent {
 
         //plateauJeau();
         caseDuBas() ;
+        caseDeGauche();
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -536,6 +541,34 @@ public class Jeu extends Parent {
 
     }
 
+    public void caseDeGauche() {
+ ///////CASE DE LA VILETTE
+
+        Pane caseVillette = new Pane();
+
+        caseVillette.setLayoutX(15);
+        caseVillette.setLayoutY(580);
+
+        URL villette = getClass().getResource("Images/Case_Villette.png");
+        Image i_villette = new Image(villette.toExternalForm());
+        ImageView c_villette = new ImageView(i_villette);
+
+        c_villette.setFitHeight(48);
+        c_villette.setPreserveRatio(true);
+
+        caseVillette.getChildren().add(c_villette);
+
+        //Si on clique sur l'image
+        caseVillette.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                c_villette.setTranslateX(100);
+            }
+        });
+
+
+        this.getChildren().add(caseVillette);
+    }
 
     public void plateauJeau(){
 
