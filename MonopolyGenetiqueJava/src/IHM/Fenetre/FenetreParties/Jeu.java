@@ -376,7 +376,7 @@ public class Jeu extends Parent {
         Image i_depart = new Image(depart.toExternalForm());
         ImageView c_depart = new ImageView(i_depart);
 
-        c_depart.setFitWidth(87);
+        c_depart.setFitWidth(90);
         c_depart.setPreserveRatio(true);
 
         //ajout au panel de l'image et ajout du panel dans le jeu
@@ -387,15 +387,17 @@ public class Jeu extends Parent {
         //CASE BELLEVILLE
         Pane violetBelleville = new Pane();
         //dimension du panel
+
         violetBelleville.setLayoutX(482);
         violetBelleville.setLayoutY(620);
+
         //creation de l'image
         URL belleville = getClass().getResource("Images/Case_Belleville.png");
         Image i_Belleville = new Image(belleville.toExternalForm());
         ImageView c_belleville = new ImageView(i_Belleville);
 
         //taille de l'image
-        c_belleville.setFitWidth(48);
+        c_belleville.setFitWidth(50);
         c_belleville.setPreserveRatio(true);
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(violetBelleville);
@@ -411,7 +413,7 @@ public class Jeu extends Parent {
         Image i_com = new Image(commu.toExternalForm());
         ImageView c_com = new ImageView(i_com);
 
-        c_com.setFitWidth(48);
+        c_com.setFitWidth(50);
         c_com.setPreserveRatio(true);
 
         //ajout au panel de l'image et ajout du panel dans le jeu
@@ -424,11 +426,12 @@ public class Jeu extends Parent {
         violetLecourbe.setLayoutX(386);
         violetLecourbe.setLayoutY(620);
 
+
         URL lecourbe = getClass().getResource("Images/Case_Lecourbe.png");
         Image i_Lecourbe = new Image(lecourbe.toExternalForm());
         ImageView c_Lecourbe = new ImageView(i_Lecourbe);
 
-        c_Lecourbe.setFitWidth(48);
+        c_Lecourbe.setFitWidth(50);
         c_Lecourbe.setPreserveRatio(true);
 
         this.getChildren().add(violetLecourbe);
@@ -437,6 +440,7 @@ public class Jeu extends Parent {
         //CASE IMPOT SUR LE REVENU
         Pane CaseImpotRevenu = new Pane() ;
 
+
         CaseImpotRevenu.setLayoutX(338);
         CaseImpotRevenu.setLayoutY(620);
 
@@ -444,7 +448,7 @@ public class Jeu extends Parent {
         Image i_impot = new Image(impot.toExternalForm());
         ImageView c_impot = new ImageView(i_impot);
 
-        c_impot.setFitWidth(48);
+        c_impot.setFitWidth(50);
         c_impot.setPreserveRatio(true);
 
         this.getChildren().add(CaseImpotRevenu);
@@ -454,14 +458,16 @@ public class Jeu extends Parent {
 
         Pane gareMontparnasse = new Pane() ;
 
+
         gareMontparnasse.setLayoutX(290);
         gareMontparnasse.setLayoutY(620);
+
 
         URL gareM = getClass().getResource("Images/Case_GareM.png");
         Image i_gareM = new Image(gareM.toExternalForm());
         ImageView c_gareM = new ImageView(i_gareM);
 
-        c_gareM.setFitWidth(48);
+        c_gareM.setFitWidth(50);
         c_gareM.setPreserveRatio(true);
 
         this.getChildren().add(gareMontparnasse);
@@ -470,14 +476,16 @@ public class Jeu extends Parent {
         //CASE RUE DE VAUGIRAD
 
         Pane CaseVaugirad = new Pane() ;
+
         CaseVaugirad.setLayoutX(242);
         CaseVaugirad.setLayoutY(620);
+
 
         URL vaugirard = getClass().getResource("Images/Case_Vaugirard.png");
         Image i_vaugirard = new Image(vaugirard.toExternalForm());
         ImageView c_vaugirard = new ImageView(i_vaugirard);
 
-        c_vaugirard.setFitWidth(48);
+        c_vaugirard.setFitWidth(50);
         c_vaugirard.setPreserveRatio(true);
 
         this.getChildren().add(CaseVaugirad);
@@ -493,7 +501,7 @@ public class Jeu extends Parent {
         Image i_chance = new Image(chance.toExternalForm());
         ImageView c_chance = new ImageView(i_chance);
 
-        c_chance.setFitWidth(48);
+        c_chance.setFitWidth(50);
         c_chance.setPreserveRatio(true);
 
         this.getChildren().add(CaseChance);
@@ -503,14 +511,16 @@ public class Jeu extends Parent {
 
         Pane CaseCourcelle = new Pane() ;
 
+
         CaseCourcelle.setLayoutX(146);
         CaseCourcelle.setLayoutY(620);
+
 
         URL courcelles = getClass().getResource("Images/Case_Courcelles.png");
         Image i_courcelles = new Image(courcelles.toExternalForm());
         ImageView c_courcelles = new ImageView(i_courcelles);
 
-        c_courcelles.setFitWidth(48);
+        c_courcelles.setFitWidth(50);
         c_courcelles.setPreserveRatio(true);
 
         this.getChildren().add(CaseCourcelle);
@@ -519,14 +529,16 @@ public class Jeu extends Parent {
         //CASE RUE REPUBLIQUE
         Pane CaseRepublique = new Pane() ;
 
+
         CaseRepublique.setLayoutX(98);
         CaseRepublique.setLayoutY(620);
+
 
         URL republique = getClass().getResource("Images/Case_Republique.png");
         Image i_republique = new Image(republique.toExternalForm());
         ImageView c_republique = new ImageView(i_republique);
 
-        c_republique.setFitWidth(48);
+        c_republique.setFitWidth(50);
         c_republique.setPreserveRatio(true);
 
         this.getChildren().add(CaseRepublique);
