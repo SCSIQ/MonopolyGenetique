@@ -3,7 +3,6 @@ package Metier.Automate.Argent.Proprietes;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Choix.ChoixPossibles;
-import Metier.Plateau.Proprietes;
 import Metier.Automate.Etat;
 
 import java.util.ArrayList;
@@ -17,6 +16,9 @@ public class AcheterPropriete extends Etat{
     @Override
     public void agir(String event) {
 
+        //code non fonctionnel, à refaire
+
+        /*
         //normalement ces infos sont données par l'IHM car varient selon la case ou se trouve le pion
         Proprietes p = new Proprietes();
         p.setPrix(500);
@@ -26,6 +28,7 @@ public class AcheterPropriete extends Etat{
 
         Joueur joueur = super.getListeJoueurs().get(0);
         joueur.Payer(p.getPrix());
+        */
 
     }
 

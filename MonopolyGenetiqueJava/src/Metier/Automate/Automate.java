@@ -20,7 +20,6 @@ public class Automate {
     }
 
     public void evoluer(String event){
-        //System.out.println("Event : "+event);
         this.etatCourant.agir(event);
         this.etatCourant = this.etatCourant.transition(event);
         System.out.println("Etat actuel : "+this.etatCourant.toString());
@@ -33,5 +32,9 @@ public class Automate {
     //variable permettant de demander à l'automate d'évoluer une fois de plus de façon automatique
     public void setAutomatedEvolution(boolean automatedEvolution) {
         this.automatedEvolution = automatedEvolution;
+    }
+
+    public Joueur getJoueurCourant() {
+        return listeJoueurs.get(0);
     }
 }

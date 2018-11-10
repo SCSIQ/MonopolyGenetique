@@ -1,14 +1,16 @@
-package Metier.Plateau;
+package Metier.Plateau.ListeProprietes;
 
 import Entites.Joueur;
+import Metier.Plateau.Cases;
 
-public class Proprietes extends Cases {
+public abstract class Proprietes extends Cases {
 
     private String label ;
     private int prix ;
     private Joueur proprio ;
 
-    public Proprietes() {
+    public Proprietes(int position) {
+        super(position);
     }
 
     public int getPrix() {

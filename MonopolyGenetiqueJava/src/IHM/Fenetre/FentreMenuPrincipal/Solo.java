@@ -115,11 +115,11 @@ public class Solo extends Parent {
             public void handle(ActionEvent event) {
 
                 //ici ajouter lancement automate avec en param le joueur
-                Joueur j = new Joueur();
+                Joueur j = new Joueur(null);
                 ArrayList<Joueur> listeJoueurs = new ArrayList<>();
                 listeJoueurs.add(j);
                 for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeJoueurs.add(new Joueur());
+                    listeJoueurs.add(new Joueur(null));
                 }
                 System.out.println("Nombre de joueurs : "+listeJoueurs.size());
                 Automate automate = new Automate(listeJoueurs);

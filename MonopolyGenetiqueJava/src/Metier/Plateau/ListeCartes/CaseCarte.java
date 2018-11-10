@@ -1,9 +1,11 @@
-package Metier.Plateau;
+package Metier.Plateau.ListeCartes;
 
-public class ParcGratuit extends Cases {
+import Metier.Plateau.Cases;
 
-    public ParcGratuit() {
-        super(20);
+public abstract class CaseCarte extends Cases {
+
+    public CaseCarte() {
+        super(-1);
     }
 
     @Override

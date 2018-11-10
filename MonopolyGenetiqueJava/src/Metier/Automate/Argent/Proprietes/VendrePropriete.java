@@ -1,6 +1,6 @@
 package Metier.Automate;
 
-import Metier.Plateau.Proprietes;
+import Metier.Plateau.ListeProprietes.Proprietes;
 
 public class VendrePropriete {
 

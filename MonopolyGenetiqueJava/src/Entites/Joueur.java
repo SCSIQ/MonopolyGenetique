@@ -1,6 +1,7 @@
 package Entites;
 
-import Metier.Plateau.Proprietes;
+import Metier.Plateau.Cases;
+import Metier.Plateau.ListeProprietes.Proprietes;
 import java.util.ArrayList;
 
 public class Joueur {
@@ -10,9 +11,9 @@ public class Joueur {
     private boolean aLanceDes = false;
     private ArrayList<Proprietes> listePropietes;
 
-    public Joueur() {
+    public Joueur(Cases position) {
         this.solde = 500; //a revoir car valeur fausse
-        this.aLanceDes = false;
+        this.pion = new Pion(this, null, null);
     }
 
     public void LancerDes(){
