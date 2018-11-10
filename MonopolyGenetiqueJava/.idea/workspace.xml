@@ -124,12 +124,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3364" />
+          <entry key="java" value="3377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3364" />
+          <entry key="JAVA" value="3377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -155,8 +155,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="920" column="49" selection-start-line="920" selection-start-column="49" selection-end-line="920" selection-end-column="49" />
+            <state relative-caret-position="34">
+              <caret line="399" column="33" selection-start-line="399" selection-start-column="33" selection-end-line="399" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -200,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -367,7 +367,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="697" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3265306" />
@@ -379,7 +379,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37437603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36885247" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -558,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="920" column="49" selection-start-line="920" selection-start-column="49" selection-end-line="920" selection-end-column="49" />
+        <state relative-caret-position="34">
+          <caret line="399" column="33" selection-start-line="399" selection-start-column="33" selection-end-line="399" selection-end-column="33" />
         </state>
       </provider>
     </entry>

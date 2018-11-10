@@ -397,7 +397,7 @@ public class Jeu extends Parent {
         Pane CaseDepart= new Pane() ;
 
         CaseDepart.setLayoutX(530);
-        CaseDepart.setLayoutY(620);
+        CaseDepart.setLayoutY(628);
 
         URL depart = getClass().getResource("Images/Case_Depart.png");
         Image i_depart = new Image(depart.toExternalForm());
@@ -416,7 +416,7 @@ public class Jeu extends Parent {
         //dimension du panel
 
         violetBelleville.setLayoutX(482);
-        violetBelleville.setLayoutY(620);
+        violetBelleville.setLayoutY(628);
 
         //creation de l'image
         URL belleville = getClass().getResource("Images/Case_Belleville.png");
@@ -434,7 +434,7 @@ public class Jeu extends Parent {
         Pane PiocheCarteCommunaute = new Pane() ;
 
         PiocheCarteCommunaute.setLayoutX(434);
-        PiocheCarteCommunaute.setLayoutY(620);
+        PiocheCarteCommunaute.setLayoutY(628);
 
         URL commu = getClass().getResource("Images/Case_Communaute.png");
         Image i_com = new Image(commu.toExternalForm());
@@ -451,7 +451,7 @@ public class Jeu extends Parent {
         Pane violetLecourbe = new Pane() ;
 
         violetLecourbe.setLayoutX(386);
-        violetLecourbe.setLayoutY(620);
+        violetLecourbe.setLayoutY(628);
 
 
         URL lecourbe = getClass().getResource("Images/Case_Lecourbe.png");
@@ -469,7 +469,7 @@ public class Jeu extends Parent {
 
 
         CaseImpotRevenu.setLayoutX(338);
-        CaseImpotRevenu.setLayoutY(620);
+        CaseImpotRevenu.setLayoutY(628);
 
         URL impot = getClass().getResource("Images/Case_Impot.png");
         Image i_impot = new Image(impot.toExternalForm());
@@ -487,7 +487,7 @@ public class Jeu extends Parent {
 
 
         gareMontparnasse.setLayoutX(290);
-        gareMontparnasse.setLayoutY(620);
+        gareMontparnasse.setLayoutY(628);
 
 
         URL gareM = getClass().getResource("Images/Case_GareM.png");
@@ -505,7 +505,7 @@ public class Jeu extends Parent {
         Pane CaseVaugirad = new Pane() ;
 
         CaseVaugirad.setLayoutX(242);
-        CaseVaugirad.setLayoutY(620);
+        CaseVaugirad.setLayoutY(628);
 
 
         URL vaugirard = getClass().getResource("Images/Case_Vaugirard.png");
@@ -522,7 +522,7 @@ public class Jeu extends Parent {
         Pane CaseChance = new Pane() ;
 
         CaseChance.setLayoutX(194);
-        CaseChance.setLayoutY(620);
+        CaseChance.setLayoutY(628);
 
         URL chance = getClass().getResource("Images/Case_Chance.png");
         Image i_chance = new Image(chance.toExternalForm());
@@ -540,7 +540,7 @@ public class Jeu extends Parent {
 
 
         CaseCourcelle.setLayoutX(146);
-        CaseCourcelle.setLayoutY(620);
+        CaseCourcelle.setLayoutY(628);
 
 
         URL courcelles = getClass().getResource("Images/Case_Courcelles.png");
@@ -558,7 +558,7 @@ public class Jeu extends Parent {
 
 
         CaseRepublique.setLayoutX(98);
-        CaseRepublique.setLayoutY(620);
+        CaseRepublique.setLayoutY(628);
 
 
         URL republique = getClass().getResource("Images/Case_Republique.png");
@@ -575,7 +575,7 @@ public class Jeu extends Parent {
         Pane CasePrison = new Pane() ;
 
         CasePrison.setLayoutX(15);
-        CasePrison.setLayoutY(620);
+        CasePrison.setLayoutY(628);
 
         URL prison = getClass().getResource("Images/Case_Prison.png");
         Image i_prison = new Image(prison.toExternalForm());
