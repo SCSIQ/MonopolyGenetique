@@ -3,6 +3,10 @@ package sample;
 import Entites.Joueur;
 import IHM.Fenetre.FentreMenuPrincipal.Accueil;
 import Metier.Automate.Des.LancerDesInitial;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Marron.Marron2;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose1;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose2;
+import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -19,11 +23,8 @@ public class Main extends Application {
 
         //appels des etats de l'automates pour phases de test
 
-        /*Joueur j = new Joueur();
-        ArrayList<Joueur> listeJoueurs = new ArrayList<>();
-        listeJoueurs.add(j);
-        LancerDesInitial l1 = new LancerDesInitial(listeJoueurs);
-        l1.agir();*/
+        //Proprietes r = new Rose2();
+        //System.out.println("Rose1 -> position : "+r.getPosition()+", nom : "+r.toString()+", prix : "+r.getPrix());
 
         //fin des appels des etats
 

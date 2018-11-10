@@ -28,6 +28,7 @@ public class LancerDesJoueur extends Etat {
             de1=toto.nextInt(6)+1;
             de2=toto.nextInt(6)+1;
             int score = de1+de2;
+            j.setResLanceDes(score);
             System.out.println("    score joueur : "+score);
         }else{
             System.out.println("    vous avez déjà lancé des dés");

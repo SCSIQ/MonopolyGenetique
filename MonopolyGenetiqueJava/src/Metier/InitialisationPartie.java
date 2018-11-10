@@ -30,7 +30,7 @@ public class InitialisationPartie {
 
     private void creationListeJoueurs(int nombre, ArrayList<CouleurPion> listeCouleurs){
         for(int i=0 ; i<nombre ; i++){
-            listeJoueurs.add(new Joueur(this.listeCases.get(0), listeCouleurs.get(i)));
+            listeJoueurs.add(new Joueur(this.listeCases, listeCouleurs.get(i)));
         }
     }
 }

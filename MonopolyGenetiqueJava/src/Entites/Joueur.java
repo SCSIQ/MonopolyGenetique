@@ -10,46 +10,13 @@ public class Joueur {
     private Pion pion ;
     private boolean aLanceDes = false;
     private ArrayList<Proprietes> listePropietes;
+    private int resLanceDes = 0;
+    private ArrayList<Cases> listeCases;
 
-    public Joueur(Cases position, CouleurPion couleur) {
+    public Joueur(ArrayList<Cases> listeCases, CouleurPion couleur) {
         this.solde = 500; //a revoir car valeur fausse
-        this.pion = new Pion(this, position, couleur);
-    }
-
-    public void LancerDes(){
-
-    }
-
-    public void Acheter (Proprietes p){
-
-    }
-
-    public void Vendre ( Proprietes p){
-
-    }
-
-    public void Payer( int somme){
-
-    }
-
-    public void RecevoirArgent ( int somme){
-
-    }
-
-    public void PiocherCarte(){
-
-    }
-
-    public void Perdre(){
-
-    }
-
-    public void Gagner(){
-
-    }
-
-    public void QuitterPartie(){
-
+        this.listeCases = listeCases;
+        this.pion = new Pion(this, listeCases.get(0), couleur);
     }
 
     public ArrayList<Proprietes> getListePropietes() {
@@ -66,5 +33,26 @@ public class Joueur {
 
     public void setaLanceDes(boolean aLanceDes) {
         this.aLanceDes = aLanceDes;
+    }
+
+    public int getResLanceDes() {
+        return resLanceDes;
+    }
+
+    public void setResLanceDes(int resLanceDes) {
+        this.resLanceDes = resLanceDes;
+    }
+
+    public void avancer() {
+        pion.avancer(this.resLanceDes);
+    }
+
+    public ArrayList<Cases> getListeCases() {
+        return listeCases;
+    }
+
+    @Override
+    public String toString() {
+        return "    position du joueur : "+this.pion.toString();
     }
 }

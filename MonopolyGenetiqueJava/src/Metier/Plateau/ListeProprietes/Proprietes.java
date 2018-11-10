@@ -5,7 +5,6 @@ import Metier.Plateau.Cases;
 
 public abstract class Proprietes extends Cases {
 
-    private String label ;
     private int prix ;
     private Joueur proprio ;
 

@@ -14,12 +14,21 @@ public class Pion {
         this.couleur = couleur;
     }
 
-    public int getPosition(){
-        return position.getPosition();
-    }
-
     public void avancer(int nombre){
-        //à coder
+        if(position.getPosition() + nombre <= 13){
+            for(Cases c : joueur.getListeCases()){
+                if(c.getPosition() == position.getPosition() + nombre){
+                    this.position = c;
+                }
+            }
+        }
+        else{
+            System.out.println("    ne peut pas avancer pour le moment...");
+        }
     }
 
+    @Override
+    public String toString() {
+        return position.toString();
+    }
 }

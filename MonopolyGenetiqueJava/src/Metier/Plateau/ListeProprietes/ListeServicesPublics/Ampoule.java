@@ -1,6 +1,4 @@
-package Metier.Plateau.ListeProprietes;
-
-import Metier.Plateau.ListeProprietes.ServicePublic;
+package Metier.Plateau.ListeProprietes.ListeServicesPublics;
 
 public class Ampoule extends ServicePublic {
 

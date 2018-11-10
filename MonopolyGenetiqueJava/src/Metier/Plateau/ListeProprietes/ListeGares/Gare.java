@@ -1,4 +1,6 @@
-package Metier.Plateau.ListeProprietes;
+package Metier.Plateau.ListeProprietes.ListeGares;
+
+import Metier.Plateau.ListeProprietes.Proprietes;
 
 public abstract class Gare extends Proprietes {
 

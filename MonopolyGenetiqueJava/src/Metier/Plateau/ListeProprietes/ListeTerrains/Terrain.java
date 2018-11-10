@@ -1,6 +1,7 @@
-package Metier.Plateau.ListeProprietes;
+package Metier.Plateau.ListeProprietes.ListeTerrains;
 
 import IHM.Plateau.Couleur;
+import Metier.Plateau.ListeProprietes.Proprietes;
 
 public abstract class Terrain extends Proprietes {
 
