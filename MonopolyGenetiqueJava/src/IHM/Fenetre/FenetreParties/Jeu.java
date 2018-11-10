@@ -96,6 +96,26 @@ public class Jeu extends Parent {
             }
         });
 
+        ///ACTION SI BOUTON LANCER DES
+        bt_lancerDes.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+                automate.evoluer("lancerDes");
+
+            }
+        });
+
+        ///ACTION SI BOUTON TOUR SUIVANT
+        bt_tourSuivant.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+                automate.evoluer("tourSuivant");
+
+            }
+        });
+
 ////////BLOCAGE REDUCTION
 
         nouvelle_fenetre.setMinWidth(1290);

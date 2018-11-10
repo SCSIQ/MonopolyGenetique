@@ -7,7 +7,7 @@ public class Joueur {
 
     private int solde ;
     private Pion pion ;
-    private boolean aLanceDes ;
+    private boolean aLanceDes = false;
     private ArrayList<Proprietes> listePropietes;
 
     public Joueur() {
@@ -57,5 +57,13 @@ public class Joueur {
 
     public void setListePropietes(ArrayList<Proprietes> listePropietes) {
         this.listePropietes = listePropietes;
+    }
+
+    public boolean getaLanceDes() {
+        return aLanceDes;
+    }
+
+    public void setaLanceDes(boolean aLanceDes) {
+        this.aLanceDes = aLanceDes;
     }
 }

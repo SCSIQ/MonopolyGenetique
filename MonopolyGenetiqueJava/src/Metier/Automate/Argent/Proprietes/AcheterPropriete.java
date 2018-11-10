@@ -1,6 +1,7 @@
 package Metier.Automate.Argent.Proprietes;
 
 import Entites.Joueur;
+import Metier.Automate.Automate;
 import Metier.Automate.Choix.ChoixPossibles;
 import Metier.Plateau.Proprietes;
 import Metier.Automate.Etat;
@@ -9,12 +10,12 @@ import java.util.ArrayList;
 
 public class AcheterPropriete extends Etat{
 
-    public AcheterPropriete(ArrayList<Joueur> listeJoueurs) {
-        super(listeJoueurs);
+    public AcheterPropriete(Automate automate, ArrayList<Joueur> listeJoueurs) {
+        super(automate, listeJoueurs);
     }
 
     @Override
-    public void agir() {
+    public void agir(String event) {
 
         //normalement ces infos sont données par l'IHM car varient selon la case ou se trouve le pion
         Proprietes p = new Proprietes();
@@ -29,8 +30,8 @@ public class AcheterPropriete extends Etat{
     }
 
     @Override
-    public Etat transition() {
-        return new ChoixPossibles(super.getListeJoueurs());
+    public Etat transition(String event) {
+        return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
     }
 
     @Override
