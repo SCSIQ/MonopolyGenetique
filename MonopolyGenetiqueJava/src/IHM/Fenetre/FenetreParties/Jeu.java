@@ -565,6 +565,34 @@ public class Jeu extends Parent {
     }
 
 
+    public void CaseDuHaut()
+    {
+        //CASE MATIGNON
+        Pane CaseMatignon = new Pane();
+        CaseMatignon.setLayoutX(87);
+        CaseMatignon.setLayoutY(50);
+
+        URL matignon = getClass().getResource("Images/Case_Matignon.png");
+        Image i_matignon = new Image(matignon.toExternalForm());
+        ImageView c_matignon = new ImageView(i_matignon);
+
+        c_matignon.setFitWidth(48);
+        c_matignon.setPreserveRatio(true);
+
+        this.getChildren().add(CaseMatignon);
+        CaseMatignon.getChildren().add(c_matignon); 
+
+        URL malesherbes = getClass().getResource("Images/Case_Malesherbes.png");
+        Image i_malesherbes = new Image(malesherbes.toExternalForm());
+        ImageView c_malesherbes = new ImageView(i_malesherbes);
+
+        URL henriM = getClass().getResource("Images/Case_HenriM.png");
+        Image i_henriM = new Image(henriM.toExternalForm());
+        ImageView c_henriM = new ImageView(i_henriM);
+
+    }
+
+
     public void plateauJeau(){
 
 ////////IMAGES
