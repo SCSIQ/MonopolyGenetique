@@ -23,7 +23,7 @@ public class FinTour extends Etat{
 
     @Override
     public Etat transition(String event) {
-        return null;
+        return new DebutTour(super.getAutomate(), super.getListeJoueurs());
     }
 
     @Override
