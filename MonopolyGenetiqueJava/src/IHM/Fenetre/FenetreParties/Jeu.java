@@ -45,6 +45,7 @@ public class Jeu extends Parent {
         //plateauJeau();
         caseDuBas() ;
         caseDeGauche();
+        caseDuHaut() ;
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -779,12 +780,12 @@ public class Jeu extends Parent {
 
     }
 
-    public void CaseDuHaut()
+    public void caseDuHaut()
     {
         //CASE MATIGNON
         Pane CaseMatignon = new Pane();
-        CaseMatignon.setLayoutX(87);
-        CaseMatignon.setLayoutY(50);
+        CaseMatignon.setLayoutX(100);
+        CaseMatignon.setLayoutY(110);
 
         URL matignon = getClass().getResource("Images/Case_Matignon.png");
         Image i_matignon = new Image(matignon.toExternalForm());
@@ -796,13 +797,129 @@ public class Jeu extends Parent {
         this.getChildren().add(CaseMatignon);
         CaseMatignon.getChildren().add(c_matignon); 
 
+        //CASE CHANCE
+        Pane CaseChance = new Pane();
+        CaseChance.setLayoutX(148);
+        CaseChance.setLayoutY(110);
+
+        URL chance = getClass().getResource("Images/Case_Chance.png");
+        Image i_chance = new Image(chance.toExternalForm());
+        ImageView c_chance = new ImageView(i_chance);
+
+        c_chance.setFitWidth(48);
+        c_chance.setPreserveRatio(true);
+        c_chance.setRotate(180);
+
+        this.getChildren().add(CaseChance);
+        CaseChance.getChildren().add(c_chance);
+
+        //CASE MALSHERBES
+        Pane CaseMalesherbes = new Pane() ;
+
+        CaseMalesherbes.setLayoutX(196);
+        CaseMalesherbes.setLayoutY(110);
+
         URL malesherbes = getClass().getResource("Images/Case_Malesherbes.png");
         Image i_malesherbes = new Image(malesherbes.toExternalForm());
         ImageView c_malesherbes = new ImageView(i_malesherbes);
 
+        c_malesherbes.setFitWidth(48);
+        c_malesherbes.setPreserveRatio(true);
+
+        this.getChildren().add(CaseMalesherbes);
+        CaseMalesherbes.getChildren().add(c_malesherbes);
+
+        //CASE HENRI MARTIN
+        Pane CaseHenri = new Pane() ;
+
+        CaseHenri.setLayoutX(244);
+        CaseHenri.setLayoutY(110);
+
         URL henriM = getClass().getResource("Images/Case_HenriM.png");
         Image i_henriM = new Image(henriM.toExternalForm());
         ImageView c_henriM = new ImageView(i_henriM);
+
+        c_henriM.setFitWidth(48);
+        c_henriM.setPreserveRatio(true);
+
+        this.getChildren().add(CaseHenri);
+        CaseHenri.getChildren().add(c_henriM);
+
+        //GARE DU NORD
+        Pane gareNord = new Pane() ;
+        gareNord.setLayoutX(292);
+        gareNord.setLayoutY(110);
+
+        URL gareN = getClass().getResource("Images/Case_GareN.png");
+        Image i_gareN = new Image(gareN.toExternalForm());
+        ImageView c_gareN = new ImageView(i_gareN);
+
+        c_gareN.setFitWidth(48);
+        c_gareN.setPreserveRatio(true);
+
+        this.getChildren().add(gareNord);
+        gareNord.getChildren().add(c_gareN);
+
+        //CASE SAINT HONORE
+        Pane CaseHonore = new Pane() ;
+        CaseHonore.setLayoutX(340);
+        CaseHonore.setLayoutY(110);
+
+        URL faubourgSH = getClass().getResource("Images/Case_FaubourgSH.png");
+        Image i_faubourgSH = new Image(faubourgSH.toExternalForm());
+        ImageView c_faubourgSH = new ImageView(i_faubourgSH);
+
+        c_faubourgSH.setFitWidth(48);
+        c_faubourgSH.setPreserveRatio(true);
+
+        this.getChildren().add(CaseHonore);
+        CaseHonore.getChildren().add(c_faubourgSH);
+
+        //CASE PLACE DE LA BOURSE
+        Pane CaseBourse = new Pane() ;
+        CaseBourse.setLayoutX(388);
+        CaseBourse.setLayoutY(110);
+
+        URL bourse = getClass().getResource("Images/Case_Bourse.png");
+        Image i_bourse = new Image(bourse.toExternalForm());
+        ImageView c_bourse = new ImageView(i_bourse);
+
+        c_bourse.setFitWidth(48);
+        c_bourse.setPreserveRatio(true);
+
+        this.getChildren().add(CaseBourse);
+        CaseBourse.getChildren().add(c_bourse);
+
+        //CASE DE COMPAGNIE DES EAUX
+        Pane CaseEau = new Pane() ;
+        CaseEau.setLayoutX(436);
+        CaseEau.setLayoutY(110);
+
+        URL ceaux = getClass().getResource("Images/Case_CEaux.png");
+        Image i_ceaux = new Image(ceaux.toExternalForm());
+        ImageView c_ceaux = new ImageView(i_ceaux);
+
+        c_ceaux.setFitWidth(48);
+        c_ceaux.setPreserveRatio(true);
+
+        this.getChildren().add(CaseEau);
+        CaseEau.getChildren().add(c_ceaux);
+
+        //CASE LA FAYETTE
+        Pane CaseFayette = new Pane() ;
+        CaseFayette.setLayoutX(484);
+        CaseFayette.setLayoutY(110);
+
+        URL lafayette = getClass().getResource("Images/Case_Lafayette.png");
+        Image i_lafayette = new Image(lafayette.toExternalForm());
+        ImageView c_lafayette = new ImageView(i_lafayette);
+
+        c_lafayette.setFitWidth(48);
+        c_lafayette.setPreserveRatio(true);
+
+        this.getChildren().add(CaseFayette);
+        CaseFayette.getChildren().add(c_lafayette);
+
 
     }
 
