@@ -461,6 +461,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950275916" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541949613889" />
@@ -477,6 +478,9 @@
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950275916" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950258605" />
+>>>>>>> parent of d1f8c4b... Update MonopolyGenetiqueJava/.idea/workspace.xml
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../informatique IUT/cours/2eme_annee/semestre_3/projetTut/melordi" />
   </component>
