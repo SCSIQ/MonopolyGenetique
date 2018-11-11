@@ -4,10 +4,7 @@ import IHM.Fenetre.FenetreParties.Images.DejaLanceDes;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -15,21 +12,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 
 import java.net.URL;
@@ -84,20 +76,6 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-<<<<<<< HEAD
-=======
-                /*Stage nouvelle_fenetre_menu = new Stage();
-                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre, couleur);
-
-                Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
-
-                nouvelle_fenetre_menu.setScene(nouvelle_scene);
-                nouvelle_fenetre_menu.show();*/
-
-                //opacité fenetre du plateau
-               // nouvelle_fenetre.setOpacity(0.5);
-
->>>>>>> parent of 8b09bb8... fixer la fenetre menu
                 choixMenu(primaryStage, nouvelle_fenetre, couleur);
 
             }
@@ -107,11 +85,7 @@ public class Jeu extends Parent {
         bt_lancerDes.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
 
@@ -119,18 +93,8 @@ public class Jeu extends Parent {
                 }else{
                     fenetreDejaLancerDe();
                 }
-<<<<<<< HEAD
-=======
-                Stage nouvelle_fenetre_lancerDes = new Stage();
-                LancerDes fenetre_LancerDes = new LancerDes(primaryStage, nouvelle_fenetre_lancerDes);
-=======
->>>>>>> parent of c437b53... fenetre de lancer des dés
 
-                automate.evoluer("lancerDes");
 
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-=======
->>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
             }
         });
 
@@ -414,10 +378,8 @@ public class Jeu extends Parent {
         Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        //PRECISER QU4IL S'AGIT D'UNE FENETRE MODALE
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_menu.initModality(Modality.WINDOW_MODAL);
         nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
 
@@ -425,10 +387,6 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
         nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);
 
-=======
->>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
-=======
->>>>>>> parent of 8b09bb8... fixer la fenetre menu
         nouvelle_fenetre_menu.show();
     }
 
@@ -478,6 +436,12 @@ public class Jeu extends Parent {
         this.getChildren().add(CaseDepart);
         CaseDepart.getChildren().add(c_depart);
 
+        c_depart.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                c_depart.setLayoutX(c_depart.getLayoutX()*2);
+            }
+        });
 
         //CASE BELLEVILLE
         Pane violetBelleville = new Pane();
