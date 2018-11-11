@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.Images.DejaLanceDes;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
@@ -83,17 +84,6 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                /*Stage nouvelle_fenetre_menu = new Stage();
-                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre, couleur);
-
-                Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
-
-                nouvelle_fenetre_menu.setScene(nouvelle_scene);
-                nouvelle_fenetre_menu.show();*/
-
-                //opacité fenetre du plateau
-               // nouvelle_fenetre.setOpacity(0.5);
-
                 choixMenu(primaryStage, nouvelle_fenetre, couleur);
 
             }
@@ -103,9 +93,13 @@ public class Jeu extends Parent {
         bt_lancerDes.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+                if(automate.getJoueurCourant().getaLanceDes()==false) {
+                    automate.evoluer("lancerDes");
 
-                automate.evoluer("lancerDes");
-
+                    fenetreDes(nouvelle_fenetre, automate);
+                }else{
+                    fenetreDejaLancerDe();
+                }
             }
         });
 
@@ -390,6 +384,32 @@ public class Jeu extends Parent {
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
         nouvelle_fenetre_menu.show();
+    }
+
+    public void fenetreDes(Stage fenetre_actuelle, Automate automate)
+    {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_des = new Stage();
+        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetreDe,200,270);
+
+        nouvelle_fenetre_des.setScene(nouvelle_scene);
+        nouvelle_fenetre_des.show();
+    }
+
+    public void fenetreDejaLancerDe()
+    {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_erreur = new Stage();
+        DejaLanceDes fenetreDe = new DejaLanceDes(nouvelle_fenetre_erreur, canvas);
+
+        Scene nouvelle_scene = new  Scene(fenetreDe,300,270);
+
+        nouvelle_fenetre_erreur.setScene(nouvelle_scene);
+        nouvelle_fenetre_erreur.show();
     }
 
     public void caseDuBas()
