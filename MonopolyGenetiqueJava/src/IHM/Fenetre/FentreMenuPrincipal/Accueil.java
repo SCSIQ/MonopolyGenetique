@@ -31,25 +31,26 @@ public class Accueil extends Parent {
 
         //POSITION DES BOUTONS
         solo.setLayoutX(25);
-        solo.setLayoutY(140);
+        solo.setLayoutY(200);
 
         HumainVShumain.setLayoutX(25);
-        HumainVShumain.setLayoutY(170);
+        HumainVShumain.setLayoutY(260);
 
         iaVSia.setLayoutX(25);
-        iaVSia.setLayoutY(200);
+        iaVSia.setLayoutY(320);
 
         quitter.setLayoutX(25);
-        quitter.setLayoutY(260);
+        quitter.setLayoutY(395);
 
         //TAILLE DES BOUTONS
-        solo.setPrefSize(150,10);
-        HumainVShumain.setPrefSize(150,10);
-        iaVSia.setPrefSize(150,10);
-        quitter.setPrefSize(150,10);
+        solo.setPrefSize(300,30);
+        HumainVShumain.setPrefSize(300,30);
+        iaVSia.setPrefSize(300,30);
+        quitter.setPrefSize(300,30);
 
         //TAILLE DE L'IMAGE
-        imageView.setFitWidth(200);
+        imageView.setFitWidth(300);
+        imageView.setLayoutX(25);
         imageView.setPreserveRatio(true);
 
         //ACTION : SI ON APPUIE SUR SOLO
