@@ -115,10 +115,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="java" value="9" />
 =======
           <entry key="java" value="5" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+          <entry key="java" value="7" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
@@ -126,28 +130,40 @@
         <counts>
           <entry key="Image" value="2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="JAVA" value="9" />
 =======
           <entry key="JAVA" value="5" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+          <entry key="JAVA" value="7" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="java" value="3745" />
 =======
           <entry key="java" value="3377" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+          <entry key="java" value="3576" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="JAVA" value="3745" />
 =======
           <entry key="JAVA" value="3377" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+          <entry key="JAVA" value="3576" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -170,6 +186,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java">
@@ -229,11 +246,16 @@
 >>>>>>> parent of c437b53... fenetre de lancer des dés
 =======
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-111">
+              <caret line="595" selection-start-line="595" selection-end-line="595" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
               <folding>
-                <element signature="method#Jeu#0;class#Jeu#0" />
                 <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
                 <element signature="method#RectanglePlateau#0;class#Jeu#0" />
-                <element signature="method#RectangleAdversaire#0;class#Jeu#0" />
                 <element signature="method#RectanglePossession#0;class#Jeu#0" />
                 <element signature="method#RectangleTerrain#0;class#Jeu#0" />
                 <element signature="method#RectangleGare#0;class#Jeu#0" />
@@ -243,6 +265,7 @@
                 <element signature="method#boutonLancerDes#0;class#Jeu#0" />
                 <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
                 <element signature="method#fenetreNoire#0;class#Jeu#0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,9 +285,23 @@
 =======
 >>>>>>> parent of c437b53... fenetre de lancer des dés
                 <element signature="method#caseDeGauche#0;class#Jeu#0" />
+=======
+                <element signature="method#choixMenu#0;class#Jeu#0" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
                 <element signature="method#handle#0;class#19039:19165" />
                 <element signature="method#caseDuHaut#0;class#Jeu#0" />
-                <element signature="method#caseDeDroite#0;class#Jeu#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -308,17 +345,29 @@
 >>>>>>> parent of c437b53... fenetre de lancer des dés
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="1426">
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="221">
+              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -340,6 +389,7 @@
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/DejaLanceDes.java" />
 <<<<<<< HEAD
@@ -355,6 +405,11 @@
 =======
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
+=======
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
       </list>
     </option>
   </component>
@@ -462,6 +517,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950275916" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541949613889" />
@@ -481,6 +537,9 @@
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950258605" />
 >>>>>>> parent of d1f8c4b... Update MonopolyGenetiqueJava/.idea/workspace.xml
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541945250759" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../informatique IUT/cours/2eme_annee/semestre_3/projetTut/melordi" />
   </component>
@@ -591,6 +650,7 @@
 >>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
 =======
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36557376" />
 >>>>>>> parent of c437b53... fenetre de lancer des dés
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
@@ -600,6 +660,10 @@
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3665087" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39968404" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3672131" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39968404" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -753,6 +817,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
     <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java">
@@ -763,15 +828,19 @@
 =======
 =======
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        <state relative-caret-position="697">
+          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 >>>>>>> parent of c437b53... fenetre de lancer des dés
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -888,11 +957,15 @@
         <state relative-caret-position="234">
           <caret line="406" column="78" selection-start-line="406" selection-start-column="78" selection-end-line="406" selection-end-column="78" />
 >>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
+=======
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="595" selection-start-line="595" selection-end-line="595" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
           <folding>
-            <element signature="method#Jeu#0;class#Jeu#0" />
             <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
             <element signature="method#RectanglePlateau#0;class#Jeu#0" />
-            <element signature="method#RectangleAdversaire#0;class#Jeu#0" />
             <element signature="method#RectanglePossession#0;class#Jeu#0" />
             <element signature="method#RectangleTerrain#0;class#Jeu#0" />
             <element signature="method#RectangleGare#0;class#Jeu#0" />
@@ -902,6 +975,7 @@
             <element signature="method#boutonLancerDes#0;class#Jeu#0" />
             <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
             <element signature="method#fenetreNoire#0;class#Jeu#0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -921,24 +995,41 @@
 =======
 >>>>>>> parent of c437b53... fenetre de lancer des dés
             <element signature="method#caseDeGauche#0;class#Jeu#0" />
+=======
+            <element signature="method#choixMenu#0;class#Jeu#0" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
             <element signature="method#handle#0;class#19039:19165" />
             <element signature="method#caseDuHaut#0;class#Jeu#0" />
-            <element signature="method#caseDeDroite#0;class#Jeu#0" />
           </folding>
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="42" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -954,5 +1045,14 @@
     </entry>
 =======
 >>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
+=======
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of 8b09bb8... fixer la fenetre menu
   </component>
 </project>
