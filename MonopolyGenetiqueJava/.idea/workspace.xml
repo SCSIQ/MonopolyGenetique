@@ -113,24 +113,24 @@
     <session id="1601727761">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="java" value="9" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3576" />
+          <entry key="java" value="3745" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3576" />
+          <entry key="JAVA" value="3745" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -154,14 +154,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-111">
-              <caret line="595" selection-start-line="595" selection-end-line="595" />
+            <state relative-caret-position="220">
+              <caret line="394" column="7" lean-forward="true" selection-start-line="394" selection-start-column="7" selection-end-line="394" selection-end-column="7" />
               <folding>
+                <element signature="method#Jeu#0;class#Jeu#0" />
                 <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
                 <element signature="method#RectanglePlateau#0;class#Jeu#0" />
+                <element signature="method#RectangleAdversaire#0;class#Jeu#0" />
                 <element signature="method#RectanglePossession#0;class#Jeu#0" />
                 <element signature="method#RectangleTerrain#0;class#Jeu#0" />
                 <element signature="method#RectangleGare#0;class#Jeu#0" />
@@ -171,21 +173,10 @@
                 <element signature="method#boutonLancerDes#0;class#Jeu#0" />
                 <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
                 <element signature="method#fenetreNoire#0;class#Jeu#0" />
-                <element signature="method#choixMenu#0;class#Jeu#0" />
+                <element signature="method#caseDeGauche#0;class#Jeu#0" />
                 <element signature="method#handle#0;class#19039:19165" />
                 <element signature="method#caseDuHaut#0;class#Jeu#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#caseDeDroite#0;class#Jeu#0" />
               </folding>
             </state>
           </provider>
@@ -194,29 +185,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1426">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            <state relative-caret-position="28">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -233,11 +212,11 @@
         <option value="$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
       </list>
     </option>
   </component>
@@ -324,7 +303,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541945250759" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541946909061" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../informatique IUT/cours/2eme_annee/semestre_3/projetTut/melordi" />
   </component>
@@ -420,8 +399,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3672131" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39968404" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36557376" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -566,46 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="595" selection-start-line="595" selection-end-line="595" />
-          <folding>
-            <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
-            <element signature="method#RectanglePlateau#0;class#Jeu#0" />
-            <element signature="method#RectanglePossession#0;class#Jeu#0" />
-            <element signature="method#RectangleTerrain#0;class#Jeu#0" />
-            <element signature="method#RectangleGare#0;class#Jeu#0" />
-            <element signature="method#RectangleCompagnies#0;class#Jeu#0" />
-            <element signature="method#RectangleCartePrison#0;class#Jeu#0" />
-            <element signature="method#boutonMenu#0;class#Jeu#0" />
-            <element signature="method#boutonLancerDes#0;class#Jeu#0" />
-            <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
-            <element signature="method#fenetreNoire#0;class#Jeu#0" />
-            <element signature="method#choixMenu#0;class#Jeu#0" />
-            <element signature="method#handle#0;class#19039:19165" />
-            <element signature="method#caseDuHaut#0;class#Jeu#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -620,6 +559,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="394" column="7" lean-forward="true" selection-start-line="394" selection-start-column="7" selection-end-line="394" selection-end-column="7" />
+          <folding>
+            <element signature="method#Jeu#0;class#Jeu#0" />
+            <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
+            <element signature="method#RectanglePlateau#0;class#Jeu#0" />
+            <element signature="method#RectangleAdversaire#0;class#Jeu#0" />
+            <element signature="method#RectanglePossession#0;class#Jeu#0" />
+            <element signature="method#RectangleTerrain#0;class#Jeu#0" />
+            <element signature="method#RectangleGare#0;class#Jeu#0" />
+            <element signature="method#RectangleCompagnies#0;class#Jeu#0" />
+            <element signature="method#RectangleCartePrison#0;class#Jeu#0" />
+            <element signature="method#boutonMenu#0;class#Jeu#0" />
+            <element signature="method#boutonLancerDes#0;class#Jeu#0" />
+            <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
+            <element signature="method#fenetreNoire#0;class#Jeu#0" />
+            <element signature="method#caseDeGauche#0;class#Jeu#0" />
+            <element signature="method#handle#0;class#19039:19165" />
+            <element signature="method#caseDuHaut#0;class#Jeu#0" />
+            <element signature="method#caseDeDroite#0;class#Jeu#0" />
+          </folding>
         </state>
       </provider>
     </entry>
