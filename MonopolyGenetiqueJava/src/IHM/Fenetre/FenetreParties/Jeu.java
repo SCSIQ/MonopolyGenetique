@@ -84,6 +84,21 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
+<<<<<<< HEAD
+=======
+                /*Stage nouvelle_fenetre_menu = new Stage();
+                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre, couleur);
+
+                Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
+
+                nouvelle_fenetre_menu.setScene(nouvelle_scene);
+                nouvelle_fenetre_menu.show();*/
+
+                //opacité fenetre du plateau
+               // nouvelle_fenetre.setOpacity(0.5);
+
+
+>>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
                 choixMenu(primaryStage, nouvelle_fenetre, couleur);
 
             }
@@ -93,6 +108,7 @@ public class Jeu extends Parent {
         bt_lancerDes.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+<<<<<<< HEAD
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
 
@@ -100,6 +116,21 @@ public class Jeu extends Parent {
                 }else{
                     fenetreDejaLancerDe();
                 }
+=======
+                Stage nouvelle_fenetre_lancerDes = new Stage();
+                LancerDes fenetre_LancerDes = new LancerDes(primaryStage, nouvelle_fenetre_lancerDes);
+
+                Scene nouvelle_scene = new Scene(fenetre_LancerDes,300,250);
+
+                nouvelle_fenetre_lancerDes.setScene(nouvelle_scene);
+                //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+                nouvelle_fenetre_lancerDes.initModality(Modality.WINDOW_MODAL);
+                nouvelle_fenetre_lancerDes.initOwner(nouvelle_fenetre);
+                nouvelle_fenetre_lancerDes.show();
+                fenetreNoire();
+                 automate.evoluer("lancerDes");
+
+>>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
             }
         });
 
@@ -383,6 +414,15 @@ public class Jeu extends Parent {
         Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_menu.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
+        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);
+
         nouvelle_fenetre_menu.show();
     }
 
@@ -432,6 +472,12 @@ public class Jeu extends Parent {
         this.getChildren().add(CaseDepart);
         CaseDepart.getChildren().add(c_depart);
 
+        c_depart.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                c_depart.setLayoutX(c_depart.getLayoutX()*2);
+            }
+        });
 
         //CASE BELLEVILLE
         Pane violetBelleville = new Pane();

@@ -13,6 +13,6 @@ public class ParcGratuit extends Cases {
 
     @Override
     public String toString() {
-        return null;
+        return "ParcGratuit";
     }
 }
