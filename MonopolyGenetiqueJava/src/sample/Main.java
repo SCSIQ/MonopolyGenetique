@@ -33,7 +33,7 @@ public class Main extends Application {
 
         Accueil accueil = new Accueil(primaryStage) ;
 
-        primaryStage.setScene(new Scene(root, 350, 450));
+        primaryStage.setScene(new Scene(root, 200, 300));
 
         root.getChildren().add(accueil) ;
         primaryStage.show();

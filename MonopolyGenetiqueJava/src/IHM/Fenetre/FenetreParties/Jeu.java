@@ -84,21 +84,6 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-<<<<<<< HEAD
-=======
-                /*Stage nouvelle_fenetre_menu = new Stage();
-                MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, nouvelle_fenetre, couleur);
-
-                Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
-
-                nouvelle_fenetre_menu.setScene(nouvelle_scene);
-                nouvelle_fenetre_menu.show();*/
-
-                //opacité fenetre du plateau
-               // nouvelle_fenetre.setOpacity(0.5);
-
-
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
                 choixMenu(primaryStage, nouvelle_fenetre, couleur);
 
             }
@@ -110,6 +95,9 @@ public class Jeu extends Parent {
             public void handle(ActionEvent event) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
 
@@ -117,6 +105,7 @@ public class Jeu extends Parent {
                 }else{
                     fenetreDejaLancerDe();
                 }
+<<<<<<< HEAD
 =======
                 Stage nouvelle_fenetre_lancerDes = new Stage();
                 LancerDes fenetre_LancerDes = new LancerDes(primaryStage, nouvelle_fenetre_lancerDes);
@@ -126,6 +115,8 @@ public class Jeu extends Parent {
                 automate.evoluer("lancerDes");
 
 >>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
+=======
+>>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
             }
         });
 
@@ -409,6 +400,7 @@ public class Jeu extends Parent {
         Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
+<<<<<<< HEAD
 
         //PRECISER QU4IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_menu.initModality(Modality.WINDOW_MODAL);
@@ -418,6 +410,8 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
         nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);
 
+=======
+>>>>>>> parent of 8b6435d... Merge branch 'master' of https://github.com/SCSIQ/MonopolyGenetique
         nouvelle_fenetre_menu.show();
     }
 
