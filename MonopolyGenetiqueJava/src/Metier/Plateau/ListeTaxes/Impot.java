@@ -5,7 +5,7 @@ import Metier.Plateau.ListeTaxes.Taxes;
 public class Impot extends Taxes {
 
     public Impot() {
-        super(4);
+        super(2); //à revoir (position certainement incorrecte)
     }
 
     @Override
@@ -15,6 +15,6 @@ public class Impot extends Taxes {
 
     @Override
     public String toString() {
-        return "Impot sur le Revenu";
+        return "Impot";
     }
 }

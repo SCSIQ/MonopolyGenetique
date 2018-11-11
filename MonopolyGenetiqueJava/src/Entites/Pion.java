@@ -15,17 +15,15 @@ public class Pion {
     }
 
     public void avancer(int nombre){
-        boolean hasMoved = false;
-        if(position.getPosition() + nombre <= 15){
+        if(position.getPosition() + nombre <= 13){
             for(int i=0 ; i<joueur.getListeCases().size() ; i++){
-                if(joueur.getListeCases().get(i).getPosition() == position.getPosition() + nombre && hasMoved == false){
+                if(joueur.getListeCases().get(i).getPosition() == position.getPosition() + nombre){
                     this.position = joueur.getListeCases().get(i);
-                    hasMoved = true;
                 }
             }
         }
         else{
-            System.out.println("    ne peut pas avancer pour le moment...\n        Veuillez attendre une maj");
+            System.out.println("    ne peut pas avancer pour le moment...");
         }
     }
 

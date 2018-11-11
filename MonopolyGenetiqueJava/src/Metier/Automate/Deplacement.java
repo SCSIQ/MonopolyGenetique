@@ -17,9 +17,8 @@ public class Deplacement extends Etat{
     @Override
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
-        System.out.println("    avant déplacement : "+j.toString());
         j.avancer(); //demande au joueur d'avancer son pion (le joueur connais les résultats de son lancé de dès)
-        System.out.println("    après déplacement : "+j.toString());
+        System.out.println(j.toString());
     }
 
     @Override
