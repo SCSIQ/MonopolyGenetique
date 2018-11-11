@@ -51,6 +51,10 @@ public class Joueur {
         return listeCases;
     }
 
+    public Pion getPion() {
+        return pion;
+    }
+
     @Override
     public String toString() {
         return "    position du joueur : "+this.pion.toString();
