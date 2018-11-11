@@ -94,6 +94,7 @@ public class Jeu extends Parent {
                 //opacité fenetre du plateau
                // nouvelle_fenetre.setOpacity(0.5);
 
+
                 choixMenu(primaryStage, nouvelle_fenetre, couleur);
 
             }
@@ -389,6 +390,15 @@ public class Jeu extends Parent {
         Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
+
+        //PRECISER QU4IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_menu.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
+        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);
+
         nouvelle_fenetre_menu.show();
     }
 
