@@ -42,10 +42,12 @@ public class Jeu extends Parent {
 
         this.automate = automate;
 
-        //plateauJeau();
+        //plateauJeu();
+        plateauJeu();
         caseDuBas() ;
         caseDeGauche();
         caseDuHaut() ;
+        caseDeDroite();
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -923,517 +925,189 @@ public class Jeu extends Parent {
 
     }
 
+    public void caseDeDroite()
+    {
+///////////////////////////////////////////////////////////////////////////////////ALLER PRISON
+        Pane caseAPrison = new Pane();
 
-    public void plateauJeau(){
+        caseAPrison.setLayoutX(532);
+        caseAPrison.setLayoutY(110);
+
+        URL allez_prison = getClass().getResource("Images/Case_Allez_Prison.png");
+        Image i_aprison = new Image(allez_prison.toExternalForm());
+        ImageView c_aprison = new ImageView(i_aprison);
+
+        c_aprison.setFitHeight(87);
+        c_aprison.setPreserveRatio(true);
+
+        caseAPrison.getChildren().add(c_aprison);
+        this.getChildren().add(caseAPrison);
+///////////////////////////////////////////////////////////////////////////////////GROUPE VERT
+        ///////CASE DE BRETEUIL
+        Pane caseBreteuil = new Pane();
+
+        caseBreteuil.setLayoutX(532);
+        caseBreteuil.setLayoutY(196);
+
+        URL breteuil = getClass().getResource("Images/Case_Breteuil.png");
+        Image i_breteuil = new Image(breteuil.toExternalForm());
+        ImageView c_breteuil = new ImageView(i_breteuil);
+
+        c_breteuil.setFitHeight(48);
+        c_breteuil.setPreserveRatio(true);
+
+        caseBreteuil.getChildren().add(c_breteuil);
+        this.getChildren().add(caseBreteuil);
+
+        ///////CASE DE FOCH
+        Pane caseFoch = new Pane();
+
+        caseFoch.setLayoutX(532);
+        caseFoch.setLayoutY(244);
+
+        URL foch = getClass().getResource("Images/Case_Foch.png");
+        Image i_foch = new Image(foch.toExternalForm());
+        ImageView c_foch = new ImageView(i_foch);
+
+        c_foch.setFitHeight(48);
+        c_foch.setPreserveRatio(true);
+
+        caseFoch.getChildren().add(c_foch);
+        this.getChildren().add(caseFoch);
+
+        ///////CASE DE CAPUCINES
+        Pane caseCapucine = new Pane();
+
+        caseCapucine.setLayoutX(532);
+        caseCapucine.setLayoutY(340);
+
+        URL capucines = getClass().getResource("Images/Case_Capucines.png");
+        Image i_capucines = new Image(capucines.toExternalForm());
+        ImageView c_capucines = new ImageView(i_capucines);
+
+        c_capucines.setFitHeight(48);
+        c_capucines.setPreserveRatio(true);
+
+        caseCapucine.getChildren().add(c_capucines);
+        this.getChildren().add(caseCapucine);
+
+///////////////////////////////////////////////////////////////////////////////////CAISSE DE COMMUNAUTEE
+        Pane caseCommunautee = new Pane();
+
+        caseCommunautee.setLayoutX(552);
+        caseCommunautee.setLayoutY(272);
+
+        URL commu3 = getClass().getResource("Images/Case_Communaute.png");
+        Image i_commu3 = new Image(commu3.toExternalForm());
+        ImageView c_commu3 = new ImageView(i_commu3);
+
+        c_commu3.setFitWidth(48);
+        c_commu3.setPreserveRatio(true);
+        c_commu3.setRotate(-90);
+
+        caseCommunautee.getChildren().add(c_commu3);
+        this.getChildren().add(caseCommunautee);
+
+
+///////////////////////////////////////////////////////////////////////////////////GARE
+        Pane caseGareSL = new Pane();
+
+        caseGareSL.setLayoutX(532);
+        caseGareSL.setLayoutY(388);
+
+        URL gareSL = getClass().getResource("Images/Case_GareSL.png");
+        Image i_gareSL = new Image(gareSL.toExternalForm());
+        ImageView c_gareSL = new ImageView(i_gareSL);
+
+        c_gareSL.setFitHeight(48);
+        c_gareSL.setPreserveRatio(true);
+
+        caseGareSL.getChildren().add(c_gareSL);
+        this.getChildren().add(caseGareSL);
+///////////////////////////////////////////////////////////////////////////////////CHANCE
+        Pane caseChance = new Pane();
+
+        caseChance.setLayoutX(552);
+        caseChance.setLayoutY(416);
+
+        URL chance = getClass().getResource("Images/Case_Chance.png");
+        Image i_chance = new Image(chance.toExternalForm());
+        ImageView c_chance = new ImageView(i_chance);
+
+        c_chance.setRotate(-90);
+        c_chance.setFitWidth(48);
+        c_chance.setPreserveRatio(true);
+
+        caseChance.getChildren().add(c_chance);
+        this.getChildren().add(caseChance);
+///////////////////////////////////////////////////////////////////////////////////GROUPE BLEU FONCE
+        ///////CASE DES CHAMPS ELYSEES
+        Pane caseChampE = new Pane();
+
+        caseChampE.setLayoutX(532);
+        caseChampE.setLayoutY(484);
+
+        URL champsE = getClass().getResource("Images/Case_ChampsE.png");
+        Image i_champsE = new Image(champsE.toExternalForm());
+        ImageView c_champsE = new ImageView(i_champsE);
+
+        c_champsE.setFitHeight(48);
+        c_champsE.setPreserveRatio(true);
+
+        caseChampE.getChildren().add(c_champsE);
+        this.getChildren().add(caseChampE);
+
+        ///////CASE DE LA PAIX
+        Pane casePaix = new Pane();
+
+        casePaix.setLayoutX(532);
+        casePaix.setLayoutY(580);
+
+        URL paix = getClass().getResource("Images/Case_Paix.png");
+        Image i_paix = new Image(paix.toExternalForm());
+        ImageView c_paix = new ImageView(i_paix);
+
+        c_paix.setFitHeight(48);
+        c_paix.setPreserveRatio(true);
+
+        casePaix.getChildren().add(c_paix);
+        this.getChildren().add(casePaix);
+
+///////////////////////////////////////////////////////////////////////////////////TAXE DE LUXE
+        Pane caseTaxe = new Pane();
+
+        caseTaxe.setLayoutX(532);
+        caseTaxe.setLayoutY(532);
+
+        URL taxe = getClass().getResource("Images/Case_Taxe.png");
+        Image i_taxe = new Image(taxe.toExternalForm());
+        ImageView c_taxe = new ImageView(i_taxe);
+
+        c_taxe.setFitHeight(48);
+        c_taxe.setPreserveRatio(true);
+
+        caseTaxe.getChildren().add(c_taxe);
+        this.getChildren().add(caseTaxe);
+    }
+
+    public void plateauJeu(){
 
 ////////IMAGES
         URL logo_centre = getClass().getResource("Images/logo-centre.png");
         Image image = new Image(logo_centre.toExternalForm());
         ImageView imageView = new ImageView(image);
 
-        //Case départ
-        URL depart = getClass().getResource("Images/Case_Depart.png");
-        Image i_depart = new Image(depart.toExternalForm());
-        ImageView c_depart = new ImageView(i_depart);
-
-        //Cases Groupe Violet
-        URL belleville = getClass().getResource("Images/Case_Belleville.png");
-        Image i_Belleville = new Image(belleville.toExternalForm());
-        ImageView c_belleville = new ImageView(i_Belleville);
-
-        URL lecourbe = getClass().getResource("Images/Case_Lecourbe.png");
-        Image i_Lecourbe = new Image(lecourbe.toExternalForm());
-        ImageView c_Lecourbe = new ImageView(i_Lecourbe);
-
-        //Case prison
-        URL prison = getClass().getResource("Images/Case_Prison.png");
-        Image i_prison = new Image(prison.toExternalForm());
-        ImageView c_prison = new ImageView(i_prison);
-
-        //Case allez prison
-        URL allez_prison = getClass().getResource("Images/Case_Allez_Prison.png");
-        Image i_aprison = new Image(allez_prison.toExternalForm());
-        ImageView c_aprison = new ImageView(i_aprison);
-
-        //Case parc
-        URL parc = getClass().getResource("Images/Case_Parc.png");
-        Image i_parc = new Image(parc.toExternalForm());
-        ImageView c_parc = new ImageView(i_parc);
-
-        //Cases caisse de communauté
-            //bas
-        URL commu = getClass().getResource("Images/Case_Communaute.png");
-        Image i_com = new Image(commu.toExternalForm());
-        ImageView c_com = new ImageView(i_com);
-            //gauche
-        URL commu2 = getClass().getResource("Images/Case_Communaute.png");
-        Image i_com2 = new Image(commu2.toExternalForm());
-        ImageView c_com2 = new ImageView(i_com2);
-            //droite
-        URL commu3 = getClass().getResource("Images/Case_Communaute.png");
-        Image i_commu3 = new Image(commu3.toExternalForm());
-        ImageView c_commu3 = new ImageView(i_commu3);
-
-        //Cases chance
-            //bas
-        URL chance = getClass().getResource("Images/Case_Chance.png");
-        Image i_chance = new Image(chance.toExternalForm());
-        ImageView c_chance = new ImageView(i_chance);
-            //haut
-        URL chance3 = getClass().getResource("Images/Case_Chance.png");
-        Image i_chance3 = new Image(chance3.toExternalForm());
-        ImageView c_chance3 = new ImageView(i_chance3);
-            //droite
-        URL chance2 = getClass().getResource("Images/Case_Chance.png");
-        Image i_chance2 = new Image(chance2.toExternalForm());
-        ImageView c_chance2 = new ImageView(i_chance2);
-
-        //Case impot et taxe
-        URL impot = getClass().getResource("Images/Case_Impot.png");
-        Image i_impot = new Image(impot.toExternalForm());
-        ImageView c_impot = new ImageView(i_impot);
-
-        URL taxe = getClass().getResource("Images/Case_Taxe.png");
-        Image i_taxe = new Image(taxe.toExternalForm());
-        ImageView c_taxe = new ImageView(i_taxe);
-
-        //Cases compagnies
-            //eau
-        URL ceaux = getClass().getResource("Images/Case_CEaux.png");
-        Image i_ceaux = new Image(ceaux.toExternalForm());
-        ImageView c_ceaux = new ImageView(i_ceaux);
-            //electr
-        URL celectr = getClass().getResource("Images/Case_CElect-15.png");
-        Image i_celectr = new Image(celectr.toExternalForm());
-        ImageView c_celectr = new ImageView(i_celectr);
-
-        //Cases Gares
-            //Gare M
-        URL gareM = getClass().getResource("Images/Case_GareM.png");
-        Image i_gareM = new Image(gareM.toExternalForm());
-        ImageView c_gareM = new ImageView(i_gareM);
-
-        //Gare M test
-
-
-            //Gare du nord
-        URL gareN = getClass().getResource("Images/Case_GareN.png");
-        Image i_gareN = new Image(gareN.toExternalForm());
-        ImageView c_gareN = new ImageView(i_gareN);
-            //gare de lyon
-        URL gareL = getClass().getResource("Images/Case_GareL.png");
-        Image i_gareL = new Image(gareL.toExternalForm());
-        ImageView c_gareL = new ImageView(i_gareL);
-            //gare Saint-Lazare
-        URL gareSL = getClass().getResource("Images/Case_GareSL.png");
-        Image i_gareSL = new Image(gareSL.toExternalForm());
-        ImageView c_gareSL = new ImageView(i_gareSL);
-
-        //groupe bleu
-        URL vaugirard = getClass().getResource("Images/Case_Vaugirard.png");
-        Image i_vaugirard = new Image(vaugirard.toExternalForm());
-        ImageView c_vaugirard = new ImageView(i_vaugirard);
-
-        URL courcelles = getClass().getResource("Images/Case_Courcelles.png");
-        Image i_courcelles = new Image(courcelles.toExternalForm());
-        ImageView c_courcelles = new ImageView(i_courcelles);
-
-        URL republique = getClass().getResource("Images/Case_Republique.png");
-        Image i_republique = new Image(republique.toExternalForm());
-        ImageView c_republique = new ImageView(i_republique);
-
-        //groupe violete clair
-        URL villette = getClass().getResource("Images/Case_Villette.png");
-        Image i_villette = new Image(villette.toExternalForm());
-        ImageView c_villette = new ImageView(i_villette);
-
-        URL neuilly = getClass().getResource("Images/Case_Neuilly.png");
-        Image i_neuilly = new Image(neuilly.toExternalForm());
-        ImageView c_neuilly = new ImageView(i_neuilly);
-
-        URL paradis = getClass().getResource("Images/Case_Paradis.png");
-        Image i_paradis = new Image(paradis.toExternalForm());
-        ImageView c_paradis = new ImageView(i_paradis);
-
-        //groupe orange
-        URL mozart = getClass().getResource("Images/Case_Mozart.png");
-        Image i_mozart = new Image(mozart.toExternalForm());
-        ImageView c_mozart = new ImageView(i_mozart);
-
-        URL saintM = getClass().getResource("Images/Case_SaintM.png");
-        Image i_saintM = new Image(saintM.toExternalForm());
-        ImageView c_saintM = new ImageView(i_saintM);
-
-        URL pigalle = getClass().getResource("Images/Case_Pigalle.png");
-        Image i_pigalle = new Image(pigalle.toExternalForm());
-        ImageView c_pigalle = new ImageView(i_pigalle);
-
-        //groupe rouge
-        URL matignon = getClass().getResource("Images/Case_Matignon.png");
-        Image i_matignon = new Image(matignon.toExternalForm());
-        ImageView c_matignon = new ImageView(i_matignon);
-
-        URL malesherbes = getClass().getResource("Images/Case_Malesherbes.png");
-        Image i_malesherbes = new Image(malesherbes.toExternalForm());
-        ImageView c_malesherbes = new ImageView(i_malesherbes);
-
-        URL henriM = getClass().getResource("Images/Case_HenriM.png");
-        Image i_henriM = new Image(henriM.toExternalForm());
-        ImageView c_henriM = new ImageView(i_henriM);
-
-        //groupe jaune
-        URL faubourgSH = getClass().getResource("Images/Case_FaubourgSH.png");
-        Image i_faubourgSH = new Image(faubourgSH.toExternalForm());
-        ImageView c_faubourgSH = new ImageView(i_faubourgSH);
-
-        URL bourse = getClass().getResource("Images/Case_Bourse.png");
-        Image i_bourse = new Image(bourse.toExternalForm());
-        ImageView c_bourse = new ImageView(i_bourse);
-
-        URL lafayette = getClass().getResource("Images/Case_Lafayette.png");
-        Image i_lafayette = new Image(lafayette.toExternalForm());
-        ImageView c_lafayette = new ImageView(i_lafayette);
-
-        //groupe vert
-        URL breteuil = getClass().getResource("Images/Case_Breteuil.png");
-        Image i_breteuil = new Image(breteuil.toExternalForm());
-        ImageView c_breteuil = new ImageView(i_breteuil);
-
-        URL foch = getClass().getResource("Images/Case_Foch.png");
-        Image i_foch = new Image(foch.toExternalForm());
-        ImageView c_foch = new ImageView(i_foch);
-
-        URL capucines = getClass().getResource("Images/Case_Capucines.png");
-        Image i_capucines = new Image(capucines.toExternalForm());
-        ImageView c_capucines = new ImageView(i_capucines);
-
-        //groupe bleu foncé
-        URL champsE = getClass().getResource("Images/Case_ChampsE.png");
-        Image i_champsE = new Image(champsE.toExternalForm());
-        ImageView c_champsE = new ImageView(i_champsE);
-
-        URL paix = getClass().getResource("Images/Case_Paix.png");
-        Image i_paix = new Image(paix.toExternalForm());
-        ImageView c_paix = new ImageView(i_paix);
-
-
 /////////TAILLE DES IMAGES
         //logo centre
         imageView.setFitWidth(350);
         imageView.setPreserveRatio(true);
 
-        //depart
-        c_depart.setFitWidth(87);
-        c_depart.setPreserveRatio(true);
-
-        //prison
-        c_prison.setFitWidth(87);
-        c_prison.setPreserveRatio(true);
-
-        //parc
-        c_parc.setFitWidth(87);
-        c_parc.setPreserveRatio(true);
-
-        //allez prison
-        c_aprison.setFitWidth(87);
-        c_aprison.setPreserveRatio(true);
-
-        //Caisse commu
-        c_com.setFitWidth(48);
-        c_com.setPreserveRatio(true);
-
-        c_com2.setFitWidth(48);
-        c_com2.setPreserveRatio(true);
-
-        c_commu3.setFitWidth(48);
-        c_commu3.setPreserveRatio(true);
-        c_commu3.setRotate(-90);
-
-        //Case chances
-        c_chance.setFitWidth(48);
-        c_chance.setPreserveRatio(true);
-
-        c_chance3.setFitWidth(48);
-        c_chance3.setPreserveRatio(true);
-        c_chance3.setRotate(180);
-
-        c_chance2.setFitWidth(48);
-        c_chance2.setPreserveRatio(true);
-        c_chance2.setRotate(-90);
-
-        //groupe Violet
-        c_belleville.setFitWidth(48);
-        c_belleville.setPreserveRatio(true);
-
-        c_Lecourbe.setFitWidth(48);
-        c_Lecourbe.setPreserveRatio(true);
-
-        //impôt et taxe
-        c_impot.setFitWidth(48);
-        c_impot.setPreserveRatio(true);
-
-        c_taxe.setFitHeight(48);
-        c_taxe.setPreserveRatio(true);
-
-        //Gares
-        c_gareM.setFitWidth(48);
-        c_gareM.setPreserveRatio(true);
-
-        c_gareN.setFitWidth(48);
-        c_gareN.setPreserveRatio(true);
-
-        c_gareL.setFitHeight(48);
-        c_gareL.setPreserveRatio(true);
-
-        c_gareSL.setFitHeight(48);
-        c_gareSL.setPreserveRatio(true);
-
-        //groupe bleu
-        c_vaugirard.setFitWidth(48);
-        c_vaugirard.setPreserveRatio(true);
-
-        c_courcelles.setFitWidth(48);
-        c_courcelles.setPreserveRatio(true);
-
-        c_republique.setFitWidth(48);
-        c_republique.setPreserveRatio(true);
-
-        //groupe violet clair
-        c_villette.setFitHeight(48);
-        c_villette.setPreserveRatio(true);
-
-        c_neuilly.setFitHeight(48);
-        c_neuilly.setPreserveRatio(true);
-
-        c_paradis.setFitHeight(48);
-        c_paradis.setPreserveRatio(true);
-
-        //groupe orange
-        c_mozart.setFitHeight(48);
-        c_mozart.setPreserveRatio(true);
-
-        c_saintM.setFitHeight(48);
-        c_saintM.setPreserveRatio(true);
-
-        c_pigalle.setFitHeight(48);
-        c_pigalle.setPreserveRatio(true);
-
-        //groupe rouge
-        c_matignon.setFitWidth(48);
-        c_matignon.setPreserveRatio(true);
-
-        c_malesherbes.setFitWidth(48);
-        c_malesherbes.setPreserveRatio(true);
-
-        c_henriM.setFitWidth(48);
-        c_henriM.setPreserveRatio(true);
-
-        //groupe jaune
-        c_faubourgSH.setFitWidth(48);
-        c_faubourgSH.setPreserveRatio(true);
-
-        c_bourse.setFitWidth(48);
-        c_bourse.setPreserveRatio(true);
-
-        c_lafayette.setFitWidth(48);
-        c_lafayette.setPreserveRatio(true);
-
-        //groupe vert
-        c_breteuil.setFitHeight(48);
-        c_breteuil.setPreserveRatio(true);
-
-        c_foch.setFitHeight(48);
-        c_foch.setPreserveRatio(true);
-
-        c_capucines.setFitHeight(48);
-        c_capucines.setPreserveRatio(true);
-
-        //groupe bleu foncé
-        c_champsE.setFitHeight(48);
-        c_champsE.setPreserveRatio(true);
-
-        c_paix.setFitHeight(48);
-        c_paix.setPreserveRatio(true);
-
-        //Compagnies
-        c_ceaux.setFitWidth(48);
-        c_ceaux.setPreserveRatio(true);
-
-        c_celectr.setFitHeight(48);
-        c_celectr.setPreserveRatio(true);
-
 /////////POSITION IMAGE
         //logo centre
         imageView.setX(145);
         imageView.setY(235);
-
-        //////////////////////////LIGNE BAS
-        c_depart.setX(532);
-        c_depart.setY(628);
-
-        c_belleville.setX(484);
-        c_belleville.setY(628);
-
-        c_com.setX(436);
-        c_com.setY(628);
-
-        c_Lecourbe.setX(388);
-        c_Lecourbe.setY(628);
-
-        c_impot.setX(340);
-        c_impot.setY(628);
-
-        c_gareM.setX(292);
-        c_gareM.setY(628);
-
-        c_vaugirard.setX(244);
-        c_vaugirard.setY(628);
-
-        c_chance.setX(196);
-        c_chance.setY(628);
-
-        c_courcelles.setX(148);
-        c_courcelles.setY(628);
-
-        c_republique.setX(100);
-        c_republique.setY(628);
-
-        c_prison.setX(15);
-        c_prison.setY(628);
-
-        //////////////////////////LIGNE HAUT
-
-        c_parc.setX(15);
-        c_parc.setY(110);
-
-        c_matignon.setX(100);
-        c_matignon.setY(110);
-
-        c_chance3.setX(148);
-        c_chance3.setY(110);
-
-        c_malesherbes.setX(196);
-        c_malesherbes.setY(110);
-
-        c_henriM.setX(244);
-        c_henriM.setY(110);
-
-        c_gareN.setX(292);
-        c_gareN.setY(110);
-
-        c_faubourgSH.setX(340);
-        c_faubourgSH.setY(110);
-
-        c_bourse.setX(388);
-        c_bourse.setY(110);
-
-        c_ceaux.setX(436);
-        c_ceaux.setY(110);
-
-        c_lafayette.setX(484);
-        c_lafayette.setY(110);
-
-        c_aprison.setX(532);
-        c_aprison.setY(110);
-
-        //////////////////////////COLONNE GAUCHE
-        c_villette.setX(15);
-        c_villette.setY(580);
-
-        c_celectr.setX(15);
-        c_celectr.setY(532);
-
-        c_neuilly.setX(15);
-        c_neuilly.setY(484);
-
-        c_paradis.setX(15);
-        c_paradis.setY(436);
-
-        c_gareL.setX(15);
-        c_gareL.setY(388);
-
-        c_mozart.setX(15);
-        c_mozart.setY(340);
-
-        c_com2.setRotate(90);
-        c_com2.setX(35);
-        c_com2.setY(272);
-
-        c_saintM.setX(15);
-        c_saintM.setY(244);
-
-        c_pigalle.setX(15);
-        c_pigalle.setY(196);
-
-        //////////////////////////COLONNE DROITE
-        c_breteuil.setX(532);
-        c_breteuil.setY(196);
-
-        c_foch.setX(532);
-        c_foch.setY(244);
-
-        c_commu3.setX(552);
-        c_commu3.setY(272);
-
-        c_capucines.setX(532);
-        c_capucines.setY(340);
-
-        c_gareSL.setX(532);
-        c_gareSL.setY(388);
-
-        c_chance2.setX(552);
-        c_chance2.setY(416);
-
-        c_champsE.setX(532);
-        c_champsE.setY(484);
-
-        c_taxe.setX(532);
-        c_taxe.setY(532);
-
-        c_paix.setX(532);
-        c_paix.setY(580);
-
 ////////AJOUT
         this.getChildren().add(imageView);
-        this.getChildren().add(c_depart);
-        this.getChildren().add(c_belleville);
-        this.getChildren().add(c_Lecourbe);
-        this.getChildren().add(c_impot);
-        this.getChildren().add(c_gareM);
-        this.getChildren().add(c_vaugirard);
-        this.getChildren().add(c_chance);
-        this.getChildren().add(c_courcelles);
-        this.getChildren().add(c_republique);
-        this.getChildren().add(c_com);
-        this.getChildren().add(c_prison);
-        this.getChildren().add(c_villette);
-        this.getChildren().add(c_celectr);
-        this.getChildren().add(c_neuilly);
-        this.getChildren().add(c_paradis);
-        this.getChildren().add(c_gareL);
-        this.getChildren().add(c_mozart);
-        this.getChildren().add(c_com2);
-        this.getChildren().add(c_saintM);
-        this.getChildren().add(c_pigalle);
-        this.getChildren().add(c_parc);
-        this.getChildren().add(c_matignon);
-        this.getChildren().add(c_chance3);
-        this.getChildren().add(c_malesherbes);
-        this.getChildren().add(c_henriM);
-        this.getChildren().add(c_gareN);
-        this.getChildren().add(c_faubourgSH);
-        this.getChildren().add(c_bourse);
-        this.getChildren().add(c_ceaux);
-        this.getChildren().add(c_lafayette);
-        this.getChildren().add(c_aprison);
-        this.getChildren().add(c_breteuil);
-        this.getChildren().add(c_foch);
-        this.getChildren().add(c_commu3);
-        this.getChildren().add(c_capucines);
-        this.getChildren().add(c_gareSL);
-        this.getChildren().add(c_chance2);
-        this.getChildren().add(c_champsE);
-        this.getChildren().add(c_taxe);
-        this.getChildren().add(c_paix);
+
     }
 }
