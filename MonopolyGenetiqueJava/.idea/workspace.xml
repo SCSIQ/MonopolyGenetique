@@ -126,12 +126,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4416" />
+          <entry key="java" value="4199" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4416" />
+          <entry key="JAVA" value="4199" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -155,6 +155,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
 <<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java">
@@ -199,6 +200,13 @@
             <state relative-caret-position="188">
               <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
 >>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="105" column="51" lean-forward="true" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+>>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
               <folding>
                 <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
                 <element signature="method#RectanglePlateau#0;class#Jeu#0" />
@@ -232,11 +240,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            <state relative-caret-position="119">
+              <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
 >>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
@@ -271,8 +279,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="42" />
+            <state relative-caret-position="170">
+              <caret line="27" column="61" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -418,6 +426,7 @@
   <component name="PropertiesComponent">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950275916" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541949613889" />
@@ -425,6 +434,9 @@
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950258605" />
 >>>>>>> parent of d1f8c4b... Update MonopolyGenetiqueJava/.idea/workspace.xml
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541948688911" />
+>>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../informatique IUT/cours/2eme_annee/semestre_3/projetTut/melordi" />
   </component>
@@ -511,7 +523,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18456884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456884" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -520,12 +532,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3665087" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39968404" />
 =======
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36557376" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36557376" />
+>>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
 >>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -761,8 +778,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="234">
           <caret line="406" column="78" selection-start-line="406" selection-start-column="78" selection-end-line="406" selection-end-column="78" />
@@ -770,6 +808,10 @@
         <state relative-caret-position="188">
           <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
 >>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
+=======
+        <state relative-caret-position="101">
+          <caret line="105" column="51" lean-forward="true" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+>>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
           <folding>
             <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
             <element signature="method#RectanglePlateau#0;class#Jeu#0" />
@@ -802,6 +844,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -823,5 +866,7 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> parent of 07986d8... ajout labet et bouton dans lancerDes
   </component>
 </project>
