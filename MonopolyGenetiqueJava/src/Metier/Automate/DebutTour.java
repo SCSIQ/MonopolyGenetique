@@ -17,6 +17,8 @@ public class DebutTour extends Etat{
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
         j.setaLanceDes(false); //just in case
+        j.setResDes1(0);
+        j.setResDes2(0);
         j.setResLanceDes(0);
         //ici ajouter les actions automatisées que doivent faire les joueurs en début de tour si il y en a
     }

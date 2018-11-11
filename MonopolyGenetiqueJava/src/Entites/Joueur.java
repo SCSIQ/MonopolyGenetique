@@ -10,6 +10,8 @@ public class Joueur {
     private Pion pion ;
     private boolean aLanceDes = false;
     private ArrayList<Proprietes> listePropietes;
+    private int resDes1 = 0;
+    private int resDes2 = 0;
     private int resLanceDes = 0;
     private ArrayList<Cases> listeCases;
 
@@ -35,8 +37,24 @@ public class Joueur {
         this.aLanceDes = aLanceDes;
     }
 
+    public int getResDes1() {
+        return resDes1;
+    }
+
+    public int getResDes2() {
+        return resDes2;
+    }
+
     public int getResLanceDes() {
         return resLanceDes;
+    }
+
+    public void setResDes1(int resDes1) {
+        this.resDes1 = resDes1;
+    }
+
+    public void setResDes2(int resDes2) {
+        this.resDes2 = resDes2;
     }
 
     public void setResLanceDes(int resLanceDes) {

@@ -24,10 +24,10 @@ import Metier.Plateau.Prison;
 
 import java.util.ArrayList;
 
-public class InitialisationPartie {
+public abstract class InitialisationPartie {
 
-    private ArrayList<Cases> listeCases = new ArrayList<>();
-    private ArrayList<Joueur> listeJoueurs = new ArrayList<>();
+    protected ArrayList<Cases> listeCases = new ArrayList<>();
+    protected ArrayList<Joueur> listeJoueurs = new ArrayList<>();
 
     public Automate automateInitialisation(int nombreJoueurs, ArrayList<CouleurPion> listeCouleurs){
         creationListeCases();

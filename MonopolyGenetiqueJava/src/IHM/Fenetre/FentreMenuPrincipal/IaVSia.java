@@ -1,8 +1,11 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
+import Entites.CouleurPion;
 import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.InitialisationPartie;
+import Metier.InitialisationPartieIA;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -109,17 +112,30 @@ public class IaVSia extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
+                /*
                 //ici ajouter lancement automate avec en param le joueur
                 Joueur j = new Joueur(null, null);
                 ArrayList<Joueur> listeJoueurs = new ArrayList<>();
                 listeJoueurs.add(j);
                 /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeJoueurs.add(new Joueur());
-                }*/
+                }
                 System.out.println("Nombre de joueurs : "+listeJoueurs.size());
                 Automate automate = new Automate(listeJoueurs);
+                */
 
+                //début initialisation automate
+                System.out.println("\n    DEBUT DE LA PARTIE\n");
+                System.out.println("Nombre d'IA : "+Integer.valueOf((String) nb_adversaires.getValue()));
+                InitialisationPartieIA initialisationPartieIA = new InitialisationPartieIA();
+                ArrayList<CouleurPion> listeCouleurs = new ArrayList<>();
+                for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
+                    listeCouleurs.add(CouleurPion.rouge);
+                }
+                Automate automate = initialisationPartieIA.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
+                //fin initialisation automate
 
+                /*
                 Color couleur= Color.BLACK;
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur,automate) ;
@@ -129,6 +145,7 @@ public class IaVSia extends Parent {
                 //on montre la nouvelle fenêtre
                 nouvelle_fenetre_plateau.show();
                 nouvelle_fenetre.close();
+                */
             }
         });
 

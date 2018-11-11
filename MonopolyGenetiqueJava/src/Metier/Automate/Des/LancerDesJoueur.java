@@ -21,6 +21,10 @@ public class LancerDesJoueur extends Etat {
     @Override
     public void agir(String event) {
 
+        //IMPORTANT !!!
+        //Ne prend pas en compte les 3 doubles qui evoient en prison
+        //A coder...
+
         Joueur j = super.getListeJoueurs().get(0); //récupère le joueur courant
 
         if(j.getaLanceDes()==false){
@@ -32,6 +36,8 @@ public class LancerDesJoueur extends Etat {
             de1=toto.nextInt(6)+1;
             de2=toto.nextInt(6)+1;
             int score = de1+de2;
+            j.setResDes1(de1);
+            j.setResDes2(de1);
             j.setResLanceDes(score);
             System.out.println("    score joueur : "+score);
         }else{
