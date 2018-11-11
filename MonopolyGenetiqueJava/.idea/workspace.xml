@@ -1,9 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d6fde2d-492d-4b0e-8f13-28c830ad9946" name="Default Changelist" comment="LancerDeInitial">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonopolyGenetiqueJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MonopolyGenetiqueJava.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Entites/CouleurPion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Entites/Humain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Entites/IA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Entites/Joueur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Allez_Prison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Belleville.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Bourse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Breteuil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_CEaux.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_CElect-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Capucines.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_ChampsE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Chance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Communaute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Courcelles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Depart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_FaubourgSH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Foch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_GareL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_GareM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_GareN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_GareSL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_HenriM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Impot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Lafayette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Lecourbe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Malesherbes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Matignon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Mozart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Neuilly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Paix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Paradis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Parc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Pigalle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Prison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Republique.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_SaintM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Taxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Vaugirard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/Case_Villette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/logo-centre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/Jeu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/LancerDe$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/LancerDe$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/LancerDe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FenetreParties/LancerDes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/IaVSia$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/IaVSia$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/IaVSia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/MenuJeu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/MenuJeu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/MenuJeu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/MenuJeu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/Solo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/Solo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/Solo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Fenetre/FentreMenuPrincipal/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/Ampoule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/CaisseCommune.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/CaseCarte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/Depart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/Gare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/ParcGratuit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/CartePiocher/Prison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Cases.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Chance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Couleur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Impot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/LieuPublic/Robinet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Proprietes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/ServicePublic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/TaxeDeLuxe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Taxes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/IHM/Plateau/Terrain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/AffichageIHMmenuIA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/GagnerArgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/Maison/AcheterMaison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/Maison/VendreMaison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/PerdreArgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Argent/Proprietes/AcheterPropriete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Automate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Choix/ChoixPossibles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Choix/ChoixProprietePossede.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/DebutTour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Des/LancerDesInitial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/EchangerPropriete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Etat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/EtreEnPrison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/FinTour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/InstanciePartie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/PiocherUneCarte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/StatsPartie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/VendrePropriete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Automate/VerifNbjetNbTours.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/Cases.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/Depart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeCartes/CaisseCommune1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeCartes/Chance1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeGares/Gare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeGares/Gare1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeGares/Gare2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeServicesPublics/Ampoule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeServicesPublics/Robinet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeServicesPublics/ServicePublic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/BleuCiel/BleuCiel1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/BleuCiel/BleuCiel2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/BleuCiel/BleuCiel3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/Marron/Marron1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/Marron/Marron2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/ListeTerrains/Terrain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeProprietes/Proprietes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeTaxes/TaxeDeLuxe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/ListeTaxes/Taxes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/Plateau/Prison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entites/CouleurPion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entites/Humain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entites/IA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entites/Joueur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entites/Pion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Allez_Prison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Belleville.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Bourse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Breteuil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_CEaux.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_CElect-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Capucines.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_ChampsE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Chance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Communaute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Courcelles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Depart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_FaubourgSH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Foch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_GareL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_GareM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_GareN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_GareSL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_HenriM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Impot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Lafayette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Lecourbe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Malesherbes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Matignon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Mozart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Neuilly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Paix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Paradis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Parc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Pigalle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Prison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Republique.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_SaintM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Taxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Vaugirard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Villette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/DejaLanceDes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/logo-centre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/CartePiocher/CaisseCommune.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/CartePiocher/CaseCarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Cases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Chance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Couleur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Impot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Ampoule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Depart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Gare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ParcGratuit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Prison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Robinet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ServicePublic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Proprietes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/TaxeDeLuxe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Taxes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHM/Plateau/Terrain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/AffichageIHMmenuIA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/GagnerArgent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/Maison/AcheterMaison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/Maison/VendreMaison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/PerdreArgent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/Proprietes/AcheterPropriete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/Proprietes/EchangerPropriete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Argent/Proprietes/VendrePropriete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Automate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixPossibles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Choix/ChoixProprietePossede.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/DebutTour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Deplacement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesInitial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Etat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/EtreEnPrison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/FinTour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/InstanciePartie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/PiocherUneCarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/StatsPartie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Automate/VerifNbjetNbTours.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/InitialisationPartie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/Cases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/Depart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeCartes/CaisseCommune1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeCartes/CaseCarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeCartes/Chance1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeGares/Gare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeGares/Gare1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeGares/Gare2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeServicesPublics/Ampoule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeServicesPublics/Robinet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeServicesPublics/ServicePublic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/BleuCiel/BleuCiel1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/BleuCiel/BleuCiel2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/BleuCiel/BleuCiel3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Marron/Marron1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Marron/Marron2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Terrain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/Proprietes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeTaxes/Impot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeTaxes/TaxeDeLuxe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ListeTaxes/Taxes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/ParcGratuit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/Plateau/Prison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
+    <ignored path="JavaFxApplication.iws" />
+    <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,268 +262,79 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-285190804">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="fxml" value="1" />
-          <entry key="iml" value="1" />
-          <entry key="java" value="25" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="25" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="2" />
-          <entry key="java" value="194" />
-          <entry key="txt" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="194" />
-          <entry key="PLAIN_TEXT" value="17" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-757045254">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.105" value="1" />
-          <entry key="project.open.time.123" value="1" />
-          <entry key="project.open.time.134" value="1" />
-          <entry key="project.open.time.160" value="1" />
-          <entry key="project.open.time.240" value="1" />
-          <entry key="project.open.time.69" value="1" />
-          <entry key="project.open.time.97" value="1" />
-          <entry key="project.opened" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="9204" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="9204" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1834486557">
+    <session id="1809270236">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.34" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="375" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="375" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1601727761">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="12" />
-          <entry key="png" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Image" value="2" />
-          <entry key="JAVA" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="4416" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="4416" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Chance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1904#1905#0" expanded="true" />
-                <element signature="e#1951#1952#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="120" selection-start-line="120" selection-end-line="126" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1668">
-              <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="406" column="78" selection-start-line="406" selection-start-column="78" selection-end-line="406" selection-end-column="78" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-              <folding>
-                <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
-                <element signature="method#RectanglePlateau#0;class#Jeu#0" />
-                <element signature="method#RectangleAdversaire#0;class#Jeu#0" />
-                <element signature="method#RectanglePossession#0;class#Jeu#0" />
-                <element signature="method#RectangleTerrain#0;class#Jeu#0" />
-                <element signature="method#RectangleGare#0;class#Jeu#0" />
-                <element signature="method#RectangleCompagnies#0;class#Jeu#0" />
-                <element signature="method#RectangleCartePrison#0;class#Jeu#0" />
-                <element signature="method#boutonMenu#0;class#Jeu#0" />
-                <element signature="method#boutonLancerDes#0;class#Jeu#0" />
-                <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
-                <element signature="method#fenetreNoire#0;class#Jeu#0" />
-<<<<<<< HEAD
-                <element signature="method#choixMenu#0;class#Jeu#0" />
-                <element signature="method#caseDuBas#0;class#Jeu#0" />
-                <element signature="method#caseDeGauche#0;class#Jeu#0" />
-                <element signature="method#caseDuHaut#0;class#Jeu#0" />
-                <element signature="method#caseDeDroite#0;class#Jeu#0" />
-                <element signature="method#plateauJeu#0;class#Jeu#0" />
-=======
-                <element signature="method#caseDuBas#0;class#Jeu#0" />
-                <element signature="e#13294#13295#0" expanded="true" />
-                <element signature="e#13370#13371#0" expanded="true" />
-                <element signature="method#caseDeGauche#0;class#Jeu#0" />
-                <element signature="e#18734#18836#0" />
-                <element signature="method#caseDuHaut#0;class#Jeu#0" />
-                <element signature="method#caseDeDroite#0;class#Jeu#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/DejaLanceDes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-=======
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1604#1605#0" expanded="true" />
-                <element signature="e#1651#1652#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="42" />
+            <state relative-caret-position="120">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -281,23 +343,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="105">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -305,32 +365,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Metier/Automate/Des/LanceDesInitial.java" />
-        <option value="$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/DejaLanceDes.java" />
-=======
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/lancerDes.java" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
+    <option name="y" value="23" />
+    <option name="width" value="960" />
+    <option name="height" value="1012" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -354,59 +403,6 @@
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-              <item name="FenetreParties" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-              <item name="FentreMenuPrincipal" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Metier" type="462c0819:PsiDirectoryNode" />
-=======
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Metier" type="462c0819:PsiDirectoryNode" />
-              <item name="Automate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Metier" type="462c0819:PsiDirectoryNode" />
-              <item name="Automate" type="462c0819:PsiDirectoryNode" />
-              <item name="Des" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -416,22 +412,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-<<<<<<< HEAD
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541950275916" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541949613889" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-    <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../informatique IUT/cours/2eme_annee/semestre_3/projetTut/melordi" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\boucquemont\Documents\gitHub\MonopolyGenetique\MonopolyGenetiqueJava\src\IHM\Fenetre\FenetreParties" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\boucquemont\Documents\gitHub\MonopolyGenetique\MonopolyGenetiqueJava\src\IHM\Fenetre\FenetreParties" />
-      <recent name="C:\Users\boucquemont\Documents\gitHub\MonopolyGenetique\MonopolyGenetiqueJava\src\IHM\Images" />
-    </key>
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541971857440" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -446,16 +437,71 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="MonopolyGenetiqueJava" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="monop" type="Application" factoryName="Application">
+    <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="MonopolyGenetiqueJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -466,355 +512,89 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4d6fde2d-492d-4b0e-8f13-28c830ad9946" name="Default Changelist" comment="" />
-      <created>1540990605442</created>
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540990605442</updated>
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
     </task>
-    <task id="LOCAL-00001" summary="LancerDeInitial">
-      <created>1540996083725</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1540996083725</updated>
-    </task>
-    <task id="LOCAL-00002" summary="LancerDeInitial">
-      <created>1540996618993</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1540996618993</updated>
-    </task>
-    <task id="LOCAL-00003" summary="LancerDeInitial">
-      <created>1540996952840</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1540996952840</updated>
-    </task>
-    <task id="LOCAL-00004" summary="LancerDeInitial">
-      <created>1540997433514</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1540997433514</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1302000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="960" y="23" width="960" height="1012" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18456884" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.4324619" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3665087" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39968404" />
-=======
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36557376" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.32923076" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" weight="0.3276923" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.32385466" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2700157" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.33384615" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LancerDeInitial" />
-    <option name="LAST_COMMIT_MESSAGE" value="LancerDeInitial" />
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MonopolyGenetiqueJava.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entites/Humain.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Automate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesInitial.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="3484" selection-start-line="3484" selection-end-line="3484" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Etat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Jeu.java" />
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Proprietes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Couleur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Cases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/IaVSia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="147" column="47" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_Chance.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/Case_ChampsE.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Chance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Des/LancerDesJoueur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Accueil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-884">
-          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#1951#1952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1668">
-          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="120" selection-start-line="120" selection-end-line="126" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Images/DejaLanceDes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
-=======
-        <state relative-caret-position="304">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        <state relative-caret-position="120">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="234">
-          <caret line="406" column="78" selection-start-line="406" selection-start-column="78" selection-end-line="406" selection-end-column="78" />
-=======
-        <state relative-caret-position="188">
-          <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
-          <folding>
-            <element signature="method#RectangleInfoJoueur#0;class#Jeu#0" />
-            <element signature="method#RectanglePlateau#0;class#Jeu#0" />
-            <element signature="method#RectangleAdversaire#0;class#Jeu#0" />
-            <element signature="method#RectanglePossession#0;class#Jeu#0" />
-            <element signature="method#RectangleTerrain#0;class#Jeu#0" />
-            <element signature="method#RectangleGare#0;class#Jeu#0" />
-            <element signature="method#RectangleCompagnies#0;class#Jeu#0" />
-            <element signature="method#RectangleCartePrison#0;class#Jeu#0" />
-            <element signature="method#boutonMenu#0;class#Jeu#0" />
-            <element signature="method#boutonLancerDes#0;class#Jeu#0" />
-            <element signature="method#boutonTourSuivant#0;class#Jeu#0" />
-            <element signature="method#fenetreNoire#0;class#Jeu#0" />
-<<<<<<< HEAD
-            <element signature="method#choixMenu#0;class#Jeu#0" />
-            <element signature="method#caseDuBas#0;class#Jeu#0" />
-            <element signature="method#caseDeGauche#0;class#Jeu#0" />
-            <element signature="method#caseDuHaut#0;class#Jeu#0" />
-            <element signature="method#caseDeDroite#0;class#Jeu#0" />
-            <element signature="method#plateauJeu#0;class#Jeu#0" />
-=======
-            <element signature="method#caseDuBas#0;class#Jeu#0" />
-            <element signature="e#13294#13295#0" expanded="true" />
-            <element signature="e#13370#13371#0" expanded="true" />
-            <element signature="method#caseDeGauche#0;class#Jeu#0" />
-            <element signature="e#18734#18836#0" />
-            <element signature="method#caseDuHaut#0;class#Jeu#0" />
-            <element signature="method#caseDeDroite#0;class#Jeu#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/MenuJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> 7b2fb4b983fb18c39ffc635c3477def19ab61283
           </folding>
         </state>
       </provider>

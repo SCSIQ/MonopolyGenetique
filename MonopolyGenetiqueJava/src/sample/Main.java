@@ -1,22 +1,14 @@
 package sample;
 
-import Entites.Joueur;
-import IHM.Fenetre.FentreMenuPrincipal.Accueil;
-import Metier.Automate.Des.LancerDesInitial;
-import Metier.Plateau.ListeProprietes.ListeTerrains.Marron.Marron2;
-import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose1;
-import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose2;
-import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
+import IHM.Fenetre.FentreMenuPrincipal.Accueil;
 
 public class Main extends Application {
-
-
 
     @Override
     public void start(Stage primaryStage) {
@@ -41,8 +33,7 @@ public class Main extends Application {
     }
 
 
-
     public static void main(String[] args) {
-        Application.launch(Main.class, args);
+        launch(args);
     }
 }
