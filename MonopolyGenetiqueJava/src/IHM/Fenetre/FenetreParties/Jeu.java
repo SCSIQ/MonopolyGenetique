@@ -104,8 +104,15 @@ public class Jeu extends Parent {
         bt_lancerDes.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+                Stage nouvelle_fenetre_lancerDes = new Stage();
+                LancerDes fenetre_LancerDes = new LancerDes(primaryStage, nouvelle_fenetre_lancerDes);
 
-                automate.evoluer("lancerDes");
+                Scene nouvelle_scene = new Scene(fenetre_LancerDes,300,250);
+
+                nouvelle_fenetre_lancerDes.setScene(nouvelle_scene);
+                nouvelle_fenetre_lancerDes.show();
+
+                 automate.evoluer("lancerDes");
 
             }
         });
@@ -391,7 +398,7 @@ public class Jeu extends Parent {
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
 
-        //PRECISER QU4IL S'AGIT D'UNE FENETRE MODALE
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_menu.initModality(Modality.WINDOW_MODAL);
         nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
 
@@ -422,6 +429,12 @@ public class Jeu extends Parent {
         this.getChildren().add(CaseDepart);
         CaseDepart.getChildren().add(c_depart);
 
+        c_depart.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                c_depart.setLayoutX(c_depart.getLayoutX()*2);
+            }
+        });
 
         //CASE BELLEVILLE
         Pane violetBelleville = new Pane();
