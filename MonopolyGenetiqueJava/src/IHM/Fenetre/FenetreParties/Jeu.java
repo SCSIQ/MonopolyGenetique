@@ -110,8 +110,11 @@ public class Jeu extends Parent {
                 Scene nouvelle_scene = new Scene(fenetre_LancerDes,300,250);
 
                 nouvelle_fenetre_lancerDes.setScene(nouvelle_scene);
+                //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+                nouvelle_fenetre_lancerDes.initModality(Modality.WINDOW_MODAL);
+                nouvelle_fenetre_lancerDes.initOwner(nouvelle_fenetre);
                 nouvelle_fenetre_lancerDes.show();
-
+                fenetreNoire();
                  automate.evoluer("lancerDes");
 
             }
