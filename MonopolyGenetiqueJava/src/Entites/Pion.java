@@ -16,9 +16,9 @@ public class Pion {
 
     public void avancer(int nombre){
         if(position.getPosition() + nombre <= 13){
-            for(int i=0 ; i<joueur.getListeCases().size() ; i++){
-                if(joueur.getListeCases().get(i).getPosition() == position.getPosition() + nombre){
-                    this.position = joueur.getListeCases().get(i);
+            for(Cases c : joueur.getListeCases()){
+                if(c.getPosition() == position.getPosition() + nombre){
+                    this.position = c;
                 }
             }
         }
