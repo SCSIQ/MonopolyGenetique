@@ -91,6 +91,7 @@ public class Jeu extends Parent {
 
                     fenetreDes(nouvelle_fenetre, automate);
                 }else{
+                    automate.evoluer("lancerDes");
                     fenetreDejaLancerDe();
                 }
 
