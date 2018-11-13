@@ -5,6 +5,7 @@ import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -25,11 +26,13 @@ import javafx.stage.Stage;
 
 
 import java.net.URL;
+import java.util.ArrayList;
 
 public class Jeu extends Parent {
 
     private Canvas canvas = new Canvas(1275,1275);
     private Automate automate;
+    private ArrayList<Pane> listePanel = new ArrayList<>();
 
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
@@ -41,6 +44,7 @@ public class Jeu extends Parent {
         caseDeGauche();
         caseDuHaut() ;
         caseDeDroite();
+        //GridPanePlateau() ;
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -131,6 +135,28 @@ public class Jeu extends Parent {
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
+
+
+    public void GridPanePlateau()
+    {
+        GridPane plateau= new GridPane() ;
+        plateau.setPadding(new Insets(20));
+        plateau.setLayoutX(604);
+        plateau.setLayoutY(604);
+        plateau.setHgap(25);
+        plateau.setVgap(15);
+    int i=1;
+    plateau.add(listePanel.get(0),0,0);
+    //plateau.add(listePanel.get(1),-1,0);
+
+  /*      for(Pane p : listePanel){
+                plateau.add(p,i-1,0);
+        }*/
+
+        plateau.setGridLinesVisible(true);
+
+        this.getChildren().add(plateau);
+    }
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur, Color couleur){
 
@@ -443,6 +469,7 @@ public class Jeu extends Parent {
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(CaseDepart);
         CaseDepart.getChildren().add(c_depart);
+        listePanel.add(CaseDepart);
 
         c_depart.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -469,6 +496,8 @@ public class Jeu extends Parent {
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(violetBelleville);
         violetBelleville.getChildren().add(c_belleville);
+        listePanel.add(violetBelleville);
+
 
         //CASE CAISSE DE COMMUNAUTE
         Pane PiocheCarteCommunaute = new Pane() ;
@@ -486,6 +515,8 @@ public class Jeu extends Parent {
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(PiocheCarteCommunaute);
         PiocheCarteCommunaute.getChildren().add(c_com);
+        listePanel.add(PiocheCarteCommunaute);
+
 
         //CASE LECOURBE
         Pane violetLecourbe = new Pane() ;
@@ -503,6 +534,8 @@ public class Jeu extends Parent {
 
         this.getChildren().add(violetLecourbe);
         violetLecourbe.getChildren().add(c_Lecourbe);
+        listePanel.add(violetLecourbe);
+
 
         //CASE IMPOT SUR LE REVENU
         Pane CaseImpotRevenu = new Pane() ;
@@ -520,6 +553,8 @@ public class Jeu extends Parent {
 
         this.getChildren().add(CaseImpotRevenu);
         CaseImpotRevenu.getChildren().add(c_impot);
+        listePanel.add(CaseImpotRevenu);
+
 
         //GARE DE MONTPARNASSE
 
@@ -539,6 +574,8 @@ public class Jeu extends Parent {
 
         this.getChildren().add(gareMontparnasse);
         gareMontparnasse.getChildren().add(c_gareM);
+        listePanel.add(gareMontparnasse);
+
 
         //CASE RUE DE VAUGIRAD
 
@@ -557,6 +594,8 @@ public class Jeu extends Parent {
 
         this.getChildren().add(CaseVaugirad);
         CaseVaugirad.getChildren().add(c_vaugirard);
+        listePanel.add(CaseVaugirad);
+
 
         //CASE CHANCE
         Pane CaseChance = new Pane() ;
@@ -573,6 +612,8 @@ public class Jeu extends Parent {
 
         this.getChildren().add(CaseChance);
         CaseChance.getChildren().add(c_chance);
+        listePanel.add(CaseChance);
+
 
         //CASE RUE DE COURCELLES
 
@@ -592,6 +633,7 @@ public class Jeu extends Parent {
 
         this.getChildren().add(CaseCourcelle);
         CaseCourcelle.getChildren().add(c_courcelles);
+        listePanel.add(CaseCourcelle);
 
         //CASE RUE REPUBLIQUE
         Pane CaseRepublique = new Pane() ;
@@ -610,6 +652,7 @@ public class Jeu extends Parent {
 
         this.getChildren().add(CaseRepublique);
         CaseRepublique.getChildren().add(c_republique);
+        listePanel.add(CaseRepublique);
 
         //CASE PRISON
         Pane CasePrison = new Pane() ;
@@ -626,6 +669,7 @@ public class Jeu extends Parent {
 
         this.getChildren().add(CasePrison);
         CasePrison.getChildren().add(c_prison);
+        listePanel.add(CasePrison);
 
 
 
