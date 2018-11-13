@@ -18,9 +18,10 @@ public class LancerDe extends Parent {
     {
 //////////////////////////////////////////////////////////////////////////TEXTE
             //récupération de la valeur des dés
-            Integer dé = automate.getJoueurCourant().getResLanceDes();
 
-            Text t_nb = new Text("Vous avez fait : \n"+ dé.toString());
+        System.out.println("VRAI OU FAUX "+automate.getJoueurCourant().getaLanceDes());
+            Integer dé = automate.getJoueurCourant().getResLanceDes();
+            Text t_nb = new Text("Vous avez fait : \n" + dé.toString());
 
             t_nb.setLayoutX(25);
             t_nb.setLayoutY(25);

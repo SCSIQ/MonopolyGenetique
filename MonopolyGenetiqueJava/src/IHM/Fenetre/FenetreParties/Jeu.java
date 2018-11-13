@@ -88,8 +88,8 @@ public class Jeu extends Parent {
 
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
-
                     fenetreDes(nouvelle_fenetre, automate);
+
                 }else{
                     automate.evoluer("lancerDes");
                     fenetreDejaLancerDe();
