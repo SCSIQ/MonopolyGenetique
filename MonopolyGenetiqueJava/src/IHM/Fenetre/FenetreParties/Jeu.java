@@ -145,13 +145,15 @@ public class Jeu extends Parent {
         plateau.setLayoutY(604);
         plateau.setHgap(25);
         plateau.setVgap(15);
-    int i=1;
-    plateau.add(listePanel.get(0),0,0);
-    //plateau.add(listePanel.get(1),-1,0);
 
-  /*      for(Pane p : listePanel){
-                plateau.add(p,i-1,0);
-        }*/
+        //ICI PROBLEME CAR PAS DE COORDONNEES NEGATIVES !
+        int i=1;
+        plateau.add(listePanel.get(0),0,0);
+        //plateau.add(listePanel.get(1),-1,0);
+
+      /*    for(Pane p : listePanel){
+                    plateau.add(p,i-1,0);
+            }*/
 
         plateau.setGridLinesVisible(true);
 
