@@ -401,6 +401,13 @@ public class Jeu extends Parent {
         Scene nouvelle_scene = new  Scene(fenetreDe,200,270);
 
         nouvelle_fenetre_des.setScene(nouvelle_scene);
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_des.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_des.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_des.setX(fenetre_actuelle.getX() + 610);
+        nouvelle_fenetre_des.setY(fenetre_actuelle.getY() + 200);
         nouvelle_fenetre_des.show();
     }
 
