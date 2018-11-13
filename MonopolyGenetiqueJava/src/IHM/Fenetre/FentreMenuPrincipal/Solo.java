@@ -4,6 +4,8 @@ import Entites.CouleurPion;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.InitialisationPartieJoueurs;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -78,9 +80,15 @@ public class Solo extends Parent {
         ColorPicker couleur = new ColorPicker();
         couleur.setValue(Color.RED);
 
+        /*ComboBox<String> couleur = new ComboBox<String>();
+        ObservableList<String> data = FXCollections.observableArrayList(
+                "rouge", "bleu", "noir", "jaune", "blanc", "vert" );
+        couleur.setItems(data);*/
+
             //position
         couleur.setLayoutX(430);
         couleur.setLayoutY(120);
+
 
             //taille
         couleur.setPrefSize(60,25);
