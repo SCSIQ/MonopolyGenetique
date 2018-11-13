@@ -16,6 +16,8 @@ public class DejaLanceDes extends Parent {
 
     public DejaLanceDes(Stage fenetre_actuelle, Canvas canvas){
 //////////////////////////////////////////////////////////////////////////TEXTE
+        fenetre_actuelle.setMinHeight(300);
+        fenetre_actuelle.setMinWidth(600);
         Color rouge = Color.RED;
 
         Text t_nb = new Text("VOUS AVEZ DEJA LANCE LES DES !!!" );

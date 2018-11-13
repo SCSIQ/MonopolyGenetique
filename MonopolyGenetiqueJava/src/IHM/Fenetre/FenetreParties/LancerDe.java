@@ -20,7 +20,7 @@ public class LancerDe extends Parent {
             //récupération de la valeur des dés
             Integer dé = automate.getJoueurCourant().getResLanceDes();
 
-            Text t_nb = new Text("Vous avez fait : \n" + dé.toString());
+            Text t_nb = new Text("Vous avez fait : \n"+ dé.toString());
 
             t_nb.setLayoutX(25);
             t_nb.setLayoutY(25);
