@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
@@ -44,7 +45,17 @@ public class Jeu extends Parent {
         caseDeGauche();
         caseDuHaut() ;
         caseDeDroite();
-        //GridPanePlateau() ;
+
+
+        // ESSAI POUR PLACER SUR LA CASE DEPART UN PION
+      /*  Pane caseDepart = listePanel.get(0) ;
+        Circle c = new Circle();
+        c.setFill(Color.CHOCOLATE);
+
+        c.setRadius(10);
+        c.setLayoutY(20);
+        c.setLayoutX(20);
+        caseDepart.getChildren().add(c);*/
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -140,32 +151,6 @@ public class Jeu extends Parent {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
-
-    public void GridPanePlateau()
-    {
-        GridPane plateau= new GridPane() ;
-        plateau.setPadding(new Insets(20));
-        plateau.setLayoutX(10);
-        plateau.setLayoutY(604);
-        plateau.setHgap(25);
-        plateau.setVgap(15);
-       plateau.add(listePanel.get(0), 5, 0, 10, 1);
-
-        //ICI PROBLEME CAR PAS DE COORDONNEES NEGATIVES !
-        int i=listePanel.size();
-       // plateau.add(listePanel.get(0),0,0);
-        //plateau.add(listePanel.get(1),1,0);
-
-     /* for(Pane p : listePanel){
-          plateau.add(p,5,0);
-       }*/
-
-
-
-        plateau.setGridLinesVisible(true);
-
-        this.getChildren().add(plateau);
-    }
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur, Color couleur){
 
