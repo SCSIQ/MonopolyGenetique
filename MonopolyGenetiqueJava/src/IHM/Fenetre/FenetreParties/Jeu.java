@@ -46,7 +46,9 @@ public class Jeu extends Parent {
         caseDuHaut() ;
         caseDeDroite();
 
-
+        automate.getNombreJoueur();
+        Pion p = new Pion(automate, this);
+        System.out.println(automate.getJoueurCourant().getPion());
         // ESSAI POUR PLACER SUR LA CASE DEPART UN PION
       /*  Pane caseDepart = listePanel.get(0) ;
         Circle c = new Circle();
@@ -148,6 +150,11 @@ public class Jeu extends Parent {
         this.getChildren().add(bt_tourSuivant);
 
     }
+
+    public ArrayList getListePanel(){
+        return listePanel;
+    }
+
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 

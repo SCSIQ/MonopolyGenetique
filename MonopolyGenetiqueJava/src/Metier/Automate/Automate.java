@@ -36,4 +36,8 @@ public class Automate {
     public Joueur getJoueurCourant() {
         return listeJoueurs.get(0);
     }
+
+    public int getNombreJoueur(){
+        return listeJoueurs.size() ;
+    }
 }

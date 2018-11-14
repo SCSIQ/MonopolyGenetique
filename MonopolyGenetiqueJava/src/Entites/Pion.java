@@ -1,6 +1,7 @@
 package Entites;
 
 import Metier.Plateau.Cases;
+import javafx.scene.paint.Color;
 
 public class Pion {
 
@@ -32,5 +33,9 @@ public class Pion {
     @Override
     public String toString() {
         return position.toString();
+    }
+
+    public CouleurPion getCouleurPion(){
+        return couleur ;
     }
 }
