@@ -44,7 +44,7 @@ public class Jeu extends Parent {
         caseDeGauche();
         caseDuHaut() ;
         caseDeDroite();
-        //GridPanePlateau() ;
+        GridPanePlateau() ;
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -141,19 +141,22 @@ public class Jeu extends Parent {
     {
         GridPane plateau= new GridPane() ;
         plateau.setPadding(new Insets(20));
-        plateau.setLayoutX(604);
+        plateau.setLayoutX(10);
         plateau.setLayoutY(604);
         plateau.setHgap(25);
         plateau.setVgap(15);
+       plateau.add(listePanel.get(0), 5, 0, 10, 1);
 
         //ICI PROBLEME CAR PAS DE COORDONNEES NEGATIVES !
-        int i=1;
-        plateau.add(listePanel.get(0),0,0);
-        //plateau.add(listePanel.get(1),-1,0);
+        int i=listePanel.size();
+       // plateau.add(listePanel.get(0),0,0);
+        //plateau.add(listePanel.get(1),1,0);
 
-      /*    for(Pane p : listePanel){
-                    plateau.add(p,i-1,0);
-            }*/
+     /* for(Pane p : listePanel){
+          plateau.add(p,5,0);
+       }*/
+
+
 
         plateau.setGridLinesVisible(true);
 
