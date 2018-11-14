@@ -113,10 +113,13 @@ public class Jeu extends Parent {
             }
         });
 
-////////BLOCAGE REDUCTION
+////////BLOCAGE REDUCTION ET AUGMENTATION
 
         nouvelle_fenetre.setMinWidth(1290);
         nouvelle_fenetre.setMinHeight(750);
+
+        nouvelle_fenetre.setMaxWidth(1290);
+        nouvelle_fenetre.setMaxHeight(750);
 
         // AJOUT A L'ECRAN
 
@@ -391,10 +394,11 @@ public class Jeu extends Parent {
 
     public void fenetreNoire()
     {
+
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.BLACK);
         canvas.setOpacity(0.5);
-        gc.fillRect(0,0, 1275,1275);
+        gc.fillRect(0,0, 1600,1600);
         this.getChildren().add(canvas);
     }
 
@@ -413,8 +417,8 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
 
         //POSITION DE LA FENETRE
-        nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
-        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);
+       /* nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
+        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);*/
 
         nouvelle_fenetre_menu.show();
     }
@@ -426,7 +430,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_des = new Stage();
         LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,200,270);
+        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 
         nouvelle_fenetre_des.setScene(nouvelle_scene);
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
@@ -434,8 +438,6 @@ public class Jeu extends Parent {
         nouvelle_fenetre_des.initOwner(fenetre_actuelle);
 
         //POSITION DE LA FENETRE
-        nouvelle_fenetre_des.setX(fenetre_actuelle.getX() + 610);
-        nouvelle_fenetre_des.setY(fenetre_actuelle.getY() + 200);
         nouvelle_fenetre_des.show();
     }
 
@@ -446,7 +448,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_erreur = new Stage();
         DejaLanceDes fenetreDe = new DejaLanceDes(nouvelle_fenetre_erreur, canvas);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,300,270);
+        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 
         nouvelle_fenetre_erreur.setScene(nouvelle_scene);
         nouvelle_fenetre_erreur.show();

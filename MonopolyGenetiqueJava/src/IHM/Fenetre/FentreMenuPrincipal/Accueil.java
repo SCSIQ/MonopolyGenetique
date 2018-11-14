@@ -60,7 +60,7 @@ public class Accueil extends Parent {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
                 Stage nouvelle_fenetre = new Stage();
                 Solo solo_fenetre = new Solo(primaryStage, nouvelle_fenetre);
-                Scene nouvelle_scene = new Scene(solo_fenetre,520,300);
+                Scene nouvelle_scene = new Scene(solo_fenetre,620,380);
 
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
