@@ -109,7 +109,7 @@ public class Jeu extends Parent {
             public void handle(ActionEvent event) {
 
                 automate.evoluer("tourSuivant");
-
+                fenetreTour(nouvelle_fenetre, automate);
             }
         });
 
@@ -181,6 +181,7 @@ public class Jeu extends Parent {
         Label argent = new Label("ARGENT :");
         Label enPrison = new Label("EN PRISON :");
         Label tour = new Label("TOUR :");
+
 
         //NOM
         nom.setLayoutX(90);
@@ -408,7 +409,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_menu = new Stage();
         MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, fenetre_actuelle, couleur, canvas);
 
-        Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
+        Scene nouvelle_scene = new Scene(fenetre_menu,320,370);
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
 
@@ -421,6 +422,25 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);*/
 
         nouvelle_fenetre_menu.show();
+    }
+
+    public void fenetreTour(Stage fenetre_actuelle, Automate automate)
+    {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_des = new Stage();
+        tourSuivant fenetreDe = new tourSuivant(nouvelle_fenetre_des, canvas, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
+
+        nouvelle_fenetre_des.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_des.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_des.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_des.show();
     }
 
     public void fenetreDes(Stage fenetre_actuelle, Automate automate)
