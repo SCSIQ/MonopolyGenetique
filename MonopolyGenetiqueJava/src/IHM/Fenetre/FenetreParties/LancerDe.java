@@ -19,7 +19,6 @@ public class LancerDe extends Parent {
 //////////////////////////////////////////////////////////////////////////TEXTE
             //récupération de la valeur des dés
 
-           // System.out.println("VRAI OU FAUX "+automate.getJoueurCourant().getaLanceDes());
             Integer dé = automate.getJoueurCourant().getResLanceDes();
             Text t_nb = new Text("Vous avez fait : " + dé.toString());
 
@@ -68,6 +67,7 @@ public class LancerDe extends Parent {
  /////////////////////////////////////////////////////////////////////////AJOUT
         this.getChildren().add(t_nb);
         this.getChildren().add(bt_ok);
+
     }
 
     public void detruireCanvas(Canvas canvas)

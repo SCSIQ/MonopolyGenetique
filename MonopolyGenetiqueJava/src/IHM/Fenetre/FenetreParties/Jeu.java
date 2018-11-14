@@ -110,6 +110,7 @@ public class Jeu extends Parent {
 
                 automate.evoluer("tourSuivant");
                 fenetreTour(nouvelle_fenetre, automate);
+                automate.getJoueurCourant().setaLanceDes(false);
             }
         });
 
