@@ -106,6 +106,7 @@ public class Jeu extends Parent {
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
+                    p.deplacer();
 
                 }else{
                     automate.evoluer("lancerDes");
