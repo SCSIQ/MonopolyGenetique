@@ -22,9 +22,9 @@ public class HumainVShumain extends Parent {
     public HumainVShumain(Stage primaryStage, Stage nouvelle_fenetre){
 
 ////////TEXTE
-        Text t_titre = new Text(140,30,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
-        Text t_adv = new Text(80, 90, "Choisissez le nombre de joueurs : ");
-        Text t_tours = new Text(80, 190, "Choisissez le nombre de tours : ");
+        Text t_titre = new Text(200,40,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
+        Text t_adv = new Text(80, 130, "Choisissez le nombre de joueurs : ");
+        Text t_tours = new Text(80, 210, "Choisissez le nombre de tours : ");
 
         //TAILLE
         t_titre.setScaleX(2);
@@ -58,15 +58,15 @@ public class HumainVShumain extends Parent {
         nb_tours.getSelectionModel().selectFirst();
 
         //POSITION
-        nb_adversaires.setLayoutX(440);
-        nb_adversaires.setLayoutY(70);
+        nb_adversaires.setLayoutX(490);
+        nb_adversaires.setLayoutY(110);
 
-        nb_tours.setLayoutX(440);
-        nb_tours.setLayoutY(170);
+        nb_tours.setLayoutX(490);
+        nb_tours.setLayoutY(190);
 
         //TAILLE COMBO BOX
-        nb_adversaires.setPrefSize(60,10);
-        nb_tours.setPrefSize(60, 10);
+        nb_adversaires.setPrefSize(100,30);
+        nb_tours.setPrefSize(100, 30);
 
 ////////BOUTONS
 
@@ -75,14 +75,14 @@ public class HumainVShumain extends Parent {
         Button commencer_partie = new Button("COMMENCER PARTIE");
 
         //POSITION
-        menu_principal.setLayoutX(40);
-        menu_principal.setLayoutY(250);
-        commencer_partie.setLayoutX(300);
-        commencer_partie.setLayoutY(250);
+        menu_principal.setLayoutX(30);
+        menu_principal.setLayoutY(300);
+        commencer_partie.setLayoutX(340);
+        commencer_partie.setLayoutY(300);
 
         //TAILLE BOUTONS
-        menu_principal.setPrefSize(200,10);
-        commencer_partie.setPrefSize(200,10);
+        menu_principal.setPrefSize(250,30);
+        commencer_partie.setPrefSize(250,30);
 
 ////////ACTION BOUTON
 
@@ -126,8 +126,11 @@ public class HumainVShumain extends Parent {
 
 ////////BLOCAGE REDUCTION
 
-        nouvelle_fenetre.setMinWidth(530);
-        nouvelle_fenetre.setMinHeight(330);
+        nouvelle_fenetre.setMinWidth(630);
+        nouvelle_fenetre.setMinHeight(390);
+
+        nouvelle_fenetre.setMaxWidth(630);
+        nouvelle_fenetre.setMaxHeight(390);
 
 ////////AJOUT
 

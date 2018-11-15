@@ -78,7 +78,7 @@ public class Accueil extends Parent {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
                 Stage nouvelle_fenetre = new Stage();
                 HumainVShumain humain_fenetre = new HumainVShumain(primaryStage, nouvelle_fenetre );
-                Scene nouvelle_scene = new Scene(humain_fenetre,520,300);
+                Scene nouvelle_scene = new Scene(humain_fenetre,620,380);
 
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre et on ferme l'ancienne
@@ -93,7 +93,7 @@ public class Accueil extends Parent {
             public void handle(ActionEvent event) {
                 Stage nouvelle_fenetre = new Stage();
                 IaVSia MenuIa = new IaVSia(primaryStage, nouvelle_fenetre) ;
-                Scene nouvelle_scene = new Scene(MenuIa,520,300);
+                Scene nouvelle_scene = new Scene(MenuIa,620,380);
 
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 nouvelle_fenetre.show();
