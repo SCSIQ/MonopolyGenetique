@@ -18,7 +18,7 @@ public class FinTour extends Etat{
         Joueur j = listeJoueurs.get(0);
         listeJoueurs.remove(0);
         listeJoueurs.add(j);
-        super.setListeJoueurs(listeJoueurs);
+        //super.setListeJoueurs(listeJoueurs);
     }
 
     @Override

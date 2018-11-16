@@ -37,7 +37,7 @@ public class LancerDesJoueur extends Etat {
             de2=toto.nextInt(6)+1;
             int score = de1+de2;
             j.setResDes1(de1);
-            j.setResDes2(de1);
+            j.setResDes2(de2);
             j.setResLanceDes(score);
             System.out.println("    score joueur : "+score);
         }else{

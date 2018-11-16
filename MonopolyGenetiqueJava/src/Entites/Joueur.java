@@ -57,8 +57,8 @@ public class Joueur {
         this.resDes2 = resDes2;
     }
 
-    public void setResLanceDes(int resLanceDes) {
-        this.resLanceDes = resLanceDes;
+    public void setResLanceDes(int aresLanceDes) {
+        this.resLanceDes = aresLanceDes;
     }
 
     public void avancer() {
