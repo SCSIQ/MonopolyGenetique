@@ -26,10 +26,10 @@ public class Solo extends Parent {
 
 ////////TEXTE
 
-        Text t_titre = new Text(200,30,"NOUVELLE PARTIE SOLO");
-        Text t_adv = new Text(76, 80, "Choisissez le nombre d'adversaires : ");
-        Text t_couleur = new Text(64, 140, "Choisissez votre couleur : ");
-        Text t_tours = new Text(74, 200, "Choisissez le nombre de  tours : ");
+        Text t_titre = new Text(250,40,"NOUVELLE PARTIE SOLO");
+        Text t_adv = new Text(76, 120, "Choisissez le nombre d'adversaires : ");
+        Text t_couleur = new Text(64, 180, "Choisissez votre couleur : ");
+        Text t_tours = new Text(74, 240, "Choisissez le nombre de  tours : ");
 
             //taille
         t_titre.setScaleX(2);
@@ -65,15 +65,15 @@ public class Solo extends Parent {
         nb_tours.getSelectionModel().selectFirst();
 
         //position
-        nb_adversaires.setLayoutX(430);
-        nb_adversaires.setLayoutY(60);
+        nb_adversaires.setLayoutX(490);
+        nb_adversaires.setLayoutY(100);
 
-        nb_tours.setLayoutX(430);
-        nb_tours.setLayoutY(180);
+        nb_tours.setLayoutX(490);
+        nb_tours.setLayoutY(220);
 
         //taille
-        nb_adversaires.setPrefSize(60,10);
-        nb_tours.setPrefSize(60, 10);
+        nb_adversaires.setPrefSize(100,20);
+        nb_tours.setPrefSize(100, 20);
 
 ////////COLORPICKER
 
@@ -86,12 +86,12 @@ public class Solo extends Parent {
         couleur.setItems(data);*/
 
             //position
-        couleur.setLayoutX(430);
-        couleur.setLayoutY(120);
+        couleur.setLayoutX(490);
+        couleur.setLayoutY(160);
 
 
             //taille
-        couleur.setPrefSize(60,25);
+        couleur.setPrefSize(100,30);
 
 ////////BOUTONS
         //création des boutons
@@ -100,14 +100,14 @@ public class Solo extends Parent {
 
         //positionnement
         menu_principal.setTranslateX(30);
-        menu_principal.setTranslateY(250);
+        menu_principal.setTranslateY(300);
 
-        commencer_partie.setTranslateX(290);
-        commencer_partie.setTranslateY(250);
+        commencer_partie.setTranslateX(340);
+        commencer_partie.setTranslateY(300);
 
         //taille
-        menu_principal.setPrefSize(200,10);
-        commencer_partie.setPrefSize(200,10);
+        menu_principal.setPrefSize(250,30);
+        commencer_partie.setPrefSize(250,30);
 
 ////////ACTION SI BOUTON MENU PRINCIPAL
         menu_principal.setOnAction(new EventHandler<ActionEvent>(){
@@ -146,8 +146,11 @@ public class Solo extends Parent {
 
 ////////BLOCAGE REDUCTION
 
-        nouvelle_fenetre.setMinWidth(530);
-        nouvelle_fenetre.setMinHeight(330);
+        nouvelle_fenetre.setMinWidth(630);
+        nouvelle_fenetre.setMinHeight(390);
+
+        nouvelle_fenetre.setMaxWidth(630);
+        nouvelle_fenetre.setMaxHeight(390);
 
 ////////ajout des éléments à la fenêtre
         this.getChildren().add(t_titre);

@@ -34,9 +34,10 @@ public class MenuJeu extends Parent {
         ImageView imageView = new ImageView(image);
 
         //TAILLE DE L'IMAGE
-        imageView.setFitWidth(200);
+        imageView.setFitWidth(300);
         imageView.setPreserveRatio(true);
 
+        imageView.setLayoutX(10);
 
 ////////BOUTONS
         Button bt_nouvelle_P = new Button("NOUVELLE PARTIE") ;
@@ -45,18 +46,18 @@ public class MenuJeu extends Parent {
 
         //POSITION
         bt_nouvelle_P.setLayoutX(25);
-        bt_nouvelle_P.setLayoutY(140);
+        bt_nouvelle_P.setLayoutY(190);
 
         bt_rependreP.setLayoutX(25);
-        bt_rependreP.setLayoutY(170);
+        bt_rependreP.setLayoutY(250);
 
         bt_menuP.setLayoutX(25);
-        bt_menuP.setLayoutY(230);
+        bt_menuP.setLayoutY(320);
 
         //TAILLE
-        bt_nouvelle_P.setPrefSize(150,10);
-        bt_rependreP.setPrefSize(150,10);
-        bt_menuP.setPrefSize(150,10);
+        bt_nouvelle_P.setPrefSize(270,30);
+        bt_rependreP.setPrefSize(270,30);
+        bt_menuP.setPrefSize(270,30);
 
 ////////ACTIONS BOUTONS
         //NOUVELLE PARTIE
@@ -128,8 +129,11 @@ public class MenuJeu extends Parent {
 
 
 ////////BLOQUAGE DE REDUCTION DE LA FENETRE
-        nouvelle_fenetre.setMinWidth(210);
-        nouvelle_fenetre.setMinHeight(330);
+        nouvelle_fenetre.setMinWidth(330);
+        nouvelle_fenetre.setMinHeight(410);
+
+        nouvelle_fenetre.setMaxWidth(330);
+        nouvelle_fenetre.setMaxHeight(410);
 
 ////////AJOUT
         this.getChildren().add(imageView);

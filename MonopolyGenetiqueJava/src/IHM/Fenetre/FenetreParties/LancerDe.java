@@ -19,18 +19,20 @@ public class LancerDe extends Parent {
 //////////////////////////////////////////////////////////////////////////TEXTE
             //récupération de la valeur des dés
 
-        System.out.println("VRAI OU FAUX "+automate.getJoueurCourant().getaLanceDes());
             Integer dé = automate.getJoueurCourant().getResLanceDes();
-            Text t_nb = new Text("Vous avez fait : \n" + dé.toString());
+            Text t_nb = new Text("Vous avez fait : " + dé.toString());
 
-            t_nb.setLayoutX(25);
-            t_nb.setLayoutY(25);
+            t_nb.setLayoutX(160);
+            t_nb.setLayoutY(70);
+
+            t_nb.setScaleX(2);
+            t_nb.setScaleY(2);
 
 //////////////////////////////////////////////////////////////////////////BOUTON
             Button bt_ok = new Button("Ok");
 
-            bt_ok.setLayoutX(25);
-            bt_ok.setLayoutY(50);
+            bt_ok.setLayoutX(130);
+            bt_ok.setLayoutY(120);
 
             bt_ok.setPrefSize(150, 10);
 
@@ -55,9 +57,17 @@ public class LancerDe extends Parent {
             }
         });
 
+/////////TAILLE MIN ET MAX DE LA FENETRE
+        fenetre_actuelle.setMinHeight(220);
+        fenetre_actuelle.setMinWidth(420);
+
+        fenetre_actuelle.setMaxHeight(220);
+        fenetre_actuelle.setMaxWidth(420);
+
  /////////////////////////////////////////////////////////////////////////AJOUT
         this.getChildren().add(t_nb);
         this.getChildren().add(bt_ok);
+
     }
 
     public void detruireCanvas(Canvas canvas)

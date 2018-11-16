@@ -16,8 +16,7 @@ public class DejaLanceDes extends Parent {
 
     public DejaLanceDes(Stage fenetre_actuelle, Canvas canvas){
 //////////////////////////////////////////////////////////////////////////TEXTE
-        fenetre_actuelle.setMinHeight(300);
-        fenetre_actuelle.setMinWidth(600);
+
         Color rouge = Color.RED;
 
         Text t_nb = new Text("VOUS AVEZ DEJA LANCE LES DES !!!" );
@@ -27,14 +26,14 @@ public class DejaLanceDes extends Parent {
         t_nb.setScaleX(2);
         t_nb.setScaleY(2);
 
-        t_nb.setLayoutX(50);
-        t_nb.setLayoutY(25);
+        t_nb.setLayoutX(105);
+        t_nb.setLayoutY(70);
 
 //////////////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("Ok");
 
-        bt_ok.setLayoutX(100);
-        bt_ok.setLayoutY(100);
+        bt_ok.setLayoutX(130);
+        bt_ok.setLayoutY(120);
 
         bt_ok.setPrefSize(150, 10);
 
@@ -56,6 +55,13 @@ public class DejaLanceDes extends Parent {
                 event.consume();
             }
         });
+
+/////////TAILLE MIN ET MAX DE LA FENETRE
+        fenetre_actuelle.setMinHeight(220);
+        fenetre_actuelle.setMinWidth(420);
+
+        fenetre_actuelle.setMaxHeight(220);
+        fenetre_actuelle.setMaxWidth(420);
 
         /////////////////////////////////////////////////////////////////////////AJOUT
         this.getChildren().add(t_nb);

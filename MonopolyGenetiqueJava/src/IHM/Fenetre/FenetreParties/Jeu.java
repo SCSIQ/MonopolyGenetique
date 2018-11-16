@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
@@ -44,7 +45,19 @@ public class Jeu extends Parent {
         caseDeGauche();
         caseDuHaut() ;
         caseDeDroite();
-        //GridPanePlateau() ;
+
+        automate.getNombreJoueur();
+        Pion p = new Pion(automate, this);
+        System.out.println(automate.getJoueurCourant().getPion());
+        // ESSAI POUR PLACER SUR LA CASE DEPART UN PION
+      /*  Pane caseDepart = listePanel.get(0) ;
+        Circle c = new Circle();
+        c.setFill(Color.CHOCOLATE);
+
+        c.setRadius(10);
+        c.setLayoutY(20);
+        c.setLayoutX(20);
+        caseDepart.getChildren().add(c);*/
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -93,6 +106,7 @@ public class Jeu extends Parent {
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
+                    p.deplacer();
 
                 }else{
                     automate.evoluer("lancerDes");
@@ -109,14 +123,18 @@ public class Jeu extends Parent {
             public void handle(ActionEvent event) {
 
                 automate.evoluer("tourSuivant");
-
+                fenetreTour(nouvelle_fenetre, automate);
+                automate.getJoueurCourant().setaLanceDes(false);
             }
         });
 
-////////BLOCAGE REDUCTION
+////////BLOCAGE REDUCTION ET AUGMENTATION
 
         nouvelle_fenetre.setMinWidth(1290);
         nouvelle_fenetre.setMinHeight(750);
+
+        nouvelle_fenetre.setMaxWidth(1290);
+        nouvelle_fenetre.setMaxHeight(750);
 
         // AJOUT A L'ECRAN
 
@@ -133,32 +151,14 @@ public class Jeu extends Parent {
         this.getChildren().add(bt_tourSuivant);
 
     }
+
+    public ArrayList getListePanel(){
+        return listePanel;
+    }
+
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
-
-    public void GridPanePlateau()
-    {
-        GridPane plateau= new GridPane() ;
-        plateau.setPadding(new Insets(20));
-        plateau.setLayoutX(604);
-        plateau.setLayoutY(604);
-        plateau.setHgap(25);
-        plateau.setVgap(15);
-
-        //ICI PROBLEME CAR PAS DE COORDONNEES NEGATIVES !
-        int i=1;
-        plateau.add(listePanel.get(0),0,0);
-        //plateau.add(listePanel.get(1),-1,0);
-
-      /*    for(Pane p : listePanel){
-                    plateau.add(p,i-1,0);
-            }*/
-
-        plateau.setGridLinesVisible(true);
-
-        this.getChildren().add(plateau);
-    }
 
     public void RectangleInfoJoueur(Rectangle rect_infosJoueur, Color couleur){
 
@@ -178,6 +178,7 @@ public class Jeu extends Parent {
         Label argent = new Label("ARGENT :");
         Label enPrison = new Label("EN PRISON :");
         Label tour = new Label("TOUR :");
+
 
         //NOM
         nom.setLayoutX(90);
@@ -391,10 +392,11 @@ public class Jeu extends Parent {
 
     public void fenetreNoire()
     {
+
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.BLACK);
         canvas.setOpacity(0.5);
-        gc.fillRect(0,0, 1275,1275);
+        gc.fillRect(0,0, 1600,1600);
         this.getChildren().add(canvas);
     }
 
@@ -404,7 +406,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_menu = new Stage();
         MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, fenetre_actuelle, couleur, canvas);
 
-        Scene nouvelle_scene = new Scene(fenetre_menu,200,270);
+        Scene nouvelle_scene = new Scene(fenetre_menu,320,370);
 
         nouvelle_fenetre_menu.setScene(nouvelle_scene);
 
@@ -413,10 +415,29 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
 
         //POSITION DE LA FENETRE
-        nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
-        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);
+       /* nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
+        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);*/
 
         nouvelle_fenetre_menu.show();
+    }
+
+    public void fenetreTour(Stage fenetre_actuelle, Automate automate)
+    {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_des = new Stage();
+        tourSuivant fenetreDe = new tourSuivant(nouvelle_fenetre_des, canvas, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
+
+        nouvelle_fenetre_des.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_des.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_des.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_des.show();
     }
 
     public void fenetreDes(Stage fenetre_actuelle, Automate automate)
@@ -426,7 +447,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_des = new Stage();
         LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,200,270);
+        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 
         nouvelle_fenetre_des.setScene(nouvelle_scene);
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
@@ -434,8 +455,6 @@ public class Jeu extends Parent {
         nouvelle_fenetre_des.initOwner(fenetre_actuelle);
 
         //POSITION DE LA FENETRE
-        nouvelle_fenetre_des.setX(fenetre_actuelle.getX() + 610);
-        nouvelle_fenetre_des.setY(fenetre_actuelle.getY() + 200);
         nouvelle_fenetre_des.show();
     }
 
@@ -446,7 +465,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_erreur = new Stage();
         DejaLanceDes fenetreDe = new DejaLanceDes(nouvelle_fenetre_erreur, canvas);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,300,270);
+        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 
         nouvelle_fenetre_erreur.setScene(nouvelle_scene);
         nouvelle_fenetre_erreur.show();
