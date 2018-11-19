@@ -50,7 +50,7 @@ public class Jeu extends Parent {
         caseDuHaut() ;
         caseDeDroite();
 
-        automate.getNombreJoueur(); 
+        automate.getNombreJoueur();
         Pion p = new Pion(automate, this);
         System.out.println(automate.getJoueurCourant().getPion());
         // ESSAI POUR PLACER SUR LA CASE DEPART UN PION
