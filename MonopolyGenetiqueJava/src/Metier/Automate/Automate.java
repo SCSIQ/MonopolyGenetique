@@ -2,6 +2,7 @@ package Metier.Automate;
 
 import Entites.Joueur;
 import Metier.Automate.Des.LancerDesInitial;
+import Metier.Plateau.Cases;
 
 import java.util.ArrayList;
 

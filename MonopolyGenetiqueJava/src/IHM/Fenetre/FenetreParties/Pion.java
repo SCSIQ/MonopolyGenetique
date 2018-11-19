@@ -42,10 +42,21 @@ public class Pion extends Parent {
         }
     }
 
-    public void deplacer()
+    public void entrerDansCase()
     {
+
+    }
+
+    public void sortirDeCase()
+    {
+
+    }
+
+    public void deplacer()
+    { // le pion doit se déplacer donc faire une fonction sortir et entrer pour les cases
         Pane p = (Pane) jeu.getListePanel().get(automate.getJoueurCourant().getResLanceDes());
         //automate.getJoueurCourant();
-        p.getChildren().add(pions.get(1));
+        //enlever le pion sur la case de départ
+        //p.getChildren().add(pions.get(1));
     }
 }

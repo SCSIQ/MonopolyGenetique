@@ -24,7 +24,7 @@ public class LancerDesInitial extends Etat {
     }
 
     @Override
-    public void agir(String event) {
+    public void agir(String event) {// Supprimer listeTriee
 
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();
 
