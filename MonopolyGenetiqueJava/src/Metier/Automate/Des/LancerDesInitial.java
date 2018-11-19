@@ -24,16 +24,13 @@ public class LancerDesInitial extends Etat {
     }
 
     @Override
-    public void agir(String event) {// Supprimer listeTriee
+    public void agir(String event) {
 
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();
 
-        int sizeListe=super.getListeJoueurs().size();
-        ArrayList<Joueur> listeEtat = super.getListeJoueurs(); //récupére la liste des joueurs
-        ArrayList<Joueur> listeTriee = new ArrayList<>();
         ArrayList<Integer> listeNb = new ArrayList<>();
 
-        for(int i=0 ; i<sizeListe ; i++) {
+        for(int i=0 ; i<super.getListeJoueurs().size() ; i++) {
 
             Joueur joueurCourant = super.getListeJoueurs().get(i); //récupère le joueur courant
             Random toto = new Random();
@@ -45,6 +42,8 @@ public class LancerDesInitial extends Etat {
             joueurhashMap.put(joueurCourant, score); //enregistre le score associé au joueur
         }
 
+        super.getListeJoueurs().clear();
+
         Collections.sort(listeNb); //trie la liste de nombres par ordre décroissant
         Collections.reverse(listeNb); //puis la retourne par ordre croissant
 
@@ -52,10 +51,9 @@ public class LancerDesInitial extends Etat {
 
             //récupère le joueur associé à la valeur triée
             Joueur joueurTemp = (Joueur) getKeyFromValue(joueurhashMap,listeNb.get(i));
-            listeTriee.add(joueurTemp); //puis l'ajoute à la liste à retourner
+            joueurTemp.setNom("Joueur"+(i+1));
+            super.getListeJoueurs().add(joueurTemp); //puis l'ajoute à la liste à retourner
         }
-
-        super.setListeJoueurs(listeTriee); //update la liste des joueurs (ordonée)
 
     }
 
