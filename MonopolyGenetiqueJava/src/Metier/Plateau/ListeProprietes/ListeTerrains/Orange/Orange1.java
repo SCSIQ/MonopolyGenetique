@@ -6,6 +6,7 @@ public class Orange1 extends Terrain {
 
     public Orange1(int position) {
         super(position);
+        super.setPrix(1800);
     }
 
     @Override
