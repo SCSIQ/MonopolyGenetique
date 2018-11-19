@@ -19,7 +19,7 @@ public class Joueur {
     private int resLanceDes = 0;
     private ArrayList<Cases> listeCases;
 
-    public Joueur(ArrayList<Cases> listeCases, CouleurPion couleur) {
+    public Joueur(ArrayList<Cases> listeCases, Color couleur) {
         this.solde = 500; //a revoir car valeur fausse
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
@@ -43,11 +43,11 @@ public class Joueur {
 
     public int getResDes1() {
         return resDes1;
-    }
+    } //renvoie la valeur du premier dés
 
     public int getResDes2() {
         return resDes2;
-    }
+    } //renvoie la valeur du deuxième dés
 
     public int getResLanceDes() {
         return resLanceDes;
@@ -82,9 +82,10 @@ public class Joueur {
         return "    position du joueur : "+this.pion.toString();
     }
 
+
     public String getNom() {
         return nom;
-    }
+    } // renvoie le nom du joueur
 
     public void setNom(String nom) {
         this.nom = nom;
@@ -92,11 +93,11 @@ public class Joueur {
 
     public Color getCouleur() {
         return couleur;
-    }
+    } //renvoie la couleur du joueur
 
     public int getSolde() {
         return solde;
-    }
+    } // renvoie l'argent que le joueur posséde
 
     public void setCouleur(Color couleur) {
         this.couleur = couleur;
