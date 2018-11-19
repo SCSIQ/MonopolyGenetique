@@ -41,4 +41,8 @@ public class Automate {
     public int getNombreJoueur(){
         return listeJoueurs.size() ;
     }
+
+    public ArrayList<Joueur> getListeJoueurs() {
+        return listeJoueurs;
+    }
 }
