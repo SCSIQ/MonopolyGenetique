@@ -8,15 +8,15 @@ import java.util.ArrayList;
 
 public class Joueur {
 
-    private String nom;
-    private Color couleur;
-    private int solde ;
+    private String nom; // nom du joueur
+    private Color couleur; //couleur du joueur
+    private int solde ; // montant de l'argent possédé
     private Pion pion ;
-    private boolean aLanceDes = false;
+    private boolean aLanceDes = false; // initialise le boolean pour savoir si le joueur a déjà lancer les dés
     private ArrayList<Proprietes> listePropietes;
-    private int resDes1 = 0;
-    private int resDes2 = 0;
-    private int resLanceDes = 0;
+    private int resDes1 = 0; // initialise à 0 le dés 1
+    private int resDes2 = 0; // initialise à 0 le dés 2
+    private int resLanceDes = 0; // initialise à 0 l'addition des deux dés
     private ArrayList<Cases> listeCases;
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
@@ -27,19 +27,19 @@ public class Joueur {
 
     public ArrayList<Proprietes> getListePropietes() {
         return listePropietes;
-    }
+    } // renvoie la liste des propriétés que le joueur posséde
 
     public void setListePropietes(ArrayList<Proprietes> listePropietes) {
         this.listePropietes = listePropietes;
-    }
+    } // modifie la liste des propriétés que le joueur posséde
 
     public boolean getaLanceDes() {
         return aLanceDes;
-    }
+    } // fonction qui dit si le joueur a déjà lancer les dés avec vrai ou faux
 
     public void setaLanceDes(boolean aLanceDes) {
         this.aLanceDes = aLanceDes;
-    }
+    } // modifie la valeur du boolean
 
     public int getResDes1() {
         return resDes1;
@@ -51,23 +51,23 @@ public class Joueur {
 
     public int getResLanceDes() {
         return resLanceDes;
-    }
+    } // renvoie l'addition des deux dés
 
     public void setResDes1(int resDes1) {
         this.resDes1 = resDes1;
-    }
+    } //modifie la valeur du premier dés
 
     public void setResDes2(int resDes2) {
         this.resDes2 = resDes2;
-    }
+    } //modifie la valeur du deuxième dés
 
     public void setResLanceDes(int aresLanceDes) {
         this.resLanceDes = aresLanceDes;
-    }
+    } // modifie le résultat de l'addition des deux dés
 
     public void avancer() {
         pion.avancer(this.resLanceDes);
-    }
+    } // procédure qui fait avancer le pion sur le plateau
 
     public ArrayList<Cases> getListeCases() {
         return listeCases;
@@ -75,7 +75,7 @@ public class Joueur {
 
     public Pion getPion() {
         return pion;
-    }
+    } //retourne le pion
 
     @Override
     public String toString() {
@@ -89,7 +89,7 @@ public class Joueur {
 
     public void setNom(String nom) {
         this.nom = nom;
-    }
+    } //modifie le nom du joueur
 
     public Color getCouleur() {
         return couleur;
@@ -101,10 +101,10 @@ public class Joueur {
 
     public void setCouleur(Color couleur) {
         this.couleur = couleur;
-    }
+    } //modifie la valeur de la couleur
 
     public void setSolde(int solde) {
         this.solde = solde;
-    }
+    }//modifie le montant de l'argent que le joueur posséde
 
 }
