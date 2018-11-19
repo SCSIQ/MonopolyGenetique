@@ -39,6 +39,10 @@ public class Jeu extends Parent {
 
         this.automate = automate;
 
+        automate.getJoueurCourant().getPion().getPosition().getPosition();
+
+        automate.getJoueurCourant().getListeCases();
+
         //plateauJeu();
         plateauJeu();
         caseDuBas() ;
