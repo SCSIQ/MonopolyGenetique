@@ -137,13 +137,13 @@ public class Solo extends Parent {
                 automate.getJoueurCourant().setNom("1");
                 automate.getJoueurCourant().setCouleur(couleur.getValue());
 
+                //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenetre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue(),automate);
                 Scene nouvelle_scene = new Scene(fenetre_jeu,1275,710);
-
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
-                //on montre la nouvelle fenêtre
                 nouvelle_fenetre_plateau.show();
+
                 nouvelle_fenetre.close();
 
             }
