@@ -130,9 +130,9 @@ public class IaVSia extends Parent {
                 System.out.println("\n    DEBUT DE LA PARTIE\n");
                 System.out.println("Nombre d'IA : "+Integer.valueOf((String) nb_adversaires.getValue()));
                 InitialisationPartieIA initialisationPartieIA = new InitialisationPartieIA();
-                ArrayList<CouleurPion> listeCouleurs = new ArrayList<>();
+                ArrayList<Color> listeCouleurs = new ArrayList<>();
                 for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeCouleurs.add(CouleurPion.rouge);
+                    listeCouleurs.add(Color.RED);
                 }
                 Automate automate = initialisationPartieIA.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
