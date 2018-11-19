@@ -43,7 +43,7 @@ public class Pion {
         return joueur;
     }
 
-    public Cases getPosition() {
+    public Cases getCase() {
         return position;
     }
 }
