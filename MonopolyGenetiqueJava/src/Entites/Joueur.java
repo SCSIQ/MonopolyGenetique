@@ -2,10 +2,14 @@ package Entites;
 
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.Proprietes;
+import javafx.scene.paint.Color;
+
 import java.util.ArrayList;
 
 public class Joueur {
 
+    private String nom;
+    private Color couleur;
     private int solde ;
     private Pion pion ;
     private boolean aLanceDes = false;
@@ -77,4 +81,29 @@ public class Joueur {
     public String toString() {
         return "    position du joueur : "+this.pion.toString();
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public Color getCouleur() {
+        return couleur;
+    }
+
+    public int getSolde() {
+        return solde;
+    }
+
+    public void setCouleur(Color couleur) {
+        this.couleur = couleur;
+    }
+
+    public void setSolde(int solde) {
+        this.solde = solde;
+    }
+
 }

@@ -38,4 +38,12 @@ public class Pion {
     public CouleurPion getCouleurPion(){
         return couleur ;
     }
+
+    public Joueur getJoueur() {
+        return joueur;
+    }
+
+    public Cases getPosition() {
+        return position;
+    }
 }
