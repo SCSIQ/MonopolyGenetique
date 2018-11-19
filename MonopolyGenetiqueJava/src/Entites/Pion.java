@@ -6,10 +6,10 @@ import javafx.scene.paint.Color;
 public class Pion {
 
     private Joueur joueur;
-    private CouleurPion couleur ;
+    private Color couleur ;
     private Cases position ;
 
-    public Pion(Joueur joueur, Cases position, CouleurPion couleur) {
+    public Pion(Joueur joueur, Cases position, Color couleur) {
         this.joueur = joueur;
         this.position = position;
         this.couleur = couleur;
@@ -35,7 +35,7 @@ public class Pion {
         return position.toString();
     }
 
-    public CouleurPion getCouleurPion(){
+    public Color getCouleurPion(){
         return couleur ;
     }
 
