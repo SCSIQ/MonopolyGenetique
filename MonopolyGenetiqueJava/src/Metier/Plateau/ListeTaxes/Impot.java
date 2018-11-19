@@ -4,13 +4,8 @@ import Metier.Plateau.ListeTaxes.Taxes;
 
 public class Impot extends Taxes {
 
-    public Impot() {
-        super(4);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
+    public Impot(int position) {
+        super(position);
     }
 
     @Override
