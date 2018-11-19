@@ -254,6 +254,24 @@ public class Jeu extends Parent {
         //COULEUR ET CONTOUR
         rect_adversaire.setFill(Color.TRANSPARENT);
         rect_adversaire.setStroke(Color.BLACK);
+
+        //Ajout adversaire 1 POUR SOLO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Label adv1 = new Label("JOUEUR "+automate.getListeJoueurs().get(1).getNom());
+                adv1.setLayoutX(700);
+                adv1.setLayoutY(150);
+                this.getChildren().add(adv1);
+
+                //ajout rectangle couleur
+                Rectangle r_adv1_couleur = new Rectangle();
+                r_adv1_couleur.setHeight(50);
+                r_adv1_couleur.setWidth(50);
+                r_adv1_couleur.setLayoutX(640);
+                r_adv1_couleur.setLayoutY(130);
+                r_adv1_couleur.setStroke(Color.BLACK);
+                r_adv1_couleur.setStrokeWidth(1);
+                r_adv1_couleur.setFill(automate.getListeJoueurs().get(1).getCouleur());
+                this.getChildren().add(r_adv1_couleur);
+
     }
 
     public void RectanglePossession(Rectangle rect_possession){

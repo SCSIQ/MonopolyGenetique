@@ -27,7 +27,7 @@ public class Pion extends Parent {
              pions.add(i, new Circle());
 
             //Comment on fait avec la couleur ?
-            pions.get(i).setFill(automate.getJoueurCourant().getCouleur());
+            pions.get(i).setFill(automate.getListeJoueurs().get(i).getCouleur());
 
             Pane caseDepart = (Pane) jeu.getListePanel().get(0);
 

@@ -132,6 +132,10 @@ public class Solo extends Parent {
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
 
+                //TEST POUR INIT JOUEUR 2
+                automate.getListeJoueurs().get(1).setNom("2");
+                automate.getListeJoueurs().get(1).setCouleur(couleurAdversaire(1));
+
 
                 //Ajout de la couleur et du nom
                 automate.getJoueurCourant().setNom("1");
@@ -175,7 +179,9 @@ public class Solo extends Parent {
 
         Color couleur;
         switch (i){
-            case 1 : couleur = Color.RED;
+            case 0 : couleur = Color.BLANCHEDALMOND;
+                    break;
+            case 1 : couleur = Color.BLACK;
                     break;
             case 2 : couleur = Color.GREEN;
                     break;
@@ -185,7 +191,7 @@ public class Solo extends Parent {
                     break;
             case 5 : couleur = Color.YELLOW;
                     break;
-            default: couleur = Color.BLACK;
+            default: couleur = Color.AZURE;
         }
         return couleur;
     }
