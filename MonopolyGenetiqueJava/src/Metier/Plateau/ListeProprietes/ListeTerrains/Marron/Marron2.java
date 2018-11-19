@@ -4,14 +4,9 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 
 public class Marron2 extends Terrain {
 
-    public Marron2() {
-        super(3);
+    public Marron2(int position) {
+        super(position);
         super.setPrix(800);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
     }
 
     @Override

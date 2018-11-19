@@ -2,13 +2,8 @@ package Metier.Plateau;
 
 public class Prison extends Cases  {
 
-    public Prison() {
-        super(10);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
+    public Prison(int position) {
+        super(position);
     }
 
     @Override

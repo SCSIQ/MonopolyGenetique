@@ -2,13 +2,8 @@ package Metier.Plateau.ListeProprietes.ListeServicesPublics;
 
 public class Robinet extends ServicePublic {
 
-    public Robinet() {
-        super(12);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
+    public Robinet(int position) {
+        super(position);
     }
 
     @Override

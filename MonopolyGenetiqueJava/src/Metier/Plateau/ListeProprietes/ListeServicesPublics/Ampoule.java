@@ -2,13 +2,8 @@ package Metier.Plateau.ListeProprietes.ListeServicesPublics;
 
 public class Ampoule extends ServicePublic {
 
-    public Ampoule() {
-        super(28);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
+    public Ampoule(int position) {
+        super(position);
     }
 
     @Override

@@ -4,14 +4,9 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 
 public class Rose1 extends Terrain {
 
-    public Rose1() {
-        super(11);
+    public Rose1(int position) {
+        super(position);
         super.setPrix(1400);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
     }
 
     @Override

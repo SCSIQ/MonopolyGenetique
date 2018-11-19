@@ -4,13 +4,8 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 
 public class Orange1 extends Terrain {
 
-    public Orange1() {
-        super(16);
-    }
-
-    @Override
-    public int getPosition() {
-        return super.position;
+    public Orange1(int position) {
+        super(position);
     }
 
     @Override
