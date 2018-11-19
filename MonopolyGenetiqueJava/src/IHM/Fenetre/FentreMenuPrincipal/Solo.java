@@ -27,7 +27,7 @@ public class Solo extends Parent {
 ////////TEXTE
 
         Text t_titre = new Text(250,40,"NOUVELLE PARTIE SOLO");
-        Text t_adv = new Text(76, 120, "Choisissez le nombre d'adversaires : ");
+        Text t_adv = new Text(76, 120, "Choisissez le nombre de joueurs : ");
         Text t_couleur = new Text(64, 180, "Choisissez votre couleur : ");
         Text t_tours = new Text(74, 240, "Choisissez le nombre de  tours : ");
 
@@ -127,10 +127,15 @@ public class Solo extends Parent {
                 InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
                 ArrayList<Color> listeCouleurs = new ArrayList<>();
                 for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeCouleurs.add(Color.RED);
+                    listeCouleurs.add(couleurAdversaire(i));
                 }
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
+
+
+                //Ajout de la couleur et du nom
+                automate.getJoueurCourant().setNom("1");
+                automate.getJoueurCourant().setCouleur(couleur.getValue());
 
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenetre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue(),automate);
@@ -163,5 +168,25 @@ public class Solo extends Parent {
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
 
+    }
+
+    public Color couleurAdversaire(int i)
+    {
+
+        Color couleur;
+        switch (i){
+            case 1 : couleur = Color.RED;
+                    break;
+            case 2 : couleur = Color.GREEN;
+                    break;
+            case 3 : couleur = Color.WHITE;
+                    break;
+            case 4 : couleur = Color.BLUE;
+                    break;
+            case 5 : couleur = Color.YELLOW;
+                    break;
+            default: couleur = Color.BLACK;
+        }
+        return couleur;
     }
 }
