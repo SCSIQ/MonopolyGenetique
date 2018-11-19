@@ -21,6 +21,7 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose3;
 import Metier.Plateau.ListeTaxes.Impot;
 import Metier.Plateau.ParcGratuit;
 import Metier.Plateau.Prison;
+import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public abstract class InitialisationPartie {
     protected ArrayList<Cases> listeCases = new ArrayList<>();
     protected ArrayList<Joueur> listeJoueurs = new ArrayList<>();
 
-    public Automate automateInitialisation(int nombreJoueurs, ArrayList<CouleurPion> listeCouleurs){
+    public Automate automateInitialisation(int nombreJoueurs, ArrayList<Color> listeCouleurs){
         creationListeCases();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);
         Automate automate = new Automate(this.listeJoueurs);
@@ -57,7 +58,7 @@ public abstract class InitialisationPartie {
         this.listeCases.add(new ParcGratuit()); //20
     }
 
-    private void creationListeJoueurs(int nombre, ArrayList<CouleurPion> listeCouleurs){
+    private void creationListeJoueurs(int nombre, ArrayList<Color> listeCouleurs){
         for(int i=0 ; i<nombre ; i++){
             listeJoueurs.add(new Joueur(this.listeCases, listeCouleurs.get(i)));
         }
