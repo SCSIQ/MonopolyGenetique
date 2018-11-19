@@ -11,7 +11,9 @@ public abstract class  Cases {
         this.position = position;
     }
 
-    public abstract int getPosition();
+    public int getPosition(){
+        return this.position;
+    }
 
     public abstract String toString();
 }

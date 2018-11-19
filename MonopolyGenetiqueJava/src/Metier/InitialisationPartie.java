@@ -15,6 +15,9 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.BleuCiel.BleuCiel2;
 import Metier.Plateau.ListeProprietes.ListeTerrains.BleuCiel.BleuCiel3;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Marron.Marron1;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Marron.Marron2;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Orange.Orange1;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Orange.Orange2;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Orange.Orange3;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose1;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose2;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Rose.Rose3;
@@ -54,8 +57,13 @@ public abstract class InitialisationPartie {
         this.listeCases.add(new Rose2()); //13
         this.listeCases.add(new Rose3()); //14
         this.listeCases.add(new Gare2()); //15
+        this.listeCases.add(new Orange1()); //16
+        //...
+        this.listeCases.add(new Orange2()); //18
+        this.listeCases.add(new Orange3()); //19
         //...
         this.listeCases.add(new ParcGratuit()); //20
+        //...
     }
 
     private void creationListeJoueurs(int nombre, ArrayList<Color> listeCouleurs){
