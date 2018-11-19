@@ -174,11 +174,11 @@ public class Jeu extends Parent {
         r_couleur.setLayoutY(35);
         r_couleur.setStroke(Color.BLACK);
         r_couleur.setStrokeWidth(1);
-        r_couleur.setFill(Paint.valueOf(couleur.toString()));
+        r_couleur.setFill(automate.getJoueurCourant().getCouleur());
         this.getChildren().add(r_couleur);
 
         //ajout labels
-        Label nom = new Label("JOUEUR ");
+        Label nom = new Label("JOUEUR "+ automate.getJoueurCourant().getNom());
         Label argent = new Label("ARGENT :");
         Label enPrison = new Label("EN PRISON :");
         Label tour = new Label("TOUR :");

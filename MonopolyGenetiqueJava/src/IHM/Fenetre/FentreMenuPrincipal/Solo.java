@@ -27,7 +27,7 @@ public class Solo extends Parent {
 ////////TEXTE
 
         Text t_titre = new Text(250,40,"NOUVELLE PARTIE SOLO");
-        Text t_adv = new Text(76, 120, "Choisissez le nombre d'adversaires : ");
+        Text t_adv = new Text(76, 120, "Choisissez le nombre de joueurs total : ");
         Text t_couleur = new Text(64, 180, "Choisissez votre couleur : ");
         Text t_tours = new Text(74, 240, "Choisissez le nombre de  tours : ");
 
@@ -48,6 +48,7 @@ public class Solo extends Parent {
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
+
                 "2",
                 "3",
                 "4",
@@ -131,6 +132,10 @@ public class Solo extends Parent {
                 }
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
+
+                //ajout de la couleur et du nom au joueur courant
+                automate.getJoueurCourant().setCouleur(couleur.getValue());
+                automate.getJoueurCourant().setNom("1");
 
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenetre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue(),automate);

@@ -41,6 +41,7 @@ public class HumainVShumain extends Parent {
 
         ComboBox nb_adversaires = new ComboBox();
         nb_adversaires.getItems().addAll(
+
                 "2",
                 "3",
                 "4",
