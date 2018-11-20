@@ -20,8 +20,6 @@ public class tourSuivant extends Parent {
     {
 
 
-        //SI LES DES ONT ETE LANCER OU NON
-        if(automate.getJoueurCourant().getaLanceDes()==true){
             ///////////////////////////////////////////////////////////////////TEXTE
             //automate.getJoueurCourant().;
             Text t_lancerDeVrai = new Text("Tour suivant : numTour");
@@ -35,23 +33,6 @@ public class tourSuivant extends Parent {
             //AJOUT
             this.getChildren().add(t_lancerDeVrai);
 
-        }else {
-
-        //////////////////////////////////////////////////////////////////////////TEXTE
-            Text t_lancerDeFalse = new Text("Vous devez lancer les dés.");
-
-            t_lancerDeFalse.setLayoutX(120);
-            t_lancerDeFalse.setLayoutY(70);
-
-            t_lancerDeFalse.setScaleX(2);
-            t_lancerDeFalse.setScaleY(2);
-            t_lancerDeFalse.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-
-            //AJOUT
-            this.getChildren().add(t_lancerDeFalse);
-
-
-        }
 //////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("OK");
 
