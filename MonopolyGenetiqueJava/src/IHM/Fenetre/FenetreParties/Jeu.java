@@ -108,6 +108,7 @@ public class Jeu extends Parent {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
                     p.deplacer();
+                    automate.getJoueurCourant().setaLanceDes(true);
 
                 }else{
                     automate.evoluer("lancerDes");
@@ -122,10 +123,9 @@ public class Jeu extends Parent {
         bt_tourSuivant.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-
+                System.out.println("Lancer les dés : "+automate.getJoueurCourant().getaLanceDes());
                 automate.evoluer("tourSuivant");
                 fenetreTour(nouvelle_fenetre, automate);
-                automate.getJoueurCourant().setaLanceDes(false);
             }
         });
 
