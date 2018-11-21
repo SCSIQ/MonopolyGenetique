@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
 import IHM.Fenetre.FenetreParties.Images.DejaLanceDes;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
@@ -76,8 +77,13 @@ public class Jeu extends Parent {
         Button bt_tourSuivant = new Button("Tour suivant") ;
 
 
+        //APPEL INFOS JOUEUR
+        ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
+        this.getChildren().add(zoneJoueur);
+
+
         //APPEL DES FONCTIONS POUR TAILLES, COULEURS ET POSITION
-        RectangleInfoJoueur(rect_infosJoueur,couleur);
+        //RectangleInfoJoueur(rect_infosJoueur,couleur);
         RectanglePlateau(rect_plateau);
         RectangleAdversaire(rect_adversaire);
         RectanglePossession(rect_possession);
@@ -161,7 +167,7 @@ public class Jeu extends Parent {
     //*******************************AFFICHAGE DES RECTANGLES /BOUTONS****************************//
 
 
-    public void RectangleInfoJoueur(Rectangle rect_infosJoueur, Color couleur){
+   /* public void RectangleInfoJoueur(Rectangle rect_infosJoueur, Color couleur){
 
         //ajout rectangle couleur
         Rectangle r_couleur = new Rectangle();
@@ -215,7 +221,7 @@ public class Jeu extends Parent {
         rect_infosJoueur.setFill(Color.TRANSPARENT);
         rect_infosJoueur.setStroke(Color.BLACK);
     }
-
+*/
 
     public void RectanglePlateau(Rectangle rect_plateau){
 
