@@ -1,9 +1,9 @@
-package Metier.Automate.Des;
+package Metier.Automate.Etats.Des;
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Choix.ChoixPossibles;
-import Metier.Automate.Deplacement;
-import Metier.Automate.Etat;
+import Metier.Automate.Etats.Choix.ChoixPossibles;
+import Metier.Automate.Etats.Deplacement;
+import Metier.Automate.Etats.Etat;
 
 import java.util.ArrayList;
 import java.util.Random;

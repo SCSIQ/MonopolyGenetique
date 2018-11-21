@@ -1,4 +1,4 @@
-package Metier.Automate;
+package Metier.Automate.Etats;
 
 public class StatsPartie {
 

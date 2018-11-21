@@ -1,8 +1,8 @@
-package Metier.Automate;
+package Metier.Automate.Etats;
 
 import Entites.Joueur;
-import Entites.Pion;
-import Metier.Automate.Choix.ChoixPossibles;
+import Metier.Automate.Automate;
+import Metier.Automate.Etats.Choix.ChoixPossibles;
 
 import java.util.ArrayList;
 

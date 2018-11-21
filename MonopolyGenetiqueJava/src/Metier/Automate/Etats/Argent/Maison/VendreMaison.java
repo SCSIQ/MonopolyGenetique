@@ -1,4 +1,4 @@
-package Metier.Automate.Argent.Maison;
+package Metier.Automate.Etats.Argent.Maison;
 
 public class VendreMaison {
 

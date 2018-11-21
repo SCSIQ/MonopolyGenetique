@@ -1,10 +1,10 @@
-package Metier.Automate.Choix;
+package Metier.Automate.Etats.Choix;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Des.LancerDesJoueur;
-import Metier.Automate.Etat;
-import Metier.Automate.FinTour;
+import Metier.Automate.Etats.Des.LancerDesJoueur;
+import Metier.Automate.Etats.Etat;
+import Metier.Automate.Etats.FinTour;
 
 import java.util.ArrayList;
 

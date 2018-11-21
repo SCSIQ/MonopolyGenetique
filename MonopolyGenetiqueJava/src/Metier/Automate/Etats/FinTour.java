@@ -1,6 +1,7 @@
-package Metier.Automate;
+package Metier.Automate.Etats;
 
 import Entites.Joueur;
+import Metier.Automate.Automate;
 
 import java.util.ArrayList;
 

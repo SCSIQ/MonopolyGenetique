@@ -1,4 +1,4 @@
-package Metier.Automate.Argent;
+package Metier.Automate.Etats.Argent;
 
 import Entites.Joueur;
 

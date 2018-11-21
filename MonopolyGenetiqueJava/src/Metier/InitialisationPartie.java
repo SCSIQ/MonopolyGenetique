@@ -43,6 +43,12 @@ public abstract class InitialisationPartie {
     protected ArrayList<Cases> listeCases = new ArrayList<>();
     protected ArrayList<Joueur> listeJoueurs = new ArrayList<>();
 
+    //seule méthode pouvant être appellée depuis l'extérieur
+    //cette méthode permet de créer et d'initialiser l'automate
+    //puis le retourne pour qu'il soit utilisé dans l'IHM
+    //cette méthode à besoin en entrée du nombre de joueurs, ainsi
+    //que de la liste des couleurs des joueurs, dans l'ordre dans
+    //lequel ils ont été rentrés
     public Automate automateInitialisation(int nombreJoueurs, ArrayList<Color> listeCouleurs){
         creationListeCases();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);

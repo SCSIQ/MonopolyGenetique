@@ -1,6 +1,7 @@
-package Metier.Automate;
+package Metier.Automate.Etats;
 
 import Entites.Joueur;
+import Metier.Automate.Automate;
 
 import java.util.ArrayList;
 
@@ -14,7 +15,12 @@ public abstract class Etat {
         this.automate = automate;
     }
 
+    //cette méthode permet de demander à l'Etat de faire ce pour quoi il existe,
+    //elle est appellée uniquement par l'automate
     public abstract void agir(String event);
+
+    //cette méthode permet de demander la transition dans l'Etat suivant
+    //elle est appellée uniquement par l'automate
     public abstract Etat transition(String event);
 
     public ArrayList<Joueur> getListeJoueurs() {

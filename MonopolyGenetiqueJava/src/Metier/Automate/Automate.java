@@ -1,8 +1,8 @@
 package Metier.Automate;
 
 import Entites.Joueur;
-import Metier.Automate.Des.LancerDesInitial;
-import Metier.Plateau.Cases;
+import Metier.Automate.Etats.Des.LancerDesInitial;
+import Metier.Automate.Etats.Etat;
 
 import java.util.ArrayList;
 
@@ -13,12 +13,16 @@ public class Automate {
     private boolean automatedEvolution = false;
 
     public Automate(ArrayList<Joueur> listeJoueurs){
-        this.listeJoueurs = listeJoueurs;
-        this.etatCourant = new LancerDesInitial(this, listeJoueurs);
+        this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
+        this.etatCourant = new LancerDesInitial(this, listeJoueurs); //lancement Etat initial
         System.out.println("Etat actuel : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
     }
 
+    //cette méthode est appellée dès que l'on veut faire évoluer l'automate, à savoir,
+    //faire quelque chose dans le jeu comme cliquer sur un bouton
+    //cette méthode est appellée soit depuis l'IHM pour une évolutions lors d'un event,
+    //soit par un Etat pour une évolution automatique
     public void evoluer(String event){
         this.etatCourant.agir(event);
         this.etatCourant = this.etatCourant.transition(event);
@@ -34,14 +38,17 @@ public class Automate {
         this.automatedEvolution = automatedEvolution;
     }
 
+    //retourne le joueur qui est entrain de jouer
     public Joueur getJoueurCourant() {
         return listeJoueurs.get(0);
     }
 
+    //retourne ne nombre de joueurs
     public int getNombreJoueur(){
         return listeJoueurs.size() ;
     }
 
+    //retourne la liste des joueurs
     public ArrayList<Joueur> getListeJoueurs() {
         return listeJoueurs;
     }
