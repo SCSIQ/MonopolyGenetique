@@ -1,10 +1,11 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -27,7 +28,7 @@ public class ZoneInfoJoueur extends Parent {
         r_couleur.setHeight(50);
         r_couleur.setWidth(50);
         r_couleur.setLayoutX(30);
-        r_couleur.setLayoutY(35);
+        r_couleur.setLayoutY(30);
         r_couleur.setStroke(Color.BLACK);
         r_couleur.setStrokeWidth(1);
         r_couleur.setFill(automate.getJoueurCourant().getCouleur());
@@ -41,22 +42,22 @@ public class ZoneInfoJoueur extends Parent {
 
         //NOM
         nom.setLayoutX(90);
-        nom.setLayoutY(50);
+        nom.setLayoutY(45);
         nom.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //ARGENT
         argent.setLayoutX(210);
-        argent.setLayoutY(50);
+        argent.setLayoutY(45);
         argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //EN PRISON
         enPrison.setLayoutX(390);
-        enPrison.setLayoutY(50);
+        enPrison.setLayoutY(45);
         enPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //TOUR
         tour.setLayoutX(520);
-        tour.setLayoutY(50);
+        tour.setLayoutY(45);
         tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //PANEL INFOS JOUEUR
@@ -69,10 +70,17 @@ public class ZoneInfoJoueur extends Parent {
 
         /*infosJoueur.getChildren().add(test);
         /*infosJoueur.setScaleX((int) height*0.3);
-        infosJoueur.setScaleY((int)width*0.2);
+        infosJoueur.setScaleY((int)width*0.2);*/
         infosJoueur.setLayoutX(15);
-        infosJoueur.setLayoutY(15);*/
-       //infosJoueur.setStyle("-fx-border-style : solid inside;"+"-fx-border-width : 1;"+"-fx-border-color : black;");
+        infosJoueur.setLayoutY(15);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        infosJoueur.setPrefSize(width*0.91,height*0.12);
+        infosJoueur.setBorder(border1);
 
         infosJoueur.getChildren().add(enPrison);
         infosJoueur.getChildren().add(argent);
@@ -85,14 +93,14 @@ public class ZoneInfoJoueur extends Parent {
         Rectangle rect_infosJoueur = new Rectangle() ;
 
         //TAILLE DU RECTANGLE ET POSITION
-        rect_infosJoueur.setHeight(85);
+     /*   rect_infosJoueur.setHeight(85);
        rect_infosJoueur.setWidth(1245.4);
         rect_infosJoueur.setX(15);
         rect_infosJoueur.setY(18.3);
 
         //COULEUR ET CONTOUR
         rect_infosJoueur.setFill(Color.TRANSPARENT);
-        rect_infosJoueur.setStroke(Color.BLACK);
+        rect_infosJoueur.setStroke(Color.BLACK);*/
 
         infosJoueur.getChildren().add(rect_infosJoueur);
         this.getChildren().add(infosJoueur);

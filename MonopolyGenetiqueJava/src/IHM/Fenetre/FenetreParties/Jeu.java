@@ -122,7 +122,6 @@ public class Jeu extends Parent {
         bt_tourSuivant.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Lancer les dés : "+automate.getJoueurCourant().getaLanceDes());
                 fenetreTour(nouvelle_fenetre, automate);
             }
         });
