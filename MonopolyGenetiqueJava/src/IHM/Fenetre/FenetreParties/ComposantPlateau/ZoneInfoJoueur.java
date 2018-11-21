@@ -23,6 +23,8 @@ public class ZoneInfoJoueur extends Parent {
     private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
 
     public ZoneInfoJoueur(Automate automate){
+
+
         //ajout Couleur du joueur
         Rectangle r_couleur = new Rectangle();
         r_couleur.setHeight(50);
