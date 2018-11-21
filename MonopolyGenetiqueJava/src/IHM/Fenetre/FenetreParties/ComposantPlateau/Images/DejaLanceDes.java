@@ -1,4 +1,4 @@
-package IHM.Fenetre.FenetreParties.Images;
+package IHM.Fenetre.FenetreParties.ComposantPlateau.Images;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

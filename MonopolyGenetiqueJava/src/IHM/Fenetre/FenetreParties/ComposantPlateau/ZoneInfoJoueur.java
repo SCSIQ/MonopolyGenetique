@@ -67,11 +67,11 @@ public class ZoneInfoJoueur extends Parent {
 
         Text test = new Text( "height : "+height*0.3+" | width : "+width+" | get scale"+infosJoueur.getScaleX());
 
-        infosJoueur.getChildren().add(test);
+        /*infosJoueur.getChildren().add(test);
         /*infosJoueur.setScaleX((int) height*0.3);
-        infosJoueur.setScaleY((int)width*0.2);*/
+        infosJoueur.setScaleY((int)width*0.2);
         infosJoueur.setLayoutX(15);
-        infosJoueur.setLayoutY(15);
+        infosJoueur.setLayoutY(15);*/
        //infosJoueur.setStyle("-fx-border-style : solid inside;"+"-fx-border-width : 1;"+"-fx-border-color : black;");
 
         infosJoueur.getChildren().add(enPrison);
@@ -80,16 +80,21 @@ public class ZoneInfoJoueur extends Parent {
         infosJoueur.getChildren().add(r_couleur);
         infosJoueur.getChildren().add(nom);
 
-        this.getChildren().add(infosJoueur);
+
+
+        Rectangle rect_infosJoueur = new Rectangle() ;
 
         //TAILLE DU RECTANGLE ET POSITION
-        //rect_infosJoueur.setHeight(85);
-       // rect_infosJoueur.setWidth(1245.4);
-        //rect_infosJoueur.setX(15);
-        //rect_infosJoueur.setY(18.3);
+        rect_infosJoueur.setHeight(85);
+       rect_infosJoueur.setWidth(1245.4);
+        rect_infosJoueur.setX(15);
+        rect_infosJoueur.setY(18.3);
 
         //COULEUR ET CONTOUR
-        //rect_infosJoueur.setFill(Color.TRANSPARENT);
-        //rect_infosJoueur.setStroke(Color.BLACK);
+        rect_infosJoueur.setFill(Color.TRANSPARENT);
+        rect_infosJoueur.setStroke(Color.BLACK);
+
+        infosJoueur.getChildren().add(rect_infosJoueur);
+        this.getChildren().add(infosJoueur);
     }
 }
