@@ -123,7 +123,6 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Lancer les dés : "+automate.getJoueurCourant().getaLanceDes());
-                automate.evoluer("tourSuivant");
                 fenetreTour(nouvelle_fenetre, automate);
             }
         });
