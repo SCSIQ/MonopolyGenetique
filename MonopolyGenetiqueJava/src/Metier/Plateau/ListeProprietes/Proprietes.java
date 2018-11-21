@@ -13,6 +13,10 @@ public abstract class Proprietes extends Cases {
     private int loyer3Maison;
     private int loyer4Maison;
     private int loyerHotel;
+
+    private int prixAjoutMaison;
+    private int prixVenteMaison;
+
     private Joueur proprio ;
 
     public Proprietes(int position) {
@@ -25,6 +29,14 @@ public abstract class Proprietes extends Cases {
 
     public void setPrix(int prix) {
         this.prixAchat = prix;
+    }
+
+    public void ajoutMaison(){
+        //ici on ajoute une maison
+    }
+
+    public void ventenMaison(){
+        //ici on enlève une maison
     }
 
     ///////////getter//////////////
