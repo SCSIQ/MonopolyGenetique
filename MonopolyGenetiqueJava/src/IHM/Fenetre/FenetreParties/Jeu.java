@@ -29,18 +29,9 @@ public class Jeu extends Parent {
 
 
 
-        automate.getNombreJoueur();
-        Pion p = new Pion(automate, this);
-        System.out.println(automate.getJoueurCourant().getPion());
-        // ESSAI POUR PLACER SUR LA CASE DEPART UN PION
-      /*  Pane caseDepart = listePanel.get(0) ;
-        Circle c = new Circle();
-        c.setFill(Color.CHOCOLATE);
 
-        c.setRadius(10);
-        c.setLayoutY(20);
-        c.setLayoutX(20);
-        caseDepart.getChildren().add(c);*/
+
+
 
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
@@ -76,12 +67,17 @@ public class Jeu extends Parent {
 
         //APPEL PLATEAU JEU
         PlateauJeu pl = new PlateauJeu(automate);
-        pl.caseDeDroite();
-        pl.caseDeGauche();
+
         pl.caseDuBas();
+        pl.caseDeGauche();
         pl.caseDuHaut();
+        pl.caseDeDroite();
         pl.plateauJeu();
         this.getChildren().add(pl);
+
+/////////////PION
+        Pion pion = new Pion(automate, pl);
+        System.out.println(automate.getJoueurCourant().getPion());
 
 
         boutonMenu(bt_menu);
@@ -106,7 +102,7 @@ public class Jeu extends Parent {
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
-                    p.deplacer();
+                    pion.entrerDansCase();
                     automate.getJoueurCourant().setaLanceDes(true);
 
                 }else{

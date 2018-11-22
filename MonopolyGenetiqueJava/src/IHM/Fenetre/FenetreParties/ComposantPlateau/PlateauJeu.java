@@ -58,7 +58,7 @@ public class PlateauJeu extends Parent {
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(CaseDepart);
         CaseDepart.getChildren().add(c_depart);
-        listePanel.add(CaseDepart);
+        listePanel.add(0,CaseDepart);
 
         c_depart.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -85,7 +85,7 @@ public class PlateauJeu extends Parent {
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(violetBelleville);
         violetBelleville.getChildren().add(c_belleville);
-        listePanel.add(violetBelleville);
+        listePanel.add(1,violetBelleville);
 
 
         //CASE CAISSE DE COMMUNAUTE
@@ -104,7 +104,7 @@ public class PlateauJeu extends Parent {
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(PiocheCarteCommunaute);
         PiocheCarteCommunaute.getChildren().add(c_com);
-        listePanel.add(PiocheCarteCommunaute);
+        listePanel.add(2,PiocheCarteCommunaute);
 
 
         //CASE LECOURBE
@@ -123,7 +123,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(violetLecourbe);
         violetLecourbe.getChildren().add(c_Lecourbe);
-        listePanel.add(violetLecourbe);
+        listePanel.add(3,violetLecourbe);
 
 
         //CASE IMPOT SUR LE REVENU
@@ -142,7 +142,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(CaseImpotRevenu);
         CaseImpotRevenu.getChildren().add(c_impot);
-        listePanel.add(CaseImpotRevenu);
+        listePanel.add(4,CaseImpotRevenu);
 
 
         //GARE DE MONTPARNASSE
@@ -163,7 +163,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(gareMontparnasse);
         gareMontparnasse.getChildren().add(c_gareM);
-        listePanel.add(gareMontparnasse);
+        listePanel.add(5,gareMontparnasse);
 
 
         //CASE RUE DE VAUGIRAD
@@ -183,7 +183,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(CaseVaugirad);
         CaseVaugirad.getChildren().add(c_vaugirard);
-        listePanel.add(CaseVaugirad);
+        listePanel.add(6,CaseVaugirad);
 
 
         //CASE CHANCE
@@ -201,7 +201,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(CaseChance);
         CaseChance.getChildren().add(c_chance);
-        listePanel.add(CaseChance);
+        listePanel.add(7,CaseChance);
 
 
         //CASE RUE DE COURCELLES
@@ -222,7 +222,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(CaseCourcelle);
         CaseCourcelle.getChildren().add(c_courcelles);
-        listePanel.add(CaseCourcelle);
+        listePanel.add(8,CaseCourcelle);
 
         //CASE RUE REPUBLIQUE
         Pane CaseRepublique = new Pane() ;
@@ -241,7 +241,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(CaseRepublique);
         CaseRepublique.getChildren().add(c_republique);
-        listePanel.add(CaseRepublique);
+        listePanel.add(9,CaseRepublique);
 
         //CASE PRISON
         Pane CasePrison = new Pane() ;
@@ -258,7 +258,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(CasePrison);
         CasePrison.getChildren().add(c_prison);
-        listePanel.add(CasePrison);
+        listePanel.add(10,CasePrison);
 
 
 
@@ -282,6 +282,7 @@ public class PlateauJeu extends Parent {
         c_villette.setPreserveRatio(true);
 
         caseVillette.getChildren().add(c_villette);
+        listePanel.add(11,caseVillette);
 
         //Si on clique sur l'image
         caseVillette.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -308,6 +309,7 @@ public class PlateauJeu extends Parent {
         c_neuilly.setPreserveRatio(true);
 
         caseNeuilly.getChildren().add(c_neuilly);
+        listePanel.add(12,caseNeuilly);
         this.getChildren().add(caseNeuilly);
 
 ///////CASE PARADIS
@@ -316,6 +318,7 @@ public class PlateauJeu extends Parent {
 
         caseParadis.setLayoutX(15);
         caseParadis.setLayoutY(436);
+        listePanel.add(13,caseParadis);
 
         URL paradis = getClass().getResource("Images/Case_Paradis.png");
         Image i_paradis = new Image(paradis.toExternalForm());
@@ -341,8 +344,9 @@ public class PlateauJeu extends Parent {
         c_celectr.setFitHeight(48);
         c_celectr.setPreserveRatio(true);
 
+        listePanel.add(caseCElectr);
         caseCElectr.getChildren().add(c_celectr);
-        this.getChildren().add(caseCElectr);
+        this.getChildren().add(14,caseCElectr);
 
 ///////////////////////////////////////////////////////////////////////////////////GARE DE LYON
 
@@ -360,8 +364,7 @@ public class PlateauJeu extends Parent {
 
         c_gareL.setFitHeight(48);
         c_gareL.setPreserveRatio(true);
-
-
+        listePanel.add(15,caseGareL);
         caseGareL.getChildren().add(c_gareL);
         this.getChildren().add(caseGareL);
 ///////////////////////////////////////////////////////////////////////////////////GROUPE ORANGE
@@ -379,6 +382,7 @@ public class PlateauJeu extends Parent {
         c_mozart.setFitHeight(48);
         c_mozart.setPreserveRatio(true);
 
+        listePanel.add(16,caseMozart);
         caseMozart.getChildren().add(c_mozart);
         this.getChildren().add(caseMozart);
 
@@ -396,6 +400,7 @@ public class PlateauJeu extends Parent {
         c_saintM.setFitHeight(48);
         c_saintM.setPreserveRatio(true);
 
+        listePanel.add(17,caseSaintM);
         caseSaintM.getChildren().add(c_saintM);
         this.getChildren().add(caseSaintM);
 
@@ -413,6 +418,7 @@ public class PlateauJeu extends Parent {
         c_pigalle.setFitHeight(48);
         c_pigalle.setPreserveRatio(true);
 
+        listePanel.add(18,casePigalle);
         casePigalle.getChildren().add(c_pigalle);
         this.getChildren().add(casePigalle);
 
@@ -431,6 +437,7 @@ public class PlateauJeu extends Parent {
         c_com.setFitWidth(48);
         c_com.setPreserveRatio(true);
 
+        listePanel.add(19,caseCommunautee);
         caseCommunautee.getChildren().add(c_com);
         this.getChildren().add(caseCommunautee);
 
@@ -448,6 +455,7 @@ public class PlateauJeu extends Parent {
         c_parc.setFitWidth(87);
         c_parc.setPreserveRatio(true);
 
+        listePanel.add(20,caseParc);
         caseParc.getChildren().add(c_parc);
         this.getChildren().add(caseParc);
 
@@ -463,6 +471,7 @@ public class PlateauJeu extends Parent {
         URL matignon = getClass().getResource("Images/Case_Matignon.png");
         Image i_matignon = new Image(matignon.toExternalForm());
         ImageView c_matignon = new ImageView(i_matignon);
+        listePanel.add(21,CaseMatignon);
 
         c_matignon.setFitWidth(48);
         c_matignon.setPreserveRatio(true);
@@ -470,7 +479,7 @@ public class PlateauJeu extends Parent {
         this.getChildren().add(CaseMatignon);
         CaseMatignon.getChildren().add(c_matignon);
 
-        //CASE CHANCE
+///////////////CASE CHANCE
         Pane CaseChance = new Pane();
         CaseChance.setLayoutX(148);
         CaseChance.setLayoutY(110);
@@ -483,10 +492,11 @@ public class PlateauJeu extends Parent {
         c_chance.setPreserveRatio(true);
         c_chance.setRotate(180);
 
+        listePanel.add(22,CaseChance);
         this.getChildren().add(CaseChance);
         CaseChance.getChildren().add(c_chance);
 
-        //CASE MALSHERBES
+/////////////CASE MALSHERBES
         Pane CaseMalesherbes = new Pane() ;
 
         CaseMalesherbes.setLayoutX(196);
@@ -499,10 +509,11 @@ public class PlateauJeu extends Parent {
         c_malesherbes.setFitWidth(48);
         c_malesherbes.setPreserveRatio(true);
 
+        listePanel.add(23,CaseMalesherbes);
         this.getChildren().add(CaseMalesherbes);
         CaseMalesherbes.getChildren().add(c_malesherbes);
 
-        //CASE HENRI MARTIN
+//////////////////////CASE HENRI MARTIN
         Pane CaseHenri = new Pane() ;
 
         CaseHenri.setLayoutX(244);
@@ -512,13 +523,14 @@ public class PlateauJeu extends Parent {
         Image i_henriM = new Image(henriM.toExternalForm());
         ImageView c_henriM = new ImageView(i_henriM);
 
+        listePanel.add(24,CaseHenri);
         c_henriM.setFitWidth(48);
         c_henriM.setPreserveRatio(true);
 
         this.getChildren().add(CaseHenri);
         CaseHenri.getChildren().add(c_henriM);
 
-        //GARE DU NORD
+///////////GARE DU NORD
         Pane gareNord = new Pane() ;
         gareNord.setLayoutX(292);
         gareNord.setLayoutY(110);
@@ -529,11 +541,11 @@ public class PlateauJeu extends Parent {
 
         c_gareN.setFitWidth(48);
         c_gareN.setPreserveRatio(true);
-
+        listePanel.add(25,gareNord);
         this.getChildren().add(gareNord);
         gareNord.getChildren().add(c_gareN);
 
-        //CASE SAINT HONORE
+/////////////CASE SAINT HONORE
         Pane CaseHonore = new Pane() ;
         CaseHonore.setLayoutX(340);
         CaseHonore.setLayoutY(110);
@@ -545,10 +557,11 @@ public class PlateauJeu extends Parent {
         c_faubourgSH.setFitWidth(48);
         c_faubourgSH.setPreserveRatio(true);
 
+        listePanel.add(26,CaseHonore);
         this.getChildren().add(CaseHonore);
         CaseHonore.getChildren().add(c_faubourgSH);
 
-        //CASE PLACE DE LA BOURSE
+//////////////////CASE PLACE DE LA BOURSE
         Pane CaseBourse = new Pane() ;
         CaseBourse.setLayoutX(388);
         CaseBourse.setLayoutY(110);
@@ -560,10 +573,11 @@ public class PlateauJeu extends Parent {
         c_bourse.setFitWidth(48);
         c_bourse.setPreserveRatio(true);
 
+        listePanel.add(27,CaseBourse);
         this.getChildren().add(CaseBourse);
         CaseBourse.getChildren().add(c_bourse);
 
-        //CASE DE COMPAGNIE DES EAUX
+/////////////////CASE DE COMPAGNIE DES EAUX
         Pane CaseEau = new Pane() ;
         CaseEau.setLayoutX(436);
         CaseEau.setLayoutY(110);
@@ -575,10 +589,11 @@ public class PlateauJeu extends Parent {
         c_ceaux.setFitWidth(48);
         c_ceaux.setPreserveRatio(true);
 
+        listePanel.add(28,CaseEau);
         this.getChildren().add(CaseEau);
         CaseEau.getChildren().add(c_ceaux);
 
-        //CASE LA FAYETTE
+//////////////CASE LA FAYETTE
         Pane CaseFayette = new Pane() ;
         CaseFayette.setLayoutX(484);
         CaseFayette.setLayoutY(110);
@@ -590,6 +605,7 @@ public class PlateauJeu extends Parent {
         c_lafayette.setFitWidth(48);
         c_lafayette.setPreserveRatio(true);
 
+        listePanel.add(29,CaseFayette);
         this.getChildren().add(CaseFayette);
         CaseFayette.getChildren().add(c_lafayette);
 
@@ -611,6 +627,7 @@ public class PlateauJeu extends Parent {
         c_aprison.setFitHeight(87);
         c_aprison.setPreserveRatio(true);
 
+        listePanel.add(30,caseAPrison);
         caseAPrison.getChildren().add(c_aprison);
         this.getChildren().add(caseAPrison);
 ///////////////////////////////////////////////////////////////////////////////////GROUPE VERT
@@ -626,7 +643,7 @@ public class PlateauJeu extends Parent {
 
         c_breteuil.setFitHeight(48);
         c_breteuil.setPreserveRatio(true);
-
+        listePanel.add(31,caseBreteuil);
         caseBreteuil.getChildren().add(c_breteuil);
         this.getChildren().add(caseBreteuil);
 
@@ -642,7 +659,7 @@ public class PlateauJeu extends Parent {
 
         c_foch.setFitHeight(48);
         c_foch.setPreserveRatio(true);
-
+        listePanel.add(32,caseFoch);
         caseFoch.getChildren().add(c_foch);
         this.getChildren().add(caseFoch);
 
@@ -659,6 +676,7 @@ public class PlateauJeu extends Parent {
         c_capucines.setFitHeight(48);
         c_capucines.setPreserveRatio(true);
 
+        listePanel.add(33,caseCapucine);
         caseCapucine.getChildren().add(c_capucines);
         this.getChildren().add(caseCapucine);
 
@@ -675,9 +693,9 @@ public class PlateauJeu extends Parent {
         c_commu3.setFitWidth(48);
         c_commu3.setPreserveRatio(true);
         c_commu3.setRotate(-90);
-
+        listePanel.add(caseCommunautee);
         caseCommunautee.getChildren().add(c_commu3);
-        this.getChildren().add(caseCommunautee);
+        this.getChildren().add(34,caseCommunautee);
 
 
 ///////////////////////////////////////////////////////////////////////////////////GARE
@@ -692,9 +710,9 @@ public class PlateauJeu extends Parent {
 
         c_gareSL.setFitHeight(48);
         c_gareSL.setPreserveRatio(true);
-
+        listePanel.add(caseGareSL);
         caseGareSL.getChildren().add(c_gareSL);
-        this.getChildren().add(caseGareSL);
+        this.getChildren().add(35,caseGareSL);
 ///////////////////////////////////////////////////////////////////////////////////CHANCE
         Pane caseChance = new Pane();
 
@@ -709,8 +727,9 @@ public class PlateauJeu extends Parent {
         c_chance.setFitWidth(48);
         c_chance.setPreserveRatio(true);
 
+        listePanel.add(caseChance);
         caseChance.getChildren().add(c_chance);
-        this.getChildren().add(caseChance);
+        this.getChildren().add(36,caseChance);
 ///////////////////////////////////////////////////////////////////////////////////GROUPE BLEU FONCE
         ///////CASE DES CHAMPS ELYSEES
         Pane caseChampE = new Pane();
@@ -725,6 +744,7 @@ public class PlateauJeu extends Parent {
         c_champsE.setFitHeight(48);
         c_champsE.setPreserveRatio(true);
 
+        listePanel.add(37,caseChampE);
         caseChampE.getChildren().add(c_champsE);
         this.getChildren().add(caseChampE);
 
@@ -740,6 +760,7 @@ public class PlateauJeu extends Parent {
 
         c_paix.setFitHeight(48);
         c_paix.setPreserveRatio(true);
+
 
         casePaix.getChildren().add(c_paix);
         this.getChildren().add(casePaix);
@@ -759,6 +780,8 @@ public class PlateauJeu extends Parent {
 
         caseTaxe.getChildren().add(c_taxe);
         this.getChildren().add(caseTaxe);
+        listePanel.add(38,caseTaxe);
+        listePanel.add(39,casePaix);
     }
 
     public void plateauJeu(){
@@ -780,6 +803,10 @@ public class PlateauJeu extends Parent {
 ////////AJOUT
         this.getChildren().add(imageView);
 
+    }
+
+    public ArrayList<Pane> getListePanel(){
+        return listePanel ;
     }
 
 }
