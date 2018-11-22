@@ -45,7 +45,8 @@ public class Pion extends Parent {
         this.sortirDeCase(pions.get(0));
         Pane p = (Pane) plateauJeu.getListePanel().get(automate.getJoueurCourant().getPion().getCase().getPosition());
 
-        System.out.println(automate.getJoueurCourant().getPion().getCase());
+      //  System.out.println(automate.getJoueurCourant().getPion().getCase());
+        //pions.get(automate.getListeJoueurs().indexOf(automate.getJoueurCourant())); //permet de récupérer le joueur courant et donc le pions
         p.getChildren().add(pions.get(0));
     }
 
