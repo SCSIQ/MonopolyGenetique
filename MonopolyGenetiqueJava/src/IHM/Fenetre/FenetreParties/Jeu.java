@@ -166,7 +166,7 @@ public class Jeu extends Parent {
         //TAILLE DES BOUTONS
         bt_lancerDes.setPrefSize(150,10);
         bt_lancerDes.setLayoutX(950);
-        bt_lancerDes.setLayoutY(600);
+        bt_lancerDes.setLayoutY(635);
 
     }
 
@@ -175,7 +175,7 @@ public class Jeu extends Parent {
         //TAILLE DES BOUTONS
         bt_tourSuivant.setPrefSize(150,10);
         bt_tourSuivant.setLayoutX(1105);
-        bt_tourSuivant.setLayoutY(600);
+        bt_tourSuivant.setLayoutY(635);
 
     }
 

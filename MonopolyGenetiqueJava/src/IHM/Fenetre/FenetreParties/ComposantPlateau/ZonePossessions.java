@@ -25,6 +25,8 @@ public class ZonePossessions extends Parent {
         textPossession.setLayoutY(15);
         textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
+
+        ////////////////////CREATION D'UN PANEL POUR LA ZONE POSSESSION
         Pane zonePoss = new Pane() ;
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
@@ -43,59 +45,69 @@ public class ZonePossessions extends Parent {
         zonePoss.getChildren().add(textPossession);
         this.getChildren().add(zonePoss);
 
-      /*  Rectangle rect_possession = new Rectangle();
-        //TAILLE DU RECTANGLE ET POSITION
-
-        rect_possession.setHeight(425);
-        rect_possession.setWidth(630);
-        rect_possession.setX(630);
-        rect_possession.setY(275);
-
-        //COULEUR ET CONTOUR
-        rect_possession.setFill(Color.TRANSPARENT);
-        rect_possession.setStroke(Color.BLACK);
-
-        this.getChildren().add(rect_possession);*/
     }
 
     public void RectangleTerrain(){
 
-        Rectangle rect_terrain = new Rectangle();
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
-        textTerrain.setLayoutX(750);
-        textTerrain.setLayoutY(320);
+        textTerrain.setLayoutX(120);
+        textTerrain.setLayoutY(15);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
-        this.getChildren().add(textTerrain);
 
-        //TAILLE DU RECTANGLE ET POSITION
+        ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
+        Pane zoneTerrain = new Pane() ;
+        int height = ecran.getDisplayMode().getHeight();
+        int width = ecran.getDisplayMode().getWidth();
 
-        rect_terrain.setHeight(370);
-        rect_terrain.setWidth(305);
-        rect_terrain.setX(635);
-        rect_terrain.setY(315);
+        zoneTerrain.setLayoutX(635);
+        zoneTerrain.setLayoutY(315);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        zoneTerrain.setPrefSize(width*0.22,height*0.5);
+        zoneTerrain.setBorder(border1);
 
-        //COULEUR ET CONTOUR
-        rect_terrain.setFill(Color.TRANSPARENT);
-        rect_terrain.setStroke(Color.BLACK);
+        zoneTerrain.getChildren().add(textTerrain);
+        this.getChildren().add(zoneTerrain);
 
-        this.getChildren().add(rect_terrain);
     }
 
     public void RectangleGare(){
 
-        Rectangle rect_gare = new Rectangle();
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
-        textGare.setLayoutX(1080);
-        textGare.setLayoutY(320);
+        textGare.setLayoutX(120);
+        textGare.setLayoutY(15);
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textGare);
 
+
+
+        ////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
+        Pane zoneGare = new Pane() ;
+        int height = ecran.getDisplayMode().getHeight();
+        int width = ecran.getDisplayMode().getWidth();
+
+        zoneGare.setLayoutX(950);
+        zoneGare.setLayoutY(315);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        zoneGare.setPrefSize(width*0.22,height*0.15);
+        zoneGare.setBorder(border1);
+
+        zoneGare.getChildren().add(textGare);
+        this.getChildren().add(zoneGare);
         //TAILLE DU RECTANGLE ET POSITION
 
-        rect_gare.setHeight(100);
-        rect_gare.setWidth(305);
+  /*      rect_gare.setWidth(305);
         rect_gare.setX(950);
         rect_gare.setY(315);
 
@@ -103,46 +115,70 @@ public class ZonePossessions extends Parent {
         rect_gare.setFill(Color.TRANSPARENT);
         rect_gare.setStroke(Color.BLACK);
 
-        this.getChildren().add(rect_gare);
+        this.getChildren().add(rect_gare);*/
     }
 
 
     public void RectangleCompagnies(){
-        Rectangle rect_compagnie = new Rectangle();
 
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
-        textCompagnies.setLayoutX(1050);
-        textCompagnies.setLayoutY(435);
+        textCompagnies.setLayoutX(100);
+        textCompagnies.setLayoutY(15);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
-        this.getChildren().add(textCompagnies);
 
+////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
+        Pane zoneCompa = new Pane() ;
+        int height = ecran.getDisplayMode().getHeight();
+        int width = ecran.getDisplayMode().getWidth();
 
-        //TAILLE DU RECTANGLE ET POSITION
+        zoneCompa.setLayoutX(950);
+        zoneCompa.setLayoutY(435);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        zoneCompa.setPrefSize(width*0.22,height*0.15);
+        zoneCompa.setBorder(border1);
 
-        rect_compagnie.setHeight(100);
-        rect_compagnie.setWidth(305);
-        rect_compagnie.setX(950);
-        rect_compagnie.setY(425);
+        zoneCompa.getChildren().add(textCompagnies);
+        this.getChildren().add(zoneCompa);
 
-        //COULEUR ET CONTOUR
-        rect_compagnie.setFill(Color.TRANSPARENT);
-        rect_compagnie.setStroke(Color.BLACK);
-        this.getChildren().add(rect_compagnie);
     }
 
     public void RectangleCartePrison(){
 
-        Rectangle rect_cartePrison = new Rectangle();
         //Ajout d'un label "Vous êtes libéré de prison"
         Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" :");
-        textPrison.setLayoutX(995);
-        textPrison.setLayoutY(550);
+        textPrison.setLayoutX(20);
+        textPrison.setLayoutY(20);
         textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-        this.getChildren().add(textPrison);
+
+
+////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
+        Pane zonePrison = new Pane() ;
+        int height = ecran.getDisplayMode().getHeight();
+        int width = ecran.getDisplayMode().getWidth();
+
+        zonePrison.setLayoutX(950);
+        zonePrison.setLayoutY(545);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        zonePrison.setPrefSize(width*0.22,height*0.1);
+        zonePrison.setBorder(border1);
+
+        zonePrison.getChildren().add(textPrison);
+        this.getChildren().add(zonePrison);
+
 
         //TAILLE DU RECTANGLE ET POSITION
-
+/*
         rect_cartePrison.setHeight(50);
         rect_cartePrison.setWidth(305);
         rect_cartePrison.setX(950);
@@ -151,7 +187,7 @@ public class ZonePossessions extends Parent {
         //COULEUR ET CONTOUR
         rect_cartePrison.setFill(Color.TRANSPARENT);
         rect_cartePrison.setStroke(Color.BLACK);
-        this.getChildren().add(rect_cartePrison);
+        this.getChildren().add(rect_cartePrison);*/
 }
 
 }
