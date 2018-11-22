@@ -2,6 +2,7 @@ package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -10,6 +11,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -18,9 +20,16 @@ import java.util.ArrayList;
 public class PlateauJeu extends Parent {
 
    private ArrayList<Pane> listePanel = new ArrayList<>();
+   private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
+
+
 
     public PlateauJeu(Automate automate)
     {
+        for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
+        {
+
+        }
 
         Rectangle rect_plateau = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION

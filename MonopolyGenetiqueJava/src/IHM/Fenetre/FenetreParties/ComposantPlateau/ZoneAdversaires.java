@@ -33,8 +33,10 @@ public class ZoneAdversaires extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        zoneAdversaire.setLayoutX(630);
-        zoneAdversaire.setLayoutY(120);
+        //zoneAdversaire.setLayoutX(630);
+        //zoneAdversaire.setLayoutY(120);
+        zoneAdversaire.setLayoutX(width*0.46);
+        zoneAdversaire.setLayoutY(height*0.15);
         Border border1 = new Border(
                 new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID,
