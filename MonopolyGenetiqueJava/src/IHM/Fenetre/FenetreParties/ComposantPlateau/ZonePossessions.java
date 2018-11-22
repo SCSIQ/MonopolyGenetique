@@ -99,8 +99,10 @@ public class ZonePossessions extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        zoneGare.setLayoutX(950);
-        zoneGare.setLayoutY(315);
+       // zoneGare.setLayoutX(950);
+        //zoneGare.setLayoutY(315);
+        zoneGare.setLayoutX(width*0.695);
+        zoneGare.setLayoutY(height*0.4);
         Border border1 = new Border(
                 new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID,
@@ -139,8 +141,11 @@ public class ZonePossessions extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        zoneCompa.setLayoutX(950);
-        zoneCompa.setLayoutY(435);
+        //zoneCompa.setLayoutX(950);
+        //zoneCompa.setLayoutY(435);
+        zoneCompa.setLayoutX(width*0.695);
+        zoneCompa.setLayoutY(height*0.56);
+
         Border border1 = new Border(
                 new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID,
@@ -169,8 +174,10 @@ public class ZonePossessions extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        zonePrison.setLayoutX(950);
-        zonePrison.setLayoutY(545);
+        //zonePrison.setLayoutX(950);
+        //zonePrison.setLayoutY(545);
+        zonePrison.setLayoutX(width*0.695);
+        zonePrison.setLayoutY(height*0.72);
         Border border1 = new Border(
                 new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID,
