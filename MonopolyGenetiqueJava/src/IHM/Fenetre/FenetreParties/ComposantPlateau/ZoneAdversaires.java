@@ -1,38 +1,52 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+import java.awt.*;
+
 //CLASSE S'OCCUPANT DE LA PARTIE DES ADVERSAIRES DES JOUEURS
 public class ZoneAdversaires extends Parent {
+
+    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
+
 
     public ZoneAdversaires(Automate automate)
     {
         //Ajout label adversaire
         Label adversaire = new Label("ADVERSAIRES");
-        adversaire.setLayoutX(1100);
-        adversaire.setLayoutY(225);
+        adversaire.setLayoutX(450);
+        adversaire.setLayoutY(100);
         adversaire.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(adversaire);
 
-        Rectangle rect_adversaire = new Rectangle() ;
-        //TAILLE DU RECTANGLE ET POSITION
-        rect_adversaire.setHeight(150);
-        rect_adversaire.setWidth(630);
-        rect_adversaire.setX(630);
-        rect_adversaire.setY(120);
-        //COULEUR ET CONTOUR
-        rect_adversaire.setFill(Color.TRANSPARENT);
-        rect_adversaire.setStroke(Color.BLACK);
+        Pane zoneAdversaire = new Pane();
 
+        int height = ecran.getDisplayMode().getHeight();
+        int width = ecran.getDisplayMode().getWidth();
 
-        this.getChildren().add(rect_adversaire);
+        zoneAdversaire.setLayoutX(630);
+        zoneAdversaire.setLayoutY(120);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        zoneAdversaire.setPrefSize(width*0.46,height*0.18);
+        zoneAdversaire.setBorder(border1);
+
+        zoneAdversaire.getChildren().add(adversaire);
+        this.getChildren().add(zoneAdversaire);
+
 
         //Ajout adversaire 1 POUR SOLO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         for(int i=1;i<=automate.getNombreJoueur();i++) {

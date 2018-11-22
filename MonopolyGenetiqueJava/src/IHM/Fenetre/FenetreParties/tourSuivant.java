@@ -18,10 +18,12 @@ public class tourSuivant extends Parent {
 
     public tourSuivant(Stage fenetre_actuelle, Canvas canvas, Automate automate)
     {
-        System.out.println("Lancer les dés : "+automate.getJoueurCourant().getaLanceDes());
 
         //SI LES DES ONT ETE LANCER OU NON
         if(automate.getJoueurCourant().getaLanceDes()==true){
+
+            automate.evoluer("tourSuivant");
+
             ///////////////////////////////////////////////////////////////////TEXTE
             //automate.getJoueurCourant().;
             Text t_lancerDeVrai = new Text("Tour suivant : numTour");
@@ -36,8 +38,9 @@ public class tourSuivant extends Parent {
             this.getChildren().add(t_lancerDeVrai);
 
         }else {
+            automate.evoluer("tourSuivant");
 
-        //////////////////////////////////////////////////////////////////////////TEXTE
+            //////////////////////////////////////////////////////////////////////////TEXTE
             Text t_lancerDeFalse = new Text("Vous devez lancer les dés.");
 
             t_lancerDeFalse.setLayoutX(120);
