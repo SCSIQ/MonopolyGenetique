@@ -1,28 +1,49 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+import java.awt.*;
+
 
 public class ZonePossessions extends Parent {
+
+    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
 
     public ZonePossessions(Automate automate)
     {
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
-        textPossession.setLayoutX(895);
-        textPossession.setLayoutY(285);
+        textPossession.setLayoutX(250);
+        textPossession.setLayoutY(15);
         textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
+        Pane zonePoss = new Pane() ;
+        int height = ecran.getDisplayMode().getHeight();
+        int width = ecran.getDisplayMode().getWidth();
 
-        this.getChildren().add(textPossession);
+        zonePoss.setLayoutX(630);
+        zonePoss.setLayoutY(275);
+        Border border1 = new Border(
+                new BorderStroke(Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(2),
+                        new Insets(0)));
+        zonePoss.setPrefSize(width*0.46,height*0.6);
+        zonePoss.setBorder(border1);
 
-        Rectangle rect_possession = new Rectangle();
+        zonePoss.getChildren().add(textPossession);
+        this.getChildren().add(zonePoss);
+
+      /*  Rectangle rect_possession = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_possession.setHeight(425);
@@ -34,7 +55,7 @@ public class ZonePossessions extends Parent {
         rect_possession.setFill(Color.TRANSPARENT);
         rect_possession.setStroke(Color.BLACK);
 
-        this.getChildren().add(rect_possession);
+        this.getChildren().add(rect_possession);*/
     }
 
     public void RectangleTerrain(){

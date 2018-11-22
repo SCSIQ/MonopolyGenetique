@@ -23,8 +23,8 @@ public class ZoneAdversaires extends Parent {
     {
         //Ajout label adversaire
         Label adversaire = new Label("ADVERSAIRES");
-        adversaire.setLayoutX(1100);
-        adversaire.setLayoutY(225);
+        adversaire.setLayoutX(450);
+        adversaire.setLayoutY(100);
         adversaire.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(adversaire);
 
