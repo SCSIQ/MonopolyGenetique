@@ -37,7 +37,7 @@ public class ZoneInfoJoueur extends Parent {
 
         //ajout labels
         Label nom = new Label("JOUEUR "+automate.getJoueurCourant().getNom());
-        Label argent = new Label("ARGENT :");
+        Label argent = new Label("ARGENT : "+automate.getJoueurCourant().getSolde()+" €");
         Label enPrison = new Label("EN PRISON :");
         Label tour = new Label("TOUR :");
 
@@ -68,11 +68,6 @@ public class ZoneInfoJoueur extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        Text test = new Text( "height : "+height*0.3+" | width : "+width+" | get scale"+infosJoueur.getScaleX());
-
-        /*infosJoueur.getChildren().add(test);
-        /*infosJoueur.setScaleX((int) height*0.3);
-        infosJoueur.setScaleY((int)width*0.2);*/
         infosJoueur.setLayoutX(15);
         infosJoueur.setLayoutY(15);
         Border border1 = new Border(
