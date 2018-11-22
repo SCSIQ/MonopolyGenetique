@@ -31,8 +31,12 @@ public class ZonePossessions extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        zonePoss.setLayoutX(630);
-        zonePoss.setLayoutY(275);
+       // zonePoss.setLayoutX(630);
+       // zonePoss.setLayoutY(275);
+
+        zonePoss.setLayoutX(width*0.46);
+        zonePoss.setLayoutY(height*0.35);
+
         Border border1 = new Border(
                 new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID,
@@ -60,8 +64,11 @@ public class ZonePossessions extends Parent {
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
-        zoneTerrain.setLayoutX(635);
-        zoneTerrain.setLayoutY(315);
+       //zoneTerrain.setLayoutX(635);
+        //zoneTerrain.setLayoutY(315);
+
+        zoneTerrain.setLayoutX(width*0.47);
+        zoneTerrain.setLayoutY(height*0.4);
         Border border1 = new Border(
                 new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID,
