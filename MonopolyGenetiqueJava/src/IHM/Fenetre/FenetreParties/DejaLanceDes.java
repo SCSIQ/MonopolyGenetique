@@ -26,13 +26,13 @@ public class DejaLanceDes extends Parent {
         t_nb.setScaleX(2);
         t_nb.setScaleY(2);
 
-        t_nb.setLayoutX(105);
+        t_nb.setLayoutX(130);
         t_nb.setLayoutY(70);
 
 //////////////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("Ok");
 
-        bt_ok.setLayoutX(130);
+        bt_ok.setLayoutX(190);
         bt_ok.setLayoutY(120);
 
         bt_ok.setPrefSize(150, 10);
@@ -58,10 +58,10 @@ public class DejaLanceDes extends Parent {
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
         fenetre_actuelle.setMinHeight(220);
-        fenetre_actuelle.setMinWidth(420);
+        fenetre_actuelle.setMinWidth(520);
 
         fenetre_actuelle.setMaxHeight(220);
-        fenetre_actuelle.setMaxWidth(420);
+        fenetre_actuelle.setMaxWidth(520);
 
         /////////////////////////////////////////////////////////////////////////AJOUT
         this.getChildren().add(t_nb);

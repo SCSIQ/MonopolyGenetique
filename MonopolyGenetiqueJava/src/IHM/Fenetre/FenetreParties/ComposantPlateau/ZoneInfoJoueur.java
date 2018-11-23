@@ -30,7 +30,7 @@ public class ZoneInfoJoueur extends Parent {
         r_couleur.setHeight(50);
         r_couleur.setWidth(50);
         r_couleur.setLayoutX(30);
-        r_couleur.setLayoutY(30);
+        r_couleur.setLayoutY(35);
         r_couleur.setStroke(Color.BLACK);
         r_couleur.setStrokeWidth(1);
         r_couleur.setFill(automate.getJoueurCourant().getCouleur());
@@ -44,22 +44,22 @@ public class ZoneInfoJoueur extends Parent {
 
         //NOM
         nom.setLayoutX(90);
-        nom.setLayoutY(45);
+        nom.setLayoutY(55);
         nom.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //ARGENT
         argent.setLayoutX(210);
-        argent.setLayoutY(45);
+        argent.setLayoutY(55);
         argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //EN PRISON
         enPrison.setLayoutX(390);
-        enPrison.setLayoutY(45);
+        enPrison.setLayoutY(55);
         enPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //TOUR
         tour.setLayoutX(520);
-        tour.setLayoutY(45);
+        tour.setLayoutY(55);
         tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //PANEL INFOS JOUEUR

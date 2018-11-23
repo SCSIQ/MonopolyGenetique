@@ -52,7 +52,7 @@ public class ZonePossessions extends Parent {
         Rectangle rect_possession = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 
-        rect_possession.setHeight(425);
+        rect_possession.setHeight(439);
         rect_possession.setWidth(630);
         rect_possession.setX(630);
         rect_possession.setY(275);

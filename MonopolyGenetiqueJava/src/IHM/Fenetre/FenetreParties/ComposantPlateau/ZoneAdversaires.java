@@ -26,7 +26,7 @@ public class ZoneAdversaires extends Parent {
         rect_adversaire.setHeight(150);
         rect_adversaire.setWidth(630);
         rect_adversaire.setX(630);
-        rect_adversaire.setY(120);
+        rect_adversaire.setY(110);
         //COULEUR ET CONTOUR
         rect_adversaire.setFill(Color.TRANSPARENT);
         rect_adversaire.setStroke(Color.BLACK);
@@ -73,7 +73,7 @@ public class ZoneAdversaires extends Parent {
 
         //BOUTON DETAILS
         Button adv_details = new Button("DETAILS");
-        adv_details.setLayoutX(870);
+        adv_details.setLayoutX(850);
         adv_details.setLayoutY(130);
         this.getChildren().add(adv_details);
 

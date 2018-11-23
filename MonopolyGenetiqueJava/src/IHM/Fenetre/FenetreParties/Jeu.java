@@ -107,7 +107,7 @@ public class Jeu extends Parent {
 
                 }else{
                     automate.evoluer("lancerDes");
-                    fenetreDejaLancerDe();
+                    fenetreDejaLancerDe(nouvelle_fenetre);
                 }
 
 
@@ -124,11 +124,11 @@ public class Jeu extends Parent {
 
 ////////BLOCAGE REDUCTION ET AUGMENTATION
 
-        /*nouvelle_fenetre.setMinWidth(1290);
-        nouvelle_fenetre.setMinHeight(750);
+        nouvelle_fenetre.setMinWidth(1290);
+        nouvelle_fenetre.setMinHeight(780);
 
         nouvelle_fenetre.setMaxWidth(1290);
-        nouvelle_fenetre.setMaxHeight(750);*/
+        nouvelle_fenetre.setMaxHeight(780);
 
         // AJOUT A L'ECRAN
 
@@ -157,7 +157,7 @@ public class Jeu extends Parent {
         //TAILLE DES BOUTONS
         bt_menu.setPrefSize(150,10);
         bt_menu.setLayoutX(1085);
-        bt_menu.setLayoutY(50);
+        bt_menu.setLayoutY(45);
 
     }
 
@@ -247,16 +247,21 @@ public class Jeu extends Parent {
         nouvelle_fenetre_des.show();
     }
 
-    public void fenetreDejaLancerDe()
+    public void fenetreDejaLancerDe(Stage fenetre_actuelle)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_erreur = new Stage();
         DejaLanceDes fenetreDe = new DejaLanceDes(nouvelle_fenetre_erreur, canvas);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
+        Scene nouvelle_scene = new  Scene(fenetreDe,500,170);
 
         nouvelle_fenetre_erreur.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_erreur.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_erreur.initOwner(fenetre_actuelle);
+
         nouvelle_fenetre_erreur.show();
     }
 

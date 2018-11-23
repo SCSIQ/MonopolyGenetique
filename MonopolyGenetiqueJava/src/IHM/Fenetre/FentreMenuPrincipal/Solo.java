@@ -153,7 +153,7 @@ public class Solo extends Parent {
                 //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();
                 Jeu fenetre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur.getValue(),automate);
-                Scene nouvelle_scene = new Scene(fenetre_jeu,1275,710);
+                Scene nouvelle_scene = new Scene(fenetre_jeu,1275,730);
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
                 nouvelle_fenetre_plateau.show();
 
