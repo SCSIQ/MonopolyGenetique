@@ -42,17 +42,31 @@ public class Pion extends Parent {
     }
 
     public void entrerDansCase() {
+
+        //ON ENLEVE LE PION DE LA CASE OU LE PION ETAIT AVANT LE LANCER DE DES
         this.sortirDeCase(pions.get(0));
+
+        // ON RECUPERE LE PANEL OU LE PIONS VA ARRIVER APRES LE LANCER DE DES
         Pane p = (Pane) plateauJeu.getListePanel().get(automate.getJoueurCourant().getPion().getCase().getPosition());
 
-      //  System.out.println(automate.getJoueurCourant().getPion().getCase());
-        //pions.get(automate.getListeJoueurs().indexOf(automate.getJoueurCourant())); //permet de récupérer le joueur courant et donc le pions
-        p.getChildren().add(pions.get(0));
+        // ON AJOUTE A CE PANEL
+         p.getChildren().add(pions.get(0));
+
+        ChangerOrdrePion(pions);
+
     }
 
     public void sortirDeCase(Circle c) {
+
+        //ON RECUPERE LE PANEL OU ETAIT LE JOUEUR ET ON LE SUPPRIME DE CE PANEL
         Pane p = (Pane) plateauJeu.getListePanel().get(automate.getJoueurCourant().getPion().getCase().getPosition());
         p.getChildren().remove(c);
+    }
+
+    public void ChangerOrdrePion(ArrayList<Circle> pions)
+    {
+        pions.add(pions.get(0));
+        pions.remove(0);
     }
 }
 

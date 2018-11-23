@@ -303,43 +303,7 @@ public class PlateauJeu extends Parent {
 
         this.getChildren().add(caseVillette);
 
-///////CASE NEUILLY
-
-        Pane caseNeuilly = new Pane();
-
-        caseNeuilly.setLayoutX(15);
-        caseNeuilly.setLayoutY(484);
-
-        URL neuilly = getClass().getResource("Images/Case_Neuilly.png");
-        Image i_neuilly = new Image(neuilly.toExternalForm());
-        ImageView c_neuilly = new ImageView(i_neuilly);
-
-        c_neuilly.setFitHeight(48);
-        c_neuilly.setPreserveRatio(true);
-
-        caseNeuilly.getChildren().add(c_neuilly);
-        listePanel.add(12,caseNeuilly);
-        this.getChildren().add(caseNeuilly);
-
-///////CASE PARADIS
-
-        Pane caseParadis = new Pane();
-
-        caseParadis.setLayoutX(15);
-        caseParadis.setLayoutY(436);
-        listePanel.add(13,caseParadis);
-
-        URL paradis = getClass().getResource("Images/Case_Paradis.png");
-        Image i_paradis = new Image(paradis.toExternalForm());
-        ImageView c_paradis = new ImageView(i_paradis);
-
-        c_paradis.setFitHeight(48);
-        c_paradis.setPreserveRatio(true);
-
-        caseParadis.getChildren().add(c_paradis);
-        this.getChildren().add(caseParadis);
-
-///////////////////////////////////////////////////////////////////////////////////COMPAGNIE ELECTRICITE
+        ///////////////////////////////////////////////////////////////////////////////////COMPAGNIE ELECTRICITE
 
         Pane caseCElectr = new Pane();
 
@@ -355,7 +319,45 @@ public class PlateauJeu extends Parent {
 
         listePanel.add(caseCElectr);
         caseCElectr.getChildren().add(c_celectr);
-        this.getChildren().add(14,caseCElectr);
+        this.getChildren().add(12,caseCElectr);
+
+
+///////CASE NEUILLY
+
+        Pane caseNeuilly = new Pane();
+
+        caseNeuilly.setLayoutX(15);
+        caseNeuilly.setLayoutY(484);
+
+        URL neuilly = getClass().getResource("Images/Case_Neuilly.png");
+        Image i_neuilly = new Image(neuilly.toExternalForm());
+        ImageView c_neuilly = new ImageView(i_neuilly);
+
+        c_neuilly.setFitHeight(48);
+        c_neuilly.setPreserveRatio(true);
+
+        caseNeuilly.getChildren().add(c_neuilly);
+        listePanel.add(13,caseNeuilly);
+        this.getChildren().add(caseNeuilly);
+
+///////CASE PARADIS
+
+        Pane caseParadis = new Pane();
+
+        caseParadis.setLayoutX(15);
+        caseParadis.setLayoutY(436);
+        listePanel.add(14,caseParadis);
+
+        URL paradis = getClass().getResource("Images/Case_Paradis.png");
+        Image i_paradis = new Image(paradis.toExternalForm());
+        ImageView c_paradis = new ImageView(i_paradis);
+
+        c_paradis.setFitHeight(48);
+        c_paradis.setPreserveRatio(true);
+
+        caseParadis.getChildren().add(c_paradis);
+        this.getChildren().add(caseParadis);
+
 
 ///////////////////////////////////////////////////////////////////////////////////GARE DE LYON
 
@@ -395,6 +397,26 @@ public class PlateauJeu extends Parent {
         caseMozart.getChildren().add(c_mozart);
         this.getChildren().add(caseMozart);
 
+        ///////////////////////////////////////////////////////////////////////////////////CAISSE COMMUNAUTEE
+
+        Pane caseCommunautee = new Pane();
+
+        caseCommunautee.setLayoutX(35);
+        caseCommunautee.setLayoutY(272);
+
+        URL commu = getClass().getResource("Images/Case_Communaute.png");
+        Image i_com = new Image(commu.toExternalForm());
+        ImageView c_com = new ImageView(i_com);
+
+        c_com.setRotate(90);
+        c_com.setFitWidth(48);
+        c_com.setPreserveRatio(true);
+
+        listePanel.add(17,caseCommunautee);
+        caseCommunautee.getChildren().add(c_com);
+        this.getChildren().add(caseCommunautee);
+
+
 ///////CASE SAINT MICHELLE
 
         Pane caseSaintM = new Pane();
@@ -409,7 +431,7 @@ public class PlateauJeu extends Parent {
         c_saintM.setFitHeight(48);
         c_saintM.setPreserveRatio(true);
 
-        listePanel.add(17,caseSaintM);
+        listePanel.add(18,caseSaintM);
         caseSaintM.getChildren().add(c_saintM);
         this.getChildren().add(caseSaintM);
 
@@ -427,28 +449,10 @@ public class PlateauJeu extends Parent {
         c_pigalle.setFitHeight(48);
         c_pigalle.setPreserveRatio(true);
 
-        listePanel.add(18,casePigalle);
+        listePanel.add(19,casePigalle);
         casePigalle.getChildren().add(c_pigalle);
         this.getChildren().add(casePigalle);
 
-///////////////////////////////////////////////////////////////////////////////////CAISSE COMMUNAUTEE
-
-        Pane caseCommunautee = new Pane();
-
-        caseCommunautee.setLayoutX(35);
-        caseCommunautee.setLayoutY(272);
-
-        URL commu = getClass().getResource("Images/Case_Communaute.png");
-        Image i_com = new Image(commu.toExternalForm());
-        ImageView c_com = new ImageView(i_com);
-
-        c_com.setRotate(90);
-        c_com.setFitWidth(48);
-        c_com.setPreserveRatio(true);
-
-        listePanel.add(19,caseCommunautee);
-        caseCommunautee.getChildren().add(c_com);
-        this.getChildren().add(caseCommunautee);
 
 ///////////////////////////////////////////////////////////////////////////////////PARC GRATUIT
 
@@ -672,24 +676,7 @@ public class PlateauJeu extends Parent {
         caseFoch.getChildren().add(c_foch);
         this.getChildren().add(caseFoch);
 
-        ///////CASE DE CAPUCINES
-        Pane caseCapucine = new Pane();
-
-        caseCapucine.setLayoutX(532);
-        caseCapucine.setLayoutY(340);
-
-        URL capucines = getClass().getResource("Images/Case_Capucines.png");
-        Image i_capucines = new Image(capucines.toExternalForm());
-        ImageView c_capucines = new ImageView(i_capucines);
-
-        c_capucines.setFitHeight(48);
-        c_capucines.setPreserveRatio(true);
-
-        listePanel.add(33,caseCapucine);
-        caseCapucine.getChildren().add(c_capucines);
-        this.getChildren().add(caseCapucine);
-
-///////////////////////////////////////////////////////////////////////////////////CAISSE DE COMMUNAUTEE
+        ///////////////////////////////////////////////////////////////////////////////////CAISSE DE COMMUNAUTEE
         Pane caseCommunautee = new Pane();
 
         caseCommunautee.setLayoutX(552);
@@ -704,7 +691,25 @@ public class PlateauJeu extends Parent {
         c_commu3.setRotate(-90);
         listePanel.add(caseCommunautee);
         caseCommunautee.getChildren().add(c_commu3);
-        this.getChildren().add(34,caseCommunautee);
+        this.getChildren().add(33,caseCommunautee);
+
+        ///////CASE DE CAPUCINES
+        Pane caseCapucine = new Pane();
+
+        caseCapucine.setLayoutX(532);
+        caseCapucine.setLayoutY(340);
+
+        URL capucines = getClass().getResource("Images/Case_Capucines.png");
+        Image i_capucines = new Image(capucines.toExternalForm());
+        ImageView c_capucines = new ImageView(i_capucines);
+
+        c_capucines.setFitHeight(48);
+        c_capucines.setPreserveRatio(true);
+
+        listePanel.add(34,caseCapucine);
+        caseCapucine.getChildren().add(c_capucines);
+        this.getChildren().add(caseCapucine);
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////GARE
