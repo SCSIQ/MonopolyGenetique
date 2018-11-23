@@ -65,7 +65,7 @@ public class ZoneInfoJoueur extends Parent {
         //PANEL INFOS JOUEUR
         infosJoueur = new Pane();
 
-        int height = ecran.getDisplayMode().getHeight();
+        /*int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
 
         infosJoueur.setLayoutX(15);
@@ -76,8 +76,8 @@ public class ZoneInfoJoueur extends Parent {
                         CornerRadii.EMPTY,
                         new BorderWidths(2),
                         new Insets(0)));
-        infosJoueur.setPrefSize(width*0.91,height*0.12);
-        infosJoueur.setBorder(border1);
+        infosJoueur.setPrefSize(width*0.91,height*0.07);
+        infosJoueur.setBorder(border1);*/
 
         infosJoueur.getChildren().add(enPrison);
         infosJoueur.getChildren().add(argent);
@@ -90,14 +90,14 @@ public class ZoneInfoJoueur extends Parent {
         Rectangle rect_infosJoueur = new Rectangle() ;
 
         //TAILLE DU RECTANGLE ET POSITION
-     /*   rect_infosJoueur.setHeight(85);
-       rect_infosJoueur.setWidth(1245.4);
+        rect_infosJoueur.setHeight(85);
+        rect_infosJoueur.setWidth(1245.4);
         rect_infosJoueur.setX(15);
         rect_infosJoueur.setY(18.3);
 
         //COULEUR ET CONTOUR
         rect_infosJoueur.setFill(Color.TRANSPARENT);
-        rect_infosJoueur.setStroke(Color.BLACK);*/
+        rect_infosJoueur.setStroke(Color.BLACK);
 
         infosJoueur.getChildren().add(rect_infosJoueur);
         this.getChildren().add(infosJoueur);

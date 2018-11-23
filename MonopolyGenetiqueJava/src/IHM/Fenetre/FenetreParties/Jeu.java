@@ -124,11 +124,11 @@ public class Jeu extends Parent {
 
 ////////BLOCAGE REDUCTION ET AUGMENTATION
 
-        nouvelle_fenetre.setMinWidth(1290);
+        /*nouvelle_fenetre.setMinWidth(1290);
         nouvelle_fenetre.setMinHeight(750);
 
         nouvelle_fenetre.setMaxWidth(1290);
-        nouvelle_fenetre.setMaxHeight(750);
+        nouvelle_fenetre.setMaxHeight(750);*/
 
         // AJOUT A L'ECRAN
 
@@ -166,7 +166,7 @@ public class Jeu extends Parent {
         //TAILLE DES BOUTONS
         bt_lancerDes.setPrefSize(150,10);
         bt_lancerDes.setLayoutX(950);
-        bt_lancerDes.setLayoutY(635);
+        bt_lancerDes.setLayoutY(645);
 
     }
 
@@ -175,7 +175,7 @@ public class Jeu extends Parent {
         //TAILLE DES BOUTONS
         bt_tourSuivant.setPrefSize(150,10);
         bt_tourSuivant.setLayoutX(1105);
-        bt_tourSuivant.setLayoutY(635);
+        bt_tourSuivant.setLayoutY(645);
 
     }
 
