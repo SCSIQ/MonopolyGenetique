@@ -1,7 +1,11 @@
 package IHM.Plateau.CartePiocher;
 
-import IHM.Plateau.Cases;
+import IHM.Plateau.VueCases;
+import Metier.Plateau.Cases;
 
-public class ParcGratuit extends Cases {
+public class ParcGratuit extends VueCases {
 
+    public ParcGratuit(Cases caseMetier) {
+        super(caseMetier);
+    }
 }
