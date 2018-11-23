@@ -53,7 +53,7 @@ public class ZoneAdversaires extends Parent {
         rect_adv.setHeight(60);
         rect_adv.setWidth(300);
         rect_adv.setX(635);
-        rect_adv.setY(125);
+        rect_adv.setY(115);
         rect_adv.setStroke(Color.BLACK);
         rect_adv.setStrokeWidth(1);
         rect_adv.setFill(Color.TRANSPARENT);
@@ -62,19 +62,19 @@ public class ZoneAdversaires extends Parent {
         //Nom du joueur
         Label adv1 = new Label("JOUEUR "+automate.getListeJoueurs().get(1).getNom());
         adv1.setLayoutX(700);
-        adv1.setLayoutY(130);
+        adv1.setLayoutY(120);
         this.getChildren().add(adv1);
 
         //ARGENT Joueur 2
         Label argent_adv1 = new Label("ARGENT : ");
         argent_adv1.setLayoutX(700);
-        argent_adv1.setLayoutY(160);
+        argent_adv1.setLayoutY(150);
         this.getChildren().add(argent_adv1);
 
         //BOUTON DETAILS
         Button adv_details = new Button("DETAILS");
         adv_details.setLayoutX(850);
-        adv_details.setLayoutY(130);
+        adv_details.setLayoutY(120);
         this.getChildren().add(adv_details);
 
         //ajout rectangle couleur
@@ -82,7 +82,7 @@ public class ZoneAdversaires extends Parent {
         r_adv1_couleur.setHeight(50);
         r_adv1_couleur.setWidth(50);
         r_adv1_couleur.setLayoutX(640);
-        r_adv1_couleur.setLayoutY(130);
+        r_adv1_couleur.setLayoutY(120);
         r_adv1_couleur.setStroke(Color.BLACK);
         r_adv1_couleur.setStrokeWidth(1);
         r_adv1_couleur.setFill(automate.getListeJoueurs().get(1).getCouleur());

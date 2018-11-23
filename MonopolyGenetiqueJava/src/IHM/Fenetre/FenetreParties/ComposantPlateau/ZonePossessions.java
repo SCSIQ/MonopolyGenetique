@@ -93,7 +93,7 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(zoneTerrain);*/
 
         Rectangle rect_terrain = new Rectangle();
-        rect_terrain.setHeight(370);
+        rect_terrain.setHeight(390);
         rect_terrain.setWidth(305);
         rect_terrain.setX(635);
         rect_terrain.setY(315);
@@ -138,7 +138,7 @@ public class ZonePossessions extends Parent {
 
         Rectangle rect_gare  = new Rectangle();
         rect_gare.setWidth(305);
-        rect_gare.setHeight(140);
+        rect_gare.setHeight(160);
         rect_gare.setX(950);
         rect_gare.setY(315);
 
@@ -155,7 +155,7 @@ public class ZonePossessions extends Parent {
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
         textCompagnies.setLayoutX(1050);
-        textCompagnies.setLayoutY(475);
+        textCompagnies.setLayoutY(495);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textCompagnies);
@@ -180,10 +180,10 @@ public class ZonePossessions extends Parent {
 
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_compagnie = new Rectangle();
-        rect_compagnie.setHeight(100);
+        rect_compagnie.setHeight(110);
         rect_compagnie.setWidth(305);
         rect_compagnie.setX(950);
-        rect_compagnie.setY(465);
+        rect_compagnie.setY(485);
 
         //COULEUR ET CONTOUR
         rect_compagnie.setFill(Color.TRANSPARENT);
@@ -196,7 +196,7 @@ public class ZonePossessions extends Parent {
         //Ajout d'un label "Vous êtes libéré de prison"
         Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" :");
         textPrison.setLayoutX(1000);
-        textPrison.setLayoutY(585);
+        textPrison.setLayoutY(610);
         textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         this.getChildren().add(textPrison);
 
@@ -225,7 +225,7 @@ public class ZonePossessions extends Parent {
         rect_cartePrison.setHeight(50);
         rect_cartePrison.setWidth(305);
         rect_cartePrison.setX(950);
-        rect_cartePrison.setY(580);
+        rect_cartePrison.setY(605);
 
         //COULEUR ET CONTOUR
         rect_cartePrison.setFill(Color.TRANSPARENT);
