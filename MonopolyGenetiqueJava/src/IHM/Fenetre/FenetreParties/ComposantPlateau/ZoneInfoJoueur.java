@@ -36,7 +36,7 @@ public class ZoneInfoJoueur extends Parent {
         r_couleur.setFill(automate.getJoueurCourant().getCouleur());
 
         //ajout labels
-        Label nom = new Label("JOUEUR "+automate.getJoueurCourant().getNom());
+        Label nom = new Label(automate.getJoueurCourant().getNom());
         Label argent = new Label("ARGENT : "+automate.getJoueurCourant().getSolde()+" €");
         Label enPrison = new Label("EN PRISON :");
         Label tour = new Label("TOUR :");

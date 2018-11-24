@@ -25,30 +25,40 @@ public class tourSuivant extends Parent {
             automate.evoluer("tourSuivant");
 
             ///////////////////////////////////////////////////////////////////TEXTE
-            Text t_lancerDeVrai = new Text("Tour suivant : numTour");
+            Text t_lancerDeVrai = new Text("Tour numTour");
 
-            t_lancerDeVrai.setLayoutX(120);
-            t_lancerDeVrai.setLayoutY(70);
+            t_lancerDeVrai.setLayoutX(250);
+            t_lancerDeVrai.setLayoutY(100);
 
             t_lancerDeVrai.setScaleX(2);
             t_lancerDeVrai.setScaleY(2);
 
+            Text t_Joueur = new Text("Début du tour de "+automate.getJoueurCourant().getNom());
+
+            t_Joueur.setLayoutX(220);
+            t_Joueur.setLayoutY(150);
+
+            t_Joueur.setScaleY(2);
+            t_Joueur.setScaleX(2);
 
             //AJOUT
             this.getChildren().add(t_lancerDeVrai);
+            this.getChildren().add((t_Joueur));
 
         }else {
             automate.evoluer("tourSuivant");
 
             //////////////////////////////////////////////////////////////////////////TEXTE
-            Text t_lancerDeFalse = new Text("Vous devez lancer les dés.");
+            Color rouge = Color.RED;
+            Text t_lancerDeFalse = new Text("VOUS DEVEZ LANCER LES DÉS.");
 
-            t_lancerDeFalse.setLayoutX(120);
-            t_lancerDeFalse.setLayoutY(70);
+            t_lancerDeFalse.setFill(rouge);
+            t_lancerDeFalse.setLayoutX(220);
+            t_lancerDeFalse.setLayoutY(100);
 
             t_lancerDeFalse.setScaleX(2);
             t_lancerDeFalse.setScaleY(2);
-            t_lancerDeFalse.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+            t_lancerDeFalse.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
 
             //AJOUT
             this.getChildren().add(t_lancerDeFalse);
@@ -58,8 +68,8 @@ public class tourSuivant extends Parent {
 //////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("OK");
 
-        bt_ok.setLayoutX(130);
-        bt_ok.setLayoutY(120);
+        bt_ok.setLayoutX(230);
+        bt_ok.setLayoutY(220);
 
         bt_ok.setPrefSize(150, 10);
 
@@ -86,11 +96,11 @@ public class tourSuivant extends Parent {
         });
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_actuelle.setMinHeight(220);
-        fenetre_actuelle.setMinWidth(420);
+        fenetre_actuelle.setMinHeight(320);
+        fenetre_actuelle.setMinWidth(620);
 
-        fenetre_actuelle.setMaxHeight(220);
-        fenetre_actuelle.setMaxWidth(420);
+        fenetre_actuelle.setMaxHeight(320);
+        fenetre_actuelle.setMaxWidth(620);
 
         //AJOUT
 

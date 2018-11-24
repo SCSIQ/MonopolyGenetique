@@ -22,10 +22,10 @@ public class LancerDe extends Parent {
             Integer score = automate.getJoueurCourant().getResLanceDes();
             Integer dé1 = automate.getJoueurCourant().getResDes1();
             Integer dé2 = automate.getJoueurCourant().getResDes2();
-            Text t_nb = new Text("Vous avez fait : \n" +"     "+ dé1.toString()+" + "+dé2.toString()+" = "+score.toString());
+            Text t_nb = new Text(automate.getJoueurCourant().getNom()+" a fait : \n" +"    "+ dé1.toString()+" + "+dé2.toString()+" = "+score.toString());
 
-            t_nb.setLayoutX(160);
-            t_nb.setLayoutY(70);
+            t_nb.setLayoutX(170);
+            t_nb.setLayoutY(50);
 
             t_nb.setScaleX(2);
             t_nb.setScaleY(2);

@@ -7,6 +7,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -19,7 +21,7 @@ public class DejaLanceDes extends Parent {
 
         Color rouge = Color.RED;
 
-        Text t_nb = new Text("VOUS AVEZ DEJA LANCE LES DES !!!" );
+        Text t_nb = new Text("VOUS AVEZ DÉJÀ LANCÉ LES DÉS !!!" );
 
         t_nb.setFill(rouge);
 
@@ -28,6 +30,8 @@ public class DejaLanceDes extends Parent {
 
         t_nb.setLayoutX(130);
         t_nb.setLayoutY(70);
+
+        t_nb.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
 
 //////////////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("Ok");

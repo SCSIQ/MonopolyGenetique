@@ -27,12 +27,6 @@ public class Jeu extends Parent {
 
         this.automate = automate;
 
-
-
-
-
-
-
 ////////DEFINITIONS DES RECTANGLES DANS LE JEU
         Rectangle rect_infosJoueur = new Rectangle() ;
         Rectangle rect_plateau = new Rectangle();
@@ -217,7 +211,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_des = new Stage();
         tourSuivant fenetreDe = new tourSuivant(nouvelle_fenetre_des, canvas, automate);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
+        Scene nouvelle_scene = new  Scene(fenetreDe,600,300);
 
         nouvelle_fenetre_des.setScene(nouvelle_scene);
 
@@ -254,7 +248,7 @@ public class Jeu extends Parent {
         Stage nouvelle_fenetre_erreur = new Stage();
         DejaLanceDes fenetreDe = new DejaLanceDes(nouvelle_fenetre_erreur, canvas);
 
-        Scene nouvelle_scene = new  Scene(fenetreDe,500,170);
+        Scene nouvelle_scene = new  Scene(fenetreDe,500,270);
 
         nouvelle_fenetre_erreur.setScene(nouvelle_scene);
 

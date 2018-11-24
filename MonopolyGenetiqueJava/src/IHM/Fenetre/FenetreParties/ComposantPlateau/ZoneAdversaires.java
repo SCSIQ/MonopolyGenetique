@@ -31,10 +31,9 @@ public class ZoneAdversaires extends Parent {
         rect_adversaire.setFill(Color.TRANSPARENT);
         rect_adversaire.setStroke(Color.BLACK);
 
-
         this.getChildren().add(rect_adversaire);
 
-        //Ajout adversaire 1 POUR SOLO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //Ajout adversaire
         for(int i=0;i<=automate.getNombreJoueur();i++) {
             if(automate.getListeJoueurs().size()==2)
             {

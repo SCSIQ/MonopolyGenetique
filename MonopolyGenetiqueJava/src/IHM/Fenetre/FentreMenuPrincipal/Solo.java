@@ -179,9 +179,7 @@ public class Solo extends Parent {
 
                }
 
-
-                //Ajout de la couleur et du nom
-                automate.getJoueurCourant().setNom("1");
+                //Ajout de la couleur choisie pour la partie solo
                 automate.getJoueurCourant().setCouleur(couleur.getValue());
 
                 //création du plateau
@@ -228,11 +226,9 @@ public class Solo extends Parent {
                     break;
             case 2 : couleur = Color.GREEN;
                     break;
-            case 3 : couleur = Color.WHITE;
+            case 3 : couleur = Color.YELLOW;
                     break;
             case 4 : couleur = Color.BLUE;
-                    break;
-            case 5 : couleur = Color.YELLOW;
                     break;
             default: couleur = Color.AZURE;
         }
