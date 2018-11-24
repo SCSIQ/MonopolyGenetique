@@ -6,10 +6,10 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-//CASE SAINT HONORE
-public class Jaune1 extends Terrain {
+////CASE PLACE DE LA BOURSE
+public class CaseBourse extends Terrain {
 
-    public Jaune1(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseBourse(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

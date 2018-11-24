@@ -6,9 +6,9 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-//CASE DE CAPUCINES
-public class Vert3 extends Terrain {
-    public Vert3(Cases caseMetier, ArrayList<Pane> listeCases) {
+//CASE DE FOCH
+public class CaseFoch extends Terrain {
+    public CaseFoch(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

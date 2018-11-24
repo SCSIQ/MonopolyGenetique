@@ -6,11 +6,11 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-//CASE DE LA PAIX
-public class BleuFonce2 extends Terrain {
+//CASE DES CHAMPS ELYSEES
+public class CaseChampsElysees extends Terrain {
 
 
-    public BleuFonce2(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseChampsElysees(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }
