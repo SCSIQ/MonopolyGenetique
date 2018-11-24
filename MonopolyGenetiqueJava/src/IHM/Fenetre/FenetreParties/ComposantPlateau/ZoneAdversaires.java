@@ -141,7 +141,7 @@ public class ZoneAdversaires extends Parent {
         @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(primaryStage, fenetre_actuelle, automate);
+                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
             }
         });
 
@@ -283,13 +283,13 @@ public class ZoneAdversaires extends Parent {
     }
 
     //création de la fenêtre de possession des advseraires
-    public void possessionAdv(Stage primaryStage, Stage fenetre_actuelle, Automate automate)
+    public void possessionAdv(Stage primaryStage, Stage fenetre_actuelle, Automate automate, int i)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_possession_Adv = new Stage();
 
-        PossessionAdv possAdv = new PossessionAdv(primaryStage, nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate);
+        PossessionAdv possAdv = new PossessionAdv(primaryStage, nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i);
         Scene nouvelle_scene = new Scene(possAdv, 650,610);
 
         nouvelle_fenetre_possession_Adv.setScene(nouvelle_scene);

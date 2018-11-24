@@ -12,20 +12,28 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
 public class PossessionAdv extends Parent {
 
-    public PossessionAdv(Stage primaryStage, Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate)
+    public PossessionAdv(Stage primaryStage, Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i)
     {
+        Text t_adv1 = new Text("Possession de "+automate.getListeJoueurs().get(i).getNom());
+        t_adv1.setScaleX(2);
+        t_adv1.setScaleY(2);
+        t_adv1.setLayoutX(250);
+        t_adv1.setLayoutY(30);
+        this.getChildren().add(t_adv1);
+
         Rectangle rect_possession = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 
         rect_possession.setHeight(429);
         rect_possession.setWidth(630);
         rect_possession.setX(10);
-        rect_possession.setY(10);
+        rect_possession.setY(70);
 
         //COULEUR ET CONTOUR
         rect_possession.setFill(Color.TRANSPARENT);
@@ -64,7 +72,7 @@ public class PossessionAdv extends Parent {
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
         textTerrain.setLayoutX(55);
-        textTerrain.setLayoutY(15);
+        textTerrain.setLayoutY(95);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textTerrain);
@@ -72,8 +80,8 @@ public class PossessionAdv extends Parent {
         Rectangle rect_terrain = new Rectangle();
         rect_terrain.setHeight(390);
         rect_terrain.setWidth(305);
-        rect_terrain.setX(10);
-        rect_terrain.setY(10);
+        rect_terrain.setX(15);
+        rect_terrain.setY(85);
 
         //COULEUR ET CONTOUR
         rect_terrain.setFill(Color.TRANSPARENT);
