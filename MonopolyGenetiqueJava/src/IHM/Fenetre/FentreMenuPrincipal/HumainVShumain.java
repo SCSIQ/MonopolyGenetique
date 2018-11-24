@@ -101,8 +101,7 @@ public class HumainVShumain extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                /*Color couleur= Color.BLACK;
-
+                /*
                 //ici ajouter lancement automate avec en param le joueur
                 Joueur j = new Joueur(null, null);
                 ArrayList<Joueur> listeJoueurs = new ArrayList<>();
@@ -111,28 +110,20 @@ public class HumainVShumain extends Parent {
                     listeJoueurs.add(new Joueur());
                 }
                 System.out.println("Nombre de joueurs : "+listeJoueurs.size());
-                Automate automate = new Automate(listeJoueurs);
-
-
-                Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage, nouvelle_fenetre_plateau, couleur,automate) ;
-                Scene nouvelle_scene = new Scene(fenentre_jeu,1275,730);
-
-                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
-                //on montre la nouvelle fenêtre
-                nouvelle_fenetre_plateau.show();
-                nouvelle_fenetre.close();*/
+                Automate automate = new Automate(listeJoueurs);*/
 
                 //début initialisation automate
                 InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
                 ArrayList<Color> listeCouleurs = new ArrayList<>();
+
                 for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeCouleurs.add(couleurAdversaire(i));
                 }
+
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
 
-                //TEST POUR INIT JOUEUR 2 et 3
+                //INIT JOUEURS
                 for(int i=1;i<=automate.getNombreJoueur();i++)
                 {
                     if(automate.getListeJoueurs().size()==2)
@@ -175,8 +166,6 @@ public class HumainVShumain extends Parent {
                             automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
                         }
                     }
-
-
                 }
 
                 automate.getJoueurCourant().setCouleur(Color.BLANCHEDALMOND);
