@@ -1,7 +1,7 @@
 package IHM.Plateau;
 
 
-import IHM.Plateau.CartePiocher.Depart;
+import IHM.Plateau.LieuPublic.Depart;
 import Metier.Plateau.Cases;
 
 public class Fabrique {
