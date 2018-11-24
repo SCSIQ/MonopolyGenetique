@@ -1,14 +1,20 @@
 package IHM.Plateau;
 
-
 import IHM.Plateau.CartePiocher.CaisseCommune;
 import IHM.Plateau.CartePiocher.ParcGratuit;
 import IHM.Plateau.LieuPublic.*;
 import IHM.Plateau.LieuPublic.Gare.GareLyon;
 import IHM.Plateau.LieuPublic.Gare.GareMontparnasse;
+import IHM.Plateau.LieuPublic.Gare.GareNord;
+import IHM.Plateau.LieuPublic.Gare.GareSaintLazare;
 import IHM.Plateau.Terrains.BleuCiel.CaseCourcelles;
 import IHM.Plateau.Terrains.BleuCiel.CaseRepublique;
 import IHM.Plateau.Terrains.BleuCiel.CaseVaugirard;
+import IHM.Plateau.Terrains.BleuFonce.CaseChampsElysees;
+import IHM.Plateau.Terrains.BleuFonce.CasePaix;
+import IHM.Plateau.Terrains.Jaune.CaseBourse;
+import IHM.Plateau.Terrains.Jaune.CaseFayette;
+import IHM.Plateau.Terrains.Jaune.CaseHonore;
 import IHM.Plateau.Terrains.Marron.CaseBelleville;
 import IHM.Plateau.Terrains.Marron.CaseLecourbe;
 import IHM.Plateau.Terrains.Orange.CaseMozart;
@@ -17,6 +23,12 @@ import IHM.Plateau.Terrains.Orange.CaseSaintMichelle;
 import IHM.Plateau.Terrains.Rose.CaseNeuilly;
 import IHM.Plateau.Terrains.Rose.CaseParadis;
 import IHM.Plateau.Terrains.Rose.CaseVillette;
+import IHM.Plateau.Terrains.Rouge.CaseHenriMartin;
+import IHM.Plateau.Terrains.Rouge.CaseMalsherbes;
+import IHM.Plateau.Terrains.Rouge.CaseMatignon;
+import IHM.Plateau.Terrains.Vert.CaseBreteuil;
+import IHM.Plateau.Terrains.Vert.CaseCapucine;
+import IHM.Plateau.Terrains.Vert.CaseFoch;
 import Metier.Plateau.Cases;
 
 public class Fabrique {
@@ -84,16 +96,44 @@ public class Fabrique {
             break;
 
             //CASE DU HAUT
-            
+            case "Avenue Matignon" : c = new CaseMatignon(caseMetier, c.getListeCases());
+            break ;
+            case "Boul. Malesherbes" : c = new CaseMalsherbes(caseMetier, c.getListeCases());
+            break;
+            case "Avenue Henri-Martin" : c = new CaseHenriMartin(caseMetier, c.getListeCases());
+            break ;
+
+            case "Gare du Nord": c = new GareNord(caseMetier, c.getListeCases());
+            break;
+
+            case "Faubourg Saint-Honoré": c = new CaseHonore(caseMetier, c.getListeCases());
+            break ;
+            case "Place de la Bourse": c = new CaseBourse(caseMetier, c.getListeCases());
+            break ;
+            case "Rue Lafayette" : c = new CaseFayette(caseMetier, c.getListeCases());
+            break ;
 
             case "Robinet": c = new Robinet(caseMetier, c.getListeCases());
             break;
+
+            case "Avenue de Breteuil" : c = new CaseBreteuil(caseMetier, c.getListeCases());
+            break ;
+            case "Avenue Foch" : c = new CaseFoch(caseMetier, c.getListeCases());
+            break ;
+            case "Boul. des Capucines": c = new CaseCapucine(caseMetier, c.getListeCases());
+            break ;
+
+            case "Gare de Saint-Lazare": c = new GareSaintLazare(caseMetier, c.getListeCases());
+            break ;
+            case "Avenue des Champs-Elysées" : c = new CaseChampsElysees(caseMetier, c.getListeCases());
+            break;
+
             case "TaxeDeLuxe": c = new TaxeDeLuxe(caseMetier, c.getListeCases());
             break;
-            case "Impot": c = new Impot(caseMetier, c.getListeCases());
-            break;
+            case "Rue de la Paix": c = new CasePaix(caseMetier, c.getListeCases());
+            break ;
 
-
+            //PAR DEFAUT
             default: c= null;
         }
         return c;
