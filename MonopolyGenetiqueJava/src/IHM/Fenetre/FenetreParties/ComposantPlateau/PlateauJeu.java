@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Plateau.VueCases;
 import Metier.Automate.Automate;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -26,10 +27,6 @@ public class PlateauJeu extends Parent {
 
     public PlateauJeu(Automate automate)
     {
-        for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
-        {
-
-        }
 
         Rectangle rect_plateau = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
