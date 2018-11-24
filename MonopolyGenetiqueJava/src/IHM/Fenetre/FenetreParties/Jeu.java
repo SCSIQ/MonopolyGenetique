@@ -53,8 +53,8 @@ public class Jeu extends Parent {
         //Du coup je l'ai désactivé poiur pouvoir avancer
         //Aurian
 
-        //ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate);
-        //this.getChildren().add(zoneAd);
+        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas);
+        this.getChildren().add(zoneAd);
 
         //APPEL ZONE POSSESSION
         ZonePossessions poss = new ZonePossessions(automate);
