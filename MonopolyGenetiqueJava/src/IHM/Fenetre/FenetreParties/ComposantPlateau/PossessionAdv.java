@@ -71,8 +71,8 @@ public class PossessionAdv extends Parent {
 
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
-        textTerrain.setLayoutX(55);
-        textTerrain.setLayoutY(95);
+        textTerrain.setLayoutX(115);
+        textTerrain.setLayoutY(115);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textTerrain);
@@ -81,7 +81,7 @@ public class PossessionAdv extends Parent {
         rect_terrain.setHeight(390);
         rect_terrain.setWidth(305);
         rect_terrain.setX(15);
-        rect_terrain.setY(85);
+        rect_terrain.setY(105);
 
         //COULEUR ET CONTOUR
         rect_terrain.setFill(Color.TRANSPARENT);
@@ -94,8 +94,8 @@ public class PossessionAdv extends Parent {
 
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
-        textGare.setLayoutX(100);
-        textGare.setLayoutY(325);
+        textGare.setLayoutX(450);
+        textGare.setLayoutY(115);
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textGare);
 
@@ -104,8 +104,8 @@ public class PossessionAdv extends Parent {
         Rectangle rect_gare  = new Rectangle();
         rect_gare.setWidth(305);
         rect_gare.setHeight(160);
-        rect_gare.setX(950);
-        rect_gare.setY(315);
+        rect_gare.setX(330);
+        rect_gare.setY(105);
 
         //COULEUR ET CONTOUR
         rect_gare.setFill(Color.TRANSPARENT);
@@ -120,8 +120,8 @@ public class PossessionAdv extends Parent {
 
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
-        textCompagnies.setLayoutX(1050);
-        textCompagnies.setLayoutY(495);
+        textCompagnies.setLayoutX(410);
+        textCompagnies.setLayoutY(275);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textCompagnies);
@@ -131,8 +131,8 @@ public class PossessionAdv extends Parent {
         Rectangle rect_compagnie = new Rectangle();
         rect_compagnie.setHeight(110);
         rect_compagnie.setWidth(305);
-        rect_compagnie.setX(950);
-        rect_compagnie.setY(485);
+        rect_compagnie.setX(330);
+        rect_compagnie.setY(270);
 
         //COULEUR ET CONTOUR
         rect_compagnie.setFill(Color.TRANSPARENT);
