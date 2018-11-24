@@ -24,6 +24,10 @@ public abstract class  VueCases {
     public Cases getCase(){
         return caseMetier;
     }
+
+    public ArrayList<Pane> getListeCases(){
+        return listeCases; 
+    }
  
 
 }
