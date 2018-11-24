@@ -22,7 +22,7 @@ public class ZonePossessions extends Parent {
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
         textPossession.setLayoutX(860);
-        textPossession.setLayoutY(285);
+        textPossession.setLayoutY(290);
         textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textPossession);
 
@@ -52,10 +52,10 @@ public class ZonePossessions extends Parent {
         Rectangle rect_possession = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 
-        rect_possession.setHeight(439);
+        rect_possession.setHeight(429);
         rect_possession.setWidth(630);
         rect_possession.setX(630);
-        rect_possession.setY(275);
+        rect_possession.setY(285);
 
         //COULEUR ET CONTOUR
         rect_possession.setFill(Color.TRANSPARENT);

@@ -135,7 +135,48 @@ public class Solo extends Parent {
                 //TEST POUR INIT JOUEUR 2 et 3
                for(int i=1;i<=automate.getNombreJoueur();i++)
                {
-                   automate.getListeJoueurs().get(1).setCouleur(couleurAdversaire(1));
+                   if(automate.getListeJoueurs().size()==2)
+                   {
+                       if(i==1) {
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }
+                   }
+                   else if(automate.getListeJoueurs().size()==3)
+                   {
+                       if(i==1){
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }else if(i==2){
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }
+
+                   }else if(automate.getListeJoueurs().size()==4)
+                   {
+                       if(i==1){
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }else if(i==2)
+                       {
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }else if(i==3)
+                       {
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }
+                   }else if(automate.getListeJoueurs().size()==5)
+                   {
+                       if(i==1){
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }else if(i==2)
+                       {
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }else if(i==3)
+                       {
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }else if(i==4)
+                       {
+                           automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                       }
+                   }
+
+
                }
 
 
