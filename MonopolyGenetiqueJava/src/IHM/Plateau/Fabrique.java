@@ -14,8 +14,8 @@ public class Fabrique {
     {
         VueCases c= null ;
         switch(caseMetier.toString()){
-            case "Départ": c= new Depart(caseMetier);
-            break;
+            //case "Départ": c= new Depart(caseMetier, getlisteCases());
+            //break;
             default: c= null;
         }
         return c;

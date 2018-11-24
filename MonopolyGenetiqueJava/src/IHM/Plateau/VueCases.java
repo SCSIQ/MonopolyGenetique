@@ -13,8 +13,9 @@ public abstract class  VueCases {
     private ArrayList<Pane> listeCases = new ArrayList<>() ;
 
     //CONSTRUCTEUR PRENANT UNE CASE DU METIER EN PARAMETRE
-    public VueCases(Cases caseMetier)
+    public VueCases(Cases caseMetier, ArrayList<Pane> listeCases)
     {
+        this.listeCases= listeCases;
         this.caseMetier = caseMetier;
     }
 
