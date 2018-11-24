@@ -3,6 +3,7 @@ package IHM.Fenetre.FentreMenuPrincipal;
 import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.InitialisationPartieJoueurs;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -100,7 +101,7 @@ public class HumainVShumain extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                Color couleur= Color.BLACK;
+                /*Color couleur= Color.BLACK;
 
                 //ici ajouter lancement automate avec en param le joueur
                 Joueur j = new Joueur(null, null);
@@ -108,7 +109,7 @@ public class HumainVShumain extends Parent {
                 listeJoueurs.add(j);
                 /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeJoueurs.add(new Joueur());
-                }*/
+                }
                 System.out.println("Nombre de joueurs : "+listeJoueurs.size());
                 Automate automate = new Automate(listeJoueurs);
 
@@ -120,7 +121,75 @@ public class HumainVShumain extends Parent {
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
                 nouvelle_fenetre_plateau.show();
+                nouvelle_fenetre.close();*/
+
+                //début initialisation automate
+                InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
+                ArrayList<Color> listeCouleurs = new ArrayList<>();
+                for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
+                    listeCouleurs.add(couleurAdversaire(i));
+                }
+                Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
+                //fin initialisation automate
+
+                //TEST POUR INIT JOUEUR 2 et 3
+                for(int i=1;i<=automate.getNombreJoueur();i++)
+                {
+                    if(automate.getListeJoueurs().size()==2)
+                    {
+                        if(i==1) {
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }
+                    }
+                    else if(automate.getListeJoueurs().size()==3)
+                    {
+                        if(i==1){
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }else if(i==2){
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }
+
+                    }else if(automate.getListeJoueurs().size()==4)
+                    {
+                        if(i==1){
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }else if(i==2)
+                        {
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }else if(i==3)
+                        {
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }
+                    }else if(automate.getListeJoueurs().size()==5)
+                    {
+                        if(i==1){
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }else if(i==2)
+                        {
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }else if(i==3)
+                        {
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }else if(i==4)
+                        {
+                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
+                        }
+                    }
+
+
+                }
+
+                automate.getJoueurCourant().setCouleur(Color.BLANCHEDALMOND);
+
+                //création du plateau
+                Stage nouvelle_fenetre_plateau = new Stage();
+                Jeu fenetre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,automate.getJoueurCourant().getCouleur(),automate);
+                Scene nouvelle_scene = new Scene(fenetre_jeu,1275,730);
+                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
+                nouvelle_fenetre_plateau.show();
+
                 nouvelle_fenetre.close();
+
             }
         });
 
@@ -145,5 +214,23 @@ public class HumainVShumain extends Parent {
 
 
     }
+    public Color couleurAdversaire(int i)
+    {
 
+        Color couleur;
+        switch (i){
+            case 0 : couleur = Color.BLANCHEDALMOND;
+                break;
+            case 1 : couleur = Color.BLACK;
+                break;
+            case 2 : couleur = Color.GREEN;
+                break;
+            case 3 : couleur = Color.YELLOW;
+                break;
+            case 4 : couleur = Color.BLUE;
+                break;
+            default: couleur = Color.AZURE;
+        }
+        return couleur;
+    }
 }
