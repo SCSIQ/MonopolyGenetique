@@ -28,6 +28,9 @@ public abstract class  VueCases {
     public ArrayList<Pane> getListeCases(){
         return listeCases; 
     }
+
+    //Permet de récupérer le type de la Case
+    public abstract String getType() ;
  
 
 }

@@ -12,4 +12,9 @@ public class CaseCarte extends VueCases {
     public CaseCarte(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Chance";
+    }
 }

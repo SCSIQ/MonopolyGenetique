@@ -13,4 +13,9 @@ public class CaseBelleville extends Terrain {
     {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Belleville";
+    }
 }

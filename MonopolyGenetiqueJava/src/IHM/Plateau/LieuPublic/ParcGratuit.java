@@ -11,4 +11,9 @@ public class ParcGratuit extends VueCases {
     public ParcGratuit(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Parc gratuit";
+    }
 }

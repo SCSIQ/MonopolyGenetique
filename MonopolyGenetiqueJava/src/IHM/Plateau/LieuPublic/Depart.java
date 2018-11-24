@@ -11,4 +11,9 @@ public class Depart extends VueCases {
     public Depart(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Départ";
+    }
 }

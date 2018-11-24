@@ -13,4 +13,9 @@ public class GareSaintLazare extends Proprietes {
     public GareSaintLazare(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Gare de Saint-Lazare";
+    }
 }

@@ -12,4 +12,9 @@ public class GareNord extends Proprietes {
     public GareNord(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Gare de Nord";
+    }
 }

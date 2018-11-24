@@ -11,4 +11,9 @@ public class Robinet extends ServicePublic {
     public Robinet(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Robinet";
+    }
 }

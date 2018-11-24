@@ -15,4 +15,9 @@ public class CaseCourcelles extends Terrain {
     public CaseCourcelles(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Courcelles";
+    }
 }

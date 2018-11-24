@@ -14,4 +14,9 @@ public class CaseRepublique extends Terrain {
     public CaseRepublique(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Republique";
+    }
 }

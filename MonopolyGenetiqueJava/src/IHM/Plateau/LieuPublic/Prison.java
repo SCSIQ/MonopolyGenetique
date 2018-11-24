@@ -11,4 +11,9 @@ public class Prison extends VueCases {
     public Prison(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Prison";
+    }
 }

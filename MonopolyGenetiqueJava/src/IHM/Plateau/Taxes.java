@@ -11,4 +11,9 @@ public class Taxes extends VueCases {
     public Taxes(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Taxe";
+    }
 }

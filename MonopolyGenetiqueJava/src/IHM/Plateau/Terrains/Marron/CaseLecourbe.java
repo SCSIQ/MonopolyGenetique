@@ -12,4 +12,9 @@ public class CaseLecourbe extends Terrain {
     public CaseLecourbe(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Lecourbe";
+    }
 }

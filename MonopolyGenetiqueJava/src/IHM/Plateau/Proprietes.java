@@ -6,7 +6,7 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-public class Proprietes extends VueCases {
+public abstract class Proprietes extends VueCases {
 
     private String label ;
     private int prix ;
@@ -16,4 +16,7 @@ public class Proprietes extends VueCases {
     public Proprietes(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public abstract String getType() ;
 }

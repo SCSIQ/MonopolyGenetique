@@ -12,4 +12,9 @@ public class Ampoule extends Proprietes {
         super(caseMetier, listeCases);
     }
 
+    @Override
+    public String getType() {
+        return "Ampoule";
+    }
+
 }

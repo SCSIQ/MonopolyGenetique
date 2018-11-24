@@ -11,4 +11,9 @@ public class CaseCapucine extends Terrain {
     public CaseCapucine(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Capucine";
+    }
 }

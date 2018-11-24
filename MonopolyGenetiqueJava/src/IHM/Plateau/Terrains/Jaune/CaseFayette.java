@@ -14,4 +14,9 @@ public class CaseFayette extends Terrain {
     public CaseFayette(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Fayette";
+    }
 }

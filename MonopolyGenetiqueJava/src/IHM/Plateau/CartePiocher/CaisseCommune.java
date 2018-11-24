@@ -13,6 +13,11 @@ public class CaisseCommune extends VueCases {
         super(caseMetier, listeCases);
     }
 
+    @Override
+    public String getType() {
+        return "Caisse de Communauté";
+    }
+
     public void PiocherCarteCaisseCommune(){
 
     }

@@ -12,6 +12,11 @@ public class Chance extends VueCases {
         super(caseMetier, listeCases);
     }
 
+    @Override
+    public String getType() {
+        return "Chance";
+    }
+
     public void PiocherCarteChance(){
 
     }

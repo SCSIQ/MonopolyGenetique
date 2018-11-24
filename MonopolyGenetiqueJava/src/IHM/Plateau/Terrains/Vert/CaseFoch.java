@@ -11,4 +11,9 @@ public class CaseFoch extends Terrain {
     public CaseFoch(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Foch";
+    }
 }

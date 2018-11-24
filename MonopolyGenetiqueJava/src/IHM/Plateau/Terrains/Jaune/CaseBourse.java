@@ -12,4 +12,9 @@ public class CaseBourse extends Terrain {
     public CaseBourse(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Bourse";
+    }
 }

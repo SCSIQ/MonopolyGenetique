@@ -12,4 +12,9 @@ public class CasePigalle extends Terrain {
     public CasePigalle(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
+    @Override
+    public String getType() {
+        return "Pigalle";
+    }
 }
