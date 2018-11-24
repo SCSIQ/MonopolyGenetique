@@ -48,7 +48,7 @@ public class Jeu extends Parent {
         this.getChildren().add(zoneJoueur);
 
         //APPEL ZONE ADVERSAIRE
-        ZoneAdversaires zoneAd = new ZoneAdversaires(automate);
+        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate,canvas);
         this.getChildren().add(zoneAd);
 
         //APPEL ZONE POSSESSION

@@ -1,19 +1,31 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 //CLASSE S'OCCUPANT DE LA PARTIE DES ADVERSAIRES DES JOUEURS
 public class ZoneAdversaires extends Parent {
+    //Attributs
+    Canvas canvas;
 
-    public ZoneAdversaires(Automate automate)
+
+    public ZoneAdversaires(Stage primaryStage, Stage fenetre_actuelle, Automate automate, Canvas canvas)
     {
+        this.canvas=canvas;
+
         //Ajout label adversaire
         Label adversaire = new Label("ADVERSAIRES");
         adversaire.setLayoutX(890);
@@ -38,13 +50,13 @@ public class ZoneAdversaires extends Parent {
             if(automate.getListeJoueurs().size()==2)
             {
                 if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
-                    RectangleAdv1(automate, i);
+                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }
             }
             else if(automate.getListeJoueurs().size()==3)
             {
                 if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
-                    RectangleAdv1(automate, i);
+                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
                     RectangleAdv2(automate, i);
                 }
@@ -52,7 +64,7 @@ public class ZoneAdversaires extends Parent {
             }else if(automate.getListeJoueurs().size()==4)
             {
                 if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
-                    RectangleAdv1(automate, i);
+                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv2(automate, i);
@@ -63,7 +75,7 @@ public class ZoneAdversaires extends Parent {
             }else if(automate.getListeJoueurs().size()==5)
             {
                 if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
-                    RectangleAdv1(automate, i);
+                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv2(automate, i);
@@ -81,7 +93,8 @@ public class ZoneAdversaires extends Parent {
 
     }
 
-    public void RectangleAdv1(Automate automate,int i)
+    //Les différentes zones des adversaires
+    public void RectangleAdv1(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
         //Dessin du premier rectangle
         Rectangle rect_adv = new Rectangle();
@@ -123,6 +136,14 @@ public class ZoneAdversaires extends Parent {
         r_adv1_couleur.setFill(automate.getListeJoueurs().get(1).getCouleur());
         this.getChildren().add(r_adv1_couleur);
 
+        //action bouton
+        bt_adv_details.setOnAction(new EventHandler<ActionEvent>(){
+        @Override
+            public void handle(ActionEvent event)
+            {
+                possessionAdv(primaryStage, fenetre_actuelle, automate);
+            }
+        });
 
     }
 
@@ -259,5 +280,32 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(r_adv4_couleur);
 
 
+    }
+
+    //création de la fenêtre de possession des advseraires
+    public void possessionAdv(Stage primaryStage, Stage fenetre_actuelle, Automate automate)
+    {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_possession_Adv = new Stage();
+
+        PossessionAdv possAdv = new PossessionAdv(primaryStage, nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate);
+        Scene nouvelle_scene = new Scene(possAdv, 650,610);
+
+        nouvelle_fenetre_possession_Adv.setScene(nouvelle_scene);
+
+        nouvelle_fenetre_possession_Adv.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_possession_Adv.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_possession_Adv.show();
+    }
+
+    public void fenetreNoire()
+    {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.BLACK);
+        canvas.setOpacity(0.5);
+        gc.fillRect(0,0, 1600,1600);
+        this.getChildren().add(canvas);
     }
 }
