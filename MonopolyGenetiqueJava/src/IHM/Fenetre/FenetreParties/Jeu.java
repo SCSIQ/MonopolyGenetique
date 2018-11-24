@@ -48,8 +48,13 @@ public class Jeu extends Parent {
         this.getChildren().add(zoneJoueur);
 
         //APPEL ZONE ADVERSAIRE
-        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate,canvas);
-        this.getChildren().add(zoneAd);
+
+        //Je ne sais pas pourquoi ça ne marche pas mais ça m'empeche de travailler...
+        //Du coup je l'ai désactivé poiur pouvoir avancer
+        //Aurian
+
+        //ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate);
+        //this.getChildren().add(zoneAd);
 
         //APPEL ZONE POSSESSION
         ZonePossessions poss = new ZonePossessions(automate);
@@ -97,7 +102,7 @@ public class Jeu extends Parent {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
                     pion.entrerDansCase();
-                    automate.getJoueurCourant().setaLanceDes(true);
+                    //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
                 }else{
                     automate.evoluer("lancerDes");

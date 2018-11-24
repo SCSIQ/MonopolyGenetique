@@ -27,9 +27,11 @@ public class LancerDesJoueur extends Etat {
 
         Joueur j = super.getListeJoueurs().get(0); //récupère le joueur courant
 
+        //System.out.println("AVANT DEPLACEMENT --> LancerDesJoueur : "+j.getaLanceDes());
+
         if(j.getaLanceDes()==false){
             this.transitionToDeplacement = true;
-            j.setaLanceDes(true);
+
             int de1;
             int de2;
             Random toto = new Random();
@@ -40,6 +42,23 @@ public class LancerDesJoueur extends Etat {
             j.setResDes2(de2);
             j.setResLanceDes(score);
             System.out.println("    score joueur : "+score);
+
+            if(de1==de2 && j.getNbDoubles()<3) //si double mais pas le troisième
+            {
+                j.setaLanceDes(false);
+                j.setNbDoubles(j.getNbDoubles()+1);
+            }
+            else if(j.getNbDoubles()==3) //si trois doubles
+            {
+                j.setaLanceDes(true);
+                j.getPion().setGoToPrison(true);
+            }
+            else
+            {
+                j.setaLanceDes(true);
+            }
+            //System.out.println("APRES DEPLACEMENT --> LancerDesJoueur : "+j.getaLanceDes());
+
         }else{
             this.transitionToDeplacement = false;
             System.out.println("    vous avez déjà lancé des dés");

@@ -17,6 +17,7 @@ public class Joueur {
     private int resDes1 = 0; // initialise à 0 le dés 1
     private int resDes2 = 0; // initialise à 0 le dés 2
     private int resLanceDes = 0; // initialise à 0 l'addition des deux dés
+    private int nbDoubles = 0; //nombre de doubles que fait le joueur lors du lancé des dés
     private ArrayList<Cases> listeCases;
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
@@ -107,6 +108,12 @@ public class Joueur {
         this.solde = solde;
     }//modifie le montant de l'argent que le joueur posséde
 
+    public int getNbDoubles() {
+        return nbDoubles;
+    }
 
-
+    public void setNbDoubles(int nbDoubles) {
+        this.nbDoubles = nbDoubles;
+    }
 }
+

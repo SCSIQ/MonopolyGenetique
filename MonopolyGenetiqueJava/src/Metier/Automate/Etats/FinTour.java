@@ -19,7 +19,7 @@ public class FinTour extends Etat{
         Joueur j = listeJoueurs.get(0);
         listeJoueurs.remove(0);
         listeJoueurs.add(j);
-        //super.setListeJoueurs(listeJoueurs);
+        //System.out.println("Fin du tour de "+j.getNom());
     }
 
     @Override
