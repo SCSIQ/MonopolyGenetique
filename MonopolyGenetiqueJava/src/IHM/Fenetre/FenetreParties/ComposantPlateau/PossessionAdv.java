@@ -14,6 +14,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 
 public class PossessionAdv extends Parent {
@@ -30,7 +31,7 @@ public class PossessionAdv extends Parent {
         Rectangle rect_possession = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 
-        rect_possession.setHeight(429);
+        rect_possession.setHeight(439);
         rect_possession.setWidth(630);
         rect_possession.setX(10);
         rect_possession.setY(70);
@@ -45,10 +46,10 @@ public class PossessionAdv extends Parent {
         RectangleCompagnies();
         RectangleCartePrison();
 
-        Button bt_ok = new Button("Ok");
+        Button bt_ok = new Button("revenir au jeu");
 
         bt_ok.setLayoutX(270);
-        bt_ok.setLayoutY(550);
+        bt_ok.setLayoutY(530);
 
         bt_ok.setPrefSize(150, 10);
 
@@ -64,6 +65,21 @@ public class PossessionAdv extends Parent {
         });
 
         this.getChildren().add(bt_ok);
+////////BLOCAGE REDUCTION
+
+        nouvelle_fenetre_menu.setMinWidth(680);
+        nouvelle_fenetre_menu.setMinHeight(630);
+
+        nouvelle_fenetre_menu.setMaxWidth(680);
+        nouvelle_fenetre_menu.setMaxHeight(630);
+
+////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
+        nouvelle_fenetre_menu.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                event.consume();
+            }
+        });
 
     }
 
@@ -72,16 +88,16 @@ public class PossessionAdv extends Parent {
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
         textTerrain.setLayoutX(115);
-        textTerrain.setLayoutY(115);
+        textTerrain.setLayoutY(95);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textTerrain);
 
         Rectangle rect_terrain = new Rectangle();
-        rect_terrain.setHeight(390);
+        rect_terrain.setHeight(410);
         rect_terrain.setWidth(305);
         rect_terrain.setX(15);
-        rect_terrain.setY(105);
+        rect_terrain.setY(85);
 
         //COULEUR ET CONTOUR
         rect_terrain.setFill(Color.TRANSPARENT);
@@ -95,7 +111,7 @@ public class PossessionAdv extends Parent {
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
         textGare.setLayoutX(450);
-        textGare.setLayoutY(115);
+        textGare.setLayoutY(105);
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textGare);
 
@@ -103,9 +119,9 @@ public class PossessionAdv extends Parent {
 
         Rectangle rect_gare  = new Rectangle();
         rect_gare.setWidth(305);
-        rect_gare.setHeight(160);
+        rect_gare.setHeight(210);
         rect_gare.setX(330);
-        rect_gare.setY(105);
+        rect_gare.setY(85);
 
         //COULEUR ET CONTOUR
         rect_gare.setFill(Color.TRANSPARENT);
@@ -120,8 +136,8 @@ public class PossessionAdv extends Parent {
 
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
-        textCompagnies.setLayoutX(410);
-        textCompagnies.setLayoutY(275);
+        textCompagnies.setLayoutX(420);
+        textCompagnies.setLayoutY(315);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textCompagnies);
@@ -129,10 +145,10 @@ public class PossessionAdv extends Parent {
 
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_compagnie = new Rectangle();
-        rect_compagnie.setHeight(110);
+        rect_compagnie.setHeight(130);
         rect_compagnie.setWidth(305);
         rect_compagnie.setX(330);
-        rect_compagnie.setY(270);
+        rect_compagnie.setY(310);
 
         //COULEUR ET CONTOUR
         rect_compagnie.setFill(Color.TRANSPARENT);
@@ -144,8 +160,8 @@ public class PossessionAdv extends Parent {
 
         //Ajout d'un label "Vous êtes libéré de prison"
         Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" :");
-        textPrison.setLayoutX(1000);
-        textPrison.setLayoutY(610);
+        textPrison.setLayoutX(400);
+        textPrison.setLayoutY(460);
         textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         this.getChildren().add(textPrison);
 
@@ -155,8 +171,8 @@ public class PossessionAdv extends Parent {
         Rectangle rect_cartePrison = new Rectangle();
         rect_cartePrison.setHeight(50);
         rect_cartePrison.setWidth(305);
-        rect_cartePrison.setX(950);
-        rect_cartePrison.setY(605);
+        rect_cartePrison.setX(330);
+        rect_cartePrison.setY(445);
 
         //COULEUR ET CONTOUR
         rect_cartePrison.setFill(Color.TRANSPARENT);

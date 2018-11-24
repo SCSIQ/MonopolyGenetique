@@ -58,7 +58,7 @@ public class ZoneAdversaires extends Parent {
                 if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
-                    RectangleAdv2(automate, i);
+                    RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
                 }
 
             }else if(automate.getListeJoueurs().size()==4)
@@ -67,10 +67,10 @@ public class ZoneAdversaires extends Parent {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv2(automate, i);
+                    RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==3)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv3(automate, i);
+                    RectangleAdv3(primaryStage, fenetre_actuelle,automate, i);
                 }
             }else if(automate.getListeJoueurs().size()==5)
             {
@@ -78,13 +78,13 @@ public class ZoneAdversaires extends Parent {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv2(automate, i);
+                    RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==3)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv3(automate, i);
+                    RectangleAdv3(primaryStage, fenetre_actuelle,automate, i);
                 }else if((i==4)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv4(automate,i);
+                    RectangleAdv4(primaryStage, fenetre_actuelle,automate, i);
                 }
             }
 
@@ -147,7 +147,7 @@ public class ZoneAdversaires extends Parent {
 
     }
 
-    public void RectangleAdv2(Automate automate,int i)
+    public void RectangleAdv2(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
         //Dessin du premier rectangle
         Rectangle rect_adv2 = new Rectangle();
@@ -189,10 +189,17 @@ public class ZoneAdversaires extends Parent {
         r_adv2_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
         this.getChildren().add(r_adv2_couleur);
 
-
+        //action bouton
+        bt_adv_details2.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event)
+            {
+                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+            }
+        });
     }
 
-    public void RectangleAdv3(Automate automate,int i)
+    public void RectangleAdv3(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
         //Dessin du premier rectangle
         Rectangle rect_adv3 = new Rectangle();
@@ -218,10 +225,10 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(argent_adv3);
 
         //BOUTON DETAILS
-        Button bt_adv_details4 = new Button("DETAILS");
-        bt_adv_details4.setLayoutX(1170);
-        bt_adv_details4.setLayoutY(120);
-        this.getChildren().add(bt_adv_details4);
+        Button bt_adv_details3 = new Button("DETAILS");
+        bt_adv_details3.setLayoutX(1170);
+        bt_adv_details3.setLayoutY(120);
+        this.getChildren().add(bt_adv_details3);
 
         //ajout rectangle couleur
         Rectangle r_adv3_couleur = new Rectangle();
@@ -234,10 +241,17 @@ public class ZoneAdversaires extends Parent {
         r_adv3_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
         this.getChildren().add(r_adv3_couleur);
 
-
+        //action bouton
+        bt_adv_details3.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event)
+            {
+                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+            }
+        });
     }
 
-    public void RectangleAdv4(Automate automate,int i)
+    public void RectangleAdv4(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
         //Dessin du premier rectangle
         Rectangle rect_adv4 = new Rectangle();
@@ -279,6 +293,14 @@ public class ZoneAdversaires extends Parent {
         r_adv4_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
         this.getChildren().add(r_adv4_couleur);
 
+        //action bouton
+        bt_adv_details4.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event)
+            {
+                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+            }
+        });
 
     }
 
@@ -294,6 +316,7 @@ public class ZoneAdversaires extends Parent {
 
         nouvelle_fenetre_possession_Adv.setScene(nouvelle_scene);
 
+        //fenetre modale
         nouvelle_fenetre_possession_Adv.initModality(Modality.WINDOW_MODAL);
         nouvelle_fenetre_possession_Adv.initOwner(fenetre_actuelle);
 
