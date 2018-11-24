@@ -1,4 +1,4 @@
-package IHM.Plateau.CartePiocher;
+package IHM.Plateau.LieuPublic;
 
 import IHM.Plateau.Proprietes;
 import Metier.Plateau.Cases;
