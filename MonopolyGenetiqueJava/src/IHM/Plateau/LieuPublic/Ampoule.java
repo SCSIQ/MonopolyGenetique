@@ -11,4 +11,5 @@ public class Ampoule extends Proprietes {
     public Ampoule(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
+
 }
