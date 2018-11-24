@@ -8,10 +8,10 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 //CASE RUE REPUBLIQUE
-public class BleuCiel3 extends Terrain {
+public class CaseRepublique extends Terrain {
 
 
-    public BleuCiel3(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseRepublique(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

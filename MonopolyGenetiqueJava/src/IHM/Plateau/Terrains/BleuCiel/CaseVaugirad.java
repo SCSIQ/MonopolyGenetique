@@ -1,17 +1,17 @@
 package IHM.Plateau.Terrains.BleuCiel;
 
-
-
+import IHM.Plateau.Proprietes;
 import IHM.Plateau.Terrain;
 import Metier.Plateau.Cases;
 import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-//CASE RUE DE COURCELLES
-public class BleuCiel2 extends Terrain {
+//CASE RUE DE VAUGIRAD
+public class CaseVaugirad extends Terrain {
 
-    public BleuCiel2(Cases caseMetier, ArrayList<Pane> listeCases) {
+
+    public CaseVaugirad(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

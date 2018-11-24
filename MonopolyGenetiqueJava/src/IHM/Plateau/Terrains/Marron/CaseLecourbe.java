@@ -7,8 +7,9 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 //RUE LECOURBE
-public class Marron2 extends Terrain {
-    public Marron2(Cases caseMetier, ArrayList<Pane> listeCases) {
+public class CaseLecourbe extends Terrain {
+
+    public CaseLecourbe(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

@@ -7,8 +7,8 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 //CASE DE LA VILETTE
-public class Rose1 extends Terrain {
-    public Rose1(Cases caseMetier, ArrayList<Pane> listeCases) {
+public class CaseVillette extends Terrain {
+    public CaseVillette(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

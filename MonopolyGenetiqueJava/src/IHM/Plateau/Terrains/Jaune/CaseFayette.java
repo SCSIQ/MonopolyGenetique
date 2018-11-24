@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 
 //CASE LA FAYETTE
-public class Jaune3 extends Terrain {
+public class CaseFayette extends Terrain {
 
-    public Jaune3(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseFayette(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

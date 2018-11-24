@@ -7,9 +7,9 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 //CASE SAINT MICHELLE
-public class Orange2 extends Terrain {
+public class CaseSaintMichelle extends Terrain {
 
-    public Orange2(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseSaintMichelle(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

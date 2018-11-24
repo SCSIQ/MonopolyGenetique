@@ -1,4 +1,4 @@
-package IHM.Plateau.Terrains.Orange;
+package IHM.Plateau.Terrains.Rouge;
 
 import IHM.Plateau.Terrain;
 import Metier.Plateau.Cases;
@@ -6,10 +6,10 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-//CASE PIGALLE
-public class Orange3 extends Terrain {
+//CASE MATIGNON
+public class CaseMatignon extends Terrain {
 
-    public Orange3(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseMatignon(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }
