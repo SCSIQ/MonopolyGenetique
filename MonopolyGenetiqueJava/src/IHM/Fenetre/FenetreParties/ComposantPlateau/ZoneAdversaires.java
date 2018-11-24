@@ -35,18 +35,28 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(rect_adversaire);
 
         //Ajout adversaire 1 POUR SOLO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        for(int i=1;i<=automate.getNombreJoueur();i++) {
-            if(i==1) {
-                RectangleAdv1(automate);
-            }
-           /* else if(i==2)
+        for(int i=0;i<=automate.getNombreJoueur();i++) {
+            if(automate.getListeJoueurs().size()==2)
             {
-                RectangleAdv2();
-            }*/
+                if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                    RectangleAdv1(automate, i);
+                }
+            }
+            else if(automate.getListeJoueurs().size()==3)
+            {
+                if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                    RectangleAdv1(automate, i);
+                }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                    RectangleAdv2(automate, i);
+                }
+            }
+
         }
+
+
     }
 
-    public void RectangleAdv1(Automate automate)
+    public void RectangleAdv1(Automate automate,int i)
     {
         //Dessin du premier rectangle
         Rectangle rect_adv = new Rectangle();
@@ -60,13 +70,13 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(rect_adv);
 
         //Nom du joueur
-        Label adv1 = new Label("JOUEUR "+automate.getListeJoueurs().get(1).getNom());
+        Label adv1 = new Label("JOUEUR "+automate.getListeJoueurs().get(i).getNom());
         adv1.setLayoutX(700);
         adv1.setLayoutY(120);
         this.getChildren().add(adv1);
 
         //ARGENT Joueur 2
-        Label argent_adv1 = new Label("ARGENT : ");
+        Label argent_adv1 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
         argent_adv1.setLayoutX(700);
         argent_adv1.setLayoutY(150);
         this.getChildren().add(argent_adv1);
@@ -91,7 +101,7 @@ public class ZoneAdversaires extends Parent {
 
     }
 
-    public void RectangleAdv2(Automate automate)
+    public void RectangleAdv2(Automate automate,int i)
     {
         //Dessin du premier rectangle
         Rectangle rect_adv = new Rectangle();
@@ -105,7 +115,7 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(rect_adv);
 
         //Nom du joueur
-        Label adv2 = new Label("JOUEUR "+automate.getListeJoueurs().get(2).getNom());
+        Label adv2 = new Label("JOUEUR "+automate.getListeJoueurs().get(i).getNom());
         adv2.setLayoutX(700);
         adv2.setLayoutY(195);
         this.getChildren().add(adv2);
@@ -118,7 +128,7 @@ public class ZoneAdversaires extends Parent {
 
         //BOUTON DETAILS
         Button adv_details = new Button("DETAILS");
-        adv_details.setLayoutX(870);
+        adv_details.setLayoutX(850);
         adv_details.setLayoutY(195);
         this.getChildren().add(adv_details);
 
@@ -130,7 +140,7 @@ public class ZoneAdversaires extends Parent {
         r_adv1_couleur.setLayoutY(195);
         r_adv1_couleur.setStroke(Color.BLACK);
         r_adv1_couleur.setStrokeWidth(1);
-        r_adv1_couleur.setFill(automate.getListeJoueurs().get(2).getCouleur());
+        r_adv1_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
         this.getChildren().add(r_adv1_couleur);
 
 

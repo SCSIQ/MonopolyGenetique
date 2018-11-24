@@ -29,6 +29,7 @@ public class Fabrique {
             case "TaxeDeLuxe": c = new TaxedeLuxe(caseMetier, getListeCases());
             break;
             case "Impot": c = new Impot(caseMetier, getListeCases());
+            break;
 
             */
             default: c= null;

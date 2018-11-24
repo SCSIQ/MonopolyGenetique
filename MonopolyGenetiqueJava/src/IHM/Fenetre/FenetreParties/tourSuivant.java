@@ -25,7 +25,6 @@ public class tourSuivant extends Parent {
             automate.evoluer("tourSuivant");
 
             ///////////////////////////////////////////////////////////////////TEXTE
-            //automate.getJoueurCourant().;
             Text t_lancerDeVrai = new Text("Tour suivant : numTour");
 
             t_lancerDeVrai.setLayoutX(120);
@@ -33,6 +32,7 @@ public class tourSuivant extends Parent {
 
             t_lancerDeVrai.setScaleX(2);
             t_lancerDeVrai.setScaleY(2);
+
 
             //AJOUT
             this.getChildren().add(t_lancerDeVrai);

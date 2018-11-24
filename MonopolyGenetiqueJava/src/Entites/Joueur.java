@@ -20,7 +20,7 @@ public class Joueur {
     private ArrayList<Cases> listeCases;
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
-        this.solde = 500; //a revoir car valeur fausse
+        this.solde = 2000; //a revoir car valeur fausse
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
     }

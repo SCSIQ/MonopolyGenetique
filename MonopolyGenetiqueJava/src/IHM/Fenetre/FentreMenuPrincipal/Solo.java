@@ -133,17 +133,10 @@ public class Solo extends Parent {
                 //fin initialisation automate
 
                 //TEST POUR INIT JOUEUR 2 et 3
-                for(int i=1;i<=automate.getNombreJoueur();i++) {
-                    if(i==1){
-                        automate.getListeJoueurs().get(1).setNom("2");
-                        automate.getListeJoueurs().get(1).setCouleur(couleurAdversaire(1));
-                    }
-                    /*else if(i==2){
-                        automate.getListeJoueurs().get(2).setNom("3");
-                        automate.getListeJoueurs().get(2).setCouleur(couleurAdversaire(2));
-                    }*/
-
-                }
+               for(int i=1;i<=automate.getNombreJoueur();i++)
+               {
+                   automate.getListeJoueurs().get(1).setCouleur(couleurAdversaire(1));
+               }
 
 
                 //Ajout de la couleur et du nom
