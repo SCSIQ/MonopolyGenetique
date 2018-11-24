@@ -8,10 +8,10 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 //CASE RUE DE VAUGIRAD
-public class CaseVaugirad extends Terrain {
+public class CaseVaugirard extends Terrain {
 
 
-    public CaseVaugirad(Cases caseMetier, ArrayList<Pane> listeCases) {
+    public CaseVaugirard(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

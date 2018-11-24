@@ -1,4 +1,5 @@
-package IHM.Plateau.LieuPublic;
+package IHM.Plateau.LieuPublic.Gare;
+
 
 import IHM.Plateau.Proprietes;
 import Metier.Plateau.Cases;
@@ -6,9 +7,10 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-public class Gare extends Proprietes {
+public class GareSaintLazare extends Proprietes {
 
-    public Gare(Cases caseMetier, ArrayList<Pane> listeCases) {
+
+    public GareSaintLazare(Cases caseMetier, ArrayList<Pane> listeCases) {
         super(caseMetier, listeCases);
     }
 }

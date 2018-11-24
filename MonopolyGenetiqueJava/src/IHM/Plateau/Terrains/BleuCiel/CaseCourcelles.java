@@ -3,6 +3,7 @@ package IHM.Plateau.Terrains.BleuCiel;
 
 
 import IHM.Plateau.Terrain;
+import IHM.Plateau.VueCases;
 import Metier.Plateau.Cases;
 import javafx.scene.layout.Pane;
 
