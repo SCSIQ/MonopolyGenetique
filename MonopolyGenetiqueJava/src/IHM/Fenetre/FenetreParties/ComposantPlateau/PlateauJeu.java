@@ -1,5 +1,7 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Plateau.Fabrique;
+import IHM.Plateau.LieuPublic.Depart;
 import IHM.Plateau.VueCases;
 import Metier.Automate.Automate;
 import javafx.event.EventHandler;
