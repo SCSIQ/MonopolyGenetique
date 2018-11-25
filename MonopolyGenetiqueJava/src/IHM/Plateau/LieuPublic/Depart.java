@@ -31,6 +31,7 @@ public class Depart extends VueCases {
 
 
         getListeCases().add(0, this);
+        this.getChildren().add(imageDepart);
 
     }
 

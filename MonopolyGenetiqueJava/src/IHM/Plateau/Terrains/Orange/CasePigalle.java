@@ -25,7 +25,7 @@ public class CasePigalle extends Terrain {
         c_pigalle.setPreserveRatio(true);
 
         this.getChildren().add(c_pigalle);
-        getListeCases().add(19,this);
+        getListeCases().add(this);
     }
 
     @Override

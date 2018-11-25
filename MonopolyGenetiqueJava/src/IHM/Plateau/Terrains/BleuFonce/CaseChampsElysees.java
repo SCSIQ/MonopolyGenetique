@@ -26,7 +26,7 @@ public class CaseChampsElysees extends Terrain {
         c_champsE.setFitHeight(48);
         c_champsE.setPreserveRatio(true);
 
-        getListeCases().add(37,this);
+        getListeCases().add(this);
         this.getChildren().add(c_champsE);
     }
 

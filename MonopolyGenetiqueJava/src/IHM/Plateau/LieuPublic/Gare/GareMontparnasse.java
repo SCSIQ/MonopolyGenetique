@@ -26,9 +26,8 @@ public class GareMontparnasse extends Proprietes {
         c_gareM.setFitWidth(48);
         c_gareM.setPreserveRatio(true);
 
-        this.getChildren().add(this);
         this.getChildren().add(c_gareM);
-        getListeCases().add(5,this);
+        getListeCases().add(this);
     }
 
     @Override

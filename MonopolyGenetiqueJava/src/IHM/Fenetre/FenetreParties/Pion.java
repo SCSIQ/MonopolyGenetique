@@ -30,7 +30,7 @@ public class Pion extends Parent {
 
             pions.get(i).setFill(automate.getListeJoueurs().get(i).getCouleur());
 
-            Pane caseDepart = (Pane) plateauJeu.getListePanel().get(0);
+/*            Pane caseDepart = (Pane) plateauJeu.getListePanel().get(0);
             pions.get(i).setRadius(10);
             pions.get(i).setLayoutY(20);
             pions.get(i).setStroke(Color.BLACK);
@@ -51,7 +51,7 @@ public class Pion extends Parent {
 
             caseDepart.getChildren().add(pions.get(i));
 
-            x += 20;
+            x += 20;*/
 
 
         }

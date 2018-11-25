@@ -1,4 +1,4 @@
-package IHM.Plateau.CartePiocher;
+package IHM.Plateau.LieuPublic;
 
 import IHM.Plateau.VueCases;
 import Metier.Plateau.Cases;
@@ -24,7 +24,7 @@ public class ParcGratuit extends VueCases {
         c_parc.setPreserveRatio(true);
 
         this.getChildren().add(c_parc);
-        getListeCases().add(20,this);
+        getListeCases().add(this);
     }
 
     @Override

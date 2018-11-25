@@ -28,8 +28,7 @@ public class GareLyon extends Proprietes {
         c_gareL.setPreserveRatio(true);
 
         this.getChildren().add(c_gareL);
-        getListeCases().add(15,this);
-        this.getChildren().add(this);
+        getListeCases().add(this);
     }
 
     @Override

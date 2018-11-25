@@ -24,7 +24,7 @@ public class CaseMalsherbes extends Terrain {
         c_malesherbes.setFitWidth(48);
         c_malesherbes.setPreserveRatio(true);
 
-        getListeCases().add(23,this);
+        getListeCases().add(this);
         this.getChildren().add(c_malesherbes);
     }
 

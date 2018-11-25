@@ -23,7 +23,7 @@ public class Ampoule extends Proprietes {
         c_celectr.setFitHeight(48);
         c_celectr.setPreserveRatio(true);
 
-        getListeCases().add(13,this);
+        getListeCases().add(this);
         this.getChildren().add(c_celectr);
 
     }

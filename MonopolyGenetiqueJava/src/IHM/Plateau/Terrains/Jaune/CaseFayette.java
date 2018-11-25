@@ -26,7 +26,7 @@ public class CaseFayette extends Terrain {
         c_lafayette.setFitWidth(48);
         c_lafayette.setPreserveRatio(true);
 
-        getListeCases().add(29,this);
+        getListeCases().add(this);
         this.getChildren().add(c_lafayette);
     }
 

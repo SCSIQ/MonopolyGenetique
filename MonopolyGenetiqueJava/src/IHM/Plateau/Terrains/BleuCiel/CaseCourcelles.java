@@ -30,9 +30,8 @@ public class CaseCourcelles extends Terrain {
         c_courcelles.setFitWidth(48);
         c_courcelles.setPreserveRatio(true);
 
-        this.getChildren().add(this);
         this.getChildren().add(c_courcelles);
-        getListeCases().add(8,this);
+        getListeCases().add(this);
     }
 
     @Override

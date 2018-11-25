@@ -25,9 +25,8 @@ public class Impot extends Taxes {
         c_impot.setFitWidth(48);
         c_impot.setPreserveRatio(true);
 
-        this.getChildren().add(this);
         this.getChildren().add(c_impot);
-        getListeCases().add(4,this);
+        getListeCases().add(this);
     }
 
     @Override

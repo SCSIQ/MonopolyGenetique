@@ -24,9 +24,9 @@ public class Prison extends VueCases {
         c_prison.setFitWidth(87);
         c_prison.setPreserveRatio(true);
 
-        this.getChildren().add(this);
+
         this.getChildren().add(c_prison);
-        getListeCases().add(10,this);
+        getListeCases().add(this);
     }
 
     @Override

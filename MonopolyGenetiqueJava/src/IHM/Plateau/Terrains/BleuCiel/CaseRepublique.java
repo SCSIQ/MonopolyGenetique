@@ -28,9 +28,9 @@ public class CaseRepublique extends Terrain {
         c_republique.setFitWidth(48);
         c_republique.setPreserveRatio(true);
 
-        this.getChildren().add(this);
+
         this.getChildren().add(c_republique);
-        getListeCases().add(9,this);
+        getListeCases().add(this);
 
     }
 

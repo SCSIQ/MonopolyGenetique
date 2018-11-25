@@ -31,9 +31,8 @@ public class CaseLecourbe extends Terrain {
         c_Lecourbe.setFitWidth(48);
         c_Lecourbe.setPreserveRatio(true);
 
-        this.getChildren().add(this);
         this.getChildren().add(c_Lecourbe);
-        getListeCases().add(3,this);
+        getListeCases().add(this);
 
     }
 

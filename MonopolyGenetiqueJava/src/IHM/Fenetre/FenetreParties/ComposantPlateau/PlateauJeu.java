@@ -29,13 +29,17 @@ public class PlateauJeu extends Parent {
     public PlateauJeu(Automate automate)
     {
 
-    /*  for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
-        {*/
-         //   Fabrique Fab_Case = new Fabrique();
-          //  VueCases c = Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(0));
-           // this.getChildren().add(c);
+      for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
+        {
+          Fabrique Fab_Case = new Fabrique();
+          VueCases c = Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(i));
+          if(c!= null)
+          {
+              this.getChildren().add(c);
+          }
 
-      /*  }*/
+
+        }
         Rectangle rect_plateau = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 

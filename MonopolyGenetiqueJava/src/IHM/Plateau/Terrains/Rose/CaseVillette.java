@@ -25,8 +25,8 @@ public class CaseVillette extends Terrain {
         c_villette.setPreserveRatio(true);
 
         this.getChildren().add(c_villette);
-        this.getChildren().add(this);
-        getListeCases().add(11,this);
+
+        getListeCases().add(this);
     }
 
     @Override

@@ -24,7 +24,7 @@ public class CaseBourse extends Terrain {
         c_bourse.setFitWidth(48);
         c_bourse.setPreserveRatio(true);
 
-        getListeCases().add(27,this);
+        getListeCases().add(this);
         this.getChildren().add(c_bourse);
     }
 

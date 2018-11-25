@@ -23,7 +23,7 @@ public class CaseBreteuil extends Terrain {
 
         c_breteuil.setFitHeight(48);
         c_breteuil.setPreserveRatio(true);
-        getListeCases().add(31,this);
+        getListeCases().add(this);
         this.getChildren().add(c_breteuil);
     }
 

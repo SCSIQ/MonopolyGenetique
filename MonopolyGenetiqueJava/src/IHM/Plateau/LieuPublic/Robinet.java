@@ -23,7 +23,7 @@ public class Robinet extends ServicePublic {
         c_ceaux.setFitWidth(48);
         c_ceaux.setPreserveRatio(true);
 
-        getListeCases().add(28,this);
+        getListeCases().add(this);
         this.getChildren().add(c_ceaux);
     }
 

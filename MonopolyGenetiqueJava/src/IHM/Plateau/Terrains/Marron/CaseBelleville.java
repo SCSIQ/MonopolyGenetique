@@ -33,9 +33,8 @@ public class CaseBelleville extends Terrain {
         imageBelleville.setFitWidth(48);
         imageBelleville.setPreserveRatio(true);
         //ajout au panel de l'image et ajout du panel dans le jeu
-        this.getChildren().add(this);
         this.getChildren().add(imageBelleville);
-        getListeCases().add(1,this);
+        getListeCases().add(this);
 
     }
 

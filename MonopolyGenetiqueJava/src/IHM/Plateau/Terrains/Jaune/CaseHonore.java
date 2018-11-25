@@ -24,7 +24,7 @@ public class CaseHonore extends Terrain {
         c_faubourgSH.setFitWidth(48);
         c_faubourgSH.setPreserveRatio(true);
 
-        getListeCases().add(26,this);
+        getListeCases().add(this);
         this.getChildren().add(c_faubourgSH);
 
     }

@@ -28,9 +28,8 @@ public class CaseVaugirard extends Terrain {
         c_vaugirard.setFitWidth(48);
         c_vaugirard.setPreserveRatio(true);
 
-        this.getChildren().add(this);
         this.getChildren().add(c_vaugirard);
-        getListeCases().add(6,this);
+        getListeCases().add(this);
     }
 
     @Override
