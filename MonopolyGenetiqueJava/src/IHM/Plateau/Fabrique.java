@@ -116,6 +116,9 @@ public class Fabrique {
             case "Robinet": c = new Robinet(caseMetier);
             break;
 
+            case "Aller en prison": c = new AllezPrison(caseMetier);
+            break;
+
             //CASES DE DROITES
             case "Avenue de Breteuil" : c = new CaseBreteuil(caseMetier);
             break ;
