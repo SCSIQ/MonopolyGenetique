@@ -308,11 +308,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="272">
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeCartes/Chance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -332,8 +341,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/AllezPrison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+            <state relative-caret-position="442">
+              <caret line="26" column="34" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#252#253#0" expanded="true" />
@@ -343,17 +352,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ChanceBas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="493">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -362,10 +367,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Chance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="357">
+              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#200#201#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -387,7 +396,7 @@
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/PlateauJeu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="642" column="41" lean-forward="true" selection-start-line="641" selection-start-column="8" selection-end-line="642" selection-end-column="41" />
+              <caret line="207" column="40" lean-forward="true" selection-start-line="199" selection-start-column="8" selection-end-line="207" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -432,7 +441,6 @@
         <option value="$PROJECT_DIR$/src/IHM/Plateau/CartePiocher/CaseCarte.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ServicePublic.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Proprietes.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Plateau/Chance.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Taxes.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Terrain.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
@@ -471,9 +479,10 @@
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ParcGratuit.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Terrains/Orange/CaseMozart.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Terrains/Orange/CaseSaintMichelle.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/AllezPrison.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ChanceBas.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Plateau/Chance.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java" />
       </list>
     </option>
   </component>
@@ -753,7 +762,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543175883487" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543176826774" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -861,6 +870,41 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18926175" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.008498584" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32131147" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3295082" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven" order="10" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18926175" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
@@ -894,41 +938,6 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.252349" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24220963" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Problems" order="9" />
-      <window_info anchor="bottom" id="Changes" order="10" />
-      <window_info anchor="bottom" id="Profiler" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32152975" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3295082" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
@@ -940,13 +949,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Pion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -1344,23 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Chance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Terrains/Jaune/CaseBourse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1381,16 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/PlateauJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="642" column="41" lean-forward="true" selection-start-line="641" selection-start-column="8" selection-end-line="642" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/AllerEnPrison.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1398,10 +1373,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/PlateauJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="207" column="40" lean-forward="true" selection-start-line="199" selection-start-column="8" selection-end-line="207" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ChanceBas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/AllezPrison.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        <state relative-caret-position="442">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#252#253#0" expanded="true" />
@@ -1410,17 +1405,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ChanceBas.java">
+    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Chance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="357">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeCartes/Chance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
         </state>
       </provider>
     </entry>

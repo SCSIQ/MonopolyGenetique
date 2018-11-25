@@ -61,7 +61,7 @@ public class Fabrique {
 
             case "Rue de Vaugirard" : c = new CaseVaugirard(caseMetier);
             break;
-            case "Chance" : c = new Chance(caseMetier);
+            case "Case Chance" : c = new ChanceBas(caseMetier);
             break ;
             case "Rue de Courcelles" : c = new CaseCourcelles(caseMetier);
             break;
