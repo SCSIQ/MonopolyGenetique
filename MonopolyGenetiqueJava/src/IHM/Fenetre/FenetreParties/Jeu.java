@@ -42,19 +42,14 @@ public class Jeu extends Parent {
         Button bt_lancerDes = new Button("Lancer les dés") ;
         Button bt_tourSuivant = new Button("Tour suivant") ;
 
+        this.getChildren().add(bt_menu);
+        this.getChildren().add(bt_lancerDes);
+        this.getChildren().add(bt_tourSuivant);
+
 
         //APPEL INFOS JOUEUR
         ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
         this.getChildren().add(zoneJoueur);
-
-        //APPEL ZONE ADVERSAIRE
-
-        //Je ne sais pas pourquoi ça ne marche pas mais ça m'empeche de travailler...
-        //Du coup je l'ai désactivé poiur pouvoir avancer
-        //Aurian
-
-        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas);
-        this.getChildren().add(zoneAd);
 
         //APPEL ZONE POSSESSION
         ZonePossessions poss = new ZonePossessions(automate);
@@ -73,6 +68,11 @@ public class Jeu extends Parent {
         pl.caseDeDroite();
         pl.plateauJeu();
         this.getChildren().add(pl);
+
+        //APPEL ZONE ADVERSAIRE
+
+        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas);
+        this.getChildren().add(zoneAd);
 
 /////////////PION
         Pion pion = new Pion(automate, pl);
@@ -139,9 +139,7 @@ public class Jeu extends Parent {
         this.getChildren().add(rect_gare);
         this.getChildren().add(rect_compagnie);
         this.getChildren().add(rect_cartePrison);
-        this.getChildren().add(bt_menu);
-        this.getChildren().add(bt_lancerDes);
-        this.getChildren().add(bt_tourSuivant);
+
 
     }
 

@@ -311,26 +311,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
+            <state relative-caret-position="1904">
               <caret line="141" selection-start-line="141" selection-end-line="141" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="266">
+              <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
-              <caret line="199" column="41" lean-forward="true" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
+              <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -338,8 +338,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="235" column="5" lean-forward="true" selection-start-line="217" selection-start-column="4" selection-end-line="235" selection-end-column="5" />
+            <state relative-caret-position="3706">
+              <caret line="235" column="5" selection-start-line="217" selection-start-column="4" selection-end-line="235" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -457,15 +457,15 @@
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Gare/GareNord.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Gare/GareSaintLazare.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="884" />
+    <option name="x" value="-10" />
+    <option name="width" value="885" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -477,6 +477,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -703,7 +704,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -823,7 +823,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15503356" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15704697" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -832,7 +832,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15580736" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15580736" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1216,8 +1216,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Plateau/Fabrique.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
+        <state relative-caret-position="1904">
           <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3706">
+          <caret line="235" column="5" selection-start-line="217" selection-start-column="4" selection-end-line="235" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1249,24 +1256,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/Solo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="235" column="5" lean-forward="true" selection-start-line="217" selection-start-column="4" selection-end-line="235" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="199" column="41" lean-forward="true" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
+          <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
         </state>
       </provider>
     </entry>
