@@ -7,12 +7,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 import java.net.URL;
-import java.util.ArrayList;
 
-public class Ampoule extends Proprietes {
+
+public class Ampoule extends Proprietes{
+
 
     public Ampoule(Cases caseMetier) {
         super(caseMetier);
+
         this.setLayoutX(15);
         this.setLayoutY(532);
 
@@ -37,5 +39,4 @@ public class Ampoule extends Proprietes {
     public String getType() {
         return "Ampoule";
     }
-
 }

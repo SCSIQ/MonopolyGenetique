@@ -46,9 +46,9 @@ public class Fabrique {
             case "Départ": c= new Depart(caseMetier);
             break;
 
-           case "Boul. de Belleville" : c = new CaseBelleville(caseMetier);
+            case "Boul. de Belleville" : c = new CaseBelleville(caseMetier);
             break ;
-            case "Caisse Commune": c = new CaisseCommune(caseMetier);
+            case "Caisse Commune": c = new CommuBas(caseMetier);
             break ;
             case "Rue Lecourbe" : c = new CaseLecourbe(caseMetier);
             break ;
@@ -95,6 +95,9 @@ public class Fabrique {
             case "ParcGratuit": c = new ParcGratuit(caseMetier);
             break;
 
+            /*case "Caisse Commune": c = new CommuGauche(caseMetier);
+            break ;*/
+
             //CASE DU HAUT
             case "Avenue Matignon" : c = new CaseMatignon(caseMetier);
             break ;
@@ -119,6 +122,9 @@ public class Fabrique {
             case "Aller en prison": c = new AllezPrison(caseMetier);
             break;
 
+            /*case "Case Chance" : c = new ChanceHaut(caseMetier);
+            break ;*/
+
             //CASES DE DROITES
             case "Avenue de Breteuil" : c = new CaseBreteuil(caseMetier);
             break ;
@@ -136,6 +142,12 @@ public class Fabrique {
             break;
             case "Rue de la Paix": c = new CasePaix(caseMetier);
             break ;
+
+            /*case "Case Chance" : c = new ChanceDroite(caseMetier);
+            break ;*/
+
+            /*case "Caisse Commune": c = new CommuDroite(caseMetier);
+            break ;*/
 
             //PAR DEFAUT
             default: c= null;
