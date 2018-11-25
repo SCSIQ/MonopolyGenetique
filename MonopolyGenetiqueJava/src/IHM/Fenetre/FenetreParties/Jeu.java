@@ -27,18 +27,7 @@ public class Jeu extends Parent {
 
         this.automate = automate;
 
-////////DEFINITIONS DES RECTANGLES DANS LE JEU
-        Rectangle rect_infosJoueur = new Rectangle() ;
-        Rectangle rect_plateau = new Rectangle();
-        Rectangle rect_adversaire = new Rectangle() ;
-        Rectangle rect_possession = new Rectangle() ;
-        Rectangle rect_terrain = new Rectangle();
-        Rectangle rect_gare = new Rectangle();
-        Rectangle rect_compagnie = new Rectangle();
-        Rectangle rect_cartePrison = new Rectangle() ;
-
-
-
+//////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
         ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
         this.getChildren().add(zoneJoueur);
