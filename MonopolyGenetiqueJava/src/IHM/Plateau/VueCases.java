@@ -5,7 +5,7 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-public abstract class  VueCases {
+public abstract class  VueCases extends Pane {
 
     //ATTRIBUTS
     private int position ;

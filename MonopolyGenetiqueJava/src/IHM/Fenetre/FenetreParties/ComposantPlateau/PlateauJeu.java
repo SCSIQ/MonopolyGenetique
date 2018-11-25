@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Plateau.Fabrique;
 import IHM.Plateau.VueCases;
 import Metier.Automate.Automate;
 import javafx.event.EventHandler;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 
 //CLASSE COMPORTANT LA LISTE DES CASES DU PLATEAU
 public class PlateauJeu extends Parent {
-
+    
    private ArrayList<Pane> listePanel = new ArrayList<>();
    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
 
@@ -27,6 +28,13 @@ public class PlateauJeu extends Parent {
     // génère le carré délimitant la zone du plateu
     public PlateauJeu(Automate automate)
     {
+
+      /* for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
+        {
+            Fabrique Fab_Case = new Fabrique();
+            Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(i));
+
+        }*/
         Rectangle rect_plateau = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
 
