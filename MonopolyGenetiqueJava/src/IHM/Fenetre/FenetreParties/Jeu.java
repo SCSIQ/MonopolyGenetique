@@ -27,26 +27,7 @@ public class Jeu extends Parent {
 
         this.automate = automate;
 
-////////DEFINITIONS DES RECTANGLES DANS LE JEU
-        Rectangle rect_infosJoueur = new Rectangle() ;
-        Rectangle rect_plateau = new Rectangle();
-        Rectangle rect_adversaire = new Rectangle() ;
-        Rectangle rect_possession = new Rectangle() ;
-        Rectangle rect_terrain = new Rectangle();
-        Rectangle rect_gare = new Rectangle();
-        Rectangle rect_compagnie = new Rectangle();
-        Rectangle rect_cartePrison = new Rectangle() ;
-
-        //BOUTONS
-        Button bt_menu = new Button("Menu") ;
-        Button bt_lancerDes = new Button("Lancer les dés") ;
-        Button bt_tourSuivant = new Button("Tour suivant") ;
-
-        this.getChildren().add(bt_menu);
-        this.getChildren().add(bt_lancerDes);
-        this.getChildren().add(bt_tourSuivant);
-
-
+//////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
         ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
         this.getChildren().add(zoneJoueur);
@@ -79,10 +60,16 @@ public class Jeu extends Parent {
         System.out.println(automate.getJoueurCourant().getPion());
 
 
+////////////////////////////////
+        //BOUTONS
+        Button bt_menu = new Button("Menu") ;
+        Button bt_lancerDes = new Button("Lancer les dés") ;
+        Button bt_tourSuivant = new Button("Tour suivant") ;
+
+
         boutonMenu(bt_menu);
         boutonLancerDes(bt_lancerDes);
         boutonTourSuivant(bt_tourSuivant);
-
         ///ACTION SI BOUTON MENU
         bt_menu.setOnAction(new EventHandler<ActionEvent>(){
             @Override
@@ -122,25 +109,17 @@ public class Jeu extends Parent {
         });
 
 ////////BLOCAGE REDUCTION ET AUGMENTATION
-
         nouvelle_fenetre.setMinWidth(1290);
         nouvelle_fenetre.setMinHeight(780);
 
         nouvelle_fenetre.setMaxWidth(1290);
         nouvelle_fenetre.setMaxHeight(780);
 
-        // AJOUT A L'ECRAN
+        // AJOUT A L'ECRAN DES BOUTONS
 
-        this.getChildren().add(rect_infosJoueur);
-        this.getChildren().add(rect_plateau);
-        this.getChildren().add(rect_adversaire);
-        this.getChildren().add(rect_possession);
-        this.getChildren().add(rect_terrain);
-        this.getChildren().add(rect_gare);
-        this.getChildren().add(rect_compagnie);
-        this.getChildren().add(rect_cartePrison);
-
-
+        this.getChildren().add(bt_menu);
+        this.getChildren().add(bt_lancerDes);
+        this.getChildren().add(bt_tourSuivant);
     }
 
 

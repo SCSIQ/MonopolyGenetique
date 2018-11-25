@@ -116,6 +116,7 @@ public class Fabrique {
             case "Robinet": c = new Robinet(caseMetier, c.getListeCases());
             break;
 
+            //CASES DE DROITES
             case "Avenue de Breteuil" : c = new CaseBreteuil(caseMetier, c.getListeCases());
             break ;
             case "Avenue Foch" : c = new CaseFoch(caseMetier, c.getListeCases());
