@@ -43,10 +43,10 @@ public class Fabrique {
         switch(caseMetier.toString()){
 
             //CASES DU BAS
-            case "Départ": c= new Depart(caseMetier, c.getListeCases());
+            case "Départ": c= new Depart(caseMetier);
             break;
 
-            case "Boul. de Belleville" : c = new CaseBelleville(caseMetier, c.getListeCases());
+        /*    case "Boul. de Belleville" : c = new CaseBelleville(caseMetier);
             break ;
             case "Caisse Commune": c = new CaisseCommune(caseMetier, c.getListeCases());
             break ;
@@ -132,7 +132,7 @@ public class Fabrique {
             case "TaxeDeLuxe": c = new TaxeDeLuxe(caseMetier, c.getListeCases());
             break;
             case "Rue de la Paix": c = new CasePaix(caseMetier, c.getListeCases());
-            break ;
+            break ;*/
 
             //PAR DEFAUT
             default: c= null;

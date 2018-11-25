@@ -2,15 +2,36 @@ package IHM.Plateau.Terrains.Rouge;
 
 import IHM.Plateau.Terrain;
 import Metier.Plateau.Cases;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 //CASE MATIGNON
 public class CaseMatignon extends Terrain {
 
-    public CaseMatignon(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public CaseMatignon(Cases caseMetier) {
+        super(caseMetier);
+        this.setLayoutX(100);
+        this.setLayoutY(110);
+
+        URL matignon = getClass().getResource("Images/Case_Matignon.png");
+        Image i_matignon = new Image(matignon.toExternalForm());
+        ImageView c_matignon = new ImageView(i_matignon);
+
+
+        c_matignon.setFitWidth(48);
+        c_matignon.setPreserveRatio(true);
+
+        getListeCases().add(21,this);
+        this.getChildren().add(c_matignon);
+    }
+
+    @Override
+    public void setListeCases(Pane p) {
+
     }
 
     @Override

@@ -9,8 +9,8 @@ public abstract class Terrain extends Proprietes {
     private Couleur couleur ;
     private int maison ;
 
-    public Terrain(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public Terrain(Cases caseMetier) {
+        super(caseMetier);
     }
 
     @Override

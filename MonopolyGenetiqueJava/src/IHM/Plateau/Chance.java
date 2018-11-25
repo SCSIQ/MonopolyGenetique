@@ -8,8 +8,13 @@ import java.util.ArrayList;
 public class Chance extends VueCases {
 
 
-    public Chance(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public Chance(Cases caseMetier) {
+        super(caseMetier);
+    }
+
+    @Override
+    public void setListeCases(Pane p) {
+
     }
 
     @Override

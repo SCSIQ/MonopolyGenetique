@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public abstract class ServicePublic extends Proprietes {
 
-    public ServicePublic(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public ServicePublic(Cases caseMetier) {
+        super(caseMetier);
     }
 
     @Override

@@ -9,8 +9,13 @@ import java.util.ArrayList;
 public class CaseCarte extends VueCases {
 
 
-    public CaseCarte(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public CaseCarte(Cases caseMetier) {
+        super(caseMetier);
+    }
+
+    @Override
+    public void setListeCases(Pane p) {
+
     }
 
     @Override

@@ -5,15 +5,13 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-public class Taxes extends VueCases {
+public abstract class Taxes extends VueCases {
 
 
-    public Taxes(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public Taxes(Cases caseMetier) {
+        super(caseMetier);
     }
 
     @Override
-    public String getType() {
-        return "Taxe";
-    }
+    public abstract String getType();
 }

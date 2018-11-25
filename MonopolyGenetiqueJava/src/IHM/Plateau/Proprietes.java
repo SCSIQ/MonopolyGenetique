@@ -13,8 +13,8 @@ public abstract class Proprietes extends VueCases {
     private Joueur proprio ;
 
 
-    public Proprietes(Cases caseMetier, ArrayList<Pane> listeCases) {
-        super(caseMetier, listeCases);
+    public Proprietes(Cases caseMetier) {
+        super(caseMetier);
     }
 
     @Override
