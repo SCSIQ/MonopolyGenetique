@@ -9,6 +9,7 @@ import Metier.Plateau.ListeProprietes.ListeGares.Gare1;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare2;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare3;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare4;
+import Metier.Plateau.ListeProprietes.ListeServicesPublics.Ampoule;
 import Metier.Plateau.ListeProprietes.ListeServicesPublics.Robinet;
 import Metier.Plateau.ListeProprietes.ListeTerrains.BleuCiel.BleuCiel1;
 import Metier.Plateau.ListeProprietes.ListeTerrains.BleuCiel.BleuCiel2;
@@ -69,7 +70,7 @@ public abstract class InitialisationPartie {
         this.listeCases.add(new BleuCiel3(9));
         this.listeCases.add(new Prison(10));
         this.listeCases.add(new Rose1(11));
-        this.listeCases.add(new Robinet(12));
+        this.listeCases.add(new Ampoule(12));
         this.listeCases.add(new Rose2(13));
         this.listeCases.add(new Rose3(14));
         this.listeCases.add(new Gare2(15));

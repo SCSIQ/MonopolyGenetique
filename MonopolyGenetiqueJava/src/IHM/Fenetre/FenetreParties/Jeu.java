@@ -57,7 +57,6 @@ public class Jeu extends Parent {
 
 /////////////PION
         Pion pion = new Pion(automate, pl);
-        System.out.println(automate.getJoueurCourant().getPion());
 
 
 ////////////////////////////////

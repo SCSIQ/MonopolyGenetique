@@ -28,7 +28,7 @@ public class PlateauJeu extends Parent {
     // génère le carré délimitant la zone du plateu
     public PlateauJeu(Automate automate)
     {
-        this.listeCases= new ArrayList<>(); 
+        this.listeCases= new ArrayList<>();
         Fabrique Fab_Case = new Fabrique();
 
         for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
