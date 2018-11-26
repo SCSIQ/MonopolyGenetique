@@ -30,7 +30,7 @@ public class Pion extends Parent {
 
             pions.get(i).setFill(automate.getListeJoueurs().get(i).getCouleur());
 
-/*            Pane caseDepart = (Pane) plateauJeu.getListePanel().get(0);
+         Pane caseDepart = (Pane) plateauJeu.getListeCases().get(0);
             pions.get(i).setRadius(10);
             pions.get(i).setLayoutY(20);
             pions.get(i).setStroke(Color.BLACK);
@@ -51,7 +51,7 @@ public class Pion extends Parent {
 
             caseDepart.getChildren().add(pions.get(i));
 
-            x += 20;*/
+            x += 20;
 
 
         }
@@ -63,7 +63,7 @@ public class Pion extends Parent {
         this.sortirDeCase(pions.get(0));
 
         // ON RECUPERE LE PANEL OU LE PIONS VA ARRIVER APRES LE LANCER DE DES
-        Pane p = (Pane) plateauJeu.getListePanel().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+        Pane p = (Pane) plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
 
         // ON AJOUTE A CE PANEL
          p.getChildren().add(pions.get(0));
@@ -75,7 +75,7 @@ public class Pion extends Parent {
     public void sortirDeCase(Circle c) {
 
         //ON RECUPERE LE PANEL OU ETAIT LE JOUEUR ET ON LE SUPPRIME DE CE PANEL
-        Pane p = (Pane) plateauJeu.getListePanel().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+        Pane p = (Pane) plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
         p.getChildren().remove(c);
     }
 

@@ -21,22 +21,24 @@ import java.util.ArrayList;
 //CLASSE COMPORTANT LA LISTE DES CASES DU PLATEAU
 public class PlateauJeu extends Parent {
     
-   private ArrayList<Pane> listePanel = new ArrayList<>();
+   private ArrayList<Pane> listeCases = new ArrayList<>();
    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
 
 
     // génère le carré délimitant la zone du plateu
     public PlateauJeu(Automate automate)
     {
+        Fabrique Fab_Case = new Fabrique();
 
-      for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
+        for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
         {
-          Fabrique Fab_Case = new Fabrique();
-          VueCases c = Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(i));
-          if(c!= null)
-          {
-              this.getChildren().add(c);
-          }
+
+              VueCases c = Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(i));
+              if(c!= null)
+              {
+                  this.getChildren().add(c);
+                  listeCases.add(c);
+              }
 
 
         }
@@ -55,7 +57,7 @@ public class PlateauJeu extends Parent {
     }
 
 
-    public void caseDuBas()
+/*    public void caseDuBas()
     {
 ////////CASE DEPART
         Pane CaseDepart= new Pane() ;
@@ -799,7 +801,7 @@ public class PlateauJeu extends Parent {
         listePanel.add(38,caseTaxe);
         listePanel.add(39,casePaix);
     }
-
+*/
     public void plateauJeu(){
 
 ////////IMAGES
@@ -821,8 +823,10 @@ public class PlateauJeu extends Parent {
 
     }
 
-    public ArrayList<Pane> getListePanel(){
-        return listePanel ;
+
+
+    public ArrayList<Pane> getListeCases(){
+        return listeCases ;
     }
 
 }
