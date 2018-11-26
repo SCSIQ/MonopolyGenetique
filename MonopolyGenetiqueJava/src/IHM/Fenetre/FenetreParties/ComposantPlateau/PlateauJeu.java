@@ -21,13 +21,14 @@ import java.util.ArrayList;
 //CLASSE COMPORTANT LA LISTE DES CASES DU PLATEAU
 public class PlateauJeu extends Parent {
     
-   private ArrayList<Pane> listeCases = new ArrayList<>();
+   private ArrayList<Pane> listeCases;
    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
 
 
     // génère le carré délimitant la zone du plateu
     public PlateauJeu(Automate automate)
     {
+        this.listeCases= new ArrayList<>(); 
         Fabrique Fab_Case = new Fabrique();
 
         for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
