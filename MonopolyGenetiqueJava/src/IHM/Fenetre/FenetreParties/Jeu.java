@@ -56,7 +56,7 @@ public class Jeu extends Parent {
         this.getChildren().add(zoneAd);
 
 /////////////PION
-        Pion pion = new Pion(automate, pl);
+    //    Pion pion = new Pion(automate, pl);
 
 
 ////////////////////////////////
@@ -87,7 +87,7 @@ public class Jeu extends Parent {
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
-                    pion.entrerDansCase();
+                    //pion.entrerDansCase();
                     //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
                 }else{
