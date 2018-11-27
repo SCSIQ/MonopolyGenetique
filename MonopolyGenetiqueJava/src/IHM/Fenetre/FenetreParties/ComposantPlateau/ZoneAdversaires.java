@@ -45,6 +45,10 @@ public class ZoneAdversaires extends Parent {
 
         this.getChildren().add(rect_adversaire);
 
+
+    }
+
+    public void genererAdversaire(Stage primaryStage, Automate automate, Stage fenetre_actuelle){
         //AJOUT ADVERSAIRES
         //automate.getListeJoueurs().get(0)== joueur courant, un adversaire ne doit pas être égal à lui
         //d'où la condition : automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()
@@ -53,7 +57,6 @@ public class ZoneAdversaires extends Parent {
             //DEUX JOUEURS
             if(automate.getListeJoueurs().size()==2)
             {
-
                 if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
@@ -111,6 +114,9 @@ public class ZoneAdversaires extends Parent {
 
         }
 
+    }
+
+    public void SupprimerAdversaire(){
 
     }
 

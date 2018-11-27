@@ -30,6 +30,7 @@ public class Jeu extends Parent {
 //////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
         ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
+        zoneJoueur.genereInfosJoueur(automate);
         this.getChildren().add(zoneJoueur);
 
         //APPEL ZONE POSSESSION
@@ -50,6 +51,7 @@ public class Jeu extends Parent {
 
         ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas);
         this.getChildren().add(zoneAd);
+        zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
 
 /////////////PION
     //    Pion pion = new Pion(automate, pl);
@@ -100,6 +102,10 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 fenetreTour(nouvelle_fenetre, automate);
+
+                /*zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
+
+                zoneJoueur.genereInfosJoueur(automate);*/
             }
         });
 
