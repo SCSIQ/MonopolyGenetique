@@ -45,44 +45,65 @@ public class ZoneAdversaires extends Parent {
 
         this.getChildren().add(rect_adversaire);
 
-        //Ajout adversaire
+        //AJOUT ADVERSAIRES
+        //automate.getListeJoueurs().get(0)== joueur courant, un adversaire ne doit pas être égal à lui
+        //d'où la condition : automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()
         for(int i=0;i<=automate.getNombreJoueur();i++) {
+
+            //DEUX JOUEURS
             if(automate.getListeJoueurs().size()==2)
             {
-                if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+
+                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
                 }
             }
+            //TROIS JOUEURS
             else if(automate.getListeJoueurs().size()==3)
             {
-                if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
-                }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                }
+                else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                {
                     RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
                 }
 
-            }else if(automate.getListeJoueurs().size()==4)
+            }
+            //QUATRE JOUEURS
+            else if(automate.getListeJoueurs().size()==4)
             {
-                if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
-                }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                }
+                else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
-                }else if((i==3)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                }
+                else if((i==3) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv3(primaryStage, fenetre_actuelle,automate, i);
                 }
-            }else if(automate.getListeJoueurs().size()==5)
+            }
+            //CINQ JOUEURS
+            else if(automate.getListeJoueurs().size()==5)
             {
-                if((i==1) &&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant())) {
+                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                {
                     RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
-                }else if((i==2)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                }
+                else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
-                }else if((i==3)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                }
+                else if((i==3) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv3(primaryStage, fenetre_actuelle,automate, i);
-                }else if((i==4)&&(automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
+                }
+                else if((i==4) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
                     RectangleAdv4(primaryStage, fenetre_actuelle,automate, i);
                 }
