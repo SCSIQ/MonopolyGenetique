@@ -10,4 +10,6 @@ public class Depart extends Cases  {
     public String toString() {
         return "Départ";
     }
+
+    /*chaque joueur qui passe sur la case départ gagne 1 5000€ */
 }
