@@ -26,7 +26,7 @@ public class ChoixPossibles extends Etat {
         if(event == "lancerDes"){
             return new LancerDesJoueur(super.getAutomate(), super.getListeJoueurs());
         }
-        else if(event == "tourSuivant"){
+        else if(event == "tourSuivant" && getListeJoueurs().get(0).getaLanceDes()==true){
             return new FinTour(super.getAutomate(), super.getListeJoueurs());
         }
         else{

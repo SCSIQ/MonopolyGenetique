@@ -34,12 +34,12 @@ public class PlateauJeu extends Parent {
         for(int i =0; i<automate.getJoueurCourant().getListeCases().size(); i++)
         {
 
-              VueCases c = Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(i));
-              if(c!= null)
-              {
-                  this.getChildren().add(c);
-                  listeCases.add(c);
-              }
+            VueCases c = Fab_Case.FabriqueCase(automate.getJoueurCourant().getListeCases().get(i));
+            if(c!= null)
+            {
+              this.getChildren().add(c);
+              listeCases.add(c);
+            }
 
 
         }
