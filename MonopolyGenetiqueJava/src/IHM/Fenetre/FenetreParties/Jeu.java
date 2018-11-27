@@ -43,10 +43,6 @@ public class Jeu extends Parent {
         //APPEL PLATEAU JEU
         PlateauJeu pl = new PlateauJeu(automate);
 
-     /*   pl.caseDuBas();
-        pl.caseDeGauche();
-        pl.caseDuHaut();
-        pl.caseDeDroite();*/
         pl.plateauJeu();
         this.getChildren().add(pl);
 
