@@ -102,10 +102,10 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 fenetreTour(nouvelle_fenetre, automate);
+            zoneJoueur.SupprimerJoueur();
+                //zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
 
-                /*zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
-
-                zoneJoueur.genereInfosJoueur(automate);*/
+                zoneJoueur.genereInfosJoueur(automate);
             }
         });
 

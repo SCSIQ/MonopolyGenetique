@@ -63,6 +63,7 @@ public class ZoneInfoJoueur extends Parent {
 
     public void genereInfosJoueur(Automate automate){
 
+        infosJoueur = new Pane();
         //ajout Couleur du joueur
         Rectangle r_couleur = new Rectangle();
         r_couleur.setHeight(50);
@@ -105,6 +106,12 @@ public class ZoneInfoJoueur extends Parent {
         infosJoueur.getChildren().add(tour);
         infosJoueur.getChildren().add(r_couleur);
         infosJoueur.getChildren().add(nom);
+        this.getChildren().add(infosJoueur);
 
+    }
+
+    public void SupprimerJoueur()
+    {
+        this.getChildren().removeAll(infosJoueur);
     }
 }
