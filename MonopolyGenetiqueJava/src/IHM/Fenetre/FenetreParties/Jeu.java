@@ -107,16 +107,16 @@ public class Jeu extends Parent {
 
                     fenetreTour(nouvelle_fenetre, automate);
                     zoneJoueur.SupprimerJoueur();
+                    zoneAd.SupprimerAdversaire();
                     zoneJoueur.genereInfosJoueur(automate);
+                    zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
+
                 } else {
                     automate.evoluer("tourSuivant");
                     fenetreTourErreur(nouvelle_fenetre, automate);
 
 
                 }
-
-                //zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
-
 
             }
         });
