@@ -19,19 +19,14 @@ public class tourSuivant extends Parent {
     public tourSuivant(Stage fenetre_actuelle, Canvas canvas, Automate automate)
     {
 
-        //SI LES DES ONT ETE LANCER OU NON
-        if(automate.getJoueurCourant().getaLanceDes()==true){
-
-            automate.evoluer("tourSuivant");
-
             ///////////////////////////////////////////////////////////////////TEXTE
-            Text t_lancerDeVrai = new Text("Tour numTour");
+            Text t_lancer = new Text("Tour numTour");
 
-            t_lancerDeVrai.setLayoutX(250);
-            t_lancerDeVrai.setLayoutY(100);
+            t_lancer.setLayoutX(250);
+            t_lancer.setLayoutY(100);
 
-            t_lancerDeVrai.setScaleX(2);
-            t_lancerDeVrai.setScaleY(2);
+            t_lancer.setScaleX(2);
+            t_lancer.setScaleY(2);
 
             Text t_Joueur = new Text("Début du tour de "+automate.getJoueurCourant().getNom());
 
@@ -42,29 +37,14 @@ public class tourSuivant extends Parent {
             t_Joueur.setScaleX(2);
 
             //AJOUT
-            this.getChildren().add(t_lancerDeVrai);
+            this.getChildren().add(t_lancer);
             this.getChildren().add((t_Joueur));
 
-        }else {
-            automate.evoluer("tourSuivant");
-
-            //////////////////////////////////////////////////////////////////////////TEXTE
-            Color rouge = Color.RED;
-            Text t_lancerDeFalse = new Text("VOUS DEVEZ LANCER LES DÉS.");
-
-            t_lancerDeFalse.setFill(rouge);
-            t_lancerDeFalse.setLayoutX(220);
-            t_lancerDeFalse.setLayoutY(100);
-
-            t_lancerDeFalse.setScaleX(2);
-            t_lancerDeFalse.setScaleY(2);
-            t_lancerDeFalse.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-
-            //AJOUT
-            this.getChildren().add(t_lancerDeFalse);
 
 
-        }
+
+
+
 //////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("OK");
 

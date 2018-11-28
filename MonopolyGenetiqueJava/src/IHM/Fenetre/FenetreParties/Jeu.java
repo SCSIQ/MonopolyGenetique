@@ -110,7 +110,9 @@ public class Jeu extends Parent {
                     zoneJoueur.genereInfosJoueur(automate);
                 } else {
                     automate.evoluer("tourSuivant");
-                    
+                    fenetreTourErreur(nouvelle_fenetre, automate);
+
+
                 }
 
                 //zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
@@ -215,6 +217,26 @@ public class Jeu extends Parent {
         //POSITION DE LA FENETRE
         nouvelle_fenetre_des.show();
     }
+
+
+    public void fenetreTourErreur(Stage fenetre_actuelle, Automate automate){
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_tour = new Stage() ;
+        tourSuivantErreur fenetreTourErreur = new tourSuivantErreur(nouvelle_fenetre_tour, canvas, automate);
+
+        Scene nouvelle_scene = new Scene(fenetreTourErreur, 600, 300);
+
+        nouvelle_fenetre_tour.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_tour.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_tour.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_tour.show();
+    }
+
 
     public void fenetreDes(Stage fenetre_actuelle, Automate automate)
     {
