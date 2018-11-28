@@ -126,6 +126,7 @@ public class HumainVShumain extends Parent {
                 //INIT JOUEURS
                 for(int i=1;i<=automate.getNombreJoueur();i++)
                 {
+
                     if(automate.getListeJoueurs().size()==2)
                     {
                         if(i==1) {
@@ -168,7 +169,7 @@ public class HumainVShumain extends Parent {
                     }
                 }
 
-                automate.getJoueurCourant().setCouleur(Color.BLANCHEDALMOND);
+                automate.getJoueurCourant().setCouleur(Color.CRIMSON);
 
                 //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();
@@ -208,15 +209,15 @@ public class HumainVShumain extends Parent {
 
         Color couleur;
         switch (i){
-            case 0 : couleur = Color.BLANCHEDALMOND;
+            case 0 : couleur = Color.CRIMSON;
                 break;
-            case 1 : couleur = Color.BLACK;
+            case 1 : couleur = Color.DARKMAGENTA;
                 break;
-            case 2 : couleur = Color.GREEN;
+            case 2 : couleur = Color.DARKTURQUOISE;
                 break;
-            case 3 : couleur = Color.YELLOW;
+            case 3 : couleur = Color.CORAL;
                 break;
-            case 4 : couleur = Color.BLUE;
+            case 4 : couleur = Color.MEDIUMSEAGREEN;
                 break;
             default: couleur = Color.AZURE;
         }

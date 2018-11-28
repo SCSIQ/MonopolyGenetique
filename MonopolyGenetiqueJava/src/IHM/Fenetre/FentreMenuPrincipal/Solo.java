@@ -215,12 +215,12 @@ public class Solo extends Parent {
 
     }
 
+//GENERE LA COULEUR DES JOUEURS
     public Color couleurAdversaire(int i)
     {
-
         Color couleur;
         switch (i){
-            case 0 : couleur = Color.BLANCHEDALMOND;
+            case 0 : couleur = Color.DARKKHAKI;
                     break;
             case 1 : couleur = Color.BLACK;
                     break;

@@ -19,7 +19,7 @@ public class tourSuivant extends Parent {
     public tourSuivant(Stage fenetre_actuelle, Canvas canvas, Automate automate)
     {
 
-            ///////////////////////////////////////////////////////////////////TEXTE
+ ////////////////////////////////////////////////////////////////////TEXTE
             Text t_lancer = new Text("Tour numTour");
 
             t_lancer.setLayoutX(250);
@@ -39,11 +39,6 @@ public class tourSuivant extends Parent {
             //AJOUT
             this.getChildren().add(t_lancer);
             this.getChildren().add((t_Joueur));
-
-
-
-
-
 
 //////////////////////////////////////////////////////////////////BOUTON
         Button bt_ok = new Button("OK");
@@ -66,8 +61,7 @@ public class tourSuivant extends Parent {
             }
         });
 
-
-  ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
+////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
         fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
