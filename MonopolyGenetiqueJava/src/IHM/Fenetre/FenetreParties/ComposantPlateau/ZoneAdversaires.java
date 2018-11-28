@@ -120,7 +120,10 @@ public class ZoneAdversaires extends Parent {
     }
 
     public void SupprimerAdversaire(){
-
+        this.getChildren().removeAll(infoAdv1);
+        this.getChildren().removeAll(infoAdv2);
+        this.getChildren().removeAll(infoAdv3);
+        this.getChildren().removeAll(infoAdv4);
     }
 
     //Les différentes zones des adversaires
