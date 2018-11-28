@@ -101,11 +101,21 @@ public class Jeu extends Parent {
         bt_tourSuivant.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                fenetreTour(nouvelle_fenetre, automate);
-            zoneJoueur.SupprimerJoueur();
+                if(automate.getJoueurCourant().getaLanceDes()==true) {
+
+                    automate.evoluer("tourSuivant");
+
+                    fenetreTour(nouvelle_fenetre, automate);
+                    zoneJoueur.SupprimerJoueur();
+                    zoneJoueur.genereInfosJoueur(automate);
+                } else {
+                    automate.evoluer("tourSuivant");
+                    
+                }
+
                 //zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
 
-                zoneJoueur.genereInfosJoueur(automate);
+
             }
         });
 
