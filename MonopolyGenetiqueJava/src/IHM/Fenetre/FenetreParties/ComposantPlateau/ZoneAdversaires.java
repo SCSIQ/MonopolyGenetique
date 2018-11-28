@@ -177,7 +177,7 @@ public class ZoneAdversaires extends Parent {
         infoAdv1.getChildren().add(rect_adv);
         infoAdv1.getChildren().add(adv1);
         infoAdv1.getChildren().add(argent_adv1);
-        infoAdv1.getChildren().add(rect_adv);
+        infoAdv1.getChildren().add(bt_adv_details);
         infoAdv1.getChildren().add(r_adv1_couleur);
         this.getChildren().add(infoAdv1);
 
