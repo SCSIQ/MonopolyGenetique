@@ -9,6 +9,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -19,7 +20,11 @@ import javafx.stage.Stage;
 //CLASSE S'OCCUPANT DE LA PARTIE DES ADVERSAIRES DES JOUEURS
 public class ZoneAdversaires extends Parent {
     //Attributs
-    Canvas canvas;
+    private Canvas canvas;
+    private Pane infoAdv1;
+    private Pane infoAdv2;
+    private Pane infoAdv3;
+    private Pane infoAdv4;
 
 
     public ZoneAdversaires(Stage primaryStage, Stage fenetre_actuelle, Automate automate, Canvas canvas)
@@ -44,8 +49,6 @@ public class ZoneAdversaires extends Parent {
         rect_adversaire.setStroke(Color.BLACK);
 
         this.getChildren().add(rect_adversaire);
-
-
     }
 
     public void genererAdversaire(Stage primaryStage, Automate automate, Stage fenetre_actuelle){
@@ -123,6 +126,9 @@ public class ZoneAdversaires extends Parent {
     //Les différentes zones des adversaires
     public void RectangleAdv1(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
+        //Création d'un pane
+        infoAdv1 = new Pane();
+
         //Dessin du premier rectangle
         Rectangle rect_adv = new Rectangle();
         rect_adv.setHeight(60);
@@ -132,25 +138,21 @@ public class ZoneAdversaires extends Parent {
         rect_adv.setStroke(Color.BLACK);
         rect_adv.setStrokeWidth(1);
         rect_adv.setFill(Color.TRANSPARENT);
-        this.getChildren().add(rect_adv);
 
         //Nom du joueur
         Label adv1 = new Label(automate.getListeJoueurs().get(i).getNom());
         adv1.setLayoutX(700);
         adv1.setLayoutY(120);
-        this.getChildren().add(adv1);
 
         //ARGENT Joueur 2
         Label argent_adv1 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
         argent_adv1.setLayoutX(700);
         argent_adv1.setLayoutY(150);
-        this.getChildren().add(argent_adv1);
 
         //BOUTON DETAILS
         Button bt_adv_details = new Button("DETAILS");
         bt_adv_details.setLayoutX(850);
         bt_adv_details.setLayoutY(120);
-        this.getChildren().add(bt_adv_details);
 
         //ajout rectangle couleur
         Rectangle r_adv1_couleur = new Rectangle();
@@ -161,9 +163,8 @@ public class ZoneAdversaires extends Parent {
         r_adv1_couleur.setStroke(Color.BLACK);
         r_adv1_couleur.setStrokeWidth(1);
         r_adv1_couleur.setFill(automate.getListeJoueurs().get(1).getCouleur());
-        this.getChildren().add(r_adv1_couleur);
 
-        //action bouton
+        //ACTION BOUTON
         bt_adv_details.setOnAction(new EventHandler<ActionEvent>(){
         @Override
             public void handle(ActionEvent event)
@@ -172,10 +173,20 @@ public class ZoneAdversaires extends Parent {
             }
         });
 
+        //AJOUT
+        infoAdv1.getChildren().add(rect_adv);
+        infoAdv1.getChildren().add(adv1);
+        infoAdv1.getChildren().add(argent_adv1);
+        infoAdv1.getChildren().add(rect_adv);
+        infoAdv1.getChildren().add(r_adv1_couleur);
+        this.getChildren().add(infoAdv1);
+
     }
 
     public void RectangleAdv2(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
+        infoAdv2 = new Pane();
+
         //Dessin du premier rectangle
         Rectangle rect_adv2 = new Rectangle();
         rect_adv2.setHeight(60);
@@ -185,25 +196,21 @@ public class ZoneAdversaires extends Parent {
         rect_adv2.setStroke(Color.BLACK);
         rect_adv2.setStrokeWidth(1);
         rect_adv2.setFill(Color.TRANSPARENT);
-        this.getChildren().add(rect_adv2);
 
         //Nom du joueur
         Label adv2 = new Label(automate.getListeJoueurs().get(i).getNom());
         adv2.setLayoutX(700);
         adv2.setLayoutY(195);
-        this.getChildren().add(adv2);
 
         //ARGENT Joueur 2
         Label argent_adv2 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
         argent_adv2.setLayoutX(700);
         argent_adv2.setLayoutY(225);
-        this.getChildren().add(argent_adv2);
 
         //BOUTON DETAILS
         Button bt_adv_details2 = new Button("DETAILS");
         bt_adv_details2.setLayoutX(850);
         bt_adv_details2.setLayoutY(195);
-        this.getChildren().add(bt_adv_details2);
 
         //ajout rectangle couleur
         Rectangle r_adv2_couleur = new Rectangle();
@@ -214,9 +221,9 @@ public class ZoneAdversaires extends Parent {
         r_adv2_couleur.setStroke(Color.BLACK);
         r_adv2_couleur.setStrokeWidth(1);
         r_adv2_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
-        this.getChildren().add(r_adv2_couleur);
 
-        //action bouton
+
+        //ACTION BOUTON
         bt_adv_details2.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event)
@@ -224,10 +231,20 @@ public class ZoneAdversaires extends Parent {
                 possessionAdv(primaryStage, fenetre_actuelle, automate, i);
             }
         });
+
+        //AJOUT
+        infoAdv2.getChildren().add(rect_adv2);
+        infoAdv2.getChildren().add(adv2);
+        infoAdv2.getChildren().add(argent_adv2);
+        infoAdv2.getChildren().add(bt_adv_details2);
+        infoAdv2.getChildren().add(r_adv2_couleur);
+        this.getChildren().add(infoAdv2);
     }
 
     public void RectangleAdv3(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
+        infoAdv3 = new Pane();
+
         //Dessin du premier rectangle
         Rectangle rect_adv3 = new Rectangle();
         rect_adv3.setHeight(60);
@@ -237,25 +254,21 @@ public class ZoneAdversaires extends Parent {
         rect_adv3.setStroke(Color.BLACK);
         rect_adv3.setStrokeWidth(1);
         rect_adv3.setFill(Color.TRANSPARENT);
-        this.getChildren().add(rect_adv3);
 
         //Nom du joueur
         Label adv3 = new Label(automate.getListeJoueurs().get(i).getNom());
         adv3.setLayoutX(1020);
         adv3.setLayoutY(120);
-        this.getChildren().add(adv3);
 
         //ARGENT Joueur 3
         Label argent_adv3 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
         argent_adv3.setLayoutX(1020);
         argent_adv3.setLayoutY(150);
-        this.getChildren().add(argent_adv3);
 
         //BOUTON DETAILS
         Button bt_adv_details3 = new Button("DETAILS");
         bt_adv_details3.setLayoutX(1170);
         bt_adv_details3.setLayoutY(120);
-        this.getChildren().add(bt_adv_details3);
 
         //ajout rectangle couleur
         Rectangle r_adv3_couleur = new Rectangle();
@@ -266,9 +279,8 @@ public class ZoneAdversaires extends Parent {
         r_adv3_couleur.setStroke(Color.BLACK);
         r_adv3_couleur.setStrokeWidth(1);
         r_adv3_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
-        this.getChildren().add(r_adv3_couleur);
 
-        //action bouton
+        //ACTION WORDPRESS
         bt_adv_details3.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event)
@@ -276,10 +288,20 @@ public class ZoneAdversaires extends Parent {
                 possessionAdv(primaryStage, fenetre_actuelle, automate, i);
             }
         });
+
+        //AJOUT
+        infoAdv3.getChildren().add(rect_adv3);
+        infoAdv3.getChildren().add(adv3);
+        infoAdv3.getChildren().add(argent_adv3);
+        infoAdv3.getChildren().add(bt_adv_details3);
+        infoAdv3.getChildren().add(r_adv3_couleur);
+        this.getChildren().add(infoAdv3);
     }
 
     public void RectangleAdv4(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
     {
+        infoAdv4 = new Pane();
+
         //Dessin du premier rectangle
         Rectangle rect_adv4 = new Rectangle();
         rect_adv4.setHeight(60);
@@ -289,25 +311,25 @@ public class ZoneAdversaires extends Parent {
         rect_adv4.setStroke(Color.BLACK);
         rect_adv4.setStrokeWidth(1);
         rect_adv4.setFill(Color.TRANSPARENT);
-        this.getChildren().add(rect_adv4);
+
 
         //Nom du joueur
         Label adv4 = new Label(automate.getListeJoueurs().get(i).getNom());
         adv4.setLayoutX(1020);
         adv4.setLayoutY(195);
-        this.getChildren().add(adv4);
+
 
         //ARGENT Joueur 2
         Label argent_adv4 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
         argent_adv4.setLayoutX(1020);
         argent_adv4.setLayoutY(225);
-        this.getChildren().add(argent_adv4);
+
 
         //BOUTON DETAILS
         Button bt_adv_details4 = new Button("DETAILS");
         bt_adv_details4.setLayoutX(1170);
         bt_adv_details4.setLayoutY(195);
-        this.getChildren().add(bt_adv_details4);
+
 
         //ajout rectangle couleur
         Rectangle r_adv4_couleur = new Rectangle();
@@ -318,9 +340,9 @@ public class ZoneAdversaires extends Parent {
         r_adv4_couleur.setStroke(Color.BLACK);
         r_adv4_couleur.setStrokeWidth(1);
         r_adv4_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
-        this.getChildren().add(r_adv4_couleur);
 
-        //action bouton
+
+        //ACTION BOUTON
         bt_adv_details4.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event)
@@ -328,6 +350,14 @@ public class ZoneAdversaires extends Parent {
                 possessionAdv(primaryStage, fenetre_actuelle, automate, i);
             }
         });
+
+        //AJOUT
+        infoAdv4.getChildren().add(rect_adv4);
+        infoAdv4.getChildren().add(adv4);
+        infoAdv4.getChildren().add(argent_adv4);
+        infoAdv4.getChildren().add(bt_adv_details4);
+        infoAdv4.getChildren().add(r_adv4_couleur);
+        this.getChildren().add(infoAdv4);
 
     }
 

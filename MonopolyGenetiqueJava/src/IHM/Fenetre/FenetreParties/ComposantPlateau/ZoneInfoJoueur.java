@@ -41,10 +41,6 @@ public class ZoneInfoJoueur extends Parent {
         infosJoueur.setPrefSize(width*0.91,height*0.07);
         infosJoueur.setBorder(border1);*/
 
-
-
-
-
         Rectangle rect_infosJoueur = new Rectangle() ;
 
         //TAILLE DU RECTANGLE ET POSITION
