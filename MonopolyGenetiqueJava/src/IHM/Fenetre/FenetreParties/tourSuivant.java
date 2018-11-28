@@ -86,9 +86,6 @@ public class tourSuivant extends Parent {
 
         this.getChildren().add(bt_ok);
 
-/////////////////////////////////////////////////////////////////REMET A FAUX LE LANCER DE DES
-        automate.getJoueurCourant().setaLanceDes(false) ;
-
     }
 
     public void detruireCanvas(Canvas canvas)
