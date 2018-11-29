@@ -27,7 +27,7 @@ public class LancerDesJoueur extends Etat {
 
         Joueur j = super.getListeJoueurs().get(0); //récupère le joueur courant
 
-        //System.out.println("AVANT DEPLACEMENT --> LancerDesJoueur : "+j.getaLanceDes());
+        System.out.println("AVANT DEPLACEMENT --> LancerDesJoueur : "+j.getaLanceDes());
 
         if(j.getaLanceDes()==false){
             this.transitionToDeplacement = true;
@@ -57,7 +57,7 @@ public class LancerDesJoueur extends Etat {
             {
                 j.setaLanceDes(true);
             }
-            //System.out.println("APRES DEPLACEMENT --> LancerDesJoueur : "+j.getaLanceDes());
+            System.out.println("APRES DEPLACEMENT --> LancerDesJoueur : "+j.getaLanceDes());
 
         }else{
             this.transitionToDeplacement = false;

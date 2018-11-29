@@ -67,9 +67,6 @@ public class Pion extends Parent {
 
         // ON AJOUTE A CE PANEL
          p.getChildren().add(pions.get(0));
-
-        ChangerOrdrePion(pions);
-
     }
 
     public void sortirDeCase(Circle c) {
@@ -79,10 +76,10 @@ public class Pion extends Parent {
         p.getChildren().remove(c);
     }
 
-    public void ChangerOrdrePion(ArrayList<Circle> pions)
+    public void ChangerOrdrePion()
     {
-        pions.add(pions.get(0));
-        pions.remove(0);
+        this.pions.add(pions.get(0));
+        this.pions.remove(0);
     }
 }
 

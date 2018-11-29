@@ -54,7 +54,7 @@ public class Jeu extends Parent {
         zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
 
 /////////////PION
-    //    Pion pion = new Pion(automate, pl);
+        Pion pion = new Pion(automate, pl);
 
 
 ////////////////////////////////
@@ -85,7 +85,7 @@ public class Jeu extends Parent {
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate);
-                    //pion.entrerDansCase();
+                    pion.entrerDansCase();
                     //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
                 }else{
@@ -110,6 +110,8 @@ public class Jeu extends Parent {
                     zoneAd.SupprimerAdversaire();
                     zoneJoueur.genereInfosJoueur(automate);
                     zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
+
+                    pion.ChangerOrdrePion(); //change l'ordre des pions coté IHM lors du chagement de joueur 
 
                 } else {
                     automate.evoluer("tourSuivant");
