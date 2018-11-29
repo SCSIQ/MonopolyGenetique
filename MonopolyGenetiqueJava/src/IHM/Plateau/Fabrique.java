@@ -48,29 +48,24 @@ public class Fabrique {
 
             case "Boul. de Belleville" : c = new CaseBelleville(caseMetier);
             break ;
-            case "Caisse Commune": c = new CommuBas(caseMetier);
+            case "CaisseCommune1": c = new CommuBas(caseMetier);
             break ;
             case "Rue Lecourbe" : c = new CaseLecourbe(caseMetier);
             break ;
-
             case "Impot sur le Revenu": c = new Impot(caseMetier);
             break ;
-
             case "Gare de Montparmasse": c = new GareMontparnasse(caseMetier);
             break;
-
             case "Rue de Vaugirard" : c = new CaseVaugirard(caseMetier);
             break;
-            case "Case Chance" : c = new ChanceBas(caseMetier);
+            case "Chance1" : c = new ChanceBas(caseMetier);
             break ;
             case "Rue de Courcelles" : c = new CaseCourcelles(caseMetier);
             break;
             case "Avenue de la République" : c = new CaseRepublique(caseMetier);
             break ;
-
             case "Prison": c = new Prison(caseMetier);
             break;
-
 
             //CASES DE GAUCHES
             case "Boul. de la Villette": c = new CaseVillette(caseMetier);
@@ -81,22 +76,18 @@ public class Fabrique {
             break ;
             case "Rue du Paradis" : c = new CaseParadis(caseMetier);
             break ;
-
             case "Gare de Lyon": c = new GareLyon(caseMetier);
             break;
-
             case "Avenue Mozart" : c = new CaseMozart(caseMetier);
             break ;
             case "Boul. Saint-Michel" : c = new CaseSaintMichelle(caseMetier);
             break;
             case "Place Pigale": c = new CasePigalle(caseMetier);
             break ;
-
             case "ParcGratuit": c = new ParcGratuit(caseMetier);
             break;
-
-            /*case "Caisse Commune": c = new CommuGauche(caseMetier);
-            break ;*/
+            case "CaisseCommune2": c = new CommuGauche(caseMetier);
+            break ;
 
             //CASE DU HAUT
             case "Avenue Matignon" : c = new CaseMatignon(caseMetier);
@@ -105,49 +96,40 @@ public class Fabrique {
             break;
             case "Avenue Henri-Martin" : c = new CaseHenriMartin(caseMetier);
             break ;
-
             case "Gare du Nord": c = new GareNord(caseMetier);
             break;
-
             case "Faubourg Saint-Honoré": c = new CaseHonore(caseMetier);
             break ;
             case "Place de la Bourse": c = new CaseBourse(caseMetier);
             break ;
             case "Rue Lafayette" : c = new CaseFayette(caseMetier);
             break ;
-
             case "Robinet": c = new Robinet(caseMetier);
             break;
-
             case "Aller en prison": c = new AllezPrison(caseMetier);
             break;
+            case "Chance2" : c = new ChanceHaut(caseMetier);
+            break ;
 
-            /*case "Case Chance" : c = new ChanceHaut(caseMetier);
-            break ;*/
-
-            //CASES DE DROITES
+            //CASS DE DROITES
             case "Avenue de Breteuil" : c = new CaseBreteuil(caseMetier);
             break ;
             case "Avenue Foch" : c = new CaseFoch(caseMetier);
             break ;
             case "Boul. des Capucines": c = new CaseCapucine(caseMetier);
             break ;
-
             case "Gare de Saint-Lazare": c = new GareSaintLazare(caseMetier);
             break ;
             case "Avenue des Champs-Elysées" : c = new CaseChampsElysees(caseMetier);
             break;
-
             case "TaxeDeLuxe": c = new TaxeDeLuxe(caseMetier);
             break;
             case "Rue de la Paix": c = new CasePaix(caseMetier);
             break ;
-
-            /*case "Case Chance" : c = new ChanceDroite(caseMetier);
-            break ;*/
-
-            /*case "Caisse Commune": c = new CommuDroite(caseMetier);
-            break ;*/
+            case "Chance3" : c = new ChanceDroite(caseMetier);
+            break ;
+            case "CaisseCommune3": c = new CommuDroite(caseMetier);
+            break ;
 
             //PAR DEFAUT
             default: c= null;
