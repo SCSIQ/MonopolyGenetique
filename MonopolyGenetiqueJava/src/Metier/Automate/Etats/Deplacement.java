@@ -29,25 +29,15 @@ public class Deplacement extends Etat{
         boolean goToPrison = false;
         int newPositionToGo = position.getPosition() + resDes;
 
-        System.out.println("newPositionToGo : "+newPositionToGo);
-
-        if(j.getPion().isGoToPrison()==true)
+        System.out.println("D'où on vient : "+position.getPosition());
+        System.out.println("De combien on avance : "+resDes);
+        System.out.println("Où aller : "+newPositionToGo);
+        if (newPositionToGo > 39) //si change de tour de plateau et passe par la case départ
         {
-            position = j.getListeCases().get(10);
+            newPositionToGo = newPositionToGo - 40; //Permet de denrepositionner le pion sur le nouveau tour du plateau
+            this.passeParDepart = true;
         }
-        else
-        {
-            if (position.getPosition() + resDes > 39) //si change de tour de plateau et passe par la case départ
-            {
-                newPositionToGo = newPositionToGo - 40; //Permet de denrepositionner le pion sur le nouveau tour du plateau
-                this.passeParDepart = true;
-            }
-            else{ //sinon ne peut pas avancer....
-                System.out.println("    ne peut pas avancer pour le moment...\n        Veuillez contacter Aurian");
-            }
-            j.Avancer(newPositionToGo); //demande au joueur d'avancer son pion (le joueur connais les résultats de son lancé de dès)
-        }
-        j.getPion().setGoToPrison(false);
+        j.Avancer(newPositionToGo); //demande au joueur d'avancer son pion (le joueur connais les résultats de son lancé de dès
 
         System.out.println("    après déplacement : "+j.toString());
     }

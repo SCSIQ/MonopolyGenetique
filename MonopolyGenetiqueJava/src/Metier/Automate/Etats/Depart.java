@@ -2,6 +2,7 @@ package Metier.Automate.Etats;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
+import Metier.Automate.Etats.Choix.ChoixPossibles;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class Depart extends Etat {
 
     @Override
     public Etat transition(String event) {
-        return null;
+        return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
     }
 
     @Override
