@@ -33,6 +33,6 @@ public class CaseChampsElysees extends Terrain {
 
     @Override
     public String getType() {
-        return "Elysees";
+        return "Avenue des Champs-Elysées";
     }
 }

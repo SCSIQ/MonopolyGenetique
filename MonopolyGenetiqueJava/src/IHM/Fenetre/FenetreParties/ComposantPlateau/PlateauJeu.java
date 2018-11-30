@@ -21,7 +21,7 @@ import java.util.ArrayList;
 //CLASSE COMPORTANT LA LISTE DES CASES DU PLATEAU
 public class PlateauJeu extends Parent {
     
-   private ArrayList<Pane> listeCases;
+   private ArrayList<VueCases> listeCases;
    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
 
 
@@ -81,7 +81,7 @@ public class PlateauJeu extends Parent {
 
     //RETOURNE LA LISTE DES CASES
     //UTILISEE POUR LES PIONS
-    public ArrayList<Pane> getListeCases(){
+    public ArrayList<VueCases> getListeCases(){
         return listeCases ;
     }
 

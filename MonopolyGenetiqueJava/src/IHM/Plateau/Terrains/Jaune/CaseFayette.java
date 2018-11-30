@@ -33,6 +33,6 @@ public class CaseFayette extends Terrain {
 
     @Override
     public String getType() {
-        return "Fayette";
+        return "Rue Lafayette";
     }
 }

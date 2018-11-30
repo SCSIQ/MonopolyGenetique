@@ -30,6 +30,6 @@ public class CaseFoch extends Terrain {
 
     @Override
     public String getType() {
-        return "Foch";
+        return "Avennue Foch";
     }
 }

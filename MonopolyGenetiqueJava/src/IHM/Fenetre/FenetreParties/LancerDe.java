@@ -1,21 +1,33 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.fenetreCaseLibre;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 public class LancerDe extends Parent {
 
-    public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate)
+    private Jeu jeu ;
+    private Canvas canvas;
+    private PlateauJeu plateauJeu ;
+
+    public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate, Jeu jeu, PlateauJeu plateauJeu)
     {
+        this.jeu=jeu;
+        this.canvas=canvas ;
+        this.plateauJeu=plateauJeu;
+
 //////////////////////////////////////////////////////////////////////////TEXTE
             //récupération de la valeur des dés
 
@@ -48,6 +60,11 @@ public class LancerDe extends Parent {
                     //on ferme la fenêtre
                     fenetre_actuelle.close();
 
+                    //appel de la fonction "vous êtes sur telle case"
+                    fenetreVousEtesSur(fenetre_actuelle, automate);
+
+
+
 
                 }
             });
@@ -79,5 +96,24 @@ public class LancerDe extends Parent {
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
+    }
+
+    public void fenetreVousEtesSur(Stage fenetre_actuelle, Automate automate)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_vousEtesSur = new Stage();
+        fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, plateauJeu);
+
+        Scene nouvelle_scene = new  Scene(fenetreSur,700,500);
+
+        nouvelle_fenetre_vousEtesSur.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_vousEtesSur.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_vousEtesSur.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_vousEtesSur.show();
     }
 }

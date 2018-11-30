@@ -31,6 +31,6 @@ public class Impot extends Taxes {
 
     @Override
     public String getType() {
-        return "Impot";
+        return "Impôt sur le revenu";
     }
 }

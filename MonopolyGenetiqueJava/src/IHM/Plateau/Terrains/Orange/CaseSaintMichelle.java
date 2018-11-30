@@ -32,6 +32,6 @@ public class CaseSaintMichelle extends Terrain {
 
     @Override
     public String getType() {
-        return "Michelle";
+        return "Boul. Saint-Michel";
     }
 }

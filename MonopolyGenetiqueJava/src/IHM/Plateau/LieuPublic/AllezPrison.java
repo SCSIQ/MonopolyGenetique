@@ -29,6 +29,6 @@ public class AllezPrison extends VueCases {
 
     @Override
     public String getType() {
-        return "AllezEnPrison";
+        return "Allez en prison";
     }
 }

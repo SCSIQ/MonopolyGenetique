@@ -31,6 +31,6 @@ public class CaseMozart extends Terrain {
 
     @Override
     public String getType() {
-        return "Mozart";
+        return "Avenue Mozart";
     }
 }

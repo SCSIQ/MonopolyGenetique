@@ -30,6 +30,6 @@ public class Robinet extends ServicePublic {
 
     @Override
     public String getType() {
-        return "Robinet";
+        return "Compagnie des eaux";
     }
 }

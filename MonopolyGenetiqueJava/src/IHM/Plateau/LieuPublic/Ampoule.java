@@ -33,6 +33,6 @@ public class Ampoule extends Proprietes{
 
     @Override
     public String getType() {
-        return "Ampoule";
+        return "Compagnie d'électricité";
     }
 }

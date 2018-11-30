@@ -30,6 +30,6 @@ public class CaseBourse extends Terrain {
 
     @Override
     public String getType() {
-        return "Bourse";
+        return "Place de la Bourse";
     }
 }
