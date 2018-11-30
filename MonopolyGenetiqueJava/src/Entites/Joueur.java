@@ -38,6 +38,15 @@ public class Joueur {
         return aLanceDes;
     } // fonction qui dit si le joueur a déjà lancer les dés avec vrai ou faux
 
+    public void IncrementerSolde(int solde) {
+        this.solde += solde;
+    }//augmente le montant de l'argent que le joueur posséde
+
+    public void DecrementerSolde(int solde) {
+        this.solde -= solde;
+    }//diminue le montant de l'argent que le joueur posséde
+    
+
     public void setaLanceDes(boolean aLanceDes) {
         this.aLanceDes = aLanceDes;
     } // modifie la valeur du boolean
@@ -103,10 +112,6 @@ public class Joueur {
     public void setCouleur(Color couleur) {
         this.couleur = couleur;
     } //modifie la valeur de la couleur
-
-    public void setSolde(int solde) {
-        this.solde = solde;
-    }//modifie le montant de l'argent que le joueur posséde
 
     public int getNbDoubles() {
         return nbDoubles;

@@ -27,13 +27,9 @@ public class GareMontparnasse extends Proprietes {
         c_gareM.setPreserveRatio(true);
 
         this.getChildren().add(c_gareM);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

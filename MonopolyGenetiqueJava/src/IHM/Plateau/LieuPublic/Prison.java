@@ -26,13 +26,9 @@ public class Prison extends VueCases {
 
 
         this.getChildren().add(c_prison);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

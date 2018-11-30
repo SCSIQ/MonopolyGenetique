@@ -30,14 +30,10 @@ public class CaseRepublique extends Terrain {
 
 
         this.getChildren().add(c_republique);
-        getListeCases().add(this);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

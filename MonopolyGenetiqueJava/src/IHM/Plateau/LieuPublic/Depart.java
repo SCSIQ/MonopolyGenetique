@@ -29,16 +29,10 @@ public class Depart extends VueCases {
         imageDepart.setPreserveRatio(true);
 
 
-
-        getListeCases().add(0, this);
         this.getChildren().add(imageDepart);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-        getListeCases().add(0, this);
-    }
 
 
     @Override

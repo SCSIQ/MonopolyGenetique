@@ -22,15 +22,11 @@ public class CaseFoch extends Terrain {
 
         c_foch.setFitHeight(48);
         c_foch.setPreserveRatio(true);
-        getListeCases().add(this);
         this.getChildren().add(c_foch);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

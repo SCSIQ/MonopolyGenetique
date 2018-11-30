@@ -24,13 +24,9 @@ public class ParcGratuit extends VueCases {
         c_parc.setPreserveRatio(true);
 
         this.getChildren().add(c_parc);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

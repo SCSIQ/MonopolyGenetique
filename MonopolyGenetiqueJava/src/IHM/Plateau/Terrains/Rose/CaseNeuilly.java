@@ -24,14 +24,10 @@ public class CaseNeuilly extends Terrain {
         c_neuilly.setPreserveRatio(true);
 
         this.getChildren().add(c_neuilly);
-        getListeCases().add(this);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

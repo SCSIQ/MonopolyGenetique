@@ -26,14 +26,10 @@ public class CasePaix extends Terrain {
         c_paix.setPreserveRatio(true);
 
 
-        getListeCases().add(this);
         this.getChildren().add(c_paix);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

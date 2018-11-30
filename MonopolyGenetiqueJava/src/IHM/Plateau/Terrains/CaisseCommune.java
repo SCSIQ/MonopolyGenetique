@@ -10,10 +10,7 @@ public class CaisseCommune extends VueCases {
         super(caseMetier);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

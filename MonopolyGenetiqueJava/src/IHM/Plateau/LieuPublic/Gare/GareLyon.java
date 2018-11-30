@@ -28,13 +28,9 @@ public class GareLyon extends Proprietes {
         c_gareL.setPreserveRatio(true);
 
         this.getChildren().add(c_gareL);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

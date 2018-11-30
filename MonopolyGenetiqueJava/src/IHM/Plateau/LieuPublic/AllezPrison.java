@@ -24,13 +24,8 @@ public class AllezPrison extends VueCases {
         c_aprison.setPreserveRatio(true);
 
         this.getChildren().add(c_aprison);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-
-    }
 
     @Override
     public String getType() {
