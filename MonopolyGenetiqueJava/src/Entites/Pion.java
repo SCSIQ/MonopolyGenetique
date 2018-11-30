@@ -20,38 +20,12 @@ public class Pion {
     ///fonction qui fait avancer le pion sur le plateau IHM
     public void avancer(int nombre){
         boolean hasMoved = false;
-        int newPositionToGo = position.getPosition() + nombre;
-        System.out.println("newPositionToGo : "+newPositionToGo);
-
-        if(this.goToPrison==true)
-        {
-            this.position = joueur.getListeCases().get(9);
-        }
-        else
-        {
-            if(newPositionToGo <= 39){ //si toujours sur le même tour du plateau
-                for(int i=0 ; i<joueur.getListeCases().size() ; i++){
-                    if(joueur.getListeCases().get(i).getPosition() == newPositionToGo && hasMoved == false){
-                        this.position = joueur.getListeCases().get(i);
-                        hasMoved = true;
-                    }
-                }
-            }
-            else if(position.getPosition() + nombre > 39) //si change de tour de plateau et passe par la case départ
-            {
-                newPositionToGo = newPositionToGo - 40; //Permet de denrepositionner le pion sur le nouveau tour du plateau
-                for(int i=0 ; i<joueur.getListeCases().size() ; i++){
-                    if(joueur.getListeCases().get(i).getPosition() == newPositionToGo && hasMoved == false){
-                        this.position = joueur.getListeCases().get(i);
-                        hasMoved = true;
-                    }
-                }
-            }
-            else{ //sinon ne peut pas avancer....
-                System.out.println("    ne peut pas avancer pour le moment...\n        Veuillez contacter Aurian");
+        for(int i=0 ; i<joueur.getListeCases().size() ; i++){
+            if(joueur.getListeCases().get(i).getPosition() == nombre && hasMoved == false){
+                this.position = joueur.getListeCases().get(i);
+                hasMoved = true;
             }
         }
-        this.goToPrison=false;
     }
 
     @Override
