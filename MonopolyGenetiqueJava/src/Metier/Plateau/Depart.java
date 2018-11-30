@@ -11,5 +11,5 @@ public class Depart extends Cases  {
         return "Départ";
     }
 
-    /*chaque joueur qui passe sur la case départ gagne 1 5000€ */
+
 }
