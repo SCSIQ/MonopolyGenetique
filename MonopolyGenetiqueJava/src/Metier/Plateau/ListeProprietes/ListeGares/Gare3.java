@@ -8,6 +8,6 @@ public class Gare3 extends Gare {
 
     @Override
     public String toString() {
-        return "Gare du nord";
+        return "Gare du Nord";
     }
 }

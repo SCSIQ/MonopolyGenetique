@@ -36,6 +36,6 @@ public class GareNord extends Proprietes {
 
     @Override
     public String getType() {
-        return "Gare de Nord";
+        return "Gare du Nord";
     }
 }
