@@ -45,7 +45,7 @@ public class Joueur {
     public void DecrementerSolde(int solde) {
         this.solde -= solde;
     }//diminue le montant de l'argent que le joueur posséde
-    
+
 
     public void setaLanceDes(boolean aLanceDes) {
         this.aLanceDes = aLanceDes;
@@ -75,8 +75,8 @@ public class Joueur {
         this.resLanceDes = aresLanceDes;
     } // modifie le résultat de l'addition des deux dés
 
-    public void avancer() {
-        pion.avancer(this.resLanceDes);
+    public void Avancer(int position) {
+        pion.avancer(position);
     } // procédure qui fait avancer le pion sur le plateau
 
     public ArrayList<Cases> getListeCases() {
