@@ -23,14 +23,9 @@ public class CaseCapucine extends Terrain {
         c_capucines.setFitHeight(48);
         c_capucines.setPreserveRatio(true);
 
-        getListeCases().add(this);
         this.getChildren().add(c_capucines);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-
-    }
 
     @Override
     public String getType() {

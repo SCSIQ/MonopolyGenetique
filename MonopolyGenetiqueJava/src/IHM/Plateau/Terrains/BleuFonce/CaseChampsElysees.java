@@ -26,14 +26,10 @@ public class CaseChampsElysees extends Terrain {
         c_champsE.setFitHeight(48);
         c_champsE.setPreserveRatio(true);
 
-        getListeCases().add(this);
         this.getChildren().add(c_champsE);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

@@ -24,13 +24,8 @@ public class TaxeDeLuxe extends Taxes {
         c_taxe.setPreserveRatio(true);
 
         this.getChildren().add(c_taxe);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-
-    }
 
     @Override
     public String getType() {

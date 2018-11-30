@@ -29,13 +29,9 @@ public class CaseVaugirard extends Terrain {
         c_vaugirard.setPreserveRatio(true);
 
         this.getChildren().add(c_vaugirard);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

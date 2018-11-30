@@ -24,6 +24,5 @@ public class ChanceHaut extends Chance {
         c_chance.setRotate(180);
 
         this.getChildren().add(c_chance);
-        getListeCases().add(this);
     }
 }

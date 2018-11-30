@@ -24,14 +24,9 @@ public class CaseMalsherbes extends Terrain {
         c_malesherbes.setFitWidth(48);
         c_malesherbes.setPreserveRatio(true);
 
-        getListeCases().add(this);
         this.getChildren().add(c_malesherbes);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-
-    }
 
     @Override
     public String getType() {

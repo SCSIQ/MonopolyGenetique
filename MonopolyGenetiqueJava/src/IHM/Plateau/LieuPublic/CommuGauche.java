@@ -24,6 +24,5 @@ public class CommuGauche extends CaisseCommune {
         c_com.setPreserveRatio(true);
 
         this.getChildren().add(c_com);
-        getListeCases().add(this);
     }
 }

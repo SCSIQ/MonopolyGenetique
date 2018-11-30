@@ -24,6 +24,5 @@ public class ChanceDroite extends Chance {
         c_chance.setPreserveRatio(true);
 
         this.getChildren().add(c_chance);
-        getListeCases().add(this);
     }
 }

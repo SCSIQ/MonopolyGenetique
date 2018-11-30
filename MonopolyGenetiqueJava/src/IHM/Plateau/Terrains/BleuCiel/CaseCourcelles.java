@@ -31,13 +31,9 @@ public class CaseCourcelles extends Terrain {
         c_courcelles.setPreserveRatio(true);
 
         this.getChildren().add(c_courcelles);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

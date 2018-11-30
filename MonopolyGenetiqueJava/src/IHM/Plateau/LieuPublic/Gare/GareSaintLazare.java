@@ -25,14 +25,10 @@ public class GareSaintLazare extends Proprietes {
 
         c_gareSL.setFitHeight(48);
         c_gareSL.setPreserveRatio(true);
-        getListeCases().add( this);
         this.getChildren().add(c_gareSL);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

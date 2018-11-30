@@ -24,6 +24,5 @@ public class CommuDroite extends CaisseCommune {
         c_commu3.setRotate(-90);
 
         this.getChildren().add(c_commu3);
-        getListeCases().add(this);
     }
 }

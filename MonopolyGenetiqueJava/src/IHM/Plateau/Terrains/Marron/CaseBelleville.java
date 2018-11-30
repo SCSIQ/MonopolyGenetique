@@ -34,14 +34,9 @@ public class CaseBelleville extends Terrain {
         imageBelleville.setPreserveRatio(true);
         //ajout au panel de l'image et ajout du panel dans le jeu
         this.getChildren().add(imageBelleville);
-        getListeCases().add(this);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-
-    }
 
     @Override
     public String getType() {

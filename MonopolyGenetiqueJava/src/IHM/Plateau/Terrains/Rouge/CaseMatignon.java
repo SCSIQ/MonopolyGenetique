@@ -25,14 +25,10 @@ public class CaseMatignon extends Terrain {
         c_matignon.setFitWidth(48);
         c_matignon.setPreserveRatio(true);
 
-        getListeCases().add(this);
         this.getChildren().add(c_matignon);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {
