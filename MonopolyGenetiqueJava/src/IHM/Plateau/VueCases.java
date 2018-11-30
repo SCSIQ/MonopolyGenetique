@@ -10,12 +10,10 @@ public abstract class  VueCases extends Pane {
     //ATTRIBUTS
     private int position ;
     private Cases caseMetier ;
-    private ArrayList<Pane> listeCases = new ArrayList<>();
 
     //CONSTRUCTEUR PRENANT UNE CASE DU METIER EN PARAMETRE
     public VueCases(Cases caseMetier)
     {
-        this.listeCases = new ArrayList<>();
         this.caseMetier = caseMetier;
     }
 
@@ -24,11 +22,6 @@ public abstract class  VueCases extends Pane {
     public Cases getCase(){
         return caseMetier;
     }
-
-    public  ArrayList<Pane> getListeCases(){
-        return listeCases;
-    }
-    public abstract void setListeCases(Pane p);
 
 
     //Permet de récupérer le type de la Case

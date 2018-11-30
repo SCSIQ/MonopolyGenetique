@@ -25,13 +25,9 @@ public class CaseMozart extends Terrain {
         c_mozart.setPreserveRatio(true);
 
         this.getChildren().add(c_mozart);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

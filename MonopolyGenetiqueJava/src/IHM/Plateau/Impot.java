@@ -26,13 +26,8 @@ public class Impot extends Taxes {
         c_impot.setPreserveRatio(true);
 
         this.getChildren().add(c_impot);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
-
-    }
 
     @Override
     public String getType() {

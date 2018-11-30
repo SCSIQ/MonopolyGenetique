@@ -24,7 +24,7 @@ public class Pion extends Parent {
         pions = new ArrayList<>();
 
         int x = 20;
-        int y = 50;
+        int y = 60;
         for (int i = 0; i < automate.getNombreJoueur(); i++) {
             pions.add(i, new Circle());
 
@@ -32,7 +32,7 @@ public class Pion extends Parent {
 
          Pane caseDepart = (Pane) plateauJeu.getListeCases().get(0);
             pions.get(i).setRadius(10);
-            pions.get(i).setLayoutY(20);
+            pions.get(i).setLayoutY(30);
             pions.get(i).setStroke(Color.BLACK);
             pions.get(i).setStrokeWidth(1);
             pions.get(i).setLayoutX(x);

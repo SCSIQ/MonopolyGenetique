@@ -23,14 +23,10 @@ public class Robinet extends ServicePublic {
         c_ceaux.setFitWidth(48);
         c_ceaux.setPreserveRatio(true);
 
-        getListeCases().add(this);
         this.getChildren().add(c_ceaux);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

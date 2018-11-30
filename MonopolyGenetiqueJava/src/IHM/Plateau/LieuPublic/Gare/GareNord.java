@@ -24,15 +24,11 @@ public class GareNord extends Proprietes {
         c_gareN.setFitWidth(48);
         c_gareN.setPreserveRatio(true);
 
-        getListeCases().add(this);
         this.getChildren().add(c_gareN);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

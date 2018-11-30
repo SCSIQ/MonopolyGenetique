@@ -25,14 +25,10 @@ public class CaseParadis extends Terrain {
         c_paradis.setPreserveRatio(true);
 
         this.getChildren().add(c_paradis);
-        getListeCases().add(this);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

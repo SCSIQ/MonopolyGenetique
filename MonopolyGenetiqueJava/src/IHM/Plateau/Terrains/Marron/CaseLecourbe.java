@@ -32,14 +32,10 @@ public class CaseLecourbe extends Terrain {
         c_Lecourbe.setPreserveRatio(true);
 
         this.getChildren().add(c_Lecourbe);
-        getListeCases().add(this);
 
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

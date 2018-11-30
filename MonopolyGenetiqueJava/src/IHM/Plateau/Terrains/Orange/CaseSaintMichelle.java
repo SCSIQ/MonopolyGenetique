@@ -26,13 +26,9 @@ public class CaseSaintMichelle extends Terrain {
         c_saintM.setPreserveRatio(true);
 
         this.getChildren().add(c_saintM);
-        getListeCases().add(this);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {

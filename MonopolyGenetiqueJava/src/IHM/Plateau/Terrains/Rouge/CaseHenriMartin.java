@@ -20,17 +20,13 @@ public class CaseHenriMartin extends Terrain {
         Image i_henriM = new Image(henriM.toExternalForm());
         ImageView c_henriM = new ImageView(i_henriM);
 
-        getListeCases().add(this);
         c_henriM.setFitWidth(48);
         c_henriM.setPreserveRatio(true);
 
         this.getChildren().add(c_henriM);
     }
 
-    @Override
-    public void setListeCases(Pane p) {
 
-    }
 
     @Override
     public String getType() {
