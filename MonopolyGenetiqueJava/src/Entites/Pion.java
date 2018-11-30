@@ -25,7 +25,7 @@ public class Pion {
 
         if(this.goToPrison==true)
         {
-            this.position = joueur.getListeCases().get(9);
+            this.position = joueur.getListeCases().get(10);
         }
         else
         {
