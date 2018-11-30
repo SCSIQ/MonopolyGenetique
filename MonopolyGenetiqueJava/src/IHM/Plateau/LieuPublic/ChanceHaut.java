@@ -12,6 +12,9 @@ public class ChanceHaut extends Chance {
     public ChanceHaut(Cases caseMetier) {
         super(caseMetier);
 
+        this.setLayoutX(148);
+        this.setLayoutY(110);
+
         URL chance = getClass().getResource("Images/Case_Chance.png");
         Image i_chance = new Image(chance.toExternalForm());
         ImageView c_chance = new ImageView(i_chance);
