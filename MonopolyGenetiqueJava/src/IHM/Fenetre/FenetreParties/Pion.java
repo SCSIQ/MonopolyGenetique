@@ -95,8 +95,10 @@ public class Pion extends Parent {
             {
                 if(posJ1==posJ2)
                 {
-                    pions.get(0).setLayoutX(10);
-                    pions.get(1).setLayoutX(55);
+                    pions.get(0).setLayoutX(25);
+                    pions.get(0).setLayoutY(15);
+                    pions.get(1).setLayoutX(25);
+                    pions.get(1).setLayoutY(45);
                 }else{
                     pions.get(0).setLayoutX(25);
                     pions.get(0).setLayoutY(30);
@@ -111,7 +113,7 @@ public class Pion extends Parent {
                 {
                     pions.get(0).setLayoutX(15);
                     pions.get(0).setLayoutY(25);
-                    pions.get(1).setLayoutX(55);
+                    pions.get(1).setLayoutX(45);
                     pions.get(1).setLayoutY(25);
                 }else{
                     pions.get(0).setLayoutX(30);
@@ -125,9 +127,9 @@ public class Pion extends Parent {
             {
                 if(posJ1==posJ2)
                 {
-                    pions.get(0).setLayoutX(30);
+                    pions.get(0).setLayoutX(35);
                     pions.get(0).setLayoutY(25);
-                    pions.get(1).setLayoutX(55);
+                    pions.get(1).setLayoutX(65);
                     pions.get(1).setLayoutY(25);
                 }else{
                     pions.get(0).setLayoutX(55);

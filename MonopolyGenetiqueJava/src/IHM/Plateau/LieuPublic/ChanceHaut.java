@@ -15,13 +15,12 @@ public class ChanceHaut extends Chance {
         this.setLayoutX(148);
         this.setLayoutY(110);
 
-        URL chance = getClass().getResource("Images/Case_Chance.png");
+        URL chance = getClass().getResource("Images/Case_Chance_Haut.png");
         Image i_chance = new Image(chance.toExternalForm());
         ImageView c_chance = new ImageView(i_chance);
 
         c_chance.setFitWidth(48);
         c_chance.setPreserveRatio(true);
-        c_chance.setRotate(180);
 
         this.getChildren().add(c_chance);
     }
