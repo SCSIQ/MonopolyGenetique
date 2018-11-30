@@ -12,15 +12,14 @@ public class ChanceDroite extends Chance {
     public ChanceDroite(Cases caseMetier) {
         super(caseMetier);
 
-        this.setLayoutX(552);
-        this.setLayoutY(416);
+        this.setLayoutX(532);
+        this.setLayoutY(436);
 
-        URL chance = getClass().getResource("Images/Case_Chance.png");
+        URL chance = getClass().getResource("Images/Case_Chance_Droite.png");
         Image i_chance = new Image(chance.toExternalForm());
         ImageView c_chance = new ImageView(i_chance);
 
-        c_chance.setRotate(-90);
-        c_chance.setFitWidth(48);
+        c_chance.setFitHeight(48);
         c_chance.setPreserveRatio(true);
 
         this.getChildren().add(c_chance);

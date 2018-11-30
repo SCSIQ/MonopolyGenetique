@@ -222,7 +222,7 @@ public class Solo extends Parent {
         switch (i){
             case 0 : couleur = Color.DARKKHAKI;
                     break;
-            case 1 : couleur = Color.BLACK;
+            case 1 : couleur = Color.BURLYWOOD;
                     break;
             case 2 : couleur = Color.GREEN;
                     break;

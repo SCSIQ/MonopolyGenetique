@@ -22,6 +22,7 @@ public class LancerDe extends Parent {
             Integer score = automate.getJoueurCourant().getResLanceDes();
             Integer dé1 = automate.getJoueurCourant().getResDes1();
             Integer dé2 = automate.getJoueurCourant().getResDes2();
+
             Text t_nb = new Text(automate.getJoueurCourant().getNom()+" a fait : \n" +"    "+ dé1.toString()+" + "+dé2.toString()+" = "+score.toString());
 
             t_nb.setLayoutX(170);
