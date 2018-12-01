@@ -3,6 +3,7 @@ package IHM.Fenetre.FenetreParties;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.fenetreCaseLibre;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -60,41 +61,24 @@ public class LancerDe extends Parent {
                     //on ferme la fenêtre
                     fenetre_actuelle.close();
 
-                    //appel de la fonction "vous êtes sur telle case" si la case est différente d'une case chance ou communauté
-                    // ou case Prison ou parc gratuit ou allez en prison et depart ET IMPOTS
 
 
-                    //IF CASES CHANCE
-                    if(automate.getJoueurCourant().getPion().getCase().getPosition()!=7&& automate.getJoueurCourant().getPion().getCase().getPosition()!=22 && automate.getJoueurCourant().getPion().getCase().getPosition()!=35)
-                    {
-                        //IF CASES COMMUNAUTE
-                        if(automate.getJoueurCourant().getPion().getCase().getPosition()!=2&& automate.getJoueurCourant().getPion().getCase().getPosition()!=17 && automate.getJoueurCourant().getPion().getCase().getPosition()!=33)
-                        {
-                            //IF CASE Départ
-                            if(automate.getJoueurCourant().getPion().getCase().getPosition()!=0){
-                                //IF CASE PRISON
-                                if(automate.getJoueurCourant().getPion().getCase().getPosition()!=10){
-                                    //IF CASE PARC GRATUIT
-                                    if(automate.getJoueurCourant().getPion().getCase().getPosition()!=20){
-                                        //IF CASE ALLEZ EN PRISON
-                                        if(automate.getJoueurCourant().getPion().getCase().getPosition()!=30){
-                                            //IF IMPOT SUR LE REVENU
-                                            if(automate.getJoueurCourant().getPion().getCase().getPosition()!=4){
-                                                //IF TAXE DE LUXE
-                                                if(automate.getJoueurCourant().getPion().getCase().getPosition()!=38){
-                                                    fenetreVousEtesSur(fenetre_actuelle, automate);
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
 
+                    //----------------------------------
+
+                    //Emilie, je me suis permis de modifier ton code, il est maintenant bien plus court et
+                    //prend en compte si la propriété n'a pas déjà été achetée par un joueur. Aurian
+
+                    //si la case est bien une propriété
+                    if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes){
+
+                        //si elle n'est pas déjà achetée
+                        if(((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null){
+                            fenetreVousEtesSur(fenetre_actuelle, automate);
                         }
-
-
                     }
 
+                    //----------------------------------
 
 
 

@@ -23,7 +23,7 @@ public class Deplacement extends Etat{
         //System.out.println("    avant déplacement : "+j.toString());
 
         int resDes = j.getResLanceDes();
-        //int resDes = 11; //POUR IHM
+        //int resDes = 1; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
