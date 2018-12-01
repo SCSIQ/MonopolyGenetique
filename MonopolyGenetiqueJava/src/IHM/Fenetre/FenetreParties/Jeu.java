@@ -185,7 +185,7 @@ public class Jeu extends Parent {
         fenetreNoire();
 
         Stage nouvelle_fenetre_menu = new Stage();
-        MenuJeu fenetre_menu = new MenuJeu(primaryStage, nouvelle_fenetre_menu, fenetre_actuelle, couleur, canvas);
+        MenuJeu fenetre_menu = new MenuJeu(automate, primaryStage, nouvelle_fenetre_menu, fenetre_actuelle, couleur, canvas);
 
         Scene nouvelle_scene = new Scene(fenetre_menu,320,370);
 

@@ -3,6 +3,7 @@ package IHM.Fenetre.FentreMenuPrincipal;
 import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.InitialisationPartieJoueurs;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -25,7 +26,7 @@ public class MenuJeu extends Parent {
 
 
 
-    public MenuJeu(Stage primaryStage, Stage nouvelle_fenetre, Stage fenetre_actuelle, Color couleur, Canvas canvas)
+    public MenuJeu(Automate automate, Stage primaryStage, Stage nouvelle_fenetre, Stage fenetre_actuelle, Color couleur, Canvas canvas)
     {
 
 ////////IMAGE
@@ -65,18 +66,19 @@ public class MenuJeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                //ici ajouter lancement automate avec en param le joueur
-                Joueur j = new Joueur(null, null);
-                ArrayList<Joueur> listeJoueurs = new ArrayList<>();
-                listeJoueurs.add(j);
-                /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeJoueurs.add(new Joueur());
-                }*/
-                System.out.println("Nombre de joueurs : "+listeJoueurs.size());
-                Automate automate = new Automate(listeJoueurs);
+
+                //début initialisation automate
+                InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
+                ArrayList<Color> listeCouleurs = new ArrayList<>();
+                for(int i=0 ; i<automate.getNombreJoueur() ; i++){
+                    listeCouleurs.add(automate.getListeJoueurs().get(i).getCouleur());
+                }
+                Automate _automate = initialisationPartieJoueurs.automateInitialisation(automate.getNombreJoueur(),listeCouleurs);
+                //fin initialisation automate
+
 
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur,automate) ;
+                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur,_automate) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);
