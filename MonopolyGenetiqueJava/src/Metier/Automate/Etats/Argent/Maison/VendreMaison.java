@@ -7,9 +7,18 @@ import Metier.Automate.Etats.Etat;
 import java.util.ArrayList;
 
 public class VendreMaison extends Etat {
+
+    private int prixVenteMaison;
+
     public VendreMaison(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
     }
+
+
+    public void ventenMaison(){
+        //ici on enlève une maison
+    }
+
 
     @Override
     public void agir(String event) {
@@ -20,4 +29,7 @@ public class VendreMaison extends Etat {
     public Etat transition(String event) {
         return null;
     }
+
+    @Override
+    public String toString() { return "VendreMaison{}"; }
 }
