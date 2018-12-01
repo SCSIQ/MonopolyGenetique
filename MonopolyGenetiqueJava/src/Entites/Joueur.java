@@ -13,7 +13,7 @@ public class Joueur {
     private int solde ; // montant de l'argent possédé
     private Pion pion ;
     private boolean aLanceDes = false; // initialise le boolean pour savoir si le joueur a déjà lancer les dés
-    private ArrayList<Proprietes> listePropietes;
+    private ArrayList<Proprietes> listePropietes = new ArrayList<>();
     private int resDes1 = 0; // initialise à 0 le dés 1
     private int resDes2 = 0; // initialise à 0 le dés 2
     private int resLanceDes = 0; // initialise à 0 l'addition des deux dés
@@ -21,30 +21,68 @@ public class Joueur {
     private ArrayList<Cases> listeCases;
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
-        this.solde = 2000; //a revoir car valeur fausse
+        this.solde = 10000; //a revoir car valeur fausse
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+
+    /**
+     * cette méthode est temporaire, elle permet simplement de tester le code métier
+     */
+    public void afficherProprietesPossedes(){
+
+        System.out.println("    Liste des propriétés du "+this.nom+" :");
+
+        if(this.listePropietes.size()!=0){
+
+            for (Proprietes p : this.listePropietes) {
+                System.out.println("        "+p.toString()+", d'une valeur de : "+p.getPrix()+"€");
+
+            }
+        }else {
+
+            System.out.println("        Le joueur ne possède aucune propriétés pour le moment ");
+
+        }
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    // renvoie la liste des propriétés que le joueur posséde
     public ArrayList<Proprietes> getListePropietes() {
         return listePropietes;
-    } // renvoie la liste des propriétés que le joueur posséde
+    }
 
-    public void setListePropietes(ArrayList<Proprietes> listePropietes) {
-        this.listePropietes = listePropietes;
-    } // modifie la liste des propriétés que le joueur posséde
+    // ajoute une propriété à la liste des propriétés que le joueur possède
+    public void ajouterPropriete(Proprietes p) {
+        this.listePropietes.add(p);
+    }
 
+    // supprime une propriété à la liste des propriétés que le joueur possède
+    public void supprimerPropriete(Proprietes p) {
+        for (Proprietes _p : this.listePropietes) {
+            if(_p == p){
+                this.listePropietes.remove(p);
+            }
+        }
+    }
+
+    // fonction qui dit si le joueur a déjà lancer les dés avec vrai ou faux
     public boolean getaLanceDes() {
         return aLanceDes;
-    } // fonction qui dit si le joueur a déjà lancer les dés avec vrai ou faux
+    }
 
+    //augmente le montant de l'argent que le joueur posséde
     public void IncrementerSolde(int solde) {
         this.solde += solde;
-    }//augmente le montant de l'argent que le joueur posséde
+    }
 
+    //diminue le montant de l'argent que le joueur posséde
     public void DecrementerSolde(int solde) {
         this.solde -= solde;
-    }//diminue le montant de l'argent que le joueur posséde
+    }
 
 
     public void setaLanceDes(boolean aLanceDes) {

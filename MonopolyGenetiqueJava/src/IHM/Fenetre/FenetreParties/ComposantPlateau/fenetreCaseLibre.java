@@ -34,6 +34,8 @@ public class fenetreCaseLibre extends Parent {
 //////////////////////////////////////////////////////////////////////////BOUTON
         Button bt_acheter= new Button("ACHETER");
 
+        automate.evoluer("acheterPropriete");
+
         bt_acheter.setLayoutX(50);
         bt_acheter.setLayoutY(210);
 

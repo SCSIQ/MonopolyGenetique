@@ -5,19 +5,22 @@ import Metier.Plateau.Cases;
 
 public abstract class Proprietes extends Cases {
 
+    private Joueur proprio ;
+
     private int prixAchat ;
     private int prixHypotheque;
+    private int prixAjoutMaison;
+    private int prixVenteMaison;
+
+    //de 1 à 4 = nombre de maisons, 5 = un hotel
+    private int nbMaisons = 0;
+
     private int loyerSansMaison;
     private int loyer1Maison;
     private int loyer2Maison;
     private int loyer3Maison;
     private int loyer4Maison;
     private int loyerHotel;
-
-    private int prixAjoutMaison;
-    private int prixVenteMaison;
-
-    private Joueur proprio ;
 
     public Proprietes(int position) {
         super(position);
@@ -37,6 +40,28 @@ public abstract class Proprietes extends Cases {
 
     public void ventenMaison(){
         //ici on enlève une maison
+    }
+
+    //permet d'ajouter une maison
+    //retourne vrai si l'action à bien pû se faire, sinon retourne faux
+    public boolean ajouterMaison(){
+        if(this.nbMaisons < 5){
+            this.nbMaisons++;
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    //permet de supprimer une maison
+    //retourne vrai si l'action à bien pû se faire, sinon retourne faux
+    public boolean supprimerMaison(){
+        if(this.nbMaisons > 0){
+            this.nbMaisons--;
+            return true;
+        }else {
+            return false;
+        }
     }
 
     ///////////getter//////////////
@@ -68,6 +93,10 @@ public abstract class Proprietes extends Cases {
         return loyerHotel;
     }
 
+    public Joueur getProprio() {
+        return proprio;
+    }
+
     ////////////setter /////////////
     public void setPrixHypotheque(int prixHypotheque) {
         this.prixHypotheque = prixHypotheque;
@@ -95,5 +124,9 @@ public abstract class Proprietes extends Cases {
 
     public void setLoyerHotel(int loyerHotel) {
         this.loyerHotel = loyerHotel;
+    }
+
+    public void setProprio(Joueur proprio) {
+        this.proprio = proprio;
     }
 }

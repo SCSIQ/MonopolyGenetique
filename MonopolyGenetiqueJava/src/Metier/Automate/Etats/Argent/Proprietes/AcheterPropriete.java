@@ -4,6 +4,8 @@ import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.Choix.ChoixPossibles;
 import Metier.Automate.Etats.Etat;
+import Metier.Plateau.Cases;
+import Metier.Plateau.ListeProprietes.Proprietes;
 
 import java.util.ArrayList;
 
@@ -11,24 +13,24 @@ public class AcheterPropriete extends Etat{
 
     public AcheterPropriete(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
+        //permet de demander à l'automate d'évoluer une fois du plus de façon automatique
+        super.getAutomate().setAutomatedEvolution(true);
     }
 
     @Override
     public void agir(String event) {
 
-        //code non fonctionnel, à refaire
+        Joueur joueurCourant = super.getAutomate().getJoueurCourant();
+        Cases caseCourante = super.getAutomate().getJoueurCourant().getPion().getCase();
 
-        /*
-        //normalement ces infos sont données par l'IHM car varient selon la case ou se trouve le pion
-        Proprietes p = new Proprietes();
-        p.setPrix(500);
-
-        //ici doit être vérifié si le joueur est en capacité de payer. Si non, alors il doit vendre des
-        //propriétés. Si malgré cela il ne peut toujours pas payer, alors il perd la partie
-
-        Joueur joueur = super.getListeJoueurs().get(0);
-        joueur.Payer(p.getPrix());
-        */
+        if(caseCourante instanceof Proprietes && joueurCourant.getSolde() >= ((Proprietes) caseCourante).getPrix()){
+            ((Proprietes) caseCourante).setProprio(joueurCourant);
+            joueurCourant.DecrementerSolde(((Proprietes) caseCourante).getPrix());
+            joueurCourant.ajouterPropriete((Proprietes) caseCourante);
+        }
+        else{
+            System.out.println("    La propriété ne peut pas être acheté car le joueur n'a pas assez d'argent...");
+        }
 
     }
 

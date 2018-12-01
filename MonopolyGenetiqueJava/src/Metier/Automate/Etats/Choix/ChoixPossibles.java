@@ -2,6 +2,7 @@ package Metier.Automate.Etats.Choix;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
+import Metier.Automate.Etats.Argent.Proprietes.AcheterPropriete;
 import Metier.Automate.Etats.Des.LancerDesJoueur;
 import Metier.Automate.Etats.Etat;
 import Metier.Automate.Etats.FinTour;
@@ -28,6 +29,9 @@ public class ChoixPossibles extends Etat {
         }
         else if(event == "tourSuivant" && getListeJoueurs().get(0).getaLanceDes()==true){
             return new FinTour(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if(event == "acheterPropriete"){
+            return new AcheterPropriete(super.getAutomate(), super.getListeJoueurs());
         }
         else{
             return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());

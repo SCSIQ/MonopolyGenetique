@@ -15,7 +15,7 @@ public class Automate {
     public Automate(ArrayList<Joueur> listeJoueurs){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
         this.etatCourant = new LancerDesInitial(this, listeJoueurs); //lancement Etat initial
-        System.out.println("Etat actuel : "+this.etatCourant.toString());
+        System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
     }
 
@@ -24,9 +24,10 @@ public class Automate {
     //cette méthode est appellée soit depuis l'IHM pour une évolutions lors d'un event,
     //soit par un Etat pour une évolution automatique
     public void evoluer(String event){
+        System.out.println(this.etatCourant.toString()+" ->");
         this.etatCourant.agir(event);
         this.etatCourant = this.etatCourant.transition(event);
-        System.out.println("Etat actuel : "+this.etatCourant.toString());
+        System.out.println("- - - - - - - - - - - - - - - - - - - -> "+this.etatCourant.toString());
         if(automatedEvolution == true){
             automatedEvolution = false;
             this.evoluer(event);

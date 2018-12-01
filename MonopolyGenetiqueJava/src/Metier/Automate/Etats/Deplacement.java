@@ -49,7 +49,7 @@ public class Deplacement extends Etat{
         }
         j.Avancer(newPositionToGo); //demande au joueur d'avancer son pion (le joueur connais les résultats de son lancé de dès
 
-        //System.out.println("    après déplacement : "+j.toString());
+        System.out.println(j.toString());
     }
 
     @Override

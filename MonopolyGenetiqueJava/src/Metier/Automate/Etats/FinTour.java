@@ -17,9 +17,10 @@ public class FinTour extends Etat{
     public void agir(String event) {
         ArrayList<Joueur> listeJoueurs = super.getListeJoueurs();
         Joueur j = listeJoueurs.get(0);
+        j.afficherProprietesPossedes(); //permet de vérifier le code métier
         listeJoueurs.remove(0);
         listeJoueurs.add(j);
-        //System.out.println("Fin du tour de "+j.getNom());
+        System.out.println("\n-------------------------------------------------------------------------------------\n");
     }
 
     @Override
