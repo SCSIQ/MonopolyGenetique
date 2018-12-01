@@ -60,8 +60,40 @@ public class LancerDe extends Parent {
                     //on ferme la fenêtre
                     fenetre_actuelle.close();
 
-                    //appel de la fonction "vous êtes sur telle case"
-                    fenetreVousEtesSur(fenetre_actuelle, automate);
+                    //appel de la fonction "vous êtes sur telle case" si la case est différente d'une case chance ou communauté
+                    // ou case Prison ou parc gratuit ou allez en prison et depart ET IMPOTS
+
+
+                    //IF CASES CHANCE
+                    if(automate.getJoueurCourant().getPion().getCase().getPosition()!=7&& automate.getJoueurCourant().getPion().getCase().getPosition()!=22 && automate.getJoueurCourant().getPion().getCase().getPosition()!=35)
+                    {
+                        //IF CASES COMMUNAUTE
+                        if(automate.getJoueurCourant().getPion().getCase().getPosition()!=2&& automate.getJoueurCourant().getPion().getCase().getPosition()!=17 && automate.getJoueurCourant().getPion().getCase().getPosition()!=33)
+                        {
+                            //IF CASE Départ
+                            if(automate.getJoueurCourant().getPion().getCase().getPosition()!=0){
+                                //IF CASE PRISON
+                                if(automate.getJoueurCourant().getPion().getCase().getPosition()!=10){
+                                    //IF CASE PARC GRATUIT
+                                    if(automate.getJoueurCourant().getPion().getCase().getPosition()!=20){
+                                        //IF CASE ALLEZ EN PRISON
+                                        if(automate.getJoueurCourant().getPion().getCase().getPosition()!=30){
+                                            //IF IMPOT SUR LE REVENU
+                                            if(automate.getJoueurCourant().getPion().getCase().getPosition()!=4){
+                                                //IF TAXE DE LUXE
+                                                if(automate.getJoueurCourant().getPion().getCase().getPosition()!=38){
+                                                    fenetreVousEtesSur(fenetre_actuelle, automate);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+
+
+                    }
 
 
 
@@ -105,7 +137,7 @@ public class LancerDe extends Parent {
         Stage nouvelle_fenetre_vousEtesSur = new Stage();
         fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, plateauJeu);
 
-        Scene nouvelle_scene = new  Scene(fenetreSur,700,500);
+        Scene nouvelle_scene = new  Scene(fenetreSur,650,550);
 
         nouvelle_fenetre_vousEtesSur.setScene(nouvelle_scene);
 

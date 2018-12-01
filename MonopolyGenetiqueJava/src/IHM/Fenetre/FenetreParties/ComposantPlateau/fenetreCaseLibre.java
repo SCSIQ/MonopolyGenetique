@@ -22,10 +22,9 @@ public class fenetreCaseLibre extends Parent {
     public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu)
     {
 
-
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
-                                    "\nElle n'appartient à personne.\n\nElle coûte X");
-        l.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                                    "\n\nElle n'appartient à personne.\n\nElle coûte X");
+        l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         l.setLayoutX(170);
         l.setLayoutY(50);
 
@@ -33,14 +32,32 @@ public class fenetreCaseLibre extends Parent {
         l.setScaleY(2);
 
 //////////////////////////////////////////////////////////////////////////BOUTON
-        Button bt_ok = new Button("Ok");
+        Button bt_acheter= new Button("ACHETER");
 
-        bt_ok.setLayoutX(200);
-        bt_ok.setLayoutY(160);
+        bt_acheter.setLayoutX(50);
+        bt_acheter.setLayoutY(210);
 
-        bt_ok.setPrefSize(150, 10);
+        bt_acheter.setPrefSize(150, 10);
 
-        bt_ok.setOnAction(new EventHandler<ActionEvent>() {
+        bt_acheter.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //on rend la bonne opacité à la fenêtre
+                detruireCanvas(canvas);
+
+                //on ferme la fenêtre
+                fenetre_actuelle.close();
+            }
+        });
+
+        Button bt_rien= new Button("NE RIEN FAIRE");
+
+        bt_rien.setLayoutX(300);
+        bt_rien.setLayoutY(210);
+
+        bt_rien.setPrefSize(150, 10);
+
+        bt_rien.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
@@ -60,15 +77,16 @@ public class fenetreCaseLibre extends Parent {
         });
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_actuelle.setMinHeight(250);
-        fenetre_actuelle.setMinWidth(550);
+        fenetre_actuelle.setMinHeight(300);
+        fenetre_actuelle.setMinWidth(500);
 
-        fenetre_actuelle.setMaxHeight(250);
-        fenetre_actuelle.setMaxWidth(550);
+        fenetre_actuelle.setMaxHeight(300);
+        fenetre_actuelle.setMaxWidth(500);
 
         /////////////////////////////////////////////////////////////////////////AJOUT
         this.getChildren().add(l);
-        this.getChildren().add(bt_ok);
+        this.getChildren().add(bt_acheter);
+        this.getChildren().add(bt_rien);
 
 
     }
