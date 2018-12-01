@@ -22,14 +22,25 @@ public class AcheterPropriete extends Etat{
 
         Joueur joueurCourant = super.getAutomate().getJoueurCourant();
         Cases caseCourante = super.getAutomate().getJoueurCourant().getPion().getCase();
+        int prixCase = ((Proprietes) caseCourante).getPrix();
 
-        if(caseCourante instanceof Proprietes && joueurCourant.getSolde() >= ((Proprietes) caseCourante).getPrix()){
-            ((Proprietes) caseCourante).setProprio(joueurCourant);
-            joueurCourant.DecrementerSolde(((Proprietes) caseCourante).getPrix());
-            joueurCourant.ajouterPropriete((Proprietes) caseCourante);
-        }
-        else{
-            System.out.println("    La propriété ne peut pas être acheté car le joueur n'a pas assez d'argent...");
+        if(caseCourante instanceof Proprietes){
+
+            //si la propriété n'est pas déjà achetée
+            if(((Proprietes) caseCourante).getProprio() == null)
+            {
+                if(joueurCourant.getSolde() >= ((Proprietes) caseCourante).getPrix()){
+                    ((Proprietes) caseCourante).setProprio(joueurCourant);
+                    joueurCourant.DecrementerSolde(prixCase);
+                    joueurCourant.ajouterPropriete((Proprietes) caseCourante);
+                    System.out.println("    Propriété achetée : "+caseCourante.toString()+" au prix de "+prixCase+"€");
+                    System.out.println("    Argent restant pour le joueur : "+joueurCourant.getSolde()+"€");
+                }else{
+                    System.out.println("    La propriété ne peut pas être acheté car le joueur n'a pas assez d'argent...");
+                }
+            }else{
+                System.out.println("    La propriété appartient déjà à un joueur");
+            }
         }
 
     }

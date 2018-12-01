@@ -54,14 +54,6 @@ public class Deplacement extends Etat{
 
     @Override
     public Etat transition(String event) {
-        /*if(this.passeParDepart == true)
-        {
-            return new Depart(super.getAutomate(), super.getListeJoueurs());
-        }
-        else
-        {
-            return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
-        }*/
         return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
     }
 

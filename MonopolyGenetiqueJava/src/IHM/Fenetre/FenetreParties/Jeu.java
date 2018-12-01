@@ -101,7 +101,7 @@ public class Jeu extends Parent {
         bt_tourSuivant.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                
+
                 if(automate.getJoueurCourant().getaLanceDes()==true) {
 
                     automate.evoluer("tourSuivant");
