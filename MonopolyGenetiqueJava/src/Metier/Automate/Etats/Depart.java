@@ -14,11 +14,11 @@ public class Depart extends Etat {
     @Override
     public void agir(String event) {
 
-        /*si le joueur courant s'arrête sur la case départ précissement il gagne 3 000€*/
-        if( getAutomate().getJoueurCourant().getPion().getCase().toString()=="Depart"){
-            getAutomate().getJoueurCourant().IncrementerSolde(3000) ;
+        //si le joueur courant s'arrête sur la case départ précissement il gagne 3 000€
+        if( super.getAutomate().getJoueurCourant().getPion().getCase().toString()=="Depart"){
+            super.getAutomate().getJoueurCourant().IncrementerSolde(3000);
         }else { // sinon il gagne 1 500€
-            getAutomate().getJoueurCourant().IncrementerSolde(1500) ;
+            super.getAutomate().getJoueurCourant().IncrementerSolde(1500);
         }
     }
 

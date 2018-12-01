@@ -23,7 +23,7 @@ public class Deplacement extends Etat{
         //System.out.println("    avant déplacement : "+j.toString());
 
         int resDes = j.getResLanceDes();
-        //int resDes = 35; //POUR IHM
+        //int resDes = 11; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
@@ -32,11 +32,20 @@ public class Deplacement extends Etat{
 
         //System.out.println("D'où on vient : "+position.getPosition());
         //System.out.println("De combien on avance : "+resDes);
-        System.out.println("Nouvelle position : "+newPositionToGo);
-        if (newPositionToGo > 39) //si change de tour de plateau et passe par la case départ
+        System.out.println("    nouvelle position : "+newPositionToGo);
+
+        //si change de tour de plateau et passe par la case départ
+        if (newPositionToGo > 39)
         {
             newPositionToGo = newPositionToGo - 40; //Permet de denrepositionner le pion sur le nouveau tour du plateau
             this.passeParDepart = true;
+
+            //si le joueur courant s'arrête sur la case départ précissement il gagne 3 000€
+            if(newPositionToGo==0){
+                super.getAutomate().getJoueurCourant().IncrementerSolde(3000);
+            }else { // sinon il gagne 1 500€
+                super.getAutomate().getJoueurCourant().IncrementerSolde(1500);
+            }
         }
         j.Avancer(newPositionToGo); //demande au joueur d'avancer son pion (le joueur connais les résultats de son lancé de dès
 
