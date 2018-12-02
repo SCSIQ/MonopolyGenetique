@@ -122,57 +122,6 @@ public class HumainVShumain extends Parent {
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
 
-                //j'ai commenté afin de faire quelques test. Si vous voulez vous pouvez décommenter. Aurian
-                /*
-                //INIT JOUEURS
-                for(int i=1;i<=automate.getNombreJoueur();i++)
-                {
-
-                    if(automate.getListeJoueurs().size()==2)
-                    {
-                        if(i==1) {
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }
-                    }
-                    else if(automate.getListeJoueurs().size()==3)
-                    {
-                        if(i==1){
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }else if(i==2){
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }
-
-                    }else if(automate.getListeJoueurs().size()==4)
-                    {
-                        if(i==1){
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }else if(i==2)
-                        {
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }else if(i==3)
-                        {
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }
-                    }else if(automate.getListeJoueurs().size()==5)
-                    {
-                        if(i==1){
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }else if(i==2)
-                        {
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }else if(i==3)
-                        {
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }else if(i==4)
-                        {
-                            automate.getListeJoueurs().get(i).setCouleur(couleurAdversaire(i));
-                        }
-                    }
-                }
-                */
-
-                // FAIT PAR L'AUTOMATE !!!
-                //automate.getJoueurCourant().setCouleur(Color.CRIMSON);
 
                 //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();
