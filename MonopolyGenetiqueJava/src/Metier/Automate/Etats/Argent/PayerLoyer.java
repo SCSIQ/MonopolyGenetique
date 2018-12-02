@@ -4,6 +4,10 @@ import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.Choix.ChoixPossibles;
 import Metier.Automate.Etats.Etat;
+import Metier.Plateau.ListeProprietes.ListeGares.Gare;
+import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
+import Metier.Plateau.ListeProprietes.Proprietes;
 
 import java.util.ArrayList;
 
@@ -18,6 +22,47 @@ public class PayerLoyer extends Etat {
     @Override
     public void agir(String event) {
 
+        Joueur j = super.getListeJoueurs().get(0);
+        int sommeAPayer;
+
+        if(j.getPion().getCase() instanceof Terrain)
+        {
+            switch (((Terrain)j.getPion().getCase()).getNbMaisons()){
+                case 0 :
+                    sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyerSansMaison();
+                    break;
+                case 1 :
+                    sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyer1Maison();
+                    break;
+                case 2 :
+                    sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyer2Maison();
+                    break;
+                case 3 :
+                    sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyer3Maison();
+                    break;
+                case 4 :
+                    sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyer4Maison();
+                    break;
+                case 5 :
+                    sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyerHotel();
+                    break;
+                default : sommeAPayer = 0;
+            }
+            j.DecrementerSolde(sommeAPayer);
+            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+        }
+        else if(j.getPion().getCase() instanceof Gare)
+        {
+            sommeAPayer = ((Gare)j.getPion().getCase()).getLoyer();
+            j.DecrementerSolde(sommeAPayer);
+            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+        }
+        else if(j.getPion().getCase() instanceof ServicePublic)
+        {
+            /*sommeAPayer = ((ServicePublic)j.getPion().getCase()).getLoyer();
+            j.DecrementerSolde(sommeAPayer);
+            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);*/
+        }
     }
 
     @Override
