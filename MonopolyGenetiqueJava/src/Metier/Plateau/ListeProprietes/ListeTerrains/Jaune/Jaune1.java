@@ -5,7 +5,7 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 public class Jaune1 extends Terrain {
     public Jaune1(int position) {
         super(position);
-        super.setPrix(2600);
+        super.setPrix(26000);
     }
 
     @Override
