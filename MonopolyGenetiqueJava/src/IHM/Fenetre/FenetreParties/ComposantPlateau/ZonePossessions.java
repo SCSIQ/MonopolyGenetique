@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 
 import java.awt.*;
 
@@ -63,7 +64,7 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_possession);
     }
 
-    public void RectangleTerrain(){
+    public void RectangleTerrain(Automate automate){
 
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
@@ -72,6 +73,9 @@ public class ZonePossessions extends Parent {
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         this.getChildren().add(textTerrain);
+
+        ///TEST qui ne ùarche pas
+        afficherPropriete(automate);
 
         ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
         /*Pane zoneTerrain = new Pane() ;
@@ -105,7 +109,7 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_terrain);
     }
 
-    public void RectangleGare(){
+    public void RectangleGare(Automate automate){
 
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
@@ -233,4 +237,9 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_cartePrison);
 }
 
+    public void afficherPropriete(Automate automate)
+    {
+
+
+    }
 }

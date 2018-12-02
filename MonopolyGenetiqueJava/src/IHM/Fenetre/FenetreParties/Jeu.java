@@ -37,9 +37,10 @@ public class Jeu extends Parent {
         ZonePossessions poss = new ZonePossessions(automate);
         poss.RectangleCartePrison();
         poss.RectangleCompagnies();
-        poss.RectangleGare();
-        poss.RectangleTerrain();
+        poss.RectangleGare(automate);
+        poss.RectangleTerrain(automate);
         this.getChildren().add(poss);
+
 
         //APPEL PLATEAU JEU
         PlateauJeu pl = new PlateauJeu(automate);
@@ -84,7 +85,7 @@ public class Jeu extends Parent {
 
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
-                    fenetreDes(nouvelle_fenetre, automate, pl);
+                    fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur);
                     pion.entrerDansCase();
                     //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
@@ -241,12 +242,12 @@ public class Jeu extends Parent {
     }
 
 
-    public void fenetreDes(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu)
+    public void fenetreDes(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_des = new Stage();
-        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate, this, plateauJeu);
+        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate, this, plateauJeu, zoneJoueur);
 
         Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 

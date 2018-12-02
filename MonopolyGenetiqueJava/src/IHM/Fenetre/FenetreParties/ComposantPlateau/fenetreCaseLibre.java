@@ -1,10 +1,13 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 //importation mise par Jérémy
+import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -13,15 +16,19 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 //PERMET DE PROPOSER QUE L'UTILISATEUR ACHETE LA CASE SI ELLE EST LIBRE
 public class fenetreCaseLibre extends Parent {
 
-    public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu)
-    {
+   // Proprietes p ;
+    Canvas canvas;
 
+    public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur)
+    {
+        this.canvas=canvas;
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
                                     "\n\nElle n'appartient à personne.\n\nElle coûte X");
         l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
@@ -44,12 +51,38 @@ public class fenetreCaseLibre extends Parent {
         bt_acheter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //on rend la bonne opacité à la fenêtre
-                detruireCanvas(canvas);
 
-                //on ferme la fenêtre
-                fenetre_actuelle.close();
-            }
+                //SI PAS ASSEZ D'ARGENT.. Je ne sais pas comment récupérer la propriété et son tarif.. Fonction coté métier pour joueurcourant : assezArgent ? qu'on puisse récupérer ?
+              /*  if(automate.getJoueurCourant().getSolde()<p.getPrix())
+                {
+                    fenetreNoire();
+
+                    Stage nouvelle_fenetre_PasAssezArgent= new Stage();
+                    PasAssezArgent fenetre_PasAssezArgent = new PasAssezArgent(automate, nouvelle_fenetre_PasAssezArgent, canvas);
+
+                    Scene nouvelle_scene = new Scene(fenetre_PasAssezArgent,320,370);
+
+                    nouvelle_fenetre_PasAssezArgent.setScene(nouvelle_scene);
+
+                    //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+                    nouvelle_fenetre_PasAssezArgent.initModality(Modality.WINDOW_MODAL);
+                    nouvelle_fenetre_PasAssezArgent.initOwner(fenetre_actuelle);
+                    //on ferme la fenêtre
+                    fenetre_actuelle.close();
+
+                }else{*/
+                    //on rend la bonne opacité à la fenêtre
+                    detruireCanvas(canvas);
+
+zoneJoueur.SupprimerJoueur();
+zoneJoueur.genereInfosJoueur(automate);
+                    //on ferme la fenêtre
+                    fenetre_actuelle.close();
+
+                }
+
+
+            //}
         });
 
         Button bt_rien= new Button("NE RIEN FAIRE");
@@ -98,6 +131,16 @@ public class fenetreCaseLibre extends Parent {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
+        this.getChildren().add(canvas);
+    }
+
+    public void fenetreNoire()
+    {
+
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.BLACK);
+        canvas.setOpacity(0.5);
+        gc.fillRect(0,0, 1600,1600);
         this.getChildren().add(canvas);
     }
 }

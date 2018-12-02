@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.fenetreCaseLibre;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
@@ -23,7 +24,7 @@ public class LancerDe extends Parent {
     private Canvas canvas;
     private PlateauJeu plateauJeu ;
 
-    public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate, Jeu jeu, PlateauJeu plateauJeu)
+    public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate, Jeu jeu, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur)
     {
         this.jeu=jeu;
         this.canvas=canvas ;
@@ -74,7 +75,7 @@ public class LancerDe extends Parent {
 
                         //si elle n'est pas déjà achetée
                         if(((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null){
-                            fenetreVousEtesSur(fenetre_actuelle, automate);
+                            fenetreVousEtesSur(fenetre_actuelle, automate, zoneJoueur);
                         }
                     }
 
@@ -114,12 +115,12 @@ public class LancerDe extends Parent {
         this.getChildren().add(canvas);
     }
 
-    public void fenetreVousEtesSur(Stage fenetre_actuelle, Automate automate)
+    public void fenetreVousEtesSur(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur)
     {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_vousEtesSur = new Stage();
-        fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, plateauJeu);
+        fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, plateauJeu, zoneJoueur);
 
         Scene nouvelle_scene = new  Scene(fenetreSur,650,550);
 
