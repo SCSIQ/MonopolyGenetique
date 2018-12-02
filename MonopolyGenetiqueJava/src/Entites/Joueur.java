@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Joueur {
 
     private String nom; // nom du joueur
-    private Color couleur; //couleur du joueur
+    //private Color couleur; //couleur du joueur
     private int solde ; // montant de l'argent possédé
     private Pion pion ;
     private boolean aLanceDes = false; // initialise le boolean pour savoir si le joueur a déjà lancer les dés
@@ -24,6 +24,7 @@ public class Joueur {
         this.solde = 5000; //a revoir car valeur fausse
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
+        //this.couleur = couleur;
     }
 
     //------------------------------------------------------------------------------------------------------------------
@@ -140,7 +141,7 @@ public class Joueur {
     } //modifie le nom du joueur
 
     public Color getCouleur() {
-        return couleur;
+        return this.pion.getCouleur();
     } //renvoie la couleur du joueur
 
     public int getSolde() {
@@ -148,7 +149,7 @@ public class Joueur {
     } // renvoie l'argent que le joueur posséde
 
     public void setCouleur(Color couleur) {
-        this.couleur = couleur;
+        this.pion.setCouleur(couleur);
     } //modifie la valeur de la couleur
 
     public int getNbDoubles() {

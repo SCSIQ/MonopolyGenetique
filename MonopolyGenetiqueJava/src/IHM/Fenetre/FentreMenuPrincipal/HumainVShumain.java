@@ -123,6 +123,8 @@ public class HumainVShumain extends Parent {
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
 
+                //j'ai commenté afin de faire quelques test. Si vous voulez vous pouvez décommenter. Aurian
+                /*
                 //INIT JOUEURS
                 for(int i=1;i<=automate.getNombreJoueur();i++)
                 {
@@ -168,6 +170,7 @@ public class HumainVShumain extends Parent {
                         }
                     }
                 }
+                */
 
                 automate.getJoueurCourant().setCouleur(Color.CRIMSON);
 

@@ -26,6 +26,14 @@ public class LancerDesInitial extends Etat {
     @Override
     public void agir(String event) {
 
+        Collections.shuffle(super.getListeJoueurs());
+
+        for(int i=0 ; i<super.getListeJoueurs().size() ; i++)
+        {
+            super.getListeJoueurs().get(i).setNom("Joueur"+(i+1));
+        }
+
+        /*
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();
 
         ArrayList<Integer> listeNb = new ArrayList<>();
@@ -54,6 +62,7 @@ public class LancerDesInitial extends Etat {
             joueurTemp.setNom("Joueur"+(i+1));
             super.getListeJoueurs().add(joueurTemp); //puis l'ajoute à la liste à retourner
         }
+        */
 
     }
 

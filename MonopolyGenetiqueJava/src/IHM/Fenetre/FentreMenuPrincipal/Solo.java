@@ -132,6 +132,8 @@ public class Solo extends Parent {
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
                 //fin initialisation automate
 
+                //j'ai commenté afin de faire quelques test. Si vous voulez vous pouvez décommenter. Aurian
+                /*
                 //TEST POUR INIT JOUEUR 2 et 3
                for(int i=1;i<=automate.getNombreJoueur();i++)
                {
@@ -177,7 +179,7 @@ public class Solo extends Parent {
                    }
 
 
-               }
+               }*/
 
                 //Ajout de la couleur choisie pour la partie solo
                 automate.getJoueurCourant().setCouleur(couleur.getValue());

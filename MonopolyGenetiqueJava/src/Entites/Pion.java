@@ -52,4 +52,12 @@ public class Pion {
     public void setGoToPrison(boolean goToPrison) {
         this.goToPrison = goToPrison;
     }
+
+    public Color getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(Color couleur) {
+        this.couleur = couleur;
+    }
 }
