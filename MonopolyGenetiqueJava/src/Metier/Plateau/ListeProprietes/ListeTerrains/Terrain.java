@@ -7,19 +7,20 @@ public abstract class Terrain extends Proprietes {
 
     private Couleur couleur ;
 
-    private int prixAjoutMaison = 200; /// prix d'une maison
+    private int prixAjoutMaison; /// prix d'une maison
 
     //de 1 à 4 = nombre de maisons, 5 = un hotel
     private int nbMaisons = 0;
 
     private int loyerSansMaison ;
 
-    //// prix des loyer suivant le nombre de maison sur la propriété
+    ////prix des loyer suivant le nombre de maison sur la propriété
 
     private int loyer1Maison;
     private int loyer2Maison;
     private int loyer3Maison;
     private int loyer4Maison;
+    private int loyerHotel; // loyer avec un hôtel
 
     /////////CONSTRUCTEUR///////
     public Terrain(int position) {
@@ -74,9 +75,17 @@ public abstract class Terrain extends Proprietes {
 
     public int getPrixAjoutMaison() { return prixAjoutMaison; }
 
+    public int getLoyerHotel() {
+        return loyerHotel;
+    }
+
     ///////////////////////SETTER ///////////
     public void setLoyerSansMaison(int loyerSansMaison) {
         this.loyerSansMaison = loyerSansMaison;
+    }
+
+    public void setLoyerHotel(int loyerHotel) {
+        this.loyerHotel = loyerHotel;
     }
 
     // si on ajoute 200€ au loyer par maison ça vous va ?

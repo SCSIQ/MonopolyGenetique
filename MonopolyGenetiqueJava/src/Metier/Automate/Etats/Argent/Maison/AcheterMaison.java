@@ -14,6 +14,8 @@ public class AcheterMaison extends Etat {
 
     public AcheterMaison(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
+        //permet de demander à l'automate d'évoluer une fois du plus de façon automatique
+        super.getAutomate().setAutomatedEvolution(true);
     }
 
     @Override
@@ -39,6 +41,7 @@ public class AcheterMaison extends Etat {
 
             //si le terrain n'a pas de maison
             if (((Terrain) caseCourante).getNbMaisons() == 0) {
+
                 //si le solde du joueur courant est suppérieur ou égal
                 if (joueurCourant.getSolde() >= ((Terrain) caseCourante).getPrixAjoutMaison()){
 

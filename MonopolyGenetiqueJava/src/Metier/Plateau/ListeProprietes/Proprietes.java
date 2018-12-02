@@ -10,18 +10,8 @@ public abstract class Proprietes extends Cases {
     private int prixAchat ; /// prix d'achat de la propriété
     private int prixHypotheque; /// prix de l'hypothèque de la propriété
 
-    private int loyerHotel; // loyer avec un hôtel
-
     public Proprietes(int position) {
         super(position);
-    }
-
-    public int getPrix() {
-        return prixAchat;
-    }
-
-    public void setPrix(int prix) {
-        this.prixAchat = prix;
     }
 
     ///////////getter//////////////
@@ -29,12 +19,12 @@ public abstract class Proprietes extends Cases {
         return prixHypotheque;
     }
 
-    public int getLoyerHotel() {
-        return loyerHotel;
-    }
-
     public Joueur getProprio() {
         return proprio;
+    }
+
+    public int getPrix() {
+        return prixAchat;
     }
 
     ////////////setter /////////////
@@ -42,11 +32,11 @@ public abstract class Proprietes extends Cases {
         this.prixHypotheque = prixHypotheque;
     }
 
-    public void setLoyerHotel(int loyerHotel) {
-        this.loyerHotel = loyerHotel;
-    }
-
     public void setProprio(Joueur proprio) {
         this.proprio = proprio;
+    }
+
+    public void setPrix(int prix) {
+        this.prixAchat = prix;
     }
 }
