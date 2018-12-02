@@ -53,11 +53,15 @@ public class PayerLoyer extends Etat {
         }
         else if(j.getPion().getCase() instanceof Gare)
         {
-
+            sommeAPayer = ((Gare)j.getPion().getCase()).getLoyer();
+            j.DecrementerSolde(sommeAPayer);
+            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
         }
         else if(j.getPion().getCase() instanceof ServicePublic)
         {
-
+            /*sommeAPayer = ((ServicePublic)j.getPion().getCase()).getLoyer();
+            j.DecrementerSolde(sommeAPayer);
+            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);*/
         }
     }
 
