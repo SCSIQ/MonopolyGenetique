@@ -46,6 +46,7 @@ public class LancerDesInitial extends Etat {
 
         System.out.println("///////////////////////////////////////////////////////");
 
+//
         /*
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();
 
@@ -75,7 +76,7 @@ public class LancerDesInitial extends Etat {
             joueurTemp.setNom("Joueur"+(i+1));
             super.getListeJoueurs().add(joueurTemp); //puis l'ajoute à la liste à retourner
         }
-        */
+        */ // Region previous code
 
     }
 
