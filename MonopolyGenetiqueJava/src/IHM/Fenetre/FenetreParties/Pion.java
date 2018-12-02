@@ -473,14 +473,14 @@ public class Pion extends Parent {
         {
             if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ3==posJ4))
             {
-                pions.get(0).setLayoutX(13);
-                pions.get(0).setLayoutY(35);
-                pions.get(1).setLayoutX(13);
-                pions.get(1).setLayoutY(60);
-                pions.get(2).setLayoutX(35);
-                pions.get(2).setLayoutY(35);
-                pions.get(3).setLayoutX(35);
-                pions.get(3).setLayoutY(60);
+                pions.get(0).setLayoutX(15);
+                pions.get(0).setLayoutY(15);
+                pions.get(1).setLayoutX(15);
+                pions.get(1).setLayoutY(40);
+                pions.get(2).setLayoutX(15);
+                pions.get(2).setLayoutY(70);
+                pions.get(3).setLayoutX(45);
+                pions.get(3).setLayoutY(70);
             }else {
                 pions.get(0).setLayoutX(25);
                 pions.get(0).setLayoutY(50);
