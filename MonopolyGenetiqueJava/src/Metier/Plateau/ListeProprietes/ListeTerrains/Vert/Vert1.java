@@ -10,37 +10,37 @@ public class Vert1 extends Terrain {
 
     @Override
     public void setLoyerSansMaison() {
-
+        super.loyerSansMaison=2600;
     }
 
     @Override
     public void setPrixAjoutMaison() {
-
+        super.prixAjoutMaison=20000;
     }
 
     @Override
     public void setLoyer1Maison() {
-
+        super.loyer1Maison=13000;
     }
 
     @Override
     public void setLoyer2Maison() {
-
+        super.loyer2Maison=39000;
     }
 
     @Override
     public void setLoyer3Maison() {
-
+        super.loyer3Maison=90000;
     }
 
     @Override
     public void setLoyer4Maison() {
-
+        super.loyer4Maison=110000;
     }
 
     @Override
     public void setLoyerHotel() {
-
+        super.loyerHotel=127500;
     }
 
     @Override

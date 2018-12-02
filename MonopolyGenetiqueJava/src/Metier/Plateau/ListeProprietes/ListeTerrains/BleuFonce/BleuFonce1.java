@@ -10,37 +10,37 @@ public class BleuFonce1 extends Terrain {
 
     @Override
     public void setLoyerSansMaison() {
-
+        super.loyerSansMaison=3500;
     }
 
     @Override
     public void setPrixAjoutMaison() {
-
+        super.prixAjoutMaison=20000;
     }
 
     @Override
     public void setLoyer1Maison() {
-
+        super.loyer1Maison=17500;
     }
 
     @Override
     public void setLoyer2Maison() {
-
+        super.loyer2Maison=50000;
     }
 
     @Override
     public void setLoyer3Maison() {
-
+        super.loyer3Maison=110000;
     }
 
     @Override
     public void setLoyer4Maison() {
-
+        super.loyer4Maison=130000;
     }
 
     @Override
     public void setLoyerHotel() {
-
+        super.loyerHotel=150000;
     }
 
     @Override
