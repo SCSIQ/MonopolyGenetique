@@ -10,6 +10,41 @@ public class Orange1 extends Terrain {
     }
 
     @Override
+    public void setLoyerSansMaison() {
+
+    }
+
+    @Override
+    public void setPrixAjoutMaison() {
+
+    }
+
+    @Override
+    public void setLoyer1Maison() {
+
+    }
+
+    @Override
+    public void setLoyer2Maison() {
+
+    }
+
+    @Override
+    public void setLoyer3Maison() {
+
+    }
+
+    @Override
+    public void setLoyer4Maison() {
+
+    }
+
+    @Override
+    public void setLoyerHotel() {
+
+    }
+
+    @Override
     public String toString() {
         return "Avenue Mozart";
     }
