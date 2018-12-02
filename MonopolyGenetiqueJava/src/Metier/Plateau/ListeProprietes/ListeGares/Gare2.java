@@ -4,7 +4,6 @@ public class Gare2 extends Gare {
 
     public Gare2(int position) {
         super(position);
-        super.setPrix(2000);
     }
 
     @Override
