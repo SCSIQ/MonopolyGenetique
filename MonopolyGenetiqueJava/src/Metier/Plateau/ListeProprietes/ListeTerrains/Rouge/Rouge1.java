@@ -6,7 +6,7 @@ public class Rouge1 extends Terrain {
 
     public Rouge1(int position) {
         super(position);
-        super.setPrix(2200);
+        super.setPrix(22000);
     }
 
     @Override

@@ -6,7 +6,7 @@ public class Rose2 extends Terrain {
 
     public Rose2(int position) {
         super(position);
-        super.setPrix(1400);
+        super.setPrix(14000);
     }
 
     @Override

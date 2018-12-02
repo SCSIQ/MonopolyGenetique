@@ -6,7 +6,7 @@ public class Marron1 extends Terrain {
 
     public Marron1(int position) {
         super(position);
-        super.setPrix(600);
+        super.setPrix(6000);
     }
 
     @Override

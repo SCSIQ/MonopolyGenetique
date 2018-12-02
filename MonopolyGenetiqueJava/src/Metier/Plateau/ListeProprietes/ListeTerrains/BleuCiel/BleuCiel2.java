@@ -6,7 +6,7 @@ public class BleuCiel2 extends Terrain {
 
     public BleuCiel2(int position) {
         super(position);
-        super.setPrix(1000);
+        super.setPrix(10000);
     }
 
     @Override
