@@ -67,9 +67,6 @@ public class Pion extends Parent {
 
 
         //horizontal + case bas
-
-
-
         if(automate.getListeJoueurs().size()==2)
         {
             deplacerDeuxPions();
@@ -505,26 +502,123 @@ public class Pion extends Parent {
         //CASE DE BAS
         if((automate.getJoueurCourant().getPion().getCase().getPosition()>=0) && (automate.getJoueurCourant().getPion().getCase().getPosition()<10))
         {
+            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(33);
 
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(55);
+
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(33);
+
+                pions.get(3).setLayoutX(13);
+                pions.get(3).setLayoutY(55);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(75);
+            }else {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+            }
         }
         //CASE DE GAUCHE
         else if((automate.getJoueurCourant().getPion().getCase().getPosition()>=11) && (automate.getJoueurCourant().getPion().getCase().getPosition()<=19))
         {
+            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(13);
 
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(35);
+
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(3).setLayoutX(13);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(25);
+            }else {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+            }
         }
         //CASE DE HAUT
         else if(((automate.getJoueurCourant().getPion().getCase().getPosition()>=20) && (automate.getJoueurCourant().getPion().getCase().getPosition()<=30)))
         {
+            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(13);
 
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(35);
+
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(3).setLayoutX(13);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(55);
+            }else {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+            }
         }
         //CASE DE DROITE
         else if((automate.getJoueurCourant().getPion().getCase().getPosition()>=31) && (automate.getJoueurCourant().getPion().getCase().getPosition()<=39))
         {
+            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(13);
 
+                pions.get(1).setLayoutX(75);
+                pions.get(1).setLayoutY(35);
+
+                pions.get(2).setLayoutX(75);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(25);
+            }else {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+            }
         }
         //PRISON
         else if((automate.getJoueurCourant().getPion().getCase().getPosition()==10))
         {
+
+            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            {
+                pions.get(0).setLayoutX(15);
+                pions.get(0).setLayoutY(15);
+
+                pions.get(1).setLayoutX(15);
+                pions.get(1).setLayoutY(40);
+
+                pions.get(2).setLayoutX(15);
+                pions.get(2).setLayoutY(70);
+
+                pions.get(3).setLayoutX(45);
+                pions.get(3).setLayoutY(70);
+
+                pions.get(4).setLayoutX(70);
+                pions.get(4).setLayoutY(70);
+            }else {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(50);
+            }
 
         }
         else
