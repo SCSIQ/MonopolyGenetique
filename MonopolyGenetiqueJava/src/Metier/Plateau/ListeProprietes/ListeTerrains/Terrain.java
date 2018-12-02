@@ -7,20 +7,19 @@ public abstract class Terrain extends Proprietes {
 
     private Couleur couleur ;
 
-    private int prixAjoutMaison; /// prix d'une maison
+    protected int prixAjoutMaison; /// prix d'une maison
 
     //de 1 à 4 = nombre de maisons, 5 = un hotel
     private int nbMaisons = 0;
 
-    private int loyerSansMaison ;
-
     ////prix des loyer suivant le nombre de maison sur la propriété
 
-    private int loyer1Maison;
-    private int loyer2Maison;
-    private int loyer3Maison;
-    private int loyer4Maison;
-    private int loyerHotel; // loyer avec un hôtel
+    protected int loyerSansMaison ;
+    protected int loyer1Maison;
+    protected int loyer2Maison;
+    protected int loyer3Maison;
+    protected int loyer4Maison;
+    protected int loyerHotel; // loyer avec un hôtel
 
     /////////CONSTRUCTEUR///////
     public Terrain(int position) {
@@ -80,6 +79,23 @@ public abstract class Terrain extends Proprietes {
     }
 
     ///////////////////////SETTER ///////////
+    public abstract void setLoyerSansMaison(); //prix d'ajout d'une maison
+
+    public abstract void setPrixAjoutMaison();
+
+    public abstract void setLoyer1Maison();
+
+    public abstract void setLoyer2Maison();
+
+    public abstract void setLoyer3Maison();
+
+    public abstract void setLoyer4Maison();
+
+    public abstract void setLoyerHotel();
+
+
+    /*
+    ///////////////////////SETTER ///////////
     public void setLoyerSansMaison(int loyerSansMaison) {
         this.loyerSansMaison = loyerSansMaison;
     }
@@ -109,4 +125,5 @@ public abstract class Terrain extends Proprietes {
     public void setNbMaisons(int nbMaisons) { this.nbMaisons = nbMaisons;  } // renvoie le nombre de maison que possède un terrain
 
     public void setPrixAjoutMaison(int prixAjoutMaison) {this.prixAjoutMaison = prixAjoutMaison; }
+     */
 }

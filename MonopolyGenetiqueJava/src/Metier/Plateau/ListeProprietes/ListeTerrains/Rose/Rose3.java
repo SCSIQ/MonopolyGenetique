@@ -6,7 +6,42 @@ public class Rose3 extends Terrain {
 
     public Rose3(int position) {
         super(position);
-        super.setPrix(1600);
+        super.setPrix(16000);
+    }
+
+    @Override
+    public void setLoyerSansMaison() {
+
+    }
+
+    @Override
+    public void setPrixAjoutMaison() {
+
+    }
+
+    @Override
+    public void setLoyer1Maison() {
+
+    }
+
+    @Override
+    public void setLoyer2Maison() {
+
+    }
+
+    @Override
+    public void setLoyer3Maison() {
+
+    }
+
+    @Override
+    public void setLoyer4Maison() {
+
+    }
+
+    @Override
+    public void setLoyerHotel() {
+
     }
 
     @Override
