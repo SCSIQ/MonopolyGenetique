@@ -46,7 +46,7 @@ public class LancerDesInitial extends Etat {
 
         System.out.println("///////////////////////////////////////////////////////");
 
-
+//
         /*
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();
 
