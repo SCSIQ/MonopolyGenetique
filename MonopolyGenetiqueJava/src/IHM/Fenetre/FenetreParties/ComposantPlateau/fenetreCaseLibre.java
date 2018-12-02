@@ -41,8 +41,6 @@ public class fenetreCaseLibre extends Parent {
 //////////////////////////////////////////////////////////////////////////BOUTON
         Button bt_acheter= new Button("ACHETER");
 
-        automate.evoluer("acheterPropriete");
-
         bt_acheter.setLayoutX(50);
         bt_acheter.setLayoutY(210);
 
@@ -51,6 +49,9 @@ public class fenetreCaseLibre extends Parent {
         bt_acheter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
+                automate.evoluer("acheterPropriete"); //demamnde à l'automate d'acheter la propriété (bien entendu cela ne se fera pas si le joueur n'a pas assez d'argent)
+                //pour ce qui est de tes demandes Emilie, je m'en occupe des que possible, Aurian
 
                 //SI PAS ASSEZ D'ARGENT.. Je ne sais pas comment récupérer la propriété et son tarif.. Fonction coté métier pour joueurcourant : assezArgent ? qu'on puisse récupérer ?
               /*  if(automate.getJoueurCourant().getSolde()<p.getPrix())
