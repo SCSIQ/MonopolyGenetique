@@ -23,10 +23,11 @@ public class PayerLoyer extends Etat {
     public void agir(String event) {
 
         Joueur j = super.getListeJoueurs().get(0);
-        int sommeAPayer;
+        int sommeAPayer = 0;
 
         if(j.getPion().getCase() instanceof Terrain)
         {
+            System.out.println("    C'est un Terrain");
             switch (((Terrain)j.getPion().getCase()).getNbMaisons()){
                 case 0 :
                     sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyerSansMaison();
@@ -53,16 +54,20 @@ public class PayerLoyer extends Etat {
         }
         else if(j.getPion().getCase() instanceof Gare)
         {
+            System.out.println("    C'est une gare");
             sommeAPayer = ((Gare)j.getPion().getCase()).getLoyer();
             j.DecrementerSolde(sommeAPayer);
             ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
         }
         else if(j.getPion().getCase() instanceof ServicePublic)
         {
+            System.out.println("    C'est un Service Public");
             /*sommeAPayer = ((ServicePublic)j.getPion().getCase()).getLoyer();
             j.DecrementerSolde(sommeAPayer);
             ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);*/
         }
+        System.out.println("    Somme à payer : "+sommeAPayer);
+        System.out.println("    Le joueur a maintenant "+j.getSolde()+"€");
     }
 
     @Override

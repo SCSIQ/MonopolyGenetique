@@ -135,7 +135,7 @@ public class Solo extends Parent {
 
 
                 //Ajout de la couleur choisie pour la partie solo
-                automate.getJoueurCourant().setCouleur(couleur.getValue());
+                //automate.getJoueurCourant().setCouleur(couleur.getValue());
 
                 //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();
