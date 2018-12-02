@@ -26,12 +26,25 @@ public class LancerDesInitial extends Etat {
     @Override
     public void agir(String event) {
 
+        System.out.println("///////////////////////////////////////////////////////");
+
+        for(int i=0 ; i<super.getListeJoueurs().size() ; i++)
+        {
+            System.out.println("    "+super.getListeJoueurs().get(i).getJoueurID());
+        }
+
+        System.out.println("------->MELANGE DES JOUEURS");
+
+        Collections.shuffle(super.getListeJoueurs());
         Collections.shuffle(super.getListeJoueurs());
 
         for(int i=0 ; i<super.getListeJoueurs().size() ; i++)
         {
-            super.getListeJoueurs().get(i).setNom("Joueur"+(i+1));
+            super.getListeJoueurs().get(i).setNom("Joueur"+(i+1)); //attribut à chaque joueur un nom : Joueur1, Joueur2, etc
+            System.out.println("    "+super.getListeJoueurs().get(i).getJoueurID());
         }
+
+        System.out.println("///////////////////////////////////////////////////////");
 
         /*
         Map<Joueur,Integer> joueurhashMap = new HashMap<Joueur,Integer>();

@@ -126,7 +126,8 @@ public class Solo extends Parent {
                 //début initialisation automate
                 InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
                 ArrayList<Color> listeCouleurs = new ArrayList<>();
-                for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
+                listeCouleurs.add(couleur.getValue());
+                for(int i=1 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeCouleurs.add(couleurAdversaire(i));
                 }
                 Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
@@ -181,8 +182,8 @@ public class Solo extends Parent {
 
                }*/
 
-                //Ajout de la couleur choisie pour la partie solo
-                automate.getJoueurCourant().setCouleur(couleur.getValue());
+                //Ajout de la couleur choisie pour la partie solo // FAIT PAR L'AUTOMATE !!!
+                //automate.getJoueurCourant().setCouleur(couleur.getValue());
 
                 //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();

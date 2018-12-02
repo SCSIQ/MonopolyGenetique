@@ -131,6 +131,11 @@ public class Joueur {
         return "    position du joueur : "+this.pion.toString();
     }
 
+    public String getJoueurID()
+    {
+        return super.toString();
+    }
+
 
     public String getNom() {
         return nom;

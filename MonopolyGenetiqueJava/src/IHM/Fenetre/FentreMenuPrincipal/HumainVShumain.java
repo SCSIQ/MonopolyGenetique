@@ -115,7 +115,6 @@ public class HumainVShumain extends Parent {
                 //début initialisation automate
                 InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
                 ArrayList<Color> listeCouleurs = new ArrayList<>();
-
                 for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeCouleurs.add(couleurAdversaire(i));
                 }
@@ -172,7 +171,8 @@ public class HumainVShumain extends Parent {
                 }
                 */
 
-                automate.getJoueurCourant().setCouleur(Color.CRIMSON);
+                // FAIT PAR L'AUTOMATE !!!
+                //automate.getJoueurCourant().setCouleur(Color.CRIMSON);
 
                 //création du plateau
                 Stage nouvelle_fenetre_plateau = new Stage();
