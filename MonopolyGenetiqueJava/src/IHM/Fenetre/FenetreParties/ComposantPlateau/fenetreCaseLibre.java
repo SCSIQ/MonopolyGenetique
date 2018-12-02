@@ -30,7 +30,7 @@ public class fenetreCaseLibre extends Parent {
     {
         this.canvas=canvas;
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
-                                    "\n\nElle n'appartient à personne.\n\nElle coûte X");
+                                    "\n\nElle n'appartient à personne.\n\nElle coûte "+((Proprietes)automate.getJoueurCourant().getPion().getCase()).getPrix()+" € ");
         l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         l.setLayoutX(170);
         l.setLayoutY(50);
