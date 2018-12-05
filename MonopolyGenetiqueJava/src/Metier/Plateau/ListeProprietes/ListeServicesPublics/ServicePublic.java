@@ -4,11 +4,11 @@ import Metier.Plateau.ListeProprietes.Proprietes;
 
 public abstract class ServicePublic extends Proprietes {
 
-    protected int loyer = 200;
+    protected int loyer = 20;
 
     public ServicePublic(int position) {
         super(position);
-        super.setPrix(15000);
+        super.setPrix(1500);
         super.setPrixHypotheque(0);
     }
 

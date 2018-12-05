@@ -95,35 +95,34 @@ public abstract class Terrain extends Proprietes {
 
 
     /*
-    ///////////////////////SETTER ///////////
     public void setLoyerSansMaison(int loyerSansMaison) {
         this.loyerSansMaison = loyerSansMaison;
+    }
+
+    public void setPrixAjoutMaison(int prixAjoutMaison) {
+        this.prixAjoutMaison = prixAjoutMaison;
+    }
+
+    public void setLoyer1Maison(int loyer1Maison) {
+        this.loyer1Maison = loyer1Maison;
+    }
+
+    public void setLoyer2Maison(int loyer2Maison) {
+        this.loyer2Maison = loyer2Maison;
+    }
+
+    public void setLoyer3Maison(int loyer3Maison) {
+        this.loyer3Maison = loyer3Maison;
+    }
+
+    public void setLoyer4Maison(int loyer4Maison) {
+        this.loyer4Maison = loyer4Maison;
     }
 
     public void setLoyerHotel(int loyerHotel) {
         this.loyerHotel = loyerHotel;
     }
+*/
 
-    // si on ajoute 200€ au loyer par maison ça vous va ?
-    public void setLoyer1Maison(int loyer1Maison) {
-        this.loyer1Maison = loyer1Maison; // this.loyer1Maison = loyerSansMaison + 200 ;
 
-    }
-
-    public void setLoyer2Maison(int loyer2Maison) {
-        this.loyer2Maison = loyer2Maison; // this.loyer2Maison = loyer1Maison + 200 ;
-    }
-
-    public void setLoyer3Maison(int loyer3Maison) {
-        this.loyer3Maison = loyer3Maison;// this.loyer3Maison = loyer2Maison + 200 ;
-    }
-
-    public void setLoyer4Maison(int loyer4Maison) {
-        this.loyer4Maison = loyer4Maison;// this.loyer4Maison = loyer3Maison + 200 ;
-    }
-
-    public void setNbMaisons(int nbMaisons) { this.nbMaisons = nbMaisons;  } // renvoie le nombre de maison que possède un terrain
-
-    public void setPrixAjoutMaison(int prixAjoutMaison) {this.prixAjoutMaison = prixAjoutMaison; }
-     */
 }

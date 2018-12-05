@@ -28,9 +28,11 @@ public class PayerLoyer extends Etat {
         if(j.getPion().getCase() instanceof Terrain)
         {
             System.out.println("    C'est un Terrain");
+            System.out.println("    Nombre de maisons : "+((Terrain)j.getPion().getCase()).getNbMaisons());
             switch (((Terrain)j.getPion().getCase()).getNbMaisons()){
                 case 0 :
                     sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyerSansMaison();
+                    System.out.println("    Loyer sans maison : "+((Terrain)j.getPion().getCase()).getLoyerSansMaison());
                     break;
                 case 1 :
                     sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyer1Maison();
@@ -47,7 +49,7 @@ public class PayerLoyer extends Etat {
                 case 5 :
                     sommeAPayer = ((Terrain)j.getPion().getCase()).getLoyerHotel();
                     break;
-                default : sommeAPayer = 0;
+                //default : sommeAPayer = 0;
             }
             j.DecrementerSolde(sommeAPayer);
             ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
