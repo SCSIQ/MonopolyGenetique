@@ -28,35 +28,15 @@ public class ZonePossessions extends Parent {
 
     public ZonePossessions(Automate automate)
     {
+        zoneTerrain = new Pane() ;
+        zoneCompagnie = new Pane() ;
+        zoneGare = new Pane() ;
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
         textPossession.setLayoutX(860);
         textPossession.setLayoutY(290);
         textPossession.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textPossession);
-
-        ////////////////////CREATION D'UN PANEL POUR LA ZONE POSSESSION
-        /*Pane zonePoss = new Pane() ;
-        int height = ecran.getDisplayMode().getHeight();
-        int width = ecran.getDisplayMode().getWidth();
-
-       // zonePoss.setLayoutX(630);
-       // zonePoss.setLayoutY(275);
-
-        zonePoss.setLayoutX(630);
-        zonePoss.setLayoutY(275);
-
-        Border border1 = new Border(
-                new BorderStroke(Color.BLACK,
-                        BorderStrokeStyle.SOLID,
-                        CornerRadii.EMPTY,
-                        new BorderWidths(2),
-                        new Insets(0)));
-        zonePoss.setPrefSize(width*0.46,height*0.6);
-        zonePoss.setBorder(border1);
-
-        zonePoss.getChildren().add(textPossession);
-        this.getChildren().add(zonePoss);*/
 
         Rectangle rect_possession = new Rectangle();
         //TAILLE DU RECTANGLE ET POSITION
@@ -72,10 +52,10 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_possession);
     }
 
-    public void RectangleTerrain(Automate automate){
+    public void RectangleTerrain(){
 
-       ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
-        zoneTerrain = new Pane() ;
+       //////////////////////UN PANEL POUR LA ZONE TERRAIN
+
         //int height = ecran.getDisplayMode().getHeight();
         //int width = ecran.getDisplayMode().getWidth();
 
@@ -87,9 +67,6 @@ public class ZonePossessions extends Parent {
         textTerrain.setLayoutX(120);
         textTerrain.setLayoutY(10);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
-
-
-
 
         Rectangle rect_terrain = new Rectangle();
         rect_terrain.setHeight(390);
@@ -109,19 +86,16 @@ public class ZonePossessions extends Parent {
 
     }
 
-    public void RectangleGare(Automate automate){
+    public void RectangleGare(){
 
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
         textGare.setLayoutX(120);
         textGare.setLayoutY(10);
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
-        this.getChildren().add(textGare);
 
+        ///////////////////////UN PANEL POUR LA ZONE GARE
 
-
-        ////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
-        zoneGare = new Pane() ;
         //int height = ecran.getDisplayMode().getHeight();
         // int width = ecran.getDisplayMode().getWidth();
 
@@ -148,6 +122,7 @@ public class ZonePossessions extends Parent {
     }
 
 
+
     public void RectangleCompagnies(){
 
         //Ajout d'un label "COMPAGNIES"
@@ -156,8 +131,7 @@ public class ZonePossessions extends Parent {
         textCompagnies.setLayoutY(10);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
-////////////////////CREATION D'UN PANEL POUR LA ZONE COMPAGNIE
-         zoneCompagnie = new Pane() ;
+//////////////////////PANEL POUR LA ZONE COMPAGNIE
         //int height = ecran.getDisplayMode().getHeight();
         //int width = ecran.getDisplayMode().getWidth();
 
@@ -175,6 +149,8 @@ public class ZonePossessions extends Parent {
         //COULEUR ET CONTOUR
         rect_compagnie.setFill(Color.TRANSPARENT);
         rect_compagnie.setStroke(Color.BLACK);
+
+
 
         zoneCompagnie.getChildren().add(rect_compagnie);
         zoneCompagnie.getChildren().add(textCompagnies);
@@ -223,6 +199,14 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_cartePrison);
 }
 
+    public void genererPossession(Automate automate)
+    {
+        this.RectangleTerrain();
+        this.RectangleGare();
+        this.RectangleCompagnies();
+    }
+
+
     public void afficherTerrain(Automate automate)
     {
         int y = 0 ;
@@ -240,6 +224,8 @@ public class ZonePossessions extends Parent {
 
         }
     }
+
+
 
     public void afficherGare(Automate automate)
     {
@@ -277,8 +263,10 @@ public class ZonePossessions extends Parent {
         }
     }
 
-    public void effacerterrain()
+    public void effacerPossession()
     {
-
+        this.getChildren().removeAll(zoneCompagnie);
+        this.getChildren().removeAll(zoneGare);
+        this.getChildren().removeAll(zoneTerrain);
     }
 }

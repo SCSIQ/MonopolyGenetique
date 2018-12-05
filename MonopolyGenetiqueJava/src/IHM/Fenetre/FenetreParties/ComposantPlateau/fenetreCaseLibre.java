@@ -59,7 +59,7 @@ public class fenetreCaseLibre extends Parent {
         bt_acheter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                automate.evoluer("acheterPropriete"); //demamande à l'automate d'acheter la propriété
+                automate.evoluer("acheterPropriete"); //demande à l'automate d'acheter la propriété
 
                 //SI PAS ASSEZ D'ARGENT.
                 if(coutcase>argentJ)
@@ -87,6 +87,7 @@ public class fenetreCaseLibre extends Parent {
                     //on rend la bonne opacité à la fenêtre
                     detruireCanvas(canvas);
 
+                    //On affiche les terrains, gares et compagnies achetés
                     poss.afficherTerrain(automate);
                     poss.afficherCompagnie(automate);
                     poss.afficherGare(automate);
