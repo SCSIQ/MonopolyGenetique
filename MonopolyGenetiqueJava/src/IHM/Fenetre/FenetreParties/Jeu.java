@@ -107,7 +107,7 @@ public class Jeu extends Parent {
             public void handle(ActionEvent event) {
 
                 if(automate.getJoueurCourant().getaLanceDes()==true) {
-
+                    poss.afficherTerrain(automate);
                     automate.evoluer("tourSuivant");
 
                     fenetreTour(nouvelle_fenetre, automate);

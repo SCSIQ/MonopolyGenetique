@@ -18,7 +18,10 @@ import java.util.ArrayList;
 
 public class ZonePossessions extends Parent {
 
-    private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
+    //private GraphicsDevice ecran = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice() ;
+    private Pane zoneTerrain ;
+    private Pane zoneCompagnie ;
+    private Pane zoneGare ;
 
     public ZonePossessions(Automate automate)
     {
@@ -76,7 +79,7 @@ public class ZonePossessions extends Parent {
 
 
         ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
-        Pane zoneTerrain = new Pane() ;
+        zoneTerrain = new Pane() ;
         //int height = ecran.getDisplayMode().getHeight();
         //int width = ecran.getDisplayMode().getWidth();
 
@@ -229,18 +232,13 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_cartePrison);
 }
 
-    public void afficherPropriete(Automate automate)
+    public void afficherTerrain(Automate automate)
     {
 
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
-            System.out.println(("coucou"));
            Label Proprietes = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
-           Button bt_details = new Button("détails");
-
-           bt_details.setLayoutX(50);
-           this.getChildren().add(bt_details);
-           this.getChildren().add(Proprietes);
+           zoneTerrain.getChildren().add(Proprietes);
 
         }
     }
