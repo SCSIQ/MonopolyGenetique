@@ -2,6 +2,7 @@ package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.fenetreCaseLibre;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
