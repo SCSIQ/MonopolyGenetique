@@ -1,9 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
-import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.fenetreCaseLibre;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
@@ -18,6 +15,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+
+import java.util.ArrayList;
 
 public class LancerDe extends Parent {
 
@@ -63,24 +62,16 @@ public class LancerDe extends Parent {
                     //on ferme la fenêtre
                     fenetre_actuelle.close();
 
-
-
-
-                    //----------------------------------
-
                     //si la case est bien une propriété
                     if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes){
 
                         //si elle n'est pas déjà achetée
                         if(((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null){
                             fenetreVousEtesSur(fenetre_actuelle, automate, zoneJoueur, poss);
+                        } else {
+                            fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, poss);
                         }
                     }
-
-                    //----------------------------------
-
-
-
                 }
             });
 
@@ -130,5 +121,24 @@ public class LancerDe extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_vousEtesSur.show();
+    }
+
+    public void fenetreCasePoss(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_poss = new Stage();
+        fenetreCasePossedee fenetreposs = new fenetreCasePossedee(nouvelle_fenetre_poss,canvas, automate, plateauJeu, zoneJoueur, jeu, poss);
+
+        Scene nouvelle_scene = new  Scene(fenetreposs,650,550);
+
+        nouvelle_fenetre_poss.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_poss.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_poss.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_poss.show();
     }
 }
