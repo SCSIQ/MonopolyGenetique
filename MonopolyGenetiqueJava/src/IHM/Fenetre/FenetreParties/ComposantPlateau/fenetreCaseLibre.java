@@ -29,7 +29,7 @@ public class fenetreCaseLibre extends Parent {
     private int coutcase;
     private Jeu jeu ;
 
-    public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu)
+    public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZonePossessions poss)
     {
         this.canvas=canvas;
         this.jeu= jeu ;
@@ -86,6 +86,8 @@ public class fenetreCaseLibre extends Parent {
 
                     //on rend la bonne opacité à la fenêtre
                     detruireCanvas(canvas);
+
+                    poss.afficherPropriete(automate);
 
                     //met à jour l'argent dans IHM
                     zoneJoueur.SupprimerJoueur();

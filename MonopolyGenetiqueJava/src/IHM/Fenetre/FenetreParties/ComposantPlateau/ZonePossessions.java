@@ -5,6 +5,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
+import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -12,6 +13,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 
 public class ZonePossessions extends Parent {
@@ -72,10 +74,6 @@ public class ZonePossessions extends Parent {
         textTerrain.setLayoutY(325);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
-        this.getChildren().add(textTerrain);
-
-        ///TEST qui ne ùarche pas
-        afficherPropriete(automate);
 
         ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
         /*Pane zoneTerrain = new Pane() ;
@@ -240,6 +238,16 @@ public class ZonePossessions extends Parent {
     public void afficherPropriete(Automate automate)
     {
 
+        for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
+        {
+            System.out.println(("coucou"));
+           Label Proprietes = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
+           Button bt_details = new Button("détails");
 
+           bt_details.setLayoutX(50);
+           this.getChildren().add(bt_details);
+           this.getChildren().add(Proprietes);
+
+        }
     }
 }

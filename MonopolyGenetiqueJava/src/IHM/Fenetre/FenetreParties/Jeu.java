@@ -12,11 +12,14 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class Jeu extends Parent {
 
@@ -118,7 +121,6 @@ public class Jeu extends Parent {
                 } else {
                     automate.evoluer("tourSuivant");
                     fenetreTourErreur(nouvelle_fenetre, automate);
-
 
                 }
 
