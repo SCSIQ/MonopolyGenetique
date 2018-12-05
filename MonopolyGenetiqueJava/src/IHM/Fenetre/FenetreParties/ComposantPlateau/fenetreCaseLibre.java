@@ -88,6 +88,8 @@ public class fenetreCaseLibre extends Parent {
                     detruireCanvas(canvas);
 
                     poss.afficherTerrain(automate);
+                    poss.afficherCompagnie(automate);
+                    poss.afficherGare(automate);
 
                     //met à jour l'argent dans IHM
                     zoneJoueur.SupprimerJoueur();

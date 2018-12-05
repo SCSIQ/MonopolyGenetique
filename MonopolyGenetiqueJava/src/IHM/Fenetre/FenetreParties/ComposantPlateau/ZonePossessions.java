@@ -1,6 +1,8 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeGares.Gare;
+import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
@@ -150,41 +152,33 @@ public class ZonePossessions extends Parent {
 
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
-        textCompagnies.setLayoutX(1050);
-        textCompagnies.setLayoutY(495);
+        textCompagnies.setLayoutX(120);
+        textCompagnies.setLayoutY(10);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
-        this.getChildren().add(textCompagnies);
-////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
-       /* Pane zoneCompa = new Pane() ;
-        int height = ecran.getDisplayMode().getHeight();
-        int width = ecran.getDisplayMode().getWidth();
+////////////////////CREATION D'UN PANEL POUR LA ZONE COMPAGNIE
+         zoneCompagnie = new Pane() ;
+        //int height = ecran.getDisplayMode().getHeight();
+        //int width = ecran.getDisplayMode().getWidth();
 
-        zoneCompa.setLayoutX(950);
-        zoneCompa.setLayoutY(445);
-        Border border1 = new Border(
-                new BorderStroke(Color.BLACK,
-                        BorderStrokeStyle.SOLID,
-                        CornerRadii.EMPTY,
-                        new BorderWidths(2),
-                        new Insets(0)));
-        zoneCompa.setPrefSize(width*0.22,height*0.15);
-        zoneCompa.setBorder(border1);
+        zoneCompagnie.setLayoutX(950);
+        zoneCompagnie.setLayoutY(490);
 
-        zoneCompa.getChildren().add(textCompagnies);
-        this.getChildren().add(zoneCompa);*/
 
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_compagnie = new Rectangle();
         rect_compagnie.setHeight(110);
         rect_compagnie.setWidth(305);
-        rect_compagnie.setX(950);
-        rect_compagnie.setY(485);
+        rect_compagnie.setX(0);
+        rect_compagnie.setY(0);
 
         //COULEUR ET CONTOUR
         rect_compagnie.setFill(Color.TRANSPARENT);
         rect_compagnie.setStroke(Color.BLACK);
-        this.getChildren().add(rect_compagnie);
+
+        zoneCompagnie.getChildren().add(rect_compagnie);
+        zoneCompagnie.getChildren().add(textCompagnies);
+        this.getChildren().add(zoneCompagnie);
     }
 
     public void RectangleCartePrison(){
@@ -196,7 +190,7 @@ public class ZonePossessions extends Parent {
         textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         this.getChildren().add(textPrison);
 
-////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
+////////////////////CREATION D'UN PANEL POUR LA ZONE Prison
         /*Pane zonePrison = new Pane() ;
         int height = ecran.getDisplayMode().getHeight();
         int width = ecran.getDisplayMode().getWidth();
@@ -238,9 +232,45 @@ public class ZonePossessions extends Parent {
                 Label terrain = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 terrain.setLayoutX(10);
-                terrain.setLayoutY(20+y);
+                terrain.setLayoutY(30+y);
                 zoneTerrain.getChildren().add(terrain);
-                y+=20 ;
+                y+=30 ;
+            }
+
+
+        }
+    }
+
+    public void afficherGare(Automate automate)
+    {
+        int y = 0 ;
+        for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
+        {
+            if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Gare){
+                Label gare = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
+                gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                gare.setLayoutX(10);
+                gare.setLayoutY(30+y);
+                zoneGare.getChildren().add(gare);
+                y+=30 ;
+            }
+
+
+        }
+    }
+
+    public void afficherCompagnie(Automate automate)
+    {
+        int y = 0 ;
+        for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
+        {
+            if(automate.getJoueurCourant().getListePropietes().get(i) instanceof ServicePublic){
+                Label compagnie = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
+                compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                compagnie.setLayoutX(10);
+                compagnie.setLayoutY(30+y);
+                zoneCompagnie.getChildren().add(compagnie);
+                y+=30 ;
             }
 
 
