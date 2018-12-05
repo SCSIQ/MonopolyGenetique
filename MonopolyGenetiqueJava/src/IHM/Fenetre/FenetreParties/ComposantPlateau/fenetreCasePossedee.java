@@ -2,6 +2,7 @@ package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
@@ -23,17 +24,23 @@ public class fenetreCasePossedee extends Parent  {
     public fenetreCasePossedee(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZonePossessions poss){
 
         this.canvas = canvas ;
-
+     /*  Terrain t = null;
         ///////////////////////////////////////LABEL
         //automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition());
         //(Terrain) automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition()).
+
+       t = (Terrain) automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
+          // t = (ServicePublic) automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
+    */
+
 
         //ne  fonctionne pas !
         //automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getProprio();
 
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
-                "\n\nElle appartient au joueur X"+".\n\nVous lui devez Y € ");
-
+                "\n\nElle appartient au joueur X.\n\nVous lui devez Y € ");
         l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         l.setLayoutX(170);
         l.setLayoutY(50);
