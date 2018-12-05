@@ -111,44 +111,38 @@ public class ZonePossessions extends Parent {
 
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
-        textGare.setLayoutX(1070);
-        textGare.setLayoutY(325);
+        textGare.setLayoutX(120);
+        textGare.setLayoutY(10);
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
         this.getChildren().add(textGare);
 
 
 
         ////////////////////CREATION D'UN PANEL POUR LA ZONE GARE
-        /*Pane zoneGare = new Pane() ;
-        int height = ecran.getDisplayMode().getHeight();
-        int width = ecran.getDisplayMode().getWidth();
+        zoneGare = new Pane() ;
+        //int height = ecran.getDisplayMode().getHeight();
+        // int width = ecran.getDisplayMode().getWidth();
 
         zoneGare.setLayoutX(950);
         zoneGare.setLayoutY(315);
-        Border border1 = new Border(
-                new BorderStroke(Color.BLACK,
-                        BorderStrokeStyle.SOLID,
-                        CornerRadii.EMPTY,
-                        new BorderWidths(2),
-                        new Insets(0)));
-        zoneGare.setPrefSize(width*0.22,height*0.15);
-        zoneGare.setBorder(border1);
 
-        zoneGare.getChildren().add(textGare);
-        this.getChildren().add(zoneGare);*/
+
+
         //TAILLE DU RECTANGLE ET POSITION
 
         Rectangle rect_gare  = new Rectangle();
         rect_gare.setWidth(305);
         rect_gare.setHeight(160);
-        rect_gare.setX(950);
-        rect_gare.setY(315);
+        rect_gare.setX(0);
+        rect_gare.setY(0);
 
         //COULEUR ET CONTOUR
         rect_gare.setFill(Color.TRANSPARENT);
         rect_gare.setStroke(Color.BLACK);
 
-        this.getChildren().add(rect_gare);
+        zoneGare.getChildren().add(textGare);
+        zoneGare.getChildren().add(rect_gare);
+        this.getChildren().add(zoneGare);
     }
 
 
@@ -237,15 +231,24 @@ public class ZonePossessions extends Parent {
 
     public void afficherTerrain(Automate automate)
     {
-
+        int y = 0 ;
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Terrain){
                 Label terrain = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
+                terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                terrain.setLayoutX(10);
+                terrain.setLayoutY(20+y);
                 zoneTerrain.getChildren().add(terrain);
+                y+=20 ;
             }
 
 
         }
+    }
+
+    public void effacerterrain()
+    {
+
     }
 }
