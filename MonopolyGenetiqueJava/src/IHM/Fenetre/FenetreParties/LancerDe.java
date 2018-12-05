@@ -68,9 +68,6 @@ public class LancerDe extends Parent {
 
                     //----------------------------------
 
-                    //Emilie, je me suis permis de modifier ton code, il est maintenant bien plus court et
-                    //prend en compte si la propriété n'a pas déjà été achetée par un joueur. Aurian
-
                     //si la case est bien une propriété
                     if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes){
 

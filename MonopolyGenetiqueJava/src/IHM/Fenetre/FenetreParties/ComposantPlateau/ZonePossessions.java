@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -71,14 +72,7 @@ public class ZonePossessions extends Parent {
 
     public void RectangleTerrain(Automate automate){
 
-        //Ajout d'un label "TERRAIN"
-        Label textTerrain = new Label("TERRAINS");
-        textTerrain.setLayoutX(745);
-        textTerrain.setLayoutY(325);
-        textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
-
-
-        ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
+       ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
         zoneTerrain = new Pane() ;
         //int height = ecran.getDisplayMode().getHeight();
         //int width = ecran.getDisplayMode().getWidth();
@@ -86,9 +80,14 @@ public class ZonePossessions extends Parent {
         zoneTerrain.setLayoutX(635);
         zoneTerrain.setLayoutY(315);
 
+        //Ajout d'un label "TERRAIN"
+        Label textTerrain = new Label("TERRAINS");
+        textTerrain.setLayoutX(120);
+        textTerrain.setLayoutY(10);
+        textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
-        zoneTerrain.getChildren().add(textTerrain);
-        this.getChildren().add(zoneTerrain);
+
+
 
         Rectangle rect_terrain = new Rectangle();
         rect_terrain.setHeight(390);
@@ -96,11 +95,15 @@ public class ZonePossessions extends Parent {
         rect_terrain.setX(0);
         rect_terrain.setY(0);
 
-        zoneTerrain.getChildren().add(rect_terrain);
+
 
         //COULEUR ET CONTOUR
         rect_terrain.setFill(Color.TRANSPARENT);
         rect_terrain.setStroke(Color.BLACK);
+
+        zoneTerrain.getChildren().add(rect_terrain);
+        zoneTerrain.getChildren().add(textTerrain);
+        this.getChildren().add(zoneTerrain);
 
     }
 
@@ -237,8 +240,11 @@ public class ZonePossessions extends Parent {
 
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
-           Label Proprietes = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
-           zoneTerrain.getChildren().add(Proprietes);
+            if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Terrain){
+                Label terrain = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
+                zoneTerrain.getChildren().add(terrain);
+            }
+
 
         }
     }
