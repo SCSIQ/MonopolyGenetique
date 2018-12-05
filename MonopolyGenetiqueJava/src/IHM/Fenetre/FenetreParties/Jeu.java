@@ -88,7 +88,7 @@ public class Jeu extends Parent {
 
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
-                    fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur);
+                    fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur, poss);
                     pion.entrerDansCase();
                     //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
@@ -244,12 +244,12 @@ public class Jeu extends Parent {
     }
 
 
-    public void fenetreDes(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur)
+    public void fenetreDes(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_des = new Stage();
-        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate, this, plateauJeu, zoneJoueur);
+        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate, this, plateauJeu, zoneJoueur, poss);
 
         Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 
