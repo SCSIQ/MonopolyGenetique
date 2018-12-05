@@ -25,12 +25,19 @@ public class ZonePossessions extends Parent {
     private Pane zoneTerrain ;
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
+    private ArrayList<Label> listeCompagnies ;
+    private ArrayList<Label> listeGares ;
+    private ArrayList<Label> listeTerrains ;
 
     public ZonePossessions(Automate automate)
     {
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
         zoneGare = new Pane() ;
+        listeCompagnies = new ArrayList<>();
+        listeGares = new ArrayList<>();
+        listeTerrains = new ArrayList<>();
+
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
         textPossession.setLayoutX(860);
@@ -52,7 +59,7 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_possession);
     }
 
-    public void RectangleTerrain(){
+    public void RectangleTerrain(Automate automate){
 
        //////////////////////UN PANEL POUR LA ZONE TERRAIN
 
@@ -61,6 +68,8 @@ public class ZonePossessions extends Parent {
 
         zoneTerrain.setLayoutX(635);
         zoneTerrain.setLayoutY(315);
+
+       // this.afficherTerrain(automate);
 
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
@@ -86,7 +95,7 @@ public class ZonePossessions extends Parent {
 
     }
 
-    public void RectangleGare(){
+    public void RectangleGare(Automate automate){
 
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
@@ -102,7 +111,7 @@ public class ZonePossessions extends Parent {
         zoneGare.setLayoutX(950);
         zoneGare.setLayoutY(315);
 
-
+       // this.afficherGare(automate);
 
         //TAILLE DU RECTANGLE ET POSITION
 
@@ -123,7 +132,7 @@ public class ZonePossessions extends Parent {
 
 
 
-    public void RectangleCompagnies(){
+    public void RectangleCompagnies(Automate automate){
 
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
@@ -138,7 +147,7 @@ public class ZonePossessions extends Parent {
         zoneCompagnie.setLayoutX(950);
         zoneCompagnie.setLayoutY(490);
 
-
+        //this.afficherCompagnie(automate);
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_compagnie = new Rectangle();
         rect_compagnie.setHeight(110);
@@ -199,12 +208,7 @@ public class ZonePossessions extends Parent {
         this.getChildren().add(rect_cartePrison);
 }
 
-    public void genererPossession(Automate automate)
-    {
-        this.RectangleTerrain();
-        this.RectangleGare();
-        this.RectangleCompagnies();
-    }
+
 
 
     public void afficherTerrain(Automate automate)
@@ -217,6 +221,7 @@ public class ZonePossessions extends Parent {
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 terrain.setLayoutX(10);
                 terrain.setLayoutY(30+y);
+                listeTerrains.add(terrain);
                 zoneTerrain.getChildren().add(terrain);
                 y+=30 ;
             }
@@ -224,8 +229,6 @@ public class ZonePossessions extends Parent {
 
         }
     }
-
-
 
     public void afficherGare(Automate automate)
     {
@@ -237,6 +240,7 @@ public class ZonePossessions extends Parent {
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 gare.setLayoutX(10);
                 gare.setLayoutY(30+y);
+                listeGares.add(gare);
                 zoneGare.getChildren().add(gare);
                 y+=30 ;
             }
@@ -247,26 +251,28 @@ public class ZonePossessions extends Parent {
 
     public void afficherCompagnie(Automate automate)
     {
+
         int y = 0 ;
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof ServicePublic){
+
                 Label compagnie = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                listeCompagnies.add(compagnie);
                 compagnie.setLayoutX(10);
                 compagnie.setLayoutY(30+y);
                 zoneCompagnie.getChildren().add(compagnie);
                 y+=30 ;
             }
 
-
         }
     }
 
     public void effacerPossession()
     {
-        this.getChildren().removeAll(zoneCompagnie);
-        this.getChildren().removeAll(zoneGare);
-        this.getChildren().removeAll(zoneTerrain);
+        zoneCompagnie.getChildren().removeAll(listeCompagnies);
+        zoneTerrain.getChildren().removeAll(listeTerrains);
+        zoneGare.getChildren().removeAll(listeGares);
     }
 }

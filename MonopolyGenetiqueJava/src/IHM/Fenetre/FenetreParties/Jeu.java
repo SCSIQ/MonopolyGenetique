@@ -39,9 +39,9 @@ public class Jeu extends Parent {
         //APPEL ZONE POSSESSION
         ZonePossessions poss = new ZonePossessions(automate);
         poss.RectangleCartePrison();
-        poss.RectangleCompagnies();
-        poss.RectangleGare();
-        poss.RectangleTerrain();
+        poss.RectangleCompagnies(automate);
+        poss.RectangleGare(automate);
+        poss.RectangleTerrain(automate);
         this.getChildren().add(poss);
 
 
@@ -110,7 +110,10 @@ public class Jeu extends Parent {
                     automate.evoluer("tourSuivant");
 
                     poss.effacerPossession() ;
-                    poss.genererPossession(automate);
+                    poss.afficherTerrain(automate);
+                    poss.afficherGare(automate);
+                    poss.afficherCompagnie(automate);
+
 
                     fenetreTour(nouvelle_fenetre, automate);
                     zoneJoueur.SupprimerJoueur();
