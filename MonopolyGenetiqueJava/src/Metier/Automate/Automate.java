@@ -24,7 +24,7 @@ public class Automate {
     //cette méthode est appellée soit depuis l'IHM pour une évolutions lors d'un event,
     //soit par un Etat pour une évolution automatique
     public void evoluer(String event){
-        System.out.println(this.etatCourant.toString()+" ->");
+        System.out.println(this.etatCourant.toString()+" - - - - - - - - - - ->");
         this.etatCourant.agir(event);
         this.etatCourant = this.etatCourant.transition(event);
         System.out.println("- - - - - - - - - - - - - - - - - - - -> "+this.etatCourant.toString());
