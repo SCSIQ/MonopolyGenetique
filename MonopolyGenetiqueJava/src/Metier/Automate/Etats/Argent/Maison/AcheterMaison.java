@@ -23,37 +23,32 @@ public class AcheterMaison extends Etat {
 
         Joueur joueurCourant = super.getAutomate().getJoueurCourant();
         Cases caseCourante = super.getAutomate().getJoueurCourant().getPion().getCase();
-
-
-        //tout d'abord, lors de la création d'une case coté métier, indiquer le prix d'achat d'une maison
-        //(bien penser à l'ajouter dans la classe propriete)
-
-        //ensuite,
-        //récupérer le pris d'une maison sur la case puis demande au joueur de donner son solde
-        //ensuite l'état soustrait du solde du joueur le prix puis redonne le nouveau solde au joueur
-
-        //enfin, dire à la case qu'elle a une maison de plus ( ajouterMaison() )
-
-        //pour finir tu peux faire l'Etat vendreMaison{}
+        int prixMaison = ((Terrain) caseCourante).getPrixAjoutMaison() ;
 
         // si la caseCourante est une instance de Terrain
         if (caseCourante instanceof Terrain) {
 
-            //si le terrain n'a pas de maison
-            if (((Terrain) caseCourante).getNbMaisons() == 0) {
+            //si le propriétaire de la propriété est le joueur courant
+            if (((Terrain) caseCourante).getProprio() == joueurCourant) {
 
-                //si le solde du joueur courant est suppérieur ou égal
-                if (joueurCourant.getSolde() >= ((Terrain) caseCourante).getPrixAjoutMaison()){
+                //si il est possible de construire sur le terrain
+                if (((Terrain) caseCourante).getNbMaisons() < 5) {
 
-
-                    System.out.println("    Maison achetée : "+caseCourante.toString()+" au prix de "+ ((Terrain) caseCourante).getPrixAjoutMaison()+"€");
-                    System.out.println("    Argent restant pour le joueur : "+joueurCourant.getSolde()+"€");
-                }else{
-                System.out.println("    La maison ne peut pas être acheté car le joueur n'a pas assez d'argent...");  }
+                    //si le solde du joueur courant est suppérieur ou égal
+                    if (joueurCourant.getSolde() >= prixMaison) {
+                        joueurCourant.DecrementerSolde(prixMaison);
+                        ((Terrain) caseCourante).ajouterMaison();
+                        System.out.println("    Maison achetée : " + caseCourante.toString() + " au prix de " + ((Terrain) caseCourante).getPrixAjoutMaison() + "€");
+                        System.out.println("    Argent restant pour le joueur : " + joueurCourant.getSolde() + "€");
+                    } else {
+                        System.out.println("    La maison ne peut pas être acheté car le joueur n'a pas assez d'argent...");
+                    }
+                }
+            }else{
+                System.out.println( " La maison ne peut pas être acheté car vous n'êtes pas le propriétaire de cette propriété");
             }
         }
     }
-
     /////TRANSITION///////
     @Override
     public Etat transition(String event) { return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs()); }
