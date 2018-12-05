@@ -5,42 +5,42 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 public class Vert1 extends Terrain {
     public Vert1(int position) {
         super(position);
-        super.setPrix(30000);
+        super.setPrix(3000);
     }
 
     @Override
     public void setLoyerSansMaison() {
-        super.loyerSansMaison=2600;
+        super.loyerSansMaison=260;
     }
 
     @Override
     public void setPrixAjoutMaison() {
-        super.prixAjoutMaison=20000;
+        super.prixAjoutMaison=2000;
     }
 
     @Override
     public void setLoyer1Maison() {
-        super.loyer1Maison=13000;
+        super.loyer1Maison=1300;
     }
 
     @Override
     public void setLoyer2Maison() {
-        super.loyer2Maison=39000;
+        super.loyer2Maison=3900;
     }
 
     @Override
     public void setLoyer3Maison() {
-        super.loyer3Maison=90000;
+        super.loyer3Maison=9000;
     }
 
     @Override
     public void setLoyer4Maison() {
-        super.loyer4Maison=110000;
+        super.loyer4Maison=11000;
     }
 
     @Override
     public void setLoyerHotel() {
-        super.loyerHotel=127500;
+        super.loyerHotel=12750;
     }
 
     @Override

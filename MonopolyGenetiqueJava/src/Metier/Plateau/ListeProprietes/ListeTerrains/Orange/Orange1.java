@@ -6,42 +6,42 @@ public class Orange1 extends Terrain {
 
     public Orange1(int position) {
         super(position);
-        super.setPrix(18000);
+        super.setPrix(1800);
     }
 
     @Override
     public void setLoyerSansMaison() {
-        super.loyerSansMaison=1400;
+        super.loyerSansMaison=140;
     }
 
     @Override
     public void setPrixAjoutMaison() {
-        super.prixAjoutMaison=10000;
+        super.prixAjoutMaison=1000;
     }
 
     @Override
     public void setLoyer1Maison() {
-        super.loyer1Maison=7000;
+        super.loyer1Maison=700;
     }
 
     @Override
     public void setLoyer2Maison() {
-        super.loyer2Maison=20000;
+        super.loyer2Maison=2000;
     }
 
     @Override
     public void setLoyer3Maison() {
-        super.loyer3Maison=55000;
+        super.loyer3Maison=5500;
     }
 
     @Override
     public void setLoyer4Maison() {
-        super.loyer4Maison=75000;
+        super.loyer4Maison=7500;
     }
 
     @Override
     public void setLoyerHotel() {
-        super.loyerHotel=95000;
+        super.loyerHotel=9500;
     }
 
     @Override

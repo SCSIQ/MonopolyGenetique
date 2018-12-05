@@ -6,42 +6,42 @@ public class Rose3 extends Terrain {
 
     public Rose3(int position) {
         super(position);
-        super.setPrix(16000);
+        super.setPrix(1600);
     }
 
     @Override
     public void setLoyerSansMaison() {
-        super.loyerSansMaison=1200;
+        super.loyerSansMaison=120;
     }
 
     @Override
     public void setPrixAjoutMaison() {
-        super.prixAjoutMaison=10000;
+        super.prixAjoutMaison=1000;
     }
 
     @Override
     public void setLoyer1Maison() {
-        super.loyer1Maison=6000;
+        super.loyer1Maison=600;
     }
 
     @Override
     public void setLoyer2Maison() {
-        super.loyer2Maison=18000;
+        super.loyer2Maison=1800;
     }
 
     @Override
     public void setLoyer3Maison() {
-        super.loyer3Maison=50000;
+        super.loyer3Maison=5000;
     }
 
     @Override
     public void setLoyer4Maison() {
-        super.loyer4Maison=70000;
+        super.loyer4Maison=7000;
     }
 
     @Override
     public void setLoyerHotel() {
-        super.loyerHotel=90000;
+        super.loyerHotel=9000;
     }
 
     @Override
