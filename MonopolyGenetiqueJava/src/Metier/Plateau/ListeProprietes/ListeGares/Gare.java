@@ -6,11 +6,11 @@ public abstract class Gare extends Proprietes {
 
     public Gare(int position) {
         super(position);
-        super.setPrix(20000);
+        super.setPrix(2000);
         super.setPrixHypotheque(0);
     }
 
-    protected int loyer = 2500;
+    protected int loyer = 250;
 
     public int getLoyer() {
 
