@@ -79,23 +79,7 @@ public abstract class Terrain extends Proprietes {
     }
 
     ///////////////////////SETTER ///////////
-    public abstract void setLoyerSansMaison(); //prix d'ajout d'une maison
-
-    public abstract void setPrixAjoutMaison();
-
-    public abstract void setLoyer1Maison();
-
-    public abstract void setLoyer2Maison();
-
-    public abstract void setLoyer3Maison();
-
-    public abstract void setLoyer4Maison();
-
-    public abstract void setLoyerHotel();
-
-
-    /*
-    public void setLoyerSansMaison(int loyerSansMaison) {
+     public void setLoyerSansMaison(int loyerSansMaison) {
         this.loyerSansMaison = loyerSansMaison;
     }
 
@@ -122,7 +106,7 @@ public abstract class Terrain extends Proprietes {
     public void setLoyerHotel(int loyerHotel) {
         this.loyerHotel = loyerHotel;
     }
-*/
+
 
 
 }

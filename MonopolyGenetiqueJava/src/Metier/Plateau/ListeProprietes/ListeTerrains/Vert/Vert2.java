@@ -6,43 +6,15 @@ public class Vert2 extends Terrain {
     public Vert2(int position) {
         super(position);
         super.setPrix(3000);
-    }
+        setLoyerSansMaison(260);
+        setPrixAjoutMaison(2000);
+         setLoyer1Maison(1300);
+         setLoyer2Maison(3900);
+         setLoyer3Maison(9000);
+         setLoyer4Maison(1100);
+         setLoyerHotel(12750);
 
-    @Override
-    public void setLoyerSansMaison() {
-        super.loyerSansMaison=260;
     }
-
-    @Override
-    public void setPrixAjoutMaison() {
-        super.prixAjoutMaison=2000;
-    }
-
-    @Override
-    public void setLoyer1Maison() {
-        super.loyer1Maison=1300;
-    }
-
-    @Override
-    public void setLoyer2Maison() {
-        super.loyer2Maison=3900;
-    }
-
-    @Override
-    public void setLoyer3Maison() {
-        super.loyer3Maison=9000;
-    }
-
-    @Override
-    public void setLoyer4Maison() {
-        super.loyer4Maison=11000;
-    }
-
-    @Override
-    public void setLoyerHotel() {
-        super.loyerHotel=12750;
-    }
-
 
     @Override
     public String toString() {

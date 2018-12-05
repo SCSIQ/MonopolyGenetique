@@ -7,41 +7,14 @@ public class Marron2 extends Terrain {
     public Marron2(int position) {
         super(position);
         super.setPrix(800);
-    }
+        setLoyerSansMaison(40);
+        setPrixAjoutMaison(500);
+         setLoyer1Maison(200);
+         setLoyer2Maison(600);
+         setLoyer3Maison(1800);
+         setLoyer4Maison(3200);
+         setLoyerHotel(4500);
 
-    @Override
-    public void setLoyerSansMaison() {
-        super.loyerSansMaison=40;
-    }
-
-    @Override
-    public void setPrixAjoutMaison() {
-        super.prixAjoutMaison=500;
-    }
-
-    @Override
-    public void setLoyer1Maison() {
-        super.loyer1Maison=200;
-    }
-
-    @Override
-    public void setLoyer2Maison() {
-        super.loyer2Maison=600;
-    }
-
-    @Override
-    public void setLoyer3Maison() {
-        super.loyer3Maison=1800;
-    }
-
-    @Override
-    public void setLoyer4Maison() {
-        super.loyer4Maison=3200;
-    }
-
-    @Override
-    public void setLoyerHotel() {
-        super.loyerHotel=4500;
     }
 
     @Override
