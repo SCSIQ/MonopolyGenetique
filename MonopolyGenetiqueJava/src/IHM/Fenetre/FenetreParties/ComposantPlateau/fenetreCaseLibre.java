@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 //importation mise par Jérémy
+import IHM.Fenetre.FenetreParties.Jeu;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
@@ -23,14 +24,19 @@ import javafx.stage.WindowEvent;
 //PERMET DE PROPOSER QUE L'UTILISATEUR ACHETE LA CASE SI ELLE EST LIBRE
 public class fenetreCaseLibre extends Parent {
 
-   // Proprietes p ;
-    Canvas canvas;
+    private Canvas canvas;
+    private int argentJ;
+    private int coutcase;
+    private Jeu jeu ;
 
-    public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur)
+    public fenetreCaseLibre(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu)
     {
         this.canvas=canvas;
+        this.jeu= jeu ;
+
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
                                     "\n\nElle n'appartient à personne.\n\nElle coûte "+((Proprietes)automate.getJoueurCourant().getPion().getCase()).getPrix()+" € ");
+
         l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         l.setLayoutX(170);
         l.setLayoutY(50);
@@ -38,7 +44,11 @@ public class fenetreCaseLibre extends Parent {
         l.setScaleX(2);
         l.setScaleY(2);
 
+        coutcase=((Proprietes)automate.getJoueurCourant().getPion().getCase()).getPrix();
+        argentJ=automate.getJoueurCourant().getSolde();
+
 //////////////////////////////////////////////////////////////////////////BOUTON
+        //ACTION ACHETER
         Button bt_acheter= new Button("ACHETER");
 
         bt_acheter.setLayoutX(50);
@@ -49,43 +59,47 @@ public class fenetreCaseLibre extends Parent {
         bt_acheter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                automate.evoluer("acheterPropriete"); //demamande à l'automate d'acheter la propriété
 
-                automate.evoluer("acheterPropriete"); //demamnde à l'automate d'acheter la propriété (bien entendu cela ne se fera pas si le joueur n'a pas assez d'argent)
-                //pour ce qui est de tes demandes Emilie, je m'en occupe des que possible, Aurian
-
-                //SI PAS ASSEZ D'ARGENT.. Je ne sais pas comment récupérer la propriété et son tarif.. Fonction coté métier pour joueurcourant : assezArgent ? qu'on puisse récupérer ?
-              /*  if(automate.getJoueurCourant().getSolde()<p.getPrix())
+                //SI PAS ASSEZ D'ARGENT.
+                if(coutcase>argentJ)
                 {
-                    fenetreNoire();
 
                     Stage nouvelle_fenetre_PasAssezArgent= new Stage();
                     PasAssezArgent fenetre_PasAssezArgent = new PasAssezArgent(automate, nouvelle_fenetre_PasAssezArgent, canvas);
 
-                    Scene nouvelle_scene = new Scene(fenetre_PasAssezArgent,320,370);
+                    Scene nouvelle_scene = new Scene(fenetre_PasAssezArgent,320,200);
 
                     nouvelle_fenetre_PasAssezArgent.setScene(nouvelle_scene);
 
                     //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
                     nouvelle_fenetre_PasAssezArgent.initModality(Modality.WINDOW_MODAL);
                     nouvelle_fenetre_PasAssezArgent.initOwner(fenetre_actuelle);
+
                     //on ferme la fenêtre
                     fenetre_actuelle.close();
 
-                }else{*/
+                    //ON MONTRE LA FENETRE !!!!
+                    nouvelle_fenetre_PasAssezArgent.show();
+
+                }else{
+
                     //on rend la bonne opacité à la fenêtre
                     detruireCanvas(canvas);
 
-zoneJoueur.SupprimerJoueur();
-zoneJoueur.genereInfosJoueur(automate);
+                    //met à jour l'argent dans IHM
+                    zoneJoueur.SupprimerJoueur();
+                    zoneJoueur.genereInfosJoueur(automate);
                     //on ferme la fenêtre
                     fenetre_actuelle.close();
 
                 }
 
 
-            //}
+            }
         });
 
+        //ACTION NE RIEN FAIRE
         Button bt_rien= new Button("NE RIEN FAIRE");
 
         bt_rien.setLayoutX(300);
@@ -124,7 +138,6 @@ zoneJoueur.genereInfosJoueur(automate);
         this.getChildren().add(bt_acheter);
         this.getChildren().add(bt_rien);
 
-
     }
 
     public void detruireCanvas(Canvas canvas)
@@ -135,13 +148,4 @@ zoneJoueur.genereInfosJoueur(automate);
         this.getChildren().add(canvas);
     }
 
-    public void fenetreNoire()
-    {
-
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.setFill(Color.BLACK);
-        canvas.setOpacity(0.5);
-        gc.fillRect(0,0, 1600,1600);
-        this.getChildren().add(canvas);
-    }
 }

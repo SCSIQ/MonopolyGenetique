@@ -120,7 +120,7 @@ public class LancerDe extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_vousEtesSur = new Stage();
-        fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, plateauJeu, zoneJoueur);
+        fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, plateauJeu, zoneJoueur, jeu);
 
         Scene nouvelle_scene = new  Scene(fenetreSur,650,550);
 
