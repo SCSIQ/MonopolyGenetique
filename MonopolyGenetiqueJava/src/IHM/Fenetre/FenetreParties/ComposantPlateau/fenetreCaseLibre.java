@@ -87,6 +87,8 @@ public class fenetreCaseLibre extends Parent {
                     //on rend la bonne opacité à la fenêtre
                     detruireCanvas(canvas);
 
+                    //on efface d'abord la liste pour pas réécrire par deçu
+                    poss.effacerPossession();
                     //On affiche les terrains, gares et compagnies achetés
                     poss.afficherTerrain(automate);
                     poss.afficherCompagnie(automate);
