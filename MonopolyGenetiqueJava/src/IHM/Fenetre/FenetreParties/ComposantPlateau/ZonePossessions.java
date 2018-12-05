@@ -76,35 +76,29 @@ public class ZonePossessions extends Parent {
 
 
         ////////////////////CREATION D'UN PANEL POUR LA ZONE TERRAIN
-        /*Pane zoneTerrain = new Pane() ;
-        int height = ecran.getDisplayMode().getHeight();
-        int width = ecran.getDisplayMode().getWidth();
+        Pane zoneTerrain = new Pane() ;
+        //int height = ecran.getDisplayMode().getHeight();
+        //int width = ecran.getDisplayMode().getWidth();
 
         zoneTerrain.setLayoutX(635);
         zoneTerrain.setLayoutY(315);
-        Border border1 = new Border(
-                new BorderStroke(Color.BLACK,
-                        BorderStrokeStyle.SOLID,
-                        CornerRadii.EMPTY,
-                        new BorderWidths(2),
-                        new Insets(0)));
-        zoneTerrain.setPrefSize(width*0.22,height*0.5);
-        zoneTerrain.setBorder(border1);
+
 
         zoneTerrain.getChildren().add(textTerrain);
-        this.getChildren().add(zoneTerrain);*/
+        this.getChildren().add(zoneTerrain);
 
         Rectangle rect_terrain = new Rectangle();
         rect_terrain.setHeight(390);
         rect_terrain.setWidth(305);
-        rect_terrain.setX(635);
-        rect_terrain.setY(315);
+        rect_terrain.setX(0);
+        rect_terrain.setY(0);
+
+        zoneTerrain.getChildren().add(rect_terrain);
 
         //COULEUR ET CONTOUR
         rect_terrain.setFill(Color.TRANSPARENT);
         rect_terrain.setStroke(Color.BLACK);
 
-        this.getChildren().add(rect_terrain);
     }
 
     public void RectangleGare(Automate automate){
