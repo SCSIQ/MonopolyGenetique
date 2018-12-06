@@ -31,12 +31,39 @@ public class fenetreCasePossedee extends Parent  {
         this.zoneJoueur =zoneJoueur;
         this.zoneAd = zoneAd ;
 
-        Joueur j=null ;
-        int prixAPayer=0;
-        if(automate.getJoueurCourant().getPion().getCase() instanceof  Terrain){
-            prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyerSansMaison();
-            j =((Terrain)automate.getJoueurCourant().getPion().getCase()).getProprio();
+        Joueur j=null ; //représente le propriétaire de la case
+        int prixAPayer=0; // représente le prix à payer au propriétaire
 
+       //SI C'EST UN TERRAIN
+        if(automate.getJoueurCourant().getPion().getCase() instanceof  Terrain){
+            //Si il n'y a pas de maison
+            if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0){
+                prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyerSansMaison();
+
+            // si il y a une maison
+            }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1){
+                prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyer1Maison();
+
+            //si il y a 2 maisons
+            }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2) {
+                prixAPayer = ((Terrain) automate.getJoueurCourant().getPion().getCase()).getLoyer2Maison();
+            }
+            //Si il y a 3 maisons
+            else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3){
+                prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyer3Maison();
+
+            //si il y a 4 maisons
+            }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4){
+                prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyer4Maison();
+            }
+            //si il y a un hôtel
+            else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5){
+                prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyerHotel();
+            }
+
+                j =((Terrain)automate.getJoueurCourant().getPion().getCase()).getProprio();
+
+        // SI C'EST UNE COMPAGNIE
         }else if(automate.getJoueurCourant().getPion().getCase() instanceof ServicePublic){
             prixAPayer =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getLoyer();
             j =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getProprio();

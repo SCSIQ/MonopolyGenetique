@@ -90,7 +90,6 @@ public class Jeu extends Parent {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur, poss, zoneAd);
                     pion.entrerDansCase();
-                    //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
                 }else{
                     automate.evoluer("lancerDes");
