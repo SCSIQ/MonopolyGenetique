@@ -1,11 +1,17 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Fenetre.FenetreParties.DetailPropriete;
+import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare;
 import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.control.Button;
@@ -14,8 +20,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 
@@ -32,8 +39,18 @@ public class ZonePossessions extends Parent {
     private ArrayList<Button> boutonsTerrains ;
     private ArrayList<Button> boutonsGares ;
 
-    public ZonePossessions(Automate automate)
+    private Stage fenetre_actuelle;
+    private Canvas canvas;
+    private Automate automate;
+    private Jeu jeu ;
+
+    public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu)
     {
+        this.jeu = jeu ;
+        this.automate = automate ;
+        this.canvas= canvas ;
+        this.fenetre_actuelle = fenetre_actuelle;
+
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
         zoneGare = new Pane() ;
@@ -291,7 +308,8 @@ public class ZonePossessions extends Parent {
 
                 Button bt_detail = new Button("DETAILS") ;
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
-                bt_detail.setLayoutX(150);
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(30+y);
 
                 boutonsCompagnie.add(bt_detail);
@@ -308,12 +326,77 @@ public class ZonePossessions extends Parent {
     {
         zoneCompagnie.getChildren().removeAll(listeCompagnies);
         zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
-        
+
         zoneTerrain.getChildren().removeAll(listeTerrains);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
 
         zoneGare.getChildren().removeAll(listeGares);
         zoneGare.getChildren().removeAll(boutonsGares);
 
+    }
+
+    //si on appuie sur un boutons Détails sur terrains
+    public void appuieBoutonTerrain()
+    {
+        for(Button detail : boutonsTerrains)
+        {
+            detail.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    fenetreDetail(fenetre_actuelle, automate);
+                }
+
+            });
+        }
+    }
+
+    //si on appuie sur un boutons Détails sur compagnie
+    public void appuieBoutonCompagnie()
+    {
+        for(Button detail : boutonsCompagnie)
+        {
+            detail.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    fenetreDetail(fenetre_actuelle, automate);
+                }
+
+            });
+        }
+    }
+
+    //si on appuie sur un boutons Détails sur terrains
+    public void appuieBoutonGare()
+    {
+        for(Button detail : boutonsGares)
+        {
+            detail.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    fenetreDetail(fenetre_actuelle, automate);
+                }
+
+            });
+        }
+    }
+
+
+    public void fenetreDetail(Stage fenetre_actuelle, Automate automate)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_detail = new Stage();
+        DetailPropriete fenetreDetail = new DetailPropriete(automate, fenetre_actuelle, canvas);
+
+        Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
+
+        nouvelle_fenetre_detail.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_detail.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_detail.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_detail.show();
     }
 }

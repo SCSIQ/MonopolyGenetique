@@ -37,7 +37,7 @@ public class Jeu extends Parent {
         this.getChildren().add(zoneJoueur);
 
         //APPEL ZONE POSSESSION
-        ZonePossessions poss = new ZonePossessions(automate);
+        ZonePossessions poss = new ZonePossessions(automate, nouvelle_fenetre, canvas, this);
         poss.RectangleCartePrison();
         poss.RectangleCompagnies(automate);
         poss.RectangleGare(automate);
@@ -119,6 +119,7 @@ public class Jeu extends Parent {
                     zoneAd.SupprimerAdversaire();
                     zoneJoueur.genereInfosJoueur(automate);
                     zoneAd.genererAdversaire(automate, nouvelle_fenetre);
+
 
                     pion.ChangerOrdrePion(); //change l'ordre des pions coté IHM lors du chagement de joueur 
 
