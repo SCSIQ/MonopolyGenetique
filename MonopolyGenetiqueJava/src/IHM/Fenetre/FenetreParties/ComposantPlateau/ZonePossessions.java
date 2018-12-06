@@ -221,8 +221,16 @@ public class ZonePossessions extends Parent {
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 terrain.setLayoutX(10);
                 terrain.setLayoutY(30+y);
+
+                Button bt_detail = new Button("DETAILS");
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(200);
+                bt_detail.setLayoutY(30+y);
+
                 listeTerrains.add(terrain);
                 zoneTerrain.getChildren().add(terrain);
+                zoneTerrain.getChildren().add(bt_detail);
                 y+=30 ;
             }
 
@@ -240,8 +248,16 @@ public class ZonePossessions extends Parent {
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 gare.setLayoutX(10);
                 gare.setLayoutY(30+y);
+
+                Button bt_detail = new Button("DETAILS") ;
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(200);
+                bt_detail.setLayoutY(30+y);
+
                 listeGares.add(gare);
                 zoneGare.getChildren().add(gare);
+                zoneGare.getChildren().add(bt_detail);
                 y+=30 ;
             }
 
@@ -262,7 +278,15 @@ public class ZonePossessions extends Parent {
                 listeCompagnies.add(compagnie);
                 compagnie.setLayoutX(10);
                 compagnie.setLayoutY(30+y);
+
+                Button bt_detail = new Button("DETAILS") ;
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(150);
+                bt_detail.setLayoutY(30+y);
+
                 zoneCompagnie.getChildren().add(compagnie);
+                zoneCompagnie.getChildren().add(bt_detail);
                 y+=30 ;
             }
 
