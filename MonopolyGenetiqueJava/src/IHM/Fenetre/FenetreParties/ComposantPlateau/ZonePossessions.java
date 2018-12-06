@@ -28,6 +28,9 @@ public class ZonePossessions extends Parent {
     private ArrayList<Label> listeCompagnies ;
     private ArrayList<Label> listeGares ;
     private ArrayList<Label> listeTerrains ;
+    private ArrayList<Button> boutonsCompagnie ;
+    private ArrayList<Button> boutonsTerrains ;
+    private ArrayList<Button> boutonsGares ;
 
     public ZonePossessions(Automate automate)
     {
@@ -37,6 +40,9 @@ public class ZonePossessions extends Parent {
         listeCompagnies = new ArrayList<>();
         listeGares = new ArrayList<>();
         listeTerrains = new ArrayList<>();
+        boutonsCompagnie = new ArrayList<>();
+        boutonsGares = new ArrayList<>();
+        boutonsTerrains = new ArrayList<>();
 
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
@@ -228,6 +234,8 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(30+y);
 
+                boutonsTerrains.add(bt_detail);
+
                 listeTerrains.add(terrain);
                 zoneTerrain.getChildren().add(terrain);
                 zoneTerrain.getChildren().add(bt_detail);
@@ -255,6 +263,8 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(30+y);
 
+                boutonsGares.add(bt_detail);
+
                 listeGares.add(gare);
                 zoneGare.getChildren().add(gare);
                 zoneGare.getChildren().add(bt_detail);
@@ -281,9 +291,10 @@ public class ZonePossessions extends Parent {
 
                 Button bt_detail = new Button("DETAILS") ;
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
-                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
                 bt_detail.setLayoutX(150);
                 bt_detail.setLayoutY(30+y);
+
+                boutonsCompagnie.add(bt_detail);
 
                 zoneCompagnie.getChildren().add(compagnie);
                 zoneCompagnie.getChildren().add(bt_detail);
@@ -296,7 +307,13 @@ public class ZonePossessions extends Parent {
     public void effacerPossession()
     {
         zoneCompagnie.getChildren().removeAll(listeCompagnies);
+        zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
+        
         zoneTerrain.getChildren().removeAll(listeTerrains);
+        zoneTerrain.getChildren().removeAll(boutonsTerrains);
+
         zoneGare.getChildren().removeAll(listeGares);
+        zoneGare.getChildren().removeAll(boutonsGares);
+
     }
 }
