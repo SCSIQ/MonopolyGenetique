@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
-import IHM.Fenetre.FenetreParties.DetailPropriete;
+
+import IHM.Fenetre.FenetreParties.DetailTerrain;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare;
@@ -33,6 +34,31 @@ public class ZonePossessions extends Parent {
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
     private ArrayList<Label> listeCompagnies ;
+
+    public ArrayList<Label> getListeCompagnies() {
+        return listeCompagnies;
+    }
+
+    public ArrayList<Label> getListeGares() {
+        return listeGares;
+    }
+
+    public ArrayList<Label> getListeTerrains() {
+        return listeTerrains;
+    }
+
+    public ArrayList<Button> getBoutonsCompagnie() {
+        return boutonsCompagnie;
+    }
+
+    public ArrayList<Button> getBoutonsTerrains() {
+        return boutonsTerrains;
+    }
+
+    public ArrayList<Button> getBoutonsGares() {
+        return boutonsGares;
+    }
+
     private ArrayList<Label> listeGares ;
     private ArrayList<Label> listeTerrains ;
     private ArrayList<Button> boutonsCompagnie ;
@@ -338,12 +364,14 @@ public class ZonePossessions extends Parent {
     //si on appuie sur un boutons Détails sur terrains
     public void appuieBoutonTerrain()
     {
-        for(Button detail : boutonsTerrains)
+        for(int i=0; i<boutonsTerrains.size(); i++)
         {
-            detail.setOnAction(new EventHandler<ActionEvent>() {
+            boutonsTerrains.get(i).setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    fenetreDetail(fenetre_actuelle, automate);
+                    int numBouton=0 ;
+                    fenetreDetailTerrain(fenetre_actuelle, automate, numBouton);
+                    numBouton++ ;
                 }
 
             });
@@ -358,14 +386,16 @@ public class ZonePossessions extends Parent {
             detail.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    fenetreDetail(fenetre_actuelle, automate);
+                    int numBouton=0 ;
+                    //fenetreDetail(fenetre_actuelle, automate, numBouton);
+                    numBouton++ ;
                 }
-
             });
+
         }
     }
 
-    //si on appuie sur un boutons Détails sur terrains
+    //si on appuie sur un boutons Détails sur gare
     public void appuieBoutonGare()
     {
         for(Button detail : boutonsGares)
@@ -373,7 +403,9 @@ public class ZonePossessions extends Parent {
             detail.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    fenetreDetail(fenetre_actuelle, automate);
+                    int numBouton=0 ;
+                    //fenetreDetail(fenetre_actuelle, automate, numBouton);
+                    numBouton++ ;
                 }
 
             });
@@ -381,12 +413,12 @@ public class ZonePossessions extends Parent {
     }
 
 
-    public void fenetreDetail(Stage fenetre_actuelle, Automate automate)
+    public void fenetreDetailTerrain(Stage fenetre_actuelle, Automate automate, int numBouton)
     {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailPropriete fenetreDetail = new DetailPropriete(automate, fenetre_actuelle, canvas);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate, fenetre_actuelle, canvas, this, numBouton);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
