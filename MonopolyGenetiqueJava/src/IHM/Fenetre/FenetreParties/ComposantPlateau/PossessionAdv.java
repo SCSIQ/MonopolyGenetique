@@ -1,22 +1,32 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Fenetre.FenetreParties.DetailTerrain;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeGares.Gare;
+import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+
+import java.util.ArrayList;
 
 
 public class PossessionAdv extends Parent {
@@ -25,10 +35,44 @@ public class PossessionAdv extends Parent {
     private Canvas canvas;
     private Automate automate;
     private Jeu jeu ;
+    private int numJoueur;
 
     private Pane zoneTerrain ;
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
+
+    private ArrayList<Label> listeCompagnies ;
+
+    public ArrayList<Label> getListeCompagnies() {
+        return listeCompagnies;
+    }
+
+    public ArrayList<Label> getListeGares() {
+        return listeGares;
+    }
+
+    public ArrayList<Label> getListeTerrains() {
+        return listeTerrains;
+    }
+
+    public ArrayList<Button> getBoutonsCompagnie() {
+        return boutonsCompagnie;
+    }
+
+    public ArrayList<Button> getBoutonsTerrains() {
+        return boutonsTerrains;
+    }
+
+    public ArrayList<Button> getBoutonsGares() {
+        return boutonsGares;
+    }
+
+    private ArrayList<Label> listeGares ;
+    private ArrayList<Label> listeTerrains ;
+    private ArrayList<Button> boutonsCompagnie ;
+    private ArrayList<Button> boutonsTerrains ;
+    private ArrayList<Button> boutonsGares ;
+
 
     public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu)
     {
@@ -36,10 +80,18 @@ public class PossessionAdv extends Parent {
         this.canvas=canvas;
         this.jeu=jeu;
         this.fenetre_actuelle=fenetre_actuelle;
+        this.numJoueur=i;
 
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
         zoneGare = new Pane() ;
+
+        listeCompagnies = new ArrayList<>();
+        listeGares = new ArrayList<>();
+        listeTerrains = new ArrayList<>();
+        boutonsCompagnie = new ArrayList<>();
+        boutonsGares = new ArrayList<>();
+        boutonsTerrains = new ArrayList<>();
 
         Text t_adv1 = new Text("Possession de "+automate.getListeJoueurs().get(i).getNom());
         t_adv1.setScaleX(2);
@@ -111,7 +163,7 @@ public class PossessionAdv extends Parent {
         //Ajout d'un label "TERRAIN"
         Label textTerrain = new Label("TERRAINS");
         textTerrain.setLayoutX(115);
-        textTerrain.setLayoutY(15);
+        textTerrain.setLayoutY(10);
         textTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         //rectangle
@@ -127,6 +179,11 @@ public class PossessionAdv extends Parent {
 
         zoneTerrain.getChildren().add(textTerrain);
         zoneTerrain.getChildren().add(rect_terrain);
+
+        if(automate.getListeJoueurs().get(numJoueur).getListePropietes().size()>0) {
+            afficherTerrain(automate);
+        }
+
         this.getChildren().add(zoneTerrain);
     }
 
@@ -139,7 +196,7 @@ public class PossessionAdv extends Parent {
         //Ajout d'un label "GARE"
         Label textGare = new Label("GARES");
         textGare.setLayoutX(125);
-        textGare.setLayoutY(15);
+        textGare.setLayoutY(10);
         textGare.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         //TAILLE DU RECTANGLE ET POSITION
@@ -155,6 +212,14 @@ public class PossessionAdv extends Parent {
 
         zoneGare.getChildren().add(rect_gare);
         zoneGare.getChildren().add(textGare);
+
+
+        if(automate.getListeJoueurs().get(numJoueur).getListePropietes().size()>0)
+        {
+            afficherGare( automate);
+        }
+
+
         this.getChildren().add(zoneGare);
     }
 
@@ -168,7 +233,7 @@ public class PossessionAdv extends Parent {
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
         textCompagnies.setLayoutX(95);
-        textCompagnies.setLayoutY(15);
+        textCompagnies.setLayoutY(10);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
         //TAILLE DU RECTANGLE ET POSITION
@@ -184,6 +249,12 @@ public class PossessionAdv extends Parent {
 
         zoneCompagnie.getChildren().add(textCompagnies);
         zoneCompagnie.getChildren().add(rect_compagnie);
+
+        if(automate.getListeJoueurs().get(numJoueur).getListePropietes().size()>0)
+        {
+            afficherCompagnie(automate);
+        }
+
         this.getChildren().add(zoneCompagnie);
     }
 
@@ -209,6 +280,115 @@ public class PossessionAdv extends Parent {
         this.getChildren().add(rect_cartePrison);
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////AFFICHAGE DES POSSESSION
+    public void afficherTerrain(Automate automate)
+    {
+        int y = 0 ;
+
+        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++)
+        {
+            if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Terrain){
+                Label terrain = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
+                terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                terrain.setLayoutX(10);
+                terrain.setLayoutY(30+y);
+
+                Button bt_detail = new Button("DETAILS");
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(200);
+                bt_detail.setLayoutY(30+y);
+
+                boutonsTerrains.add(bt_detail);
+
+                listeTerrains.add(terrain);
+                zoneTerrain.getChildren().add(terrain);
+                zoneTerrain.getChildren().add(bt_detail);
+                y+=30 ;
+            }
+
+
+        }
+    }
+
+    public void afficherGare(Automate automate)
+    {
+        int y = 0 ;
+        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size(); i++)
+        {
+            if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Gare){
+                Label gare = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
+                gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                gare.setLayoutX(10);
+                gare.setLayoutY(30+y);
+
+                Button bt_detail = new Button("DETAILS") ;
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(200);
+                bt_detail.setLayoutY(30+y);
+
+                boutonsGares.add(bt_detail);
+
+                listeGares.add(gare);
+                zoneGare.getChildren().add(gare);
+                zoneGare.getChildren().add(bt_detail);
+                y+=30 ;
+            }
+
+
+        }
+    }
+
+    public void afficherCompagnie(Automate automate)
+    {
+
+        int y = 0 ;
+        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size(); i++)
+        {
+            if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof ServicePublic){
+
+                Label compagnie = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
+                compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                listeCompagnies.add(compagnie);
+                compagnie.setLayoutX(10);
+                compagnie.setLayoutY(30+y);
+
+                Button bt_detail = new Button("DETAILS") ;
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                bt_detail.setLayoutX(200);
+                bt_detail.setLayoutY(30+y);
+
+                boutonsCompagnie.add(bt_detail);
+
+                zoneCompagnie.getChildren().add(compagnie);
+                zoneCompagnie.getChildren().add(bt_detail);
+                y+=30 ;
+            }
+
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////EFFACEMENT DE POSSESSION
+    public void effacerPossession()
+    {
+        zoneCompagnie.getChildren().removeAll(listeCompagnies);
+        zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
+
+        zoneTerrain.getChildren().removeAll(listeTerrains);
+        zoneTerrain.getChildren().removeAll(boutonsTerrains);
+
+        zoneGare.getChildren().removeAll(listeGares);
+        zoneGare.getChildren().removeAll(boutonsGares);
+
+    }
+
+    public void fenetreDetailTerrain(Stage fenetre_actuelle, Automate automate, int numBouton)
+    {
+
+    }
+
     public void detruireCanvas(Canvas canvas)
     {
         GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -216,4 +396,6 @@ public class PossessionAdv extends Parent {
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
     }
+
+
 }
