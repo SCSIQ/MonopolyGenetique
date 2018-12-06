@@ -65,13 +65,13 @@ public class DetailTerrain extends Parent {
 
         //Contenu du panel
         Label l_infos = new Label("Loyer terrain nu : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyerSansMaison()+" €\n" +
-                                       "Loyer avec une maison : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer1Maison()+" €\n"+
-                                       "Loyer avec deux maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer2Maison()+" €\n"+
-                                       "Loyer avec trois maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer3Maison()+" €\n"+
-                                       "Loyer avec quatre maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer4Maison()+" €\n"+
-                                       "Loyer avec un hôtel : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyerHotel()+" €\n\n"+
-                                       "Prix Maison : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getPrixAjoutMaison()+" €\n"+
-                                       "Prix Hôtel : "); //+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).get()+" €");
+                "Loyer avec une maison : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer1Maison()+" €\n"+
+                "Loyer avec deux maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer2Maison()+" €\n"+
+                "Loyer avec trois maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer3Maison()+" €\n"+
+                "Loyer avec quatre maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer4Maison()+" €\n"+
+                "Loyer avec un hôtel : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyerHotel()+" €\n\n"+
+                "Prix Maison : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getPrixAjoutMaison()+" €\n"+
+                "Prix Hôtel : "); //+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).get()+" €");
         l_infos.setLayoutY(10);
         l_infos.setLayoutX(10);
         l_infos.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
