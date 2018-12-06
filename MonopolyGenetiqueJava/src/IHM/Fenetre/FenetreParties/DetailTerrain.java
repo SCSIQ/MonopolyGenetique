@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -107,8 +108,19 @@ public class DetailTerrain extends Parent {
         l_maison.setLayoutX(10);
         l_maison.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
+        Button bt_ConstruireMaison = new Button("CONSTRUIRE UNE\n       MAISON");
+        Button bt_ConstruireHotel = new Button("CONSTRUIRE UNE\n        HOTEL");
+
+        bt_ConstruireHotel.setLayoutX(250);
+        bt_ConstruireHotel.setLayoutY(125);
+
+        bt_ConstruireMaison.setLayoutX(25);
+        bt_ConstruireMaison.setLayoutY(125);
+
         zoneMaisonHotel.getChildren().add(rect_maison);
         zoneMaisonHotel.getChildren().add(l_maison);
+        zoneMaisonHotel.getChildren().add(bt_ConstruireHotel);
+        zoneMaisonHotel.getChildren().add(bt_ConstruireMaison);
 
         this.getChildren().add(zoneMaisonHotel);
     }
