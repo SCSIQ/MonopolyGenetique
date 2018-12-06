@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
@@ -24,23 +25,19 @@ public class fenetreCasePossedee extends Parent  {
     public fenetreCasePossedee(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZonePossessions poss){
 
         this.canvas = canvas ;
-     /*  Terrain t = null;
-        ///////////////////////////////////////LABEL
-        //automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition());
-        //(Terrain) automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition()).
+        Joueur j=null ;
+        int prixAPayer=0;
+        if(automate.getJoueurCourant().getPion().getCase() instanceof  Terrain){
+            prixAPayer =((Terrain)automate.getJoueurCourant().getPion().getCase()).getLoyerSansMaison();
+            j =((Terrain)automate.getJoueurCourant().getPion().getCase()).getProprio();
 
-       t = (Terrain) automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition());
-
-          // t = (ServicePublic) automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition());
-
-    */
-
-
-        //ne  fonctionne pas !
-        //automate.getJoueurCourant().getListePropietes().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getProprio();
+        }else if(automate.getJoueurCourant().getPion().getCase() instanceof ServicePublic){
+            prixAPayer =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getLoyer();
+            j =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getProprio();
+        }
 
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
-                "\n\nElle appartient au joueur X.\n\nVous lui devez Y € ");
+                "\n\nElle appartient au joueur "+j.getNom()+".\n\nVous lui devez "+prixAPayer+" € ");
         l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         l.setLayoutX(170);
         l.setLayoutY(50);
@@ -52,7 +49,7 @@ public class fenetreCasePossedee extends Parent  {
         //ACTION PAYER
         Button bt_payer= new Button("PAYER");
 
-        bt_payer.setLayoutX(150);
+        bt_payer.setLayoutX(175);
         bt_payer.setLayoutY(210);
 
         bt_payer.setPrefSize(150, 10);
@@ -70,10 +67,10 @@ public class fenetreCasePossedee extends Parent  {
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
         fenetre_actuelle.setMinHeight(300);
-        fenetre_actuelle.setMinWidth(500);
+        fenetre_actuelle.setMinWidth(520);
 
         fenetre_actuelle.setMaxHeight(300);
-        fenetre_actuelle.setMaxWidth(500);
+        fenetre_actuelle.setMaxWidth(520);
 
 //////////////////////AJOUT
         this.getChildren().add(bt_payer);
