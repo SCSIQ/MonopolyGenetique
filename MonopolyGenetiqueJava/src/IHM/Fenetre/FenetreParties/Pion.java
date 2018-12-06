@@ -918,47 +918,533 @@ public class Pion extends Parent {
         //CASE DE BAS
         if((automate.getJoueurCourant().getPion().getCase().getPosition()>=0) && (automate.getJoueurCourant().getPion().getCase().getPosition()<10))
         {
-            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            if((posJ1==posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //J1
             {
-                pions.get(0).setLayoutX(13);
-                pions.get(0).setLayoutY(33);
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(35);
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(60);
 
-                pions.get(1).setLayoutX(35);
-                pions.get(1).setLayoutY(55);
+            }
+            else if((posJ1==posJ3)&&(posJ1!=posJ2)&&(posJ1!=posJ4)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(35);
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(60);
+            }
+            else if ((posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(35);
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(60);
+            }
+            else if((posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(35);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(60);
+            }
+            else if((posJ2==posJ3)&&(posJ2!=posJ1)&&(posJ2!=posJ4)&&(posJ2!=posJ5)) //J2
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(35);
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(60);
+            }
+            else if((posJ2==posJ4)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ5))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(35);
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(60);
+            }
+            else if((posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(35);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(60);
+            }
+            else if((posJ3==posJ4)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ5)) //J3
+            {
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(35);
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(60);
+            }
+            else if((posJ3==posJ5)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ4))
+            {
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(35);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(60);
+            }
+            else if((posJ4==posJ5)&&(posJ4!=posJ1)&&(posJ4!=posJ2)&&(posJ4!=posJ3)) //J4
+            {
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(35);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(60);
+            }
 
-                pions.get(2).setLayoutX(35);
-                pions.get(2).setLayoutY(33);
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //////////////////////TROIS PIONS SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(30);
 
-                pions.get(3).setLayoutX(13);
-                pions.get(3).setLayoutY(55);
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(53);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(75);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(53);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(75);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(53);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(75);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ5)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(53);
 
                 pions.get(4).setLayoutX(25);
                 pions.get(4).setLayoutY(75);
-            }else {
-                pions.get(0).setLayoutX(35);
-                pions.get(0).setLayoutY(25);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(53);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(75);
+            }
+            else if((posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(53);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(75);
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(30);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(53);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(75);
+            }
+            else if((posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(30);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(53);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(75);
+            }
+            else if((posJ3==posJ4)&&(posJ3==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ2))
+            {
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(30);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(53);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(75);
+            }
+            else if ((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ5)) /////////////////////QUATRE SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(30);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(55);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(55);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(30);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(55);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(30);
+
+                pions.get(1).setLayoutX(13);
+                pions.get(1).setLayoutY(55);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(30);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(30);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(55);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(55);
+
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1))
+            {
+                pions.get(1).setLayoutX(13);
+                pions.get(1).setLayoutY(30);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(30);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(55);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1==posJ2))///////////////////////CINQ JOUEURS
+            {
+                pions.get(1).setLayoutX(13);
+                pions.get(1).setLayoutY(30);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(30);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(70);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(70);
+
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(50);
+            }
+            else{
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(50);
             }
         }
         //CASE DE GAUCHE
         else if((automate.getJoueurCourant().getPion().getCase().getPosition()>=11) && (automate.getJoueurCourant().getPion().getCase().getPosition()<=19))
         {
-            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            if((posJ1==posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //DEUX JOUEURS
             {
-                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(1).setLayoutX(60);
+                pions.get(1).setLayoutY(25);
+
+            }
+            else if((posJ1==posJ3)&&(posJ1!=posJ2)&&(posJ1!=posJ4)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(2).setLayoutX(60);
+                pions.get(2).setLayoutY(25);
+            }
+            else if ((posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(3).setLayoutX(60);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ2==posJ3)&&(posJ2!=posJ1)&&(posJ2!=posJ4)&&(posJ2!=posJ5)) //J2
+            {
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(25);
+                pions.get(2).setLayoutX(60);
+                pions.get(2).setLayoutY(25);
+            }
+            else if((posJ2==posJ4)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ5))
+            {
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(25);
+                pions.get(3).setLayoutX(60);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ3==posJ4)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ5)) //J3
+            {
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(25);
+                pions.get(3).setLayoutX(60);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ3==posJ5)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ4))
+            {
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ4==posJ5)&&(posJ4!=posJ1)&&(posJ4!=posJ2)&&(posJ4!=posJ3)) //J4
+            {
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //////////////////////TROIS PIONS SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(1).setLayoutX(53);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(2).setLayoutX(75);
+                pions.get(2).setLayoutY(25);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(1).setLayoutX(53);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(3).setLayoutX(75);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(2).setLayoutX(53);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(3).setLayoutX(75);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ5)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(1).setLayoutX(53);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(2).setLayoutX(53);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(3).setLayoutX(53);
+                pions.get(3).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(2).setLayoutX(53);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3))
+            {
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(3).setLayoutX(53);
+                pions.get(3).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ3==posJ4)&&(posJ3==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ2))
+            {
+                pions.get(2).setLayoutX(30);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(3).setLayoutX(53);
+                pions.get(3).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if ((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ5)) /////////////////////QUATRE SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(30);
                 pions.get(0).setLayoutY(13);
 
-                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutX(30);
                 pions.get(1).setLayoutY(35);
 
-                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutX(55);
                 pions.get(2).setLayoutY(13);
 
-                pions.get(3).setLayoutX(13);
+                pions.get(3).setLayoutX(55);
                 pions.get(3).setLayoutY(35);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
 
                 pions.get(4).setLayoutX(55);
-                pions.get(4).setLayoutY(25);
-            }else {
+                pions.get(4).setLayoutY(35);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(3).setLayoutX(30);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(1).setLayoutX(55);
+                pions.get(1).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(3).setLayoutX(30);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1))
+            {
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(13);
+
+                pions.get(3).setLayoutX(30);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1==posJ2))///////////////////////CINQ JOUEURS
+            {
+                pions.get(1).setLayoutX(15);
+                pions.get(1).setLayoutY(13);
+
+                pions.get(3).setLayoutX(15);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+            }
+            else{
                 pions.get(0).setLayoutX(35);
                 pions.get(0).setLayoutY(25);
             }
@@ -966,47 +1452,534 @@ public class Pion extends Parent {
         //CASE DE HAUT
         else if(((automate.getJoueurCourant().getPion().getCase().getPosition()>=20) && (automate.getJoueurCourant().getPion().getCase().getPosition()<=30)))
         {
-            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            if((posJ1==posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //J1
             {
-                pions.get(0).setLayoutX(13);
-                pions.get(0).setLayoutY(13);
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(25);
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(50);
 
-                pions.get(1).setLayoutX(35);
-                pions.get(1).setLayoutY(35);
+            }
+            else if((posJ1==posJ3)&&(posJ1!=posJ2)&&(posJ1!=posJ4)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(25);
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(50);
+            }
+            else if ((posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(25);
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(50);
+            }
+            else if((posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(25);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(50);
+            }
+            else if((posJ2==posJ3)&&(posJ2!=posJ1)&&(posJ2!=posJ4)&&(posJ2!=posJ5)) //J2
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(25);
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(50);
+            }
+            else if((posJ2==posJ4)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ5))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(25);
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(50);
+            }
+            else if((posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(25);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(50);
+            }
+            else if((posJ3==posJ4)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ5)) //J3
+            {
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(25);
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(50);
+            }
+            else if((posJ3==posJ5)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ4))
+            {
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(25);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(50);
+            }
+            else if((posJ4==posJ5)&&(posJ4!=posJ1)&&(posJ4!=posJ2)&&(posJ4!=posJ3)) //J4
+            {
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(25);
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(50);
+            }
 
-                pions.get(2).setLayoutX(35);
-                pions.get(2).setLayoutY(13);
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //////////////////////TROIS PIONS SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(10);
 
-                pions.get(3).setLayoutX(13);
-                pions.get(3).setLayoutY(35);
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(33);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(55);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(10);
+
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(33);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(55);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(10);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(33);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(55);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ5)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(10);
+
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(33);
 
                 pions.get(4).setLayoutX(25);
                 pions.get(4).setLayoutY(55);
-            }else {
-                pions.get(0).setLayoutX(35);
-                pions.get(0).setLayoutY(25);
             }
+            else if((posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(10);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(33);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(10);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(33);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(10);
+
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(33);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3))
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(10);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(33);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(55);
+            }
+            else if((posJ3==posJ4)&&(posJ3==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ2))
+            {
+                pions.get(2).setLayoutX(25);
+                pions.get(2).setLayoutY(10);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(33);
+
+                pions.get(4).setLayoutX(25);
+                pions.get(4).setLayoutY(55);
+            }
+            else if ((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ5)) /////////////////////QUATRE SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(20);
+
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(20);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(45);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(45);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(20);
+
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(20);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(45);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(45);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(20);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(20);
+
+                pions.get(1).setLayoutX(13);
+                pions.get(1).setLayoutY(45);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(45);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2))
+            {
+                pions.get(0).setLayoutX(13);
+                pions.get(0).setLayoutY(20);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(20);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(45);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(45);
+
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1))
+            {
+                pions.get(1).setLayoutX(13);
+                pions.get(1).setLayoutY(20);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(20);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(45);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(45);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1==posJ2))///////////////////////CINQ JOUEURS
+            {
+                pions.get(1).setLayoutX(13);
+                pions.get(1).setLayoutY(20);
+
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(20);
+
+                pions.get(2).setLayoutX(13);
+                pions.get(2).setLayoutY(60);
+
+                pions.get(4).setLayoutX(35);
+                pions.get(4).setLayoutY(60);
+
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(40);
+            }
+            else{
+                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutY(50);
+            }
+
         }
         //CASE DE DROITE
         else if((automate.getJoueurCourant().getPion().getCase().getPosition()>=31) && (automate.getJoueurCourant().getPion().getCase().getPosition()<=39))
         {
-            if((posJ1==posJ2)||(posJ1==posJ3)||(posJ1==posJ4)||(posJ1==posJ5)||(posJ2==posJ3)||(posJ2==posJ4)||(posJ2==posJ5)||(posJ3==posJ4)||(posJ3==posJ5))
+            if((posJ1==posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //DEUX JOUEURS
             {
                 pions.get(0).setLayoutX(35);
-                pions.get(0).setLayoutY(13);
+                pions.get(0).setLayoutY(25);
+                pions.get(1).setLayoutX(60);
+                pions.get(1).setLayoutY(25);
 
-                pions.get(1).setLayoutX(75);
-                pions.get(1).setLayoutY(35);
+            }
+            else if((posJ1==posJ3)&&(posJ1!=posJ2)&&(posJ1!=posJ4)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(2).setLayoutX(60);
+                pions.get(2).setLayoutY(25);
+            }
+            else if ((posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(3).setLayoutX(60);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(35);
+                pions.get(0).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ2==posJ3)&&(posJ2!=posJ1)&&(posJ2!=posJ4)&&(posJ2!=posJ5)) //J2
+            {
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(25);
+                pions.get(2).setLayoutX(60);
+                pions.get(2).setLayoutY(25);
+            }
+            else if((posJ2==posJ4)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ5))
+            {
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(25);
+                pions.get(3).setLayoutX(60);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(35);
+                pions.get(1).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ3==posJ4)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ5)) //J3
+            {
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(25);
+                pions.get(3).setLayoutX(60);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ3==posJ5)&&(posJ3!=posJ1)&&(posJ3!=posJ2)&&(posJ2!=posJ4))
+            {
+                pions.get(2).setLayoutX(35);
+                pions.get(2).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ4==posJ5)&&(posJ4!=posJ1)&&(posJ4!=posJ2)&&(posJ4!=posJ3)) //J4
+            {
+                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutY(25);
+                pions.get(4).setLayoutX(60);
+                pions.get(4).setLayoutY(25);
+            }
+
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1!=posJ4)&&(posJ1!=posJ5)) //////////////////////TROIS PIONS SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(1).setLayoutX(53);
+                pions.get(1).setLayoutY(25);
 
                 pions.get(2).setLayoutX(75);
+                pions.get(2).setLayoutY(25);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1!=posJ3)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(1).setLayoutX(53);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(3).setLayoutX(75);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ2)&&(posJ1!=posJ5))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(2).setLayoutX(53);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(3).setLayoutX(75);
+                pions.get(3).setLayoutY(25);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ5)&&(posJ1!=posJ3)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(1).setLayoutX(53);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(2).setLayoutX(53);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(25);
+
+                pions.get(3).setLayoutX(53);
+                pions.get(3).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ4))
+            {
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(2).setLayoutX(53);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ3))
+            {
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(25);
+
+                pions.get(3).setLayoutX(53);
+                pions.get(3).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if((posJ3==posJ4)&&(posJ3==posJ5)&&(posJ2!=posJ1)&&(posJ2!=posJ2))
+            {
+                pions.get(2).setLayoutX(30);
+                pions.get(2).setLayoutY(25);
+
+                pions.get(3).setLayoutX(53);
+                pions.get(3).setLayoutY(25);
+
+                pions.get(4).setLayoutX(75);
+                pions.get(4).setLayoutY(25);
+            }
+            else if ((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1!=posJ5)) /////////////////////QUATRE SUR LA MEME CASE
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
                 pions.get(2).setLayoutY(13);
 
-                pions.get(3).setLayoutX(35);
+                pions.get(3).setLayoutX(55);
                 pions.get(3).setLayoutY(35);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ3)&&(posJ1==posJ5)&&(posJ1!=posJ4))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
 
                 pions.get(4).setLayoutX(55);
-                pions.get(4).setLayoutY(25);
-            }else {
+                pions.get(4).setLayoutY(35);
+            }
+            else if((posJ1==posJ2)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ3))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(3).setLayoutX(30);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(1).setLayoutX(55);
+                pions.get(1).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1!=posJ2))
+            {
+                pions.get(0).setLayoutX(30);
+                pions.get(0).setLayoutY(13);
+
+                pions.get(3).setLayoutX(30);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+
+            }
+            else if((posJ2==posJ3)&&(posJ2==posJ4)&&(posJ2==posJ5)&&(posJ2!=posJ1))
+            {
+                pions.get(1).setLayoutX(30);
+                pions.get(1).setLayoutY(13);
+
+                pions.get(3).setLayoutX(30);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(2).setLayoutX(55);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(4).setLayoutX(55);
+                pions.get(4).setLayoutY(35);
+            }
+            else if((posJ1==posJ3)&&(posJ1==posJ4)&&(posJ1==posJ5)&&(posJ1==posJ2))///////////////////////CINQ JOUEURS
+            {
+                pions.get(1).setLayoutX(25);
+                pions.get(1).setLayoutY(13);
+
+                pions.get(3).setLayoutX(25);
+                pions.get(3).setLayoutY(35);
+
+                pions.get(2).setLayoutX(65);
+                pions.get(2).setLayoutY(13);
+
+                pions.get(4).setLayoutX(65);
+                pions.get(4).setLayoutY(35);
+
+                pions.get(0).setLayoutX(45);
+                pions.get(0).setLayoutY(25);
+            }
+            else{
                 pions.get(0).setLayoutX(35);
                 pions.get(0).setLayoutY(25);
             }
@@ -1032,16 +2005,12 @@ public class Pion extends Parent {
                 pions.get(4).setLayoutX(70);
                 pions.get(4).setLayoutY(70);
             }else {
-                pions.get(0).setLayoutX(25);
+                pions.get(0).setLayoutX(15);
                 pions.get(0).setLayoutY(50);
             }
 
         }
-        else
-        {
-            pions.get(0).setLayoutX(15);
-            pions.get(0).setLayoutY(25);
-        }
+
     }
 }
 
