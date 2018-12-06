@@ -136,7 +136,7 @@ public class ZonePossessions extends Parent {
 
         //Ajout d'un label "COMPAGNIES"
         Label textCompagnies = new Label("COMPAGNIES");
-        textCompagnies.setLayoutX(120);
+        textCompagnies.setLayoutX(100);
         textCompagnies.setLayoutY(10);
         textCompagnies.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
 
