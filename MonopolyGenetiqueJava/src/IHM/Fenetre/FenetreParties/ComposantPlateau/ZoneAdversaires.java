@@ -44,7 +44,7 @@ public class ZoneAdversaires extends Parent {
         //TAILLE DU RECTANGLE ET POSITION
         rect_adversaire.setHeight(170);
         rect_adversaire.setWidth(630);
-        rect_adversaire.setX(630);
+        rect_adversaire.setX(630); 
         rect_adversaire.setY(110);
         //COULEUR ET CONTOUR
         rect_adversaire.setFill(Color.TRANSPARENT);
