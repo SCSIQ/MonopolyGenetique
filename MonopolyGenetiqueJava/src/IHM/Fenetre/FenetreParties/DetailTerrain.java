@@ -18,21 +18,24 @@ import javafx.stage.Stage;
 public class DetailTerrain extends Parent {
 
     private Pane zoneInfosTerrain ;
+    private Pane zoneMaisonHotel ;
     private int numBouton ;
 
     public DetailTerrain(Automate automate,Stage fenetre_detail ,Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton){
 
-        zoneInfosTerrain = new Pane() ;
+        zoneInfosTerrain = new Pane();
+        zoneMaisonHotel= new Pane();
         this.numBouton= numBouton ;
 
         Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).getText().toUpperCase()+"");
 
         nomTerrain.setLayoutY(20);
-        nomTerrain.setLayoutX(10);
+        nomTerrain.setLayoutX(60);
         nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
 
 
         GenererPanelInfos(automate ) ;
+        GenererPanelMaisonHotel(automate);
 
         /////////TAILLE MIN ET MAX DE LA FENETRE
         fenetre_detail.setMinHeight(700);
@@ -80,5 +83,33 @@ public class DetailTerrain extends Parent {
         zoneInfosTerrain.getChildren().add(l_infos);
 
         this.getChildren().add(zoneInfosTerrain);
+    }
+
+    public void GenererPanelMaisonHotel(Automate automate){
+        zoneMaisonHotel.setLayoutX(10);
+        zoneMaisonHotel.setLayoutY(300);
+
+        //TAILLE DU RECTANGLE ET POSITION
+        Rectangle rect_maison = new Rectangle();
+        rect_maison.setHeight(200);
+        rect_maison.setWidth(475);
+        rect_maison.setX(0);
+        rect_maison.setY(0);
+
+        //COULEUR ET CONTOUR
+        rect_maison.setFill(Color.TRANSPARENT);
+        rect_maison.setStroke(Color.BLACK);
+
+        //Contenu du panel
+        Label l_maison = new Label("VOUS POSSEDEZ X/3 TERRAINS DE CETTE COULEUR.\n" +
+                                    "POUR CONSTRUIRE, VOUS DEVEZ POSSEDER LES 3.");
+        l_maison.setLayoutY(30);
+        l_maison.setLayoutX(10);
+        l_maison.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
+
+        zoneMaisonHotel.getChildren().add(rect_maison);
+        zoneMaisonHotel.getChildren().add(l_maison);
+
+        this.getChildren().add(zoneMaisonHotel);
     }
 }
