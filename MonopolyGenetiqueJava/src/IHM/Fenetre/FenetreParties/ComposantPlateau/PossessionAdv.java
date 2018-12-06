@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -19,8 +20,19 @@ import javafx.stage.WindowEvent;
 
 public class PossessionAdv extends Parent {
 
-    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i)
+    private Stage fenetre_actuelle;
+    private Canvas canvas;
+    private Automate automate;
+    private Jeu jeu ;
+
+    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu)
     {
+        this.automate=automate;
+        this.canvas=canvas;
+        this.jeu=jeu;
+        this.fenetre_actuelle=fenetre_actuelle;
+
+
         Text t_adv1 = new Text("Possession de "+automate.getListeJoueurs().get(i).getNom());
         t_adv1.setScaleX(2);
         t_adv1.setScaleY(2);
