@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -25,11 +26,12 @@ public class ZoneAdversaires extends Parent {
     private Pane infoAdv2;
     private Pane infoAdv3;
     private Pane infoAdv4;
+    private Jeu jeu;
 
-
-    public ZoneAdversaires(Stage primaryStage, Stage fenetre_actuelle, Automate automate, Canvas canvas)
+    public ZoneAdversaires(Stage primaryStage, Stage fenetre_actuelle, Automate automate, Canvas canvas, Jeu jeu)
     {
         this.canvas=canvas;
+        this.jeu=jeu;
 
         //Ajout label adversaire
         Label adversaire = new Label("ADVERSAIRES");
@@ -367,12 +369,12 @@ public class ZoneAdversaires extends Parent {
     //création de la fenêtre de possession des advseraires
     public void possessionAdv(Stage fenetre_actuelle, Automate automate, int i)
     {
-        fenetreNoire();
+        jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_possession_Adv = new Stage();
 
-        PossessionAdv possAdv = new PossessionAdv(nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i);
-        Scene nouvelle_scene = new Scene(possAdv, 650,610);
+        PossessionAdv possAdv = new PossessionAdv(nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i, jeu);
+        Scene nouvelle_scene = new Scene(possAdv, 620,610);
 
         nouvelle_fenetre_possession_Adv.setScene(nouvelle_scene);
 
@@ -383,12 +385,5 @@ public class ZoneAdversaires extends Parent {
         nouvelle_fenetre_possession_Adv.show();
     }
 
-    public void fenetreNoire()
-    {
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.setFill(Color.BLACK);
-        canvas.setOpacity(0.5);
-        gc.fillRect(0,0, 1600,1600);
-        this.getChildren().add(canvas);
-    }
+
 }
