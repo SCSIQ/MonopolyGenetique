@@ -55,7 +55,7 @@ public class Jeu extends Parent {
 
         ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas);
         this.getChildren().add(zoneAd);
-        zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
+        zoneAd.genererAdversaire(automate, nouvelle_fenetre);
 
 /////////////PION
         Pion pion = new Pion(automate, pl);
@@ -88,7 +88,7 @@ public class Jeu extends Parent {
 
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
-                    fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur, poss);
+                    fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur, poss, zoneAd);
                     pion.entrerDansCase();
                     //automate.getJoueurCourant().setaLanceDes(true); //cette ligne empeche les lancés après un double... je l'ai donc désactivée, aurian
 
@@ -119,7 +119,7 @@ public class Jeu extends Parent {
                     zoneJoueur.SupprimerJoueur();
                     zoneAd.SupprimerAdversaire();
                     zoneJoueur.genereInfosJoueur(automate);
-                    zoneAd.genererAdversaire(primaryStage, automate, nouvelle_fenetre);
+                    zoneAd.genererAdversaire(automate, nouvelle_fenetre);
 
                     pion.ChangerOrdrePion(); //change l'ordre des pions coté IHM lors du chagement de joueur 
 
@@ -249,12 +249,12 @@ public class Jeu extends Parent {
     }
 
 
-    public void fenetreDes(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
+    public void fenetreDes(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur, ZonePossessions poss, ZoneAdversaires zoneAd)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_des = new Stage();
-        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate, this, plateauJeu, zoneJoueur, poss);
+        LancerDe fenetreDe = new LancerDe(nouvelle_fenetre_des, canvas, automate, this, plateauJeu, zoneJoueur, poss, zoneAd);
 
         Scene nouvelle_scene = new  Scene(fenetreDe,400,170);
 

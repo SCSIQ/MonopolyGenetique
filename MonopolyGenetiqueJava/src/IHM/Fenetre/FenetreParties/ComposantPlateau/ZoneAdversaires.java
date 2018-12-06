@@ -51,7 +51,7 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(rect_adversaire);
     }
 
-    public void genererAdversaire(Stage primaryStage, Automate automate, Stage fenetre_actuelle){
+    public void genererAdversaire(Automate automate, Stage fenetre_actuelle){
         //AJOUT ADVERSAIRES
         //automate.getListeJoueurs().get(0)== joueur courant, un adversaire ne doit pas être égal à lui
         //d'où la condition : automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()
@@ -62,7 +62,7 @@ public class ZoneAdversaires extends Parent {
             {
                 if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv1(fenetre_actuelle,automate, i);
                 }
             }
             //TROIS JOUEURS
@@ -70,11 +70,11 @@ public class ZoneAdversaires extends Parent {
             {
                 if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv1(fenetre_actuelle,automate, i);
                 }
                 else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv2(fenetre_actuelle,automate, i);
                 }
 
             }
@@ -83,15 +83,15 @@ public class ZoneAdversaires extends Parent {
             {
                 if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv1(fenetre_actuelle,automate, i);
                 }
                 else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv2(fenetre_actuelle,automate, i);
                 }
                 else if((i==3) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv3(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv3(fenetre_actuelle,automate, i);
                 }
             }
             //CINQ JOUEURS
@@ -99,19 +99,19 @@ public class ZoneAdversaires extends Parent {
             {
                 if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv1(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv1( fenetre_actuelle,automate, i);
                 }
                 else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv2(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv2(fenetre_actuelle,automate, i);
                 }
                 else if((i==3) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv3(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv3(fenetre_actuelle,automate, i);
                 }
                 else if((i==4) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
                 {
-                    RectangleAdv4(primaryStage, fenetre_actuelle,automate, i);
+                    RectangleAdv4(fenetre_actuelle,automate, i);
                 }
             }
 
@@ -127,7 +127,7 @@ public class ZoneAdversaires extends Parent {
     }
 
     //Les différentes zones des adversaires
-    public void RectangleAdv1(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
+    public void RectangleAdv1(Stage fenetre_actuelle, Automate automate,int i)
     {
         //Création d'un pane
         infoAdv1 = new Pane();
@@ -172,7 +172,7 @@ public class ZoneAdversaires extends Parent {
         @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, i);
             }
         });
 
@@ -186,7 +186,7 @@ public class ZoneAdversaires extends Parent {
 
     }
 
-    public void RectangleAdv2(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
+    public void RectangleAdv2(Stage fenetre_actuelle, Automate automate,int i)
     {
         infoAdv2 = new Pane();
 
@@ -231,7 +231,7 @@ public class ZoneAdversaires extends Parent {
             @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, i);
             }
         });
 
@@ -244,7 +244,7 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(infoAdv2);
     }
 
-    public void RectangleAdv3(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
+    public void RectangleAdv3(Stage fenetre_actuelle, Automate automate,int i)
     {
         infoAdv3 = new Pane();
 
@@ -288,7 +288,7 @@ public class ZoneAdversaires extends Parent {
             @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, i);
             }
         });
 
@@ -301,7 +301,7 @@ public class ZoneAdversaires extends Parent {
         this.getChildren().add(infoAdv3);
     }
 
-    public void RectangleAdv4(Stage primaryStage, Stage fenetre_actuelle, Automate automate,int i)
+    public void RectangleAdv4(Stage fenetre_actuelle, Automate automate,int i)
     {
         infoAdv4 = new Pane();
 
@@ -350,7 +350,7 @@ public class ZoneAdversaires extends Parent {
             @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(primaryStage, fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, i);
             }
         });
 
@@ -365,13 +365,13 @@ public class ZoneAdversaires extends Parent {
     }
 
     //création de la fenêtre de possession des advseraires
-    public void possessionAdv(Stage primaryStage, Stage fenetre_actuelle, Automate automate, int i)
+    public void possessionAdv(Stage fenetre_actuelle, Automate automate, int i)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_possession_Adv = new Stage();
 
-        PossessionAdv possAdv = new PossessionAdv(primaryStage, nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i);
+        PossessionAdv possAdv = new PossessionAdv(nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i);
         Scene nouvelle_scene = new Scene(possAdv, 650,610);
 
         nouvelle_fenetre_possession_Adv.setScene(nouvelle_scene);

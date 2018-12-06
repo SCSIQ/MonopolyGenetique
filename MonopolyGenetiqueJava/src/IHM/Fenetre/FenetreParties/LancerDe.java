@@ -24,7 +24,7 @@ public class LancerDe extends Parent {
     private Canvas canvas;
     private PlateauJeu plateauJeu ;
 
-    public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate, Jeu jeu, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur,  ZonePossessions poss)
+    public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate, Jeu jeu, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur,  ZonePossessions poss, ZoneAdversaires zoneAd)
     {
         this.jeu=jeu;
         this.canvas=canvas ;
@@ -69,7 +69,7 @@ public class LancerDe extends Parent {
                         if(((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null){
                             fenetreVousEtesSur(fenetre_actuelle, automate, zoneJoueur, poss);
                         } else {
-                            fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, poss);
+                            fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                         }
                     }
                 }
@@ -123,12 +123,12 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_vousEtesSur.show();
     }
 
-    public void fenetreCasePoss(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
+    public void fenetreCasePoss(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_poss = new Stage();
-        fenetreCasePossedee fenetreposs = new fenetreCasePossedee(nouvelle_fenetre_poss,canvas, automate, plateauJeu, zoneJoueur, jeu, poss);
+        fenetreCasePossedee fenetreposs = new fenetreCasePossedee(nouvelle_fenetre_poss,canvas, automate, plateauJeu, zoneJoueur, jeu, zoneAd);
 
         Scene nouvelle_scene = new  Scene(fenetreposs,650,550);
 

@@ -21,10 +21,16 @@ import javafx.stage.Stage;
 public class fenetreCasePossedee extends Parent  {
 
     private Canvas canvas ;
+    private ZoneInfoJoueur zoneJoueur ;
+    private ZoneAdversaires zoneAd;
 
-    public fenetreCasePossedee(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZonePossessions poss){
+    public fenetreCasePossedee(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZoneAdversaires zoneAd){
 
+        //INITIALISATION
         this.canvas = canvas ;
+        this.zoneJoueur =zoneJoueur;
+        this.zoneAd = zoneAd ;
+
         Joueur j=null ;
         int prixAPayer=0;
         if(automate.getJoueurCourant().getPion().getCase() instanceof  Terrain){
@@ -60,6 +66,14 @@ public class fenetreCasePossedee extends Parent  {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
+                //on remet à jour l'argent du joueur courant
+                zoneJoueur.SupprimerJoueur();
+                zoneJoueur.genereInfosJoueur(automate);
+
+                //Met à jour les adversaires :
+                zoneAd.SupprimerAdversaire();
+                zoneAd.genererAdversaire(automate, fenetre_actuelle);
+
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
             }
@@ -71,6 +85,8 @@ public class fenetreCasePossedee extends Parent  {
 
         fenetre_actuelle.setMaxHeight(300);
         fenetre_actuelle.setMaxWidth(520);
+
+
 
 //////////////////////AJOUT
         this.getChildren().add(bt_payer);

@@ -19,7 +19,7 @@ import javafx.stage.WindowEvent;
 
 public class PossessionAdv extends Parent {
 
-    public PossessionAdv(Stage primaryStage, Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i)
+    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i)
     {
         Text t_adv1 = new Text("Possession de "+automate.getListeJoueurs().get(i).getNom());
         t_adv1.setScaleX(2);
