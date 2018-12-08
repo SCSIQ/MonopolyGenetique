@@ -1,5 +1,6 @@
 package Metier.Plateau.ListeProprietes.ListeTerrains.BleuCiel;
 
+import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 
 public class BleuCiel2 extends Terrain {
@@ -16,6 +17,7 @@ public class BleuCiel2 extends Terrain {
         setLoyer4Maison(4000);
         setLoyerHotel(5500);
 
+        super.couleur= CouleurMétier.BleuCiel;
     }
 
     @Override

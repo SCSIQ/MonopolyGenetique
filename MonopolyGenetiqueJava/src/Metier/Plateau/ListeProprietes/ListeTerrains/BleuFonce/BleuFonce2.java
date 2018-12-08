@@ -1,5 +1,6 @@
 package Metier.Plateau.ListeProprietes.ListeTerrains.BleuFonce;
 
+import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 
 public class BleuFonce2 extends Terrain {
@@ -14,6 +15,7 @@ public class BleuFonce2 extends Terrain {
          setLoyer4Maison(17000);
          setLoyerHotel(20000);
 
+        super.couleur= CouleurMétier.BleuFonce;
     }
 
     @Override

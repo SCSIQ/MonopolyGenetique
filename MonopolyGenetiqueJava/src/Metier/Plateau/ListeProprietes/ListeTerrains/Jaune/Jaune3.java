@@ -1,5 +1,6 @@
 package Metier.Plateau.ListeProprietes.ListeTerrains.Jaune;
 
+import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 
 public class Jaune3 extends Terrain {
@@ -14,6 +15,7 @@ public class Jaune3 extends Terrain {
          setLoyer4Maison(1025);
          setLoyerHotel(12000);
 
+        super.couleur= CouleurMétier.Jaune;
     }
 
     @Override

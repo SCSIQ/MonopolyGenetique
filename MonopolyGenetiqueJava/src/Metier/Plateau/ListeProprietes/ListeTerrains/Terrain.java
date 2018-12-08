@@ -5,7 +5,7 @@ import Metier.Plateau.ListeProprietes.Proprietes;
 
 public abstract class Terrain extends Proprietes {
 
-    private Couleur couleur ;
+    protected CouleurMétier couleur;
 
     protected int prixAjoutMaison; /// prix d'une maison
 
@@ -107,6 +107,11 @@ public abstract class Terrain extends Proprietes {
         this.loyerHotel = loyerHotel;
     }
 
+////////////////// Couleur de la case
 
+    public CouleurMétier getCouleur()
+    {
+        return couleur;
+    }
 
 }
