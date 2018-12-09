@@ -303,9 +303,10 @@ public class ZonePossessions extends Parent {
 
                 this.appuieBoutonGare(bt_detail, i);
 
+
+                zoneGare.getChildren().add(bt_detail);
                 listeGares.add(gares);
                 zoneGare.getChildren().add(gare);
-                zoneGare.getChildren().add(bt_detail);
                 y+=30 ;
             }
 
@@ -315,7 +316,6 @@ public class ZonePossessions extends Parent {
 
     public void afficherCompagnie(Automate automate)
     {
-
         int y = 0 ;
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
@@ -324,7 +324,7 @@ public class ZonePossessions extends Parent {
                 Label compagnie = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 ServicePublic compa = (ServicePublic) automate.getJoueurCourant().getListePropietes().get(i);
-                listeCompagnies.add(compa);
+
                 compagnie.setLayoutX(10);
                 compagnie.setLayoutY(30+y);
 
@@ -338,6 +338,7 @@ public class ZonePossessions extends Parent {
                 listeCompagniesLabel.add(compagnie);
 
                 this.appuieBoutonCompagnie(bt_detail, i);
+                listeCompagnies.add(compa);
 
                 zoneCompagnie.getChildren().add(compagnie);
                 zoneCompagnie.getChildren().add(bt_detail);
@@ -350,16 +351,22 @@ public class ZonePossessions extends Parent {
     public void effacerPossession()
     {
         zoneCompagnie.getChildren().removeAll(listeCompagniesLabel);
-        listeCompagnies.removeAll(listeCompagnies);
+        //listeCompagnies.removeAll(listeCompagnies);
+        listeCompagnies= null ;
+        listeCompagnies= new ArrayList<>() ;
         zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
 
         zoneTerrain.getChildren().removeAll(listeTerrainsLabel);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
-        listeTerrains.removeAll(listeTerrains);
+        //listeTerrains.removeAll(listeTerrains);
+        listeTerrains= null ;
+        listeTerrains= new ArrayList<>() ; ;
 
         zoneGare.getChildren().removeAll(listeGaresLabel);
         zoneGare.getChildren().removeAll(boutonsGares);
-        listeGares.removeAll(listeGares);
+        //listeGares.removeAll(listeGares);
+        listeGares = null ;
+        listeGares = new ArrayList<>() ; ;
 
     }
 
@@ -479,15 +486,4 @@ public class ZonePossessions extends Parent {
         return listeTerrains;
     }
 
-    public ArrayList<Button> getBoutonsCompagnie() {
-        return boutonsCompagnie;
-    }
-
-    public ArrayList<Button> getBoutonsTerrains() {
-        return boutonsTerrains;
-    }
-
-    public ArrayList<Button> getBoutonsGares() {
-        return boutonsGares;
-    }
 }
