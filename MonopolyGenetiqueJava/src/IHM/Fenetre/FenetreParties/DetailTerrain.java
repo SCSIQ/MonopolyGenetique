@@ -1,12 +1,15 @@
 package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
+
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -32,8 +35,44 @@ public class DetailTerrain extends Parent {
 
         Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).toString().toUpperCase()+"");
 
+
+        CouleurMétier s =poss.getListeTerrains().get(numBouton).getCouleur();
+        Color couleurTerrain ;
+        switch(s){
+            case Rose : couleurTerrain = Color.rgb(189,91,163);
+            break ;
+            case Vert: couleurTerrain = Color.rgb(28,137,67);
+            break ;
+            case Orange: couleurTerrain = Color.rgb(234,157,34);
+            break ;
+            case Jaune: couleurTerrain = Color.rgb(239,233,50);
+            break ;
+            case Rouge: couleurTerrain = Color.rgb(224,30,37);
+            break ;
+            case Marron: couleurTerrain = Color.rgb(122,57,149);
+            break ;
+            case BleuFonce:  couleurTerrain = Color.rgb(68,77,160);
+            break;
+            case BleuCiel: couleurTerrain = Color.rgb(9,172,227);
+            break ;
+
+            default : couleurTerrain=Color.BLACK;
+        }
+
+        //ajout Couleur du joueur
+        Rectangle r_couleur = new Rectangle();
+        r_couleur.setHeight(50);
+        r_couleur.setWidth(50);
+        r_couleur.setLayoutX(10);
+        r_couleur.setLayoutY(10);
+        r_couleur.setStroke(Color.BLACK);
+        r_couleur.setStrokeWidth(1);
+        r_couleur.setFill(couleurTerrain);
+
+
+
         nomTerrain.setLayoutY(20);
-        nomTerrain.setLayoutX(60);
+        nomTerrain.setLayoutX(80);
         nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
 
 
@@ -47,10 +86,29 @@ public class DetailTerrain extends Parent {
         fenetre_detail.setMaxHeight(500);
         fenetre_detail.setMaxWidth(700);
 
+        Button bt_ok = new Button("revenir au jeu");
+
+        bt_ok.setLayoutX(180);
+        bt_ok.setLayoutY(530);
+
+        bt_ok.setPrefSize(150, 10);
+
+        bt_ok.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //on rend la bonne opacité à la fenêtre
+                detruireCanvas(canvas);
+
+                //on ferme la fenêtre
+                fenetre_detail.close();
+            }
+        });
 
 
         //AJOUT
         this.getChildren().add(nomTerrain);
+        this.getChildren().add(bt_ok);
+        this.getChildren().add(r_couleur);
     }
 
     public void GenererPanelInfos(Automate automate){
@@ -126,5 +184,13 @@ public class DetailTerrain extends Parent {
         zoneMaisonHotel.getChildren().add(bt_ConstruireMaison);
 
         this.getChildren().add(zoneMaisonHotel);
+    }
+
+    public void detruireCanvas(Canvas canvas)
+    {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.PAPAYAWHIP);
+        canvas.setOpacity(0.5);
+        this.getChildren().add(canvas);
     }
 }
