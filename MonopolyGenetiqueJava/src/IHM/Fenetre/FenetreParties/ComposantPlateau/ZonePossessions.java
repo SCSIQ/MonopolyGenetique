@@ -8,6 +8,7 @@ import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare;
 import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
+import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -45,6 +46,7 @@ public class ZonePossessions extends Parent {
     private ArrayList<Label> listeGaresLabel ;
     private ArrayList<Label> listeTerrainsLabel ;
     private ArrayList<Label> listeCompagniesLabel ;
+    private ArrayList<Rectangle> listeCouleur ; 
 
     private Stage fenetre_actuelle;
     private Canvas canvas;
@@ -72,6 +74,8 @@ public class ZonePossessions extends Parent {
         listeCompagniesLabel = new ArrayList<>();
         listeTerrainsLabel = new ArrayList<>();
         listeGaresLabel = new ArrayList<>();
+
+        listeCouleur = new ArrayList<>() ;
 
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
@@ -254,9 +258,44 @@ public class ZonePossessions extends Parent {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Terrain){
                 Label terrain = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-                terrain.setLayoutX(10);
+                terrain.setLayoutX(50);
                 terrain.setLayoutY(30+y);
                 Terrain ter = (Terrain) automate.getJoueurCourant().getListePropietes().get(i);
+
+
+                CouleurMétier s = ((Terrain)automate.getJoueurCourant().getListePropietes().get(i)).getCouleur();
+                Color couleurTerrain ;
+                switch(s){
+                    case Rose : couleurTerrain = Color.rgb(189,91,163);
+                        break ;
+                    case Vert: couleurTerrain = Color.rgb(28,137,67);
+                        break ;
+                    case Orange: couleurTerrain = Color.rgb(234,157,34);
+                        break ;
+                    case Jaune: couleurTerrain = Color.rgb(239,233,50);
+                        break ;
+                    case Rouge: couleurTerrain = Color.rgb(224,30,37);
+                        break ;
+                    case Marron: couleurTerrain = Color.rgb(122,57,149);
+                        break ;
+                    case BleuFonce:  couleurTerrain = Color.rgb(68,77,160);
+                        break;
+                    case BleuCiel: couleurTerrain = Color.rgb(9,172,227);
+                        break ;
+
+                    default : couleurTerrain=Color.BLACK;
+                }
+
+                //ajout Couleur du joueur
+                Rectangle r_couleur = new Rectangle();
+                r_couleur.setHeight(30);
+                r_couleur.setWidth(30);
+                r_couleur.setLayoutX(10);
+                r_couleur.setLayoutY(30+y);
+                r_couleur.setStroke(Color.BLACK);
+                r_couleur.setStrokeWidth(1);
+                r_couleur.setFill(couleurTerrain);
+                zoneTerrain.getChildren().add(r_couleur);
 
                 Button bt_detail = new Button("DETAILS");
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
@@ -266,6 +305,7 @@ public class ZonePossessions extends Parent {
 
                 boutonsTerrains.add(bt_detail);
                 listeTerrainsLabel.add(terrain);
+                listeCouleur.add(r_couleur);
 
                 this.appuieBoutonTerrain(bt_detail, i);
 
@@ -351,22 +391,21 @@ public class ZonePossessions extends Parent {
     public void effacerPossession()
     {
         zoneCompagnie.getChildren().removeAll(listeCompagniesLabel);
-        //listeCompagnies.removeAll(listeCompagnies);
         listeCompagnies= null ;
         listeCompagnies= new ArrayList<>() ;
         zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
 
         zoneTerrain.getChildren().removeAll(listeTerrainsLabel);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
-        //listeTerrains.removeAll(listeTerrains);
         listeTerrains= null ;
         listeTerrains= new ArrayList<>() ; ;
 
         zoneGare.getChildren().removeAll(listeGaresLabel);
         zoneGare.getChildren().removeAll(boutonsGares);
-        //listeGares.removeAll(listeGares);
         listeGares = null ;
-        listeGares = new ArrayList<>() ; ;
+        listeGares = new ArrayList<>() ;
+
+        zoneTerrain.getChildren().removeAll(listeCouleur);
 
     }
 
