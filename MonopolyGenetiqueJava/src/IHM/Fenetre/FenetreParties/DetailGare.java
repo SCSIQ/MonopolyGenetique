@@ -33,6 +33,7 @@ public class DetailGare extends Parent {
         this.possAd = possAd ;
         zoneInfos =new Pane() ;
 
+        //si il s'agit d'une possession du joueur courant
         if(joueurCourant==true) {
             Label nomGare = new Label(poss.getListeGares().get(numBouton).toString().toUpperCase() + "");
 

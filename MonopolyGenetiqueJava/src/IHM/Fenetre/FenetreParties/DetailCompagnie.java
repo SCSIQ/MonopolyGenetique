@@ -26,6 +26,7 @@ public class DetailCompagnie extends Parent {
 
         this.possAd = possAd ;
 
+        //si il s'agit d'une possession du joueur courant
         if(joueurCourant==true) {
             Label nomCompagnie = new Label(poss.getListeCompagnies().get(numBouton).toString().toUpperCase() + "");
 
