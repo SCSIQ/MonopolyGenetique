@@ -3,6 +3,7 @@ package IHM.Fenetre.FenetreParties.ComposantPlateau;
 import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeGares.Gare;
 import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
@@ -67,6 +68,10 @@ public class fenetreCasePossedee extends Parent  {
         }else if(automate.getJoueurCourant().getPion().getCase() instanceof ServicePublic){
             prixAPayer =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getLoyer();
             j =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getProprio();
+        }else if(automate.getJoueurCourant().getPion().getCase() instanceof Gare)
+        {
+            prixAPayer =((Gare)automate.getJoueurCourant().getPion().getCase()).getLoyer();
+            j =((Gare)automate.getJoueurCourant().getPion().getCase()).getProprio();
         }
 
         Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+

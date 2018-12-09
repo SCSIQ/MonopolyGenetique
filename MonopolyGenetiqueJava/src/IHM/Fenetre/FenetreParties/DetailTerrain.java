@@ -72,13 +72,13 @@ public class DetailTerrain extends Parent {
 
         //Contenu du panel
         Label l_infos = new Label("Loyer terrain nu : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyerSansMaison()+" €\n"
-               /* "Loyer avec une maison : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer1Maison()+" €\n"+
-                "Loyer avec deux maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer2Maison()+" €\n"+
-                "Loyer avec trois maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer3Maison()+" €\n"+
-                "Loyer avec quatre maisons : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyer4Maison()+" €\n"+
-                "Loyer avec un hôtel : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getLoyerHotel()+" €\n\n"+
-                "Prix Maison : "+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).getPrixAjoutMaison()+" €\n"+
-                "Prix Hôtel : "); //+((Terrain)automate.getJoueurCourant().getListePropietes().get(numBouton)).get()+" €");*/);
+               + "Loyer avec une maison : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer1Maison()+" €\n"+
+                "Loyer avec deux maisons : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer2Maison()+" €\n"+
+                "Loyer avec trois maisons : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer3Maison()+" €\n"+
+                "Loyer avec quatre maisons : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer4Maison()+" €\n"+
+                "Loyer avec un hôtel : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyerHotel()+" €\n\n"+
+                "Prix Maison : "+((Terrain)poss.getListeTerrains().get(numBouton)).getPrixAjoutMaison()+" €\n"+
+                "Prix Hôtel :" +((Terrain)poss.getListeTerrains().get(numBouton)).getPrixAjoutMaison()+" €");
         l_infos.setLayoutY(10);
         l_infos.setLayoutX(10);
         l_infos.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
@@ -112,9 +112,9 @@ public class DetailTerrain extends Parent {
         l_maison.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
         Button bt_ConstruireMaison = new Button("CONSTRUIRE UNE\n       MAISON");
-        Button bt_ConstruireHotel = new Button("CONSTRUIRE UNE\n        HOTEL");
+        Button bt_ConstruireHotel = new Button("CONSTRUIRE UN\n        HOTEL");
 
-        bt_ConstruireHotel.setLayoutX(250);
+        bt_ConstruireHotel.setLayoutX(300);
         bt_ConstruireHotel.setLayoutY(125);
 
         bt_ConstruireMaison.setLayoutX(25);

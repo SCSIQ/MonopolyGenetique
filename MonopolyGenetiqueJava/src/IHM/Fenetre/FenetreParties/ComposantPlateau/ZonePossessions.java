@@ -1,6 +1,8 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 
+import IHM.Fenetre.FenetreParties.DetailCompagnie;
+import IHM.Fenetre.FenetreParties.DetailGare;
 import IHM.Fenetre.FenetreParties.DetailTerrain;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
@@ -299,6 +301,8 @@ public class ZonePossessions extends Parent {
 
                 Gare gares = (Gare) automate.getJoueurCourant().getListePropietes().get(i);
 
+                this.appuieBoutonGare(bt_detail, i);
+
                 listeGares.add(gares);
                 zoneGare.getChildren().add(gare);
                 zoneGare.getChildren().add(bt_detail);
@@ -333,6 +337,8 @@ public class ZonePossessions extends Parent {
                 boutonsCompagnie.add(bt_detail);
                 listeCompagniesLabel.add(compagnie);
 
+                this.appuieBoutonCompagnie(bt_detail, i);
+
                 zoneCompagnie.getChildren().add(compagnie);
                 zoneCompagnie.getChildren().add(bt_detail);
                 y+=30 ;
@@ -344,18 +350,21 @@ public class ZonePossessions extends Parent {
     public void effacerPossession()
     {
         zoneCompagnie.getChildren().removeAll(listeCompagniesLabel);
-        listeTerrains.removeAll(listeTerrains);
+        listeCompagnies.removeAll(listeCompagnies);
         zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
 
         zoneTerrain.getChildren().removeAll(listeTerrainsLabel);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
+        listeTerrains.removeAll(listeTerrains);
 
         zoneGare.getChildren().removeAll(listeGaresLabel);
         zoneGare.getChildren().removeAll(boutonsGares);
+        listeGares.removeAll(listeGares);
 
     }
 
 
+    //si on appuie sur un boutons Détails sur terrains
     public void appuieBoutonTerrain(Button b, int numBouton)
     {
         b.setOnAction(new EventHandler<ActionEvent>() {
@@ -366,56 +375,33 @@ public class ZonePossessions extends Parent {
         });
     }
 
-    //si on appuie sur un boutons Détails sur terrains
-  /*  public void appuieBoutonTerrain()
-    {
-        for(int i=0; i<boutonsTerrains.size(); i++)
-        {
-            numBouton= i ;
-            boutonsTerrains.get(i).setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    fenetreDetailTerrain(fenetre_actuelle, automate, numBouton);
-                }
-
-            });
-        }
-
-        numBouton=0 ;
-    }*/
 
     //si on appuie sur un boutons Détails sur compagnie
-    public void appuieBoutonCompagnie()
+    public void appuieBoutonCompagnie(Button b, int i )
     {
-        for(Button detail : boutonsCompagnie)
-        {
-            detail.setOnAction(new EventHandler<ActionEvent>() {
+
+            b.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    int numBouton=0 ;
-                    //fenetreDetail(fenetre_actuelle, automate, numBouton);
-                    numBouton++ ;
+                    fenetreDetailCompagnie(fenetre_actuelle, automate, i);
+
                 }
             });
 
-        }
+
     }
 
     //si on appuie sur un boutons Détails sur gare
-    public void appuieBoutonGare()
+    public void appuieBoutonGare(Button b, int i )
     {
-        for(Button detail : boutonsGares)
-        {
-            detail.setOnAction(new EventHandler<ActionEvent>() {
+            b.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    int numBouton=0 ;
-                    //fenetreDetail(fenetre_actuelle, automate, numBouton);
-                    numBouton++ ;
+                    fenetreDetailGare(fenetre_actuelle, automate, i);
                 }
 
             });
-        }
+
     }
 
 
@@ -437,6 +423,46 @@ public class ZonePossessions extends Parent {
         //POSITION DE LA FENETRE
         nouvelle_fenetre_detail.show();
     }
+
+
+    public void fenetreDetailGare(Stage fenetre_actuelle, Automate automate, int numBouton)
+    {
+        // jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_detail = new Stage();
+        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
+
+        Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
+
+        nouvelle_fenetre_detail.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_detail.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_detail.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_detail.show();
+    }
+
+    public void fenetreDetailCompagnie(Stage fenetre_actuelle, Automate automate, int numBouton)
+    {
+        // jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_detail = new Stage();
+        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
+
+        Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
+
+        nouvelle_fenetre_detail.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_detail.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_detail.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_detail.show();
+    }
+
 
 
     private ArrayList<ServicePublic> listeCompagnies ;
