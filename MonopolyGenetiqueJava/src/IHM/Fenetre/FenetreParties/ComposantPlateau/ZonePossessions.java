@@ -37,6 +37,8 @@ public class ZonePossessions extends Parent {
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
 
+    private ZoneAdversaires ad;
+
     private ArrayList<Gare> listeGares ;
     private ArrayList<Terrain> listeTerrains ;
     private ArrayList<Button> boutonsCompagnie ;
@@ -54,12 +56,13 @@ public class ZonePossessions extends Parent {
     private Jeu jeu ;
 
 
-    public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu)
+    public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu, ZoneAdversaires ad)
     {
         this.jeu = jeu ;
         this.automate = automate ;
         this.canvas= canvas ;
         this.fenetre_actuelle = fenetre_actuelle;
+        this.ad = ad ;
 
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
@@ -455,7 +458,7 @@ public class ZonePossessions extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 

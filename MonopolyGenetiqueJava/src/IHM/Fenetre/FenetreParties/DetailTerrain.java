@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.PossessionAdv;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
 
 import Metier.Automate.Automate;
@@ -26,84 +27,165 @@ public class DetailTerrain extends Parent {
     private Pane zoneMaisonHotel ;
     private int numBouton ;
     private ZonePossessions poss ;
+    private PossessionAdv possAd ;
 
-    public DetailTerrain(Automate automate,Stage fenetre_detail ,Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton){
+    public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant){
 
         zoneInfosTerrain = new Pane();
         zoneMaisonHotel= new Pane();
         this.numBouton= numBouton ;
         this.poss = poss ;
+        this.possAd = possAd ;
 
-        Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).toString().toUpperCase()+"");
+        if(joueurCourant==true){
+            Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).toString().toUpperCase()+"");
+
+            /////////TAILLE MIN ET MAX DE LA FENETRE
+            fenetre_detail.setMinHeight(700);
+            fenetre_detail.setMinWidth(500);
+
+            fenetre_detail.setMaxHeight(500);
+            fenetre_detail.setMaxWidth(700);
 
 
-        CouleurMétier s =poss.getListeTerrains().get(numBouton).getCouleur();
-        Color couleurTerrain ;
-        switch(s){
-            case Rose : couleurTerrain = Color.rgb(189,91,163);
-            break ;
-            case Vert: couleurTerrain = Color.rgb(28,137,67);
-            break ;
-            case Orange: couleurTerrain = Color.rgb(234,157,34);
-            break ;
-            case Jaune: couleurTerrain = Color.rgb(239,233,50);
-            break ;
-            case Rouge: couleurTerrain = Color.rgb(224,30,37);
-            break ;
-            case Marron: couleurTerrain = Color.rgb(122,57,149);
-            break ;
-            case BleuFonce:  couleurTerrain = Color.rgb(68,77,160);
-            break;
-            case BleuCiel: couleurTerrain = Color.rgb(9,172,227);
-            break ;
+            nomTerrain.setLayoutY(20);
+            nomTerrain.setLayoutX(80);
+            nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
 
-            default : couleurTerrain=Color.BLACK;
+            CouleurMétier s =poss.getListeTerrains().get(numBouton).getCouleur();
+            Color couleurTerrain ;
+            switch(s){
+                case Rose : couleurTerrain = Color.rgb(189,91,163);
+                    break ;
+                case Vert: couleurTerrain = Color.rgb(28,137,67);
+                    break ;
+                case Orange: couleurTerrain = Color.rgb(234,157,34);
+                    break ;
+                case Jaune: couleurTerrain = Color.rgb(239,233,50);
+                    break ;
+                case Rouge: couleurTerrain = Color.rgb(224,30,37);
+                    break ;
+                case Marron: couleurTerrain = Color.rgb(122,57,149);
+                    break ;
+                case BleuFonce:  couleurTerrain = Color.rgb(68,77,160);
+                    break;
+                case BleuCiel: couleurTerrain = Color.rgb(9,172,227);
+                    break ;
+
+                default : couleurTerrain=Color.BLACK;
+            }
+
+            //ajout Couleur du joueur
+            Rectangle r_couleur = new Rectangle();
+            r_couleur.setHeight(50);
+            r_couleur.setWidth(50);
+            r_couleur.setLayoutX(10);
+            r_couleur.setLayoutY(10);
+            r_couleur.setStroke(Color.BLACK);
+            r_couleur.setStrokeWidth(1);
+            r_couleur.setFill(couleurTerrain);
+
+            GenererPanelInfos(automate, true) ;
+            GenererPanelMaisonHotel(automate);
+
+            Button bt_ok = new Button("revenir au jeu");
+
+            bt_ok.setLayoutX(180);
+            bt_ok.setLayoutY(530);
+
+            bt_ok.setPrefSize(150, 10);
+
+            bt_ok.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    //on rend la bonne opacité à la fenêtre
+                    detruireCanvas(canvas);
+
+                    //on ferme la fenêtre
+                    fenetre_detail.close();
+                }
+            });
+
+            //AJOUT
+            this.getChildren().add(bt_ok);
+            this.getChildren().add(nomTerrain);
+            this.getChildren().add(r_couleur);
+        }else {
+            Label nomTerrain = new Label(possAd.getListeTerrains().get(numBouton).toString().toUpperCase()+"") ;
+
+            /////////TAILLE MIN ET MAX DE LA FENETRE
+            fenetre_detail.setMinHeight(400);
+            fenetre_detail.setMinWidth(500);
+
+            fenetre_detail.setMaxHeight(400);
+            fenetre_detail.setMaxWidth(700);
+
+
+            nomTerrain.setLayoutY(20);
+            nomTerrain.setLayoutX(80);
+            nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+
+            CouleurMétier s =possAd.getListeTerrains().get(numBouton).getCouleur();
+            Color couleurTerrain ;
+            switch(s){
+                case Rose : couleurTerrain = Color.rgb(189,91,163);
+                    break ;
+                case Vert: couleurTerrain = Color.rgb(28,137,67);
+                    break ;
+                case Orange: couleurTerrain = Color.rgb(234,157,34);
+                    break ;
+                case Jaune: couleurTerrain = Color.rgb(239,233,50);
+                    break ;
+                case Rouge: couleurTerrain = Color.rgb(224,30,37);
+                    break ;
+                case Marron: couleurTerrain = Color.rgb(122,57,149);
+                    break ;
+                case BleuFonce:  couleurTerrain = Color.rgb(68,77,160);
+                    break;
+                case BleuCiel: couleurTerrain = Color.rgb(9,172,227);
+                    break ;
+
+                default : couleurTerrain=Color.BLACK;
+            }
+
+            //ajout Couleur du joueur
+            Rectangle r_couleur = new Rectangle();
+            r_couleur.setHeight(50);
+            r_couleur.setWidth(50);
+            r_couleur.setLayoutX(10);
+            r_couleur.setLayoutY(10);
+            r_couleur.setStroke(Color.BLACK);
+            r_couleur.setStrokeWidth(1);
+            r_couleur.setFill(couleurTerrain);
+
+            GenererPanelInfos(automate,false ) ;
+
+            Button bt_ok = new Button("revenir au jeu");
+
+            bt_ok.setLayoutX(180);
+            bt_ok.setLayoutY(300);
+
+            bt_ok.setPrefSize(150, 10);
+
+            bt_ok.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    //on rend la bonne opacité à la fenêtre
+                    detruireCanvas(canvas);
+
+                    //on ferme la fenêtre
+                    fenetre_detail.close();
+                }
+            });
+
+            //AJOUT
+            this.getChildren().add(bt_ok);
+            this.getChildren().add(nomTerrain);
+            this.getChildren().add(r_couleur);
         }
 
-        //ajout Couleur du joueur
-        Rectangle r_couleur = new Rectangle();
-        r_couleur.setHeight(50);
-        r_couleur.setWidth(50);
-        r_couleur.setLayoutX(10);
-        r_couleur.setLayoutY(10);
-        r_couleur.setStroke(Color.BLACK);
-        r_couleur.setStrokeWidth(1);
-        r_couleur.setFill(couleurTerrain);
 
 
-
-        nomTerrain.setLayoutY(20);
-        nomTerrain.setLayoutX(80);
-        nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
-
-
-        GenererPanelInfos(automate ) ;
-        GenererPanelMaisonHotel(automate);
-
-        /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_detail.setMinHeight(700);
-        fenetre_detail.setMinWidth(500);
-
-        fenetre_detail.setMaxHeight(500);
-        fenetre_detail.setMaxWidth(700);
-
-        Button bt_ok = new Button("revenir au jeu");
-
-        bt_ok.setLayoutX(180);
-        bt_ok.setLayoutY(530);
-
-        bt_ok.setPrefSize(150, 10);
-
-        bt_ok.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                //on rend la bonne opacité à la fenêtre
-                detruireCanvas(canvas);
-
-                //on ferme la fenêtre
-                fenetre_detail.close();
-            }
-        });
 
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
         fenetre_detail.setOnCloseRequest(new EventHandler<WindowEvent>() {
@@ -113,13 +195,10 @@ public class DetailTerrain extends Parent {
             }
         });
 
-        //AJOUT
-        this.getChildren().add(nomTerrain);
-        this.getChildren().add(bt_ok);
-        this.getChildren().add(r_couleur);
+
     }
 
-    public void GenererPanelInfos(Automate automate){
+    public void GenererPanelInfos(Automate automate, boolean joueurCourant){
 
         zoneInfosTerrain.setLayoutX(10);
         zoneInfosTerrain.setLayoutY(80);
@@ -136,23 +215,45 @@ public class DetailTerrain extends Parent {
         rect_infos.setFill(Color.TRANSPARENT);
         rect_infos.setStroke(Color.BLACK);
 
-        //Contenu du panel
-        Label l_infos = new Label("Loyer terrain nu : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyerSansMaison()+" €\n"
-               + "Loyer avec une maison : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer1Maison()+" €\n"+
-                "Loyer avec deux maisons : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer2Maison()+" €\n"+
-                "Loyer avec trois maisons : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer3Maison()+" €\n"+
-                "Loyer avec quatre maisons : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyer4Maison()+" €\n"+
-                "Loyer avec un hôtel : "+((Terrain)poss.getListeTerrains().get(numBouton)).getLoyerHotel()+" €\n\n"+
-                "Prix Maison : "+((Terrain)poss.getListeTerrains().get(numBouton)).getPrixAjoutMaison()+" €\n"+
-                "Prix Hôtel :" +((Terrain)poss.getListeTerrains().get(numBouton)).getPrixAjoutMaison()+" €");
-        l_infos.setLayoutY(10);
-        l_infos.setLayoutX(10);
-        l_infos.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
+        if(joueurCourant==true) {
 
-        zoneInfosTerrain.getChildren().add(rect_infos);
-        zoneInfosTerrain.getChildren().add(l_infos);
 
-        this.getChildren().add(zoneInfosTerrain);
+            //Contenu du panel
+            Label l_infos = new Label("Loyer terrain nu : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyerSansMaison() + " €\n"
+                    + "Loyer avec une maison : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyer1Maison() + " €\n" +
+                    "Loyer avec deux maisons : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyer2Maison() + " €\n" +
+                    "Loyer avec trois maisons : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyer3Maison() + " €\n" +
+                    "Loyer avec quatre maisons : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyer4Maison() + " €\n" +
+                    "Loyer avec un hôtel : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyerHotel() + " €\n\n" +
+                    "Prix Maison : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getPrixAjoutMaison() + " €\n" +
+                    "Prix Hôtel :" + ((Terrain) poss.getListeTerrains().get(numBouton)).getPrixAjoutMaison() + " €");
+            l_infos.setLayoutY(10);
+            l_infos.setLayoutX(10);
+            l_infos.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
+
+            zoneInfosTerrain.getChildren().add(rect_infos);
+            zoneInfosTerrain.getChildren().add(l_infos);
+
+            this.getChildren().add(zoneInfosTerrain);
+        } else {
+            //Contenu du panel
+            Label l_infos = new Label("Loyer terrain nu : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyerSansMaison() + " €\n"
+                    + "Loyer avec une maison : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer1Maison() + " €\n" +
+                    "Loyer avec deux maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer2Maison() + " €\n" +
+                    "Loyer avec trois maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer3Maison() + " €\n" +
+                    "Loyer avec quatre maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer4Maison() + " €\n" +
+                    "Loyer avec un hôtel : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyerHotel() + " €\n\n" +
+                    "Prix Maison : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getPrixAjoutMaison() + " €\n" +
+                    "Prix Hôtel :" + ((Terrain) possAd.getListeTerrains().get(numBouton)).getPrixAjoutMaison() + " €");
+            l_infos.setLayoutY(10);
+            l_infos.setLayoutX(10);
+            l_infos.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
+
+            zoneInfosTerrain.getChildren().add(rect_infos);
+            zoneInfosTerrain.getChildren().add(l_infos);
+
+            this.getChildren().add(zoneInfosTerrain);
+        }
     }
 
     public void GenererPanelMaisonHotel(Automate automate){

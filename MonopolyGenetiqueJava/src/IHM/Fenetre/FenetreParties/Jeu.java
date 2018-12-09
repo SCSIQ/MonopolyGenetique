@@ -26,6 +26,12 @@ public class Jeu extends Parent {
     private Canvas canvas = new Canvas(1275,1275);
     private Automate automate;
 
+    public ZonePossessions getPoss() {
+        return poss;
+    }
+
+    private ZonePossessions poss ;
+
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
         this.automate = automate;
@@ -36,13 +42,7 @@ public class Jeu extends Parent {
         zoneJoueur.genereInfosJoueur(automate);
         this.getChildren().add(zoneJoueur);
 
-        //APPEL ZONE POSSESSION
-        ZonePossessions poss = new ZonePossessions(automate, nouvelle_fenetre, canvas, this);
-        poss.RectangleCartePrison();
-        poss.RectangleCompagnies(automate);
-        poss.RectangleGare(automate);
-        poss.RectangleTerrain(automate);
-        this.getChildren().add(poss);
+
 
 
         //APPEL PLATEAU JEU
@@ -53,9 +53,17 @@ public class Jeu extends Parent {
 
         //APPEL ZONE ADVERSAIRE
 
-        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this, poss);
+        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this);
         this.getChildren().add(zoneAd);
         zoneAd.genererAdversaire(automate, nouvelle_fenetre);
+
+        //APPEL ZONE POSSESSION
+        poss = new ZonePossessions(automate, nouvelle_fenetre, canvas, this, zoneAd);
+        poss.RectangleCartePrison();
+        poss.RectangleCompagnies(automate);
+        poss.RectangleGare(automate);
+        poss.RectangleTerrain(automate);
+        this.getChildren().add(poss);
 
 /////////////PION
         Pion pion = new Pion(automate, pl);

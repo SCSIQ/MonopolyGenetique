@@ -27,13 +27,20 @@ public class ZoneAdversaires extends Parent {
     private Pane infoAdv3;
     private Pane infoAdv4;
     private Jeu jeu;
-    private ZonePossessions poss ;
 
-    public ZoneAdversaires(Stage primaryStage, Stage fenetre_actuelle, Automate automate, Canvas canvas, Jeu jeu, ZonePossessions poss)
+
+    private PossessionAdv possAd ;
+
+    public PossessionAdv getPossAd() {
+        return possAd;
+    }
+
+
+
+    public ZoneAdversaires(Stage primaryStage, Stage fenetre_actuelle, Automate automate, Canvas canvas, Jeu jeu)
     {
         this.canvas=canvas;
         this.jeu=jeu;
-        this.poss = poss ;
 
         //Ajout label adversaire
         Label adversaire = new Label("ADVERSAIRES");
@@ -375,8 +382,8 @@ public class ZoneAdversaires extends Parent {
 
         Stage nouvelle_fenetre_possession_Adv = new Stage();
 
-        PossessionAdv possAdv = new PossessionAdv(nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i, jeu, poss);
-        Scene nouvelle_scene = new Scene(possAdv, 620,610);
+        possAd = new PossessionAdv(nouvelle_fenetre_possession_Adv, fenetre_actuelle, canvas, automate, i, jeu);
+        Scene nouvelle_scene = new Scene(possAd, 620,610);
 
         nouvelle_fenetre_possession_Adv.setScene(nouvelle_scene);
 

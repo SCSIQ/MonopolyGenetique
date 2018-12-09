@@ -81,15 +81,13 @@ public class PossessionAdv extends Parent {
     private ArrayList<Label> listeTerrainsLabel ;
     private ArrayList<Label> listeCompagniesLabel ;
     private ArrayList<Rectangle> listeCouleur ;
-    private ZonePossessions poss ;
-    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu, ZonePossessions poss)
+    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu)
     {
         this.automate=automate;
         this.canvas=canvas;
         this.jeu=jeu;
         this.fenetre_actuelle=fenetre_actuelle;
         this.numJoueur=i;
-        this.poss = poss ;
 
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
@@ -500,7 +498,7 @@ public class PossessionAdv extends Parent {
       //  jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, poss, numBouton);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), numBouton, this, false);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
@@ -531,7 +529,7 @@ public class PossessionAdv extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, poss, i);
+        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), i);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
@@ -550,7 +548,7 @@ public class PossessionAdv extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, poss, i);
+        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), i);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
