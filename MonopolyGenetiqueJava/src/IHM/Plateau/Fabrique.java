@@ -54,7 +54,7 @@ public class Fabrique {
             break ;
             case "Impot sur le Revenu": c = new Impot(caseMetier);
             break ;
-            case "Gare de Montparmasse": c = new GareMontparnasse(caseMetier);
+            case "Gare de Montparnasse": c = new GareMontparnasse(caseMetier);
             break;
             case "Rue de Vaugirard" : c = new CaseVaugirard(caseMetier);
             break;

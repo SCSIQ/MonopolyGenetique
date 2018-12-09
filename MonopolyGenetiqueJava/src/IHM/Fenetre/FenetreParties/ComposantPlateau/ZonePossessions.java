@@ -427,7 +427,7 @@ public class ZonePossessions extends Parent {
 
     public void fenetreDetailGare(Stage fenetre_actuelle, Automate automate, int numBouton)
     {
-        // jeu.fenetreNoire();
+        jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
         DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
@@ -446,7 +446,7 @@ public class ZonePossessions extends Parent {
 
     public void fenetreDetailCompagnie(Stage fenetre_actuelle, Automate automate, int numBouton)
     {
-        // jeu.fenetreNoire();
+        jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
         DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
