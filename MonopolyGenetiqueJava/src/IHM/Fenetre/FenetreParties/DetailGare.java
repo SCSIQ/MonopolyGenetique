@@ -15,6 +15,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class DetailGare extends Parent {
 
@@ -62,6 +63,15 @@ public class DetailGare extends Parent {
 
         fenetre_detail.setMaxHeight(600);
         fenetre_detail.setMaxWidth(500);
+
+
+        ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
+        fenetre_detail.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                event.consume();
+            }
+        });
 
         this.getChildren().add(bt_ok);
         this.getChildren().add(nomGare);
