@@ -1,5 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.PossessionAdv;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
@@ -23,48 +24,91 @@ public class DetailGare extends Parent {
     private Pane zoneInfos ;
     private int numBouton ;
     private ZonePossessions poss ;
+    private PossessionAdv possAd ;
 
-    public DetailGare(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton){
+    public DetailGare(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant){
 
         this.numBouton = numBouton ;
         this.poss = poss ;
+        this.possAd = possAd ;
         zoneInfos =new Pane() ;
 
+        if(joueurCourant==true) {
+            Label nomGare = new Label(poss.getListeGares().get(numBouton).toString().toUpperCase() + "");
 
-        Label nomGare = new Label(poss.getListeGares().get(numBouton).toString().toUpperCase()+"");
+            nomGare.setLayoutY(20);
+            nomGare.setLayoutX(80);
+            nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
 
-        nomGare.setLayoutY(20);
-        nomGare.setLayoutX(80);
-        nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            gestion(automate, true);
 
-        gestion(automate);
+            Button bt_ok = new Button("revenir au jeu");
 
-        Button bt_ok = new Button("revenir au jeu");
+            bt_ok.setLayoutX(180);
+            bt_ok.setLayoutY(500);
 
-        bt_ok.setLayoutX(180);
-        bt_ok.setLayoutY(500);
+            bt_ok.setPrefSize(150, 10);
 
-        bt_ok.setPrefSize(150, 10);
+            bt_ok.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    //on rend la bonne opacité à la fenêtre
+                    detruireCanvas(canvas);
 
-        bt_ok.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                //on rend la bonne opacité à la fenêtre
-                detruireCanvas(canvas);
+                    //on ferme la fenêtre
+                    fenetre_detail.close();
+                }
+            });
 
-                //on ferme la fenêtre
-                fenetre_detail.close();
-            }
-        });
+            /////////TAILLE MIN ET MAX DE LA FENETRE
+            fenetre_detail.setMinHeight(600);
+            fenetre_detail.setMinWidth(500);
 
-        /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_detail.setMinHeight(600);
-        fenetre_detail.setMinWidth(500);
+            fenetre_detail.setMaxHeight(600);
+            fenetre_detail.setMaxWidth(500);
 
-        fenetre_detail.setMaxHeight(600);
-        fenetre_detail.setMaxWidth(500);
+            //AJOUT
+            this.getChildren().add(bt_ok);
+            this.getChildren().add(nomGare);
 
+        } else {
+            Label nomGare = new Label(possAd.getListeGares().get(numBouton).toString().toUpperCase() + "");
 
+            nomGare.setLayoutY(20);
+            nomGare.setLayoutX(80);
+            nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+
+            gestion(automate, false);
+
+            Button bt_ok = new Button("revenir au jeu");
+
+            bt_ok.setLayoutX(180);
+            bt_ok.setLayoutY(500);
+
+            bt_ok.setPrefSize(150, 10);
+
+            bt_ok.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    //on rend la bonne opacité à la fenêtre
+                    detruireCanvas(canvas);
+
+                    //on ferme la fenêtre
+                    fenetre_detail.close();
+                }
+            });
+
+            /////////TAILLE MIN ET MAX DE LA FENETRE
+            fenetre_detail.setMinHeight(600);
+            fenetre_detail.setMinWidth(500);
+
+            fenetre_detail.setMaxHeight(600);
+            fenetre_detail.setMaxWidth(500);
+
+            //AJOUT
+            this.getChildren().add(bt_ok);
+            this.getChildren().add(nomGare);
+        }
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
         fenetre_detail.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -73,22 +117,37 @@ public class DetailGare extends Parent {
             }
         });
 
-        this.getChildren().add(bt_ok);
-        this.getChildren().add(nomGare);
+
 
     }
 
-    public void gestion(Automate automate){
+    public void gestion(Automate automate, boolean joueurCourant){
         zoneInfos.setLayoutX(10);
         zoneInfos.setLayoutY(130);
 
-        Label gare = new Label("Votre loyer avec une gare : "+poss.getListeGares().get(numBouton).getLoyer()+"\n €"+
-                                    "Si vous possédez 2 gares : \n" +
-                                    "Si vous possèdez 3 gares : \n"+
-                                    "Si vous avez les 4 gares :  ");
+        if(joueurCourant==true){
+            Label gare = new Label("Votre loyer avec une gare : "+poss.getListeGares().get(numBouton).getLoyer()+" €\n"+
+                    "Si vous possédez 2 gares : \n" +
+                    "Si vous possèdez 3 gares : \n"+
+                    "Si vous avez les 4 gares :  ");
 
 
-        gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
+            gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
+
+            zoneInfos.getChildren().add(gare);
+        }else {
+            Label gare = new Label("Votre loyer avec une gare : "+possAd.getListeGares().get(numBouton).getLoyer()+" €\n"+
+                    "Si vous possédez 2 gares : \n" +
+                    "Si vous possèdez 3 gares : \n"+
+                    "Si vous avez les 4 gares :  ");
+
+
+            gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
+
+            zoneInfos.getChildren().add(gare);
+
+        }
+
 
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_gare = new Rectangle();
@@ -100,7 +159,6 @@ public class DetailGare extends Parent {
         rect_gare.setY(0);
 
         zoneInfos.getChildren().add(rect_gare);
-        zoneInfos.getChildren().add(gare);
         this.getChildren().add(zoneInfos);
     }
 

@@ -478,7 +478,7 @@ public class ZonePossessions extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
+        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
@@ -497,7 +497,7 @@ public class ZonePossessions extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton);
+        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 

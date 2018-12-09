@@ -388,7 +388,7 @@ public class PossessionAdv extends Parent {
         for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++)
         {
             if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Gare){
-                Label gare = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
+                Label gare = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 gare.setLayoutX(10);
                 gare.setLayoutY(30+y);
@@ -429,7 +429,7 @@ public class PossessionAdv extends Parent {
             if (automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof ServicePublic) {
                 {
 
-                    Label compagnie = new Label("" + automate.getJoueurCourant().getListePropietes().get(i).toString() + "\n");
+                    Label compagnie = new Label("" + automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString() + "\n");
                     compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                     ServicePublic compa = (ServicePublic) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
@@ -526,10 +526,10 @@ public class PossessionAdv extends Parent {
 
     private void fenetreDetailGare(Stage fenetre_actuelle, Automate automate, int i)
     {
-        jeu.fenetreNoire();
+       // jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), i);
+        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), i, this, false);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
@@ -545,10 +545,10 @@ public class PossessionAdv extends Parent {
 
     private void fenetreDetailCompagnie(Stage fenetre_actuelle, Automate automate, int i)
     {
-        jeu.fenetreNoire();
+       // jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), i);
+        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), i, this, false);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
