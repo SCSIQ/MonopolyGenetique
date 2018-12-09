@@ -46,14 +46,13 @@ public class ZonePossessions extends Parent {
     private ArrayList<Label> listeGaresLabel ;
     private ArrayList<Label> listeTerrainsLabel ;
     private ArrayList<Label> listeCompagniesLabel ;
-    private ArrayList<Rectangle> listeCouleur ; 
+    private ArrayList<Rectangle> listeCouleur ;
 
     private Stage fenetre_actuelle;
     private Canvas canvas;
     private Automate automate;
     private Jeu jeu ;
 
-   // private int numBouton=0;
 
     public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu)
     {
@@ -259,7 +258,7 @@ public class ZonePossessions extends Parent {
                 Label terrain = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 terrain.setLayoutX(50);
-                terrain.setLayoutY(30+y);
+                terrain.setLayoutY(40+y);
                 Terrain ter = (Terrain) automate.getJoueurCourant().getListePropietes().get(i);
 
 

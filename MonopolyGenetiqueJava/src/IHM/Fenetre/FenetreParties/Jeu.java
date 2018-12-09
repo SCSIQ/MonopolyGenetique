@@ -53,7 +53,7 @@ public class Jeu extends Parent {
 
         //APPEL ZONE ADVERSAIRE
 
-        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this);
+        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this, poss);
         this.getChildren().add(zoneAd);
         zoneAd.genererAdversaire(automate, nouvelle_fenetre);
 

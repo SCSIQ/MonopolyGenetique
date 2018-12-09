@@ -1,10 +1,13 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Fenetre.FenetreParties.DetailCompagnie;
+import IHM.Fenetre.FenetreParties.DetailGare;
 import IHM.Fenetre.FenetreParties.DetailTerrain;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare;
 import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
+import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -26,6 +29,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import javax.xml.ws.Service;
 import java.util.ArrayList;
 
 
@@ -41,17 +45,17 @@ public class PossessionAdv extends Parent {
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
 
-    private ArrayList<Label> listeCompagnies ;
+    private ArrayList<ServicePublic> listeCompagnies ;
 
-    public ArrayList<Label> getListeCompagnies() {
+    public ArrayList<ServicePublic> getListeCompagnies() {
         return listeCompagnies;
     }
 
-    public ArrayList<Label> getListeGares() {
+    public ArrayList<Gare> getListeGares() {
         return listeGares;
     }
 
-    public ArrayList<Label> getListeTerrains() {
+    public ArrayList<Terrain> getListeTerrains() {
         return listeTerrains;
     }
 
@@ -67,20 +71,25 @@ public class PossessionAdv extends Parent {
         return boutonsGares;
     }
 
-    private ArrayList<Label> listeGares ;
-    private ArrayList<Label> listeTerrains ;
+    private ArrayList<Gare> listeGares ;
+    private ArrayList<Terrain> listeTerrains ;
     private ArrayList<Button> boutonsCompagnie ;
     private ArrayList<Button> boutonsTerrains ;
     private ArrayList<Button> boutonsGares ;
 
-
-    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu)
+    private ArrayList<Label> listeGaresLabel ;
+    private ArrayList<Label> listeTerrainsLabel ;
+    private ArrayList<Label> listeCompagniesLabel ;
+    private ArrayList<Rectangle> listeCouleur ;
+    private ZonePossessions poss ;
+    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu, ZonePossessions poss)
     {
         this.automate=automate;
         this.canvas=canvas;
         this.jeu=jeu;
         this.fenetre_actuelle=fenetre_actuelle;
         this.numJoueur=i;
+        this.poss = poss ;
 
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
@@ -92,6 +101,13 @@ public class PossessionAdv extends Parent {
         boutonsCompagnie = new ArrayList<>();
         boutonsGares = new ArrayList<>();
         boutonsTerrains = new ArrayList<>();
+
+        boutonsTerrains = new ArrayList<>();
+        listeCompagniesLabel = new ArrayList<>();
+        listeTerrainsLabel = new ArrayList<>();
+        listeGaresLabel = new ArrayList<>();
+
+        listeCouleur = new ArrayList<>() ;
 
         Text t_adv1 = new Text("Possession de "+automate.getListeJoueurs().get(i).getNom());
         t_adv1.setScaleX(2);
@@ -281,43 +297,100 @@ public class PossessionAdv extends Parent {
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////AFFICHAGE DES POSSESSION
-    public void afficherTerrain(Automate automate)
-    {
-        int y = 0 ;
+    public void afficherTerrain(Automate automate) {
+        int y = 0;
 
-        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++)
-        {
-            if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Terrain){
-                Label terrain = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
+        for (int i = 0; i < automate.getListeJoueurs().get(numJoueur).getListePropietes().size(); i++) {
+            if (automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Terrain) {
+                Label terrain = new Label("" + automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString() + "\n");
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-                terrain.setLayoutX(10);
-                terrain.setLayoutY(30+y);
+                terrain.setLayoutX(50);
+                terrain.setLayoutY(40 + y);
+
+                CouleurMétier s = ((Terrain) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i)).getCouleur();
+                Color couleurTerrain;
+                switch (s) {
+                    case Rose:
+                        couleurTerrain = Color.rgb(189, 91, 163);
+                        break;
+                    case Vert:
+                        couleurTerrain = Color.rgb(28, 137, 67);
+                        break;
+                    case Orange:
+                        couleurTerrain = Color.rgb(234, 157, 34);
+                        break;
+                    case Jaune:
+                        couleurTerrain = Color.rgb(239, 233, 50);
+                        break;
+                    case Rouge:
+                        couleurTerrain = Color.rgb(224, 30, 37);
+                        break;
+                    case Marron:
+                        couleurTerrain = Color.rgb(122, 57, 149);
+                        break;
+                    case BleuFonce:
+                        couleurTerrain = Color.rgb(68, 77, 160);
+                        break;
+                    case BleuCiel:
+                        couleurTerrain = Color.rgb(9, 172, 227);
+                        break;
+
+                    default:
+                        couleurTerrain = Color.BLACK;
+                }
+
+                //ajout Couleur du joueur
+                Rectangle r_couleur = new Rectangle();
+                r_couleur.setHeight(30);
+                r_couleur.setWidth(30);
+                r_couleur.setLayoutX(10);
+                r_couleur.setLayoutY(30 + y);
+                r_couleur.setStroke(Color.BLACK);
+                r_couleur.setStrokeWidth(1);
+                r_couleur.setFill(couleurTerrain);
+                zoneTerrain.getChildren().add(r_couleur);
 
                 Button bt_detail = new Button("DETAILS");
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
                 bt_detail.setLayoutX(200);
-                bt_detail.setLayoutY(30+y);
+                bt_detail.setLayoutY(30 + y);
+
+                Terrain ter = (Terrain) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
                 boutonsTerrains.add(bt_detail);
+                listeTerrainsLabel.add(terrain);
+                listeCouleur.add(r_couleur);
 
-                listeTerrains.add(terrain);
+                this.appuieBoutonTerrain(bt_detail, i);
+
+                listeTerrains.add(ter);
+
                 zoneTerrain.getChildren().add(terrain);
                 zoneTerrain.getChildren().add(bt_detail);
-                y+=30 ;
+                y += 30;
             }
 
 
         }
     }
 
+    private void appuieBoutonTerrain(Button bt_detail, int i) {
+        bt_detail.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                fenetreDetailTerrain(fenetre_actuelle, automate, i);
+            }
+        });
+    }
+
     public void afficherGare(Automate automate)
     {
         int y = 0 ;
-        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size(); i++)
+        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++)
         {
             if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Gare){
-                Label gare = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
+                Label gare = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 gare.setLayoutX(10);
                 gare.setLayoutY(30+y);
@@ -329,63 +402,166 @@ public class PossessionAdv extends Parent {
                 bt_detail.setLayoutY(30+y);
 
                 boutonsGares.add(bt_detail);
+                listeGaresLabel.add(gare);
 
-                listeGares.add(gare);
-                zoneGare.getChildren().add(gare);
+                Gare gares = (Gare) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
+
+                this.appuieBoutonGare(bt_detail, i);
+
+
                 zoneGare.getChildren().add(bt_detail);
+                listeGares.add(gares);
+                zoneGare.getChildren().add(gare);
                 y+=30 ;
             }
 
 
+
         }
     }
+
+
+
 
     public void afficherCompagnie(Automate automate)
     {
 
         int y = 0 ;
-        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size(); i++)
-        {
-            if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof ServicePublic){
+        for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++) {
+            if (automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof ServicePublic) {
+                {
 
-                Label compagnie = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
-                compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-                listeCompagnies.add(compagnie);
-                compagnie.setLayoutX(10);
-                compagnie.setLayoutY(30+y);
+                    Label compagnie = new Label("" + automate.getJoueurCourant().getListePropietes().get(i).toString() + "\n");
+                    compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+                    ServicePublic compa = (ServicePublic) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
-                Button bt_detail = new Button("DETAILS") ;
-                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
-                bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(200);
-                bt_detail.setLayoutY(30+y);
+                    compagnie.setLayoutX(10);
+                    compagnie.setLayoutY(30 + y);
 
-                boutonsCompagnie.add(bt_detail);
+                    Button bt_detail = new Button("DETAILS");
+                    bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                    bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+                    bt_detail.setLayoutX(200);
+                    bt_detail.setLayoutY(30 + y);
 
-                zoneCompagnie.getChildren().add(compagnie);
-                zoneCompagnie.getChildren().add(bt_detail);
-                y+=30 ;
+                    boutonsCompagnie.add(bt_detail);
+                    listeCompagniesLabel.add(compagnie);
+
+                    this.appuieBoutonCompagnie(bt_detail, i);
+                    listeCompagnies.add(compa);
+
+                    zoneCompagnie.getChildren().add(compagnie);
+                    zoneCompagnie.getChildren().add(bt_detail);
+                    y += 30;
+                }
+
             }
 
         }
     }
 
+    public void appuieBoutonCompagnie(Button bt_detail, int i) {
+        bt_detail.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                fenetreDetailCompagnie(fenetre_actuelle, automate, i);
+
+            }
+        });
+    }
+
+
+
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////EFFACEMENT DE POSSESSION
     public void effacerPossession()
     {
-        zoneCompagnie.getChildren().removeAll(listeCompagnies);
+        zoneCompagnie.getChildren().removeAll(listeCompagniesLabel);
+        listeCompagnies= null ;
+        listeCompagnies= new ArrayList<>() ;
         zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
 
-        zoneTerrain.getChildren().removeAll(listeTerrains);
+        zoneTerrain.getChildren().removeAll(listeTerrainsLabel);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
+        listeTerrains= null ;
+        listeTerrains= new ArrayList<>() ; ;
 
-        zoneGare.getChildren().removeAll(listeGares);
+        zoneGare.getChildren().removeAll(listeGaresLabel);
         zoneGare.getChildren().removeAll(boutonsGares);
+        listeGares = null ;
+        listeGares = new ArrayList<>() ;
+
+        zoneTerrain.getChildren().removeAll(listeCouleur);
 
     }
 
     public void fenetreDetailTerrain(Stage fenetre_actuelle, Automate automate, int numBouton)
     {
+      //  jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_detail = new Stage();
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, poss, numBouton);
+
+        Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
+
+        nouvelle_fenetre_detail.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_detail.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_detail.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_detail.show();
+    }
+
+    private void appuieBoutonGare(Button bt_detail, int i)
+    {
+        bt_detail.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                fenetreDetailGare(fenetre_actuelle, automate, i);
+            }
+
+        });
+
+    }
+
+    private void fenetreDetailGare(Stage fenetre_actuelle, Automate automate, int i)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_detail = new Stage();
+        DetailGare fenetreDetail = new DetailGare(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, poss, i);
+
+        Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
+
+        nouvelle_fenetre_detail.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_detail.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_detail.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_detail.show();
+    }
+
+    private void fenetreDetailCompagnie(Stage fenetre_actuelle, Automate automate, int i)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_detail = new Stage();
+        DetailCompagnie fenetreDetail = new DetailCompagnie(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, poss, i);
+
+        Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
+
+        nouvelle_fenetre_detail.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_detail.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_detail.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_detail.show();
 
     }
 
