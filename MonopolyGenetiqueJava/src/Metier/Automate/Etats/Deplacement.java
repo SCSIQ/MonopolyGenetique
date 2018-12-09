@@ -24,8 +24,8 @@ public class Deplacement extends Etat{
         Joueur j = super.getListeJoueurs().get(0);
         //System.out.println("    avant déplacement : "+j.toString());
 
-        //int resDes = j.getResLanceDes();
-        int resDes = 5; //POUR IHM
+        int resDes = j.getResLanceDes();
+        //int resDes = 5; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
