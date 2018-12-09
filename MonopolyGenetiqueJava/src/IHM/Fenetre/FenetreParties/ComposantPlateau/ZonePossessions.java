@@ -33,42 +33,23 @@ public class ZonePossessions extends Parent {
     private Pane zoneTerrain ;
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
-    private ArrayList<Label> listeCompagnies ;
 
-    public ArrayList<Label> getListeCompagnies() {
-        return listeCompagnies;
-    }
-
-    public ArrayList<Label> getListeGares() {
-        return listeGares;
-    }
-
-    public ArrayList<Label> getListeTerrains() {
-        return listeTerrains;
-    }
-
-    public ArrayList<Button> getBoutonsCompagnie() {
-        return boutonsCompagnie;
-    }
-
-    public ArrayList<Button> getBoutonsTerrains() {
-        return boutonsTerrains;
-    }
-
-    public ArrayList<Button> getBoutonsGares() {
-        return boutonsGares;
-    }
-
-    private ArrayList<Label> listeGares ;
-    private ArrayList<Label> listeTerrains ;
+    private ArrayList<Gare> listeGares ;
+    private ArrayList<Terrain> listeTerrains ;
     private ArrayList<Button> boutonsCompagnie ;
     private ArrayList<Button> boutonsTerrains ;
     private ArrayList<Button> boutonsGares ;
+
+    private ArrayList<Label> listeGaresLabel ;
+    private ArrayList<Label> listeTerrainsLabel ;
+    private ArrayList<Label> listeCompagniesLabel ;
 
     private Stage fenetre_actuelle;
     private Canvas canvas;
     private Automate automate;
     private Jeu jeu ;
+
+   // private int numBouton=0;
 
     public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu)
     {
@@ -86,6 +67,9 @@ public class ZonePossessions extends Parent {
         boutonsCompagnie = new ArrayList<>();
         boutonsGares = new ArrayList<>();
         boutonsTerrains = new ArrayList<>();
+        listeCompagniesLabel = new ArrayList<>();
+        listeTerrainsLabel = new ArrayList<>();
+        listeGaresLabel = new ArrayList<>();
 
         //Ajout d'un label "POSSESSION"
         Label textPossession = new Label("VOS POSSESSIONS");
@@ -270,6 +254,7 @@ public class ZonePossessions extends Parent {
                 terrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 terrain.setLayoutX(10);
                 terrain.setLayoutY(30+y);
+                Terrain ter = (Terrain) automate.getJoueurCourant().getListePropietes().get(i);
 
                 Button bt_detail = new Button("DETAILS");
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
@@ -278,8 +263,11 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutY(30+y);
 
                 boutonsTerrains.add(bt_detail);
+                listeTerrainsLabel.add(terrain);
 
-                listeTerrains.add(terrain);
+                this.appuieBoutonTerrain(bt_detail, i);
+
+                listeTerrains.add(ter);
                 zoneTerrain.getChildren().add(terrain);
                 zoneTerrain.getChildren().add(bt_detail);
                 y+=30 ;
@@ -307,8 +295,11 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutY(30+y);
 
                 boutonsGares.add(bt_detail);
+                listeGaresLabel.add(gare);
 
-                listeGares.add(gare);
+                Gare gares = (Gare) automate.getJoueurCourant().getListePropietes().get(i);
+
+                listeGares.add(gares);
                 zoneGare.getChildren().add(gare);
                 zoneGare.getChildren().add(bt_detail);
                 y+=30 ;
@@ -328,7 +319,8 @@ public class ZonePossessions extends Parent {
 
                 Label compagnie = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-                listeCompagnies.add(compagnie);
+                ServicePublic compa = (ServicePublic) automate.getJoueurCourant().getListePropietes().get(i);
+                listeCompagnies.add(compa);
                 compagnie.setLayoutX(10);
                 compagnie.setLayoutY(30+y);
 
@@ -339,6 +331,7 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutY(30+y);
 
                 boutonsCompagnie.add(bt_detail);
+                listeCompagniesLabel.add(compagnie);
 
                 zoneCompagnie.getChildren().add(compagnie);
                 zoneCompagnie.getChildren().add(bt_detail);
@@ -350,33 +343,46 @@ public class ZonePossessions extends Parent {
 
     public void effacerPossession()
     {
-        zoneCompagnie.getChildren().removeAll(listeCompagnies);
+        zoneCompagnie.getChildren().removeAll(listeCompagniesLabel);
+        listeTerrains.removeAll(listeTerrains);
         zoneCompagnie.getChildren().removeAll(boutonsCompagnie);
 
-        zoneTerrain.getChildren().removeAll(listeTerrains);
+        zoneTerrain.getChildren().removeAll(listeTerrainsLabel);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
 
-        zoneGare.getChildren().removeAll(listeGares);
+        zoneGare.getChildren().removeAll(listeGaresLabel);
         zoneGare.getChildren().removeAll(boutonsGares);
 
     }
 
+
+    public void appuieBoutonTerrain(Button b, int numBouton)
+    {
+        b.setOnAction(new EventHandler<ActionEvent>() {
+           @Override
+           public void handle(ActionEvent event) {
+               fenetreDetailTerrain(fenetre_actuelle, automate, numBouton);
+           }
+        });
+    }
+
     //si on appuie sur un boutons Détails sur terrains
-    public void appuieBoutonTerrain()
+  /*  public void appuieBoutonTerrain()
     {
         for(int i=0; i<boutonsTerrains.size(); i++)
         {
+            numBouton= i ;
             boutonsTerrains.get(i).setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    int numBouton=0 ;
                     fenetreDetailTerrain(fenetre_actuelle, automate, numBouton);
-                    numBouton++ ;
                 }
 
             });
         }
-    }
+
+        numBouton=0 ;
+    }*/
 
     //si on appuie sur un boutons Détails sur compagnie
     public void appuieBoutonCompagnie()
@@ -430,5 +436,32 @@ public class ZonePossessions extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_detail.show();
+    }
+
+
+    private ArrayList<ServicePublic> listeCompagnies ;
+
+    public ArrayList<ServicePublic> getListeCompagnies() {
+        return listeCompagnies;
+    }
+
+    public ArrayList<Gare> getListeGares() {
+        return listeGares;
+    }
+
+    public ArrayList<Terrain> getListeTerrains() {
+        return listeTerrains;
+    }
+
+    public ArrayList<Button> getBoutonsCompagnie() {
+        return boutonsCompagnie;
+    }
+
+    public ArrayList<Button> getBoutonsTerrains() {
+        return boutonsTerrains;
+    }
+
+    public ArrayList<Button> getBoutonsGares() {
+        return boutonsGares;
     }
 }

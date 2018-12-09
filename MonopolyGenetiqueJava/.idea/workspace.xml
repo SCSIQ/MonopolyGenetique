@@ -79,88 +79,80 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1601727761">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="764" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="764" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose2.java">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/DetailTerrain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="185">
+              <caret line="32" column="74" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert2.java">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="134">
+              <caret line="346" column="45" selection-start-line="346" selection-start-column="45" selection-end-line="346" selection-end-column="45" />
+              <folding>
+                <element signature="e#12447#12448#0" expanded="true" />
+                <element signature="e#12536#12537#0" expanded="true" />
+                <element signature="e#14883#14884#0" expanded="true" />
+                <element signature="e#14921#14922#0" expanded="true" />
+                <element signature="e#14967#14968#0" expanded="true" />
+                <element signature="e#15000#15001#0" expanded="true" />
+                <element signature="e#15052#15053#0" expanded="true" />
+                <element signature="e#15088#15089#0" expanded="true" />
+                <element signature="e#15142#15143#0" expanded="true" />
+                <element signature="e#15181#15182#0" expanded="true" />
+                <element signature="e#15234#15235#0" expanded="true" />
+                <element signature="e#15272#15273#0" expanded="true" />
+                <element signature="e#15322#15323#0" expanded="true" />
+                <element signature="e#15357#15358#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/fenetreCaseLibre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="94" column="48" selection-start-line="94" selection-start-column="48" selection-end-line="94" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,34 +161,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert3.java">
+        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/CouleurMétier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="113" column="53" lean-forward="true" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -238,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/ChanceHaut.java" />
         <option value="$PROJECT_DIR$/src/IHM/Plateau/LieuPublic/Gare/GareNord.java" />
         <option value="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeGares/Gare3.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Pion.java" />
@@ -257,8 +224,6 @@
         <option value="$PROJECT_DIR$/src/Metier/Automate/Etats/Des/LancerDesInitial.java" />
         <option value="$PROJECT_DIR$/src/Entites/Joueur.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/tourSuivant.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/fenetreCaseLibre.java" />
-        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java" />
         <option value="$PROJECT_DIR$/src/Metier/Automate/Etats/Deplacement.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java" />
@@ -289,6 +254,9 @@
         <option value="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert1.java" />
         <option value="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert2.java" />
         <option value="$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert3.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/DetailTerrain.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/fenetreCaseLibre.java" />
+        <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java" />
       </list>
     </option>
   </component>
@@ -313,6 +281,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -528,8 +498,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -541,7 +509,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544283587024" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544369134384" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="recentsLimit" value="5" />
@@ -572,7 +540,7 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration default="true" type="Applet">
+    <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -609,7 +577,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -620,11 +588,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -679,10 +647,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81887203" visible="true" weight="0.1852349" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81887203" visible="true" weight="0.18759455" />
       <window_info id="Favorites" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -691,7 +659,7 @@
       <window_info id="Structure" order="6" sideWeight="0.18112798" side_tool="true" weight="0.1687966" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2527115" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26062322" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2590164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -752,20 +720,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
@@ -797,20 +754,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Automate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entites/Pion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FentreMenuPrincipal/HumainVShumain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -836,9 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,27 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/fenetreCaseLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="135" selection-start-line="135" selection-end-line="140" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/Cases.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="137" column="48" selection-start-line="137" selection-start-column="48" selection-end-line="137" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -951,13 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="26" column="170" selection-start-line="26" selection-start-column="170" selection-end-line="26" selection-end-column="170" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
@@ -993,24 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="113" column="23" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
-          <folding>
-            <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-            <element signature="e#2202#2203#0" expanded="true" />
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2303#2304#0" expanded="true" />
-            <element signature="e#2356#2357#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-            <element signature="e#2457#2458#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-            <element signature="e#2606#2607#0" expanded="true" />
-            <element signature="e#2655#2656#0" expanded="true" />
-            <element signature="e#2699#2700#0" expanded="true" />
-            <element signature="e#2790#2791#0" expanded="true" />
-            <element signature="e#2820#2821#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1144,99 +1042,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/CouleurMétier.java" />
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose2.java">
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/CouleurMétier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Vert/Vert2.java">
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rouge/Rouge1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/Plateau/ListeProprietes/ListeTerrains/Rose/Rose2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/javafx-src.zip!/javafx/event/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/DetailTerrain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="113" column="53" lean-forward="true" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/fenetreCaseLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="94" column="48" selection-start-line="94" selection-start-column="48" selection-end-line="94" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="346" column="45" selection-start-line="346" selection-start-column="45" selection-end-line="346" selection-end-column="45" />
+          <folding>
+            <element signature="e#12447#12448#0" expanded="true" />
+            <element signature="e#12536#12537#0" expanded="true" />
+            <element signature="e#14883#14884#0" expanded="true" />
+            <element signature="e#14921#14922#0" expanded="true" />
+            <element signature="e#14967#14968#0" expanded="true" />
+            <element signature="e#15000#15001#0" expanded="true" />
+            <element signature="e#15052#15053#0" expanded="true" />
+            <element signature="e#15088#15089#0" expanded="true" />
+            <element signature="e#15142#15143#0" expanded="true" />
+            <element signature="e#15181#15182#0" expanded="true" />
+            <element signature="e#15234#15235#0" expanded="true" />
+            <element signature="e#15272#15273#0" expanded="true" />
+            <element signature="e#15322#15323#0" expanded="true" />
+            <element signature="e#15357#15358#0" expanded="true" />
           </folding>
         </state>
       </provider>
