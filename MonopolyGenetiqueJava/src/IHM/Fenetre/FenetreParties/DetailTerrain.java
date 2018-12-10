@@ -51,6 +51,7 @@ public class DetailTerrain extends Parent {
             nomTerrain.setLayoutY(20);
             nomTerrain.setLayoutX(80);
             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomTerrain.setTextFill(Color.WHITE);
 
             CouleurMétier s =poss.getListeTerrains().get(numBouton).getCouleur();
             Color couleurTerrain ;
@@ -76,9 +77,10 @@ public class DetailTerrain extends Parent {
             }
 
             //ajout Couleur du joueur
+
             Rectangle r_couleur = new Rectangle();
             r_couleur.setHeight(50);
-            r_couleur.setWidth(50);
+            r_couleur.setWidth(475);
             r_couleur.setLayoutX(10);
             r_couleur.setLayoutY(10);
             r_couleur.setStroke(Color.BLACK);
@@ -108,8 +110,8 @@ public class DetailTerrain extends Parent {
 
             //AJOUT
             this.getChildren().add(bt_ok);
-            this.getChildren().add(nomTerrain);
             this.getChildren().add(r_couleur);
+            this.getChildren().add(nomTerrain);
         }else {
             Label nomTerrain = new Label(possAd.getListeTerrains().get(numBouton).toString().toUpperCase()+"") ;
 
@@ -124,6 +126,7 @@ public class DetailTerrain extends Parent {
             nomTerrain.setLayoutY(20);
             nomTerrain.setLayoutX(80);
             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomTerrain.setTextFill(Color.WHITE);
 
             CouleurMétier s =possAd.getListeTerrains().get(numBouton).getCouleur();
             Color couleurTerrain ;
@@ -151,7 +154,7 @@ public class DetailTerrain extends Parent {
             //ajout Couleur du joueur
             Rectangle r_couleur = new Rectangle();
             r_couleur.setHeight(50);
-            r_couleur.setWidth(50);
+            r_couleur.setWidth(475);
             r_couleur.setLayoutX(10);
             r_couleur.setLayoutY(10);
             r_couleur.setStroke(Color.BLACK);
@@ -180,8 +183,8 @@ public class DetailTerrain extends Parent {
 
             //AJOUT
             this.getChildren().add(bt_ok);
-            this.getChildren().add(nomTerrain);
             this.getChildren().add(r_couleur);
+            this.getChildren().add(nomTerrain);
         }
 
 
