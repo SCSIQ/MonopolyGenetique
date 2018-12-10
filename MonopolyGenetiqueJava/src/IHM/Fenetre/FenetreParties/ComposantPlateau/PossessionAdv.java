@@ -81,6 +81,7 @@ public class PossessionAdv extends Parent {
     private ArrayList<Label> listeTerrainsLabel ;
     private ArrayList<Label> listeCompagniesLabel ;
     private ArrayList<Rectangle> listeCouleur ;
+
     public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu)
     {
         this.automate=automate;
@@ -339,10 +340,10 @@ public class PossessionAdv extends Parent {
 
                 //ajout Couleur du joueur
                 Rectangle r_couleur = new Rectangle();
-                r_couleur.setHeight(30);
-                r_couleur.setWidth(30);
+                r_couleur.setHeight(20);
+                r_couleur.setWidth(20);
                 r_couleur.setLayoutX(10);
-                r_couleur.setLayoutY(30 + y);
+                r_couleur.setLayoutY(37 + y);
                 r_couleur.setStroke(Color.BLACK);
                 r_couleur.setStrokeWidth(1);
                 r_couleur.setFill(couleurTerrain);
@@ -352,7 +353,7 @@ public class PossessionAdv extends Parent {
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
                 bt_detail.setLayoutX(200);
-                bt_detail.setLayoutY(30 + y);
+                bt_detail.setLayoutY(37 + y);
 
                 Terrain ter = (Terrain) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
