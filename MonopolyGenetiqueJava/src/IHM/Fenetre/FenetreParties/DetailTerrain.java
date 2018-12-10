@@ -28,11 +28,13 @@ public class DetailTerrain extends Parent {
     private int numBouton ;
     private ZonePossessions poss ;
     private PossessionAdv possAd ;
+    private Pane zoneVendre;
 
     public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant){
 
         zoneInfosTerrain = new Pane();
         zoneMaisonHotel= new Pane();
+        zoneVendre = new Pane();
         this.numBouton= numBouton ;
         this.poss = poss ;
         this.possAd = possAd ;
@@ -41,11 +43,11 @@ public class DetailTerrain extends Parent {
             Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).toString().toUpperCase()+"");
 
             /////////TAILLE MIN ET MAX DE LA FENETRE
-            fenetre_detail.setMinHeight(700);
-            fenetre_detail.setMinWidth(500);
+            fenetre_detail.setMinHeight(730);
+            fenetre_detail.setMinWidth(515);
 
-            fenetre_detail.setMaxHeight(500);
-            fenetre_detail.setMaxWidth(700);
+            fenetre_detail.setMaxHeight(730);
+            fenetre_detail.setMaxWidth(515);
 
 
             nomTerrain.setLayoutY(20);
@@ -89,11 +91,12 @@ public class DetailTerrain extends Parent {
 
             GenererPanelInfos(automate, true) ;
             GenererPanelMaisonHotel(automate);
+            genererPanelVendre(automate);
 
-            Button bt_ok = new Button("revenir au jeu");
+            Button bt_ok = new Button("REVENIR AU JEU");
 
             bt_ok.setLayoutX(180);
-            bt_ok.setLayoutY(530);
+            bt_ok.setLayoutY(630);
 
             bt_ok.setPrefSize(150, 10);
 
@@ -163,10 +166,10 @@ public class DetailTerrain extends Parent {
 
             GenererPanelInfos(automate,false ) ;
 
-            Button bt_ok = new Button("revenir au jeu");
+            Button bt_ok = new Button("REVENIR AU JEU");
 
             bt_ok.setLayoutX(180);
-            bt_ok.setLayoutY(300);
+            bt_ok.setLayoutY(180);
 
             bt_ok.setPrefSize(150, 10);
 
@@ -265,7 +268,7 @@ public class DetailTerrain extends Parent {
 
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_maison = new Rectangle();
-        rect_maison.setHeight(200);
+        rect_maison.setHeight(170);
         rect_maison.setWidth(475);
         rect_maison.setX(0);
         rect_maison.setY(0);
@@ -275,27 +278,74 @@ public class DetailTerrain extends Parent {
         rect_maison.setStroke(Color.BLACK);
 
         //Contenu du panel
-        Label l_maison = new Label("VOUS POSSEDEZ X/3 TERRAINS DE CETTE COULEUR.\n" +
-                                    "POUR CONSTRUIRE, VOUS DEVEZ POSSEDER LES 3.");
-        l_maison.setLayoutY(30);
+        Label l_maison = new Label("  VOUS POSSEDEZ X/3 TERRAINS DE CETTE COULEUR.\n" +
+                                    "  POUR CONSTRUIRE, VOUS DEVEZ POSSEDER LES 3.");
+        l_maison.setLayoutY(10);
         l_maison.setLayoutX(10);
         l_maison.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
-        Button bt_ConstruireMaison = new Button("CONSTRUIRE UNE\n       MAISON");
-        Button bt_ConstruireHotel = new Button("CONSTRUIRE UN\n        HOTEL");
+        Label l_hotel = new Label("Note : Construire un hôtel = construire une 5eme maison");
+        l_hotel.setLayoutY(135);
+        l_hotel.setLayoutX(70);
+        l_hotel.setFont(Font.font("Verdana", FontWeight.EXTRA_LIGHT, 12));
 
-        bt_ConstruireHotel.setLayoutX(300);
-        bt_ConstruireHotel.setLayoutY(125);
 
-        bt_ConstruireMaison.setLayoutX(25);
-        bt_ConstruireMaison.setLayoutY(125);
+        Button bt_ConstruireMaison = new Button("CONSTRUIRE UNE MAISON");
 
+
+        bt_ConstruireMaison.setLayoutX(130);
+        bt_ConstruireMaison.setLayoutY(80);
+        bt_ConstruireMaison.setPrefSize(220,10);
+
+        zoneMaisonHotel.getChildren().add(l_hotel);
         zoneMaisonHotel.getChildren().add(rect_maison);
         zoneMaisonHotel.getChildren().add(l_maison);
-        zoneMaisonHotel.getChildren().add(bt_ConstruireHotel);
         zoneMaisonHotel.getChildren().add(bt_ConstruireMaison);
 
         this.getChildren().add(zoneMaisonHotel);
+    }
+
+    public void genererPanelVendre(Automate automate)
+    {
+        zoneVendre.setLayoutX(10);
+        zoneVendre.setTranslateY(480);
+
+        //TAILLE DU RECTANGLE ET POSITION
+        Rectangle rect_vendre = new Rectangle();
+        rect_vendre.setHeight(130);
+        rect_vendre.setWidth(475);
+        rect_vendre.setX(0);
+        rect_vendre.setY(0);
+
+        //COULEUR ET CONTOUR
+        rect_vendre.setFill(Color.TRANSPARENT);
+        rect_vendre.setStroke(Color.BLACK);
+
+        //Contenu du panel
+        Label l_vendre = new Label("  Vous pouvez vendre votre terrain pour X à la banque.");
+        l_vendre.setLayoutY(10);
+        l_vendre.setLayoutX(10);
+        l_vendre.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
+
+        Label l_warning = new Label("ATTENTION, CETTE ACTION EST DEFINITIVE !");
+        l_warning.setLayoutY(40);
+        l_warning.setLayoutX(30);
+        l_warning.setFont(Font.font("Verdana", FontWeight.BOLD, 16));
+        l_warning.setTextFill(Color.RED);
+
+        Button bt_Vendre = new Button("VENDRE");
+
+
+        bt_Vendre.setLayoutX(170);
+        bt_Vendre.setLayoutY(85);
+        bt_Vendre.setPrefSize(150,10);
+
+        zoneVendre.getChildren().add(rect_vendre);
+        zoneVendre.getChildren().add(bt_Vendre);
+        zoneVendre.getChildren().add(l_vendre);
+        zoneVendre.getChildren().add(l_warning);
+
+        this.getChildren().add(zoneVendre);
     }
 
     public void detruireCanvas(Canvas canvas)
