@@ -35,20 +35,24 @@ public class LancerDesJoueur extends Etat {
             int de1;
             int de2;
             Random toto = new Random();
+
             de1=toto.nextInt(6)+1;
             de2=toto.nextInt(6)+1;
+            //de1=2;
+            //de2=2;
+
             int score = de1+de2;
             j.setResDes1(de1);
             j.setResDes2(de2);
             j.setResLanceDes(score);
             System.out.println("    score joueur : "+score);
 
-            if(de1==de2 && j.getNbDoubles()<3) //si double mais pas le troisième
+            if(de1==de2 && j.getNbDoubles()<2) //si double mais pas le troisième
             {
                 j.setaLanceDes(false);
                 j.setNbDoubles(j.getNbDoubles()+1);
             }
-            else if(j.getNbDoubles()==3) //si trois doubles
+            else if(j.getNbDoubles()==2) //si trois doubles
             {
                 j.setaLanceDes(true);
                 j.getPion().setGoToPrison(true);

@@ -45,7 +45,7 @@ public class Pion {
         return position;
     } //renvoie la case où est le pion du joueur
 
-    public boolean isGoToPrison() {
+    public boolean getGoToPrison() {
         return goToPrison;
     }
 
@@ -60,4 +60,5 @@ public class Pion {
     public void setCouleur(Color couleur) {
         this.couleur = couleur;
     }
+
 }

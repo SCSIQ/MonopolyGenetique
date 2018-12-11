@@ -21,6 +21,7 @@ public class DebutTour extends Etat{
         j.setResDes1(0);
         j.setResDes2(0);
         j.setResLanceDes(0);
+        j.setNbDoubles(0);
         System.out.println("                        Début du tour de "+j.getNom());
         //ici ajouter les actions automatisées que doivent faire les joueurs en début de tour si il y en a
     }

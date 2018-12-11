@@ -19,6 +19,8 @@ public class Joueur {
     private int resLanceDes = 0; // initialise à 0 l'addition des deux dés
     private int nbDoubles = 0; //nombre de doubles que fait le joueur lors du lancé des dés
     private ArrayList<Cases> listeCases;
+    private boolean estEnPrison = false;
+    private int essaiesPourSortirDePrison = 0;
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
         this.solde = 15000; //a revoir car valeur fausse 150000
@@ -163,6 +165,22 @@ public class Joueur {
 
     public void setNbDoubles(int nbDoubles) {
         this.nbDoubles = nbDoubles;
+    }
+
+    public boolean getEstEnPrison() {
+        return estEnPrison;
+    }
+
+    public int getEssaiesPourSortirDePrison() {
+        return essaiesPourSortirDePrison;
+    }
+
+    public void setEstEnPrison(boolean estEnPrison) {
+        this.estEnPrison = estEnPrison;
+    }
+
+    public void setEssaiesPourSortirDePrison(int essaiesPourSortirDePrison) {
+        this.essaiesPourSortirDePrison = essaiesPourSortirDePrison;
     }
 }
 

@@ -5,6 +5,7 @@ import Metier.Automate.Automate;
 import Metier.Automate.Etats.Argent.PayerLoyer;
 import Metier.Automate.Etats.Argent.PayerTaxe;
 import Metier.Automate.Etats.Choix.ChoixPossibles;
+import Metier.Plateau.AllerEnPrison;
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
@@ -23,21 +24,9 @@ public class Deplacement extends Etat{
         super.getAutomate().setAutomatedEvolution(true);
     }
 
-    @Override
-    public void agir(String event) {
-        Joueur j = super.getListeJoueurs().get(0);
-        //System.out.println("    avant déplacement : "+j.toString());
-
-        int resDes = j.getResLanceDes();
-        //int resDes = 38; //POUR IHM
-
-        Cases position = j.getPion().getCase();
-
-        boolean goToPrison = false;
+    private void avancer(Joueur j, int resDes, Cases position){
         int newPositionToGo = position.getPosition() + resDes;
 
-        //System.out.println("D'où on vient : "+position.getPosition());
-        //System.out.println("De combien on avance : "+resDes);
         System.out.println("    nouvelle position : "+newPositionToGo);
 
         //si change de tour de plateau et passe par la case départ
@@ -48,7 +37,8 @@ public class Deplacement extends Etat{
             //si le joueur courant s'arrête sur la case départ précissement il gagne 3 000€
             if(newPositionToGo==0){
                 super.getAutomate().getJoueurCourant().IncrementerSolde(3000);
-            }else { // sinon il gagne 1 500€
+            }
+            else { // sinon il gagne 1 500€
                 super.getAutomate().getJoueurCourant().IncrementerSolde(1500);
             }
         }
@@ -71,6 +61,49 @@ public class Deplacement extends Etat{
         {
             doitPayerTaxe = true;
         }
+
+        if(j.getPion().getCase() instanceof AllerEnPrison)
+        {
+            j.Avancer(10);
+            j.setEstEnPrison(true);
+        }
+    }
+
+    @Override
+    public void agir(String event) {
+        Joueur j = super.getListeJoueurs().get(0);
+
+        int resDes = j.getResLanceDes();
+        //int resDes = 30; //POUR IHM
+
+        Cases position = j.getPion().getCase();
+
+        //si le joueur doit aller en prison
+        if(j.getPion().getGoToPrison()==true)
+        {
+            j.getPion().setGoToPrison(false);
+            j.Avancer(10);
+            j.setEstEnPrison(true);
+        }
+        else if(j.getEstEnPrison()==true) //si le joueur est en prison
+        {
+            if(j.getResDes1()==j.getResDes2()) //si il a fait un double
+            {
+                j.setEstEnPrison(false);
+                avancer(j, resDes, position);
+            }
+            else if(j.getEssaiesPourSortirDePrison()<3) //si ça fait déja 3 tours qu'il est en prison
+            {
+                j.DecrementerSolde(500); //paye 500 pour sortir (n'a pas le choix)
+                j.setEstEnPrison(false);
+                avancer(j, resDes, position);
+            }
+        }
+        else //sinon, déroulement normal des déplacements
+        {
+            avancer(j, resDes, position);
+        }
+
     }
 
     @Override
