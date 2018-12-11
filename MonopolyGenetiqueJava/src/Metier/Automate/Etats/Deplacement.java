@@ -51,7 +51,7 @@ public class Deplacement extends Etat{
         if(j.getPion().getCase() instanceof Proprietes)
         {
             //si elle appatien à un joueur
-            if(((Proprietes) j.getPion().getCase()).getProprio() != null)
+            if( (((Proprietes) j.getPion().getCase()).getProprio() != null) && (((Proprietes) j.getPion().getCase()).getProprio() != j) )
             {
                 doitPayerLoyer = true; //active la transition à l'état faisant payer le loyer à un autre joueur
             }
@@ -81,8 +81,8 @@ public class Deplacement extends Etat{
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
 
-        int resDes = j.getResLanceDes();
-        //int resDes = 30; //POUR IHM
+        //int resDes = j.getResLanceDes();
+        int resDes = 5; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
