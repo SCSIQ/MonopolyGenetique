@@ -1,10 +1,11 @@
 package Metier.Plateau.ListeProprietes.ListeServicesPublics;
 
+import Metier.Plateau.ListeProprietes.ListeGares.Gare;
 import Metier.Plateau.ListeProprietes.Proprietes;
 
 public abstract class ServicePublic extends Proprietes {
 
-    protected int loyer = 20;
+    protected int loyer = 100;
 
     public ServicePublic(int position) {
         super(position);
@@ -12,11 +13,32 @@ public abstract class ServicePublic extends Proprietes {
         super.setPrixHypotheque(0);
     }
 
-    public int getLoyer() {
+    public int getLoyer(int resDesJCourant) {
 
-        //ici coder le fait que le loyer dépend du nombre de service public que possède le joueur
-        //ainsi que du résultat des dès du joueur devant payer le loyer
+        int toReturn = loyer;
 
-        return loyer;
+        if(super.getProprio()!=null)
+        {
+            int nbServicePublic = 0;
+            for (Proprietes p:super.getProprio().getListePropietes()) {
+                if(p instanceof ServicePublic)
+                {
+                    nbServicePublic++;
+                }
+            }
+
+            switch (nbServicePublic) {
+                case 1:
+                    toReturn = loyer * resDesJCourant;
+                    break;
+                case 2:
+                    toReturn = (loyer * 2) * resDesJCourant;
+                    break;
+                default:
+                    toReturn = loyer;
+            }
+        }
+
+        return toReturn;
     }
 }
