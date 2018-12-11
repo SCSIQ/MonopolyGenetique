@@ -6,6 +6,7 @@ public class Impot extends Taxes {
 
     public Impot(int position) {
         super(position);
+        super.prixTaxe=1500;
     }
 
     @Override

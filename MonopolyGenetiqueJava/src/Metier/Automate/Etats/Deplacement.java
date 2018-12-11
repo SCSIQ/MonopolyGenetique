@@ -3,16 +3,19 @@ package Metier.Automate.Etats;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.Argent.PayerLoyer;
+import Metier.Automate.Etats.Argent.PayerTaxe;
 import Metier.Automate.Etats.Choix.ChoixPossibles;
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
+import Metier.Plateau.ListeTaxes.Taxes;
 
 import java.util.ArrayList;
 
 public class Deplacement extends Etat{
 
     private boolean doitPayerLoyer = false;
+    private boolean doitPayerTaxe = false;
 
     public Deplacement(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
@@ -25,8 +28,8 @@ public class Deplacement extends Etat{
         Joueur j = super.getListeJoueurs().get(0);
         //System.out.println("    avant déplacement : "+j.toString());
 
-        //int resDes = j.getResLanceDes();
-        int resDes = 5; //POUR IHM
+        int resDes = j.getResLanceDes();
+        //int resDes = 38; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
@@ -62,6 +65,12 @@ public class Deplacement extends Etat{
                 doitPayerLoyer = true;
             }
         }
+
+        //si la case est une taxe
+        if(j.getPion().getCase() instanceof Taxes)
+        {
+            doitPayerTaxe = true;
+        }
     }
 
     @Override
@@ -69,6 +78,10 @@ public class Deplacement extends Etat{
         if(doitPayerLoyer==true)
         {
             return new PayerLoyer(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if(doitPayerTaxe==true)
+        {
+            return new PayerTaxe(super.getAutomate(), super.getListeJoueurs());
         }
         else
         {

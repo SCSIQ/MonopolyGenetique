@@ -6,6 +6,7 @@ public class TaxeDeLuxe extends Taxes {
 
     public TaxeDeLuxe(int position) {
         super(position);
+        super.prixTaxe=1500;
     }
 
     @Override
