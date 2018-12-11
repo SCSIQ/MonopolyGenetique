@@ -3,6 +3,7 @@ package IHM.Fenetre.FenetreParties;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
+import Metier.Plateau.ListeTaxes.Taxes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -72,6 +73,23 @@ public class LancerDe extends Parent {
                             fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                         }
                     }
+
+                    //Si la case est une taxe
+                    if(automate.getJoueurCourant().getPion().getCase() instanceof Taxes)
+                    {
+                        fenetreEstSurTaxe(fenetre_actuelle, automate, zoneJoueur, zoneAd);
+                    }
+
+                    //Si le joueur est sur la case prison
+                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==10)
+                    {
+                        //si il n'est pas en visite simple
+                        if(automate.getJoueurCourant().getEstEnPrison()==true)
+                        {
+
+                        }
+                    }
+
                 }
             });
 
@@ -140,5 +158,24 @@ public class LancerDe extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_poss.show();
+    }
+
+    public void fenetreEstSurTaxe(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_taxe = new Stage();
+        FenetreTaxe fenetreTaxe= new FenetreTaxe(nouvelle_fenetre_taxe,canvas, automate, plateauJeu, zoneJoueur, jeu, zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetreTaxe,650,550);
+
+        nouvelle_fenetre_taxe.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_taxe.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_taxe.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_taxe.show();
     }
 }

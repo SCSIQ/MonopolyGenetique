@@ -20,7 +20,7 @@ public class tourSuivant extends Parent {
     {
 
  ////////////////////////////////////////////////////////////////////TEXTE
-            Text t_lancer = new Text("Tour numTour");
+            Text t_lancer = new Text("Tour n° "+automate.getNumTour());
 
             t_lancer.setLayoutX(250);
             t_lancer.setLayoutY(100);
