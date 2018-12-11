@@ -97,7 +97,9 @@ public class Jeu extends Parent {
                 if(automate.getJoueurCourant().getaLanceDes()==false) {
                     automate.evoluer("lancerDes");
                     fenetreDes(nouvelle_fenetre, automate, pl, zoneJoueur, poss, zoneAd);
+
                     pion.entrerDansCase();
+
 
                 }else{
                     automate.evoluer("lancerDes");

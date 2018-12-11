@@ -24,12 +24,14 @@ public class LancerDe extends Parent {
     private Jeu jeu ;
     private Canvas canvas;
     private PlateauJeu plateauJeu ;
+    private ZonePossessions poss ;
 
     public LancerDe(Stage fenetre_actuelle, Canvas canvas, Automate automate, Jeu jeu, PlateauJeu plateauJeu,ZoneInfoJoueur zoneJoueur,  ZonePossessions poss, ZoneAdversaires zoneAd)
     {
         this.jeu=jeu;
         this.canvas=canvas ;
         this.plateauJeu=plateauJeu;
+        this.poss = poss ;
 
 //////////////////////////////////////////////////////////////////////////TEXTE
             //récupération de la valeur des dés
@@ -86,7 +88,7 @@ public class LancerDe extends Parent {
                         //si il n'est pas en visite simple
                         if(automate.getJoueurCourant().getEstEnPrison()==true)
                         {
-
+                            fenetreEnPrison(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                         }
                     }
 
@@ -122,6 +124,7 @@ public class LancerDe extends Parent {
         this.getChildren().add(canvas);
     }
 
+    //FENETRE APPARAISSANT SI LA CASE EST LIBRE
     public void fenetreVousEtesSur(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
     {
         jeu.fenetreNoire();
@@ -141,6 +144,7 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_vousEtesSur.show();
     }
 
+    //FENETRE APPARAIT SI LE JOUEUR EST SUR UNE CASE APPARTENANT DEJA A QUELQU'UN
     public void fenetreCasePoss(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
         jeu.fenetreNoire();
@@ -160,6 +164,7 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_poss.show();
     }
 
+    //FENETRE APPARAIT SI LE JOUEUR EST SUR UNE CASE TAXE
     public void fenetreEstSurTaxe(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
         jeu.fenetreNoire();
@@ -177,5 +182,24 @@ public class LancerDe extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_taxe.show();
+    }
+
+    public void fenetreEnPrison(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_prison = new Stage();
+        FenetrePrison fenetrePrison= new FenetrePrison(nouvelle_fenetre_prison,canvas, automate, plateauJeu, zoneJoueur, jeu, poss,  zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
+
+        nouvelle_fenetre_prison.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_prison.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_prison.show();
     }
 }

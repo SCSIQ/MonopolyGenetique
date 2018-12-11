@@ -59,33 +59,32 @@ public class Pion extends Parent {
 
     public void entrerDansCase() {
 
-        //ON ENLEVE LE PION DE LA CASE OU LE PION ETAIT AVANT LE LANCER DE DES
-        this.sortirDeCase(pions.get(0));
+            //ON ENLEVE LE PION DE LA CASE OU LE PION ETAIT AVANT LE LANCER DE DES
+            this.sortirDeCase(pions.get(0));
 
-        // ON RECUPERE LE PANEL OU LE PIONS VA ARRIVER APRES LE LANCER DE DES
-        Pane p = (Pane) plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+            // ON RECUPERE LE PANEL OU LE PIONS VA ARRIVER APRES LE LANCER DE DES
+            Pane p = (Pane) plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
 
 
-        //horizontal + case bas
-        if(automate.getListeJoueurs().size()==2)
-        {
-            deplacerDeuxPions();
-        }
-        else if(automate.getListeJoueurs().size()==3)
-        {
-            deplacerTroisPions();
-        }
-        else if(automate.getListeJoueurs().size()==4)
-        {
-            deplacerQuatrePions();
-        }
-        else if(automate.getListeJoueurs().size()==5)
-        {
-            deplacerCinqPions();
-        }
-        // ON AJOUTE A CE PANEL
-         p.getChildren().add(pions.get(0));
-
+            //horizontal + case bas
+            if(automate.getListeJoueurs().size()==2)
+            {
+                deplacerDeuxPions();
+            }
+            else if(automate.getListeJoueurs().size()==3)
+            {
+                deplacerTroisPions();
+            }
+            else if(automate.getListeJoueurs().size()==4)
+            {
+                deplacerQuatrePions();
+            }
+            else if(automate.getListeJoueurs().size()==5)
+            {
+                deplacerCinqPions();
+            }
+            // ON AJOUTE A CE PANEL
+             p.getChildren().add(pions.get(0));
 
     }
 
