@@ -66,7 +66,7 @@ public class fenetreCasePossedee extends Parent  {
 
         // SI C'EST UNE COMPAGNIE
         }else if(automate.getJoueurCourant().getPion().getCase() instanceof ServicePublic){
-            prixAPayer =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getLoyer();
+            prixAPayer =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getLoyer(automate.getJoueurCourant().getResLanceDes());
             j =((ServicePublic)automate.getJoueurCourant().getPion().getCase()).getProprio();
         }else if(automate.getJoueurCourant().getPion().getCase() instanceof Gare)
         {

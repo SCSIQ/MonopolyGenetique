@@ -64,9 +64,9 @@ public class PayerLoyer extends Etat {
         else if(j.getPion().getCase() instanceof ServicePublic)
         {
             System.out.println("    C'est un Service Public");
-            /*sommeAPayer = ((ServicePublic)j.getPion().getCase()).getLoyer();
+            sommeAPayer = ((ServicePublic)j.getPion().getCase()).getLoyer(j.getResLanceDes());
             j.DecrementerSolde(sommeAPayer);
-            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);*/
+            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
         }
         System.out.println("    Somme à payer : "+sommeAPayer);
         System.out.println("    Le joueur a maintenant "+j.getSolde()+"€");
