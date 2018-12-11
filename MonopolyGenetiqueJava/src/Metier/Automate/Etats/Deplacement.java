@@ -6,6 +6,7 @@ import Metier.Automate.Etats.Argent.PayerLoyer;
 import Metier.Automate.Etats.Choix.ChoixPossibles;
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
+import Metier.Plateau.ListeProprietes.Proprietes;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class Deplacement extends Etat{
         //System.out.println("    avant déplacement : "+j.toString());
 
         //int resDes = j.getResLanceDes();
-        int resDes = 21; //POUR IHM
+        int resDes = 5; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
@@ -52,11 +53,11 @@ public class Deplacement extends Etat{
 
         System.out.println(j.toString());
 
-        //si la case est un terrain
-        if(j.getPion().getCase() instanceof Terrain)
+        //si la case est une propriété
+        if(j.getPion().getCase() instanceof Proprietes)
         {
             //si elle appatien à un joueur
-            if(((Terrain) j.getPion().getCase()).getProprio() != null)
+            if(((Proprietes) j.getPion().getCase()).getProprio() != null)
             {
                 doitPayerLoyer = true;
             }

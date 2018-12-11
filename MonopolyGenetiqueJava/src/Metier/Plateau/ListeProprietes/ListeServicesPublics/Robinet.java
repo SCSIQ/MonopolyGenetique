@@ -8,6 +8,6 @@ public class Robinet extends ServicePublic {
 
     @Override
     public String toString() {
-        return "Robinet";
+        return "Companie des eaux";
     }
 }
