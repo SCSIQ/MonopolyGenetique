@@ -11,6 +11,8 @@ public class Automate {
     private Etat etatCourant;
     private ArrayList<Joueur> listeJoueurs ;
     private boolean automatedEvolution = false;
+    private int numTour = 1;
+    private int nbJoueurTour = 1;
 
     public Automate(ArrayList<Joueur> listeJoueurs){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
@@ -52,5 +54,21 @@ public class Automate {
     //retourne la liste des joueurs
     public ArrayList<Joueur> getListeJoueurs() {
         return listeJoueurs;
+    }
+
+    public int getNumTour() {
+        return numTour;
+    }
+
+    public void setNumTour(int numTour) {
+        this.numTour = numTour;
+    }
+
+    public int getNbJoueurTour() {
+        return nbJoueurTour;
+    }
+
+    public void setNbJoueurTour(int nbJoueurTour) {
+        this.nbJoueurTour = nbJoueurTour;
     }
 }

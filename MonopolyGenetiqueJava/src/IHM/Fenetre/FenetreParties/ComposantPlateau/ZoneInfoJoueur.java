@@ -74,7 +74,7 @@ public class ZoneInfoJoueur extends Parent {
         Label nom = new Label(automate.getJoueurCourant().getNom());
         Label argent = new Label("ARGENT : "+automate.getJoueurCourant().getSolde()+" €");
         Label enPrison = new Label("EN PRISON :");
-        Label tour = new Label("TOUR :");
+        Label tour = new Label("TOUR : "+automate.getNumTour());
 
 
         //NOM

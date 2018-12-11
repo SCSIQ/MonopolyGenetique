@@ -16,7 +16,17 @@ public class DebutTour extends Etat{
 
     @Override
     public void agir(String event) {
+
         Joueur j = super.getListeJoueurs().get(0);
+
+        getAutomate().setNbJoueurTour(getAutomate().getNbJoueurTour()+1);
+
+        System.out.println("blablabla : "+getAutomate().getNbJoueurTour()%getAutomate().getListeJoueurs().size());
+        if(getAutomate().getNbJoueurTour()%getAutomate().getListeJoueurs().size()==1)
+        {
+            getAutomate().setNumTour(getAutomate().getNumTour()+1);
+        }
+
         j.setaLanceDes(false); //just in case
         j.setResDes1(0);
         j.setResDes2(0);
