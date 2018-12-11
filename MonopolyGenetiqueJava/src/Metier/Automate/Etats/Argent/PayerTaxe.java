@@ -8,6 +8,7 @@ import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeTaxes.Impot;
 import Metier.Plateau.ListeTaxes.TaxeDeLuxe;
 import Metier.Plateau.ListeTaxes.Taxes;
+import Metier.Plateau.ParcGratuit;
 
 import java.util.ArrayList;
 
@@ -25,8 +26,9 @@ public class PayerTaxe extends Etat {
         Joueur j = super.getListeJoueurs().get(0);
         int sommeAPayer = 0;
 
-        sommeAPayer = ((Taxes)j.getPion().getCase()).getPrixTaxe();
-        j.DecrementerSolde(sommeAPayer);
+        sommeAPayer = ((Taxes)j.getPion().getCase()).getPrixTaxe(); //réccupère la somme à payer
+        j.DecrementerSolde(sommeAPayer); //fait payer le joueur
+        ((ParcGratuit)j.getListeCases().get(20)).verserARgent(sommeAPayer); //met l'argent dans le parc gratuit
 
     }
 

@@ -10,6 +10,7 @@ import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
+import Metier.Plateau.ParcGratuit;
 
 import java.util.ArrayList;
 
@@ -52,20 +53,27 @@ public class Deplacement extends Etat{
             //si elle appatien à un joueur
             if(((Proprietes) j.getPion().getCase()).getProprio() != null)
             {
-                doitPayerLoyer = true;
+                doitPayerLoyer = true; //active la transition à l'état faisant payer le loyer à un autre joueur
             }
         }
 
         //si la case est une taxe
         if(j.getPion().getCase() instanceof Taxes)
         {
-            doitPayerTaxe = true;
+            doitPayerTaxe = true; //active la transition à l'état faisant payer les taxes
         }
 
+        //si c'est la carte aller en prison
         if(j.getPion().getCase() instanceof AllerEnPrison)
         {
-            j.Avancer(10);
+            j.Avancer(10); //avancer à la case prison
             j.setEstEnPrison(true);
+        }
+
+        //si c'est le parc gratuit
+        if(j.getPion().getCase() instanceof ParcGratuit)
+        {
+            j.IncrementerSolde(((ParcGratuit)j.getListeCases().get(20)).recupererArgent()); //récupérer l'argent se trouvant dans le parc gratuit
         }
     }
 
