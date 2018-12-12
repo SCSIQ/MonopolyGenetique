@@ -12,6 +12,17 @@ public abstract class Gare extends Proprietes {
 
     protected int loyer = 250;
 
+    public int getNbGaresPossedees() {
+        int nbGarres = 0;
+        for (Proprietes p : super.getProprio().getListePropietes()) {
+            if(p instanceof Gare)
+            {
+                nbGarres++;
+            }
+        }
+        return nbGarres;
+    }
+
     public int getLoyer() {
 
         int toReturn = loyer;
