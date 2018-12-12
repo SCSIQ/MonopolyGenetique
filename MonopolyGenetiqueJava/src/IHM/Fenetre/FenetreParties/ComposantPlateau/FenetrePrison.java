@@ -46,7 +46,9 @@ public class FenetrePrison extends Parent {
         l_Joueur.setScaleX(1.5);
         l_Joueur.setScaleY(1.5);
 
-        Label l_Tour = new Label("TOUR : "+automate.getJoueurCourant().getEssaiesPourSortirDePrison()+"/3");
+        int tour = automate.getJoueurCourant().getEssaiesPourSortirDePrison()+1;
+
+        Label l_Tour = new Label("TOUR : "+tour+"/3");
 
         l_Tour.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
         l_Tour.setLayoutX(500);
