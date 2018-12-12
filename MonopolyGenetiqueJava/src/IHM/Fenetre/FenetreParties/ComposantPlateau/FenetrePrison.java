@@ -59,6 +59,11 @@ public class FenetrePrison extends Parent {
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
+                automate.getJoueurCourant().DecrementerSolde(500);
+                automate.getJoueurCourant().setEstEnPrison(false);
+                //on remet à jour l'argent du joueur courant
+                zoneJoueur.SupprimerJoueur();
+                zoneJoueur.genereInfosJoueur(automate);
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
