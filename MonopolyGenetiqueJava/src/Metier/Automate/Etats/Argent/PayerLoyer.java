@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class PayerLoyer extends Etat {
 
+    private boolean allerEnFaillite = false;
+
     public PayerLoyer(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
         //permet de demander à l'automate d'évoluer une fois du plus de façon automatique
@@ -51,22 +53,47 @@ public class PayerLoyer extends Etat {
                     break;
                 //default : sommeAPayer = 0;
             }
-            j.DecrementerSolde(sommeAPayer);
-            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+            if(j.getSolde() >= sommeAPayer)
+            {
+                j.DecrementerSolde(sommeAPayer);
+                ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+            }
+            else
+            {
+                allerEnFaillite = true;
+            }
+
         }
         else if(j.getPion().getCase() instanceof Gare)
         {
             System.out.println("    C'est une gare");
             sommeAPayer = ((Gare)j.getPion().getCase()).getLoyer();
-            j.DecrementerSolde(sommeAPayer);
-            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+
+            if(j.getSolde() >= sommeAPayer)
+            {
+                j.DecrementerSolde(sommeAPayer);
+                ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+            }
+            else
+            {
+                allerEnFaillite = true;
+            }
+
         }
         else if(j.getPion().getCase() instanceof ServicePublic)
         {
             System.out.println("    C'est un Service Public");
             sommeAPayer = ((ServicePublic)j.getPion().getCase()).getLoyer(j.getResLanceDes());
-            j.DecrementerSolde(sommeAPayer);
-            ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+
+            if(j.getSolde() >= sommeAPayer)
+            {
+                j.DecrementerSolde(sommeAPayer);
+                ((Proprietes) j.getPion().getCase()).getProprio().IncrementerSolde(sommeAPayer);
+            }
+            else
+            {
+                allerEnFaillite = true;
+            }
         }
         System.out.println("    Somme à payer : "+sommeAPayer);
         System.out.println("    Le joueur a maintenant "+j.getSolde()+"€");
@@ -74,7 +101,15 @@ public class PayerLoyer extends Etat {
 
     @Override
     public Etat transition(String event) {
-        return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
+        if(allerEnFaillite == true)
+        {
+            return new Faillite(super.getAutomate(), super.getListeJoueurs());
+        }
+        else
+        {
+            return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
+        }
+
     }
 
     @Override
