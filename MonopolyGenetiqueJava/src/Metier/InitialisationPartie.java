@@ -2,6 +2,9 @@ package Metier;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
+import Metier.Cartes.Cartes;
+import Metier.Cartes.CartesChances.ChanceRdvDueDeLaPaie;
+import Metier.Cartes.CartesChances.ChanceSortirDePrison;
 import Metier.Plateau.*;
 import Metier.Plateau.ListeCartes.*;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare1;
@@ -42,6 +45,7 @@ public abstract class InitialisationPartie {
 
     protected ArrayList<Cases> listeCases = new ArrayList<>();
     protected ArrayList<Joueur> listeJoueurs = new ArrayList<>();
+    protected ArrayList<Cartes> listeDesCartes = new ArrayList<>();
 
     //seule méthode pouvant être appellée depuis l'extérieur
     //cette méthode permet de créer et d'initialiser l'automate
@@ -51,9 +55,15 @@ public abstract class InitialisationPartie {
     //lequel ils ont été rentrés
     public Automate automateInitialisation(int nombreJoueurs, ArrayList<Color> listeCouleurs){
         creationListeCases();
+        creationListeCartes();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);
-        Automate automate = new Automate(this.listeJoueurs);
+        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartes);
         return automate;
+    }
+
+    private void creationListeCartes(){
+        this.listeDesCartes.add(new ChanceRdvDueDeLaPaie());
+        this.listeDesCartes.add(new ChanceSortirDePrison());
     }
 
     private void creationListeCases(){

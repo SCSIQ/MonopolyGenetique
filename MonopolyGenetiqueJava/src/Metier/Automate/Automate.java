@@ -3,6 +3,7 @@ package Metier.Automate;
 import Entites.Joueur;
 import Metier.Automate.Etats.Des.LancerDesInitial;
 import Metier.Automate.Etats.Etat;
+import Metier.Cartes.Cartes;
 
 import java.util.ArrayList;
 
@@ -10,12 +11,14 @@ public class Automate {
 
     private Etat etatCourant;
     private ArrayList<Joueur> listeJoueurs ;
+    private ArrayList<Cartes> listeDesCartes;
     private boolean automatedEvolution = false;
     private int numTour = 1;
     private int nbJoueurTour = 1;
 
-    public Automate(ArrayList<Joueur> listeJoueurs){
+    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartes){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
+        this.listeDesCartes = listeDesCartes;
         this.etatCourant = new LancerDesInitial(this, listeJoueurs); //lancement Etat initial
         System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
@@ -70,5 +73,9 @@ public class Automate {
 
     public void setNbJoueurTour(int nbJoueurTour) {
         this.nbJoueurTour = nbJoueurTour;
+    }
+
+    public ArrayList<Cartes> getListeDesCartes() {
+        return listeDesCartes;
     }
 }
