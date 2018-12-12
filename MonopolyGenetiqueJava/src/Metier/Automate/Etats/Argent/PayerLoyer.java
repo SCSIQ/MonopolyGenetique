@@ -101,14 +101,14 @@ public class PayerLoyer extends Etat {
 
     @Override
     public Etat transition(String event) {
-        if(allerEnFaillite == true)
+       /* if(allerEnFaillite == true)
         {
             return new Faillite(super.getAutomate(), super.getListeJoueurs());
         }
         else
-        {
+        {*/
             return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
-        }
+        //}
 
     }
 

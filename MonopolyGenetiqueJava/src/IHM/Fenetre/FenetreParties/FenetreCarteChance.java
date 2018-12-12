@@ -11,7 +11,10 @@ import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -29,7 +32,17 @@ public class FenetreCarteChance extends Parent {
         this.zoneAd= zoneAd ;
         this.zoneJoueur = zoneJoueur ;
 
-        //ACTION PAYER
+        //LABEL CARTE CHANCE :
+        Label carte_chance = new Label("Carte Chance");
+
+        carte_chance.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        carte_chance.setLayoutX(205);
+        carte_chance.setLayoutY(20);
+
+        carte_chance.setScaleX(2);
+        carte_chance.setScaleY(2);
+
+        //BOUTON OK
         Button bt_ok= new Button("OK");
 
         bt_ok.setLayoutX(175);
@@ -75,6 +88,7 @@ public class FenetreCarteChance extends Parent {
 
         //AJOUT
         this.getChildren().add(bt_ok);
+        this.getChildren().add(carte_chance);
 
 
     }
