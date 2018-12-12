@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class PayerTaxe extends Etat {
 
+    private boolean allerEnFaillite = false;
+
     public PayerTaxe(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
         //permet de demander à l'automate d'évoluer une fois du plus de façon automatique
@@ -27,14 +29,28 @@ public class PayerTaxe extends Etat {
         int sommeAPayer = 0;
 
         sommeAPayer = ((Taxes)j.getPion().getCase()).getPrixTaxe(); //réccupère la somme à payer
-        j.DecrementerSolde(sommeAPayer); //fait payer le joueur
-        ((ParcGratuit)j.getListeCases().get(20)).verserARgent(sommeAPayer); //met l'argent dans le parc gratuit
+        if(j.getSolde() >= sommeAPayer)
+        {
+            j.DecrementerSolde(sommeAPayer); //fait payer le joueur
+            ((ParcGratuit)j.getListeCases().get(20)).verserARgent(sommeAPayer); //met l'argent dans le parc gratuit
+        }
+        else
+        {
+            allerEnFaillite = true;
+        }
 
     }
 
     @Override
     public Etat transition(String event) {
-        return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
+        if(allerEnFaillite == true)
+        {
+            return new Faillite(super.getAutomate(), super.getListeJoueurs());
+        }
+        else
+        {
+            return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
+        }
     }
 
     @Override
