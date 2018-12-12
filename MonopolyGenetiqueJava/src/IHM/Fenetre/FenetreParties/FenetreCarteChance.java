@@ -88,8 +88,8 @@ public class FenetreCarteChance extends Parent {
                 zoneJoueur.genereInfosJoueur(automate);
 
                 //Met à jour les adversaires :
-                zoneAd.SupprimerAdversaire();
-                zoneAd.genererAdversaire(automate, fenetre_actuelle);
+              /*  zoneAd.SupprimerAdversaire();
+                zoneAd.genererAdversaire(automate, fenetre_actuelle);*/
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
