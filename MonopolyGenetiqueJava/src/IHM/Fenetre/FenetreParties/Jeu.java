@@ -213,10 +213,6 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.initModality(Modality.WINDOW_MODAL);
         nouvelle_fenetre_menu.initOwner(fenetre_actuelle);
 
-        //POSITION DE LA FENETRE
-       /* nouvelle_fenetre_menu.setX(fenetre_actuelle.getX() + 610);
-        nouvelle_fenetre_menu.setY(fenetre_actuelle.getY() + 200);*/
-
         nouvelle_fenetre_menu.show();
     }
 
