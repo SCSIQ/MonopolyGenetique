@@ -42,9 +42,16 @@ public class FenetreCarteCommu extends Parent {
         r_commu.setLayoutY(15);
         r_commu.setStroke(Color.BLACK);
         r_commu.setStrokeWidth(1);
-        //r_commu.setFill(Color.rgb(244, 154, 165));
         r_commu.setFill(Color.rgb(9, 172, 227));
 
+        Rectangle r_fond = new Rectangle();
+        r_fond.setHeight(230);
+        r_fond.setWidth(475);
+        r_fond.setLayoutX(10);
+        r_fond.setLayoutY(15);
+        r_fond.setStroke(Color.BLACK);
+        r_fond.setStrokeWidth(1);
+        r_fond.setFill(Color.TRANSPARENT);
 
         //TEXTE
         Label l_Commu = new Label("CAISSE DE COMMUNAUTE");
@@ -64,14 +71,7 @@ public class FenetreCarteCommu extends Parent {
         l_contenu.setScaleX(1.5);
         l_contenu.setScaleY(1.5);
 
-        Rectangle r_fond = new Rectangle();
-        r_fond.setHeight(230);
-        r_fond.setWidth(475);
-        r_fond.setLayoutX(10);
-        r_fond.setLayoutY(10);
-        r_fond.setStroke(Color.BLACK);
-        r_fond.setStrokeWidth(1);
-        r_fond.setFill(Color.TRANSPARENT);
+
 
         //BOUTON
         Button bt_ok = new Button("Ok");

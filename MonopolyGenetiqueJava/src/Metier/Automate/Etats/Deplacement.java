@@ -82,7 +82,7 @@ public class Deplacement extends Etat{
         Joueur j = super.getListeJoueurs().get(0);
 
         //int resDes = j.getResLanceDes();
-        int resDes = 7; //POUR IHM
+        int resDes = 36; //POUR IHM
 
         Cases position = j.getPion().getCase();
 

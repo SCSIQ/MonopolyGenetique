@@ -35,14 +35,11 @@ public class FenetreCarteChance extends Parent {
 
         //LABEL CARTE CHANCE :
         Label carte_chance = new Label("CARTE CHANCE");
-
         carte_chance.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
         carte_chance.setLayoutX(205);
         carte_chance.setLayoutY(27);
-
         carte_chance.setScaleX(2);
         carte_chance.setScaleY(2);
-
         carte_chance.setTextFill(Color.WHITE);
 
         //CONTENU
