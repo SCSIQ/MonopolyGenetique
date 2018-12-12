@@ -52,7 +52,7 @@ public class LancerDesJoueur extends Etat {
                 j.setaLanceDes(false);
                 j.setNbDoubles(j.getNbDoubles()+1);
             }
-            else if(j.getNbDoubles()==2) //si trois doubles
+            else if(j.getNbDoubles()==2 && de1==de2) //si trois doubles
             {
                 j.setaLanceDes(true);
                 j.getPion().setGoToPrison(true);

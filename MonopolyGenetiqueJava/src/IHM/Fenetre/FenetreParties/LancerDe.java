@@ -4,6 +4,7 @@ import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
+import Metier.Plateau.ParcGratuit;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -80,6 +81,30 @@ public class LancerDe extends Parent {
                     if(automate.getJoueurCourant().getPion().getCase() instanceof Taxes)
                     {
                         fenetreEstSurTaxe(fenetre_actuelle, automate, zoneJoueur, zoneAd);
+                    }
+
+                    //Si le joueur est sur la case prison
+                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==10)
+                    {
+                        //Si le joueur n'st pas qu'en visite simple, et si c'est la première fois
+                        if(automate.getJoueurCourant().getEstEnPrison()==true && automate.getJoueurCourant().getEssaiesPourSortirDePrison()==0)
+                        {
+                            fenetreEnPrison(fenetre_actuelle, automate);
+                        }
+                    }
+
+                    //Si tombe sur le parc gratuit
+                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==20)
+                    {
+                        int cagnotte=((ParcGratuit)automate.getJoueurCourant().getPion().getCase()).recupererArgent() ;
+                        automate.getJoueurCourant().IncrementerSolde(cagnotte);
+                        //on remet à jour l'argent du joueur courant
+                        zoneJoueur.SupprimerJoueur();
+                        zoneJoueur.genereInfosJoueur(automate);
+
+                        //Met à jour les adversaires :
+                        zoneAd.SupprimerAdversaire();
+                        zoneAd.genererAdversaire(automate, fenetre_actuelle);
                     }
 
 
@@ -176,5 +201,24 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_taxe.show();
     }
 
+    //Permet d'afficher la fenêtre vous êtes en prison
+    public void fenetreEnPrison(Stage fenetre_actuelle, Automate automate)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_prison = new Stage();
+        VousEtesSurPrison fenetrePrison= new VousEtesSurPrison(nouvelle_fenetre_prison,canvas, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
+
+        nouvelle_fenetre_prison.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_prison.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_prison.show();
+    }
 
 }

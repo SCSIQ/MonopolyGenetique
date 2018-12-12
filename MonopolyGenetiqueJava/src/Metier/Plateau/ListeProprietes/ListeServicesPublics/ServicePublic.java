@@ -13,6 +13,17 @@ public abstract class ServicePublic extends Proprietes {
         super.setPrixHypotheque(0);
     }
 
+    public int getNbServicePublicPosseddes() {
+        int nbServicePublic = 0;
+        for (Proprietes p : super.getProprio().getListePropietes()) {
+            if(p instanceof ServicePublic)
+            {
+                nbServicePublic++;
+            }
+        }
+        return nbServicePublic;
+    }
+
     public int getLoyer(int resDesJCourant) {
 
         int toReturn = loyer;

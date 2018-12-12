@@ -78,6 +78,20 @@ public abstract class Terrain extends Proprietes {
         return loyerHotel;
     }
 
+    public int getNbTerrainCouleurPossedees() {
+        int nbTerrains = 0;
+        for (Proprietes p : super.getProprio().getListePropietes()) {
+            if(p instanceof Terrain)
+            {
+                if(((Terrain)p).couleur == this.couleur)
+                {
+                    nbTerrains++;
+                }
+            }
+        }
+        return nbTerrains;
+    }
+
     ///////////////////////SETTER ///////////
      public void setLoyerSansMaison(int loyerSansMaison) {
         this.loyerSansMaison = loyerSansMaison;

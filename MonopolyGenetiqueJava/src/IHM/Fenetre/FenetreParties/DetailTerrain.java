@@ -169,7 +169,7 @@ public class DetailTerrain extends Parent {
             Button bt_ok = new Button("REVENIR AU JEU");
 
             bt_ok.setLayoutX(180);
-            bt_ok.setLayoutY(180);
+            bt_ok.setLayoutY(300);
 
             bt_ok.setPrefSize(150, 10);
 

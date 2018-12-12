@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Metier.Automate.Automate;
+import Metier.Plateau.ParcGratuit;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.canvas.GraphicsContext;
@@ -73,7 +74,7 @@ public class ZoneInfoJoueur extends Parent {
         //ajout labels
         Label nom = new Label(automate.getJoueurCourant().getNom());
         Label argent = new Label("ARGENT : "+automate.getJoueurCourant().getSolde()+" €");
-        Label enPrison = new Label("EN PRISON : "+automate.getJoueurCourant().getEstEnPrison());
+        Label cagnotte = new Label("CAGNOTTE : "+((ParcGratuit)automate.getJoueurCourant().getListeCases().get(20)).getArgantDansParc()+" €");
         Label tour = new Label("TOUR : "+automate.getNumTour());
 
 
@@ -87,17 +88,17 @@ public class ZoneInfoJoueur extends Parent {
         argent.setLayoutY(55);
         argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
-        //EN PRISON
-        enPrison.setLayoutX(380);
-        enPrison.setLayoutY(55);
-        enPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        //Cagnotte
+        cagnotte.setLayoutX(380);
+        cagnotte.setLayoutY(55);
+        cagnotte.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //TOUR
         tour.setLayoutX(520);
         tour.setLayoutY(55);
         tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
-        infosJoueur.getChildren().add(enPrison);
+        infosJoueur.getChildren().add(cagnotte);
         infosJoueur.getChildren().add(argent);
         infosJoueur.getChildren().add(tour);
         infosJoueur.getChildren().add(r_couleur);
