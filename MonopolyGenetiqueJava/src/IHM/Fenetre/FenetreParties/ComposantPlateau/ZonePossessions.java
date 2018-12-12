@@ -54,15 +54,17 @@ public class ZonePossessions extends Parent {
     private Canvas canvas;
     private Automate automate;
     private Jeu jeu ;
+    private PlateauJeu pl ;
 
 
-    public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu, ZoneAdversaires ad)
+    public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu, ZoneAdversaires ad, PlateauJeu pl)
     {
         this.jeu = jeu ;
         this.automate = automate ;
         this.canvas= canvas ;
         this.fenetre_actuelle = fenetre_actuelle;
         this.ad = ad ;
+        this.pl = pl ;
 
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
@@ -460,7 +462,7 @@ public class ZonePossessions extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true, pl);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 

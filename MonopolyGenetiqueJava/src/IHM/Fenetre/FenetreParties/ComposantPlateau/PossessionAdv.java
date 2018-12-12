@@ -82,13 +82,17 @@ public class PossessionAdv extends Parent {
     private ArrayList<Label> listeCompagniesLabel ;
     private ArrayList<Rectangle> listeCouleur ;
 
-    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu)
+    private PlateauJeu pl ;
+
+    public PossessionAdv(Stage nouvelle_fenetre_menu, Stage fenetre_actuelle, Canvas canvas, Automate automate,int i, Jeu jeu, PlateauJeu pl)
     {
         this.automate=automate;
         this.canvas=canvas;
         this.jeu=jeu;
         this.fenetre_actuelle=fenetre_actuelle;
         this.numJoueur=i;
+
+        this.pl = pl ;
 
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
@@ -499,7 +503,7 @@ public class PossessionAdv extends Parent {
       //  jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), numBouton, this, false);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), numBouton, this, false, pl);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 

@@ -1,8 +1,10 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.PossessionAdv;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
 
+import IHM.Plateau.VueCases;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
@@ -13,6 +15,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -20,6 +24,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+
+import java.net.URL;
 
 public class DetailTerrain extends Parent {
 
@@ -29,8 +35,9 @@ public class DetailTerrain extends Parent {
     private ZonePossessions poss ;
     private PossessionAdv possAd ;
     private Pane zoneVendre;
+    private PlateauJeu pl ;
 
-    public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant){
+    public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant, PlateauJeu pl){
 
         zoneInfosTerrain = new Pane();
         zoneMaisonHotel= new Pane();
@@ -38,8 +45,9 @@ public class DetailTerrain extends Parent {
         this.numBouton= numBouton ;
         this.poss = poss ;
         this.possAd = possAd ;
+        this.pl = pl ;
 
-        if(joueurCourant==true){
+         if(joueurCourant==true){
             Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).toString().toUpperCase()+"");
 
             /////////TAILLE MIN ET MAX DE LA FENETRE
@@ -297,124 +305,8 @@ public class DetailTerrain extends Parent {
             public void handle(ActionEvent event) {
                 //DIT AU METIER QU'ON ACHETE UNE MAISON DE PLUS
                 automate.evoluer("AcheterMaison");
-
-                //Si la case est en bas
-                for (int i=0; i<10; i++)
-                {
-                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-                    {
-                        //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
-
-                        if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                        {
-
-                        }
-                    }
-                }
-
-                //Si la case est à gauche
-                for (int i=10; i<20; i++)
-                {
-                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-                    {
-                        //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
-
-                        if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                        {
-
-                        }
-                    }
-                }
-
-
-                //Si la case est à haut
-                for (int i=20; i<30; i++)
-                {
-                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-                    {
-                        //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
-
-                        if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                        {
-
-                        }
-                    }
-                }
-
-                //Si la case est à droite
-                for (int i=30; i<40; i++)
-                {
-                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-                    {
-                        //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
-
-                        if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                        {
-
-                        }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                        {
-
-                        }
-                    }
-                }
-            }
+                afficherMaison(automate);
+           }
         });
 
         bt_ConstruireMaison.setLayoutX(130);
@@ -472,6 +364,158 @@ public class DetailTerrain extends Parent {
         zoneVendre.getChildren().add(l_warning);
 
         this.getChildren().add(zoneVendre);
+    }
+
+    private void afficherMaison(Automate automate)
+    {
+        //Si la case est en bas
+        for (int i=0; i<10; i++)
+        {
+            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
+            {
+                //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
+
+                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
+                {
+                    //Récupère la case pour placer la maison
+                    VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
+
+                  /*  URL urlMaison = getClass().getResource("Images/maison.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);*/
+
+                    //Ajout de la maison
+                   // caseMaison.getChildren().add(maison);
+                }
+                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
+                {
+                    //Récupère la case pour placer la maison
+                    VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
+
+                  /*  URL urlMaison = getClass().getResource("Images/maison.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);*/
+
+                    //Ajout de la maison
+                    // caseMaison.getChildren().add(maison);
+                }
+                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
+                {
+                    //Récupère la case pour placer la maison
+                    VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
+
+                  /*  URL urlMaison = getClass().getResource("Images/maison.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);*/
+
+                    //Ajout de la maison
+                    // caseMaison.getChildren().add(maison);
+                }
+                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
+                {
+
+                }
+                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
+                {
+
+                }
+                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
+                {
+
+                }
+            }
+        }
+
+        //Si la case est à gauche
+        for (int i=10; i<20; i++)
+        {
+            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
+            {
+                //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
+
+                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
+                {
+
+                }
+            }
+        }
+
+
+        //Si la case est à haut
+        for (int i=20; i<30; i++)
+        {
+            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
+            {
+                //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
+
+                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
+                {
+
+                }
+            }
+        }
+
+        //Si la case est à droite
+        for (int i=30; i<40; i++)
+        {
+            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
+            {
+                //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
+
+                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
+                {
+
+                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
+                {
+
+                }
+            }
+        }
     }
 
     public void detruireCanvas(Canvas canvas)

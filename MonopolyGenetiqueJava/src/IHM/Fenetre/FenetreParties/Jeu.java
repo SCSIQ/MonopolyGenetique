@@ -53,12 +53,12 @@ public class Jeu extends Parent {
 
         //APPEL ZONE ADVERSAIRE
 
-        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this);
+        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this, pl);
         this.getChildren().add(zoneAd);
         zoneAd.genererAdversaire(automate, nouvelle_fenetre);
 
         //APPEL ZONE POSSESSION
-        poss = new ZonePossessions(automate, nouvelle_fenetre, canvas, this, zoneAd);
+        poss = new ZonePossessions(automate, nouvelle_fenetre, canvas, this, zoneAd, pl);
         poss.RectangleCartePrison();
         poss.RectangleCompagnies(automate);
         poss.RectangleGare(automate);
