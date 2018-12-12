@@ -2,6 +2,7 @@ package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeCartes.CaisseCommune;
 import Metier.Plateau.ListeCartes.Chance;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
@@ -114,6 +115,11 @@ public class LancerDe extends Parent {
                         fenetreChance(fenetre_actuelle, automate, zoneJoueur, zoneAd) ; 
                     }
 
+                    //si la case est une case Caisse de communauté
+                    if(automate.getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
+                    {
+                        fenetreCommu(fenetre_actuelle, automate, zoneJoueur, zoneAd);
+                    }
 
 
                 }
@@ -247,6 +253,23 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_chance.show();
     }
 
+    public void fenetreCommu(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        jeu.fenetreNoire();
 
+        Stage nouvelle_fenetre_commu = new Stage();
+        FenetreCarteCommu fenetreCommu= new FenetreCarteCommu(nouvelle_fenetre_commu,canvas, automate, zoneJoueur, zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetreCommu,650,550);
+
+        nouvelle_fenetre_commu.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_commu.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_commu.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_commu.show();
+    }
 
 }
