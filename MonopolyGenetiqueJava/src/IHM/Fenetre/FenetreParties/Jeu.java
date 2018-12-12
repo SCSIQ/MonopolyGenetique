@@ -124,7 +124,7 @@ public class Jeu extends Parent {
                     poss.afficherCompagnie(automate);
 
 
-                    fenetreTour(nouvelle_fenetre, automate);
+                    fenetreTour(nouvelle_fenetre, automate, pl, poss, zoneAd, zoneJoueur, pion);
                     zoneJoueur.SupprimerJoueur();
                     zoneAd.SupprimerAdversaire();
                     zoneJoueur.genereInfosJoueur(automate);
@@ -220,12 +220,12 @@ public class Jeu extends Parent {
         nouvelle_fenetre_menu.show();
     }
 
-    public void fenetreTour(Stage fenetre_actuelle, Automate automate)
+    public void fenetreTour(Stage fenetre_actuelle, Automate automate, PlateauJeu plateauJeu, ZonePossessions poss, ZoneAdversaires zonAd, ZoneInfoJoueur zoneJoueur, Pion pion)
     {
         fenetreNoire();
 
         Stage nouvelle_fenetre_des = new Stage();
-        tourSuivant fenetreDe = new tourSuivant(nouvelle_fenetre_des, canvas, automate);
+        tourSuivant fenetreDe = new tourSuivant(nouvelle_fenetre_des, canvas, automate, this, plateauJeu, poss, zonAd, zoneJoueur, pion);
 
         Scene nouvelle_scene = new  Scene(fenetreDe,600,300);
 

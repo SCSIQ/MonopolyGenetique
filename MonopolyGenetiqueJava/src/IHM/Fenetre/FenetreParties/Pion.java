@@ -70,18 +70,22 @@ public class Pion extends Parent {
             if(automate.getListeJoueurs().size()==2)
             {
                 deplacerDeuxPions();
+                deuxPionEnPrison();
             }
             else if(automate.getListeJoueurs().size()==3)
             {
                 deplacerTroisPions();
+                troisPionEnPrison();
             }
             else if(automate.getListeJoueurs().size()==4)
             {
                 deplacerQuatrePions();
+                quatrePionEnPrison();
             }
             else if(automate.getListeJoueurs().size()==5)
             {
                 deplacerCinqPions();
+                cinqPionEnPrison();
             }
             // ON AJOUTE A CE PANEL
              p.getChildren().add(pions.get(0));
@@ -2056,5 +2060,50 @@ public class Pion extends Parent {
         }
 
     }
+
+    public void deuxPionEnPrison()
+    {
+        if(automate.getListeJoueurs().get(0).getEstEnPrison()==true)
+        {
+            pions.get(0).setLayoutX(43);
+            pions.get(0).setLayoutY(13);
+        }
+        if(automate.getListeJoueurs().get(1).getEstEnPrison()==true)
+        {
+            pions.get(1).setLayoutX(43);
+            pions.get(1).setLayoutY(43);
+        }
+    }
+
+    public void troisPionEnPrison()
+    {
+        deuxPionEnPrison();
+        if(automate.getListeJoueurs().get(2).getEstEnPrison()==true)
+        {
+            pions.get(2).setLayoutX(75);
+            pions.get(2).setLayoutY(13);
+        }
+    }
+
+    public void quatrePionEnPrison()
+    {
+        troisPionEnPrison();
+        if(automate.getListeJoueurs().get(3).getEstEnPrison()==true)
+        {
+            pions.get(3).setLayoutX(75);
+            pions.get(3).setLayoutY(43);
+        }
+    }
+
+    public void cinqPionEnPrison()
+    {
+        quatrePionEnPrison();
+        if(automate.getListeJoueurs().get(4).getEstEnPrison()==true)
+        {
+            pions.get(4).setLayoutX(60);
+            pions.get(4).setLayoutY(28);
+        }
+    }
+
 }
 
