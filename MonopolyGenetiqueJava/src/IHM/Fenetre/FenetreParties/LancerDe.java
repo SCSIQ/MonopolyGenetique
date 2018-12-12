@@ -82,15 +82,7 @@ public class LancerDe extends Parent {
                         fenetreEstSurTaxe(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                     }
 
-                    //Si le joueur est sur la case prison
-                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==10)
-                    {
-                        //si il n'est pas en visite simple
-                        if(automate.getJoueurCourant().getEstEnPrison()==true)
-                        {
-                            fenetreEnPrison(fenetre_actuelle, automate, zoneJoueur, zoneAd);
-                        }
-                    }
+
 
                 }
             });
@@ -184,22 +176,5 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_taxe.show();
     }
 
-    public void fenetreEnPrison(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
-    {
-        jeu.fenetreNoire();
 
-        Stage nouvelle_fenetre_prison = new Stage();
-        FenetrePrison fenetrePrison= new FenetrePrison(nouvelle_fenetre_prison,canvas, automate, plateauJeu, zoneJoueur, jeu, poss,  zoneAd);
-
-        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
-
-        nouvelle_fenetre_prison.setScene(nouvelle_scene);
-
-        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
-        nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_prison.initOwner(fenetre_actuelle);
-
-        //POSITION DE LA FENETRE
-        nouvelle_fenetre_prison.show();
-    }
 }

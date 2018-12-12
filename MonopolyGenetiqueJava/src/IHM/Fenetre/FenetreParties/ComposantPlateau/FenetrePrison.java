@@ -2,11 +2,13 @@ package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import IHM.Fenetre.FenetreParties.Jeu;
 import IHM.Fenetre.FenetreParties.LancerDe;
+import IHM.Fenetre.FenetreParties.Pion;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeTaxes.Taxes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -14,7 +16,9 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class FenetrePrison extends Parent {
 
@@ -23,8 +27,9 @@ public class FenetrePrison extends Parent {
     private ZoneInfoJoueur zoneJoueur ;
     private ZoneAdversaires zoneAd;
     private ZonePossessions poss ;
+    private Jeu jeu ;
 
-    public FenetrePrison(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu,ZonePossessions poss,  ZoneAdversaires zoneAd){
+    public FenetrePrison(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu,ZonePossessions poss,  ZoneAdversaires zoneAd, Pion pion){
 
         //INITIALISATION
         this.canvas = canvas ;
@@ -73,9 +78,13 @@ public class FenetrePrison extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
-                LancerDe lancer_des = new LancerDe( fenetre_actuelle,  canvas,  automate,  jeu,  plateauJeu, zoneJoueur,  poss,  zoneAd);
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+
+                automate.evoluer("lancerDes");
+               jeu.fenetreDes(fenetre_actuelle,automate,  plateauJeu, zoneJoueur, poss, zoneAd) ;
+                pion.entrerDansCase();
+
             }
         });
 ///////////////////////////////////BOUTON CARTE LIBERE
@@ -105,6 +114,13 @@ public class FenetrePrison extends Parent {
         fenetre_actuelle.setMaxHeight(600);
         fenetre_actuelle.setMaxWidth(650);
 
+////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
+        fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                event.consume();
+            }
+        });
 
 
 //////////////////////AJOUT
@@ -123,6 +139,8 @@ public class FenetrePrison extends Parent {
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
     }
+
+
 
 
 }
