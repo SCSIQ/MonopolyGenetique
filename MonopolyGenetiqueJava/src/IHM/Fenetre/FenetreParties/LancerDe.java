@@ -4,6 +4,7 @@ import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
+import Metier.Plateau.ParcGratuit;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -90,6 +91,20 @@ public class LancerDe extends Parent {
                         {
                             fenetreEnPrison(fenetre_actuelle, automate);
                         }
+                    }
+
+                    //Si tombe sur le parc gratuit
+                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==20)
+                    {
+                        int cagnotte=((ParcGratuit)automate.getJoueurCourant().getPion().getCase()).recupererArgent() ;
+                        automate.getJoueurCourant().IncrementerSolde(cagnotte);
+                        //on remet à jour l'argent du joueur courant
+                        zoneJoueur.SupprimerJoueur();
+                        zoneJoueur.genereInfosJoueur(automate);
+
+                        //Met à jour les adversaires :
+                        zoneAd.SupprimerAdversaire();
+                        zoneAd.genererAdversaire(automate, fenetre_actuelle);
                     }
 
 
