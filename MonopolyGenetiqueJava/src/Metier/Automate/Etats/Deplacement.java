@@ -82,7 +82,7 @@ public class Deplacement extends Etat{
         Joueur j = super.getListeJoueurs().get(0);
 
         //int resDes = j.getResLanceDes();
-        int resDes = 12; //POUR IHM
+        int resDes = 30; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
@@ -92,6 +92,7 @@ public class Deplacement extends Etat{
             j.getPion().setGoToPrison(false);
             j.Avancer(10);
             j.setEstEnPrison(true);
+            j.setaLanceDes(true);
         }
         else if(j.getEstEnPrison()==true) //si le joueur est en prison
         {
@@ -100,12 +101,17 @@ public class Deplacement extends Etat{
                 j.setEstEnPrison(false);
                 avancer(j, resDes, position);
             }
-            else if(j.getEssaiesPourSortirDePrison()<3) //si ça fait déja 3 tours qu'il est en prison
+            else if(j.getEssaiesPourSortirDePrison()>=2) //si ça fait déja 2 tours qu'il est en prison
             {
                 j.DecrementerSolde(500); //paye 500 pour sortir (n'a pas le choix)
                 j.setEstEnPrison(false);
                 avancer(j, resDes, position);
             }
+            else
+            {
+                j.setEssaiesPourSortirDePrison(j.getEssaiesPourSortirDePrison()+1);
+            }
+            System.out.println("    EssaiesPourSortirDePrison : "+j.getEssaiesPourSortirDePrison());
         }
         else //sinon, déroulement normal des déplacements
         {
