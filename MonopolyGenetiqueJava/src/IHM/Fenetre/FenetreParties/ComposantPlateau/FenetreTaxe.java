@@ -14,6 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 
 public class FenetreTaxe extends Parent {
@@ -74,6 +75,14 @@ public class FenetreTaxe extends Parent {
 
         fenetre_actuelle.setMaxHeight(300);
         fenetre_actuelle.setMaxWidth(520);
+
+////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
+fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
+    @Override
+    public void handle(WindowEvent event) {
+        event.consume();
+    }
+});
 
 
 

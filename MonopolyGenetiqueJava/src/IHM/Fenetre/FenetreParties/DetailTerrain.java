@@ -292,6 +292,12 @@ public class DetailTerrain extends Parent {
 
         Button bt_ConstruireMaison = new Button("CONSTRUIRE UNE MAISON");
 
+        bt_ConstruireMaison.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
 
         bt_ConstruireMaison.setLayoutX(130);
         bt_ConstruireMaison.setLayoutY(80);
