@@ -371,28 +371,27 @@ public class DetailTerrain extends Parent {
         //Si la case est en bas
         for (int i=0; i<10; i++)
         {
+            //Récupère la case pour placer la maison
+            VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
             if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
             {
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
                 if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
                 {
-                    //Récupère la case pour placer la maison
-                    VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
-
-
-                  /*  URL urlMaison = getClass().getResource("Images/maison.png");
+                   /* URL urlMaison = getClass().getResource("Images/maison.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
-                    ImageView maison = new ImageView(i_maison);*/
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(25);
+                    maison.setLayoutY(5);
 
                     //Ajout de la maison
-                   // caseMaison.getChildren().add(maison);
+                    caseMaison.getChildren().add(maison);*/
                 }
                 else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
                 {
-                    //Récupère la case pour placer la maison
-                    VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
-
 
                   /*  URL urlMaison = getClass().getResource("Images/maison.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
@@ -403,10 +402,6 @@ public class DetailTerrain extends Parent {
                 }
                 else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
                 {
-                    //Récupère la case pour placer la maison
-                    VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
-
-
                   /*  URL urlMaison = getClass().getResource("Images/maison.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);*/
