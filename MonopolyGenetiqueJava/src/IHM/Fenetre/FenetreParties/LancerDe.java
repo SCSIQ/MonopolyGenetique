@@ -82,6 +82,16 @@ public class LancerDe extends Parent {
                         fenetreEstSurTaxe(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                     }
 
+                    //Si le joueur est sur la case prison
+                    if(automate.getJoueurCourant().getPion().getCase().getPosition()==10)
+                    {
+                        //Si le joueur n'st pas qu'en visite simple, et si c'est la première fois
+                        if(automate.getJoueurCourant().getEstEnPrison()==true && automate.getJoueurCourant().getEssaiesPourSortirDePrison()==0)
+                        {
+                            fenetreEnPrison(fenetre_actuelle, automate);
+                        }
+                    }
+
 
 
                 }
@@ -176,5 +186,24 @@ public class LancerDe extends Parent {
         nouvelle_fenetre_taxe.show();
     }
 
+    //Permet d'afficher la fenêtre vous êtes en prison
+    public void fenetreEnPrison(Stage fenetre_actuelle, Automate automate)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_prison = new Stage();
+        VousEtesSurPrison fenetrePrison= new VousEtesSurPrison(nouvelle_fenetre_prison,canvas, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
+
+        nouvelle_fenetre_prison.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_prison.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_prison.show();
+    }
 
 }
