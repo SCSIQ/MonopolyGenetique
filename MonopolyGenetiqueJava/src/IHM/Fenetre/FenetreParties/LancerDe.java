@@ -2,6 +2,7 @@ package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeCartes.Chance;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
 import Metier.Plateau.ParcGratuit;
@@ -105,6 +106,12 @@ public class LancerDe extends Parent {
                         //Met à jour les adversaires :
                         zoneAd.SupprimerAdversaire();
                         zoneAd.genererAdversaire(automate, fenetre_actuelle);
+                    }
+
+                    //Si la case est une case Chance
+                    if(automate.getJoueurCourant().getPion().getCase() instanceof Chance )
+                    {
+                        fenetreChance(fenetre_actuelle, automate, zoneJoueur, zoneAd) ; 
                     }
 
 
@@ -220,5 +227,26 @@ public class LancerDe extends Parent {
         //POSITION DE LA FENETRE
         nouvelle_fenetre_prison.show();
     }
+
+    public void fenetreChance(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_chance = new Stage();
+        FenetreCarteChance fenetrePrison= new FenetreCarteChance(nouvelle_fenetre_chance,canvas, automate, zoneJoueur, zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
+
+        nouvelle_fenetre_chance.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_chance.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_chance.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_chance.show();
+    }
+
+
 
 }
