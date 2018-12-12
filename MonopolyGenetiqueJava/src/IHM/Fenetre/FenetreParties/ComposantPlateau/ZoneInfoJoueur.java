@@ -73,7 +73,7 @@ public class ZoneInfoJoueur extends Parent {
         //ajout labels
         Label nom = new Label(automate.getJoueurCourant().getNom());
         Label argent = new Label("ARGENT : "+automate.getJoueurCourant().getSolde()+" €");
-        Label enPrison = new Label("EN PRISON :");
+        Label enPrison = new Label("EN PRISON : "+automate.getJoueurCourant().getEstEnPrison());
         Label tour = new Label("TOUR : "+automate.getNumTour());
 
 
@@ -88,7 +88,7 @@ public class ZoneInfoJoueur extends Parent {
         argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
         //EN PRISON
-        enPrison.setLayoutX(390);
+        enPrison.setLayoutX(380);
         enPrison.setLayoutY(55);
         enPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
 
