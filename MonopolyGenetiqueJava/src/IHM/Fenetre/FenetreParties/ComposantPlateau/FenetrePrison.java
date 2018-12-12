@@ -37,22 +37,84 @@ public class FenetrePrison extends Parent {
         this.zoneAd = zoneAd ;
         this.poss = poss ;
 
-        Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
-                "\n\nVous devez faire un double pour sortir\ndès le prochain tour !" +"Vous avez 3 chances.\n\nPasser ces 3 tours, vous devrez payer 500 €." );
-        l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-        l.setLayoutX(180);
-        l.setLayoutY(60);
+        Label l_Joueur = new Label(automate.getJoueurCourant().getNom());
 
-        l.setScaleX(2);
-        l.setScaleY(2);
+        l_Joueur.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        l_Joueur.setLayoutX(50);
+        l_Joueur.setLayoutY(15);
+
+        l_Joueur.setScaleX(1.5);
+        l_Joueur.setScaleY(1.5);
+
+        int tour = automate.getJoueurCourant().getEssaiesPourSortirDePrison()+1;
+
+        Label l_Tour = new Label("TOUR : "+tour+"/3");
+
+        l_Tour.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        l_Tour.setLayoutX(500);
+        l_Tour.setLayoutY(15);
+
+        l_Tour.setScaleX(1.5);
+        l_Tour.setScaleY(1.5);
+
+
+        Label l = new Label("VOUS ETES EN PRISON");
+
+        l.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        l.setLayoutX(230);
+        l.setLayoutY(70);
+
+        l.setScaleX(3);
+        l.setScaleY(3);
+
+
+        Label l_2 = new Label("POUS SORTIR, VOUS AVEZ PLUSIEURS CHOIX" );
+        l_2.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        l_2.setLayoutX(180);
+        l_2.setLayoutY(120);
+
+        l_2.setScaleX(2);
+        l_2.setScaleY(2);
+
+        Label l_Paye = new Label("         PAYEZ \n500 € IMMEDIATEMENT");
+        l_Paye.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        l_Paye.setLayoutX(50);
+        l_Paye.setLayoutY(180);
+
+        l_Paye.setScaleX(1.2);
+        l_Paye.setScaleY(1.2);
+
+        Label l_Double = new Label("ESSAYEZ DE FAIRE \n     UN DOUBLE");
+        l_Double.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        l_Double.setLayoutX(260);
+        l_Double.setLayoutY(180);
+
+        l_Double.setScaleX(1.2);
+        l_Double.setScaleY(1.2);
+
+        Label l_Carte = new Label("       UTILISEZ \n      UNE CARTE \n'SORTEZ DE PRISON'");
+        l_Carte.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        l_Carte.setLayoutX(450);
+        l_Carte.setLayoutY(180);
+
+        l_Carte.setScaleX(1.2);
+        l_Carte.setScaleY(1.2);
+
+        Label l_Note = new Label(" Note : Au bout de trois tours, vous sortez obligatoirement et vous payez 500 €");
+        l_Note.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        l_Note.setLayoutX(70);
+        l_Note.setLayoutY(330);
+
+        l_Note.setScaleX(1.1);
+        l_Note.setScaleY(1.1);
 
         ////////////////////////////BOUTON
-        Button bt_payer= new Button("PAYER");
+        Button bt_payer= new Button("PAYER 500");
 
-        bt_payer.setLayoutX(50);
-        bt_payer.setLayoutY(400);
+        bt_payer.setLayoutX(25);
+        bt_payer.setLayoutY(250);
 
-        bt_payer.setPrefSize(150, 10);
+        bt_payer.setPrefSize(180, 10);
 
         bt_payer.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -72,10 +134,10 @@ public class FenetrePrison extends Parent {
 /////////////////////////////////////BOUTON LANCER LES DES
        Button bt_lancerDes = new Button("LANCER LES DES");
 
-        bt_lancerDes.setLayoutX(230);
-        bt_lancerDes.setLayoutY(400);
+        bt_lancerDes.setLayoutX(225);
+        bt_lancerDes.setLayoutY(250);
 
-        bt_lancerDes.setPrefSize(150, 10);
+        bt_lancerDes.setPrefSize(180, 10);
 
         bt_lancerDes.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -93,12 +155,12 @@ public class FenetrePrison extends Parent {
             }
         });
 ///////////////////////////////////BOUTON CARTE LIBERE
-        Button bt_carte = new Button("UTILISER UNE CARTE");
+        Button bt_carte = new Button("'SORTIR DE PRISON'");
 
-        bt_carte.setLayoutX(400);
-        bt_carte.setLayoutY(400);
+        bt_carte.setLayoutX(425);
+        bt_carte.setLayoutY(250);
 
-        bt_carte.setPrefSize(150, 10);
+        bt_carte.setPrefSize(180, 10);
 
         bt_carte.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -113,10 +175,10 @@ public class FenetrePrison extends Parent {
 
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_actuelle.setMinHeight(600);
+        fenetre_actuelle.setMinHeight(450);
         fenetre_actuelle.setMinWidth(650);
 
-        fenetre_actuelle.setMaxHeight(600);
+        fenetre_actuelle.setMaxHeight(450);
         fenetre_actuelle.setMaxWidth(650);
 
 ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
@@ -133,7 +195,13 @@ public class FenetrePrison extends Parent {
         this.getChildren().add(bt_lancerDes);
         this.getChildren().add(bt_carte);
         this.getChildren().add(l);
-
+        this.getChildren().add(l_2);
+        this.getChildren().add(l_Paye);
+        this.getChildren().add(l_Double);
+        this.getChildren().add(l_Carte);
+        this.getChildren().add(l_Note);
+        this.getChildren().add(l_Tour);
+        this.getChildren().add(l_Joueur);
 
     }
 
