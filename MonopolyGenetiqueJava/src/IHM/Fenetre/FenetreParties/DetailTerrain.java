@@ -369,148 +369,326 @@ public class DetailTerrain extends Parent {
     private void afficherMaison(Automate automate)
     {
         //Si la case est en bas
-        for (int i=0; i<10; i++)
-        {
-            //Récupère la case pour placer la maison
-            VueCases caseMaison =pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+        for (int i=0; i<10; i++) {
 
-            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-            {
+
+
+            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i) {
+
+                //Récupère la case pour placer la maison
+                VueCases caseMaison = pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
-                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                {
-                   /* URL urlMaison = getClass().getResource("Images/maison.png");
+                if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 0) {
+                    URL urlMaison = getClass().getResource("images/une_maison_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(25);
-                    maison.setLayoutY(5);
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
                     //Ajout de la maison
-                    caseMaison.getChildren().add(maison);*/
-                }
-                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                {
-
-                  /*  URL urlMaison = getClass().getResource("Images/maison.png");
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()== 1) {
+                    URL urlMaison = getClass().getResource("images/deux_maisons_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
-                    ImageView maison = new ImageView(i_maison);*/
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
                     //Ajout de la maison
-                    // caseMaison.getChildren().add(maison);
-                }
-                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                {
-                  /*  URL urlMaison = getClass().getResource("Images/maison.png");
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 2) {
+                    URL urlMaison = getClass().getResource("images/trois_maisons_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
-                    ImageView maison = new ImageView(i_maison);*/
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
                     //Ajout de la maison
-                    // caseMaison.getChildren().add(maison);
-                }
-                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                {
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain) poss.getListeTerrains().get(numBouton)).getNbMaisons() == 3) {
+                    URL urlMaison = getClass().getResource("images/quatre_maisons_bas.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }
-                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                {
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
 
-                }
-                else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                {
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 4) {
+                    URL urlMaison = getClass().getResource("images/hotel_bas.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
                 }
             }
+
         }
 
         //Si la case est à gauche
-        for (int i=10; i<20; i++)
-        {
-            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-            {
+        for (int i=10; i<20; i++) {
+            //Récupère la case pour placer la maison
+            VueCases caseMaison = pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+
+            if (automate.getJoueurCourant().getPion().getCase().getPosition() ==i) {
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
-                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                {
+                if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 0) {
+                    URL urlMaison = getClass().getResource("images/une_maison_gauche.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                {
+                    maison.setLayoutX(5);
+                    maison.setLayoutY(0);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                {
+                    maison.setFitWidth(80);
+                    maison.setPreserveRatio(true);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                {
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if ((poss.getListeTerrains().get(numBouton)).getNbMaisons() == 1) {
+                    URL urlMaison = getClass().getResource("images/deux_maisons_gauche.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                {
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                {
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()== 2) {
+                    URL urlMaison = getClass().getResource("images/trois_maisons_gauche.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 3) {
+                    URL urlMaison = getClass().getResource("images/quatre_maisons_gauche.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 4) {
+                    URL urlMaison = getClass().getResource("images/hotel_gauche.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
                 }
             }
         }
+
 
 
         //Si la case est à haut
-        for (int i=20; i<30; i++)
-        {
-            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-            {
+        for (int i=20; i<30; i++) {
+            //Récupère la case pour placer la maison
+            VueCases caseMaison = pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+            if (automate.getJoueurCourant().getPion().getCase().getPosition() == i) {
+
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
-                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                {
+                if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 1) {
+                    URL urlMaison = getClass().getResource("images/une_maison_haut.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                {
+                    maison.setLayoutX(10);
+                    maison.setLayoutY(0);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                {
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                {
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 2) {
+                    URL urlMaison = getClass().getResource("images/deux_maisons_haut.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                {
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                {
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()== 3) {
+                    URL urlMaison = getClass().getResource("images/trois_maisons_haut.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 4) {
+                    URL urlMaison = getClass().getResource("images/quatre_maisons_haut.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 5) {
+                    URL urlMaison = getClass().getResource("images/hotel_haut.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
                 }
             }
         }
+
 
         //Si la case est à droite
-        for (int i=30; i<40; i++)
-        {
-            if(automate.getJoueurCourant().getPion().getCase().getPosition()==i)
-            {
+        for (int i=30; i<40; i++) {
+            //Récupère la case pour placer la maison
+            VueCases caseMaison = pl.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition());
+            if (automate.getJoueurCourant().getPion().getCase().getPosition() == i) {
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
-                if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==0)
-                {
+                if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()== 1) {
+                    URL urlMaison = getClass().getResource("images/une_maison_droite.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==1)
-                {
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==2)
-                {
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==3)
-                {
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 2) {
+                    URL urlMaison = getClass().getResource("images/deux_maisons_droite.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==4)
-                {
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
 
-                }else if(((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()==5)
-                {
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
 
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 3) {
+                    URL urlMaison = getClass().getResource("images/trois_maisons_droite.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 4) {
+                    URL urlMaison = getClass().getResource("images/quatre_maisons_droite.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
+
+                } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 5) {
+                    URL urlMaison = getClass().getResource("images/hotel_droite.png");
+                    Image i_maison = new Image(urlMaison.toExternalForm());
+                    ImageView maison = new ImageView(i_maison);
+
+                    maison.setLayoutX(0);
+                    maison.setLayoutY(0);
+
+                    maison.setFitWidth(50);
+                    maison.setPreserveRatio(true);
+
+                    //Ajout de la maison
+                    caseMaison.getChildren().add(maison);
                 }
             }
         }
+
     }
 
     public void detruireCanvas(Canvas canvas)
