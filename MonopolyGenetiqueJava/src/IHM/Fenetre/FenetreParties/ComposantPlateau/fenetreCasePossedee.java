@@ -1,6 +1,7 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
 import Entites.Joueur;
+import IHM.Fenetre.FenetreParties.FenetreCarteChance;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.ListeGares.Gare;
@@ -11,6 +12,7 @@ import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -19,6 +21,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class fenetreCasePossedee extends Parent  {
@@ -26,6 +29,7 @@ public class fenetreCasePossedee extends Parent  {
     private Canvas canvas ;
     private ZoneInfoJoueur zoneJoueur ;
     private ZoneAdversaires zoneAd;
+    private int prixAPayer = 0 ; // représente le prix à payer au propriétaire
 
     public fenetreCasePossedee(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZoneAdversaires zoneAd){
 
@@ -35,7 +39,7 @@ public class fenetreCasePossedee extends Parent  {
         this.zoneAd = zoneAd ;
 
         Joueur j=null ; //représente le propriétaire de la case
-        int prixAPayer=0; // représente le prix à payer au propriétaire
+
 
        //SI C'EST UN TERRAIN
         if(automate.getJoueurCourant().getPion().getCase() instanceof  Terrain){
@@ -172,9 +176,16 @@ public class fenetreCasePossedee extends Parent  {
                 //Met à jour les adversaires :
                 zoneAd.SupprimerAdversaire();
                 zoneAd.genererAdversaire(automate, fenetre_actuelle);
-
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+
+                //si le joueur n'a pas assez d'argent pour payer
+                if(automate.getJoueurCourant().getSolde()< prixAPayer)
+                {
+                    fenetreFaillite(fenetre_actuelle, automate,  zoneJoueur, zoneAd) ;
+                }
+
+
             }
         });
 
@@ -194,12 +205,35 @@ public class fenetreCasePossedee extends Parent  {
 
     }
 
+
+
     public void detruireCanvas(Canvas canvas)
     {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
+    }
+
+
+    public void fenetreFaillite(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        //jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_faillite = new Stage();
+
+        FenetreFaillite_1 fenetreFaillite= new FenetreFaillite_1(nouvelle_fenetre_faillite,canvas, automate, zoneJoueur, zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetreFaillite,650,550);
+
+        nouvelle_fenetre_faillite.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_faillite.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_faillite.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_faillite.show();
     }
 
 }
