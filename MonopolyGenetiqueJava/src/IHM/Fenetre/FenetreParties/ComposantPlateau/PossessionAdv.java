@@ -302,7 +302,7 @@ public class PossessionAdv extends Parent {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////AFFICHAGE DES POSSESSION
     public void afficherTerrain(Automate automate) {
         int y = 0;
-
+        int j = 0 ; 
         for (int i = 0; i < automate.getListeJoueurs().get(numJoueur).getListePropietes().size(); i++) {
             if (automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Terrain) {
                 Label terrain = new Label("" + automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString() + "\n");
@@ -361,17 +361,18 @@ public class PossessionAdv extends Parent {
 
                 Terrain ter = (Terrain) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
-                boutonsTerrains.add(bt_detail);
+                boutonsTerrains.add(j, bt_detail);
                 listeTerrainsLabel.add(terrain);
                 listeCouleur.add(r_couleur);
 
-                this.appuieBoutonTerrain(bt_detail, i);
+                this.appuieBoutonTerrain(bt_detail, j);
 
                 listeTerrains.add(ter);
 
                 zoneTerrain.getChildren().add(terrain);
                 zoneTerrain.getChildren().add(bt_detail);
                 y += 30;
+                j++ ;
             }
 
 
@@ -390,6 +391,7 @@ public class PossessionAdv extends Parent {
     public void afficherGare(Automate automate)
     {
         int y = 0 ;
+        int j = 0 ;
         for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++)
         {
             if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Gare){
@@ -404,18 +406,19 @@ public class PossessionAdv extends Parent {
                 bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(30+y);
 
-                boutonsGares.add(bt_detail);
+                boutonsGares.add(j,bt_detail);
                 listeGaresLabel.add(gare);
 
                 Gare gares = (Gare) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
-                this.appuieBoutonGare(bt_detail, i);
+                this.appuieBoutonGare(bt_detail, j);
 
 
                 zoneGare.getChildren().add(bt_detail);
                 listeGares.add(gares);
                 zoneGare.getChildren().add(gare);
                 y+=30 ;
+                j++;
             }
 
 
@@ -430,6 +433,7 @@ public class PossessionAdv extends Parent {
     {
 
         int y = 0 ;
+        int j = 0 ;
         for(int i =0 ; i<automate.getListeJoueurs().get(numJoueur).getListePropietes().size() ; i++) {
             if (automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof ServicePublic) {
                 {
@@ -447,15 +451,16 @@ public class PossessionAdv extends Parent {
                     bt_detail.setLayoutX(200);
                     bt_detail.setLayoutY(30 + y);
 
-                    boutonsCompagnie.add(bt_detail);
+                    boutonsCompagnie.add(j, bt_detail);
                     listeCompagniesLabel.add(compagnie);
 
-                    this.appuieBoutonCompagnie(bt_detail, i);
+                    this.appuieBoutonCompagnie(bt_detail, j);
                     listeCompagnies.add(compa);
 
                     zoneCompagnie.getChildren().add(compagnie);
                     zoneCompagnie.getChildren().add(bt_detail);
                     y += 30;
+                    j++ ;
                 }
 
             }
