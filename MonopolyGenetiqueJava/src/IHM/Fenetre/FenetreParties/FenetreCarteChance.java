@@ -165,7 +165,7 @@ public class FenetreCarteChance extends Parent {
         //FENETRE APPARAISSANT SI LA CASE EST LIBRE
         public void fenetreVousEtesSur(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
         {
-            //jeu.fenetreNoire();
+            jeu.fenetreNoire();
 
             Stage nouvelle_fenetre_vousEtesSur = new Stage();
             fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, jeu.getPl(), zoneJoueur, jeu, poss);
@@ -185,7 +185,7 @@ public class FenetreCarteChance extends Parent {
         //FENETRE APPARAIT SI LE JOUEUR EST SUR UNE CASE APPARTENANT DEJA A QUELQU'UN
         public void fenetreCasePoss(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
         {
-            //jeu.fenetreNoire();
+            jeu.fenetreNoire();
 
             Stage nouvelle_fenetre_poss = new Stage();
             fenetreCasePossedee fenetreposs = new fenetreCasePossedee(nouvelle_fenetre_poss,canvas, automate, jeu.getPl(), zoneJoueur, jeu, zoneAd);
