@@ -129,6 +129,12 @@ public class FenetrePrison extends Parent {
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+
+                // si le joueur n'a pas assez d'argent, il perd 
+                if(automate.getJoueurCourant().getSolde()< 500)
+                {
+                    fenetreFaillite(fenetre_actuelle, automate,  zoneJoueur, zoneAd) ;
+                }
             }
         });
 /////////////////////////////////////BOUTON LANCER LES DES
@@ -213,7 +219,25 @@ public class FenetrePrison extends Parent {
         this.getChildren().add(canvas);
     }
 
+    public void fenetreFaillite(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        //jeu.fenetreNoire();
 
+        Stage nouvelle_fenetre_faillite = new Stage();
+
+        FenetreFaillite_1 fenetreFaillite= new FenetreFaillite_1(nouvelle_fenetre_faillite,canvas, automate, zoneJoueur, zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetreFaillite,650,550);
+
+        nouvelle_fenetre_faillite.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_faillite.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_faillite.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_faillite.show();
+    }
 
 
 }
