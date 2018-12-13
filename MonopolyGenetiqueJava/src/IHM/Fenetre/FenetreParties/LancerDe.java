@@ -239,7 +239,7 @@ public class LancerDe extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_chance = new Stage();
-        FenetreCarteChance fenetrePrison= new FenetreCarteChance(nouvelle_fenetre_chance,canvas, automate, zoneJoueur, zoneAd, jeu.getPion());
+        FenetreCarteChance fenetrePrison= new FenetreCarteChance(nouvelle_fenetre_chance,canvas, automate, zoneJoueur, zoneAd, jeu.getPion(), jeu);
 
         Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
 

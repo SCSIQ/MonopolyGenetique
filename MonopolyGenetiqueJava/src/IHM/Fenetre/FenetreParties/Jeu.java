@@ -38,6 +38,12 @@ public class Jeu extends Parent {
 
     private Pion pion ;
 
+    public PlateauJeu getPl() {
+        return pl;
+    }
+
+    private PlateauJeu pl ;
+
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
         this.automate = automate;
@@ -52,7 +58,7 @@ public class Jeu extends Parent {
 
 
         //APPEL PLATEAU JEU
-        PlateauJeu pl = new PlateauJeu(automate);
+        pl = new PlateauJeu(automate);
 
         pl.plateauJeu();
         this.getChildren().add(pl);

@@ -1,16 +1,17 @@
 package IHM.Fenetre.FenetreParties;
 
 
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneAdversaires;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
 import Metier.Cartes.Cartes;
 import Metier.Cartes.CartesChances.Chance;
 import Metier.Cartes.CartesChances.ChanceRdvDueDeLaPaie;
 import Metier.Plateau.ListeCartes.CaseCarte;
+import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -19,6 +20,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -28,13 +30,15 @@ public class FenetreCarteChance extends Parent {
     private Canvas canvas ;
     private ZoneInfoJoueur zoneJoueur ;
     private ZoneAdversaires zoneAd ;
+    private Jeu jeu ;
 
-    public FenetreCarteChance(Stage fenetre_actuelle, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Pion pion)
+    public FenetreCarteChance(Stage fenetre_actuelle, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Pion pion, Jeu jeu)
     {
         //initialisation
         this.canvas = canvas ;
         this.zoneAd= zoneAd ;
         this.zoneJoueur = zoneJoueur ;
+        this.jeu = jeu ;
 
         //LABEL CARTE CHANCE :
         Label carte_chance = new Label("CARTE CHANCE");
@@ -59,6 +63,8 @@ public class FenetreCarteChance extends Parent {
 
         //Pion avance
         pion.entrerDansCase();
+
+
 
         //RECTANGLE
         Rectangle r_chance = new Rectangle();
@@ -107,6 +113,16 @@ public class FenetreCarteChance extends Parent {
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+
+                if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes) {
+
+                    //si elle n'est pas déjà achetée
+                    if (((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null) {
+                        fenetreVousEtesSur(fenetre_actuelle, automate, zoneJoueur, jeu.getPoss());
+                    } else if (((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() != automate.getJoueurCourant()) {
+                        fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, zoneAd);
+                    }
+                }
             }
         });
 
@@ -144,4 +160,45 @@ public class FenetreCarteChance extends Parent {
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
     }
+
+
+        //FENETRE APPARAISSANT SI LA CASE EST LIBRE
+        public void fenetreVousEtesSur(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZonePossessions poss)
+        {
+            //jeu.fenetreNoire();
+
+            Stage nouvelle_fenetre_vousEtesSur = new Stage();
+            fenetreCaseLibre fenetreSur = new fenetreCaseLibre(nouvelle_fenetre_vousEtesSur,canvas, automate, jeu.getPl(), zoneJoueur, jeu, poss);
+
+            Scene nouvelle_scene = new  Scene(fenetreSur,650,550);
+
+            nouvelle_fenetre_vousEtesSur.setScene(nouvelle_scene);
+
+            //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+            nouvelle_fenetre_vousEtesSur.initModality(Modality.WINDOW_MODAL);
+            nouvelle_fenetre_vousEtesSur.initOwner(fenetre_actuelle);
+
+            //POSITION DE LA FENETRE
+            nouvelle_fenetre_vousEtesSur.show();
+        }
+
+        //FENETRE APPARAIT SI LE JOUEUR EST SUR UNE CASE APPARTENANT DEJA A QUELQU'UN
+        public void fenetreCasePoss(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+        {
+            //jeu.fenetreNoire();
+
+            Stage nouvelle_fenetre_poss = new Stage();
+            fenetreCasePossedee fenetreposs = new fenetreCasePossedee(nouvelle_fenetre_poss,canvas, automate, jeu.getPl(), zoneJoueur, jeu, zoneAd);
+
+            Scene nouvelle_scene = new  Scene(fenetreposs,650,550);
+
+            nouvelle_fenetre_poss.setScene(nouvelle_scene);
+
+            //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+            nouvelle_fenetre_poss.initModality(Modality.WINDOW_MODAL);
+            nouvelle_fenetre_poss.initOwner(fenetre_actuelle);
+
+            //POSITION DE LA FENETRE
+            nouvelle_fenetre_poss.show();
+        }
 }
