@@ -17,6 +17,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import java.awt.event.*;
 
 //CLASSE S'OCCUPANT DE LA PARTIE DES ADVERSAIRES DES JOUEURS
 public class ZoneAdversaires extends Parent {
@@ -68,67 +69,40 @@ public class ZoneAdversaires extends Parent {
         //AJOUT ADVERSAIRES
         //automate.getListeJoueurs().get(0)== joueur courant, un adversaire ne doit pas être égal à lui
         //d'où la condition : automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()
-        for(int i=0;i<=automate.getNombreJoueur();i++) {
 
             //DEUX JOUEURS
             if(automate.getListeJoueurs().size()==2)
             {
-                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv1(fenetre_actuelle,automate, i);
-                }
+                RectangleAdv1(fenetre_actuelle,automate, 1);
+
             }
             //TROIS JOUEURS
             else if(automate.getListeJoueurs().size()==3)
             {
-                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv1(fenetre_actuelle,automate, i);
-                }
-                else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv2(fenetre_actuelle,automate, i);
-                }
+                RectangleAdv1(fenetre_actuelle,automate, 1);
+                RectangleAdv2(fenetre_actuelle,automate, 2);
+
 
             }
             //QUATRE JOUEURS
             else if(automate.getListeJoueurs().size()==4)
             {
-                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv1(fenetre_actuelle,automate, i);
-                }
-                else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv2(fenetre_actuelle,automate, i);
-                }
-                else if((i==3) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv3(fenetre_actuelle,automate, i);
-                }
+                RectangleAdv1(fenetre_actuelle,automate, 1);
+                RectangleAdv2(fenetre_actuelle,automate, 2);
+                RectangleAdv3(fenetre_actuelle,automate, 3);
+
             }
             //CINQ JOUEURS
             else if(automate.getListeJoueurs().size()==5)
             {
-                if((i==1) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv1( fenetre_actuelle,automate, i);
-                }
-                else if((i==2) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv2(fenetre_actuelle,automate, i);
-                }
-                else if((i==3) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv3(fenetre_actuelle,automate, i);
-                }
-                else if((i==4) && (automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()))
-                {
-                    RectangleAdv4(fenetre_actuelle,automate, i);
-                }
+                 RectangleAdv1(fenetre_actuelle,automate, 1);
+                 RectangleAdv2(fenetre_actuelle,automate, 2);
+                 RectangleAdv3(fenetre_actuelle,automate, 3);
+                 RectangleAdv4(fenetre_actuelle,automate, 4);
+
             }
 
-        }
+
 
     }
 
@@ -145,37 +119,40 @@ public class ZoneAdversaires extends Parent {
         //Création d'un pane
         infoAdv1 = new Pane();
 
+        infoAdv1.setLayoutX(635);
+        infoAdv1.setLayoutY(115);
+
         //Dessin du premier rectangle
         Rectangle rect_adv = new Rectangle();
         rect_adv.setHeight(60);
         rect_adv.setWidth(300);
-        rect_adv.setX(635);
-        rect_adv.setY(115);
+        rect_adv.setX(0);
+        rect_adv.setY(0);
         rect_adv.setStroke(Color.BLACK);
         rect_adv.setStrokeWidth(1);
         rect_adv.setFill(Color.TRANSPARENT);
 
         //Nom du joueur
-        Label adv1 = new Label(automate.getListeJoueurs().get(i).getNom());
-        adv1.setLayoutX(700);
-        adv1.setLayoutY(120);
+        Label adv1 = new Label(automate.getListeJoueurs().get(1).getNom());
+        adv1.setLayoutX(65);
+        adv1.setLayoutY(5);
 
         //ARGENT Joueur 2
-        Label argent_adv1 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
-        argent_adv1.setLayoutX(700);
-        argent_adv1.setLayoutY(150);
+        Label argent_adv1 = new Label("ARGENT : "+automate.getListeJoueurs().get(1).getSolde()+" €");
+        argent_adv1.setLayoutX(65);
+        argent_adv1.setLayoutY(35);
 
         //BOUTON DETAILS
         Button bt_adv_details = new Button("DETAILS");
-        bt_adv_details.setLayoutX(850);
-        bt_adv_details.setLayoutY(120);
+        bt_adv_details.setLayoutX(215);
+        bt_adv_details.setLayoutY(5);
 
         //ajout rectangle couleur
         Rectangle r_adv1_couleur = new Rectangle();
         r_adv1_couleur.setHeight(50);
         r_adv1_couleur.setWidth(50);
-        r_adv1_couleur.setLayoutX(640);
-        r_adv1_couleur.setLayoutY(120);
+        r_adv1_couleur.setLayoutX(5);
+        r_adv1_couleur.setLayoutY(5);
         r_adv1_couleur.setStroke(Color.BLACK);
         r_adv1_couleur.setStrokeWidth(1);
         r_adv1_couleur.setFill(automate.getListeJoueurs().get(1).getCouleur());
@@ -185,7 +162,7 @@ public class ZoneAdversaires extends Parent {
         @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, 1);
             }
         });
 
@@ -202,41 +179,43 @@ public class ZoneAdversaires extends Parent {
     public void RectangleAdv2(Stage fenetre_actuelle, Automate automate,int i)
     {
         infoAdv2 = new Pane();
+        infoAdv2.setLayoutX(635);
+        infoAdv2.setLayoutY(190);
 
         //Dessin du premier rectangle
         Rectangle rect_adv2 = new Rectangle();
         rect_adv2.setHeight(60);
         rect_adv2.setWidth(300);
-        rect_adv2.setX(635);
-        rect_adv2.setY(190);
+        rect_adv2.setX(0);
+        rect_adv2.setY(0);
         rect_adv2.setStroke(Color.BLACK);
         rect_adv2.setStrokeWidth(1);
         rect_adv2.setFill(Color.TRANSPARENT);
 
         //Nom du joueur
-        Label adv2 = new Label(automate.getListeJoueurs().get(i).getNom());
-        adv2.setLayoutX(700);
-        adv2.setLayoutY(195);
+        Label adv2 = new Label(automate.getListeJoueurs().get(2).getNom());
+        adv2.setLayoutX(65);
+        adv2.setLayoutY(5);
 
         //ARGENT Joueur 2
-        Label argent_adv2 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
-        argent_adv2.setLayoutX(700);
-        argent_adv2.setLayoutY(225);
+        Label argent_adv2 = new Label("ARGENT : "+automate.getListeJoueurs().get(2).getSolde()+" €");
+        argent_adv2.setLayoutX(65);
+        argent_adv2.setLayoutY(35);
 
         //BOUTON DETAILS
         Button bt_adv_details2 = new Button("DETAILS");
-        bt_adv_details2.setLayoutX(850);
-        bt_adv_details2.setLayoutY(195);
+        bt_adv_details2.setLayoutX(215);
+        bt_adv_details2.setLayoutY(5);
 
         //ajout rectangle couleur
         Rectangle r_adv2_couleur = new Rectangle();
         r_adv2_couleur.setHeight(50);
         r_adv2_couleur.setWidth(50);
-        r_adv2_couleur.setLayoutX(640);
-        r_adv2_couleur.setLayoutY(195);
+        r_adv2_couleur.setLayoutX(5);
+        r_adv2_couleur.setLayoutY(5);
         r_adv2_couleur.setStroke(Color.BLACK);
         r_adv2_couleur.setStrokeWidth(1);
-        r_adv2_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
+        r_adv2_couleur.setFill(automate.getListeJoueurs().get(2).getCouleur());
 
 
         //ACTION BOUTON
@@ -244,7 +223,7 @@ public class ZoneAdversaires extends Parent {
             @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, 2);
             }
         });
 
@@ -260,48 +239,50 @@ public class ZoneAdversaires extends Parent {
     public void RectangleAdv3(Stage fenetre_actuelle, Automate automate,int i)
     {
         infoAdv3 = new Pane();
+        infoAdv3.setLayoutX(955);
+        infoAdv3.setLayoutY(115);
 
         //Dessin du premier rectangle
         Rectangle rect_adv3 = new Rectangle();
         rect_adv3.setHeight(60);
         rect_adv3.setWidth(300);
-        rect_adv3.setX(955);
-        rect_adv3.setY(115);
+        rect_adv3.setX(0);
+        rect_adv3.setY(0);
         rect_adv3.setStroke(Color.BLACK);
         rect_adv3.setStrokeWidth(1);
         rect_adv3.setFill(Color.TRANSPARENT);
 
         //Nom du joueur
-        Label adv3 = new Label(automate.getListeJoueurs().get(i).getNom());
-        adv3.setLayoutX(1020);
-        adv3.setLayoutY(120);
+        Label adv3 = new Label(automate.getListeJoueurs().get(3).getNom());
+        adv3.setLayoutX(65);
+        adv3.setLayoutY(5);
 
         //ARGENT Joueur 3
-        Label argent_adv3 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
-        argent_adv3.setLayoutX(1020);
-        argent_adv3.setLayoutY(150);
+        Label argent_adv3 = new Label("ARGENT : "+automate.getListeJoueurs().get(3).getSolde()+" €");
+        argent_adv3.setLayoutX(65);
+        argent_adv3.setLayoutY(35);
 
         //BOUTON DETAILS
         Button bt_adv_details3 = new Button("DETAILS");
-        bt_adv_details3.setLayoutX(1170);
-        bt_adv_details3.setLayoutY(120);
+        bt_adv_details3.setLayoutX(215);
+        bt_adv_details3.setLayoutY(5);
 
         //ajout rectangle couleur
         Rectangle r_adv3_couleur = new Rectangle();
         r_adv3_couleur.setHeight(50);
         r_adv3_couleur.setWidth(50);
-        r_adv3_couleur.setLayoutX(960);
-        r_adv3_couleur.setLayoutY(120);
+        r_adv3_couleur.setLayoutX(5);
+        r_adv3_couleur.setLayoutY(5);
         r_adv3_couleur.setStroke(Color.BLACK);
         r_adv3_couleur.setStrokeWidth(1);
-        r_adv3_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
+        r_adv3_couleur.setFill(automate.getListeJoueurs().get(3).getCouleur());
 
         //ACTION WORDPRESS
         bt_adv_details3.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, 3);
             }
         });
 
@@ -317,45 +298,47 @@ public class ZoneAdversaires extends Parent {
     public void RectangleAdv4(Stage fenetre_actuelle, Automate automate,int i)
     {
         infoAdv4 = new Pane();
+        infoAdv4.setLayoutX(955);
+        infoAdv4.setLayoutY(190);
 
         //Dessin du premier rectangle
         Rectangle rect_adv4 = new Rectangle();
         rect_adv4.setHeight(60);
         rect_adv4.setWidth(300);
-        rect_adv4.setX(955);
-        rect_adv4.setY(190);
+        rect_adv4.setX(0);
+        rect_adv4.setY(0);
         rect_adv4.setStroke(Color.BLACK);
         rect_adv4.setStrokeWidth(1);
         rect_adv4.setFill(Color.TRANSPARENT);
 
 
         //Nom du joueur
-        Label adv4 = new Label(automate.getListeJoueurs().get(i).getNom());
-        adv4.setLayoutX(1020);
-        adv4.setLayoutY(195);
+        Label adv4 = new Label(automate.getListeJoueurs().get(4).getNom());
+        adv4.setLayoutX(65);
+        adv4.setLayoutY(5);
 
 
         //ARGENT Joueur 2
-        Label argent_adv4 = new Label("ARGENT : "+automate.getListeJoueurs().get(i).getSolde()+" €");
-        argent_adv4.setLayoutX(1020);
-        argent_adv4.setLayoutY(225);
+        Label argent_adv4 = new Label("ARGENT : "+automate.getListeJoueurs().get(4).getSolde()+" €");
+        argent_adv4.setLayoutX(65);
+        argent_adv4.setLayoutY(35);
 
 
         //BOUTON DETAILS
         Button bt_adv_details4 = new Button("DETAILS");
-        bt_adv_details4.setLayoutX(1170);
-        bt_adv_details4.setLayoutY(195);
+        bt_adv_details4.setLayoutX(215);
+        bt_adv_details4.setLayoutY(5);
 
 
         //ajout rectangle couleur
         Rectangle r_adv4_couleur = new Rectangle();
         r_adv4_couleur.setHeight(50);
         r_adv4_couleur.setWidth(50);
-        r_adv4_couleur.setLayoutX(960);
-        r_adv4_couleur.setLayoutY(195);
+        r_adv4_couleur.setLayoutX(5);
+        r_adv4_couleur.setLayoutY(5);
         r_adv4_couleur.setStroke(Color.BLACK);
         r_adv4_couleur.setStrokeWidth(1);
-        r_adv4_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
+        r_adv4_couleur.setFill(automate.getListeJoueurs().get(4).getCouleur());
 
 
         //ACTION BOUTON
@@ -363,7 +346,7 @@ public class ZoneAdversaires extends Parent {
             @Override
             public void handle(ActionEvent event)
             {
-                possessionAdv(fenetre_actuelle, automate, i);
+                possessionAdv(fenetre_actuelle, automate, 4);
             }
         });
 

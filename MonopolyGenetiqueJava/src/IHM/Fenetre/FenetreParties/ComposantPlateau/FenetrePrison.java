@@ -130,7 +130,7 @@ public class FenetrePrison extends Parent {
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
 
-                // si le joueur n'a pas assez d'argent, il perd 
+                // si le joueur n'a pas assez d'argent, il perd
                 if(automate.getJoueurCourant().getSolde()< 500)
                 {
                     fenetreFaillite(fenetre_actuelle, automate,  zoneJoueur, zoneAd) ;
