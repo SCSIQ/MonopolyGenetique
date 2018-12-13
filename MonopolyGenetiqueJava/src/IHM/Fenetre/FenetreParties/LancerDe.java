@@ -72,9 +72,9 @@ public class LancerDe extends Parent {
                     if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes){
 
                         //si elle n'est pas déjà achetée
-                        if(((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null){
+                        if(((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() == null ){
                             fenetreVousEtesSur(fenetre_actuelle, automate, zoneJoueur, poss);
-                        } else {
+                        } else if (((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio()!=automate.getJoueurCourant() ) {
                             fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                         }
                     }
