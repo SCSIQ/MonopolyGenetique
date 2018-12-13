@@ -32,6 +32,12 @@ public class Jeu extends Parent {
 
     private ZonePossessions poss ;
 
+    public Pion getPion() {
+        return pion;
+    }
+
+    private Pion pion ;
+
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
         this.automate = automate;
@@ -66,7 +72,7 @@ public class Jeu extends Parent {
         this.getChildren().add(poss);
 
 /////////////PION
-        Pion pion = new Pion(automate, pl);
+        pion = new Pion(automate, pl);
 
 
 ////////////////////////////////

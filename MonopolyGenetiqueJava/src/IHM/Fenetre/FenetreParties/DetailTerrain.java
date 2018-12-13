@@ -393,6 +393,7 @@ public class DetailTerrain extends Parent {
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
                 } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons()== 1) {
+
                     URL urlMaison = getClass().getResource("images/deux_maisons_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);

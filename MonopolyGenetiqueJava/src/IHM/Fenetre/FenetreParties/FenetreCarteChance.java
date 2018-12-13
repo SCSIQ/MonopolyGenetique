@@ -4,7 +4,10 @@ package IHM.Fenetre.FenetreParties;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneAdversaires;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
 import Metier.Automate.Automate;
-import Metier.Plateau.ListeCartes.Chance;
+import Metier.Cartes.Cartes;
+import Metier.Cartes.CartesChances.Chance;
+import Metier.Cartes.CartesChances.ChanceRdvDueDeLaPaie;
+import Metier.Plateau.ListeCartes.CaseCarte;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -26,7 +29,7 @@ public class FenetreCarteChance extends Parent {
     private ZoneInfoJoueur zoneJoueur ;
     private ZoneAdversaires zoneAd ;
 
-    public FenetreCarteChance(Stage fenetre_actuelle, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    public FenetreCarteChance(Stage fenetre_actuelle, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Pion pion)
     {
         //initialisation
         this.canvas = canvas ;
@@ -43,12 +46,19 @@ public class FenetreCarteChance extends Parent {
         carte_chance.setTextFill(Color.WHITE);
 
         //CONTENU
-        Label l_contenu = new Label("Cette case n'a pour l'instant aucun effet.");
-        l_contenu.setLayoutX(100);
-        l_contenu.setLayoutY(100);
+        automate.evoluer("Rendez-vous rue de la paie");
+        ChanceRdvDueDeLaPaie chance = new ChanceRdvDueDeLaPaie();
+        Label carteChance = new Label(chance.getTypeCarte()) ;
+        carteChance.setLayoutX(100);
+        carteChance.setLayoutY(100);
 
-        l_contenu.setScaleX(1.5);
-        l_contenu.setScaleY(1.5);
+        carteChance.setScaleX(1.5);
+        carteChance.setScaleY(1.5);
+
+        chance.agir(automate);
+
+        //Pion avance
+        pion.entrerDansCase();
 
         //RECTANGLE
         Rectangle r_chance = new Rectangle();
@@ -76,6 +86,10 @@ public class FenetreCarteChance extends Parent {
         bt_ok.setLayoutY(200);
 
         bt_ok.setPrefSize(150, 10);
+
+
+
+
 
         bt_ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -118,7 +132,7 @@ public class FenetreCarteChance extends Parent {
         this.getChildren().add(r_chance);
         this.getChildren().add(bt_ok);
         this.getChildren().add(carte_chance);
-        this.getChildren().add(l_contenu);
+        this.getChildren().add(carteChance);
 
 
     }
