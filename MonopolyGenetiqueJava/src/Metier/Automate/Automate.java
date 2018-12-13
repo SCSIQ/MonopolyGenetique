@@ -4,6 +4,7 @@ import Entites.Joueur;
 import Metier.Automate.Etats.Des.LancerDesInitial;
 import Metier.Automate.Etats.Etat;
 import Metier.Cartes.Cartes;
+import Metier.Plateau.Cases;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,8 @@ public class Automate {
     private boolean automatedEvolution = false;
     private int numTour = 1;
     private int nbJoueurTour = 1;
+
+    private Cases casePourAjoutMaison;
 
     public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartes){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
@@ -77,5 +80,15 @@ public class Automate {
 
     public ArrayList<Cartes> getListeDesCartes() {
         return listeDesCartes;
+    }
+
+
+    //---Getter et Setter pour l'enregistrement de la case oùl'on veut constuire la maison
+    public Cases getCasePourAjoutMaison() {
+        return casePourAjoutMaison;
+    }
+
+    public void setCasePourAjoutMaison(Cases casePourAjoutMaison) {
+        this.casePourAjoutMaison = casePourAjoutMaison;
     }
 }

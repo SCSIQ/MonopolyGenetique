@@ -2,6 +2,7 @@ package Metier.Automate.Etats.Choix;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
+import Metier.Automate.Etats.Argent.Maison.AcheterMaison;
 import Metier.Automate.Etats.Argent.Proprietes.AcheterPropriete;
 import Metier.Automate.Etats.Des.LancerDesJoueur;
 import Metier.Automate.Etats.Etat;
@@ -32,6 +33,9 @@ public class ChoixPossibles extends Etat {
         }
         else if(event == "acheterPropriete"){
             return new AcheterPropriete(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if(event == "AcheterMaison"){
+            return new AcheterMaison(super.getAutomate(), super.getListeJoueurs());
         }
         else{
             return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
