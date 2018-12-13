@@ -67,8 +67,6 @@ public class ZoneAdversaires extends Parent {
 
     public void genererAdversaire(Automate automate, Stage fenetre_actuelle){
         //AJOUT ADVERSAIRES
-        //automate.getListeJoueurs().get(0)== joueur courant, un adversaire ne doit pas être égal à lui
-        //d'où la condition : automate.getListeJoueurs().get(i)!=automate.getJoueurCourant()
 
             //DEUX JOUEURS
             if(automate.getListeJoueurs().size()==2)
