@@ -22,7 +22,8 @@ public class AcheterMaison extends Etat {
     public void agir(String event) {
 
         Joueur joueurCourant = super.getAutomate().getJoueurCourant();
-        Cases caseCourante = super.getAutomate().getJoueurCourant().getPion().getCase();
+        //Cases caseCourante = super.getAutomate().getJoueurCourant().getPion().getCase();
+        Cases caseCourante = getAutomate().getCasePourAjoutMaison();
         int prixMaison = ((Terrain) caseCourante).getPrixAjoutMaison() ;
 
         // si la caseCourante est une instance de Terrain
