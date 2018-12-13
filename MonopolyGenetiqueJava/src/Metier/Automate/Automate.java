@@ -18,6 +18,7 @@ public class Automate {
     private int nbJoueurTour = 1;
 
     private Cases casePourAjoutMaison;
+    private String contenuCartePiochée;
 
     public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartes){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
@@ -90,5 +91,14 @@ public class Automate {
 
     public void setCasePourAjoutMaison(Cases casePourAjoutMaison) {
         this.casePourAjoutMaison = casePourAjoutMaison;
+    }
+
+    //---Getter et Setter pour l'enregistrement de la carte piochée par le joueur
+    public String getContenuCartePiochée() {
+        return contenuCartePiochée;
+    }
+
+    public void setContenuCartePiochée(String contenuCartePiochée) {
+        this.contenuCartePiochée = contenuCartePiochée;
     }
 }

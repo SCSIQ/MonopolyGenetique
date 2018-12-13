@@ -305,7 +305,9 @@ public class DetailTerrain extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 //DIT AU METIER QU'ON ACHETE UNE MAISON DE PLUS
-                automate.evoluer("AcheterMaison");
+                //enregistremetn dans l'automate du terrain où l'on veut acheter la maison
+                automate.setCasePourAjoutMaison(poss.getListeTerrains().get(numBouton));
+                automate.evoluer("AcheterMaison"); //ensuite demande à l'automate d'évoluer
                 afficherMaison(automate);
            }
         });

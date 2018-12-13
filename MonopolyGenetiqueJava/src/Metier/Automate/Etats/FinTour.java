@@ -20,6 +20,8 @@ public class FinTour extends Etat{
         j.afficherProprietesPossedes(); //permet de vérifier le code métier
         listeJoueurs.remove(0);
         listeJoueurs.add(j);
+        getAutomate().setCasePourAjoutMaison(null);
+        getAutomate().setContenuCartePiochée(null);
         System.out.println("\n-------------------------------------------------------------------------------------\n");
     }
 
