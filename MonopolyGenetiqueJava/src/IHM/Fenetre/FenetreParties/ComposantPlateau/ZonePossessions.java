@@ -257,6 +257,7 @@ public class ZonePossessions extends Parent {
     public void afficherTerrain(Automate automate)
     {
         int y = 0 ;
+        int j = 0 ;
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Terrain){
@@ -308,12 +309,12 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(37+y);
 
-                boutonsTerrains.add(bt_detail);
+                boutonsTerrains.add(j, bt_detail);
                 listeTerrainsLabel.add(terrain);
                 listeCouleur.add(r_couleur);
 
 
-                this.appuieBoutonTerrain(bt_detail, i);
+                this.appuieBoutonTerrain(bt_detail, j);
 
                 listeTerrains.add(ter);
                 zoneTerrain.getChildren().add(terrain);
@@ -328,6 +329,7 @@ public class ZonePossessions extends Parent {
     public void afficherGare(Automate automate)
     {
         int y = 0 ;
+        int j = 0;
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Gare){
@@ -342,18 +344,19 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(30+y);
 
-                boutonsGares.add(bt_detail);
+                boutonsGares.add(j, bt_detail);
                 listeGaresLabel.add(gare);
 
                 Gare gares = (Gare) automate.getJoueurCourant().getListePropietes().get(i);
 
-                this.appuieBoutonGare(bt_detail, i);
+                this.appuieBoutonGare(bt_detail, j);
 
 
                 zoneGare.getChildren().add(bt_detail);
                 listeGares.add(gares);
                 zoneGare.getChildren().add(gare);
                 y+=30 ;
+                j++ ;
             }
 
 
@@ -363,6 +366,7 @@ public class ZonePossessions extends Parent {
     public void afficherCompagnie(Automate automate)
     {
         int y = 0 ;
+        int j =0;
         for(int i =0 ; i<automate.getJoueurCourant().getListePropietes().size(); i++)
         {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof ServicePublic){
@@ -380,10 +384,10 @@ public class ZonePossessions extends Parent {
                 bt_detail.setLayoutX(200);
                 bt_detail.setLayoutY(30+y);
 
-                boutonsCompagnie.add(bt_detail);
+                boutonsCompagnie.add(j, bt_detail);
                 listeCompagniesLabel.add(compagnie);
 
-                this.appuieBoutonCompagnie(bt_detail, i);
+                this.appuieBoutonCompagnie(bt_detail, j);
                 listeCompagnies.add(compa);
 
                 zoneCompagnie.getChildren().add(compagnie);
