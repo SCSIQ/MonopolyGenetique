@@ -29,6 +29,10 @@ public class Jeu extends Parent {
     private Pion pion ;
     private PlateauJeu pl ;
 
+
+
+    private Stage primaryStage ;
+
 ////////////////////////GETTER
     public PlateauJeu getPl() {
         return pl;
@@ -36,6 +40,10 @@ public class Jeu extends Parent {
 
     public Pion getPion() {
         return pion;
+    }
+
+    public Stage getPrimaryStage() {
+        return primaryStage;
     }
 
     public ZonePossessions getPoss() {
@@ -46,12 +54,14 @@ public class Jeu extends Parent {
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
         this.automate = automate;
+        this.primaryStage = primaryStage ;
 
 //////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
         ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
         zoneJoueur.genereInfosJoueur(automate);
         this.getChildren().add(zoneJoueur);
+
 
 
 

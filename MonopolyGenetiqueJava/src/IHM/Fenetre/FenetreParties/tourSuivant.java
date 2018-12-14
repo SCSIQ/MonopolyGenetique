@@ -124,7 +124,7 @@ public class tourSuivant extends Parent {
 
     public void fenetreEnPrison(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
-       // jeu.fenetreNoire();
+        jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_prison = new Stage();
         FenetrePrison fenetrePrison= new FenetrePrison(nouvelle_fenetre_prison,canvas, automate, plateauJeu, zoneJoueur, jeu, poss,  zoneAd, pion);
@@ -135,7 +135,7 @@ public class tourSuivant extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_prison.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_prison.initOwner(jeu.getPrimaryStage());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_prison.show();
