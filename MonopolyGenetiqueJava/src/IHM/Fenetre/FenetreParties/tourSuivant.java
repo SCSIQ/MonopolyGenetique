@@ -135,7 +135,7 @@ public class tourSuivant extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_prison.initOwner(jeu.getPrimaryStage());
+        nouvelle_fenetre_prison.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_prison.show();

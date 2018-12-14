@@ -33,6 +33,9 @@ public class Jeu extends Parent {
 
     private Stage primaryStage ;
 
+
+    private Stage fenetrePropri ;
+
 ////////////////////////GETTER
     public PlateauJeu getPl() {
         return pl;
@@ -46,6 +49,10 @@ public class Jeu extends Parent {
         return primaryStage;
     }
 
+    public Stage getFenetrePropri() {
+        return fenetrePropri;
+    }
+
     public ZonePossessions getPoss() {
         return poss;
     }
@@ -55,6 +62,7 @@ public class Jeu extends Parent {
 
         this.automate = automate;
         this.primaryStage = primaryStage ;
+        this.fenetrePropri = nouvelle_fenetre ;
 
 //////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
