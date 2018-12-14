@@ -674,7 +674,7 @@ public class DetailTerrain extends Parent {
                     caseMaison.getChildren().add(maison);
 
                 } else if (((Terrain)automate.getJoueurCourant().getPion().getCase()).getNbMaisons() == 4) {
-                    URL urlMaison = getClass().getResource("images/hotel_droite.png");
+                    URL urlMaison = getClass().getResource("images/hotel_droit.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
