@@ -30,6 +30,7 @@ public class fenetreCasePossedee extends Parent  {
     private ZoneInfoJoueur zoneJoueur ;
     private ZoneAdversaires zoneAd;
     private int prixAPayer = 0 ; // représente le prix à payer au propriétaire
+    private Jeu jeu ;
 
     public fenetreCasePossedee(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZoneAdversaires zoneAd){
 
@@ -37,6 +38,7 @@ public class fenetreCasePossedee extends Parent  {
         this.canvas = canvas ;
         this.zoneJoueur =zoneJoueur;
         this.zoneAd = zoneAd ;
+        this.jeu = jeu ; 
 
         Joueur j=null ; //représente le propriétaire de la case
 
@@ -218,7 +220,7 @@ public class fenetreCasePossedee extends Parent  {
 
     public void fenetreFaillite(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
-        //jeu.fenetreNoire();
+        jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_faillite = new Stage();
 
