@@ -25,25 +25,24 @@ public class Jeu extends Parent {
 
     private Canvas canvas = new Canvas(1275,1275);
     private Automate automate;
-
-    public ZonePossessions getPoss() {
-        return poss;
-    }
-
     private ZonePossessions poss ;
+    private Pion pion ;
+    private PlateauJeu pl ;
+
+////////////////////////GETTER
+    public PlateauJeu getPl() {
+        return pl;
+    }
 
     public Pion getPion() {
         return pion;
     }
 
-    private Pion pion ;
-
-    public PlateauJeu getPl() {
-        return pl;
+    public ZonePossessions getPoss() {
+        return poss;
     }
 
-    private PlateauJeu pl ;
-
+////////////////////////////////CONSTRUCTEUR
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
         this.automate = automate;
