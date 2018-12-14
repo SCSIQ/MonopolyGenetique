@@ -320,6 +320,7 @@ public class ZonePossessions extends Parent {
                 zoneTerrain.getChildren().add(terrain);
                 zoneTerrain.getChildren().add(bt_detail);
                 y+=30 ;
+                j++ ; 
             }
 
 
@@ -393,6 +394,7 @@ public class ZonePossessions extends Parent {
                 zoneCompagnie.getChildren().add(compagnie);
                 zoneCompagnie.getChildren().add(bt_detail);
                 y+=30 ;
+                j++ ;
             }
 
         }

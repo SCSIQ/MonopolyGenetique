@@ -168,7 +168,7 @@ public class LancerDe extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_vousEtesSur.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_vousEtesSur.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_vousEtesSur.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_vousEtesSur.show();
@@ -188,7 +188,7 @@ public class LancerDe extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_poss.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_poss.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_poss.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_poss.show();
@@ -208,7 +208,7 @@ public class LancerDe extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_taxe.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_taxe.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_taxe.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_taxe.show();
@@ -228,7 +228,7 @@ public class LancerDe extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_prison.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_prison.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_prison.show();
@@ -247,7 +247,7 @@ public class LancerDe extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_chance.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_chance.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_chance.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_chance.show();
@@ -266,7 +266,7 @@ public class LancerDe extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_commu.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_commu.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_commu.initOwner(jeu.getFenetrePropri());
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_commu.show();
