@@ -38,7 +38,7 @@ public class fenetreCasePossedee extends Parent  {
         this.canvas = canvas ;
         this.zoneJoueur =zoneJoueur;
         this.zoneAd = zoneAd ;
-        this.jeu = jeu ; 
+        this.jeu = jeu ;
 
         Joueur j=null ; //représente le propriétaire de la case
 

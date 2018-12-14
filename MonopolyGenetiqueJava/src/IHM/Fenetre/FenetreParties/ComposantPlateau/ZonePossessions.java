@@ -304,9 +304,9 @@ public class ZonePossessions extends Parent {
 
                 //Bouton détail
                 Button bt_detail = new Button("DETAILS");
-                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(200);
+                bt_detail.setLayoutX(225);
                 bt_detail.setLayoutY(37+y);
 
                 boutonsTerrains.add(j, bt_detail);
@@ -337,13 +337,13 @@ public class ZonePossessions extends Parent {
                 Label gare = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 gare.setLayoutX(10);
-                gare.setLayoutY(30+y);
+                gare.setLayoutY(37+y);
 
                 Button bt_detail = new Button("DETAILS") ;
-                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(200);
-                bt_detail.setLayoutY(30+y);
+                bt_detail.setLayoutX(225);
+                bt_detail.setLayoutY(33+y);
 
                 boutonsGares.add(j, bt_detail);
                 listeGaresLabel.add(gare);
@@ -377,13 +377,13 @@ public class ZonePossessions extends Parent {
                 ServicePublic compa = (ServicePublic) automate.getJoueurCourant().getListePropietes().get(i);
 
                 compagnie.setLayoutX(10);
-                compagnie.setLayoutY(30+y);
+                compagnie.setLayoutY(37+y);
 
                 Button bt_detail = new Button("DETAILS") ;
-                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(200);
-                bt_detail.setLayoutY(30+y);
+                bt_detail.setLayoutX(225);
+                bt_detail.setLayoutY(33+y);
 
                 boutonsCompagnie.add(j, bt_detail);
                 listeCompagniesLabel.add(compagnie);
