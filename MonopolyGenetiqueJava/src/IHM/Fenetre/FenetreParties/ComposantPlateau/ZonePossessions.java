@@ -215,7 +215,7 @@ public class ZonePossessions extends Parent {
         Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" : "+automate.getJoueurCourant().getNbCartesLibereDePrison());
         textPrison.setLayoutX(1000);
         textPrison.setLayoutY(620);
-        textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        textPrison.setFont(Font.font("Verdana", FontWeight.SEMI_BOLD, 12));
         this.getChildren().add(textPrison);
 
 ////////////////////CREATION D'UN PANEL POUR LA ZONE Prison

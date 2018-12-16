@@ -84,12 +84,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="23" />
-          <entry key="java" value="83" />
+          <entry key="java" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="83" />
+          <entry key="JAVA" value="96" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -146,8 +146,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="214" column="126" selection-start-line="214" selection-start-column="126" selection-end-line="214" selection-end-column="126" />
+            <state relative-caret-position="206">
+              <caret line="217" column="68" selection-start-line="217" selection-start-column="68" selection-end-line="217" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -627,7 +627,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544991559789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544991682671" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="recentsLimit" value="5" />
@@ -768,7 +768,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81887203" visible="true" weight="0.19894099" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81887203" visible="true" weight="0.19894099" />
       <window_info id="Favorites" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -777,7 +777,7 @@
       <window_info id="Structure" order="6" sideWeight="0.18112798" side_tool="true" weight="0.1687966" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5688525" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2590164" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2590164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1230,8 +1230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/ZonePossessions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="214" column="126" selection-start-line="214" selection-start-column="126" selection-end-line="214" selection-end-column="126" />
+        <state relative-caret-position="206">
+          <caret line="217" column="68" selection-start-line="217" selection-start-column="68" selection-end-line="217" selection-end-column="68" />
         </state>
       </provider>
     </entry>
