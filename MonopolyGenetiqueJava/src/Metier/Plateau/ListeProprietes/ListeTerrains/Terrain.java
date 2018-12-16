@@ -1,6 +1,7 @@
 package Metier.Plateau.ListeProprietes.ListeTerrains;
 
 import IHM.Plateau.Couleur;
+import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.Proprietes;
 
 public abstract class Terrain extends Proprietes {
@@ -128,4 +129,32 @@ public abstract class Terrain extends Proprietes {
         return couleur;
     }
 
+    public boolean getProprioPossedeTouteLaCouleur() {
+
+        boolean toreturn = false;
+        int nbTerrainDeCetteCouleur = 0;
+        int nbTerrainQuePossedeLeProprio = 0;
+
+        for (Cases c:getProprio().getListeCases()) {
+            if(c instanceof Terrain){
+                if(((Terrain)c).getCouleur()==this.couleur){
+                    nbTerrainDeCetteCouleur++;
+                }
+            }
+        }
+
+        for (Proprietes p:this.getProprio().getListePropietes()) {
+            if(p instanceof Terrain){
+                if(((Terrain)p).getCouleur()==this.couleur){
+                    nbTerrainQuePossedeLeProprio++;
+                }
+            }
+        }
+
+        if(nbTerrainDeCetteCouleur == nbTerrainQuePossedeLeProprio){
+            toreturn = true;
+        }
+
+        return toreturn;
+    }
 }
