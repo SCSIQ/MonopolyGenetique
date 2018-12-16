@@ -1,28 +1,29 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
-import Entites.Joueur;
+import Entites.CouleurPion;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.InitialisationPartieJoueurs;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class HumainVShumain extends Parent {
 
-    public HumainVShumain(Stage primaryStage, Stage nouvelle_fenetre){
+public class HumainVs_Humain extends Parent {
 
-////////TEXTE
+    public HumainVs_Humain(Stage primaryStage, Stage nouvelle_fenetre) {
+        ////////TEXTE
         Text t_titre = new Text(200,40,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
         Text t_adv = new Text(80, 130, "Choisissez le nombre de joueurs : ");
         Text t_tours = new Text(80, 210, "Choisissez le nombre de tours : ");
@@ -154,8 +155,8 @@ public class HumainVShumain extends Parent {
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
 
-
     }
+
     public Color couleurAdversaire(int i)
     {
 
@@ -175,4 +176,5 @@ public class HumainVShumain extends Parent {
         }
         return couleur;
     }
+
 }

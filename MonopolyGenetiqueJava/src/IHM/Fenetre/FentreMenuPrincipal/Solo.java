@@ -1,11 +1,9 @@
 package IHM.Fenetre.FentreMenuPrincipal;
 
-import Entites.CouleurPion;
+import Entites.Joueur;
 import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.InitialisationPartieJoueurs;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -13,17 +11,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-
 public class Solo extends Parent {
 
-    public Solo(Stage primaryStage, Stage nouvelle_fenetre) {
-
+    public Solo(Stage primaryStage, Stage nouvelle_fenetre){
 ////////TEXTE
 
         Text t_titre = new Text(250,40,"NOUVELLE PARTIE SOLO");
@@ -31,7 +29,7 @@ public class Solo extends Parent {
         Text t_couleur = new Text(64, 180, "Choisissez votre couleur : ");
         Text t_tours = new Text(74, 240, "Choisissez le nombre de  tours : ");
 
-            //taille
+        //taille
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
@@ -85,12 +83,12 @@ public class Solo extends Parent {
                 "rouge", "bleu", "noir", "jaune", "blanc", "vert" );
         couleur.setItems(data);*/
 
-            //position
+        //position
         couleur.setLayoutX(490);
         couleur.setLayoutY(160);
 
 
-            //taille
+        //taille
         couleur.setPrefSize(100,30);
 
 ////////BOUTONS
@@ -168,25 +166,30 @@ public class Solo extends Parent {
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
 
+
+
+
     }
 
-//GENERE LA COULEUR DES JOUEURS
+    //GENERE LA COULEUR DES JOUEURS
     public Color couleurAdversaire(int i)
     {
         Color couleur;
         switch (i){
             case 0 : couleur = Color.DARKKHAKI;
-                    break;
+                break;
             case 1 : couleur = Color.BURLYWOOD;
-                    break;
+                break;
             case 2 : couleur = Color.GREEN;
-                    break;
+                break;
             case 3 : couleur = Color.YELLOW;
-                    break;
+                break;
             case 4 : couleur = Color.BLUE;
-                    break;
+                break;
             default: couleur = Color.AZURE;
         }
         return couleur;
     }
+
+
 }

@@ -14,8 +14,8 @@ import java.net.URL;
 
 
 public class Accueil extends Parent {
-    Solo solo_fenetre;
-    HumainVShumain humain_fenetre ;
+    HumainVs_Humain humainVsHumain_fenetre;
+    Solo humain_fenetre ;
 
 
     public Accueil(Stage primaryStage){
@@ -53,14 +53,14 @@ public class Accueil extends Parent {
         imageView.setLayoutX(25);
         imageView.setPreserveRatio(true);
 
-        //ACTION : SI ON APPUIE SUR SOLO
-        solo.setOnAction(new EventHandler<ActionEvent>() {
+        //ACTION : SI ON APPUIE SUR Humain VS humain
+        HumainVShumain.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
                 Stage nouvelle_fenetre = new Stage();
-                Solo solo_fenetre = new Solo(primaryStage, nouvelle_fenetre);
-                Scene nouvelle_scene = new Scene(solo_fenetre,620,380);
+                HumainVs_Humain humainVsHumain_fenetre = new HumainVs_Humain(primaryStage, nouvelle_fenetre);
+                Scene nouvelle_scene = new Scene(humainVsHumain_fenetre,620,380);
 
                 nouvelle_fenetre.setScene(nouvelle_scene);
                 //on montre la nouvelle fenêtre
@@ -71,13 +71,13 @@ public class Accueil extends Parent {
             }
         });
 
-        //ACTION : SI ON APPUIE SUR HumainVShumain
-        HumainVShumain.setOnAction(new EventHandler<ActionEvent>() {
+        //ACTION : SI ON APPUIE SUR Solo
+        solo.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
                 Stage nouvelle_fenetre = new Stage();
-                HumainVShumain humain_fenetre = new HumainVShumain(primaryStage, nouvelle_fenetre );
+                Solo humain_fenetre = new Solo(primaryStage, nouvelle_fenetre );
                 Scene nouvelle_scene = new Scene(humain_fenetre,620,380);
 
                 nouvelle_fenetre.setScene(nouvelle_scene);
