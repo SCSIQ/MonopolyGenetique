@@ -90,7 +90,7 @@ public class DetailGare extends Parent {
             nomGare.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
             nomGare.setPrefSize(455,50);
 
-
+            gestion(automate, false);
             //BOUTON
             Button bt_ok = new Button("revenir au jeu");
 

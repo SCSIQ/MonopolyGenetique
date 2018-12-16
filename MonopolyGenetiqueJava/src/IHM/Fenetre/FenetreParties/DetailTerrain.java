@@ -17,7 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -49,20 +49,15 @@ public class DetailTerrain extends Parent {
         this.pl = pl ;
 
          if(joueurCourant==true){
-            Label nomTerrain = new Label(poss.getListeTerrains().get(numBouton).toString().toUpperCase()+"");
 
-            /////////TAILLE MIN ET MAX DE LA FENETRE
-            fenetre_detail.setMinHeight(730);
-            fenetre_detail.setMinWidth(515);
+             Button nomTerrain = new Button(poss.getListeTerrains().get(numBouton).toString().toUpperCase());
 
-            fenetre_detail.setMaxHeight(730);
-            fenetre_detail.setMaxWidth(515);
+             nomTerrain.setLayoutY(10);
+             nomTerrain.setLayoutX(10);
+             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+             nomTerrain.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
+             nomTerrain.setPrefSize(475,50);
 
-
-            ////////////////////////TEXTE
-            nomTerrain.setLayoutY(20);
-            nomTerrain.setLayoutX(80);
-            nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
             nomTerrain.setTextFill(Color.WHITE);
 
             //COULEUR
@@ -90,15 +85,7 @@ public class DetailTerrain extends Parent {
             }
 
             //ajout Couleur de la possession du terrain du joueur
-
-            Rectangle r_couleur = new Rectangle();
-            r_couleur.setHeight(50);
-            r_couleur.setWidth(475);
-            r_couleur.setLayoutX(10);
-            r_couleur.setLayoutY(10);
-            r_couleur.setStroke(Color.BLACK);
-            r_couleur.setStrokeWidth(1);
-            r_couleur.setFill(couleurTerrain);
+             nomTerrain.setBackground(new Background(new BackgroundFill(couleurTerrain, null, null)));
 
             //APPEL DES DIFFERNTS PANES
             GenererPanelInfos(automate, true) ;
@@ -125,25 +112,26 @@ public class DetailTerrain extends Parent {
                 }
             });
 
+             /////////TAILLE MIN ET MAX DE LA FENETRE
+             fenetre_detail.setMinHeight(730);
+             fenetre_detail.setMinWidth(515);
+
+             fenetre_detail.setMaxHeight(730);
+             fenetre_detail.setMaxWidth(515);
+
             //AJOUT
              this.getChildren().add(bt_ok);
-             this.getChildren().add(r_couleur);
              this.getChildren().add(nomTerrain);
         }else {
-            Label nomTerrain = new Label(possAd.getListeTerrains().get(numBouton).toString().toUpperCase()+"") ;
+             Button nomTerrain = new Button(possAd.getListeTerrains().get(numBouton).toString().toUpperCase());
 
-            /////////TAILLE MIN ET MAX DE LA FENETRE
-            fenetre_detail.setMinHeight(400);
-            fenetre_detail.setMinWidth(500);
+             nomTerrain.setLayoutY(10);
+             nomTerrain.setLayoutX(10);
+             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+             nomTerrain.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
+             nomTerrain.setPrefSize(475,50);
 
-            fenetre_detail.setMaxHeight(400);
-            fenetre_detail.setMaxWidth(700);
-
-
-            nomTerrain.setLayoutY(20);
-            nomTerrain.setLayoutX(80);
-            nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
-            nomTerrain.setTextFill(Color.WHITE);
+             nomTerrain.setTextFill(Color.WHITE);
 
             CouleurMétier s =possAd.getListeTerrains().get(numBouton).getCouleur();
             Color couleurTerrain ;
@@ -169,14 +157,7 @@ public class DetailTerrain extends Parent {
             }
 
             //ajout Couleur du joueur
-            Rectangle r_couleur = new Rectangle();
-            r_couleur.setHeight(50);
-            r_couleur.setWidth(475);
-            r_couleur.setLayoutX(10);
-            r_couleur.setLayoutY(10);
-            r_couleur.setStroke(Color.BLACK);
-            r_couleur.setStrokeWidth(1);
-            r_couleur.setFill(couleurTerrain);
+             nomTerrain.setBackground(new Background(new BackgroundFill(couleurTerrain, null, null)));
 
             GenererPanelInfos(automate,false ) ;
 
@@ -198,9 +179,15 @@ public class DetailTerrain extends Parent {
                 }
             });
 
+             /////////TAILLE MIN ET MAX DE LA FENETRE
+             fenetre_detail.setMinHeight(410);
+             fenetre_detail.setMinWidth(515);
+
+             fenetre_detail.setMaxHeight(410);
+             fenetre_detail.setMaxWidth(515);
+
             //AJOUT
             this.getChildren().add(bt_ok);
-            this.getChildren().add(r_couleur);
             this.getChildren().add(nomTerrain);
         }
 
