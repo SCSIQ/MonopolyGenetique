@@ -9,6 +9,7 @@ import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
 import Metier.Plateau.ParcGratuit;
+import Metier.Automate.Etats.ChoixPossibles;
 
 import java.util.ArrayList;
 
@@ -80,8 +81,8 @@ public class Deplacement extends Etat{
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
 
-        //int resDes = j.getResLanceDes();
-        int resDes = 5; //POUR IHM
+        int resDes = j.getResLanceDes();
+        //int resDes = 5; //POUR IHM
 
         Cases position = j.getPion().getCase();
 

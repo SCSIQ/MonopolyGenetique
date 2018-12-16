@@ -23,6 +23,7 @@ public class ChoixPossibles extends Etat {
 
     @Override
     public Etat transition(String event) {
+        System.out.println("------------> event : "+event);
         if(event == "lancerDes"){
             return new LancerDesJoueur(super.getAutomate(), super.getListeJoueurs());
         }
@@ -32,7 +33,7 @@ public class ChoixPossibles extends Etat {
         else if(event == "acheterPropriete"){
             return new AcheterPropriete(super.getAutomate(), super.getListeJoueurs());
         }
-        else if(event == "AcheterMaison"){
+        else if(event == "acheterMaison"){
             return new AcheterMaison(super.getAutomate(), super.getListeJoueurs());
         }
         else{
