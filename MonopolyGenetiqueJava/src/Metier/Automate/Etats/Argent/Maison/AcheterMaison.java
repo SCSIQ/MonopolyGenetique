@@ -39,6 +39,7 @@ public class AcheterMaison extends Etat {
                         joueurCourant.DecrementerSolde(prixMaison);
                         ((Terrain) caseCourante).ajouterMaison();
                         System.out.println("    Maison achetée : " + caseCourante.toString() + " au prix de " + ((Terrain) caseCourante).getPrixAjoutMaison() + "€");
+                        System.out.println("    Le terrain possède maintenant "+((Terrain) caseCourante).getNbMaisons()+" maisons");
                         System.out.println("    Argent restant pour le joueur : " + joueurCourant.getSolde() + "€");
                     } else {
                         System.out.println("    La maison ne peut pas être acheté car le joueur n'a pas assez d'argent...");

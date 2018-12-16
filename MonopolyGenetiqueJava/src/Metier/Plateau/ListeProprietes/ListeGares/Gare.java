@@ -42,9 +42,9 @@ public abstract class Gare extends Proprietes {
                     break;
                 case 2 : toReturn = 2*loyer;
                     break;
-                case 3 : toReturn = 3*loyer;
+                case 3 : toReturn = 4*loyer;
                     break;
-                case 4 : toReturn = 4*loyer;
+                case 4 : toReturn = 8*loyer;
                     break;
                 default : toReturn = loyer;
             }

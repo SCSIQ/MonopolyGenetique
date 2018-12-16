@@ -23,6 +23,7 @@ public class ChoixPossibles extends Etat {
 
     @Override
     public Etat transition(String event) {
+        System.out.println("------------> event : "+event);
         if(event == "lancerDes"){
             return new LancerDesJoueur(super.getAutomate(), super.getListeJoueurs());
         }
