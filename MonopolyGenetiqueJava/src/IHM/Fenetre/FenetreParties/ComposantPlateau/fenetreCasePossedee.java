@@ -17,12 +17,14 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class fenetreCasePossedee extends Parent  {
 
@@ -83,13 +85,13 @@ public class fenetreCasePossedee extends Parent  {
         }
 
         //TEXTE
-        Label l = new Label(plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType());
-        l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-        l.setLayoutX(170);
-        l.setLayoutY(27);
+        Button l = new Button(plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType());
 
-        l.setScaleX(2);
-        l.setScaleY(2);
+        l.setLayoutY(10);
+        l.setLayoutX(10);
+        l.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+        l.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+        l.setPrefSize(475,50);
 
 
         Label l_contenu = new Label("\nElle appartient au joueur "+j.getNom()+".\n        Vous lui devez "+prixAPayer+" € ");
@@ -137,15 +139,7 @@ public class fenetreCasePossedee extends Parent  {
             l.setTextFill(Color.WHITE);
         }
 
-        //RECTANGLE
-        Rectangle r_chance = new Rectangle();
-        r_chance.setHeight(50);
-        r_chance.setWidth(475);
-        r_chance.setLayoutX(10);
-        r_chance.setLayoutY(10);
-        r_chance.setStroke(Color.BLACK);
-        r_chance.setStrokeWidth(1);
-        r_chance.setFill(couleurTerrain);
+        l.setBackground(new Background(new BackgroundFill(couleurTerrain, null, null)));
 
         Rectangle r_fond = new Rectangle();
         r_fond.setHeight(230);
@@ -198,9 +192,16 @@ public class fenetreCasePossedee extends Parent  {
         fenetre_actuelle.setMaxHeight(300);
         fenetre_actuelle.setMaxWidth(515);
 
+////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
+        fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                event.consume();
+            }
+        });
+
 //////////////////////AJOUT
         this.getChildren().add(r_fond);
-        this.getChildren().add(r_chance);
         this.getChildren().add(bt_payer);
         this.getChildren().add(l);
         this.getChildren().add(l_contenu);
