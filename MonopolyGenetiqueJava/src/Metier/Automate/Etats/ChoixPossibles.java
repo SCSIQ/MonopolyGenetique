@@ -33,7 +33,7 @@ public class ChoixPossibles extends Etat {
         else if(event == "acheterPropriete"){
             return new AcheterPropriete(super.getAutomate(), super.getListeJoueurs());
         }
-        else if(event == "acheterMaison"){
+        else if(event == "AcheterMaison"){
             return new AcheterMaison(super.getAutomate(), super.getListeJoueurs());
         }
         else{
