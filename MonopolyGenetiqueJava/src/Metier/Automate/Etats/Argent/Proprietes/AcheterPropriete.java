@@ -2,7 +2,7 @@ package Metier.Automate.Etats.Argent.Proprietes;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Etats.Choix.ChoixPossibles;
+import Metier.Automate.Etats.ChoixPossibles;
 import Metier.Automate.Etats.Etat;
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.Proprietes;

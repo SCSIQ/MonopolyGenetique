@@ -1,12 +1,10 @@
-package Metier.Automate.Etats.Choix;
+package Metier.Automate.Etats;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.Argent.Maison.AcheterMaison;
 import Metier.Automate.Etats.Argent.Proprietes.AcheterPropriete;
 import Metier.Automate.Etats.Des.LancerDesJoueur;
-import Metier.Automate.Etats.Etat;
-import Metier.Automate.Etats.FinTour;
 
 import java.util.ArrayList;
 

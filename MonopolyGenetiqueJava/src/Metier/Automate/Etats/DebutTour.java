@@ -2,7 +2,6 @@ package Metier.Automate.Etats;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Etats.Choix.ChoixPossibles;
 
 import java.util.ArrayList;
 

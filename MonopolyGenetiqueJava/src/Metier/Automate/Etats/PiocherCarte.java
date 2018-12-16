@@ -2,8 +2,7 @@ package Metier.Automate.Etats;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Etats.Choix.ChoixPossibles;
-import Metier.Cartes.CartesChances.Chance;
+
 import java.util.Random;
 
 import java.util.ArrayList;

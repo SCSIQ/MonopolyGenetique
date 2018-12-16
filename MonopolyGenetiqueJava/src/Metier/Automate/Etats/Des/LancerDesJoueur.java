@@ -1,7 +1,7 @@
 package Metier.Automate.Etats.Des;
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Etats.Choix.ChoixPossibles;
+import Metier.Automate.Etats.ChoixPossibles;
 import Metier.Automate.Etats.Deplacement;
 import Metier.Automate.Etats.Etat;
 

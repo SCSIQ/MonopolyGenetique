@@ -2,11 +2,10 @@ package Metier.Automate.Etats.Argent.Maison;
 
 import Entites.Joueur;
 import Metier.Automate.Automate;
-import Metier.Automate.Etats.Choix.ChoixPossibles;
+import Metier.Automate.Etats.ChoixPossibles;
 import Metier.Automate.Etats.Etat;
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
-import Metier.Plateau.ListeProprietes.Proprietes;
 
 import java.util.ArrayList;
 
