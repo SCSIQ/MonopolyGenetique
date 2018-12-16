@@ -61,12 +61,12 @@ public abstract class InitialisationPartie {
         return automate;
     }
 
-    private void creationListeCartes(){
+    protected void creationListeCartes(){
         this.listeDesCartes.add(new ChanceRdvDueDeLaPaie());
         this.listeDesCartes.add(new ChanceSortirDePrison());
     }
 
-    private void creationListeCases(){
+    protected void creationListeCases(){
         this.listeCases.add(new Depart(0));
         this.listeCases.add(new Marron1(1));
         this.listeCases.add(new CaisseCommune1(2));
@@ -110,7 +110,7 @@ public abstract class InitialisationPartie {
 
     }
 
-    private void creationListeJoueurs(int nombre, ArrayList<Color> listeCouleurs){
+    protected void creationListeJoueurs(int nombre, ArrayList<Color> listeCouleurs){
         for(int i=0 ; i<nombre ; i++){
             listeJoueurs.add(new Joueur(this.listeCases, listeCouleurs.get(i)));
         }

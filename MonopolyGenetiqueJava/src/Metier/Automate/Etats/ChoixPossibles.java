@@ -1,5 +1,6 @@
 package Metier.Automate.Etats;
 
+import Entites.IA;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.Argent.Maison.AcheterMaison;
@@ -16,9 +17,11 @@ public class ChoixPossibles extends Etat {
 
     @Override
     public void agir(String event) {
-        //cet état n'a pas pour vocation de faire quelque chose de particulier mais plutôt
-        //de permettre la transition entre plusieurs actions possibles parmi le choix proposé
-        //au joueur comme par exemple lancer les dés, consulter ses propriétés, etc
+
+        if(getAutomate().getJoueurCourant() instanceof IA){
+            System.out.println("C'est une IA !!!");
+        }
+
     }
 
     @Override

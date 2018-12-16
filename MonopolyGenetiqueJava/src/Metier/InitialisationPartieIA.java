@@ -1,15 +1,26 @@
 package Metier;
 
 import Entites.IA;
+import Entites.Joueur;
+import Metier.Automate.Automate;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
 public class InitialisationPartieIA extends InitialisationPartie{
 
-    private void creationListeIA(int nombre, ArrayList<Color> listeCouleurs){
+    public ArrayList<Joueur> creationListeIA(int nombre, ArrayList<Color> listeCouleurs){
+        ArrayList<Joueur> listeIA = new ArrayList<>();
         for(int i=0 ; i<nombre ; i++){
-            super.listeJoueurs.add(new IA(super.listeCases, listeCouleurs.get(i)));
+            listeIA.add(new IA(super.listeCases, listeCouleurs.get(i)));
         }
+        return listeIA;
+    }
+
+    public Automate automatePourIaInitialisation(ArrayList<Joueur> listeDesIA) {
+        super.creationListeCases();
+        super.creationListeCartes();
+        Automate automate = new Automate(listeDesIA, this.listeDesCartes);
+        return automate;
     }
 }

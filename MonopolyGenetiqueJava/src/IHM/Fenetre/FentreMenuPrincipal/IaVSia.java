@@ -6,6 +6,7 @@ import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import Metier.InitialisationPartie;
 import Metier.InitialisationPartieIA;
+import Metier.PartiesIA.Tournoi;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -24,38 +25,40 @@ public class IaVSia extends Parent {
     {
 ////////TEXTE
         Text t_titre = new Text(210,30,"NOUVELLE PARTIE IA VS IA");
-        Text t_nbJoueurs =  new Text(70,120,"Choisissez le nombre de joueurs : ");
-        Text t_nbEquipes = new Text(90,180,"Choisissez le nombre d'équipes pour le tournoi : ");
-        Text t_nbTours = new Text(70,240,"Choisissez le nombre de tours : ");
+        Text t_nbIA =  new Text(80,120,"Entrez le nombre d'intelligences artificielles : ");
+        Text t_nbMutations = new Text(80,180,"Entrez le nombre de mutations à effectuer : ");
+        Text t_nbTours = new Text(80,240,"Entrez le nombre de tours maximum par partie : ");
 
         //taille
         t_titre.setScaleX(2);
         t_titre.setScaleY(2);
 
-        t_nbJoueurs.setScaleX(1.5);
-        t_nbJoueurs.setScaleY(1.5);
+        t_nbIA.setScaleX(1.5);
+        t_nbIA.setScaleY(1.5);
 
-        t_nbEquipes.setScaleX(1.5);
-        t_nbEquipes.setScaleY(1.5);
+        t_nbMutations.setScaleX(1.5);
+        t_nbMutations.setScaleY(1.5);
 
         t_nbTours.setScaleX(1.5);
         t_nbTours.setScaleY(1.5);
 
 ////////COMBO BOX
             //création des combo box
-        ComboBox nb_adversaires = new ComboBox();
-        nb_adversaires.getItems().addAll(
-                "2",
-                "3",
-                "4",
-                "5"
+        ComboBox nb_ia = new ComboBox();
+        nb_ia.getItems().addAll(
+                "20",
+                "40",
+                "60",
+                "80",
+                "100"
         );
-        ComboBox nb_equipes = new ComboBox();
-        nb_equipes.getItems().addAll(
-                "2",
-                "3",
-                "4",
-                "5"
+        ComboBox nb_mutations= new ComboBox();
+        nb_mutations.getItems().addAll(
+                "100",
+                "200",
+                "300",
+                "400",
+                "500"
         );
         ComboBox nb_tours = new ComboBox();
         nb_tours.getItems().addAll(
@@ -65,23 +68,23 @@ public class IaVSia extends Parent {
                 "50"
         );
             //affichage du premier élément des combo box
-        nb_adversaires.getSelectionModel().selectFirst();
-        nb_equipes.getSelectionModel().selectFirst();
+        nb_ia.getSelectionModel().selectFirst();
+        nb_mutations.getSelectionModel().selectFirst();
         nb_tours.getSelectionModel().selectFirst();
 
             //positionnement des combo box
-        nb_adversaires.setLayoutX(490);
-        nb_adversaires.setLayoutY(100);
+        nb_ia.setLayoutX(490);
+        nb_ia.setLayoutY(100);
 
-        nb_equipes.setLayoutX(490);
-        nb_equipes.setLayoutY(160);
+        nb_mutations.setLayoutX(490);
+        nb_mutations.setLayoutY(160);
 
         nb_tours.setLayoutX(490);
         nb_tours.setLayoutY(220);
 
             //taille
-        nb_adversaires.setPrefSize(100,20);
-        nb_equipes.setPrefSize(100,20);
+        nb_ia.setPrefSize(100,20);
+        nb_mutations.setPrefSize(100,20);
         nb_tours.setPrefSize(100, 20);
 
 ////////BOUTONS quitter et lancer partie
@@ -126,16 +129,15 @@ public class IaVSia extends Parent {
                 Automate automate = new Automate(listeJoueurs);
                 */
 
-                //début initialisation automate
-                System.out.println("\n    DEBUT DE LA PARTIE\n");
-                System.out.println("Nombre d'IA : "+Integer.valueOf((String) nb_adversaires.getValue()));
-                InitialisationPartieIA initialisationPartieIA = new InitialisationPartieIA();
-                ArrayList<Color> listeCouleurs = new ArrayList<>();
-                for(int i=0 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeCouleurs.add(Color.RED);
-                }
-                Automate automate = initialisationPartieIA.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
-                //fin initialisation automate
+                //lancement du tournoi
+                System.out.println("\n    DEBUT DU TOURNOI\n");
+                System.out.println("Nombre d'IA : "+Integer.valueOf((String) nb_ia.getValue()));
+                System.out.println("Nombre de mutations à effectuer : "+Integer.valueOf((String) nb_mutations.getValue()));
+                System.out.println("Nombre de tours max par partie : "+Integer.valueOf((String) nb_tours.getValue()));
+
+                Tournoi tournoi = new Tournoi(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
+                tournoi.lancerLeTournoi();
+                //fin lancement du tournoi
 
                 /*
                 Color couleur= Color.BLACK;
@@ -161,11 +163,11 @@ public class IaVSia extends Parent {
 
 ////////AJOUT
         this.getChildren().add(t_titre);
-        this.getChildren().add(t_nbJoueurs);
-        this.getChildren().add(t_nbEquipes);
+        this.getChildren().add(t_nbIA);
+        this.getChildren().add(t_nbMutations);
         this.getChildren().add(t_nbTours);
-        this.getChildren().add(nb_adversaires);
-        this.getChildren().add(nb_equipes);
+        this.getChildren().add(nb_ia);
+        this.getChildren().add(nb_mutations);
         this.getChildren().add(nb_tours);
         this.getChildren().add(menu_principal);
         this.getChildren().add(commencer_partie);
