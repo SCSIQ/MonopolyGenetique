@@ -11,6 +11,7 @@ public class InitialisationPartieIA extends InitialisationPartie{
 
     public ArrayList<Joueur> creationListeIA(int nombre, ArrayList<Color> listeCouleurs){
         ArrayList<Joueur> listeIA = new ArrayList<>();
+        super.creationListeCases();
         for(int i=0 ; i<nombre ; i++){
             listeIA.add(new IA(super.listeCases, listeCouleurs.get(i)));
         }
@@ -18,7 +19,6 @@ public class InitialisationPartieIA extends InitialisationPartie{
     }
 
     public Automate automatePourIaInitialisation(ArrayList<Joueur> listeDesIA) {
-        super.creationListeCases();
         super.creationListeCartes();
         Automate automate = new Automate(listeDesIA, this.listeDesCartes);
         return automate;

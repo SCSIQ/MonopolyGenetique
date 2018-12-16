@@ -22,15 +22,12 @@ public class Tournoi {
 
     public void lancerLeTournoi(){
 
-        //réalise toutes les parties
-        for (int i = 0; i < this.nbMutations; i++) {
-
-        }
+        lancerUneSerieDePArties();
     }
 
     private void lancerUneSerieDePArties() {
         for (PartieIA p : this.listeParties) {
-
+            p.lancerPartie();
         }
     }
 

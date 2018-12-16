@@ -1,5 +1,6 @@
 package Metier.Automate;
 
+import Entites.IA;
 import Entites.Joueur;
 import Metier.Automate.Etats.Des.LancerDesInitial;
 import Metier.Automate.Etats.Etat;

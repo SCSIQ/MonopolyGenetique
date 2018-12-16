@@ -23,7 +23,7 @@ public class FinTour extends Etat{
         getAutomate().setCasePourAjoutMaison(null);
         getAutomate().setContenuCartePiochée(null);
         getAutomate().setArgentRecupDansParcGratuit(0);
-        System.out.println("\n-------------------------------------------------------------------------------------\n");
+        System.out.println("\n--------------------------------------\n");
     }
 
     @Override

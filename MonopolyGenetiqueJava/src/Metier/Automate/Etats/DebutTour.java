@@ -1,5 +1,6 @@
 package Metier.Automate.Etats;
 
+import Entites.IA;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 
@@ -18,9 +19,16 @@ public class DebutTour extends Etat{
 
         Joueur j = super.getListeJoueurs().get(0);
 
+        if(j instanceof IA){
+            System.out.println("    Joueur IA : "+j.getNom());
+        }
+        else
+        {
+            System.out.println("    Joueur humain : "+j.getNom());
+        }
+
         getAutomate().setNbJoueurTour(getAutomate().getNbJoueurTour()+1);
 
-        System.out.println("blablabla : "+getAutomate().getNbJoueurTour()%getAutomate().getListeJoueurs().size());
         if(getAutomate().getNbJoueurTour()%getAutomate().getListeJoueurs().size()==1)
         {
             getAutomate().setNumTour(getAutomate().getNumTour()+1);
@@ -31,7 +39,6 @@ public class DebutTour extends Etat{
         j.setResDes2(0);
         j.setResLanceDes(0);
         j.setNbDoubles(0);
-        System.out.println("                        Début du tour de "+j.getNom());
         //ici ajouter les actions automatisées que doivent faire les joueurs en début de tour si il y en a
     }
 

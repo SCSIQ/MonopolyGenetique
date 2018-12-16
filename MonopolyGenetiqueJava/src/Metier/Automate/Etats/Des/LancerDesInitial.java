@@ -1,4 +1,5 @@
 package Metier.Automate.Etats.Des;
+import Entites.IA;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.ChoixPossibles;
@@ -42,6 +43,14 @@ public class LancerDesInitial extends Etat {
         {
             super.getListeJoueurs().get(i).setNom("Joueur"+(i+1)); //attribut à chaque joueur un nom : Joueur1, Joueur2, etc
             //System.out.println("    "+super.getListeJoueurs().get(i).getJoueurID());
+        }
+
+        if(getAutomate().getJoueurCourant() instanceof IA){
+            System.out.println("    Joueur IA : "+getAutomate().getJoueurCourant().getNom());
+        }
+        else
+        {
+            System.out.println("    Joueur humain : "+getAutomate().getJoueurCourant().getNom());
         }
 
         //System.out.println("///////////////////////////////////////////////////////");

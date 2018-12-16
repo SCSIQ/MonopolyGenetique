@@ -18,10 +18,6 @@ public class ChoixPossibles extends Etat {
     @Override
     public void agir(String event) {
 
-        if(getAutomate().getJoueurCourant() instanceof IA){
-            System.out.println("C'est une IA !!!");
-        }
-
     }
 
     @Override
