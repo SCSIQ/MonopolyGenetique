@@ -10,7 +10,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -36,23 +36,18 @@ public class DetailCompagnie extends Parent {
 
         //si il s'agit d'une possession du joueur courant
         if(joueurCourant==true) {
-            Label nomCompagnie = new Label(poss.getListeCompagnies().get(numBouton).toString().toUpperCase() + "");
 
-            nomCompagnie.setLayoutY(20);
-            nomCompagnie.setLayoutX(80);
+            Button nomCompagnie = new Button(poss.getListeCompagnies().get(numBouton).toString().toUpperCase());
+
+            nomCompagnie.setLayoutY(10);
+            nomCompagnie.setLayoutX(10);
             nomCompagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomCompagnie.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
+            nomCompagnie.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
+            nomCompagnie.setPrefSize(455,50);
 
             gestion(automate, true);
 
-            //RECTANGLE
-            Rectangle r_compagnie = new Rectangle();
-            r_compagnie.setHeight(50);
-            r_compagnie.setWidth(455);
-            r_compagnie.setLayoutX(10);
-            r_compagnie.setLayoutY(10);
-            r_compagnie.setStroke(Color.BLACK);
-            r_compagnie.setStrokeWidth(1);
-            r_compagnie.setFill(Color.TRANSPARENT);
 
             ///BOUTON
             Button bt_ok = new Button("revenir au jeu");
@@ -88,26 +83,19 @@ public class DetailCompagnie extends Parent {
             });
 
             this.getChildren().add(bt_ok);
-            this.getChildren().add(r_compagnie);
             this.getChildren().add(nomCompagnie);
         } else {
-            Label nomCompagnie = new Label(possAd.getListeCompagnies().get(numBouton).toString().toUpperCase() + "");
 
-            nomCompagnie.setLayoutY(20);
-            nomCompagnie.setLayoutX(80);
+            Button nomCompagnie = new Button(possAd.getListeCompagnies().get(numBouton).toString().toUpperCase());
+
+            nomCompagnie.setLayoutY(10);
+            nomCompagnie.setLayoutX(10);
             nomCompagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomCompagnie.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
+            nomCompagnie.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
+            nomCompagnie.setPrefSize(455,50);
 
             gestion(automate, false);
-
-            //RECTANGLE
-            Rectangle r_compagnie = new Rectangle();
-            r_compagnie.setHeight(50);
-            r_compagnie.setWidth(455);
-            r_compagnie.setLayoutX(10);
-            r_compagnie.setLayoutY(10);
-            r_compagnie.setStroke(Color.BLACK);
-            r_compagnie.setStrokeWidth(1);
-            r_compagnie.setFill(Color.TRANSPARENT);
 
             //BOUTON
             Button bt_ok = new Button("revenir au jeu");
@@ -144,7 +132,6 @@ public class DetailCompagnie extends Parent {
             });
 
             this.getChildren().add(bt_ok);
-            this.getChildren().add(r_compagnie);
             this.getChildren().add(nomCompagnie);
         }
 

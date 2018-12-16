@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -39,24 +39,17 @@ public class DetailGare extends Parent {
 
         //si il s'agit d'une possession du joueur courant
         if(joueurCourant==true) {
-            Label nomGare = new Label(poss.getListeGares().get(numBouton).toString().toUpperCase() + "");
 
-            nomGare.setLayoutY(20);
-            nomGare.setLayoutX(80);
+            Button nomGare = new Button(poss.getListeGares().get(numBouton).toString().toUpperCase());
+
+            nomGare.setLayoutY(10);
+            nomGare.setLayoutX(10);
             nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomGare.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
+            nomGare.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
+            nomGare.setPrefSize(455,50);
 
             gestion(automate, true);
-
-            //RECTANGLE
-            Rectangle r_couleur = new Rectangle();
-            r_couleur.setHeight(50);
-            r_couleur.setWidth(455);
-            r_couleur.setLayoutX(10);
-            r_couleur.setLayoutY(10);
-            r_couleur.setStroke(Color.BLACK);
-            r_couleur.setStrokeWidth(1);
-            r_couleur.setFill(Color.TRANSPARENT);
-
             //BOUTON
             Button bt_ok = new Button("revenir au jeu");
 
@@ -85,27 +78,18 @@ public class DetailGare extends Parent {
 
             //AJOUT
             this.getChildren().add(bt_ok);
-            this.getChildren().add(r_couleur);
             this.getChildren().add(nomGare);
 
         } else {
-            Label nomGare = new Label(possAd.getListeGares().get(numBouton).toString().toUpperCase() + "");
+            Button nomGare = new Button(possAd.getListeGares().get(numBouton).toString().toUpperCase());
 
-            nomGare.setLayoutY(20);
-            nomGare.setLayoutX(80);
+            nomGare.setLayoutY(10);
+            nomGare.setLayoutX(10);
             nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomGare.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
+            nomGare.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
+            nomGare.setPrefSize(455,50);
 
-            gestion(automate, false);
-
-            //RECTANGLE
-            Rectangle r_couleur = new Rectangle();
-            r_couleur.setHeight(50);
-            r_couleur.setWidth(455);
-            r_couleur.setLayoutX(10);
-            r_couleur.setLayoutY(10);
-            r_couleur.setStroke(Color.BLACK);
-            r_couleur.setStrokeWidth(1);
-            r_couleur.setFill(Color.TRANSPARENT);
 
             //BOUTON
             Button bt_ok = new Button("revenir au jeu");
@@ -135,7 +119,6 @@ public class DetailGare extends Parent {
 
             //AJOUT
             this.getChildren().add(bt_ok);
-            this.getChildren().add(r_couleur);
             this.getChildren().add(nomGare);
         }
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON

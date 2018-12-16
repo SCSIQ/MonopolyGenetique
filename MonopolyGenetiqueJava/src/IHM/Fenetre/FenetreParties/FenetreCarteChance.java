@@ -16,6 +16,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -40,14 +41,16 @@ public class FenetreCarteChance extends Parent {
         this.zoneJoueur = zoneJoueur ;
         this.jeu = jeu ;
 
-        //LABEL CARTE CHANCE :
-        Label carte_chance = new Label("CARTE CHANCE");
-        carte_chance.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-        carte_chance.setLayoutX(205);
-        carte_chance.setLayoutY(27);
-        carte_chance.setScaleX(2);
-        carte_chance.setScaleY(2);
+        Button carte_chance = new Button("CARTE CHANCE");
+
+        carte_chance.setLayoutY(10);
+        carte_chance.setLayoutX(10);
+        carte_chance.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         carte_chance.setTextFill(Color.WHITE);
+        carte_chance.setBackground(new Background(new BackgroundFill(Color.rgb(200,27,31), null, null)));
+        carte_chance.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+        carte_chance.setPrefSize(475,50);
+
 
         //CONTENU
         automate.evoluer("Rendez-vous rue de la paie");
@@ -64,18 +67,7 @@ public class FenetreCarteChance extends Parent {
         //Pion avance
         pion.entrerDansCase();
 
-
-
-        //RECTANGLE
-        Rectangle r_chance = new Rectangle();
-        r_chance.setHeight(50);
-        r_chance.setWidth(475);
-        r_chance.setLayoutX(10);
-        r_chance.setLayoutY(10);
-        r_chance.setStroke(Color.BLACK);
-        r_chance.setStrokeWidth(1);
-        r_chance.setFill(Color.rgb(200, 27, 31));
-
+        //REcCTANGLE
         Rectangle r_fond = new Rectangle();
         r_fond.setHeight(230);
         r_fond.setWidth(475);
@@ -92,10 +84,6 @@ public class FenetreCarteChance extends Parent {
         bt_ok.setLayoutY(200);
 
         bt_ok.setPrefSize(150, 10);
-
-
-
-
 
         bt_ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -145,7 +133,6 @@ public class FenetreCarteChance extends Parent {
 
         //AJOUT
         this.getChildren().add(r_fond);
-        this.getChildren().add(r_chance);
         this.getChildren().add(bt_ok);
         this.getChildren().add(carte_chance);
         this.getChildren().add(carteChance);

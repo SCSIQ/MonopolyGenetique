@@ -12,6 +12,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -34,35 +35,29 @@ public class FenetreCarteCommu extends Parent {
         this.zoneJoueur=zoneJoueur;
         this.zoneAd=zoneAd;
 
+        Button carte_commu= new Button("CAISSE DE COMMUNAUTE");
+
+        carte_commu.setLayoutY(10);
+        carte_commu.setLayoutX(10);
+        carte_commu.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+        carte_commu.setTextFill(Color.WHITE);
+        carte_commu.setBackground(new Background(new BackgroundFill(Color.rgb(9,172,227), null, null)));
+        carte_commu.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+        carte_commu.setPrefSize(475,50);
+
+
         //RECTANGLE
-        Rectangle r_commu = new Rectangle();
-        r_commu.setHeight(50);
-        r_commu.setWidth(475);
-        r_commu.setLayoutX(10);
-        r_commu.setLayoutY(15);
-        r_commu.setStroke(Color.BLACK);
-        r_commu.setStrokeWidth(1);
-        r_commu.setFill(Color.rgb(9, 172, 227));
 
         Rectangle r_fond = new Rectangle();
-        r_fond.setHeight(230);
+        r_fond.setHeight(235);
         r_fond.setWidth(475);
         r_fond.setLayoutX(10);
-        r_fond.setLayoutY(15);
+        r_fond.setLayoutY(10);
         r_fond.setStroke(Color.BLACK);
         r_fond.setStrokeWidth(1);
         r_fond.setFill(Color.TRANSPARENT);
 
         //TEXTE
-        Label l_Commu = new Label("CAISSE DE COMMUNAUTE");
-        l_Commu.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-        l_Commu.setLayoutX(160);
-        l_Commu.setLayoutY(33);
-
-        l_Commu.setScaleX(2);
-        l_Commu.setScaleY(2);
-
-        l_Commu.setTextFill(Color.WHITE);
 
         Label l_contenu = new Label("Cette case n'a pour l'instant aucun effet.");
         l_contenu.setLayoutX(100);
@@ -70,8 +65,6 @@ public class FenetreCarteCommu extends Parent {
 
         l_contenu.setScaleX(1.5);
         l_contenu.setScaleY(1.5);
-
-
 
         //BOUTON
         Button bt_ok = new Button("Ok");
@@ -118,9 +111,8 @@ public class FenetreCarteCommu extends Parent {
 
 /////////////////////////////////////////////////AJOUT
         this.getChildren().add(r_fond);
-        this.getChildren().add(r_commu);
-        this.getChildren().add(l_Commu);
         this.getChildren().add(l_contenu);
+        this.getChildren().add(carte_commu);
         this.getChildren().add(bt_ok);
 
     }
