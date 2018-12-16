@@ -212,9 +212,9 @@ public class ZonePossessions extends Parent {
     public void RectangleCartePrison(){
 
         //Ajout d'un label "Vous êtes libéré de prison"
-        Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" :");
+        Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" : "+automate.getJoueurCourant().getNbCartesLibereDePrison());
         textPrison.setLayoutX(1000);
-        textPrison.setLayoutY(610);
+        textPrison.setLayoutY(620);
         textPrison.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         this.getChildren().add(textPrison);
 
