@@ -21,6 +21,7 @@ public class Joueur {
     private ArrayList<Cases> listeCases;
     private boolean estEnPrison = false;
     private int essaiesPourSortirDePrison = 0;
+    private int nbCartesLibereDePrison = 0; //le nombre de cartes libéré de prison que le joueur possède
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
         this.solde = 15000; //a revoir car valeur fausse 150000
@@ -181,6 +182,30 @@ public class Joueur {
 
     public void setEssaiesPourSortirDePrison(int essaiesPourSortirDePrison) {
         this.essaiesPourSortirDePrison = essaiesPourSortirDePrison;
+    }
+
+    public int getNbCartesLibereDePrison() {
+        return nbCartesLibereDePrison;
+    }
+
+    public void gagnerUneCartesLibereDePrison() {
+        this.nbCartesLibereDePrison++;
+    }
+
+    /**
+     * 
+     * @return true si une carte a bien pu être utilisé et false si ce n'est pas le cas
+     */
+    public boolean utiliserUneCartesLibereDePrison() {
+        if(this.nbCartesLibereDePrison>0)
+        {
+            this.nbCartesLibereDePrison--;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
