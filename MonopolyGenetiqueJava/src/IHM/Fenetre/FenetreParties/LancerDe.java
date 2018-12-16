@@ -93,6 +93,11 @@ public class LancerDe extends Parent {
                         {
                             fenetreEnPrison(fenetre_actuelle, automate);
                         }
+                        //si le joueur n'est pas en visite simple que ça qu'il a
+                        if(automate.getJoueurCourant().getEstEnPrison()==true && automate.getJoueurCourant().getEssaiesPourSortirDePrison()!=0)
+                        {
+                            fenetreEnPrisonEssai(fenetre_actuelle, automate, zoneJoueur, zoneAd);
+                        }
                     }
 
                     //Si tombe sur le parc gratuit
@@ -270,6 +275,25 @@ public class LancerDe extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_commu.show();
+    }
+
+    public void fenetreEnPrisonEssai(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_prison = new Stage();
+        FenetrePrison fenetrePrison= new FenetrePrison(nouvelle_fenetre_prison,canvas, automate, plateauJeu, zoneJoueur, jeu, poss,  zoneAd, jeu.getPion());
+
+        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
+
+        nouvelle_fenetre_prison.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_prison.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_prison.initOwner(jeu.getFenetrePropri());
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_prison.show();
     }
 
 }
