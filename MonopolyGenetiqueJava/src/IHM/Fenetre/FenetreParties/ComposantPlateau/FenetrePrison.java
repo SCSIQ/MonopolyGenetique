@@ -84,14 +84,6 @@ public class FenetrePrison extends Parent {
         l_Paye.setScaleX(1.2);
         l_Paye.setScaleY(1.2);
 
-        Label l_Double = new Label("ESSAYEZ DE FAIRE \n     UN DOUBLE");
-        l_Double.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-        l_Double.setLayoutX(260);
-        l_Double.setLayoutY(180);
-
-        l_Double.setScaleX(1.2);
-        l_Double.setScaleY(1.2);
-
         Label l_Carte = new Label("       UTILISEZ \n      UNE CARTE \n'SORTEZ DE PRISON'");
         l_Carte.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
         l_Carte.setLayoutX(450);
@@ -137,8 +129,8 @@ public class FenetrePrison extends Parent {
                 }
             }
         });
-/////////////////////////////////////BOUTON LANCER LES DES
-       Button bt_lancerDes = new Button("LANCER LES DES");
+/////////////////////////////////////BOUTON RETOUR JEU
+       Button bt_lancerDes = new Button("REVENIR AU JEU");
 
         bt_lancerDes.setLayoutX(225);
         bt_lancerDes.setLayoutY(250);
@@ -154,9 +146,9 @@ public class FenetrePrison extends Parent {
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
 
-                automate.evoluer("lancerDes");
-               jeu.fenetreDes(fenetre_actuelle,automate,  plateauJeu, zoneJoueur, poss, zoneAd) ;
-                pion.entrerDansCase();
+                /* automate.evoluer("lancerDes");
+                jeu.fenetreDes(fenetre_actuelle,automate,  plateauJeu, zoneJoueur, poss, zoneAd) ;
+                pion.entrerDansCase();*/
 
             }
         });
@@ -203,7 +195,6 @@ public class FenetrePrison extends Parent {
         this.getChildren().add(l);
         this.getChildren().add(l_2);
         this.getChildren().add(l_Paye);
-        this.getChildren().add(l_Double);
         this.getChildren().add(l_Carte);
         this.getChildren().add(l_Note);
         this.getChildren().add(l_Tour);
