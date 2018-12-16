@@ -43,6 +43,7 @@ public class LancerDe extends Parent {
             Integer dé1 = automate.getJoueurCourant().getResDes1();
             Integer dé2 = automate.getJoueurCourant().getResDes2();
 
+
             Text t_nb = new Text(automate.getJoueurCourant().getNom()+" a fait : \n" +"    "+ dé1.toString()+" + "+dé2.toString()+" = "+score.toString());
 
             t_nb.setLayoutX(170);
@@ -96,8 +97,14 @@ public class LancerDe extends Parent {
                         //si le joueur n'est pas en visite simple que ça qu'il a
                         if(automate.getJoueurCourant().getEstEnPrison()==true && automate.getJoueurCourant().getEssaiesPourSortirDePrison()!=0)
                         {
-                            fenetreEnPrisonEssai(fenetre_actuelle, automate, zoneJoueur, zoneAd);
-                        }
+                            if(automate.getJoueurCourant().getResDes2()==automate.getJoueurCourant().getResDes1())
+                            {
+                                fenetreLiberePrison(fenetre_actuelle, automate) ;
+                            }else {
+                                fenetreEnPrisonEssai(fenetre_actuelle, automate, zoneJoueur, zoneAd);
+
+                            }
+                         }
                     }
 
                     //Si tombe sur le parc gratuit
@@ -294,6 +301,25 @@ public class LancerDe extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_prison.show();
+    }
+
+    public void fenetreLiberePrison(Stage fenetre_actuelle, Automate automate)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_liberer = new Stage();
+        FenetreLibererPrison fenetrePrison= new FenetreLibererPrison(nouvelle_fenetre_liberer,canvas, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetrePrison,650,550);
+
+        nouvelle_fenetre_liberer.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_liberer.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_liberer.initOwner(jeu.getFenetrePropri());
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_liberer.show();
     }
 
 }

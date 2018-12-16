@@ -212,7 +212,7 @@ public class FenetrePrison extends Parent {
 
     public void fenetreFaillite(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
-        //jeu.fenetreNoire();
+        jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_faillite = new Stage();
 
