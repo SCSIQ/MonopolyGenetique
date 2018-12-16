@@ -71,6 +71,7 @@ public class Deplacement extends Etat{
         //si c'est le parc gratuit
         if(j.getPion().getCase() instanceof ParcGratuit)
         {
+            getAutomate().setArgentRecupDansParcGratuit(((ParcGratuit)j.getListeCases().get(20)).getArgantDansParc());
             j.IncrementerSolde(((ParcGratuit)j.getListeCases().get(20)).recupererArgent()); //récupérer l'argent se trouvant dans le parc gratuit
         }
     }

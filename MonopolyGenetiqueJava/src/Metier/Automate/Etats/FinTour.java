@@ -22,6 +22,7 @@ public class FinTour extends Etat{
         listeJoueurs.add(j);
         getAutomate().setCasePourAjoutMaison(null);
         getAutomate().setContenuCartePiochée(null);
+        getAutomate().setArgentRecupDansParcGratuit(0);
         System.out.println("\n-------------------------------------------------------------------------------------\n");
     }
 

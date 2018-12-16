@@ -19,6 +19,7 @@ public class Automate {
 
     private Cases casePourAjoutMaison;
     private String contenuCartePiochée;
+    private int argentRecupDansParcGratuit;
 
     public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartes){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
@@ -100,5 +101,13 @@ public class Automate {
 
     public void setContenuCartePiochée(String contenuCartePiochée) {
         this.contenuCartePiochée = contenuCartePiochée;
+    }
+
+    public int getArgentRecupDansParcGratuit() {
+        return argentRecupDansParcGratuit;
+    }
+
+    public void setArgentRecupDansParcGratuit(int argentRecupDansParcGratuit) {
+        this.argentRecupDansParcGratuit = argentRecupDansParcGratuit;
     }
 }
