@@ -59,11 +59,13 @@ public class DetailTerrain extends Parent {
             fenetre_detail.setMaxWidth(515);
 
 
+            ////////////////////////TEXTE
             nomTerrain.setLayoutY(20);
             nomTerrain.setLayoutX(80);
             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
             nomTerrain.setTextFill(Color.WHITE);
 
+            //COULEUR
             CouleurMétier s =poss.getListeTerrains().get(numBouton).getCouleur();
             Color couleurTerrain ;
             switch(s){
@@ -87,7 +89,7 @@ public class DetailTerrain extends Parent {
                 default : couleurTerrain=Color.BLACK;
             }
 
-            //ajout Couleur du joueur
+            //ajout Couleur de la possession du terrain du joueur
 
             Rectangle r_couleur = new Rectangle();
             r_couleur.setHeight(50);
@@ -98,10 +100,13 @@ public class DetailTerrain extends Parent {
             r_couleur.setStrokeWidth(1);
             r_couleur.setFill(couleurTerrain);
 
+            //APPEL DES DIFFERNTS PANES
             GenererPanelInfos(automate, true) ;
             GenererPanelMaisonHotel(automate);
             genererPanelVendre(automate);
 
+
+            //////////////////////////////////////////////////////////////REVENIR AU JEU
             Button bt_ok = new Button("REVENIR AU JEU");
 
             bt_ok.setLayoutX(180);
@@ -121,9 +126,9 @@ public class DetailTerrain extends Parent {
             });
 
             //AJOUT
-            this.getChildren().add(bt_ok);
-            this.getChildren().add(r_couleur);
-            this.getChildren().add(nomTerrain);
+             this.getChildren().add(bt_ok);
+             this.getChildren().add(r_couleur);
+             this.getChildren().add(nomTerrain);
         }else {
             Label nomTerrain = new Label(possAd.getListeTerrains().get(numBouton).toString().toUpperCase()+"") ;
 
@@ -200,8 +205,6 @@ public class DetailTerrain extends Parent {
         }
 
 
-
-
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
         fenetre_detail.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -232,7 +235,6 @@ public class DetailTerrain extends Parent {
 
         if(joueurCourant==true) {
 
-
             //Contenu du panel
             Label l_infos = new Label("Loyer terrain nu : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyerSansMaison() + " €\n"
                     + "Loyer avec une maison : " + ((Terrain) poss.getListeTerrains().get(numBouton)).getLoyer1Maison() + " €\n" +
@@ -252,15 +254,13 @@ public class DetailTerrain extends Parent {
             this.getChildren().add(zoneInfosTerrain);
         } else {
             //Contenu du panel
-            Label l_infos = new Label("Loyer terrain nu : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyerSansMaison() + " €\n"
+            Label l_infos = new Label("Loyer terrain nu : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyerSansMaison() + " €\n\n"
                     + "Loyer avec une maison : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer1Maison() + " €\n" +
                     "Loyer avec deux maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer2Maison() + " €\n" +
                     "Loyer avec trois maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer3Maison() + " €\n" +
-                    "Loyer avec quatre maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer4Maison() + " €\n" +
-                    "Loyer avec un hôtel : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyerHotel() + " €\n\n" +
-                    "Prix Maison : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getPrixAjoutMaison() + " €\n" +
-                    "Prix Hôtel :" + ((Terrain) possAd.getListeTerrains().get(numBouton)).getPrixAjoutMaison() + " €");
-            l_infos.setLayoutY(10);
+                    "Loyer avec quatre maisons : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyer4Maison() + " €\n\n" +
+                    "Loyer avec un hôtel : " + ((Terrain) possAd.getListeTerrains().get(numBouton)).getLoyerHotel() + " €");
+            l_infos.setLayoutY(25);
             l_infos.setLayoutX(10);
             l_infos.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
 

@@ -336,13 +336,13 @@ public class ZonePossessions extends Parent {
             if(automate.getJoueurCourant().getListePropietes().get(i) instanceof Gare){
                 Label gare = new Label(""+automate.getJoueurCourant().getListePropietes().get(i).toString()+"\n");
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-                gare.setLayoutX(10);
+                gare.setLayoutX(15);
                 gare.setLayoutY(37+y);
 
                 Button bt_detail = new Button("DETAILS") ;
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(225);
+                bt_detail.setLayoutX(215);
                 bt_detail.setLayoutY(33+y);
 
                 boutonsGares.add(j, bt_detail);
@@ -376,13 +376,13 @@ public class ZonePossessions extends Parent {
                 compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                 ServicePublic compa = (ServicePublic) automate.getJoueurCourant().getListePropietes().get(i);
 
-                compagnie.setLayoutX(10);
+                compagnie.setLayoutX(15);
                 compagnie.setLayoutY(37+y);
 
                 Button bt_detail = new Button("DETAILS") ;
                 bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(225);
+                bt_detail.setLayoutX(215);
                 bt_detail.setLayoutY(33+y);
 
                 boutonsCompagnie.add(j, bt_detail);

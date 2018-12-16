@@ -43,10 +43,21 @@ public class DetailGare extends Parent {
 
             gestion(automate, true);
 
+            //RECTANGLE
+            Rectangle r_couleur = new Rectangle();
+            r_couleur.setHeight(50);
+            r_couleur.setWidth(455);
+            r_couleur.setLayoutX(10);
+            r_couleur.setLayoutY(10);
+            r_couleur.setStroke(Color.BLACK);
+            r_couleur.setStrokeWidth(1);
+            r_couleur.setFill(Color.TRANSPARENT);
+
+            //BOUTON
             Button bt_ok = new Button("revenir au jeu");
 
             bt_ok.setLayoutX(180);
-            bt_ok.setLayoutY(500);
+            bt_ok.setLayoutY(300);
 
             bt_ok.setPrefSize(150, 10);
 
@@ -62,14 +73,15 @@ public class DetailGare extends Parent {
             });
 
             /////////TAILLE MIN ET MAX DE LA FENETRE
-            fenetre_detail.setMinHeight(600);
+            fenetre_detail.setMinHeight(400);
             fenetre_detail.setMinWidth(500);
 
-            fenetre_detail.setMaxHeight(600);
+            fenetre_detail.setMaxHeight(400);
             fenetre_detail.setMaxWidth(500);
 
             //AJOUT
             this.getChildren().add(bt_ok);
+            this.getChildren().add(r_couleur);
             this.getChildren().add(nomGare);
 
         } else {
@@ -81,10 +93,21 @@ public class DetailGare extends Parent {
 
             gestion(automate, false);
 
+            //RECTANGLE
+            Rectangle r_couleur = new Rectangle();
+            r_couleur.setHeight(50);
+            r_couleur.setWidth(455);
+            r_couleur.setLayoutX(10);
+            r_couleur.setLayoutY(10);
+            r_couleur.setStroke(Color.BLACK);
+            r_couleur.setStrokeWidth(1);
+            r_couleur.setFill(Color.TRANSPARENT);
+
+            //BOUTON
             Button bt_ok = new Button("revenir au jeu");
 
             bt_ok.setLayoutX(180);
-            bt_ok.setLayoutY(500);
+            bt_ok.setLayoutY(300);
 
             bt_ok.setPrefSize(150, 10);
 
@@ -100,14 +123,15 @@ public class DetailGare extends Parent {
             });
 
             /////////TAILLE MIN ET MAX DE LA FENETRE
-            fenetre_detail.setMinHeight(600);
+            fenetre_detail.setMinHeight(400);
             fenetre_detail.setMinWidth(500);
 
-            fenetre_detail.setMaxHeight(600);
+            fenetre_detail.setMaxHeight(400);
             fenetre_detail.setMaxWidth(500);
 
             //AJOUT
             this.getChildren().add(bt_ok);
+            this.getChildren().add(r_couleur);
             this.getChildren().add(nomGare);
         }
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
@@ -124,24 +148,31 @@ public class DetailGare extends Parent {
 
     public void gestion(Automate automate, boolean joueurCourant){
         zoneInfos.setLayoutX(10);
-        zoneInfos.setLayoutY(130);
+        zoneInfos.setLayoutY(80);
 
         if(joueurCourant==true){
-            Label gare = new Label("Votre loyer avec une gare : "+poss.getListeGares().get(numBouton).getLoyer()+" €\n"+
-                    "Si vous possédez 2 gares : \n" +
-                    "Si vous possèdez 3 gares : \n"+
-                    "Si vous avez les 4 gares :  ");
+            Label gare = new Label("Votre loyer : \n\n"+
+                    "   Si vous possédez 1 gare  : "+poss.getListeGares().get(numBouton).getLoyer()+" €\n"+
+                    "   Si vous possédez 2 gares : "+poss.getListeGares().get(numBouton).getLoyer()*2+" €\n"+
+                    "   Si vous possédez 3 gares : "+(poss.getListeGares().get(numBouton).getLoyer()*2)*2+" €\n"+
+                    "   Si vous possédez 4 gares :  "+((poss.getListeGares().get(numBouton).getLoyer()*2)*2)*2+" €\n");
 
+            gare.setLayoutX(20);
+            gare.setLayoutY(20);
 
             gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
             zoneInfos.getChildren().add(gare);
         }else {
-            Label gare = new Label("Votre loyer avec une gare : "+possAd.getListeGares().get(numBouton).getLoyer()+" €\n"+
-                    "Si vous possédez 2 gares : \n" +
-                    "Si vous possèdez 3 gares : \n"+
-                    "Si vous avez les 4 gares :  ");
+            Label gare = new Label("Le loyer que vous devrez payer\n\n"+
+                    "   Si ce joueur possède 1 gare  : "+possAd.getListeGares().get(numBouton).getLoyer()+" €\n"+
+                    "   Si ce joueur possède 2 gares : " +possAd.getListeGares().get(numBouton).getLoyer()*2+" €\n"+
+                    "   Si ce joueur possède 3 gares : "+(possAd.getListeGares().get(numBouton).getLoyer()*2)*2+" €\n"+
+                    "   Si ce joueur possède 4 gares : "+((possAd.getListeGares().get(numBouton).getLoyer()*2)*2)*2+" €"+
+                    "\n\nCe joueur possède actuellement "+possAd.getListeGares().get(numBouton).getNbGaresPossedees()+" gares.");
 
+            gare.setLayoutX(20);
+            gare.setLayoutY(20);
 
             gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
@@ -149,13 +180,12 @@ public class DetailGare extends Parent {
 
         }
 
-
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_gare = new Rectangle();
         rect_gare.setFill(Color.TRANSPARENT);
         rect_gare.setStroke(Color.BLACK);
-        rect_gare.setHeight(250);
-        rect_gare.setWidth(450);
+        rect_gare.setHeight(200);
+        rect_gare.setWidth(455);
         rect_gare.setX(0);
         rect_gare.setY(0);
 

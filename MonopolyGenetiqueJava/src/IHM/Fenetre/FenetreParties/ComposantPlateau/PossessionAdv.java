@@ -116,27 +116,40 @@ public class PossessionAdv extends Parent {
         t_adv1.setScaleX(2);
         t_adv1.setScaleY(2);
         t_adv1.setLayoutX(250);
-        t_adv1.setLayoutY(30);
-        this.getChildren().add(t_adv1);
+        t_adv1.setLayoutY(45);
 
-        Rectangle rect_possession = new Rectangle();
+
+        //Rectangle couleur joueur -> A VOIR SI ON GARDE ...
+        Rectangle r_couleur = new Rectangle();
+        r_couleur.setHeight(60);
+        r_couleur.setWidth(60);
+        r_couleur.setX(15);
+        r_couleur.setY(15);
+        r_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
+
+
         //TAILLE DU RECTANGLE ET POSITION
-
-        rect_possession.setHeight(439);
+        Rectangle rect_possession = new Rectangle();
+        rect_possession.setHeight(500);
         rect_possession.setWidth(630);
         rect_possession.setX(10);
-        rect_possession.setY(70);
-
-        //COULEUR ET CONTOUR
+        rect_possession.setY(10);
         rect_possession.setFill(Color.TRANSPARENT);
         rect_possession.setStroke(Color.BLACK);
+
+
         this.getChildren().add(rect_possession);
+        this.getChildren().add(r_couleur);
+        this.getChildren().add(t_adv1);
+
+        //AJOUT DES DIFFERENTS ELEMENTS
 
         RectangleTerrain();
         RectangleGare();
         RectangleCompagnies();
         RectangleCartePrison();
 
+        //BOUTON
         Button bt_ok = new Button("revenir au jeu");
 
         bt_ok.setLayoutX(270);
@@ -354,9 +367,9 @@ public class PossessionAdv extends Parent {
                 zoneTerrain.getChildren().add(r_couleur);
 
                 Button bt_detail = new Button("DETAILS");
-                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(200);
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
+                bt_detail.setLayoutX(225);
                 bt_detail.setLayoutY(37 + y);
 
                 Terrain ter = (Terrain) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
@@ -397,14 +410,14 @@ public class PossessionAdv extends Parent {
             if(automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i) instanceof Gare){
                 Label gare = new Label(""+automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i).toString()+"\n");
                 gare.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-                gare.setLayoutX(10);
-                gare.setLayoutY(30+y);
+                gare.setLayoutX(15);
+                gare.setLayoutY(37+y);
 
                 Button bt_detail = new Button("DETAILS") ;
-                bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                 bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                bt_detail.setLayoutX(200);
-                bt_detail.setLayoutY(30+y);
+                bt_detail.setLayoutX(215);
+                bt_detail.setLayoutY(33+y);
 
                 boutonsGares.add(j,bt_detail);
                 listeGaresLabel.add(gare);
@@ -442,14 +455,14 @@ public class PossessionAdv extends Parent {
                     compagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
                     ServicePublic compa = (ServicePublic) automate.getListeJoueurs().get(numJoueur).getListePropietes().get(i);
 
-                    compagnie.setLayoutX(10);
-                    compagnie.setLayoutY(30 + y);
+                    compagnie.setLayoutX(15);
+                    compagnie.setLayoutY(37 + y);
 
                     Button bt_detail = new Button("DETAILS");
-                    bt_detail.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
+                    bt_detail.setBackground(new Background(new BackgroundFill(Color.rgb(239,239,239), null, null)));
                     bt_detail.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-                    bt_detail.setLayoutX(200);
-                    bt_detail.setLayoutY(30 + y);
+                    bt_detail.setLayoutX(215);
+                    bt_detail.setLayoutY(33 + y);
 
                     boutonsCompagnie.add(j, bt_detail);
                     listeCompagniesLabel.add(compagnie);
