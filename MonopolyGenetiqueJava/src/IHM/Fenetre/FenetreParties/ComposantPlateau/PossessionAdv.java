@@ -521,7 +521,7 @@ public class PossessionAdv extends Parent {
       //  jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), numBouton, this, false, pl);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, jeu.getPoss(), numBouton, this, false, pl, jeu);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 

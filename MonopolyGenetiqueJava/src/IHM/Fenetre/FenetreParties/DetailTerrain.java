@@ -37,8 +37,9 @@ public class DetailTerrain extends Parent {
     private PossessionAdv possAd ;
     private Pane zoneVendre;
     private PlateauJeu pl ;
+    private Jeu jeu ;
 
-    public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant, PlateauJeu pl){
+    public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant, PlateauJeu pl, Jeu jeu){
 
         zoneInfosTerrain = new Pane();
         zoneMaisonHotel= new Pane();
@@ -47,6 +48,7 @@ public class DetailTerrain extends Parent {
         this.poss = poss ;
         this.possAd = possAd ;
         this.pl = pl ;
+        this.jeu = jeu ;
 
          if(joueurCourant==true){
 
@@ -295,6 +297,13 @@ public class DetailTerrain extends Parent {
                 //enregistremetn dans l'automate du terrain où l'on veut acheter la maison
                 automate.setCasePourAjoutMaison(poss.getListeTerrains().get(numBouton));
                 automate.evoluer("AcheterMaison"); //ensuite demande à l'automate d'évoluer
+                //on remet à jour l'argent du joueur courant
+                jeu.getZoneJoueur().SupprimerJoueur();
+                jeu.getZoneJoueur().genereInfosJoueur(automate);
+
+                //Met à jour les adversaires :
+                jeu.getZoneAd().SupprimerAdversaire();
+                jeu.getZoneAd().genererAdversaire(automate, jeu.getFenetrePropri());
                 afficherMaison(automate);
            }
         });

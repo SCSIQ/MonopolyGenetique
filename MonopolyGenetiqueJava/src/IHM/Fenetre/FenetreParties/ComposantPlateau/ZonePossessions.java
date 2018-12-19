@@ -468,7 +468,7 @@ public class ZonePossessions extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_detail = new Stage();
-        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true, pl);
+        DetailTerrain fenetreDetail = new DetailTerrain(automate,nouvelle_fenetre_detail, fenetre_actuelle, canvas, this, numBouton, ad.getPossAd(), true, pl, jeu);
 
         Scene nouvelle_scene = new  Scene(fenetreDetail,500,700);
 
