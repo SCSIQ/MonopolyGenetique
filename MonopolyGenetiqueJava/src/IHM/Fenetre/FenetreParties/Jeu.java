@@ -28,12 +28,9 @@ public class Jeu extends Parent {
     private ZonePossessions poss ;
     private Pion pion ;
     private PlateauJeu pl ;
-
-
-
+    private ZoneAdversaires zoneAd ;
+    private ZoneInfoJoueur zoneJoueur ;
     private Stage primaryStage ;
-
-
     private Stage fenetrePropri ;
 
 ////////////////////////GETTER
@@ -57,6 +54,14 @@ public class Jeu extends Parent {
         return poss;
     }
 
+    public ZoneAdversaires getZoneAd() {
+        return zoneAd;
+    }
+
+    public ZoneInfoJoueur getZoneJoueur() {
+        return zoneJoueur;
+    }
+
 ////////////////////////////////CONSTRUCTEUR
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
@@ -66,7 +71,7 @@ public class Jeu extends Parent {
 
 //////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
-        ZoneInfoJoueur zoneJoueur = new ZoneInfoJoueur(automate);
+        zoneJoueur = new ZoneInfoJoueur(automate);
         zoneJoueur.genereInfosJoueur(automate);
         this.getChildren().add(zoneJoueur);
 
@@ -82,7 +87,7 @@ public class Jeu extends Parent {
 
         //APPEL ZONE ADVERSAIRE
 
-        ZoneAdversaires zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this, pl);
+        zoneAd = new ZoneAdversaires(primaryStage,nouvelle_fenetre,automate, canvas,this, pl);
         this.getChildren().add(zoneAd);
         zoneAd.genererAdversaire(automate, nouvelle_fenetre);
 
