@@ -493,7 +493,7 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
                     maison.setFitHeight(50);
@@ -511,7 +511,7 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
                     maison.setFitHeight(50);
@@ -529,7 +529,7 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
                     maison.setFitHeight(50);
@@ -547,10 +547,10 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
-                    maison.setFitWidth(50);
+                    maison.setFitWidth(90);
                     maison.setPreserveRatio(true);
 
                     //Ajout de la maison
