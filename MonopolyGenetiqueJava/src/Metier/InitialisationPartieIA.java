@@ -20,7 +20,7 @@ public class InitialisationPartieIA extends InitialisationPartie{
 
     public Automate automatePourIaInitialisation(ArrayList<Joueur> listeDesIA) {
         super.creationListeCartesChances();
-        Automate automate = new Automate(listeDesIA, this.listeDesCartesChances);
+        Automate automate = new Automate(listeDesIA, this.listeDesCartesChances, this.listeDesCartesCaisseCommune);
         return automate;
     }
 }

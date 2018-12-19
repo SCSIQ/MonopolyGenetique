@@ -14,6 +14,7 @@ public class Automate {
     private Etat etatCourant;
     private ArrayList<Joueur> listeJoueurs ;
     private ArrayList<Cartes> listeDesCartesChances;
+    private ArrayList<Cartes> listeDesCartesCaisseCommune;
     private boolean automatedEvolution = false;
     private int numTour = 1;
     private int nbJoueurTour = 1;
@@ -22,9 +23,10 @@ public class Automate {
     private String contenuCartePiochée;
     private int argentRecupDansParcGratuit;
 
-    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances){
+    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
         this.listeDesCartesChances = listeDesCartesChances;
+        this.listeDesCartesCaisseCommune = listeDesCartesCaisseCommune;
         this.etatCourant = new LancerDesInitial(this, listeJoueurs); //lancement Etat initial
         System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
@@ -85,6 +87,9 @@ public class Automate {
         return listeDesCartesChances;
     }
 
+    public ArrayList<Cartes> getListeDesCartesCaisseCommune() {
+        return listeDesCartesCaisseCommune;
+    }
 
     //---Getter et Setter pour l'enregistrement de la case oùl'on veut constuire la maison
     public Cases getCasePourAjoutMaison() {
