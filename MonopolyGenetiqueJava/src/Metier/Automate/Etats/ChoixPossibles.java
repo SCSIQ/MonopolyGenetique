@@ -17,7 +17,10 @@ public class ChoixPossibles extends Etat {
 
     @Override
     public void agir(String event) {
+        if(getAutomate().getTirerCarteChance()<=0)
+        {
 
+        }
     }
 
     @Override
