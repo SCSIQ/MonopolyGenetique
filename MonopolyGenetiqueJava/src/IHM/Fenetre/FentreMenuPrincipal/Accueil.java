@@ -72,7 +72,7 @@ public class Accueil extends Parent {
         });
 
         //ACTION : SI ON APPUIE SUR Solo
-        solo.setOnAction(new EventHandler<ActionEvent>() {
+      /* solo.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 //création d'une fenetre solo, d'une nouvelle fenêtre et nouvelle scene avec les dimensions
@@ -85,7 +85,7 @@ public class Accueil extends Parent {
                 nouvelle_fenetre.show();
                 primaryStage.close() ;
             }
-        });
+        });*/
 
         //ACTION : SI ON APPUIE SUR iaVSia
         iaVSia.setOnAction(new EventHandler<ActionEvent>() {
