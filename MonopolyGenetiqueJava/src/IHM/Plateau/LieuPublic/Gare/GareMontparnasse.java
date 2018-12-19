@@ -35,4 +35,14 @@ public class GareMontparnasse extends Proprietes {
     public String getType() {
         return "Gare de Montparnasse";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

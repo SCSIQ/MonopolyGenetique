@@ -380,8 +380,13 @@ public class DetailTerrain extends Parent {
                     maison.setPreserveRatio(true);
 
                     //Ajout de la maison
+                    caseMaison.setImageMaison(maison);
                     caseMaison.getChildren().add(maison);
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons()== 2) {
+
+                    //Suppression de la première image
+
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
 
                     URL urlMaison = getClass().getResource("images/deux_maisons_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
@@ -394,8 +399,16 @@ public class DetailTerrain extends Parent {
                     maison.setPreserveRatio(true);
 
                     //Ajout de la maison
+
+                    caseMaison.setImageMaison(maison);
                     caseMaison.getChildren().add(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 3) {
+
+                    //Suppression de la première image
+
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/trois_maisons_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -408,7 +421,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 4) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/quatre_maisons_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -421,8 +439,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
 
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 5) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/hotel_bas.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -435,6 +457,7 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
                 }
             }
 
@@ -461,7 +484,11 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 2) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/deux_maisons_gauche.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -474,8 +501,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
 
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons()== 3) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/trois_maisons_gauche.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -488,8 +519,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
 
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 4) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/quatre_maisons_gauche.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -502,7 +537,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 5) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/hotel_gauche.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -515,6 +555,7 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
                 }
             }
         }
@@ -530,6 +571,9 @@ public class DetailTerrain extends Parent {
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
                 if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 1) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/une_maison_haut.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -542,7 +586,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 2) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/deux_maisons_haut.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -555,7 +604,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons()== 3) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/trois_maisons_haut.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -569,6 +623,9 @@ public class DetailTerrain extends Parent {
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 4) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/quatre_maisons_haut.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -581,8 +638,11 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
-
+                    caseMaison.setImageMaison(maison);
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 5) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/hotel_haut.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -595,6 +655,7 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
                 }
             }
         }
@@ -608,6 +669,9 @@ public class DetailTerrain extends Parent {
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
                 if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons()== 1) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/une_maison_droite.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -620,7 +684,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 2) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/deux_maisons_droite.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -633,8 +702,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
 
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 3) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/trois_maisons_droite.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -646,7 +719,12 @@ public class DetailTerrain extends Parent {
                     maison.setPreserveRatio(true);
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 4) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/quatre_maisons_droite.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -659,8 +737,12 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
 
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 5) {
+                    //Suppression de la première image
+                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
+
                     URL urlMaison = getClass().getResource("images/hotel_droit.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
@@ -673,6 +755,7 @@ public class DetailTerrain extends Parent {
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
                 }
             }
         }

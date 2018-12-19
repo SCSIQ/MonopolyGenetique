@@ -39,4 +39,14 @@ public class Depart extends VueCases {
     public String getType() {
         return "Départ";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

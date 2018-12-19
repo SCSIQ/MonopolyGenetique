@@ -33,4 +33,14 @@ public class Impot extends Taxes {
     public String getType() {
         return "Impôt sur le revenu";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

@@ -1,8 +1,8 @@
 package IHM.Plateau;
 
 import Metier.Plateau.Cases;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-
 import java.util.ArrayList;
 
 public abstract class  VueCases extends Pane {
@@ -26,6 +26,11 @@ public abstract class  VueCases extends Pane {
 
     //Permet de récupérer le type de la Case
     public abstract String getType() ;
+
+    public abstract void setImageMaison(ImageView maison) ;
+
+    public abstract ImageView getImageMaison() ;
+
 
 
 

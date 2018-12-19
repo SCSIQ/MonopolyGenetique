@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 //CASE DE CAPUCINES
 public class CaseCapucine extends Terrain {
+    private ImageView maison ;
     public CaseCapucine(Cases caseMetier) {
         super(caseMetier);
         this.setLayoutX(532);
@@ -30,5 +31,14 @@ public class CaseCapucine extends Terrain {
     @Override
     public String getType() {
         return "Boul. des Capucines";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

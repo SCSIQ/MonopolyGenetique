@@ -31,4 +31,14 @@ public class TaxeDeLuxe extends Taxes {
     public String getType() {
         return "Taxe de luxe";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

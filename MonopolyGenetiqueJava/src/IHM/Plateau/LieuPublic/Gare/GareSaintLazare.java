@@ -34,4 +34,14 @@ public class GareSaintLazare extends Proprietes {
     public String getType() {
         return "Gare de Saint-Lazare";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }
