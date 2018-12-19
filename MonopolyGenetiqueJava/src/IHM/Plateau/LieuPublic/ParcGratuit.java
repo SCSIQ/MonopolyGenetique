@@ -32,4 +32,14 @@ public class ParcGratuit extends VueCases {
     public String getType() {
         return "Parc gratuit";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

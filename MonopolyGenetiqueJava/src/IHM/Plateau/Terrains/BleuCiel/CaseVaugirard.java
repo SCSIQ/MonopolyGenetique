@@ -13,6 +13,7 @@ import java.util.ArrayList;
 //CASE RUE DE VAUGIRAD
 public class CaseVaugirard extends Terrain {
 
+private ImageView maison ;
 
     public CaseVaugirard(Cases caseMetier) {
         super(caseMetier);
@@ -36,5 +37,15 @@ public class CaseVaugirard extends Terrain {
     @Override
     public String getType() {
         return "Rue de Vaugirard";
+    }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this.maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

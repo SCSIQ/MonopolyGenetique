@@ -12,6 +12,7 @@ import java.util.ArrayList;
 ////CASE PLACE DE LA BOURSE
 public class CaseBourse extends Terrain {
 
+    private ImageView maison ;
     public CaseBourse(Cases caseMetier) {
         super(caseMetier);
         this.setLayoutX(388);
@@ -31,5 +32,14 @@ public class CaseBourse extends Terrain {
     @Override
     public String getType() {
         return "Place de la Bourse";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

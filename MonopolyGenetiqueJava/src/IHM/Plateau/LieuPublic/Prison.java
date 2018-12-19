@@ -34,4 +34,14 @@ public class Prison extends VueCases {
     public String getType() {
         return "Prison";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

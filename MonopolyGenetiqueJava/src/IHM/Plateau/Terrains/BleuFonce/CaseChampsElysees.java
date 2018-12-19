@@ -12,7 +12,7 @@ import java.util.ArrayList;
 //CASE DES CHAMPS ELYSEES
 public class CaseChampsElysees extends Terrain {
 
-
+    private ImageView maison ;
     public CaseChampsElysees(Cases caseMetier) {
         super(caseMetier);
 
@@ -34,5 +34,15 @@ public class CaseChampsElysees extends Terrain {
     @Override
     public String getType() {
         return "Avenue des Champs-Elysées";
+    }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

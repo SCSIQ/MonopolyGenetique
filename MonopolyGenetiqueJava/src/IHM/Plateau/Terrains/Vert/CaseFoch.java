@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 //CASE DE FOCH
 public class CaseFoch extends Terrain {
+    private ImageView maison ;
     public CaseFoch(Cases caseMetier) {
         super(caseMetier);
         this.setLayoutX(532);
@@ -31,5 +32,14 @@ public class CaseFoch extends Terrain {
     @Override
     public String getType() {
         return "Avennue Foch";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }
