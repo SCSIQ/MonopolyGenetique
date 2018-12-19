@@ -19,6 +19,9 @@ public class Automate {
     private int numTour = 1;
     private int nbJoueurTour = 1;
 
+    private int tirerCarteChance = -1;
+    private int tirerCarteCaisseCommune = -1;
+
     private Cases casePourAjoutMaison;
     private String contenuCartePiochée;
     private int argentRecupDansParcGratuit;
@@ -115,5 +118,21 @@ public class Automate {
 
     public void setArgentRecupDansParcGratuit(int argentRecupDansParcGratuit) {
         this.argentRecupDansParcGratuit = argentRecupDansParcGratuit;
+    }
+
+    public int getTirerCarteChance() {
+        return tirerCarteChance;
+    }
+
+    public int getTirerCarteCaisseCommune() {
+        return tirerCarteCaisseCommune;
+    }
+
+    public void setTirerCarteChance(int tirerCarteChance) {
+        this.tirerCarteChance = tirerCarteChance;
+    }
+
+    public void setTirerCarteCaisseCommune(int tirerCarteCaisseCommune) {
+        this.tirerCarteCaisseCommune = tirerCarteCaisseCommune;
     }
 }
