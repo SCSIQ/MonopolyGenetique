@@ -6,6 +6,7 @@ import Metier.Automate.Etats.Argent.PayerLoyer;
 import Metier.Automate.Etats.Argent.PayerTaxe;
 import Metier.Plateau.AllerEnPrison;
 import Metier.Plateau.Cases;
+import Metier.Plateau.ListeCartes.Chance;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
 import Metier.Plateau.ParcGratuit;
@@ -17,6 +18,7 @@ public class Deplacement extends Etat{
 
     private boolean doitPayerLoyer = false;
     private boolean doitPayerTaxe = false;
+    private boolean estSurChance = false ;
 
     public Deplacement(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
@@ -75,6 +77,13 @@ public class Deplacement extends Etat{
             getAutomate().setArgentRecupDansParcGratuit(((ParcGratuit)j.getListeCases().get(20)).getArgantDansParc());
             j.IncrementerSolde(((ParcGratuit)j.getListeCases().get(20)).recupererArgent()); //récupérer l'argent se trouvant dans le parc gratuit
         }
+
+        //si c'est la carte chance
+        if(j.getPion().getCase() instanceof Chance)
+        {
+            estSurChance = true ; //active la transition à l'état faisant piocher les cartes
+
+        }
     }
 
     @Override
@@ -129,6 +138,10 @@ public class Deplacement extends Etat{
         else if(doitPayerTaxe==true)
         {
             return new PayerTaxe(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if(estSurChance ==true)
+        {
+            return new PiocherCarte(super.getAutomate(), super.getListeJoueurs());
         }
         else
         {
