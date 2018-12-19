@@ -10,9 +10,9 @@ import Metier.Plateau.ListeCartes.Chance;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
 import Metier.Plateau.ParcGratuit;
-import Metier.Automate.Etats.ChoixPossibles;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deplacement extends Etat{
 
@@ -84,7 +84,8 @@ public class Deplacement extends Etat{
             //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
             if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
             {
-                int resRand = /*rand.nextInt(2)*/0;
+                Random rand = new Random();
+                int resRand = rand.nextInt(4);
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);
             }
@@ -146,7 +147,7 @@ public class Deplacement extends Etat{
         }
         else if(estSurChance ==true)
         {
-            return new PiocherCarte(super.getAutomate(), super.getListeJoueurs());
+            return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
         }
         else
         {

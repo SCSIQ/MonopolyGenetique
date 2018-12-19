@@ -7,8 +7,8 @@ import java.util.Random;
 
 import java.util.ArrayList;
 
-public class PiocherCarte extends Etat {
-    public PiocherCarte(Automate automate, ArrayList<Joueur> listeJoueurs) {
+public class PiocherCarteChance extends Etat {
+    public PiocherCarteChance(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
         //permet de demander à l'automate d'évoluer une fois du plus de façon automatique
         super.getAutomate().setAutomatedEvolution(true);
@@ -17,11 +17,17 @@ public class PiocherCarte extends Etat {
     @Override
     public void agir(String event) {
 
-        Random rand = new Random();
-
         if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
         {
-            getAutomate().getListeDesCartesChances().get(/*rand.nextInt(2)*/0).agir(getAutomate());
+            if(getAutomate().getTirerCarteChance()!=-1)
+            {
+                getAutomate().getListeDesCartesChances().get(getAutomate().getTirerCarteChance()).agir(getAutomate());
+            }
+            else
+            {
+                Random rand = new Random();
+                getAutomate().getListeDesCartesChances().get(rand.nextInt(4)).agir(getAutomate());
+            }
         }
     }
 
@@ -32,6 +38,6 @@ public class PiocherCarte extends Etat {
 
     @Override
     public String toString() {
-        return "PiocherCarte{}";
+        return "PiocherCarteChance{}";
     }
 }
