@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 public class ChoixPossibles extends Etat {
 
+    private boolean doitTirerCarteChance;
+    private boolean doitTirerCarteCaisseCommune;
+
     public ChoixPossibles(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
     }
@@ -19,7 +22,11 @@ public class ChoixPossibles extends Etat {
     public void agir(String event) {
         if(getAutomate().getTirerCarteChance()<=0)
         {
-
+            doitTirerCarteChance = true;
+        }
+        else if(getAutomate().getTirerCarteCaisseCommune()<=0)
+        {
+            doitTirerCarteCaisseCommune = true;
         }
     }
 
