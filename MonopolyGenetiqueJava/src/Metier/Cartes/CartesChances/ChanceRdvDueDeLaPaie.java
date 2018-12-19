@@ -4,9 +4,7 @@ import Metier.Automate.Automate;
 
 public class ChanceRdvDueDeLaPaie extends Chance {
 
-    public ChanceRdvDueDeLaPaie() {
-        super.setTexte("Rendez-vous rue de la paie");
-    }
+    public ChanceRdvDueDeLaPaie() { }
 
     @Override
     public void agir(Automate automate) {
