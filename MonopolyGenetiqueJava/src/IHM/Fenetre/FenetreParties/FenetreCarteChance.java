@@ -53,21 +53,24 @@ public class FenetreCarteChance extends Parent {
 
 
         //CONTENU
-        automate.evoluer("Rendez-vous rue de la paie");
-        ChanceRdvDueDeLaPaie chance = new ChanceRdvDueDeLaPaie();
-        Label carteChance = new Label(chance.getTypeCarte()) ;
+
+        String chance = automate.getContenuCartePiochée();
+
+        Label carteChance = new Label(""+chance);
         carteChance.setLayoutX(100);
         carteChance.setLayoutY(100);
 
         carteChance.setScaleX(1.5);
         carteChance.setScaleY(1.5);
 
-        chance.agir(automate);
 
-        //Pion avance
-        pion.entrerDansCase();
+        //si c'est "Rendez_vous rue de la paix"
+        if(chance=="Rendez-vous rue de la paie")
+        {
+            pion.entrerDansCase();
+        }
 
-        //REcCTANGLE
+        //RECTANGLE
         Rectangle r_fond = new Rectangle();
         r_fond.setHeight(230);
         r_fond.setWidth(475);
