@@ -65,7 +65,7 @@ public class FenetreCarteChance extends Parent {
 
 
         //si c'est "Rendez_vous rue de la paix"
-        if(chance=="Rendez-vous rue de la paie")
+        if(chance=="Rendez-vous rue de la paix")
         {
             pion.entrerDansCase();
         }

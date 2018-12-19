@@ -46,6 +46,7 @@ public abstract class InitialisationPartie {
     protected ArrayList<Cases> listeCases = new ArrayList<>();
     protected ArrayList<Joueur> listeJoueurs = new ArrayList<>();
     protected ArrayList<Cartes> listeDesCartesChances = new ArrayList<>();
+    protected ArrayList<Cartes> listeDesCartesCaisseCommune = new ArrayList<>();
 
     //seule méthode pouvant être appellée depuis l'extérieur
     //cette méthode permet de créer et d'initialiser l'automate
@@ -57,13 +58,17 @@ public abstract class InitialisationPartie {
         creationListeCases();
         creationListeCartesChances();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);
-        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances);
+        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances, this.listeDesCartesCaisseCommune);
         return automate;
     }
 
     protected void creationListeCartesChances(){
         this.listeDesCartesChances.add(new ChanceRdvDueDeLaPaie());
         this.listeDesCartesChances.add(new ChanceSortirDePrison());
+    }
+
+    protected void creationListeCartesCaisseCommune(){
+
     }
 
     protected void creationListeCases(){

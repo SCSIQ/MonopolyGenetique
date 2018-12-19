@@ -34,7 +34,7 @@ public class AcheterMaison extends Etat {
                 //si il est possible de construire sur le terrain
                 if (((Terrain) caseCourante).getNbMaisons() < 5) {
 
-                    if(((Terrain)caseCourante).getProprioPossedeTouteLaCouleur()==true){
+                  //  if(((Terrain)caseCourante).getProprioPossedeTouteLaCouleur()==true){
                         //si le solde du joueur courant est suppérieur ou égal
                         if (joueurCourant.getSolde() >= prixMaison) {
                             joueurCourant.DecrementerSolde(prixMaison);
@@ -45,7 +45,7 @@ public class AcheterMaison extends Etat {
                         } else {
                             System.out.println("    La maison ne peut pas être acheté car le joueur n'a pas assez d'argent...");
                         }
-                    }
+                   // }
                 }
             }else{
                 System.out.println( " La maison ne peut pas être acheté car vous n'êtes pas le propriétaire de cette propriété");

@@ -59,6 +59,8 @@ public class FenetreCarteCommu extends Parent {
 
         //TEXTE
 
+        String caisseComm = automate.getContenuCartePiochée();
+
         Label l_contenu = new Label("Cette case n'a pour l'instant aucun effet.");
         l_contenu.setLayoutX(100);
         l_contenu.setLayoutY(100);

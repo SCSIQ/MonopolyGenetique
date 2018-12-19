@@ -21,7 +21,7 @@ public class PiocherCarte extends Etat {
 
         if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
         {
-            getAutomate().getListeDesCartesChances().get(rand.nextInt(/*2*/1)).agir(getAutomate());
+            getAutomate().getListeDesCartesChances().get(/*rand.nextInt(2)*/0).agir(getAutomate());
         }
     }
 
