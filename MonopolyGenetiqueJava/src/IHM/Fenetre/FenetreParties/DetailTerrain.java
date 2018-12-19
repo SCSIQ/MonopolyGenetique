@@ -493,7 +493,7 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
                     maison.setFitHeight(50);
@@ -511,7 +511,7 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
                     maison.setFitHeight(50);
@@ -529,7 +529,7 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
                     maison.setFitHeight(50);
@@ -547,10 +547,10 @@ public class DetailTerrain extends Parent {
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
-                    maison.setLayoutX(0);
+                    maison.setLayoutX(-4);
                     maison.setLayoutY(0);
 
-                    maison.setFitWidth(50);
+                    maison.setFitWidth(90);
                     maison.setPreserveRatio(true);
 
                     //Ajout de la maison
@@ -562,7 +562,7 @@ public class DetailTerrain extends Parent {
 
 
 
-        //Si la case est à haut
+        //Si la case est en haut
         for (int i=20; i<30; i++) {
             //Récupère la case pour placer la maison
             VueCases caseMaison = pl.getListeCases().get(automate.getCasePourAjoutMaison().getPosition());
@@ -571,22 +571,21 @@ public class DetailTerrain extends Parent {
                 //AFFICHER MAISON SUIVANT LE NOMBRE DE MAISON
 
                 if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 1) {
-                    //Suppression de la première image
-                    caseMaison.getChildren().remove(caseMaison.getImageMaison());
 
                     URL urlMaison = getClass().getResource("images/une_maison_haut.png");
                     Image i_maison = new Image(urlMaison.toExternalForm());
                     ImageView maison = new ImageView(i_maison);
 
+                    caseMaison.setImageMaison(maison);
+
                     maison.setLayoutX(0);
-                    maison.setLayoutY(0);
+                    maison.setLayoutY(-4);
 
                     maison.setFitWidth(50);
                     maison.setPreserveRatio(true);
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
-                    caseMaison.setImageMaison(maison);
 
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 2) {
                     //Suppression de la première image
@@ -597,7 +596,7 @@ public class DetailTerrain extends Parent {
                     ImageView maison = new ImageView(i_maison);
 
                     maison.setLayoutX(0);
-                    maison.setLayoutY(0);
+                    maison.setLayoutY(-4);
 
                     maison.setFitWidth(50);
                     maison.setPreserveRatio(true);
@@ -615,13 +614,15 @@ public class DetailTerrain extends Parent {
                     ImageView maison = new ImageView(i_maison);
 
                     maison.setLayoutX(0);
-                    maison.setLayoutY(0);
+                    maison.setLayoutY(-4);
 
                     maison.setFitWidth(50);
                     maison.setPreserveRatio(true);
 
                     //Ajout de la maison
                     caseMaison.getChildren().add(maison);
+                    caseMaison.setImageMaison(maison);
+
                 } else if (((Terrain)automate.getCasePourAjoutMaison()).getNbMaisons() == 4) {
                     //Suppression de la première image
                     caseMaison.getChildren().remove(caseMaison.getImageMaison());
@@ -631,7 +632,7 @@ public class DetailTerrain extends Parent {
                     ImageView maison = new ImageView(i_maison);
 
                     maison.setLayoutX(0);
-                    maison.setLayoutY(0);
+                    maison.setLayoutY(-4);
 
                     maison.setFitWidth(50);
                     maison.setPreserveRatio(true);
@@ -648,7 +649,7 @@ public class DetailTerrain extends Parent {
                     ImageView maison = new ImageView(i_maison);
 
                     maison.setLayoutX(0);
-                    maison.setLayoutY(0);
+                    maison.setLayoutY(-4);
 
                     maison.setFitWidth(50);
                     maison.setPreserveRatio(true);
