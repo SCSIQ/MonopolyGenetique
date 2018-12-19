@@ -35,4 +35,14 @@ public class Ampoule extends Proprietes{
     public String getType() {
         return "Compagnie d'électricité";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

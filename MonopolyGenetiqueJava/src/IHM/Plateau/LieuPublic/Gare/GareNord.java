@@ -34,4 +34,14 @@ public class GareNord extends Proprietes {
     public String getType() {
         return "Gare du Nord";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

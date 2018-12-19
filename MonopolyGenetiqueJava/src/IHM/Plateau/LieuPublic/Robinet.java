@@ -32,4 +32,14 @@ public class Robinet extends ServicePublic {
     public String getType() {
         return "Compagnie des eaux";
     }
+
+    @Override
+    public void setImageMaison(ImageView maison) {
+
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return null;
+    }
 }

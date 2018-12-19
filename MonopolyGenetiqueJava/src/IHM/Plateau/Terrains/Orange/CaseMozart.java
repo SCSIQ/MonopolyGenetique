@@ -12,6 +12,7 @@ import java.util.ArrayList;
 //CASE Mozart
 public class CaseMozart extends Terrain {
 
+    private  ImageView maison ;
     public CaseMozart(Cases caseMetier) {
         super(caseMetier);
         this.setLayoutX(15);
@@ -32,5 +33,14 @@ public class CaseMozart extends Terrain {
     @Override
     public String getType() {
         return "Avenue Mozart";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

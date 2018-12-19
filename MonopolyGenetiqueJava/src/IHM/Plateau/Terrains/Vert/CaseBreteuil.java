@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 //CASE DE BRETEUIL
 public class CaseBreteuil extends Terrain {
+    private ImageView maison ;
     public CaseBreteuil(Cases caseMetier) {
         super(caseMetier);
 
@@ -31,5 +32,14 @@ public class CaseBreteuil extends Terrain {
     @Override
     public String getType() {
         return "Avenue de Breuteuil";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

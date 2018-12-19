@@ -12,6 +12,7 @@ import java.util.ArrayList;
 //CASE PARADIS
 public class CaseParadis extends Terrain {
 
+    private ImageView maison ;
     public CaseParadis(Cases caseMetier) {
         super(caseMetier);
         this.setLayoutX(15);
@@ -33,5 +34,14 @@ public class CaseParadis extends Terrain {
     @Override
     public String getType() {
         return "Rue du Paradis";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 //CASE MALSHERBES
 public class CaseMalsherbes extends Terrain {
+
+    private ImageView maison ;
+
     public CaseMalsherbes(Cases caseMetier) {
         super(caseMetier);
 
@@ -31,5 +34,14 @@ public class CaseMalsherbes extends Terrain {
     @Override
     public String getType() {
         return "Boul. Malsherbes";
+    }
+    @Override
+    public void setImageMaison(ImageView maison) {
+        this. maison = maison ;
+    }
+
+    @Override
+    public ImageView getImageMaison() {
+        return maison;
     }
 }

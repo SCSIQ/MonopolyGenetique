@@ -13,7 +13,7 @@ public class Automate {
 
     private Etat etatCourant;
     private ArrayList<Joueur> listeJoueurs ;
-    private ArrayList<Cartes> listeDesCartes;
+    private ArrayList<Cartes> listeDesCartesChances;
     private boolean automatedEvolution = false;
     private int numTour = 1;
     private int nbJoueurTour = 1;
@@ -22,9 +22,9 @@ public class Automate {
     private String contenuCartePiochée;
     private int argentRecupDansParcGratuit;
 
-    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartes){
+    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
-        this.listeDesCartes = listeDesCartes;
+        this.listeDesCartesChances = listeDesCartesChances;
         this.etatCourant = new LancerDesInitial(this, listeJoueurs); //lancement Etat initial
         System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
@@ -81,8 +81,8 @@ public class Automate {
         this.nbJoueurTour = nbJoueurTour;
     }
 
-    public ArrayList<Cartes> getListeDesCartes() {
-        return listeDesCartes;
+    public ArrayList<Cartes> getListeDesCartesChances() {
+        return listeDesCartesChances;
     }
 
 
