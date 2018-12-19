@@ -88,6 +88,7 @@ public class Deplacement extends Etat{
                 int resRand = rand.nextInt(4);
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);
+                System.out.println("        Carte chance : "+getAutomate().getContenuCartePiochée());
             }
         }
     }
@@ -97,7 +98,7 @@ public class Deplacement extends Etat{
         Joueur j = super.getListeJoueurs().get(0);
 
         //int resDes = j.getResLanceDes();
-        int resDes = 21; //POUR IHM
+        int resDes = 7; //POUR IHM
 
         Cases position = j.getPion().getCase();
 

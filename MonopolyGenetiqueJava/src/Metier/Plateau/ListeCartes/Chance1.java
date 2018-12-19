@@ -8,6 +8,6 @@ public class Chance1 extends Chance {
 
     @Override
     public String toString() {
-        return "ChanceRdvDueDeLaPaie";
+        return "Chance1";
     }
 }

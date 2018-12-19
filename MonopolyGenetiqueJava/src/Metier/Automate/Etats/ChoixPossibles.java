@@ -45,6 +45,10 @@ public class ChoixPossibles extends Etat {
         else if(event == "AcheterMaison"){
             return new AcheterMaison(super.getAutomate(), super.getListeJoueurs());
         }
+        else if(this.doitTirerCarteChance==true)
+        {
+            return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
+        }
         else{
             return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
         }

@@ -98,6 +98,8 @@ public class FenetreCarteChance extends Parent {
                 zoneJoueur.SupprimerJoueur();
                 zoneJoueur.genereInfosJoueur(automate);
 
+                automate.evoluer("");
+
                 //Met à jour les adversaires :
               /*  zoneAd.SupprimerAdversaire();
                 zoneAd.genererAdversaire(automate, fenetre_actuelle);*/

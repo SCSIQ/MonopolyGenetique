@@ -3,7 +3,9 @@ package Metier;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Cartes.Cartes;
+import Metier.Cartes.CartesChances.ChancePerdreArgent;
 import Metier.Cartes.CartesChances.ChanceRdvDueDeLaPaie;
+import Metier.Cartes.CartesChances.ChanceReculerCase;
 import Metier.Cartes.CartesChances.ChanceSortirDePrison;
 import Metier.Plateau.*;
 import Metier.Plateau.ListeCartes.*;
@@ -65,6 +67,8 @@ public abstract class InitialisationPartie {
     protected void creationListeCartesChances(){
         this.listeDesCartesChances.add(new ChanceRdvDueDeLaPaie());
         this.listeDesCartesChances.add(new ChanceSortirDePrison());
+        this.listeDesCartesChances.add(new ChancePerdreArgent());
+        this.listeDesCartesChances.add(new ChanceReculerCase());
     }
 
     protected void creationListeCartesCaisseCommune(){
