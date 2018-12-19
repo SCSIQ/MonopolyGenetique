@@ -8,6 +8,9 @@ import javafx.scene.control.Button;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -32,6 +35,8 @@ public class Accueil extends Parent {
         //POSITION DES BOUTONS
         solo.setLayoutX(25);
         solo.setLayoutY(200);
+
+        solo.setBackground(new Background(new BackgroundFill(Color.LIGHTGREY, null, null)));
 
         HumainVShumain.setLayoutX(25);
         HumainVShumain.setLayoutY(260);
