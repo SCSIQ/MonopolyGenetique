@@ -4,7 +4,7 @@ import Metier.Automate.Automate;
 
 public class ChanceReculerCase extends Chance {
 
-    public ChanceReculerCase() { }
+    public ChanceReculerCase() {super.setTexte("Vous reculez de 5 cases "); }
 
     @Override
     public void agir(Automate automate) {

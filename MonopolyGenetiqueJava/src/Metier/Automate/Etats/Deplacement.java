@@ -81,8 +81,13 @@ public class Deplacement extends Etat{
         //si c'est la carte chance
         if(j.getPion().getCase() instanceof Chance)
         {
-            estSurChance = true ; //active la transition à l'état faisant piocher les cartes
-
+            //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
+            if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
+            {
+                int resRand = /*rand.nextInt(2)*/0;
+                getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
+                getAutomate().setTirerCarteChance(resRand);
+            }
         }
     }
 

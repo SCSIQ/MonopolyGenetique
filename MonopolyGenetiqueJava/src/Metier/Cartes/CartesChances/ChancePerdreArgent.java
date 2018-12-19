@@ -4,7 +4,7 @@ import Metier.Automate.Automate;
 
 public class ChancePerdreArgent extends Chance {
 
-    public ChancePerdreArgent() { }
+    public ChancePerdreArgent() { super.setTexte("Vous avez perdu 1 000€ ! "); }
 
     @Override
     public void agir(Automate automate) {
