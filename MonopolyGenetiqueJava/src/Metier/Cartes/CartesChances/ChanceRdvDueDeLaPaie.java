@@ -14,4 +14,6 @@ public class ChanceRdvDueDeLaPaie extends Chance {
         automate.setContenuCartePiochée("Rendez-vous rue de la paix");
     }
 
+
+
 }
