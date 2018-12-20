@@ -6,6 +6,7 @@ import Metier.Automate.Etats.Argent.PayerLoyer;
 import Metier.Automate.Etats.Argent.PayerTaxe;
 import Metier.Plateau.AllerEnPrison;
 import Metier.Plateau.Cases;
+import Metier.Plateau.ListeCartes.CaisseCommune;
 import Metier.Plateau.ListeCartes.Chance;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.ListeTaxes.Taxes;
@@ -89,6 +90,20 @@ public class Deplacement extends Etat{
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);
                 System.out.println("        Carte chance : "+getAutomate().getContenuCartePiochée());
+            }
+        }
+
+        //si c'est la carte caisse de communauté
+        if(j.getPion().getCase() instanceof CaisseCommune)
+        {
+            //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
+            if(getAutomate().getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
+            {
+                Random rand = new Random();
+                int resRand = rand.nextInt(3);
+                getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesCaisseCommune().get(resRand).getTexte());
+                getAutomate().setTirerCarteCaisseCommune(resRand);
+                System.out.println("        Carte caisse de communauté : "+getAutomate().getContenuCartePiochée());
             }
         }
     }

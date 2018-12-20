@@ -3,6 +3,9 @@ package Metier;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Cartes.Cartes;
+import Metier.Cartes.CartesCaisseDeCommunaute.CommunauteDepart;
+import Metier.Cartes.CartesCaisseDeCommunaute.CommunauteGagnerArgent;
+import Metier.Cartes.CartesCaisseDeCommunaute.CommunauteReculer;
 import Metier.Cartes.CartesChances.ChancePerdreArgent;
 import Metier.Cartes.CartesChances.ChanceRdvDueDeLaPaie;
 import Metier.Cartes.CartesChances.ChanceReculerCase;
@@ -59,6 +62,7 @@ public abstract class InitialisationPartie {
     public Automate automateInitialisation(int nombreJoueurs, ArrayList<Color> listeCouleurs){
         creationListeCases();
         creationListeCartesChances();
+        creationListeCartesCaisseCommune();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);
         Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances, this.listeDesCartesCaisseCommune);
         return automate;
@@ -71,9 +75,14 @@ public abstract class InitialisationPartie {
         this.listeDesCartesChances.add(new ChanceReculerCase());
     }
 
-    protected void creationListeCartesCaisseCommune(){
 
+    protected void creationListeCartesCaisseCommune(){
+        this.listeDesCartesCaisseCommune.add(new CommunauteDepart());
+        this.listeDesCartesCaisseCommune.add(new CommunauteGagnerArgent());
+        this.listeDesCartesCaisseCommune.add(new CommunauteReculer());
     }
+
+
 
     protected void creationListeCases(){
         this.listeCases.add(new Depart(0));
