@@ -58,7 +58,7 @@ public class Fabrique {
             break;
             case "Rue de Vaugirard" : c = new CaseVaugirard(caseMetier);
             break;
-            case "ChanceRdvDueDeLaPaie" : c = new ChanceBas(caseMetier);
+            case "Chance1" : c = new ChanceBas(caseMetier);
             break ;
             case "Rue de Courcelles" : c = new CaseCourcelles(caseMetier);
             break;
@@ -108,7 +108,7 @@ public class Fabrique {
             break;
             case "Aller en prison": c = new AllezPrison(caseMetier);
             break;
-            case "ChanceSortirDePrison" : c = new ChanceHaut(caseMetier);
+            case "Chance2" : c = new ChanceHaut(caseMetier);
             break ;
 
             //CASS DE DROITES
