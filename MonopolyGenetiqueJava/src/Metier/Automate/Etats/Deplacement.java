@@ -20,6 +20,7 @@ public class Deplacement extends Etat{
     private boolean doitPayerLoyer = false;
     private boolean doitPayerTaxe = false;
     private boolean estSurChance = false ;
+    private boolean estSurCommunaute = false ;
 
     public Deplacement(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
@@ -82,7 +83,7 @@ public class Deplacement extends Etat{
         //si c'est la carte chance
         if(j.getPion().getCase() instanceof Chance)
         {
-            //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
+            estSurChance = true ; //active la transition à l'état faisant piocher les cartes chances
             if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
             {
                 Random rand = new Random();
@@ -96,7 +97,7 @@ public class Deplacement extends Etat{
         //si c'est la carte caisse de communauté
         if(j.getPion().getCase() instanceof CaisseCommune)
         {
-            //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
+            estSurCommunaute = true ; //active la transition à l'état faisant piocher les cartes communauté
             if(getAutomate().getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
             {
                 Random rand = new Random();
@@ -164,6 +165,10 @@ public class Deplacement extends Etat{
         else if(estSurChance ==true)
         {
             return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if(estSurCommunaute ==true)
+        {
+            return new PiocherCarteCaisseComm(super.getAutomate(), super.getListeJoueurs());
         }
         else
         {
