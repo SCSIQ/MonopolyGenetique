@@ -81,22 +81,23 @@ public class ZoneInfoJoueur extends Parent {
         //NOM
         nom.setLayoutX(90);
         nom.setLayoutY(55);
-        nom.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        nom.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
+        nom.setText(nom.getText().toUpperCase());
 
         //ARGENT
-        argent.setLayoutX(210);
+        argent.setLayoutX(190);
         argent.setLayoutY(55);
-        argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        argent.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
 
         //Cagnotte
-        cagnotte.setLayoutX(380);
+        cagnotte.setLayoutX(360);
         cagnotte.setLayoutY(55);
-        cagnotte.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        cagnotte.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
 
         //TOUR
         tour.setLayoutX(520);
         tour.setLayoutY(55);
-        tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
+        tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
 
         infosJoueur.getChildren().add(cagnotte);
         infosJoueur.getChildren().add(argent);

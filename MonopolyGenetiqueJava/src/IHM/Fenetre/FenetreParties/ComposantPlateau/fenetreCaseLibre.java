@@ -42,9 +42,10 @@ public class fenetreCaseLibre extends Parent {
 
         l.setLayoutY(10);
         l.setLayoutX(10);
-        l.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+        l.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
         l.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
         l.setPrefSize(475,50);
+        l.setText(l.getText().toUpperCase());
 
 
         Label l_contenu = new Label("\n\nElle n'appartient à personne.\n          Elle coûte "+((Proprietes)automate.getJoueurCourant().getPion().getCase()).getPrix()+" € ");

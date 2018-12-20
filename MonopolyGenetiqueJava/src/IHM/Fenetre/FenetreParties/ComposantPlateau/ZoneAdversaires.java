@@ -134,6 +134,7 @@ public class ZoneAdversaires extends Parent {
         Label adv1 = new Label(automate.getListeJoueurs().get(1).getNom());
         adv1.setLayoutX(65);
         adv1.setLayoutY(5);
+        adv1.setText(adv1.getText().toUpperCase());
 
         //ARGENT Joueur 2
         Label argent_adv1 = new Label("ARGENT : "+automate.getListeJoueurs().get(1).getSolde()+" €");
@@ -194,6 +195,7 @@ public class ZoneAdversaires extends Parent {
         Label adv2 = new Label(automate.getListeJoueurs().get(2).getNom());
         adv2.setLayoutX(65);
         adv2.setLayoutY(5);
+        adv2.setText(adv2.getText().toUpperCase());
 
         //ARGENT Joueur 2
         Label argent_adv2 = new Label("ARGENT : "+automate.getListeJoueurs().get(2).getSolde()+" €");
@@ -254,6 +256,7 @@ public class ZoneAdversaires extends Parent {
         Label adv3 = new Label(automate.getListeJoueurs().get(3).getNom());
         adv3.setLayoutX(65);
         adv3.setLayoutY(5);
+        adv3.setText(adv3.getText().toUpperCase());
 
         //ARGENT Joueur 3
         Label argent_adv3 = new Label("ARGENT : "+automate.getListeJoueurs().get(3).getSolde()+" €");
@@ -314,7 +317,7 @@ public class ZoneAdversaires extends Parent {
         Label adv4 = new Label(automate.getListeJoueurs().get(4).getNom());
         adv4.setLayoutX(65);
         adv4.setLayoutY(5);
-
+        adv4.setText(adv4.getText().toUpperCase());
 
         //ARGENT Joueur 2
         Label argent_adv4 = new Label("ARGENT : "+automate.getListeJoueurs().get(4).getSolde()+" €");

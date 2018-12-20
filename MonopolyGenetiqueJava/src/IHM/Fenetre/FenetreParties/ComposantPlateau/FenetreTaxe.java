@@ -47,6 +47,7 @@ public class FenetreTaxe extends Parent {
         l.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
         l.setLayoutX(10);
         l.setLayoutY(10);
+        l.setText(l.getText().toUpperCase());
 
         l_contenu.setLayoutY(100);
         l_contenu.setLayoutX(30);
