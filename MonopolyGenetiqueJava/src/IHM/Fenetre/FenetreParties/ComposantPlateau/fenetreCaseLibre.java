@@ -93,9 +93,12 @@ public class fenetreCaseLibre extends Parent {
                     couleurTerrain = Color.BLACK;
             }
             l.setTextFill(Color.WHITE);
+            l.setBackground(new Background(new BackgroundFill(couleurTerrain, null, null)));
+        }else{
+            l.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
         }
 
-        l.setBackground(new Background(new BackgroundFill(couleurTerrain, null, null)));
+
 
         Rectangle r_fond = new Rectangle();
         r_fond.setHeight(230);

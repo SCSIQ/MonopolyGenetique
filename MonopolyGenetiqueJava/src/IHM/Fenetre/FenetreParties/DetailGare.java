@@ -44,7 +44,7 @@ public class DetailGare extends Parent {
 
             nomGare.setLayoutY(10);
             nomGare.setLayoutX(10);
-            nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomGare.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
             nomGare.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
             nomGare.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
             nomGare.setPrefSize(455,50);
@@ -85,7 +85,7 @@ public class DetailGare extends Parent {
 
             nomGare.setLayoutY(10);
             nomGare.setLayoutX(10);
-            nomGare.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomGare.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
             nomGare.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
             nomGare.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
             nomGare.setPrefSize(455,50);

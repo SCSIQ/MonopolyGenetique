@@ -41,7 +41,7 @@ public class DetailCompagnie extends Parent {
 
             nomCompagnie.setLayoutY(10);
             nomCompagnie.setLayoutX(10);
-            nomCompagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomCompagnie.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
             nomCompagnie.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
             nomCompagnie.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
             nomCompagnie.setPrefSize(455,50);
@@ -90,7 +90,7 @@ public class DetailCompagnie extends Parent {
 
             nomCompagnie.setLayoutY(10);
             nomCompagnie.setLayoutX(10);
-            nomCompagnie.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+            nomCompagnie.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
             nomCompagnie.setBackground(new Background(new BackgroundFill(Color.rgb(247,247,247), null, null)));
             nomCompagnie.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
             nomCompagnie.setPrefSize(455,50);

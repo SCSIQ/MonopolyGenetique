@@ -56,7 +56,7 @@ public class DetailTerrain extends Parent {
 
              nomTerrain.setLayoutY(10);
              nomTerrain.setLayoutX(10);
-             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+             nomTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
              nomTerrain.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
              nomTerrain.setPrefSize(475,50);
 
@@ -129,7 +129,7 @@ public class DetailTerrain extends Parent {
 
              nomTerrain.setLayoutY(10);
              nomTerrain.setLayoutX(10);
-             nomTerrain.setFont(Font.font("Verdana", FontWeight.NORMAL, 24));
+             nomTerrain.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
              nomTerrain.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,null,null)));
              nomTerrain.setPrefSize(475,50);
 
