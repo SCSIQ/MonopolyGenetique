@@ -11,9 +11,12 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -34,21 +37,38 @@ public class FenetreTaxe extends Parent {
         this.zoneAd = zoneAd ;
 
 
-        Label l = new Label("Vous êtes sur la case :\n"+plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType()+
-                "\n\nVous devez "+((Taxes)automate.getJoueurCourant().getPion().getCase()).getPrixTaxe() +" € ");
-        l.setFont(Font.font("Verdana", FontWeight.NORMAL, 12));
-        l.setLayoutX(170);
-        l.setLayoutY(50);
+        Button l = new Button(plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType());
+        Label l_contenu = new Label("Vous devez payer "+((Taxes)automate.getJoueurCourant().getPion().getCase()).getPrixTaxe() +" € à la banque.");
 
-        l.setScaleX(2);
-        l.setScaleY(2);
+        l.setPrefSize(475,50);
+        l.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+        l.setTextFill(Color.WHITE);
+        l.setBackground(new Background(new BackgroundFill(Color.rgb(229,182,24), null, null)));
+        l.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+        l.setLayoutX(10);
+        l.setLayoutY(10);
+
+        l_contenu.setLayoutY(100);
+        l_contenu.setLayoutX(30);
+        l_contenu.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+
+        //RECTANGLE
+
+        Rectangle r_fond = new Rectangle();
+        r_fond.setHeight(235);
+        r_fond.setWidth(475);
+        r_fond.setLayoutX(10);
+        r_fond.setLayoutY(10);
+        r_fond.setStroke(Color.BLACK);
+        r_fond.setStrokeWidth(1);
+        r_fond.setFill(Color.TRANSPARENT);
 
         ////////////////////////////BOUTON
         //ACTION PAYER
         Button bt_payer= new Button("PAYER");
 
         bt_payer.setLayoutX(175);
-        bt_payer.setLayoutY(210);
+        bt_payer.setLayoutY(200);
 
         bt_payer.setPrefSize(150, 10);
 
@@ -96,6 +116,8 @@ fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
 
 
 //////////////////////AJOUT
+        this.getChildren().add(r_fond);
+        this.getChildren().add(l_contenu);
         this.getChildren().add(bt_payer);
         this.getChildren().add(l);
 
