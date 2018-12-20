@@ -357,6 +357,14 @@ public class DetailTerrain extends Parent {
         bt_Vendre.setLayoutY(85);
         bt_Vendre.setPrefSize(150,10);
 
+        bt_Vendre.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+            }
+        });
+
+
         zoneVendre.getChildren().add(rect_vendre);
         zoneVendre.getChildren().add(bt_Vendre);
         zoneVendre.getChildren().add(l_vendre);
