@@ -112,20 +112,15 @@ public class PossessionAdv extends Parent {
 
         listeCouleur = new ArrayList<>() ;
 
-        Text t_adv1 = new Text("Possession de "+automate.getListeJoueurs().get(i).getNom());
-        t_adv1.setScaleX(2);
-        t_adv1.setScaleY(2);
-        t_adv1.setLayoutX(250);
-        t_adv1.setLayoutY(45);
+        Button t_adv1 = new Button("Possession de "+automate.getListeJoueurs().get(i).getNom());
+        t_adv1.setLayoutX(15);
+        t_adv1.setLayoutY(15);
+        t_adv1.setText(t_adv1.getText().toUpperCase());
+        t_adv1.setBackground(new Background(new BackgroundFill(automate.getListeJoueurs().get(i).getCouleur(), null, null)));
+        t_adv1.setTextFill(Color.WHITE);
+        t_adv1.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
+        t_adv1.setPrefSize(620,60);
 
-
-        //Rectangle couleur joueur -> A VOIR SI ON GARDE ...
-        Rectangle r_couleur = new Rectangle();
-        r_couleur.setHeight(60);
-        r_couleur.setWidth(60);
-        r_couleur.setX(15);
-        r_couleur.setY(15);
-        r_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
 
 
         //TAILLE DU RECTANGLE ET POSITION
@@ -139,7 +134,6 @@ public class PossessionAdv extends Parent {
 
 
         this.getChildren().add(rect_possession);
-        this.getChildren().add(r_couleur);
         this.getChildren().add(t_adv1);
 
         //AJOUT DES DIFFERENTS ELEMENTS
