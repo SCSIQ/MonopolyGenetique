@@ -20,6 +20,7 @@ public class Deplacement extends Etat{
     private boolean doitPayerLoyer = false;
     private boolean doitPayerTaxe = false;
     private boolean estSurChance = false ;
+    private boolean estSurCommunaute = false ;
 
     public Deplacement(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
@@ -82,29 +83,26 @@ public class Deplacement extends Etat{
         //si c'est la carte chance
         if(j.getPion().getCase() instanceof Chance)
         {
-            //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
-            if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
-            {
+            estSurChance = true ; //active la transition à l'état faisant piocher les cartes chances
                 Random rand = new Random();
                 int resRand = rand.nextInt(4);
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);
                 System.out.println("        Carte chance : "+getAutomate().getContenuCartePiochée());
-            }
+            
         }
 
         //si c'est la carte caisse de communauté
         if(j.getPion().getCase() instanceof CaisseCommune)
         {
-            //estSurCaseCarte = true ; //active la transition à l'état faisant piocher les cartes
-            if(getAutomate().getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
-            {
+            estSurCommunaute = true ; //active la transition à l'état faisant piocher les cartes communauté
+
                 Random rand = new Random();
                 int resRand = rand.nextInt(3);
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesCaisseCommune().get(resRand).getTexte());
                 getAutomate().setTirerCarteCaisseCommune(resRand);
                 System.out.println("        Carte caisse de communauté : "+getAutomate().getContenuCartePiochée());
-            }
+
         }
     }
 
@@ -164,6 +162,10 @@ public class Deplacement extends Etat{
         else if(estSurChance ==true)
         {
             return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if(estSurCommunaute ==true)
+        {
+            return new PiocherCarteCaisseComm(super.getAutomate(), super.getListeJoueurs());
         }
         else
         {
