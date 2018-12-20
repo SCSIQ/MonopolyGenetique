@@ -12,11 +12,13 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -64,6 +66,9 @@ public class FenetreCarteCommu extends Parent {
         Label l_contenu = new Label(caisseComm);
         l_contenu.setLayoutX(100);
         l_contenu.setLayoutY(100);
+        l_contenu.setMaxWidth(300);
+        l_contenu.setWrapText(true);
+        l_contenu.setTextAlignment(TextAlignment.CENTER);
 
         l_contenu.setScaleX(1.5);
         l_contenu.setScaleY(1.5);
