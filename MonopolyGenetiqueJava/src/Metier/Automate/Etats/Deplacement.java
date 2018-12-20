@@ -84,28 +84,25 @@ public class Deplacement extends Etat{
         if(j.getPion().getCase() instanceof Chance)
         {
             estSurChance = true ; //active la transition à l'état faisant piocher les cartes chances
-            if(getAutomate().getJoueurCourant().getPion().getCase() instanceof Metier.Plateau.ListeCartes.Chance)
-            {
                 Random rand = new Random();
                 int resRand = rand.nextInt(4);
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);
                 System.out.println("        Carte chance : "+getAutomate().getContenuCartePiochée());
-            }
+            
         }
 
         //si c'est la carte caisse de communauté
         if(j.getPion().getCase() instanceof CaisseCommune)
         {
             estSurCommunaute = true ; //active la transition à l'état faisant piocher les cartes communauté
-            if(getAutomate().getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
-            {
+
                 Random rand = new Random();
                 int resRand = rand.nextInt(3);
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesCaisseCommune().get(resRand).getTexte());
                 getAutomate().setTirerCarteCaisseCommune(resRand);
                 System.out.println("        Carte caisse de communauté : "+getAutomate().getContenuCartePiochée());
-            }
+
         }
     }
 
