@@ -9,6 +9,8 @@ public class CommunauteReculer extends CaisseDeCommunaute {
     @Override
     public void agir(Automate automate) {
 
+        automate.setContenuCartePiochée("Reculez à la case Avenue Matignon");
+        //automate.
     }
 
 
