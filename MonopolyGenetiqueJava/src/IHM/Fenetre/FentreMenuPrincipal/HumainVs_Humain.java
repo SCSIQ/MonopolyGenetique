@@ -13,7 +13,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -24,19 +29,45 @@ public class HumainVs_Humain extends Parent {
 
     public HumainVs_Humain(Stage primaryStage, Stage nouvelle_fenetre) {
         ////////TEXTE
-        Text t_titre = new Text(200,40,"NOUVELLE PARTIE HUMAIN VS HUMAIN");
-        Text t_adv = new Text(80, 130, "Choisissez le nombre de joueurs : ");
-        Text t_tours = new Text(80, 210, "Choisissez le nombre de tours : ");
+        Button t_titre = new Button("NOUVELLE PARTIE HUMAIN VS HUMAIN");
 
-        //TAILLE
-        t_titre.setScaleX(2);
-        t_titre.setScaleY(2);
+        t_titre.setLayoutX(10);
+        t_titre.setLayoutY(10);
+        t_titre.setPrefSize(590,60);
+        t_titre.setFont(Font.font("Verdana", FontWeight.BOLD, 22));
+        t_titre.setTextFill(Color.WHITE);
+        t_titre.setBackground(new Background(new BackgroundFill(Color.rgb(9,172,227), null, null)));
+        t_titre.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+
+        //TEXT
+        Label t_adv = new Label("Choisissez le nombre de joueurs : ");
+        Label t_tours = new Label("Choisissez le nombre de tours : ");
+
+        t_adv.setFont(Font.font("Verdana", FontWeight.SEMI_BOLD, 15));
+        t_tours.setFont(Font.font("Verdana", FontWeight.SEMI_BOLD, 15));
+
+        //TAILLE ET POSITION
+
+        t_adv.setLayoutX(100);
+        t_adv.setLayoutY(115);
+
+        t_tours.setLayoutX(100);
+        t_tours.setLayoutY(195);
 
         t_adv.setScaleX(1.5);
         t_adv.setScaleY(1.5);
-
         t_tours.setScaleX(1.5);
         t_tours.setScaleY(1.5);
+
+        //Rectangle
+        Rectangle r_contour = new Rectangle();
+        r_contour.setHeight(325);
+        r_contour.setWidth(590);
+        r_contour.setLayoutX(10);
+        r_contour.setLayoutY(10);
+        r_contour.setStroke(Color.BLACK);
+        r_contour.setStrokeWidth(1);
+        r_contour.setFill(Color.TRANSPARENT);
 
 
 ////////COMBO BOX
@@ -60,10 +91,10 @@ public class HumainVs_Humain extends Parent {
         nb_tours.getSelectionModel().selectFirst();
 
         //POSITION
-        nb_adversaires.setLayoutX(490);
+        nb_adversaires.setLayoutX(480);
         nb_adversaires.setLayoutY(110);
 
-        nb_tours.setLayoutX(490);
+        nb_tours.setLayoutX(480);
         nb_tours.setLayoutY(190);
 
         //TAILLE COMBO BOX
@@ -78,9 +109,9 @@ public class HumainVs_Humain extends Parent {
 
         //POSITION
         menu_principal.setLayoutX(30);
-        menu_principal.setLayoutY(300);
-        commencer_partie.setLayoutX(340);
-        commencer_partie.setLayoutY(300);
+        menu_principal.setLayoutY(290);
+        commencer_partie.setLayoutX(330);
+        commencer_partie.setLayoutY(290);
 
         //TAILLE BOUTONS
         menu_principal.setPrefSize(250,30);
@@ -147,6 +178,7 @@ public class HumainVs_Humain extends Parent {
 ////////AJOUT
 
         //ajout des éléments à la fenêtre
+        this.getChildren().add(r_contour);
         this.getChildren().add(t_titre);
         this.getChildren().add(t_adv);
         this.getChildren().add(nb_adversaires);
