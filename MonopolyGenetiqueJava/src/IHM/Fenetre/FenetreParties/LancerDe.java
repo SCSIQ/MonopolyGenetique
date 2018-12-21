@@ -54,6 +54,8 @@ public class LancerDe extends Parent {
             //images dés
             URL des ;
             URL des2;
+            URL scoreDe;
+
             switch (dé1)
             {
                 case 1 :    des = getClass().getResource("images/un.png");
@@ -78,41 +80,77 @@ public class LancerDe extends Parent {
 
             imageDe1.setFitWidth(80);
             imageDe1.setFitHeight(80);
-            imageDe1.setLayoutX(50);
+            imageDe1.setLayoutX(70);
             imageDe1.setLayoutY(130);
 
             switch (dé2)
             {
-                case 1 :    des = getClass().getResource("images/un.png");
+                case 1 :    des2 = getClass().getResource("images/un.png");
                     break;
-                case 2 :    des = getClass().getResource("images/deux.png");
+                case 2 :    des2 = getClass().getResource("images/deux.png");
                     break;
-                case 3 :    des = getClass().getResource("images/trois.png");
+                case 3 :    des2 = getClass().getResource("images/trois.png");
                     break;
-                case 4 :    des = getClass().getResource("images/quatre.png");
+                case 4 :    des2 = getClass().getResource("images/quatre.png");
                     break;
-                case 5 :    des = getClass().getResource("images/cinq.png");
+                case 5 :    des2 = getClass().getResource("images/cinq.png");
                     break;
-                case 6 :    des = getClass().getResource("images/six.png");
+                case 6 :    des2 = getClass().getResource("images/six.png");
                     break;
 
-                default: des=getClass().getResource("images/un.png");
+                default: des2=getClass().getResource("images/un.png");
                     break;
             }
 
-            Image i_des2 = new Image(des.toExternalForm());
+            Image i_des2 = new Image(des2.toExternalForm());
             ImageView imageDe2 = new ImageView(i_des2);
 
             imageDe2.setFitWidth(80);
             imageDe2.setFitHeight(80);
-            imageDe2.setLayoutX(170);
+            imageDe2.setLayoutX(190);
             imageDe2.setLayoutY(130);
+
+            switch(score)
+            {
+                case 2 :    scoreDe = getClass().getResource("images/2.png");
+                    break;
+                case 3 :    scoreDe = getClass().getResource("images/3.png");
+                    break;
+                case 4 :    scoreDe = getClass().getResource("images/4.png");
+                    break;
+                case 5 :    scoreDe = getClass().getResource("images/5.png");
+                    break;
+                case 6 :    scoreDe = getClass().getResource("images/6.png");
+                    break;
+                case 7 :    scoreDe = getClass().getResource("images/7.png");
+                    break;
+                case 8 :    scoreDe = getClass().getResource("images/8.png");
+                    break;
+                case 9 :    scoreDe = getClass().getResource("images/9.png");
+                    break;
+                case 10 :    scoreDe = getClass().getResource("images/10.png");
+                    break;
+                case 11 :    scoreDe = getClass().getResource("images/11.png");
+                    break;
+                case 12 :    scoreDe = getClass().getResource("images/12.png");
+                    break;
+
+                default: scoreDe=getClass().getResource("images/1.png");
+                    break;
+            }
+
+            Image i_score = new Image(scoreDe.toExternalForm());
+            ImageView imageScore = new ImageView(i_score);
+            imageScore.setFitHeight(100);
+            imageScore.setFitWidth(100);
+            imageScore.setLayoutX(330);
+            imageScore.setLayoutY(115);
 
 
             //TEXTE
 
             Text t_nb = new Text(automate.getJoueurCourant().getNom()+" a fait : ");
-            Label l_score = new Label("+            = "+score.toString());
+            Label l_score = new Label("+            = ");
 
             t_nb.setLayoutX(200);
             t_nb.setLayoutY(90);
@@ -120,7 +158,7 @@ public class LancerDe extends Parent {
             t_nb.setScaleX(2);
             t_nb.setScaleY(2);
 
-            l_score.setLayoutX(180);
+            l_score.setLayoutX(200);
             l_score.setLayoutY(155);
 
             l_score.setScaleY(2);
@@ -255,6 +293,7 @@ public class LancerDe extends Parent {
 
         this.getChildren().add(imageDe1);
         this.getChildren().add(imageDe2);
+        this.getChildren().add(imageScore);
         this.getChildren().add(bt_ok);
         this.getChildren().add(l_score);
 
