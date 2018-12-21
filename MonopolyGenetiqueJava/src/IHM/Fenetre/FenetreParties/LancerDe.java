@@ -14,12 +14,20 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 public class LancerDe extends Parent {
@@ -43,20 +51,108 @@ public class LancerDe extends Parent {
             Integer dé1 = automate.getJoueurCourant().getResDes1();
             Integer dé2 = automate.getJoueurCourant().getResDes2();
 
+            //images dés
+            URL des ;
+            URL des2;
+            switch (dé1)
+            {
+                case 1 :    des = getClass().getResource("images/un.png");
+                            break;
+                case 2 :    des = getClass().getResource("images/deux.png");
+                            break;
+                case 3 :    des = getClass().getResource("images/trois.png");
+                    break;
+                case 4 :    des = getClass().getResource("images/quatre.png");
+                    break;
+                case 5 :    des = getClass().getResource("images/cinq.png");
+                    break;
+                case 6 :    des = getClass().getResource("images/six.png");
+                    break;
 
-            Text t_nb = new Text(automate.getJoueurCourant().getNom()+" a fait : \n" +"    "+ dé1.toString()+" + "+dé2.toString()+" = "+score.toString());
+                    default: des=getClass().getResource("images/un.png");
+                        break;
+            }
 
-            t_nb.setLayoutX(170);
-            t_nb.setLayoutY(50);
+            Image i_des = new Image(des.toExternalForm());
+            ImageView imageDe1 = new ImageView(i_des);
+
+            imageDe1.setFitWidth(80);
+            imageDe1.setFitHeight(80);
+            imageDe1.setLayoutX(50);
+            imageDe1.setLayoutY(130);
+
+            switch (dé2)
+            {
+                case 1 :    des = getClass().getResource("images/un.png");
+                    break;
+                case 2 :    des = getClass().getResource("images/deux.png");
+                    break;
+                case 3 :    des = getClass().getResource("images/trois.png");
+                    break;
+                case 4 :    des = getClass().getResource("images/quatre.png");
+                    break;
+                case 5 :    des = getClass().getResource("images/cinq.png");
+                    break;
+                case 6 :    des = getClass().getResource("images/six.png");
+                    break;
+
+                default: des=getClass().getResource("images/un.png");
+                    break;
+            }
+
+            Image i_des2 = new Image(des.toExternalForm());
+            ImageView imageDe2 = new ImageView(i_des2);
+
+            imageDe2.setFitWidth(80);
+            imageDe2.setFitHeight(80);
+            imageDe2.setLayoutX(170);
+            imageDe2.setLayoutY(130);
+
+
+            //TEXTE
+
+            Text t_nb = new Text(automate.getJoueurCourant().getNom()+" a fait : ");
+            Label l_score = new Label("+            = "+score.toString());
+
+            t_nb.setLayoutX(200);
+            t_nb.setLayoutY(90);
 
             t_nb.setScaleX(2);
             t_nb.setScaleY(2);
 
+            l_score.setLayoutX(180);
+            l_score.setLayoutY(155);
+
+            l_score.setScaleY(2);
+            l_score.setScaleX(2);
+
+
+            //TITRE
+            Button l = new Button("LANCER Dés");
+            l.setLayoutY(10);
+            l.setLayoutX(10);
+            l.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
+            l.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+            l.setPrefSize(475,50);
+            l.setText(l.getText().toUpperCase());
+            l.setTextFill(Color.WHITE);
+            l.setBackground(new Background(new BackgroundFill(Color.rgb(9,172,227), null, null)));
+
+            //RECTANGLE
+            Rectangle r_fond = new Rectangle();
+            r_fond.setHeight(280);
+            r_fond.setWidth(475);
+            r_fond.setLayoutX(10);
+            r_fond.setLayoutY(10);
+            r_fond.setStroke(Color.BLACK);
+            r_fond.setStrokeWidth(1);
+            r_fond.setFill(Color.TRANSPARENT);
+
 //////////////////////////////////////////////////////////////////////////BOUTON
             Button bt_ok = new Button("Ok");
 
-            bt_ok.setLayoutX(130);
-            bt_ok.setLayoutY(120);
+            bt_ok.setLayoutX(170);
+            bt_ok.setLayoutY(240);
 
             bt_ok.setPrefSize(150, 10);
 
@@ -146,15 +242,21 @@ public class LancerDe extends Parent {
         });
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_actuelle.setMinHeight(220);
-        fenetre_actuelle.setMinWidth(420);
+        fenetre_actuelle.setMinHeight(350);
+        fenetre_actuelle.setMinWidth(515);
 
-        fenetre_actuelle.setMaxHeight(220);
-        fenetre_actuelle.setMaxWidth(420);
+        fenetre_actuelle.setMaxHeight(350);
+        fenetre_actuelle.setMaxWidth(515);
 
  /////////////////////////////////////////////////////////////////////////AJOUT
+        this.getChildren().add(r_fond);
+        this.getChildren().add(l);
         this.getChildren().add(t_nb);
+
+        this.getChildren().add(imageDe1);
+        this.getChildren().add(imageDe2);
         this.getChildren().add(bt_ok);
+        this.getChildren().add(l_score);
 
     }
 
