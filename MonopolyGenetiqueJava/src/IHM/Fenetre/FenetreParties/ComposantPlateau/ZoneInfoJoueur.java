@@ -95,7 +95,7 @@ public class ZoneInfoJoueur extends Parent {
         cagnotte.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
 
         //TOUR
-        tour.setLayoutX(520);
+        tour.setLayoutX(530);
         tour.setLayoutY(55);
         tour.setFont(Font.font("Verdana", FontWeight.NORMAL, 14));
 

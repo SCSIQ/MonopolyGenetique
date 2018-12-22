@@ -92,7 +92,7 @@ public class DetailGare extends Parent {
 
             gestion(automate, false);
             //BOUTON
-            Button bt_ok = new Button("revenir au jeu");
+            Button bt_ok = new Button("REVENIR AU JEU");
 
             bt_ok.setLayoutX(180);
             bt_ok.setLayoutY(300);

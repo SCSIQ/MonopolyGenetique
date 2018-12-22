@@ -50,7 +50,7 @@ public class DetailCompagnie extends Parent {
 
 
             ///BOUTON
-            Button bt_ok = new Button("revenir au jeu");
+            Button bt_ok = new Button("REVENIR AU JEU");
 
             bt_ok.setLayoutX(160);
             bt_ok.setLayoutY(290);
@@ -69,11 +69,11 @@ public class DetailCompagnie extends Parent {
             });
 
             /////////TAILLE MIN ET MAX DE LA FENETRE
-            fenetre_detail.setMinHeight(400);
-            fenetre_detail.setMinWidth(500);
+            fenetre_detail.setMinHeight(380);
+            fenetre_detail.setMinWidth(490);
 
-            fenetre_detail.setMaxHeight(400);
-            fenetre_detail.setMaxWidth(500);
+            fenetre_detail.setMaxHeight(380);
+            fenetre_detail.setMaxWidth(490);
             ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
             fenetre_detail.setOnCloseRequest(new EventHandler<WindowEvent>() {
                 @Override
