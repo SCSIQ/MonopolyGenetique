@@ -70,6 +70,7 @@ public class Jeu extends Parent {
         this.primaryStage = primaryStage ;
         this.fenetrePropri = nouvelle_fenetre ;
 
+
 //////////////////////////////APPEL DES DIFFERENTES ZONES
         //APPEL INFOS JOUEUR
         zoneJoueur = new ZoneInfoJoueur(automate);
