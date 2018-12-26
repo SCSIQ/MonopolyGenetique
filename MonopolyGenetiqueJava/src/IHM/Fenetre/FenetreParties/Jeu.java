@@ -62,7 +62,8 @@ public class Jeu extends Parent {
         return zoneJoueur;
     }
 
-////////////////////////////////CONSTRUCTEUR
+////////////////////////////////CONSTRUCTEUR/////////////////////////////////////////////////////////////
+
     public Jeu(Stage primaryStage, Stage nouvelle_fenetre, Color couleur, Automate automate){
 
         this.automate = automate;
@@ -176,6 +177,22 @@ public class Jeu extends Parent {
             }
         });
 
+
+        //Boutons score :
+        Button bt_score = new Button("Score");
+
+        //TAILLE DU BOUTON
+        bt_score.setPrefSize(150,10);
+        bt_score.setLayoutX(900);
+        bt_score.setLayoutY(45);
+
+        //Action sur le bouton score
+        bt_score.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                fenetreScore(nouvelle_fenetre);
+            }
+        });
 ////////BLOCAGE REDUCTION ET AUGMENTATION
         nouvelle_fenetre.setMinWidth(1290);
         nouvelle_fenetre.setMinHeight(780);
@@ -188,6 +205,7 @@ public class Jeu extends Parent {
         this.getChildren().add(bt_menu);
         this.getChildren().add(bt_lancerDes);
         this.getChildren().add(bt_tourSuivant);
+        this.getChildren().add(bt_score);
     }
 
 
@@ -323,6 +341,24 @@ public class Jeu extends Parent {
         nouvelle_fenetre_erreur.initOwner(fenetre_actuelle);
 
         nouvelle_fenetre_erreur.show();
+    }
+
+    public void fenetreScore(Stage fenetre_actuelle)
+    {
+        fenetreNoire();
+
+        Stage nouvelle_fenetre_score = new Stage();
+        FenetreScore fenetreScore = new FenetreScore(nouvelle_fenetre_score, canvas, this, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetreScore,500,600);
+
+        nouvelle_fenetre_score.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_score.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_score.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_score.show();
     }
 
 
