@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -18,17 +19,21 @@ import javafx.stage.WindowEvent;
 public class FenetreScore extends Parent {
 
     private Canvas canvas ;
+    private Jeu jeu ;
+    private Automate automate ;
 
     public FenetreScore(Stage fenetre, Canvas canvas, Jeu jeu, Automate automate)
     {
         //initialisation
         this.canvas = canvas ;
+        this.jeu = jeu ;
+        this.automate = automate ;
 
         //Label (avec bouton pour centrer le texte)
         Button bt_Score= new Button("SCORE");
         bt_Score.setLayoutY(10);
         bt_Score.setLayoutX(10);
-        bt_Score.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+        bt_Score.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         bt_Score.setBackground(new Background(new BackgroundFill( Color.rgb(9,172,227),null, null)));
         bt_Score.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
         bt_Score.setTextFill(Color.WHITE);
@@ -80,6 +85,8 @@ public class FenetreScore extends Parent {
             }
         });
 
+        this.afficheJoueur();
+
         //Ajout
         this.getChildren().add(bt_Score);
         this.getChildren().add(r_fond) ;
@@ -93,6 +100,37 @@ public class FenetreScore extends Parent {
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
+    }
+
+    public void afficheJoueur()
+    {
+        int x=0 ;
+        for (int i =0; i<automate.getListeJoueurs().size(); i++)
+        {
+            //Nom des joueurs
+           Label l = new Label(automate.getListeJoueurs().get(i).getNom()) ;
+           l.setFont(Font.font("Verdana", FontWeight.NORMAL, 22));
+           l.setLayoutX(90);
+           l.setLayoutY(120+x);
+
+           //Rectangle de couleur
+            Rectangle r_couleur = new Rectangle();
+            r_couleur.setHeight(40);
+            r_couleur.setWidth(40);
+            r_couleur.setLayoutX(30);
+            r_couleur.setLayoutY(115+x);
+            r_couleur.setStroke(Color.BLACK);
+            r_couleur.setStrokeWidth(1);
+            r_couleur.setFill(automate.getListeJoueurs().get(i).getCouleur());
+
+           //ajout
+           this.getChildren().add(l);
+           this.getChildren().add(r_couleur);
+
+
+           x +=60 ;
+        }
+
     }
 
 }
