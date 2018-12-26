@@ -94,7 +94,7 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
 
             }
         });
-        
+
         //Contenu de la fenêtre
 
         Label l_contenu = new Label("Vous devez avoir tous les terrains de cette couleur pour construire.");
@@ -103,7 +103,7 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
         l_contenu.setMaxWidth(300);
         l_contenu.setWrapText(true);
         l_contenu.setTextAlignment(TextAlignment.CENTER);
-        l_contenu.setFont(Font.font("Verdana", FontWeight.BOLD, 16));
+        l_contenu.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
  /*       fenetre.setOnCloseRequest(new EventHandler<WindowEvent>() {
