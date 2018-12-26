@@ -6,11 +6,13 @@ import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
 
 import IHM.Plateau.VueCases;
 import Metier.Automate.Automate;
+import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.ListeTerrains.CouleurMétier;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -22,6 +24,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -38,6 +41,8 @@ public class DetailTerrain extends Parent {
     private Pane zoneVendre;
     private PlateauJeu pl ;
     private Jeu jeu ;
+    private Canvas canvas ;
+    private Stage fenetre_detail;
 
     public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant, PlateauJeu pl, Jeu jeu){
 
@@ -49,6 +54,8 @@ public class DetailTerrain extends Parent {
         this.possAd = possAd ;
         this.pl = pl ;
         this.jeu = jeu ;
+        this.fenetre_detail = fenetre_detail;
+        this.canvas = canvas ;
 
          if(joueurCourant==true){
 
@@ -296,15 +303,22 @@ public class DetailTerrain extends Parent {
                 //DIT AU METIER QU'ON ACHETE UNE MAISON DE PLUS
                 //enregistremetn dans l'automate du terrain où l'on veut acheter la maison
                 automate.setCasePourAjoutMaison(poss.getListeTerrains().get(numBouton));
-                automate.evoluer("AcheterMaison"); //ensuite demande à l'automate d'évoluer
-                //on remet à jour l'argent du joueur courant
-                jeu.getZoneJoueur().SupprimerJoueur();
-                jeu.getZoneJoueur().genereInfosJoueur(automate);
 
-                //Met à jour les adversaires :
-                jeu.getZoneAd().SupprimerAdversaire();
-                jeu.getZoneAd().genererAdversaire(automate, jeu.getFenetrePropri());
-                afficherMaison(automate);
+               if (poss.getListeTerrains().get(numBouton).getProprioPossedeTouteLaCouleur()==true)
+                {
+                    automate.evoluer("AcheterMaison"); //ensuite demande à l'automate d'évoluer
+                    //on remet à jour l'argent du joueur courant
+                    jeu.getZoneJoueur().SupprimerJoueur();
+                    jeu.getZoneJoueur().genereInfosJoueur(automate);
+
+                    //Met à jour les adversaires :
+                    jeu.getZoneAd().SupprimerAdversaire();
+                    jeu.getZoneAd().genererAdversaire(automate, jeu.getFenetrePropri());
+                    afficherMaison(automate);
+                } else {
+                   fenetreDevezAvoirTousTerrains(fenetre_detail, canvas, poss.getListeTerrains().get(numBouton)) ;
+               }
+
            }
         });
 
@@ -788,5 +802,23 @@ public class DetailTerrain extends Parent {
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
+    }
+
+    public void fenetreDevezAvoirTousTerrains(Stage fenetre_actuelle, Canvas canvas, Cases cases)
+    {
+       //jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_tousTerrains = new Stage();
+        FenetreDevezAvoirTousTerrains fenetreTerrains = new FenetreDevezAvoirTousTerrains(nouvelle_fenetre_tousTerrains, canvas, jeu, cases);
+
+        Scene nouvelle_scene = new  Scene(fenetreTerrains,500,270);
+
+        nouvelle_fenetre_tousTerrains.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_tousTerrains.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_tousTerrains.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_tousTerrains.show();
     }
 }
