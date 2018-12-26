@@ -283,8 +283,8 @@ public class DetailTerrain extends Parent {
         rect_maison.setStroke(Color.BLACK);
 
         //Contenu du panel
-        Label l_maison = new Label("  VOUS POSSEDEZ X/3 TERRAINS DE CETTE COULEUR.\n" +
-                                    "  POUR CONSTRUIRE, VOUS DEVEZ POSSEDER LES 3.");
+        Label l_maison = new Label("  VOUS POSSEDEZ "+ poss.getListeTerrains().get(numBouton).getNbTerrainCouleurPossedees()+" TERRAINS DE CETTE COULEUR.\n" +
+                                    "POUR CONSTRUIRE, VOUS DEVEZ LES POSSEDER TOUS.");
         l_maison.setLayoutY(10);
         l_maison.setLayoutX(10);
         l_maison.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
