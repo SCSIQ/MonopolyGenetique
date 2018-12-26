@@ -374,7 +374,8 @@ public class DetailTerrain extends Parent {
         bt_Vendre.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                automate.evoluer("VendrePropriete");
+                //on fait évoluer l'automate
+                automate.evoluer("vendrePropriete");
                 poss.getListeTerrains().remove(numBouton);
                 poss.afficherTerrain(automate);
             }

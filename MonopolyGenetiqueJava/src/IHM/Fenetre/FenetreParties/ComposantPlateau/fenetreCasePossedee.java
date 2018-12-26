@@ -181,6 +181,7 @@ public class fenetreCasePossedee extends Parent  {
                 //si le joueur n'a pas assez d'argent pour payer
                 if(automate.getJoueurCourant().getSolde()< prixAPayer)
                 {
+                    automate.evoluer("Faillite");
                     fenetreFaillite(fenetre_actuelle, automate,  zoneJoueur, zoneAd) ;
                 }
 

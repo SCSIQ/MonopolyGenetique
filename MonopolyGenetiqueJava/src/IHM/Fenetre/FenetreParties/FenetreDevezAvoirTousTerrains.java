@@ -106,12 +106,12 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
         l_contenu.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
- /*       fenetre.setOnCloseRequest(new EventHandler<WindowEvent>() {
+       fenetre.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
                 event.consume();
             }
-        });*/
+        });
 
 /////////TAILLE MIN ET MAX DE LA FENETRE
         fenetre.setMinHeight(300);
@@ -121,9 +121,10 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
         fenetre.setMaxWidth(515);
 
         //ajout
+
+        this.getChildren().add(r_fond);
         this.getChildren().add(bt_ok);
         this.getChildren().add(bt_TousTerrains);
-        this.getChildren().add(r_fond);
         this.getChildren().add(l_contenu);
 
     }

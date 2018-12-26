@@ -76,8 +76,8 @@ public class Jeu extends Parent {
         this.getChildren().add(zoneJoueur);
 
 
-
-
+        //Pour tester la faillite
+       // automate.getListeJoueurs().get(1).DecrementerSolde(15000);
 
         //APPEL PLATEAU JEU
         pl = new PlateauJeu(automate);
