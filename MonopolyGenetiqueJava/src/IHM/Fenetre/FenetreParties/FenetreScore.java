@@ -53,7 +53,7 @@ public class FenetreScore extends Parent {
         Button bt_ok = new Button("REVENIR AU JEU");
 
         bt_ok.setLayoutX(175);
-        bt_ok.setLayoutY(515);
+        bt_ok.setLayoutY(500);
 
         bt_ok.setPrefSize(150, 10);
 
