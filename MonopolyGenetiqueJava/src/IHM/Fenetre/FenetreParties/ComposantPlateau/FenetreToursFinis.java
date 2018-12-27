@@ -8,6 +8,6 @@ public class FenetreToursFinis extends Parent {
 
     public FenetreToursFinis(Stage fenetre, Canvas canvas)
     {
-        
+
     }
 }

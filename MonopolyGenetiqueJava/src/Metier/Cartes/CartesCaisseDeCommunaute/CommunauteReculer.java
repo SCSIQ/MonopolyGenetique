@@ -13,6 +13,8 @@ public class CommunauteReculer extends CaisseDeCommunaute {
              automate.getJoueurCourant().Avancer(21);
 
         }else {
+            //Passe par la case démarrer donc +1500
+            automate.getJoueurCourant().IncrementerSolde(1500);
             automate.getJoueurCourant().Avancer(21 );
         }
 
