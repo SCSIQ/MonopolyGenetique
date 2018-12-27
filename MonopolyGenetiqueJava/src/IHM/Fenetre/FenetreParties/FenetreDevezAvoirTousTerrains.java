@@ -57,7 +57,7 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
             case BleuCiel: bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(9,172,227),null, null)));
                 break ;
 
-            default :bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(255,255,255),null, null)));;
+            default :bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(255,255,255),null, null)));
         }
 
 
