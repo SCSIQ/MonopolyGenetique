@@ -87,10 +87,7 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
         bt_ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //on rend la bonne opacité à la fenêtre
-                detruireCanvas(canvas);
-
-                fenetre.close();
+                  fenetre.close();
 
             }
         });
