@@ -1,9 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
-import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneAdversaires;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZoneInfoJoueur;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
@@ -151,9 +148,14 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                if(automate.getJoueurCourant().getaLanceDes()==true) {
-                    automate.evoluer("tourSuivant");
+                automate.evoluer("tourSuivant");
 
+                //Si les tours sont finis --> faut faire un totalTour 
+                if(automate.getNumTour()==21)
+                {
+                    fenetreFin(automate, nouvelle_fenetre) ;
+                }else if(automate.getJoueurCourant().getaLanceDes()==true)
+                {
                     poss.effacerPossession() ;
                     poss.afficherTerrain(automate);
                     poss.afficherGare(automate);
@@ -170,10 +172,10 @@ public class Jeu extends Parent {
                     pion.ChangerOrdrePion(); //change l'ordre des pions coté IHM lors du chagement de joueur 
 
                 } else {
-                    automate.evoluer("tourSuivant");
                     fenetreTourErreur(nouvelle_fenetre, automate);
 
                 }
+
 
             }
         });
@@ -362,5 +364,22 @@ public class Jeu extends Parent {
         nouvelle_fenetre_score.show();
     }
 
+    public void fenetreFin(Automate automate, Stage fenetre_actuelle)
+    {
+        fenetreNoire();
+        Stage nouvelle_fenetre_tour = new Stage();
+        FenetreToursFinis fenetre_tour = new FenetreToursFinis(nouvelle_fenetre_tour,canvas, automate, this);
+
+        Scene nouvelle_scene = new  Scene(fenetre_tour,650,550);
+
+        nouvelle_fenetre_tour.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_tour.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_tour.initOwner(this.getFenetrePropri());
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_tour.show();
+    }
 
 }

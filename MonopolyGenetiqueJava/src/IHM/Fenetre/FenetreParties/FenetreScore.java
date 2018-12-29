@@ -50,7 +50,7 @@ public class FenetreScore extends Parent {
         r_fond.setFill(Color.TRANSPARENT);
 
         //Bouton
-        Button bt_ok = new Button("REVENIR AU JEU");
+        Button bt_ok = new Button("OK");
 
         bt_ok.setLayoutX(175);
         bt_ok.setLayoutY(500);

@@ -95,10 +95,7 @@ public class tourSuivant extends Parent {
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
 
-                if(automate.getNumTour()==20)
-                {
-                    fenetreFin(automate, fenetre_actuelle) ;
-                }
+
 
             }
         });
@@ -132,23 +129,7 @@ public class tourSuivant extends Parent {
         this.getChildren().add(canvas);
     }
 
-    public void fenetreFin(Automate automate, Stage fenetre_actuelle)
-    {
-        jeu.fenetreNoire();
-        Stage nouvelle_fenetre_tour = new Stage();
-        FenetreToursFinis fenetre_tour = new FenetreToursFinis(nouvelle_fenetre_tour,canvas, automate);
 
-        Scene nouvelle_scene = new  Scene(fenetre_tour,650,550);
-
-        nouvelle_fenetre_tour.setScene(nouvelle_scene);
-
-        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
-        nouvelle_fenetre_tour.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_tour.initOwner(jeu.getFenetrePropri());
-
-        //POSITION DE LA FENETRE
-        nouvelle_fenetre_tour.show();
-    }
 
 
 

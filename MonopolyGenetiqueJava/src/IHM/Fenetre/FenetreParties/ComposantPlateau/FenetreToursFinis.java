@@ -1,9 +1,12 @@
 package IHM.Fenetre.FenetreParties.ComposantPlateau;
 
+import IHM.Fenetre.FenetreParties.FenetreScore;
+import IHM.Fenetre.FenetreParties.Jeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -14,6 +17,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -21,11 +25,15 @@ public class FenetreToursFinis extends Parent {
 
     //ATTRIBUTS
     private Canvas canvas ;
+    private Jeu jeu ;
+    private Automate automate ;
 
-    public FenetreToursFinis(Stage fenetre, Canvas canvas, Automate automate)
+    public FenetreToursFinis(Stage fenetre, Canvas canvas, Automate automate, Jeu jeu)
     {
         //Initaialisation
         this.canvas = canvas ;
+        this.automate = automate ;
+        this.jeu = jeu ;
 
         /////////////////////LABEL
         Button bt_fin = new Button("FIN DE PARTIE");
@@ -48,7 +56,7 @@ public class FenetreToursFinis extends Parent {
         r_fond.setFill(Color.TRANSPARENT);
 
         /////////////////////////////////////CONTENU
-        Label l_contenu = new Label("Vous avez joué les "+automate.getNumTour()+" tours.\nLa partie est finie.");
+        Label l_contenu = new Label("Vous avez joué les "+(automate.getNumTour()-1)+" tours.\nLa partie est finie.");
         l_contenu.setLayoutX(130);
         l_contenu.setLayoutY(100);
         l_contenu.setMaxWidth(300);
@@ -70,6 +78,8 @@ public class FenetreToursFinis extends Parent {
                 detruireCanvas(canvas);
 
                 fenetre.close();
+
+                fenetreScore(fenetre);
 
             }
         });
@@ -104,5 +114,22 @@ public class FenetreToursFinis extends Parent {
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
+    }
+
+    public void fenetreScore(Stage fenetre_actuelle)
+    {
+        jeu.fenetreNoire();
+        Stage nouvelle_fenetre_score = new Stage();
+        FenetreScore fenetreScore = new FenetreScore(nouvelle_fenetre_score, canvas, jeu, automate);
+
+        Scene nouvelle_scene = new  Scene(fenetreScore,500,600);
+
+        nouvelle_fenetre_score.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_score.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_score.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_score.show();
     }
 }
