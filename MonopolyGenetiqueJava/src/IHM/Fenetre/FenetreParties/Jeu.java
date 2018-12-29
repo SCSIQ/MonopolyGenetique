@@ -39,10 +39,6 @@ public class Jeu extends Parent {
         return pion;
     }
 
-    public Stage getPrimaryStage() {
-        return primaryStage;
-    }
-
     public Stage getFenetrePropri() {
         return fenetrePropri;
     }
@@ -150,7 +146,7 @@ public class Jeu extends Parent {
 
                 automate.evoluer("tourSuivant");
 
-                //Si les tours sont finis --> faut faire un totalTour 
+                //Si les tours sont finis --> faut faire un totalTour
                 if(automate.getNumTour()==21)
                 {
                     fenetreFin(automate, nouvelle_fenetre) ;
