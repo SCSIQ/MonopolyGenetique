@@ -27,6 +27,10 @@ public class Jeu extends Parent {
     private PlateauJeu pl ;
     private ZoneAdversaires zoneAd ;
     private ZoneInfoJoueur zoneJoueur ;
+
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
     private Stage primaryStage ;
     private Stage fenetrePropri ;
 
@@ -144,30 +148,35 @@ public class Jeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                automate.evoluer("tourSuivant");
 
-                //Si les tours sont finis --> faut faire un totalTour
-                if(automate.getNumTour()==21)
+
+                 if(automate.getJoueurCourant().getaLanceDes()==true)
                 {
-                    fenetreFin(automate, nouvelle_fenetre) ;
-                }else if(automate.getJoueurCourant().getaLanceDes()==true)
-                {
-                    poss.effacerPossession() ;
-                    poss.afficherTerrain(automate);
-                    poss.afficherGare(automate);
-                    poss.afficherCompagnie(automate);
+                    automate.evoluer("tourSuivant");
+                    //Si les tours sont finis --> faut faire un totalTour
+                    if(automate.getNumTour()==21)
+                    {
+                        fenetreFin(automate, nouvelle_fenetre) ;
+                    }else {
+
+                        poss.effacerPossession();
+                        poss.afficherTerrain(automate);
+                        poss.afficherGare(automate);
+                        poss.afficherCompagnie(automate);
 
 
-                    fenetreTour(nouvelle_fenetre, automate, pl, poss, zoneAd, zoneJoueur, pion);
-                    zoneJoueur.SupprimerJoueur();
-                    zoneAd.SupprimerAdversaire();
-                    zoneJoueur.genereInfosJoueur(automate);
-                    zoneAd.genererAdversaire(automate, nouvelle_fenetre);
+                        fenetreTour(nouvelle_fenetre, automate, pl, poss, zoneAd, zoneJoueur, pion);
+                        zoneJoueur.SupprimerJoueur();
+                        zoneAd.SupprimerAdversaire();
+                        zoneJoueur.genereInfosJoueur(automate);
+                        zoneAd.genererAdversaire(automate, nouvelle_fenetre);
 
 
-                    pion.ChangerOrdrePion(); //change l'ordre des pions coté IHM lors du chagement de joueur 
+                        pion.ChangerOrdrePion(); //change l'ordre des pions coté IHM lors du chagement de joueur
+                    }
 
                 } else {
+                    automate.evoluer("tourSuivant");
                     fenetreTourErreur(nouvelle_fenetre, automate);
 
                 }

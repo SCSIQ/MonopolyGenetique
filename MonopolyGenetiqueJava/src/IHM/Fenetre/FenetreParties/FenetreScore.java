@@ -1,9 +1,11 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.FenetreGagne;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -13,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -67,6 +70,11 @@ public class FenetreScore extends Parent {
 
                 //on ferme la fenêtre
                 fenetre.close();
+
+                //spécifier le nombre de tour total, j'ai mis 21 par defaut
+                if (automate.getNumTour() == 21)
+                    fenetreGagne(jeu.getFenetrePropri());
+
             }
         });
 
@@ -131,6 +139,22 @@ public class FenetreScore extends Parent {
            x +=60 ;
         }
 
+    }
+    public void fenetreGagne(Stage fenetre_actuelle)
+    {
+        jeu.fenetreNoire();
+        Stage nouvelle_fenetre_gagne = new Stage();
+        FenetreGagne fenetreScore = new FenetreGagne(nouvelle_fenetre_gagne, automate, jeu);
+
+        Scene nouvelle_scene = new  Scene(fenetreScore,500,600);
+
+        nouvelle_fenetre_gagne.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_gagne.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_gagne.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_gagne.show();
     }
 
 }
