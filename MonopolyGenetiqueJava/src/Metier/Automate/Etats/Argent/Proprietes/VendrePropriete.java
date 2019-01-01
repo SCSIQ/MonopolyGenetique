@@ -20,7 +20,7 @@ public class VendrePropriete extends Etat {
     @Override
     public void agir(String event) {
         Joueur joueurCourant = super.getAutomate().getJoueurCourant();
-        Cases caseCourante = super.getAutomate().getJoueurCourant().getPion().getCase();
+        Cases caseCourante = joueurCourant.getListePropietes().get(0); //mis par défaut 0
         int prixCase = ((Proprietes) caseCourante).getPrix();
 
         // si la caseCourante est une instance de Propriété
@@ -30,8 +30,8 @@ public class VendrePropriete extends Etat {
             if(((Proprietes) caseCourante).getProprio() == joueurCourant){
                 ((Proprietes) caseCourante).setProprio(joueurCourant);
                 joueurCourant.IncrementerSolde(prixCase);
-                joueurCourant.supprimerPropriete((Proprietes) caseCourante);
-                System.out.println("    Propriété vendu: "+caseCourante.toString()+" au prix de "+prixCase+"€");
+                joueurCourant.getListePropietes().remove(0);//mis par défaut 0
+                System.out.println("    Propriété vendue: "+caseCourante.toString()+" au prix de "+prixCase+"€");
                 System.out.println("    Argent restant pour le joueur : "+joueurCourant.getSolde()+"€");
                 }
             }

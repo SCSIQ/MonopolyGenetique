@@ -377,6 +377,7 @@ public class DetailTerrain extends Parent {
                 //on fait évoluer l'automate
                 automate.evoluer("vendrePropriete");
                 poss.getListeTerrains().remove(numBouton);
+                poss.effacerPossession();
                 poss.afficherTerrain(automate);
             }
         });
