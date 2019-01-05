@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df769f54-49b6-4456-b92c-45df0351c570" name="Default Changelist" comment="" />
+    <list default="true" id="df769f54-49b6-4456-b92c-45df0351c570" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Metier/PartiesIA/CentreDecision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Metier/PartiesIA/Genetique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Entites/IA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Entites/IA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/InitialisationPartieIA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MonopolyGenetiqueJava/Metier/InitialisationPartieIA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entites/IA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entites/IA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metier/InitialisationPartieIA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Metier/InitialisationPartieIA.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,74 +17,93 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1601727761">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="1591" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1591" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Etats/Deplacement.java">
+        <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/PartieIA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/FenetreDevezAvoirTousTerrains.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="128" column="3" lean-forward="true" selection-start-line="128" selection-start-column="3" selection-end-line="134" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="816">
+              <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/FenetreToursFinis.java">
+        <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/CentreDecision.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+            <state relative-caret-position="314">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2784#2785#0" expanded="true" />
-                <element signature="e#2831#2832#0" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+                <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#468#507#0" />
+                <element signature="e#619#657#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/Genetique.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="315" column="29" selection-start-line="315" selection-start-column="29" selection-end-line="315" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entites/IA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Metier/InitialisationPartieIA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/Tournoi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -84,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="335" column="45" selection-start-line="335" selection-start-column="45" selection-end-line="335" selection-end-column="45" />
+            <state relative-caret-position="7412">
+              <caret line="466" selection-start-line="466" selection-end-line="466" />
             </state>
           </provider>
         </entry>
@@ -93,12 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/tourSuivant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-              <folding>
-                <element signature="e#3542#3543#0" expanded="true" />
-                <element signature="e#3589#3590#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="833">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -135,14 +158,17 @@
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/FenetreDevezAvoirTousTerrains.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/tourSuivant.java" />
         <option value="$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/ComposantPlateau/FenetreToursFinis.java" />
+        <option value="$PROJECT_DIR$/src/Entites/IA.java" />
+        <option value="$PROJECT_DIR$/src/Metier/InitialisationPartieIA.java" />
+        <option value="$PROJECT_DIR$/src/Metier/PartiesIA/Genetique.java" />
+        <option value="$PROJECT_DIR$/src/Metier/PartiesIA/CentreDecision.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -167,147 +193,6 @@
               <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-              <item name="FenetreParties" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-              <item name="FenetreParties" type="462c0819:PsiDirectoryNode" />
-              <item name="ComposantPlateau" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Fenetre" type="462c0819:PsiDirectoryNode" />
-              <item name="FentreMenuPrincipal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="CartePiocher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="LieuPublic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="BleuCiel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="BleuFonce" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Jaune" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Marron" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Orange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Rose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Rouge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IHM" type="462c0819:PsiDirectoryNode" />
-              <item name="Plateau" type="462c0819:PsiDirectoryNode" />
-              <item name="Terrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Vert" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
@@ -352,6 +237,13 @@
               <item name="Metier" type="462c0819:PsiDirectoryNode" />
               <item name="Cartes" type="462c0819:PsiDirectoryNode" />
               <item name="CartesChances" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MonopolyGenetiqueJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Metier" type="462c0819:PsiDirectoryNode" />
+              <item name="PartiesIA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MonopolyGenetiqueJava" type="b2602c69:ProjectViewProjectNode" />
@@ -493,12 +385,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545856672992" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546708919696" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -573,10 +465,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81887203" visible="true" weight="0.11497731" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81887203" visible="true" weight="0.19261745" />
       <window_info id="Favorites" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -585,7 +477,7 @@
       <window_info id="Structure" order="6" sideWeight="0.18112798" side_tool="true" weight="0.1687966" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5688525" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25737706" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.50141644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -596,7 +488,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.32131147" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3147541" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.31444758" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
@@ -610,9 +502,6 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" weight="0.3295302" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
@@ -744,7 +633,7 @@
     <entry file="file://$PROJECT_DIR$/src/Metier/Automate/Etats/Deplacement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
+          <caret line="113" column="34" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -767,19 +656,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/tourSuivant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="e#3542#3543#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="833">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IHM/Fenetre/FenetreParties/LancerDe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="335" column="45" selection-start-line="335" selection-start-column="45" selection-end-line="335" selection-end-column="45" />
+        <state relative-caret-position="7412">
+          <caret line="466" selection-start-line="466" selection-end-line="466" />
         </state>
       </provider>
     </entry>
@@ -791,6 +676,76 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2784#2785#0" expanded="true" />
             <element signature="e#2831#2832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/Tournoi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/PartieIA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entites/Joueur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entites/IA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/InitialisationPartieIA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="315" column="29" selection-start-line="315" selection-start-column="29" selection-end-line="315" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/Genetique.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metier/PartiesIA/CentreDecision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#468#507#0" />
+            <element signature="e#619#657#0" />
           </folding>
         </state>
       </provider>

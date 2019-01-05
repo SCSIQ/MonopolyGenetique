@@ -13,7 +13,7 @@ public class InitialisationPartieIA extends InitialisationPartie{
         ArrayList<Joueur> listeIA = new ArrayList<>();
         super.creationListeCases();
         for(int i=0 ; i<nombre ; i++){
-            listeIA.add(new IA(super.listeCases, listeCouleurs.get(i)));
+            listeIA.add(new IA(super.listeCases, listeCouleurs.get(i), null));
         }
         return listeIA;
     }
