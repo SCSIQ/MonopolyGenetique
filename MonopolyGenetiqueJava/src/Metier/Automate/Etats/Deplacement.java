@@ -166,7 +166,8 @@ public class Deplacement extends Etat{
         }
         else if(estSurCommunaute ==true)
         {
-            return new PiocherCarteCaisseComm(super.getAutomate(), super.getListeJoueurs());
+            return new TransitionVersPiocherComm(super.getAutomate(), super.getListeJoueurs());
+            //return new PiocherCarteCaisseComm(super.getAutomate(), super.getListeJoueurs());
         }
         else
         {
