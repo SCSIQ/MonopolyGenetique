@@ -165,8 +165,8 @@ public class IaVSia extends Parent {
                 System.out.println("Nombre de mutations à effectuer : "+Integer.valueOf((String) nb_mutations.getValue()));
                 System.out.println("Nombre de tours max par partie : "+Integer.valueOf((String) nb_tours.getValue()));
 
-               /* Tournoi tournoi = new Tournoi(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
-                tournoi.lancerLeTournoi();*/
+               Tournoi tournoi = new Tournoi(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
+                tournoi.lancerLeTournoi();
 
                 System.out.println("\n-------------------------------------------------------------------------------");
                 System.out.println("    FIN DU TOURNOI");

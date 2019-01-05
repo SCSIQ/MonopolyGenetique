@@ -25,7 +25,7 @@ public class PiocherCarteCaisseComm extends Etat {
             else
             {
                 Random rand = new Random();
-                getAutomate().getListeDesCartesCaisseCommune().get(rand.nextInt(3)).agir(getAutomate());
+                getAutomate().getListeDesCartesCaisseCommune().get(rand.nextInt(2)).agir(getAutomate());
             }
         }
     }

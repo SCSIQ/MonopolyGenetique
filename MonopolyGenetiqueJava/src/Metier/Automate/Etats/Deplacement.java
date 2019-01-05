@@ -110,8 +110,8 @@ public class Deplacement extends Etat{
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
 
-        int resDes = j.getResLanceDes();
-        //int resDes = 2; //POUR IHM
+        //int resDes = j.getResLanceDes();
+        int resDes = 7; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
@@ -161,7 +161,8 @@ public class Deplacement extends Etat{
         }
         else if(estSurChance ==true)
         {
-            return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
+            return new TransitionVersPiocherChance(super.getAutomate(), super.getListeJoueurs());
+            //return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
         }
         else if(estSurCommunaute ==true)
         {
