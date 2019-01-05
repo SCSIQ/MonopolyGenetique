@@ -15,7 +15,8 @@ public class Tournoi {
         this.nbToursMax = nbToursMax;
 
         //crée toutes les parties
-        for (int j = 0; j < this.nbIA/4; j++) {
+        //for (int j = 0; j < this.nbIA/4; j++) {
+        for (int j = 0; j < 1; j++) {
             this.listeParties.add(new PartieIA(4, this.nbToursMax));
         }
     }
