@@ -843,7 +843,7 @@ public class DetailTerrain extends Parent {
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
         nouvelle_fenetre_tousTerrains.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_tousTerrains.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_tousTerrains.initOwner(jeu.getFenetrePropri());
 
         nouvelle_fenetre_tousTerrains.show();
     }

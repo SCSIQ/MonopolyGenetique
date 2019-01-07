@@ -47,9 +47,10 @@ public class VentePropriete  extends Parent {
         bt_lance.setPrefSize(475,50);
 
 //////////////////////////////////////////////////////////////////////////TEXTE
+        //POUR TERRAIN
         Label t_nb = new Label("VOUS AVEZ VENDU : \n "+jeu.getPoss().getListeTerrains().get(numBouton)+"\n\nVOUS GAGNEZ "+((Terrain)jeu.getPoss().getListeTerrains().get(numBouton)).getPrix()+" €" );
 
-        t_nb.setLayoutX(100);
+        t_nb.setLayoutX(130);
         t_nb.setLayoutY(80);
         t_nb.setText(t_nb.getText().toUpperCase());
 

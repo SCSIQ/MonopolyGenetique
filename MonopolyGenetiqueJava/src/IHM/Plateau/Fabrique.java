@@ -70,7 +70,7 @@ public class Fabrique {
             //CASES DE GAUCHES
             case "Boul. de la Villette": c = new CaseVillette(caseMetier);
             break ;
-            case "Companie d'électricité": c = new Ampoule(caseMetier);
+            case "Compagnie d'électricité": c = new Ampoule(caseMetier);
             break;
             case "Avenue de Neuilly" : c = new CaseNeuilly(caseMetier);
             break ;
@@ -104,7 +104,7 @@ public class Fabrique {
             break ;
             case "Rue Lafayette" : c = new CaseFayette(caseMetier);
             break ;
-            case "Companie des eaux": c = new Robinet(caseMetier);
+            case "Compagnie des eaux": c = new Robinet(caseMetier);
             break;
             case "Aller en prison": c = new AllezPrison(caseMetier);
             break;

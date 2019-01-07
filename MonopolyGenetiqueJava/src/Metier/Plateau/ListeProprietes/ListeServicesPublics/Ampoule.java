@@ -8,6 +8,6 @@ public class Ampoule extends ServicePublic {
 
     @Override
     public String toString() {
-        return "Companie d'électricité";
+        return "Compagnie d'électricité";
     }
 }
