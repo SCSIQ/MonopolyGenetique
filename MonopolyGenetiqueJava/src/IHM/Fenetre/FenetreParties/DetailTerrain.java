@@ -2,6 +2,7 @@ package IHM.Fenetre.FenetreParties;
 
 import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.PossessionAdv;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.VentePropriete;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.ZonePossessions;
 
 import IHM.Plateau.VueCases;
@@ -24,6 +25,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -43,6 +45,7 @@ public class DetailTerrain extends Parent {
     private Jeu jeu ;
     private Canvas canvas ;
     private Stage fenetre_detail;
+    private Automate automate;
 
     public DetailTerrain(Automate automate, Stage fenetre_detail , Stage fenetre_avant, Canvas canvas, ZonePossessions poss, int numBouton, PossessionAdv possAd, boolean joueurCourant, PlateauJeu pl, Jeu jeu){
 
@@ -56,6 +59,7 @@ public class DetailTerrain extends Parent {
         this.jeu = jeu ;
         this.fenetre_detail = fenetre_detail;
         this.canvas = canvas ;
+        this.automate=automate;
 
          if(joueurCourant==true){
 
@@ -353,13 +357,17 @@ public class DetailTerrain extends Parent {
         rect_vendre.setStroke(Color.BLACK);
 
         //Contenu du panel
-        Label l_vendre = new Label("  Vous pouvez vendre votre terrain pour X à la banque.");
+        Label l_vendre = new Label("Vous pouvez vendre votre terrain pour "+((Terrain)poss.getListeTerrains().get(numBouton)).getPrix()+" € à la banque.");
         l_vendre.setLayoutY(10);
-        l_vendre.setLayoutX(10);
+        l_vendre.setLayoutX(40);
         l_vendre.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
 
+        l_vendre.setMaxWidth(400);
+        l_vendre.setWrapText(true);
+        l_vendre.setTextAlignment(TextAlignment.CENTER);
+
         Label l_warning = new Label("ATTENTION, CETTE ACTION EST DEFINITIVE !");
-        l_warning.setLayoutY(40);
+        l_warning.setLayoutY(57);
         l_warning.setLayoutX(30);
         l_warning.setFont(Font.font("Verdana", FontWeight.BOLD, 16));
         l_warning.setTextFill(Color.RED);
@@ -375,10 +383,10 @@ public class DetailTerrain extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 //on fait évoluer l'automate
-                automate.evoluer("vendrePropriete");
-                poss.getListeTerrains().remove(numBouton);
-                poss.effacerPossession();
-                poss.afficherTerrain(automate);
+
+                fenetre_detail.close();
+                fenetreVenteMaison(fenetre_detail,canvas);
+
             }
         });
 
@@ -812,6 +820,22 @@ public class DetailTerrain extends Parent {
 
         Stage nouvelle_fenetre_tousTerrains = new Stage();
         FenetreDevezAvoirTousTerrains fenetreTerrains = new FenetreDevezAvoirTousTerrains(nouvelle_fenetre_tousTerrains, canvas, jeu, cases);
+
+        Scene nouvelle_scene = new  Scene(fenetreTerrains,500,270);
+
+        nouvelle_fenetre_tousTerrains.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_tousTerrains.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_tousTerrains.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_tousTerrains.show();
+    }
+
+    public void fenetreVenteMaison(Stage fenetre_actuelle, Canvas canvas)
+    {
+        Stage nouvelle_fenetre_tousTerrains = new Stage();
+        VentePropriete fenetreTerrains = new VentePropriete(nouvelle_fenetre_tousTerrains, canvas, jeu, automate, numBouton);
 
         Scene nouvelle_scene = new  Scene(fenetreTerrains,500,270);
 
