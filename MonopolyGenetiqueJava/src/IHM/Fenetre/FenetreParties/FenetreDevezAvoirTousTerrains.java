@@ -37,31 +37,9 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
         bt_TousTerrains.setTextFill(Color.WHITE);
 
         //COULEUR
-        CouleurMétier s =((Terrain)caseTerrain).getCouleur();
-        Color couleurTerrain ;
-        switch(s){
-            case Rose :   bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(189,91,163),null, null)));
-                break ;
-            case Vert: bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(28,137,6791,163),null, null)));
-                 break ;
-            case Orange: bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(234,157,34),null, null)));
-                break ;
-            case Jaune:  bt_TousTerrains.setBackground(new Background(new BackgroundFill(  Color.rgb(239,233,50),null, null)));
-                break ;
-            case Rouge:  bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(224,30,37),null, null)));
-                break ;
-            case Marron: bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(122,57,149),null, null)));
-                break ;
-            case BleuFonce:  bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(68,77,169),null, null)));
-                break;
-            case BleuCiel: bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(9,172,227),null, null)));
-                break ;
-
-            default :bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.rgb(255,255,255),null, null)));
-        }
 
 
-
+        bt_TousTerrains.setBackground(new Background(new BackgroundFill( Color.RED,null, null)));
         bt_TousTerrains.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
         bt_TousTerrains.setPrefSize(475,50);
 
@@ -95,12 +73,12 @@ public class FenetreDevezAvoirTousTerrains extends Parent {
         //Contenu de la fenêtre
 
         Label l_contenu = new Label("Vous devez avoir tous les terrains de cette couleur pour construire.");
-        l_contenu.setLayoutX(100);
+        l_contenu.setLayoutX(90);
         l_contenu.setLayoutY(100);
         l_contenu.setMaxWidth(300);
         l_contenu.setWrapText(true);
         l_contenu.setTextAlignment(TextAlignment.CENTER);
-        l_contenu.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
+        l_contenu.setFont(Font.font("Verdana", FontWeight.NORMAL, 20));
 
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
        fenetre.setOnCloseRequest(new EventHandler<WindowEvent>() {

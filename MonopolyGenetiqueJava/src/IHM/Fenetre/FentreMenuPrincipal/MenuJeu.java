@@ -66,19 +66,8 @@ public class MenuJeu extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-
-                //début initialisation automate
-                InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
-                ArrayList<Color> listeCouleurs = new ArrayList<>();
-                for(int i=0 ; i<automate.getNombreJoueur() ; i++){
-                    listeCouleurs.add(automate.getListeJoueurs().get(i).getCouleur());
-                }
-                Automate _automate = initialisationPartieJoueurs.automateInitialisation(automate.getNombreJoueur(),listeCouleurs);
-                //fin initialisation automate
-
-
                 Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur,_automate) ;
+                HumainVs_Humain fenentre_jeu = new HumainVs_Humain(primaryStage,nouvelle_fenetre_plateau) ;
                 Scene nouvelle_scene = new Scene(fenentre_jeu,1275,1275);
 
                 nouvelle_fenetre_plateau.setScene(nouvelle_scene);

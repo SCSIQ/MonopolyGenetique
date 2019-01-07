@@ -44,7 +44,7 @@ public class FenetreScore extends Parent {
 
         //RECTANGLE
         Rectangle r_fond = new Rectangle();
-        r_fond.setHeight(545);
+        r_fond.setHeight(485);
         r_fond.setWidth(465);
         r_fond.setLayoutX(10);
         r_fond.setLayoutY(10);
@@ -56,7 +56,7 @@ public class FenetreScore extends Parent {
         Button bt_ok = new Button("OK");
 
         bt_ok.setLayoutX(175);
-        bt_ok.setLayoutY(500);
+        bt_ok.setLayoutY(450);
 
         bt_ok.setPrefSize(150, 10);
 
@@ -79,10 +79,10 @@ public class FenetreScore extends Parent {
         });
 
         /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre.setMinHeight(600);
+        fenetre.setMinHeight(550);
         fenetre.setMinWidth(500);
 
-        fenetre.setMaxHeight(600);
+        fenetre.setMaxHeight(550);
         fenetre.setMaxWidth(500);
 
         ////////EMPECHE LA FENETRE D'ETRE FERMEE TANT QUE L'USER NE CLIQUE PAS SUR UN BOUTON
