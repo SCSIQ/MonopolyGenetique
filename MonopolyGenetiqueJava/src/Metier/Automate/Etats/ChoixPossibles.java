@@ -46,17 +46,20 @@ public class ChoixPossibles extends Etat {
         }
         else if(event == "AcheterMaison"){
             return new AcheterMaison(super.getAutomate(), super.getListeJoueurs());
-        }else if(event=="vendrePropriete")
+        }
+        else if(event=="vendrePropriete")
         {
             return new VendrePropriete(super.getAutomate(), super.getListeJoueurs());
         }
         else if(this.doitTirerCarteChance==true)
         {
             return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
-        } else if(this.doitTirerCarteCaisseCommune==true)
+        }
+        else if(this.doitTirerCarteCaisseCommune==true)
         {
             return new PiocherCarteCaisseComm(super.getAutomate(), super.getListeJoueurs());
-        }else if (event=="Faillite")
+        }
+        else if (event=="Faillite")
         {
             return new Faillite(super.getAutomate(), super.getListeJoueurs());
         }
