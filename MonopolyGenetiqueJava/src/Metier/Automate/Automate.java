@@ -26,6 +26,16 @@ public class Automate {
     private String contenuCartePiochée;
     private int argentRecupDansParcGratuit;
 
+    public void setNumBouton(int numBouton) {
+        this.numBouton = numBouton;
+    }
+
+    public int getNumBouton() {
+        return numBouton;
+    }
+
+    private int numBouton =0 ;
+
     public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
         this.listeDesCartesChances = listeDesCartesChances;

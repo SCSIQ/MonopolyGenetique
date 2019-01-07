@@ -72,6 +72,7 @@ public class VentePropriete  extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
+                automate.setNumBouton(numBouton);
                 detruireCanvas(canvas);
                 automate.evoluer("vendrePropriete");
                 jeu.getPoss().getListeTerrains().remove(numBouton);
