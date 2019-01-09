@@ -21,6 +21,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -57,15 +58,22 @@ public class FenetreCarteChance extends Parent {
         String chance = automate.getContenuCartePiochée();
 
         Label carteChance = new Label(""+chance);
-        carteChance.setLayoutX(100);
+        carteChance.setLayoutX(125);
         carteChance.setLayoutY(100);
+        carteChance.setMaxWidth(250);
+        carteChance.setWrapText(true);
+        carteChance.setTextAlignment(TextAlignment.CENTER);
+
 
         carteChance.setScaleX(1.5);
         carteChance.setScaleY(1.5);
 
-
         //si c'est "Rendez_vous rue de la paix"
         if(chance=="Rendez-vous rue de la paix")
+        {
+            pion.entrerDansCase();
+        }
+        if(chance=="Vous reculez de 5 cases ")
         {
             pion.entrerDansCase();
         }
