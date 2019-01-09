@@ -30,7 +30,7 @@ public class FenetreCarteCommu extends Parent {
     private ZoneAdversaires zoneAd;
 
 
-    public FenetreCarteCommu(Stage fenetre_actuelle, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    public FenetreCarteCommu(Stage fenetre_actuelle, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Pion pion)
     {
         //Initialisation
         this.canvas=canvas;
@@ -72,6 +72,16 @@ public class FenetreCarteCommu extends Parent {
 
         l_contenu.setScaleX(1.5);
         l_contenu.setScaleY(1.5);
+
+        if(caisseComm=="Vous retournez sur la case départ !")
+        {
+            automate.getJoueurCourant().getPion().avancer(0);
+            pion.entrerDansCase();
+        }else if(caisseComm=="Reculez à la case Avenue Matignon ")
+        {
+            automate.getJoueurCourant().getPion().avancer(21);
+            pion.entrerDansCase();
+        }
 
         //BOUTON
         Button bt_ok = new Button("Ok");

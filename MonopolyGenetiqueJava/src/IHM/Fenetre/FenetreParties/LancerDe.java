@@ -411,7 +411,7 @@ public class LancerDe extends Parent {
         jeu.fenetreNoire();
 
         Stage nouvelle_fenetre_commu = new Stage();
-        FenetreCarteCommu fenetreCommu= new FenetreCarteCommu(nouvelle_fenetre_commu,canvas, automate, zoneJoueur, zoneAd);
+        FenetreCarteCommu fenetreCommu= new FenetreCarteCommu(nouvelle_fenetre_commu,canvas, automate, zoneJoueur, zoneAd, jeu.getPion());
 
         Scene nouvelle_scene = new  Scene(fenetreCommu,650,550);
 
