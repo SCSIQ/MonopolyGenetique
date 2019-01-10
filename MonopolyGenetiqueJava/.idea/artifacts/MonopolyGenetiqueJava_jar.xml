@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MonopolyGenetiqueJava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MonopolyGenetiqueJava_jar</output-path>
+    <root id="archive" name="MonopolyGenetiqueJava.jar">
+      <element id="module-output" name="MonopolyGenetiqueJava" />
+    </root>
+  </artifact>
+</component>
