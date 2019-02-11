@@ -195,6 +195,11 @@ public class Joueur {
         this.nbCartesLibereDePrison++;
     }
 
+
+    public Score getScoreJoueur() {
+        return scoreJoueur;
+    }
+
     /**
      * 
      * @return true si une carte a bien pu être utilisé et false si ce n'est pas le cas
@@ -210,5 +215,6 @@ public class Joueur {
             return false;
         }
     }
+
 }
 
