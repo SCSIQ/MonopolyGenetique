@@ -56,12 +56,13 @@ public abstract class InitialisationPartie {
     //cette méthode à besoin en entrée du nombre de joueurs, ainsi
     //que de la liste des couleurs des joueurs, dans l'ordre dans
     //lequel ils ont été rentrés
-    public Automate automateInitialisation(int nombreJoueurs, ArrayList<Color> listeCouleurs){
+    public Automate automateInitialisation(int nombreJoueurs, ArrayList<Color> listeCouleurs, int nbTour){
         creationListeCases();
         creationListeCartesChances();
         creationListeCartesCaisseCommune();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);
-        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances, this.listeDesCartesCaisseCommune);
+        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances, this.listeDesCartesCaisseCommune,nbTour);
+
         return automate;
     }
 

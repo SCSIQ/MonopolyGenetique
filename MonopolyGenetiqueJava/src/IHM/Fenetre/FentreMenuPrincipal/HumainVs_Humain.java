@@ -133,16 +133,6 @@ public class HumainVs_Humain extends Parent {
         commencer_partie.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
-                /*
-                //ici ajouter lancement automate avec en param le joueur
-                Joueur j = new Joueur(null, null);
-                ArrayList<Joueur> listeJoueurs = new ArrayList<>();
-                listeJoueurs.add(j);
-                /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeJoueurs.add(new Joueur());
-                }
-                System.out.println("Nombre de joueurs : "+listeJoueurs.size());
-                Automate automate = new Automate(listeJoueurs);*/
 
                 //début initialisation automate
                 InitialisationPartieJoueurs initialisationPartieJoueurs = new InitialisationPartieJoueurs();
@@ -151,7 +141,7 @@ public class HumainVs_Humain extends Parent {
                     listeCouleurs.add(couleurAdversaire(i));
                 }
 
-                Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
+                Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs,Integer.valueOf((String)nb_tours.getValue()));
                 //fin initialisation automate
 
 

@@ -154,7 +154,7 @@ public class Jeu extends Parent {
                 {
                     automate.evoluer("tourSuivant");
                     //Si les tours sont finis --> faut faire un totalTour
-                    if(automate.getNumTour()==21)
+                    if(automate.getNumTour()==automate.getNombreTourTotal()+1)
                     {
                         fenetreFin(automate, nouvelle_fenetre) ;
                     }else {

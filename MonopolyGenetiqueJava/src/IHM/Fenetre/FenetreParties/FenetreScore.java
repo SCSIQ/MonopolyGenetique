@@ -72,7 +72,7 @@ public class FenetreScore extends Parent {
                 fenetre.close();
 
                 //spécifier le nombre de tour total, j'ai mis 21 par defaut
-                if (automate.getNumTour() == 21)
+                if (automate.getNumTour() == automate.getNombreTourTotal())
                     fenetreGagne(jeu.getFenetrePropri());
 
             }

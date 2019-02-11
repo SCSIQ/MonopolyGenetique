@@ -25,7 +25,7 @@ public class PartieIA {
 
     public void lancerPartie(){
         System.out.println("\n    DEBUT DE LA PARIE\n");
-        this.automate = this.initialisationPartieIA.automatePourIaInitialisation(this.listeIA);
+        this.automate = this.initialisationPartieIA.automatePourIaInitialisation(this.listeIA,automate.getNombreTourTotal());
         IA iaCourante = (IA)this.automate.getJoueurCourant();
         for (int i = 0; i < 8; i++) {
             do{

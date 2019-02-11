@@ -36,11 +36,18 @@ public class Automate {
 
     private int numBouton =0 ;
 
-    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune){
+    public int getNombreTourTotal() {
+        return nombreTourTotal;
+    }
+
+    private int nombreTourTotal;
+
+    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune,int nbTour){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
         this.listeDesCartesChances = listeDesCartesChances;
         this.listeDesCartesCaisseCommune = listeDesCartesCaisseCommune;
         this.etatCourant = new LancerDesInitial(this, listeJoueurs); //lancement Etat initial
+        this.nombreTourTotal=nbTour;
         System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
     }

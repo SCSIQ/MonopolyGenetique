@@ -128,7 +128,7 @@ public class Solo extends Parent {
                 for(int i=1 ; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
                     listeCouleurs.add(couleurAdversaire(i));
                 }
-                Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs);
+                Automate automate = initialisationPartieJoueurs.automateInitialisation(Integer.valueOf((String) nb_adversaires.getValue()),listeCouleurs,Integer.valueOf((String)nb_tours.getValue()));
                 //fin initialisation automate
 
 
