@@ -140,6 +140,12 @@ public class FenetreScore extends Parent {
         }
 
     }
+
+    public void afficheScore(){
+        
+    }
+
+
     public void fenetreGagne(Stage fenetre_actuelle)
     {
         jeu.fenetreNoire();
