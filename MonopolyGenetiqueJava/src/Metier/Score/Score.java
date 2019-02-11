@@ -51,27 +51,31 @@ public class Score {
      * @param maisons
      * @return le score dédié au maisons
      */
-    public int scoreMaison(ArrayList<Terrain> maisons)
+    public int scoreMaison(ArrayList<Proprietes> maisons)
     {
         int score=0;
 
         for(int i=0;i<maisons.size();i++)
         {
-            if(maisons.get(i).getNbMaisons()==1)
+            if(maisons.get(i) instanceof Terrain)
             {
-                score+=50;
-            }else if(maisons.get(i).getNbMaisons()==2)
-            {
-                score+=70;
-            }else if(maisons.get(i).getNbMaisons()==3)
-            {
-                score+=90;
-            }else if(maisons.get(i).getNbMaisons()==4)
-            {
-                score+=110;
-            }else if(maisons.get(i).getNbMaisons()==5)
-            {
-                score+=200;
+                if(((Terrain)maisons.get(i)).getNbMaisons()==1)
+                {
+                    score+=50;
+                }else if(((Terrain)maisons.get(i)).getNbMaisons()==2)
+                {
+                    score+=70;
+                }else if(((Terrain)maisons.get(i)).getNbMaisons()==3)
+                {
+                    score+=90;
+                }else if(((Terrain)maisons.get(i)).getNbMaisons()==4)
+                {
+                    score+=110;
+                }else if(((Terrain)maisons.get(i)).getNbMaisons()==5)
+                {
+                    score+=200;
+                }
+
             }
 
         }
