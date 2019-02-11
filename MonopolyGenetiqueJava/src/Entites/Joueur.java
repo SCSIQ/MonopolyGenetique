@@ -200,6 +200,11 @@ public class Joueur {
         return scoreJoueur;
     }
 
+    public void setScoreJoueur(Score scoreJoueur) {
+        this.scoreJoueur = scoreJoueur;
+    }
+
+
     /**
      * 
      * @return true si une carte a bien pu être utilisé et false si ce n'est pas le cas
