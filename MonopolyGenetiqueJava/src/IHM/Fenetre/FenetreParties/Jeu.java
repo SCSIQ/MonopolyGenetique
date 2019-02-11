@@ -152,6 +152,7 @@ public class Jeu extends Parent {
 
                  if(automate.getJoueurCourant().getaLanceDes()==true)
                 {
+                    automate.getJoueurCourant().getScoreJoueur().calculScore(automate.getJoueurCourant().getListePropietes().size(), automate.getJoueurCourant().getListePropietes());
                     automate.evoluer("tourSuivant");
                     //Si les tours sont finis --> faut faire un totalTour
                     if(automate.getNumTour()==automate.getNombreTourTotal()+1)

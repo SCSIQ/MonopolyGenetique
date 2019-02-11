@@ -89,7 +89,7 @@ public class Score {
      * @param maisons
      * @return scoreTotal
      */
-    public int calculScore(int nbPropriete,ArrayList<Terrain> maisons)
+    public int calculScore(int nbPropriete, ArrayList<Proprietes> maisons)
     {
         scoreTotal = scoreTerrain(nbPropriete)+scoreMaison(maisons);
         return scoreTotal;
