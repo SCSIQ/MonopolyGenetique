@@ -94,6 +94,7 @@ public class FenetreScore extends Parent {
         });
 
         this.afficheJoueur();
+        this.afficheScore();
 
         //Ajout
         this.getChildren().add(bt_Score);
@@ -142,7 +143,20 @@ public class FenetreScore extends Parent {
     }
 
     public void afficheScore(){
-        
+
+        int x=0 ;
+        for (int i =0; i<automate.getListeJoueurs().size(); i++)
+        {
+            //Score du joueur
+            Label score = new Label(""+automate.getListeJoueurs().get(i).getScoreJoueur().getScoreTotal());
+            score.setFont(Font.font("Verdana", FontWeight.NORMAL, 22));
+            score.setLayoutY(120+x);
+            score.setLayoutX(350);
+
+            //ajout
+            this.getChildren().add(score);
+            x+=60;
+        }
     }
 
 
