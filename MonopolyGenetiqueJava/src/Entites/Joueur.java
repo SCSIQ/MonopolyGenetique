@@ -2,6 +2,7 @@ package Entites;
 
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.Proprietes;
+import Metier.Score.Score;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class Joueur {
     //private Color couleur; //couleur du joueur
     private int solde ; // montant de l'argent possédé
     private Pion pion ;
+    private Score scoreJoueur; //Score du joueur
     private boolean aLanceDes = false; // initialise le boolean pour savoir si le joueur a déjà lancer les dés
     private ArrayList<Proprietes> listePropietes = new ArrayList<>();
     private int resDes1 = 0; // initialise à 0 le dés 1
@@ -27,6 +29,7 @@ public class Joueur {
         this.solde = 15000; //a revoir car valeur fausse 150000
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
+        this.scoreJoueur = new Score();
         //this.couleur = couleur;
     }
 
