@@ -77,4 +77,17 @@ public class Score {
         }
         return score;
     }
+
+
+    /**
+     *
+     * @param nbPropriete
+     * @param maisons
+     * @return scoreTotal
+     */
+    public int calculScore(int nbPropriete,ArrayList<Terrain> maisons)
+    {
+        scoreTotal = scoreTerrain(nbPropriete)+scoreMaison(maisons);
+        return scoreTotal;
+    }
 }
