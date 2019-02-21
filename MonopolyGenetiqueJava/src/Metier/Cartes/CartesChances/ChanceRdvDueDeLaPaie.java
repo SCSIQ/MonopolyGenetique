@@ -8,7 +8,9 @@ public class ChanceRdvDueDeLaPaie extends Chance {
 
     @Override
     public void agir(Automate automate) {
-        automate.getJoueurCourant().Avancer(39); //avance à la rue de la paie
+
+        System.out.println("coucou");
+        automate.getJoueurCourant().Avancer(39); //avance à la rue de la paix
         automate.setContenuCartePiochée("Rendez-vous rue de la paix");
     }
 

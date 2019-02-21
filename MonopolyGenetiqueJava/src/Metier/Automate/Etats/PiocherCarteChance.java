@@ -3,6 +3,7 @@ package Metier.Automate.Etats;
 import Entites.Joueur;
 import Metier.Automate.Automate;
 
+import java.time.Clock;
 import java.util.Random;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class PiocherCarteChance extends Etat {
             else
             {
                 Random rand = new Random();
-                getAutomate().getListeDesCartesChances().get(rand.nextInt(4)).agir(getAutomate());
+                getAutomate().getListeDesCartesChances().get(rand.nextInt(5)).agir(getAutomate());
             }
         }
     }
@@ -41,3 +42,5 @@ public class PiocherCarteChance extends Etat {
         return "PiocherCarteChance{}";
     }
 }
+
+

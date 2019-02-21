@@ -4,9 +4,10 @@ package IHM.Fenetre.FenetreParties;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
 import Metier.Automate.Automate;
 import Metier.Cartes.Cartes;
-import Metier.Cartes.CartesChances.Chance;
 import Metier.Cartes.CartesChances.ChanceRdvDueDeLaPaie;
+import Metier.Plateau.ListeCartes.CaisseCommune;
 import Metier.Plateau.ListeCartes.CaseCarte;
+import Metier.Plateau.ListeCartes.Chance;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -68,15 +69,6 @@ public class FenetreCarteChance extends Parent {
         carteChance.setScaleX(1.5);
         carteChance.setScaleY(1.5);
 
-        //si c'est "Rendez_vous rue de la paix"
-        if(chance=="Rendez-vous rue de la paix")
-        {
-            pion.entrerDansCase();
-        }
-        if(chance=="Vous reculez de 5 cases ")
-        {
-            pion.entrerDansCase();
-        }
 
         //RECTANGLE
         Rectangle r_fond = new Rectangle();
@@ -114,6 +106,15 @@ public class FenetreCarteChance extends Parent {
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+                //si c'est "Rendez_vous rue de la paix"
+                if(chance=="Rendez-vous rue de la paix")
+                {
+                    pion.entrerDansCase();
+                }
+                if(chance=="Vous reculez de 5 cases")
+                {
+                    pion.entrerDansCase();
+                }
 
                 if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes) {
 
@@ -123,6 +124,9 @@ public class FenetreCarteChance extends Parent {
                     } else if (((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() != automate.getJoueurCourant()) {
                         fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                     }
+                } else if(automate.getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
+                {
+                    fenetreCommu(fenetre_actuelle, automate, zoneJoueur, jeu.getZoneAd());
                 }
             }
         });
@@ -200,5 +204,24 @@ public class FenetreCarteChance extends Parent {
 
             //POSITION DE LA FENETRE
             nouvelle_fenetre_poss.show();
+        }
+
+        public void fenetreCommu(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+        {
+            jeu.fenetreNoire();
+
+            Stage nouvelle_fenetre_commu = new Stage();
+            FenetreCarteCommu fenetreCommu= new FenetreCarteCommu(nouvelle_fenetre_commu,canvas, automate, zoneJoueur, zoneAd, jeu.getPion());
+
+            Scene nouvelle_scene = new  Scene(fenetreCommu,650,550);
+
+            nouvelle_fenetre_commu.setScene(nouvelle_scene);
+
+            //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+            nouvelle_fenetre_commu.initModality(Modality.WINDOW_MODAL);
+            nouvelle_fenetre_commu.initOwner(jeu.getFenetrePropri());
+
+            //POSITION DE LA FENETRE
+            nouvelle_fenetre_commu.show();
         }
 }

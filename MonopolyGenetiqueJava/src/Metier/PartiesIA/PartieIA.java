@@ -36,7 +36,7 @@ public class PartieIA {
                     this.automate.evoluer("acheterPropriete");
                 }
             }while (iaCourante.getaLanceDes()==false); //si l'IA fait un double, elle rejoue
-            this.automate.evoluer("tourSuivant");
+                this.automate.evoluer("tourSuivant");
         }
 
 

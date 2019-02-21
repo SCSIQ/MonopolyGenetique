@@ -73,15 +73,7 @@ public class FenetreCarteCommu extends Parent {
         l_contenu.setScaleX(1.5);
         l_contenu.setScaleY(1.5);
 
-        if(caisseComm=="Vous retournez sur la case départ !")
-        {
-            automate.getJoueurCourant().getPion().avancer(0);
-            pion.entrerDansCase();
-        }else if(caisseComm=="Reculez à la case Avenue Matignon ")
-        {
-            automate.getJoueurCourant().getPion().avancer(21);
-            pion.entrerDansCase();
-        }
+
 
         //BOUTON
         Button bt_ok = new Button("Ok");
@@ -96,6 +88,16 @@ public class FenetreCarteCommu extends Parent {
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
+
+                if(caisseComm=="Vous retournez sur la case départ !")
+                {
+                    automate.getJoueurCourant().getPion().avancer(0);
+                    pion.entrerDansCase();
+                }else if(caisseComm=="Reculez à la case Avenue Matignon ")
+                {
+                    automate.getJoueurCourant().getPion().avancer(21);
+                    pion.entrerDansCase();
+                }
 
                 //on remet à jour l'argent du joueur courant
                 zoneJoueur.SupprimerJoueur();
@@ -141,5 +143,7 @@ public class FenetreCarteCommu extends Parent {
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
     }
+
+
 
 }

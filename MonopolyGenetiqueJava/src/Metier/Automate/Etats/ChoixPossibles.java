@@ -22,14 +22,14 @@ public class ChoixPossibles extends Etat {
 
     @Override
     public void agir(String event) {
-        /*if(getAutomate().getTirerCarteChance()<=0)
+        if(getAutomate().getTirerCarteChance()<=0)
         {
             doitTirerCarteChance = true;
         }
         else if(getAutomate().getTirerCarteCaisseCommune()<=0)
         {
             doitTirerCarteCaisseCommune = true;
-        }*/
+        }
     }
 
     @Override
