@@ -10,7 +10,7 @@ public class ChanceReculerCase extends Chance {
     public void agir(Automate automate) {
 
         if ( automate.getJoueurCourant().getPion().getCase().getPosition()-5 <0){ //si position -5 est inférieur a 0
-          int difference = 5-automate.getJoueurCourant().getPion().getCase().getPosition() ; //variable qui prend 5-position
+          int difference = automate.getJoueurCourant().getPion().getCase().getPosition() ; //variable qui prend 5-position
           automate.getJoueurCourant().Avancer(40 -difference);
 
         }else {
