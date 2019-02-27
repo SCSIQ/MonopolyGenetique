@@ -5,6 +5,13 @@ import Entites.IA;
 import java.util.Comparator;
 
 public class ComparateurIA implements Comparator<IA> {
+
+    //CONSTRUCTEUR
+    public ComparateurIA(){
+
+    }
+
+
     @Override
     public int compare(IA ia, IA ia2) {
         int result =2;
