@@ -23,4 +23,9 @@ public class IA extends Joueur {
         setDM(DM);
     }
 
+    public IA(IA pere, IA mere)
+    {
+
+    }
+
 }

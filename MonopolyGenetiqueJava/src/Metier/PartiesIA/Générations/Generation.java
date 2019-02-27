@@ -4,6 +4,7 @@ import Entites.IA;
 import Metier.PartiesIA.ComparerIA.ComparateurIA;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Generation
 {
@@ -31,5 +32,29 @@ public class Generation
         }
         this.listeSurvivant = new ArrayList<>(this.listeIA);
 
+    }
+
+    private void reproduction(int nombreSurvivant) {
+        Random rand = new Random();
+        while(this.listeIA.size()<listeIA.size()) {
+            IA pere = this.listeIA.get(rand.nextInt(nombreSurvivant));
+            IA mere = this.listeIA.get(rand.nextInt(nombreSurvivant));
+            this.listeIA.add(new IA(pere,mere));
+        }
+    }
+
+    private void mutation(int nombreSurvivant,int nombreMutation) {
+        Random rand = new Random();
+        for(int i = 0;i < nombreMutation;i++) {
+            IA mutant = this.listeIA.get(nombreSurvivant+rand.nextInt(this.listeIA.size()-nombreSurvivant));
+            this.listeMutant.add(mutant);
+        }
+    }
+
+    public void evolution(int nombreSurvivant,int nombreMutation) {
+        this.selection(nombreSurvivant);
+        this.reproduction(nombreSurvivant);
+        this.mutation(nombreSurvivant,nombreMutation);
+      //  this.controleurSelection.action_evolutaion();
     }
 }
