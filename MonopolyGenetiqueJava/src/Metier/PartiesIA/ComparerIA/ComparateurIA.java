@@ -6,9 +6,12 @@ import java.util.Comparator;
 
 public class ComparateurIA implements Comparator<IA> {
 
-    //CONSTRUCTEUR
-    public ComparateurIA(){
+    //ATTRIBUTS
+    private IA ia ;
 
+    //CONSTRUCTEUR
+    public ComparateurIA(IA ia){
+        this.ia = ia;
     }
 
 

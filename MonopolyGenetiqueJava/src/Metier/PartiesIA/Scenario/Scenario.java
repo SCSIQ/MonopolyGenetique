@@ -12,7 +12,7 @@ public class Scenario {
     {
         this.nbMutant = nbMutant;
         this.tailleGeneration= tailleGeneration;
-        this.nbSurvivants= nbSurvivants; 
+        this.nbSurvivants= nbSurvivants;
     }
 
 }
