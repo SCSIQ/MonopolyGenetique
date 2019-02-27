@@ -22,4 +22,5 @@ public class IA extends Joueur {
         super(listeCases, couleur);
         setDM(DM);
     }
+
 }

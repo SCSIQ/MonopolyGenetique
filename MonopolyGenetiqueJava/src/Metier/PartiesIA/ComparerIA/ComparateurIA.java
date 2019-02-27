@@ -6,7 +6,22 @@ import java.util.Comparator;
 
 public class ComparateurIA implements Comparator<IA> {
     @Override
-    public int compare(IA ia, IA t1) {
-        return 0;
+    public int compare(IA ia, IA ia2) {
+        int result =2;
+
+        if(ia.getScoreJoueur().getScoreTotal()<ia2.getScoreJoueur().getScoreTotal())
+        {
+            result=-1;
+        }
+        else if(ia.getScoreJoueur().getScoreTotal()>ia2.getScoreJoueur().getScoreTotal())
+        {
+            result=1;
+        }
+        else if(ia.getScoreJoueur().getScoreTotal()==ia2.getScoreJoueur().getScoreTotal())
+        {
+            result=0;
+        }
+
+        return result;
     }
 }
