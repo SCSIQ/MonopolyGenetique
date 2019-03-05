@@ -165,6 +165,13 @@ public class FenetrePrison extends Parent {
                 detruireCanvas(canvas);
 
                 automate.getJoueurCourant().utiliserUneCartesLibereDePrison();
+                poss.effacerPossession();
+                poss.afficherTerrain(automate);
+                poss.afficherCompagnie(automate);
+                poss.afficherGare(automate);
+                poss.genererRectPrison();
+
+                automate.getJoueurCourant().setEstEnPrison(false);
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
             }
