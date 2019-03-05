@@ -7,6 +7,8 @@ public class Tournoi {
     private ArrayList<PartieIA> listeParties = new ArrayList<>();
     private int nbIA;
     private int nbMutations;
+
+
     private int nbToursMax;
 
     public Tournoi(int nbAI, int nbMutations, int nbToursMax) {
@@ -28,8 +30,10 @@ public class Tournoi {
 
     private void lancerUneSerieDePArties() {
         for (PartieIA p : this.listeParties) {
-            p.lancerPartie();
+            p.lancerPartie(nbToursMax);
         }
     }
+
+
 
 }

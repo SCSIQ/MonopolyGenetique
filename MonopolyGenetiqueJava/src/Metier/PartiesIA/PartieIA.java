@@ -23,9 +23,13 @@ public class PartieIA {
         this.listeIA = this.initialisationPartieIA.creationListeIA(nbAI, listeCouleurs);
     }
 
-    public void lancerPartie(){
-        System.out.println("\n    DEBUT DE LA PARIE\n");
-        this.automate = this.initialisationPartieIA.automatePourIaInitialisation(this.listeIA,automate.getNombreTourTotal());
+    public void lancerPartie(int tourTotal){
+
+        System.out.println("\n    DEBUT DE LA PARTIE\n");
+        this.automate = this.initialisationPartieIA.automatePourIaInitialisation(this.listeIA,tourTotal);
+
+        automate.setNombreTourTotal(tourTotal);
+        
         IA iaCourante = (IA)this.automate.getJoueurCourant();
         for (int i = 0; i < 8; i++) {
             do{

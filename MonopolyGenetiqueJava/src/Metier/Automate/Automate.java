@@ -40,6 +40,10 @@ public class Automate {
         return nombreTourTotal;
     }
 
+    public void setNombreTourTotal(int nombreTourTotal) {
+        this.nombreTourTotal = nombreTourTotal;
+    }
+
     private int nombreTourTotal;
 
     public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune,int nbTour){
