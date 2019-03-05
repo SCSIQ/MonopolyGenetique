@@ -143,12 +143,10 @@ public class FenetrePrison extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
+
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
 
-                /* automate.evoluer("lancerDes");
-                jeu.fenetreDes(fenetre_actuelle,automate,  plateauJeu, zoneJoueur, poss, zoneAd) ;
-                pion.entrerDansCase();*/
 
             }
         });
@@ -166,6 +164,7 @@ public class FenetrePrison extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
+                automate.getJoueurCourant().utiliserUneCartesLibereDePrison();
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
             }
