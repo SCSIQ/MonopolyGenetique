@@ -111,8 +111,8 @@ public class Deplacement extends Etat{
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
 
-        //int resDes = j.getResLanceDes();
-        int resDes = 7; //POUR IHM
+        int resDes = j.getResLanceDes();
+        //int resDes = 7; //POUR IHM
 
         Cases position = j.getPion().getCase();
 

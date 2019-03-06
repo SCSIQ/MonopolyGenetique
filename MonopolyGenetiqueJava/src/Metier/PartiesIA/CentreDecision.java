@@ -1,12 +1,14 @@
 package Metier.PartiesIA;
 
 import Entites.IA;
+import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
-import Metier.PartiesIA.PartieIA;
 
 public class CentreDecision {
 
     private IA ia;
+    private IA iaCourante;//=(IA)this.automate.getJoueurCourant();
+    private Automate automate;
 
     public CentreDecision() {
 
@@ -33,6 +35,10 @@ public class CentreDecision {
             {
                 //<editor-fold desc="Case fin de tour">
                 case "tour Fin":
+
+                    if(iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null){
+                        this.automate.evoluer("acheterPropriete");
+                    }
 
                     break;
                 //</editor-fold>

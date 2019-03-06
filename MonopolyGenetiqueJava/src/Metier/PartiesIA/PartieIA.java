@@ -31,14 +31,21 @@ public class PartieIA {
         automate.setNombreTourTotal(tourTotal);
         
         IA iaCourante = (IA)this.automate.getJoueurCourant();
+        CentreDecision cd = new CentreDecision();
+
         for (int i = 0; i < 8; i++) {
             do{
                 this.automate.evoluer("lancerDes"); //l'IA lance les dès
 
+                //cd.priseDeDecision();
+
                 //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
+                /*
                 if(iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null){
                     this.automate.evoluer("acheterPropriete");
                 }
+                */
+
             }while (iaCourante.getaLanceDes()==false); //si l'IA fait un double, elle rejoue
                 this.automate.evoluer("tourSuivant");
         }
