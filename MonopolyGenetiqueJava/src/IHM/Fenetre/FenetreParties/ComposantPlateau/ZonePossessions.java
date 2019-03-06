@@ -36,6 +36,9 @@ public class ZonePossessions extends Parent {
     private Pane zoneTerrain ;
     private Pane zoneCompagnie ;
     private Pane zoneGare ;
+    private Pane zonePrison ;
+
+    private Label textPrison;
 
     private ZoneAdversaires ad;
 
@@ -56,6 +59,8 @@ public class ZonePossessions extends Parent {
     private Jeu jeu ;
     private PlateauJeu pl ;
 
+    private int nbCartePrison ;
+
 
     public ZonePossessions(Automate automate, Stage fenetre_actuelle, Canvas canvas, Jeu jeu, ZoneAdversaires ad, PlateauJeu pl)
     {
@@ -66,9 +71,12 @@ public class ZonePossessions extends Parent {
         this.ad = ad ;
         this.pl = pl ;
 
+        this.nbCartePrison=0;
+
         zoneTerrain = new Pane() ;
         zoneCompagnie = new Pane() ;
         zoneGare = new Pane() ;
+        zonePrison= new Pane();
         listeCompagnies = new ArrayList<>();
         listeGares = new ArrayList<>();
         listeTerrains = new ArrayList<>();
@@ -100,6 +108,8 @@ public class ZonePossessions extends Parent {
         rect_possession.setFill(Color.TRANSPARENT);
         rect_possession.setStroke(Color.BLACK);
         this.getChildren().add(rect_possession);
+
+        this.getChildren().add(zonePrison);
     }
 
     public void RectangleTerrain(Automate automate){
@@ -211,45 +221,47 @@ public class ZonePossessions extends Parent {
 
     public void RectangleCartePrison(){
 
+
+        nbCartePrison=automate.getJoueurCourant().getNbCartesLibereDePrison();
+
         //Ajout d'un label "Vous êtes libéré de prison"
-        Label textPrison = new Label("CARTE \"LIBERE DE PRISON\" : "+automate.getJoueurCourant().getNbCartesLibereDePrison());
-        textPrison.setLayoutX(1000);
-        textPrison.setLayoutY(620);
+        textPrison = new Label("CARTE \"LIBERE DE PRISON\" : "+nbCartePrison);
+        textPrison.setLayoutX(50);
+        textPrison.setLayoutY(20);
         textPrison.setFont(Font.font("Verdana", FontWeight.SEMI_BOLD, 12));
-        this.getChildren().add(textPrison);
 
 ////////////////////CREATION D'UN PANEL POUR LA ZONE Prison
-        /*Pane zonePrison = new Pane() ;
-        int height = ecran.getDisplayMode().getHeight();
-        int width = ecran.getDisplayMode().getWidth();
 
         zonePrison.setLayoutX(950);
-        zonePrison.setLayoutY(545);
-        Border border1 = new Border(
-                new BorderStroke(Color.BLACK,
-                        BorderStrokeStyle.SOLID,
-                        CornerRadii.EMPTY,
-                        new BorderWidths(2),
-                        new Insets(0)));
-        zonePrison.setPrefSize(width*0.22,height*0.1);
-        zonePrison.setBorder(border1);
-
-        zonePrison.getChildren().add(textPrison);
-        this.getChildren().add(zonePrison);*/
+        zonePrison.setLayoutY(605);
 
 
         //TAILLE DU RECTANGLE ET POSITION
         Rectangle rect_cartePrison = new Rectangle();
         rect_cartePrison.setHeight(50);
         rect_cartePrison.setWidth(305);
-        rect_cartePrison.setX(950);
-        rect_cartePrison.setY(605);
+        rect_cartePrison.setX(0);
+        rect_cartePrison.setY(0);
 
         //COULEUR ET CONTOUR
         rect_cartePrison.setFill(Color.TRANSPARENT);
         rect_cartePrison.setStroke(Color.BLACK);
-        this.getChildren().add(rect_cartePrison);
-}
+
+        zonePrison.getChildren().add(rect_cartePrison);
+        zonePrison.getChildren().add(textPrison);
+    }
+
+    public void genererRectPrison(){
+
+        nbCartePrison=automate.getJoueurCourant().getNbCartesLibereDePrison();
+
+        //Ajout d'un label "Vous êtes libéré de prison"
+        textPrison = new Label("CARTE \"LIBERE DE PRISON\" : "+nbCartePrison);
+        textPrison.setLayoutX(50);
+        textPrison.setLayoutY(20);
+        textPrison.setFont(Font.font("Verdana", FontWeight.SEMI_BOLD, 12));
+        zonePrison.getChildren().add(textPrison);
+    }
 
 
 
@@ -410,7 +422,7 @@ public class ZonePossessions extends Parent {
         zoneTerrain.getChildren().removeAll(listeTerrainsLabel);
         zoneTerrain.getChildren().removeAll(boutonsTerrains);
         listeTerrains= null ;
-        listeTerrains= new ArrayList<>() ; ;
+        listeTerrains= new ArrayList<>() ;
 
         zoneGare.getChildren().removeAll(listeGaresLabel);
         zoneGare.getChildren().removeAll(boutonsGares);
@@ -418,6 +430,9 @@ public class ZonePossessions extends Parent {
         listeGares = new ArrayList<>() ;
 
         zoneTerrain.getChildren().removeAll(listeCouleur);
+
+        this.zonePrison.getChildren().remove(textPrison);
+
 
     }
 
