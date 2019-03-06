@@ -114,7 +114,6 @@ public class FenetrePrison extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
-
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
 
@@ -177,9 +176,17 @@ public class FenetrePrison extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
-                automate.getJoueurCourant().utiliserUneCartesLibereDePrison();
+
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+
+                if(automate.getJoueurCourant().getNbCartesLibereDePrison()==0)
+                {
+                    fenetrePasCarte(fenetre_actuelle,automate);
+                }else
+                {
+                    automate.getJoueurCourant().utiliserUneCartesLibereDePrison();
+                }
             }
         });
 
@@ -260,5 +267,22 @@ public class FenetrePrison extends Parent {
         nouvelle_fenetre_PasArgent.show();
     }
 
+    public void fenetrePasCarte(Stage fenetre_actuelle,Automate automate)
+    {
+        Stage nouvelle_fenetre_PasCarte = new Stage();
+
+        pasDeCarteLiberation fenetrePasArgent= new pasDeCarteLiberation(nouvelle_fenetre_PasCarte,canvas);
+
+        Scene nouvelle_scene = new  Scene(fenetrePasArgent,650,550);
+
+        nouvelle_fenetre_PasCarte.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_PasCarte.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_PasCarte.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_PasCarte.show();
+    }
 
 }

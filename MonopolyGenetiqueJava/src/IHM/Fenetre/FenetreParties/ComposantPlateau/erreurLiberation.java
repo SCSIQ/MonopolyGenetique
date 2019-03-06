@@ -43,7 +43,6 @@ public class erreurLiberation extends Parent {
 
 
         //LABEL
-
         Label l_PasAssezArgent = new Label("Vous n'avez pas assez d'argent pour payer ! ");
         l_PasAssezArgent.setFont(Font.font("Verdana", FontWeight.NORMAL, 19));
         l_PasAssezArgent.setLayoutX(30);

@@ -29,6 +29,7 @@ public class pasDeCarteLiberation extends Parent {
 
         bt_attention.setLayoutY(10);
         bt_attention.setLayoutX(10);
+        bt_attention.setPrefSize(475,10);
         bt_attention.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         bt_attention.setTextFill(Color.WHITE);
         bt_attention.setBackground(new Background(new BackgroundFill(Color.RED,null,null)));
@@ -45,12 +46,12 @@ public class pasDeCarteLiberation extends Parent {
 
         Label l_PasCarte = new Label("Vous n'avez pas de carte pour vous libérer de prison ! ");
         l_PasCarte.setFont(Font.font("Verdana", FontWeight.NORMAL, 19));
-        l_PasCarte.setLayoutX(30);
-        l_PasCarte.setLayoutY(80);
-        l_PasCarte.setScaleX(2);
-        l_PasCarte.setScaleY(2);
+        l_PasCarte.setLayoutX(80);
+        l_PasCarte.setLayoutY(100);
         l_PasCarte.setTextFill(Color.RED);
         l_PasCarte.setWrapText(true);
+        l_PasCarte.setTextAlignment(TextAlignment.CENTER);
+        l_PasCarte.setMaxWidth(350);
         l_PasCarte.setTextAlignment(TextAlignment.CENTER);
 
         //RECTANGLE
