@@ -115,7 +115,7 @@ public class FenetrePrison extends Parent {
                 detruireCanvas(canvas);
 
                 //on ferme la fenêtre
-                fenetre_actuelle.close();
+                //fenetre_actuelle.close();
 
 
                 if(automate.getJoueurCourant().getSolde()<500)
@@ -178,7 +178,7 @@ public class FenetrePrison extends Parent {
 
 
                 //on ferme la fenêtre
-                fenetre_actuelle.close();
+               // fenetre_actuelle.close();
 
                 if(automate.getJoueurCourant().getNbCartesLibereDePrison()==0)
                 {
