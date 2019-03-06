@@ -21,7 +21,7 @@ import javafx.stage.WindowEvent;
 public class erreurLiberation extends Parent {
 
     //CONSTRUCTEUR
-    public erreurLiberation(Stage fenetre_actuelle, Canvas canvas)
+    public erreurLiberation(Stage fenetre_actuelle, Canvas canvas,Automate automate)
     {
 
         //BOUTONS
@@ -29,6 +29,7 @@ public class erreurLiberation extends Parent {
 
         bt_attention.setLayoutY(10);
         bt_attention.setLayoutX(10);
+        bt_attention.setPrefSize(475,10);
         bt_attention.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
         bt_attention.setTextFill(Color.WHITE);
         bt_attention.setBackground(new Background(new BackgroundFill(Color.RED,null,null)));
@@ -46,9 +47,7 @@ public class erreurLiberation extends Parent {
         Label l_PasAssezArgent = new Label("Vous n'avez pas assez d'argent pour payer ! ");
         l_PasAssezArgent.setFont(Font.font("Verdana", FontWeight.NORMAL, 19));
         l_PasAssezArgent.setLayoutX(30);
-        l_PasAssezArgent.setLayoutY(80);
-        l_PasAssezArgent.setScaleX(2);
-        l_PasAssezArgent.setScaleY(2);
+        l_PasAssezArgent.setLayoutY(100);
         l_PasAssezArgent.setTextFill(Color.RED);
         l_PasAssezArgent.setWrapText(true);
         l_PasAssezArgent.setTextAlignment(TextAlignment.CENTER);

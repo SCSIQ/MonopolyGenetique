@@ -113,20 +113,33 @@ public class FenetrePrison extends Parent {
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
-                automate.getJoueurCourant().DecrementerSolde(500);
-                automate.getJoueurCourant().setEstEnPrison(false);
-                //on remet à jour l'argent du joueur courant
-                zoneJoueur.SupprimerJoueur();
-                zoneJoueur.genereInfosJoueur(automate);
+
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
 
+
+                if(automate.getJoueurCourant().getSolde()<500)
+                {
+
+                    fenetrePasAssezArgent(fenetre_actuelle,automate);
+
+                }else
+                {
+                    automate.getJoueurCourant().DecrementerSolde(500);
+                    automate.getJoueurCourant().setEstEnPrison(false);
+                    //on remet à jour l'argent du joueur courant
+                    zoneJoueur.SupprimerJoueur();
+                    zoneJoueur.genereInfosJoueur(automate);
+                }
+
+
+
                 // si le joueur n'a pas assez d'argent, il perd
-                if(automate.getJoueurCourant().getSolde()< 500)
+                /*if(automate.getJoueurCourant().getSolde()< 500)
                 {
                     fenetreFaillite(fenetre_actuelle, automate,  zoneJoueur, zoneAd) ;
-                }
+                }*/
             }
         });
 /////////////////////////////////////BOUTON RETOUR JEU
@@ -227,6 +240,24 @@ public class FenetrePrison extends Parent {
 
         //POSITION DE LA FENETRE
         nouvelle_fenetre_faillite.show();
+    }
+
+    public void fenetrePasAssezArgent(Stage fenetre_actuelle,Automate automate)
+    {
+        Stage nouvelle_fenetre_PasArgent = new Stage();
+
+        erreurLiberation fenetrePasArgent= new erreurLiberation(nouvelle_fenetre_PasArgent,canvas,automate);
+
+        Scene nouvelle_scene = new  Scene(fenetrePasArgent,650,550);
+
+        nouvelle_fenetre_PasArgent.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_PasArgent.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_PasArgent.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_PasArgent.show();
     }
 
 
