@@ -18,10 +18,10 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class erreurLiberation extends Parent {
+public class pasDeCarteLiberation extends Parent {
 
     //CONSTRUCTEUR
-    public erreurLiberation(Stage fenetre_actuelle, Canvas canvas)
+    public pasDeCarteLiberation(Stage fenetre_actuelle, Canvas canvas)
     {
 
         //BOUTONS
@@ -43,15 +43,15 @@ public class erreurLiberation extends Parent {
 
         //LABEL
 
-        Label l_PasAssezArgent = new Label("Vous n'avez pas assez d'argent pour payer ! ");
-        l_PasAssezArgent.setFont(Font.font("Verdana", FontWeight.NORMAL, 19));
-        l_PasAssezArgent.setLayoutX(30);
-        l_PasAssezArgent.setLayoutY(80);
-        l_PasAssezArgent.setScaleX(2);
-        l_PasAssezArgent.setScaleY(2);
-        l_PasAssezArgent.setTextFill(Color.RED);
-        l_PasAssezArgent.setWrapText(true);
-        l_PasAssezArgent.setTextAlignment(TextAlignment.CENTER);
+        Label l_PasCarte = new Label("Vous n'avez pas de carte pour vous libérer de prison ! ");
+        l_PasCarte.setFont(Font.font("Verdana", FontWeight.NORMAL, 19));
+        l_PasCarte.setLayoutX(30);
+        l_PasCarte.setLayoutY(80);
+        l_PasCarte.setScaleX(2);
+        l_PasCarte.setScaleY(2);
+        l_PasCarte.setTextFill(Color.RED);
+        l_PasCarte.setWrapText(true);
+        l_PasCarte.setTextAlignment(TextAlignment.CENTER);
 
         //RECTANGLE
         Rectangle r_fond = new Rectangle();
@@ -93,7 +93,7 @@ public class erreurLiberation extends Parent {
 /////////AJOUT
         this.getChildren().add(r_fond);
         this.getChildren().add(bt_attention);
-        this.getChildren().add(l_PasAssezArgent);
+        this.getChildren().add(l_PasCarte);
         this.getChildren().add(bt_ok);
 
     }
