@@ -67,7 +67,7 @@ public abstract class InitialisationPartie {
     }
 
     protected void creationListeCartesChances(){
-       this.listeDesCartesChances.add(new ChanceRdvDueDeLaPaie());
+        this.listeDesCartesChances.add(new ChanceRdvDueDeLaPaie());
         this.listeDesCartesChances.add(new ChanceSortirDePrison());
         this.listeDesCartesChances.add(new ChancePerdreArgent());
         this.listeDesCartesChances.add(new ChanceReculerCase());

@@ -164,7 +164,6 @@ public class Jeu extends Parent {
                         poss.afficherTerrain(automate);
                         poss.afficherGare(automate);
                         poss.afficherCompagnie(automate);
-                        poss.genererRectPrison();
 
 
                         fenetreTour(nouvelle_fenetre, automate, pl, poss, zoneAd, zoneJoueur, pion);

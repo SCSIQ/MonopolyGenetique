@@ -23,7 +23,7 @@ public class Joueur {
     private ArrayList<Cases> listeCases;
     private boolean estEnPrison = false;
     private int essaiesPourSortirDePrison = 0;
-    private int nbCartesLibereDePrison = 1; //le nombre de cartes libéré de prison que le joueur possède
+    private int nbCartesLibereDePrison = 0; //le nombre de cartes libéré de prison que le joueur possède
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
         this.solde = 15000; //a revoir car valeur fausse 150000

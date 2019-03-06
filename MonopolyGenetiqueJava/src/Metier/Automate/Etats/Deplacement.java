@@ -85,8 +85,7 @@ public class Deplacement extends Etat{
         {
             estSurChance = true ; //active la transition à l'état faisant piocher les cartes chances
                 Random rand = new Random();
-                //int resRand = rand.nextInt(5);
-                int resRand=1;
+                int resRand = rand.nextInt(5);
 
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);

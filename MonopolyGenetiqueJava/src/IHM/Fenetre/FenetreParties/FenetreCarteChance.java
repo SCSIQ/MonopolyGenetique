@@ -98,7 +98,6 @@ public class FenetreCarteChance extends Parent {
                 zoneJoueur.SupprimerJoueur();
                 zoneJoueur.genereInfosJoueur(automate);
 
-
                 automate.evoluer("");
 
                 //Met à jour les adversaires :
@@ -129,14 +128,9 @@ public class FenetreCarteChance extends Parent {
                 {
                     fenetreCommu(fenetre_actuelle, automate, zoneJoueur, jeu.getZoneAd());
                 }
-
-                jeu.getPoss().effacerPossession();
-                jeu.getPoss().afficherCompagnie(automate);
-                jeu.getPoss().afficherTerrain(automate);
-                jeu.getPoss().afficherGare(automate);
-                jeu.getPoss().genererRectPrison();
             }
         });
+
 
 
         /////////TAILLE MIN ET MAX DE LA FENETRE
