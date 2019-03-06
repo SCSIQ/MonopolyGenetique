@@ -1,6 +1,8 @@
 package Metier.PartiesIA;
 
 import Entites.IA;
+import Metier.Plateau.ListeProprietes.Proprietes;
+import Metier.PartiesIA.PartieIA;
 
 public class CentreDecision {
 
@@ -27,7 +29,6 @@ public class CentreDecision {
         if(this.ia!=null)
         {
 
-
             switch(action)
             {
                 //<editor-fold desc="Case fin de tour">
@@ -36,8 +37,38 @@ public class CentreDecision {
                     break;
                 //</editor-fold>
 
-                //<editor-fold desc="Case propriétés">
+                //<editor-fold desc="Case Achat propriétés">
                 case "propriété":
+
+                    break;
+                //</editor-fold>
+
+                //<editor-fold desc="Case ">
+                case "":
+
+                    break;
+                //</editor-fold>
+
+                //<editor-fold desc="Case ">
+                case "1":
+
+                    break;
+                //</editor-fold>
+
+                //<editor-fold desc="Case ">
+                case "2":
+
+                    break;
+                //</editor-fold>
+
+                //<editor-fold desc="Case ">
+                case "3":
+
+                    break;
+                //</editor-fold>
+
+                //<editor-fold desc="Case passer le tour">
+                    default:
 
                     break;
                 //</editor-fold>
