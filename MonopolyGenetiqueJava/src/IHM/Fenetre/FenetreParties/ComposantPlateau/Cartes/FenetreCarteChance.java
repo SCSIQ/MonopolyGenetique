@@ -114,7 +114,7 @@ public class FenetreCarteChance extends Parent {
                 {
                     pion.entrerDansCase();
                 }
-                if(chance=="Vous reculez de 5 cases")
+                if(chance=="Vous reculez de 6 cases")
                 {
                     pion.entrerDansCase();
                 }
