@@ -85,8 +85,8 @@ public class Deplacement extends Etat{
         {
             estSurChance = true ; //active la transition à l'état faisant piocher les cartes chances
                 Random rand = new Random();
-               // int resRand = rand.nextInt(5);
-                int resRand=3;
+                int resRand = rand.nextInt(5);
+               // int resRand=3;
                 getAutomate().setContenuCartePiochée(getAutomate().getListeDesCartesChances().get(resRand).getTexte());
                 getAutomate().setTirerCarteChance(resRand);
                 System.out.println("        Carte chance : "+getAutomate().getContenuCartePiochée());
@@ -111,8 +111,8 @@ public class Deplacement extends Etat{
     public void agir(String event) {
         Joueur j = super.getListeJoueurs().get(0);
 
-        //int resDes = j.getResLanceDes();
-        int resDes = 7; //POUR IHM
+        int resDes = j.getResLanceDes();
+        //int resDes = 7; //POUR IHM
 
         Cases position = j.getPion().getCase();
 
