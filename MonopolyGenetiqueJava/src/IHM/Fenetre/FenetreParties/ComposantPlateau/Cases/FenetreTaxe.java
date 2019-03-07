@@ -5,6 +5,7 @@ import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.PlateauJeu;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneAdversaires;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneInfoJoueur;
 import IHM.Fenetre.FenetreParties.Jeu;
+import IHM.Fenetre.FenetreParties.PasAssezArgent;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeTaxes.Taxes;
 import javafx.event.ActionEvent;
@@ -98,7 +99,7 @@ public class FenetreTaxe extends Parent {
                 // si le joueur n'a pas assez d'argent, il perd
                 if(automate.getJoueurCourant().getSolde()< ((Taxes)automate.getJoueurCourant().getPion().getCase()).getPrixTaxe())
                 {
-                    fenetreFaillite(fenetre_actuelle, automate,  zoneJoueur, zoneAd) ;
+                    fenetrePasAssezArgent(fenetre_actuelle, automate,  zoneJoueur, zoneAd);
                 }
 
             }
@@ -138,23 +139,23 @@ fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
         this.getChildren().add(canvas);
     }
 
-    public void fenetreFaillite(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+    public void fenetrePasAssezArgent(Stage fenetre_actuelle, Automate automate,  ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
     {
-        //jeu.fenetreNoire();
+        jeu.fenetreNoire();
 
-        Stage nouvelle_fenetre_faillite = new Stage();
+        Stage nouvelle_fenetre_PasAssez = new Stage();
 
-        FenetreFaillite_1 fenetreFaillite= new FenetreFaillite_1(nouvelle_fenetre_faillite,canvas, automate, zoneJoueur, zoneAd, jeu);
+        PasAssezArgent fenetrePasAssez= new PasAssezArgent(automate, nouvelle_fenetre_PasAssez,canvas, zoneJoueur, zoneAd, jeu, true);
 
-        Scene nouvelle_scene = new  Scene(fenetreFaillite,650,550);
+        Scene nouvelle_scene = new  Scene(fenetrePasAssez,650,550);
 
-        nouvelle_fenetre_faillite.setScene(nouvelle_scene);
+        nouvelle_fenetre_PasAssez.setScene(nouvelle_scene);
 
         //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
-        nouvelle_fenetre_faillite.initModality(Modality.WINDOW_MODAL);
-        nouvelle_fenetre_faillite.initOwner(fenetre_actuelle);
+        nouvelle_fenetre_PasAssez.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_PasAssez.initOwner(fenetre_actuelle);
 
         //POSITION DE LA FENETRE
-        nouvelle_fenetre_faillite.show();
+        nouvelle_fenetre_PasAssez.show();
     }
 }

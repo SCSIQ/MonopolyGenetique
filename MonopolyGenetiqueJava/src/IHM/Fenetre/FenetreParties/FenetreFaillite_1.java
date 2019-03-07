@@ -88,7 +88,6 @@ public class FenetreFaillite_1 extends Parent {
         bt_ok.setLayoutY(200);
 
         bt_ok.setPrefSize(150, 10);
-        System.out.println("nombre de joueur encore présents : "+automate.getListeJoueurs().size());
 
         bt_ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override
