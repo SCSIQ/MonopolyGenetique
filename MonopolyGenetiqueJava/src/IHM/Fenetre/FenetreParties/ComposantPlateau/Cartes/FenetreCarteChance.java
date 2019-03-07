@@ -8,6 +8,7 @@ import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneAdversaires;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneInfoJoueur;
 import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZonePossessions;
 import IHM.Fenetre.FenetreParties.Jeu;
+import IHM.Fenetre.FenetreParties.PasAssezArgent;
 import IHM.Fenetre.FenetreParties.Pion;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeCartes.CaisseCommune;
@@ -118,6 +119,12 @@ public class FenetreCarteChance extends Parent {
                 {
                     pion.entrerDansCase();
                 }
+                
+                if(automate.getJoueurCourant().getSolde()<0){
+
+                    fenetrePasAssezArgent(fenetre_actuelle,automate, zoneJoueur, zoneAd);
+                }
+
 
                 if(automate.getJoueurCourant().getPion().getCase() instanceof Proprietes) {
 
@@ -127,9 +134,6 @@ public class FenetreCarteChance extends Parent {
                     } else if (((Proprietes) automate.getJoueurCourant().getPion().getCase()).getProprio() != automate.getJoueurCourant()) {
                         fenetreCasePoss(fenetre_actuelle, automate, zoneJoueur, zoneAd);
                     }
-                } else if(automate.getJoueurCourant().getPion().getCase() instanceof CaisseCommune)
-                {
-                    fenetreCommu(fenetre_actuelle, automate, zoneJoueur, jeu.getZoneAd());
                 }
             }
         });
@@ -209,22 +213,22 @@ public class FenetreCarteChance extends Parent {
             nouvelle_fenetre_poss.show();
         }
 
-        public void fenetreCommu(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
+        public void fenetrePasAssezArgent(Stage fenetre_actuelle, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd)
         {
             jeu.fenetreNoire();
 
-            Stage nouvelle_fenetre_commu = new Stage();
-            FenetreCarteCommu fenetreCommu= new FenetreCarteCommu(nouvelle_fenetre_commu,canvas, automate, zoneJoueur, zoneAd, jeu.getPion());
+            Stage nouvelle_fenetre_pasAssez = new Stage();
+            PasAssezArgent fenetreCommu= new PasAssezArgent(automate, nouvelle_fenetre_pasAssez,canvas);
 
             Scene nouvelle_scene = new  Scene(fenetreCommu,650,550);
 
-            nouvelle_fenetre_commu.setScene(nouvelle_scene);
+            nouvelle_fenetre_pasAssez.setScene(nouvelle_scene);
 
             //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
-            nouvelle_fenetre_commu.initModality(Modality.WINDOW_MODAL);
-            nouvelle_fenetre_commu.initOwner(jeu.getFenetrePropri());
+            nouvelle_fenetre_pasAssez.initModality(Modality.WINDOW_MODAL);
+            nouvelle_fenetre_pasAssez.initOwner(jeu.getFenetrePropri());
 
             //POSITION DE LA FENETRE
-            nouvelle_fenetre_commu.show();
+            nouvelle_fenetre_pasAssez.show();
         }
 }
