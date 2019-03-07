@@ -4,11 +4,15 @@ import Entites.IA;
 import Metier.Automate.Automate;
 import Metier.Plateau.ListeProprietes.Proprietes;
 
+import java.util.HashMap;
+
 public class CentreDecision {
 
     private IA ia;
     private IA iaCourante;//=(IA)this.automate.getJoueurCourant();
     private Automate automate;
+
+    private HashMap<CritereIA, Double> poids = new HashMap<CritereIA,Double>();
 
     public CentreDecision() {
 
@@ -30,6 +34,8 @@ public class CentreDecision {
 
         if(this.ia!=null)
         {
+
+
 
             switch(action)
             {
