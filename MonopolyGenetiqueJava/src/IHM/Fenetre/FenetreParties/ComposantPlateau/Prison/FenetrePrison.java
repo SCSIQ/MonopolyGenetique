@@ -16,7 +16,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
@@ -40,7 +42,7 @@ public class FenetrePrison extends Parent {
         this.zoneAd = zoneAd ;
         this.poss = poss ;
 
-        Label l_Joueur = new Label(automate.getJoueurCourant().getNom());
+        Label l_Joueur = new Label(automate.getJoueurCourant().getNom().toUpperCase());
 
         l_Joueur.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
         l_Joueur.setLayoutX(50);
@@ -61,14 +63,16 @@ public class FenetrePrison extends Parent {
         l_Tour.setScaleY(1.5);
 
 
-        Label l = new Label("VOUS ETES EN PRISON");
+        Button bt_Prison = new Button("VOUS ETES EN PRISON");
 
-        l.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-        l.setLayoutX(230);
-        l.setLayoutY(70);
+        bt_Prison.setLayoutY(40);
+        bt_Prison.setLayoutX(10);
+        bt_Prison.setPrefSize(610,10);
+        bt_Prison.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        bt_Prison.setTextFill(Color.WHITE);
+        bt_Prison.setBackground(new Background(new BackgroundFill(Color.RED,null,null)));
+        bt_Prison.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
 
-        l.setScaleX(3);
-        l.setScaleY(3);
 
 
         Label l_2 = new Label("POUS SORTIR, VOUS AVEZ PLUSIEURS CHOIX" );
@@ -103,6 +107,16 @@ public class FenetrePrison extends Parent {
         l_Note.setScaleX(1.1);
         l_Note.setScaleY(1.1);
 
+        ////////////////////////RECTANGLE
+        Rectangle r_fond = new Rectangle();
+        r_fond.setHeight(350);
+        r_fond.setWidth(610);
+        r_fond.setLayoutX(10);
+        r_fond.setLayoutY(40);
+        r_fond.setStroke(Color.BLACK);
+        r_fond.setStrokeWidth(1);
+        r_fond.setFill(Color.TRANSPARENT);
+
         ////////////////////////////BOUTON
         Button bt_payer= new Button("PAYER 500");
 
@@ -118,9 +132,6 @@ public class FenetrePrison extends Parent {
                 detruireCanvas(canvas);
 
                 //on ferme la fenêtre
-                //fenetre_actuelle.close();
-
-
                 if(automate.getJoueurCourant().getSolde()<500)
                 {
 
@@ -136,6 +147,7 @@ public class FenetrePrison extends Parent {
                     //on remet à jour l'argent du joueur courant
                     zoneJoueur.SupprimerJoueur();
                     zoneJoueur.genereInfosJoueur(automate);
+                    //--> VOIR POUR DEPLACER PION HORS PRISON POUR IHM
                 }
 
             }
@@ -153,12 +165,8 @@ public class FenetrePrison extends Parent {
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
-
-
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
-
-
             }
         });
 ///////////////////////////////////BOUTON CARTE LIBERE
@@ -182,7 +190,10 @@ public class FenetrePrison extends Parent {
                     fenetrePasCarte(fenetre_actuelle,automate);
                 }else
                 {
+                    fenetre_actuelle.close();
+                    fenetreLibere(fenetre_actuelle);
                     automate.getJoueurCourant().utiliserUneCartesLibereDePrison();
+                    //--> VOIR POUR DEPLACER PION HORS PRISON POUR IHM
                 }
             }
         });
@@ -205,10 +216,11 @@ public class FenetrePrison extends Parent {
 
 
 //////////////////////AJOUT
+        this.getChildren().add(r_fond);
         this.getChildren().add(bt_payer);
         this.getChildren().add(bt_lancerDes);
         this.getChildren().add(bt_carte);
-        this.getChildren().add(l);
+        this.getChildren().add(bt_Prison);
         this.getChildren().add(l_2);
         this.getChildren().add(l_Paye);
         this.getChildren().add(l_Carte);
