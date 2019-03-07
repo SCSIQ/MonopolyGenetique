@@ -126,7 +126,7 @@ public class PasAssezArgent extends Parent {
 
         Stage nouvelle_fenetre_Faillite = new Stage();
 
-        FenetreFaillite_1 fenetre= new FenetreFaillite_1(nouvelle_fenetre_Faillite,canvas, automate, zoneJoueur, zoneAd);
+        FenetreFaillite_1 fenetre= new FenetreFaillite_1(nouvelle_fenetre_Faillite,canvas, automate, zoneJoueur, zoneAd, jeu);
 
         Scene nouvelle_scene = new  Scene(fenetre,650,550);
 

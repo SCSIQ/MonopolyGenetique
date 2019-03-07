@@ -31,6 +31,7 @@ public class FenetreTaxe extends Parent {
     private Canvas canvas ;
     private ZoneInfoJoueur zoneJoueur ;
     private ZoneAdversaires zoneAd;
+    private Jeu jeu ;
 
     public FenetreTaxe(Stage fenetre_actuelle, Canvas canvas, Automate automate, PlateauJeu plateauJeu, ZoneInfoJoueur zoneJoueur, Jeu jeu, ZoneAdversaires zoneAd)
     {
@@ -38,6 +39,7 @@ public class FenetreTaxe extends Parent {
         this.canvas = canvas ;
         this.zoneJoueur =zoneJoueur;
         this.zoneAd = zoneAd ;
+        this.jeu = jeu;
 
 
         Button l = new Button(plateauJeu.getListeCases().get(automate.getJoueurCourant().getPion().getCase().getPosition()).getType());
@@ -142,7 +144,7 @@ fenetre_actuelle.setOnCloseRequest(new EventHandler<WindowEvent>() {
 
         Stage nouvelle_fenetre_faillite = new Stage();
 
-        FenetreFaillite_1 fenetreFaillite= new FenetreFaillite_1(nouvelle_fenetre_faillite,canvas, automate, zoneJoueur, zoneAd);
+        FenetreFaillite_1 fenetreFaillite= new FenetreFaillite_1(nouvelle_fenetre_faillite,canvas, automate, zoneJoueur, zoneAd, jeu);
 
         Scene nouvelle_scene = new  Scene(fenetreFaillite,650,550);
 

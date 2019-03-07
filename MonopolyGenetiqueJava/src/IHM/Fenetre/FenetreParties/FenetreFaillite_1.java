@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 
 public class FenetreFaillite_1 extends Parent {
 
-    public FenetreFaillite_1(Stage nouvelle_fenetre_faillite, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd) {
+    public FenetreFaillite_1(Stage nouvelle_fenetre_faillite, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Jeu jeu) {
 
         Button bt_perdu= new Button("PERDU ...");
         bt_perdu.setLayoutY(10);
@@ -86,6 +86,11 @@ public class FenetreFaillite_1 extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
+                zoneAd.SupprimerAdversaire();
+                zoneAd.genererAdversaire(automate, jeu.getFenetrePropri());
+
+                zoneJoueur.SupprimerJoueur();
+                zoneJoueur.genereInfosJoueur(automate);
 
                 //on ferme la fenêtre
                 nouvelle_fenetre_faillite.close();
