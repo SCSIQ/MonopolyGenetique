@@ -119,7 +119,7 @@ public class FenetreCarteChance extends Parent {
                 {
                     pion.entrerDansCase();
                 }
-                
+
                 if(automate.getJoueurCourant().getSolde()<0){
 
                     fenetrePasAssezArgent(fenetre_actuelle,automate, zoneJoueur, zoneAd);

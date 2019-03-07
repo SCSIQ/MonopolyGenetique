@@ -8,7 +8,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
@@ -19,12 +21,23 @@ public class PasAssezArgent extends Parent {
     public PasAssezArgent(Automate automate, Stage fenetre_actuelle, Canvas canvas )
     {
 
+        //BOUTONS
+        Button bt_attention = new Button("ATTENTION");
+
+        bt_attention.setLayoutY(10);
+        bt_attention.setLayoutX(10);
+        bt_attention.setPrefSize(475,10);
+        bt_attention.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        bt_attention.setTextFill(Color.WHITE);
+        bt_attention.setBackground(new Background(new BackgroundFill(Color.RED,null,null)));
+        bt_attention.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,null,null)));
+
         Label l = new Label("Vous n'avez pas assez d'argent !!");
         Button bt_ok = new Button("ok");
 
         l.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-        l.setLayoutX(130);
-        l.setLayoutY(50);
+        l.setLayoutX(135);
+        l.setLayoutY(110);
 
         l.setScaleX(2);
         l.setScaleY(2);
@@ -33,10 +46,20 @@ public class PasAssezArgent extends Parent {
         l.setTextFill(rouge);
 
 
-        bt_ok.setLayoutX(170);
-        bt_ok.setLayoutY(100);
+        bt_ok.setLayoutX(175);
+        bt_ok.setLayoutY(200);
 
         bt_ok.setPrefSize(150, 10);
+
+        //RECTANGLE
+        Rectangle r_fond = new Rectangle();
+        r_fond.setHeight(230);
+        r_fond.setWidth(475);
+        r_fond.setLayoutX(10);
+        r_fond.setLayoutY(10);
+        r_fond.setStroke(Color.BLACK);
+        r_fond.setStrokeWidth(1);
+        r_fond.setFill(Color.TRANSPARENT);
 
         //ACTION BOUTON
         bt_ok.setOnAction(new EventHandler<ActionEvent>() {
@@ -50,18 +73,21 @@ public class PasAssezArgent extends Parent {
             }
         });
 
-        /////////TAILLE MIN ET MAX DE LA FENETRE
-        fenetre_actuelle.setMinHeight(200);
-        fenetre_actuelle.setMinWidth(500);
 
-        fenetre_actuelle.setMaxHeight(200);
-        fenetre_actuelle.setMaxWidth(500);
+/////////TAILLE MIN ET MAX DE LA FENETRE
+        fenetre_actuelle.setMinHeight(300);
+        fenetre_actuelle.setMinWidth(515);
+
+        fenetre_actuelle.setMaxHeight(300);
+        fenetre_actuelle.setMaxWidth(515);
 
 
         //AJOUT
 
+        this.getChildren().add(r_fond);
         this.getChildren().add(l);
         this.getChildren().add(bt_ok);
+        this.getChildren().add(bt_attention);
 
     }
 
