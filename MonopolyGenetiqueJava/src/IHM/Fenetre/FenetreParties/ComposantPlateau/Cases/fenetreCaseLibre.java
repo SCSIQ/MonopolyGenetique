@@ -130,7 +130,7 @@ public class fenetreCaseLibre extends Parent {
                 {
 
                     Stage nouvelle_fenetre_PasAssezArgent= new Stage();
-                    PasAssezArgent fenetre_PasAssezArgent = new PasAssezArgent(automate, nouvelle_fenetre_PasAssezArgent, canvas);
+                    PasAssezArgent fenetre_PasAssezArgent = new PasAssezArgent(automate, nouvelle_fenetre_PasAssezArgent, canvas, zoneJoueur, jeu.getZoneAd(), jeu, false);
 
                     Scene nouvelle_scene = new Scene(fenetre_PasAssezArgent,320,200);
 

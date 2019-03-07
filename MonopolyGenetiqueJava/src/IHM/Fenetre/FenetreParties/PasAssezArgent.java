@@ -1,9 +1,12 @@
 package IHM.Fenetre.FenetreParties;
 
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneAdversaires;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneInfoJoueur;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -13,13 +16,24 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
 public class PasAssezArgent extends Parent {
 
-    public PasAssezArgent(Automate automate, Stage fenetre_actuelle, Canvas canvas )
+    private Canvas canvas;
+    private ZoneInfoJoueur zoneJoueur;
+    private ZoneAdversaires zoneAd;
+    private Jeu jeu;
+
+    //fini permettant de savoir si la partie se fini pour le joueur
+    public PasAssezArgent(Automate automate,Stage fenetre_actuelle, Canvas canvas, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Jeu jeu, boolean fini)
     {
+        this.canvas= canvas;
+        this.zoneAd= zoneAd;
+        this.zoneJoueur = zoneJoueur;
+        this.jeu= jeu;
 
         //BOUTONS
         Button bt_attention = new Button("ATTENTION");
@@ -66,10 +80,17 @@ public class PasAssezArgent extends Parent {
             @Override
             public void handle(ActionEvent event) {
                 //on rend la bonne opacité à la fenêtre
-                detruireCanvas(canvas);
+                detruireCanvas();
 
                 //on ferme la fenêtre
                 fenetre_actuelle.close();
+
+                if(fini==true)
+                {
+                    automate.evoluer("Faillite");
+                    fenetreFaillite(fenetre_actuelle,automate);
+                }
+
             }
         });
 
@@ -91,11 +112,32 @@ public class PasAssezArgent extends Parent {
 
     }
 
-    public void detruireCanvas(Canvas canvas)
+    public void detruireCanvas()
     {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.PAPAYAWHIP);
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
     }
+
+    public void fenetreFaillite(Stage fenetre_actuelle, Automate automate)
+    {
+        jeu.fenetreNoire();
+
+        Stage nouvelle_fenetre_Faillite = new Stage();
+
+        FenetreFaillite_1 fenetre= new FenetreFaillite_1(nouvelle_fenetre_Faillite,canvas, automate, zoneJoueur, zoneAd);
+
+        Scene nouvelle_scene = new  Scene(fenetre,650,550);
+
+        nouvelle_fenetre_Faillite.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_Faillite.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_Faillite.initOwner(jeu.getFenetrePropri());
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_Faillite.show();
+    }
+
 }

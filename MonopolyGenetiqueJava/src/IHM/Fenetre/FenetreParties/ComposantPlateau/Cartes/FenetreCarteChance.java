@@ -98,9 +98,7 @@ public class FenetreCarteChance extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
-                //on remet à jour l'argent du joueur courant
-                zoneJoueur.SupprimerJoueur();
-                zoneJoueur.genereInfosJoueur(automate);
+
 
                 automate.evoluer("");
 
@@ -119,6 +117,10 @@ public class FenetreCarteChance extends Parent {
                 {
                     pion.entrerDansCase();
                 }
+
+                //on remet à jour l'argent du joueur courant
+                zoneJoueur.SupprimerJoueur();
+                zoneJoueur.genereInfosJoueur(automate);
 
                 if(automate.getJoueurCourant().getSolde()<0){
 
@@ -218,7 +220,7 @@ public class FenetreCarteChance extends Parent {
             jeu.fenetreNoire();
 
             Stage nouvelle_fenetre_pasAssez = new Stage();
-            PasAssezArgent fenetreCommu= new PasAssezArgent(automate, nouvelle_fenetre_pasAssez,canvas);
+            PasAssezArgent fenetreCommu= new PasAssezArgent(automate, nouvelle_fenetre_pasAssez,canvas, zoneJoueur, zoneAd, jeu,true);
 
             Scene nouvelle_scene = new  Scene(fenetreCommu,650,550);
 
