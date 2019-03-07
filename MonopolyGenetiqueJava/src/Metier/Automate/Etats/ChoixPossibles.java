@@ -51,11 +51,11 @@ public class ChoixPossibles extends Etat {
         {
             return new VendrePropriete(super.getAutomate(), super.getListeJoueurs());
         }
-        else if(this.doitTirerCarteChance==true)
+        else if(this.doitTirerCarteChance==true && event!="Faillite")
         {
             return new PiocherCarteChance(super.getAutomate(), super.getListeJoueurs());
         }
-        else if(this.doitTirerCarteCaisseCommune==true)
+        else if(this.doitTirerCarteCaisseCommune==true && event!="Faillite")
         {
             return new PiocherCarteCaisseComm(super.getAutomate(), super.getListeJoueurs());
         }

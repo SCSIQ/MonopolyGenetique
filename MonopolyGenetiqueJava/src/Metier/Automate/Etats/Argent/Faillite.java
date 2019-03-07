@@ -19,6 +19,7 @@ public class Faillite extends Etat {
     public void agir(String event) {
         Joueur joueurCourant = super.getAutomate().getJoueurCourant();
         ////supprime le joueur courant
+        getListeJoueurs().remove(0);
         getAutomate().getListeJoueurs().remove(joueurCourant);
     }
 
