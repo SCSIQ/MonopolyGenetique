@@ -1,6 +1,6 @@
 package IHM.Plateau.LieuPublic;
 
-import IHM.Plateau.Chance;
+import IHM.Plateau.CartePiocher.Chance;
 import Metier.Plateau.Cases;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

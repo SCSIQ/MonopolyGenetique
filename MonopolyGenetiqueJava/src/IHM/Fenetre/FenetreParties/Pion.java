@@ -1,7 +1,6 @@
 package IHM.Fenetre.FenetreParties;
 
-import Entites.Joueur;
-import IHM.Fenetre.FenetreParties.ComposantPlateau.PlateauJeu;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.PlateauJeu;
 import Metier.Automate.Automate;
 import javafx.scene.Parent;
 import javafx.scene.layout.Pane;

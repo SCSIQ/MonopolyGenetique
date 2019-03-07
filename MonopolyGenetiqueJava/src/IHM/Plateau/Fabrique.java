@@ -1,12 +1,12 @@
 package IHM.Plateau;
 
-import IHM.Plateau.CartePiocher.CaisseCommune;
-
 import IHM.Plateau.LieuPublic.*;
 import IHM.Plateau.LieuPublic.Gare.GareLyon;
 import IHM.Plateau.LieuPublic.Gare.GareMontparnasse;
 import IHM.Plateau.LieuPublic.Gare.GareNord;
 import IHM.Plateau.LieuPublic.Gare.GareSaintLazare;
+import IHM.Plateau.Taxe.Impot;
+import IHM.Plateau.Taxe.TaxeDeLuxe;
 import IHM.Plateau.Terrains.BleuCiel.CaseCourcelles;
 import IHM.Plateau.Terrains.BleuCiel.CaseRepublique;
 import IHM.Plateau.Terrains.BleuCiel.CaseVaugirard;

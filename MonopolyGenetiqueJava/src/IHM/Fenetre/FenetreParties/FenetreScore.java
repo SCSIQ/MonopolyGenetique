@@ -1,6 +1,5 @@
 package IHM.Fenetre.FenetreParties;
 
-import IHM.Fenetre.FenetreParties.ComposantPlateau.FenetreGagne;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

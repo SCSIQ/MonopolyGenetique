@@ -1,6 +1,14 @@
 package IHM.Fenetre.FenetreParties;
 
-import IHM.Fenetre.FenetreParties.ComposantPlateau.*;
+import IHM.Fenetre.FenetreParties.Tours.FenetreToursFinis;
+import IHM.Fenetre.FenetreParties.Tours.tourSuivant;
+import IHM.Fenetre.FenetreParties.Tours.tourSuivantErreur;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.PlateauJeu;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneAdversaires;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZoneInfoJoueur;
+import IHM.Fenetre.FenetreParties.ComposantPlateau.Zones_Jeu.ZonePossessions;
+import IHM.Fenetre.FenetreParties.Des.DejaLanceDes;
+import IHM.Fenetre.FenetreParties.Des.LancerDe;
 import IHM.Fenetre.FentreMenuPrincipal.MenuJeu;
 import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
@@ -9,14 +17,10 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.Parent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 
 public class Jeu extends Parent {
 
