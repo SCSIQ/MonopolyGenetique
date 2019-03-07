@@ -26,7 +26,7 @@ public class Joueur {
     private int nbCartesLibereDePrison = 0; //le nombre de cartes libéré de prison que le joueur possède
 
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
-        this.solde = 400; //a revoir car valeur fausse 150000
+        this.solde = 500; //a revoir car valeur fausse 150000
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
         this.scoreJoueur = new Score();

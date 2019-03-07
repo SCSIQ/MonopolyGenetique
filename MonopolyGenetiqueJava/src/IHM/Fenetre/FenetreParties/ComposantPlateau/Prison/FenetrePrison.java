@@ -128,6 +128,9 @@ public class FenetrePrison extends Parent {
 
                 }else
                 {
+                    fenetre_actuelle.close();
+                    fenetreLibere(fenetre_actuelle);
+
                     automate.getJoueurCourant().DecrementerSolde(500);
                     automate.getJoueurCourant().setEstEnPrison(false);
                     //on remet à jour l'argent du joueur courant
@@ -172,9 +175,7 @@ public class FenetrePrison extends Parent {
                 //on rend la bonne opacité à la fenêtre
                 detruireCanvas(canvas);
 
-
                 //on ferme la fenêtre
-               // fenetre_actuelle.close();
 
                 if(automate.getJoueurCourant().getNbCartesLibereDePrison()==0)
                 {
@@ -262,4 +263,21 @@ public class FenetrePrison extends Parent {
         nouvelle_fenetre_PasCarte.show();
     }
 
+    public void fenetreLibere(Stage fenetre_actuelle)
+    {
+        Stage nouvelle_fenetre_Libere = new Stage();
+
+        liberePrison fenetreLibere= new liberePrison(nouvelle_fenetre_Libere,canvas);
+
+        Scene nouvelle_scene = new  Scene(fenetreLibere,650,550);
+
+        nouvelle_fenetre_Libere.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_Libere.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_Libere.initOwner(fenetre_actuelle);
+
+        //POSITION DE LA FENETRE
+        nouvelle_fenetre_Libere.show();
+    }
 }
