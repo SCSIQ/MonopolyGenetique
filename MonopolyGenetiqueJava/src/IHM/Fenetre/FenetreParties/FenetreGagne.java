@@ -51,7 +51,7 @@ public class FenetreGagne extends Parent {
             // j'ai mis par default que le joueur courant gagnait
         Label l_contenu = new Label(automate.getListeJoueurs().get(0).getNom()+" a gagné !") ;
         l_contenu.setLayoutX(148);
-        l_contenu.setLayoutY(125);
+        l_contenu.setLayoutY(115);
         l_contenu.setMaxWidth(300);
         l_contenu.setWrapText(true);
         l_contenu.setTextAlignment(TextAlignment.CENTER);

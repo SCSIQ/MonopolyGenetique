@@ -7,6 +7,7 @@ import Metier.Automate.Automate;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -17,11 +18,20 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class FenetreFaillite_1 extends Parent {
 
+    private Jeu jeu;
+    private  Automate automate;
+
     public FenetreFaillite_1(Stage nouvelle_fenetre_faillite, Canvas canvas, Automate automate, ZoneInfoJoueur zoneJoueur, ZoneAdversaires zoneAd, Jeu jeu) {
+
+        //initialisation
+        this.jeu= jeu;
+        this.automate= automate;
+
 
         Button bt_perdu= new Button("PERDU ...");
         bt_perdu.setLayoutY(10);
@@ -92,6 +102,12 @@ public class FenetreFaillite_1 extends Parent {
                 zoneJoueur.SupprimerJoueur();
                 zoneJoueur.genereInfosJoueur(automate);
 
+                //S'il ne reste plus qu'un joueur dans le jeu
+                if(automate.getListeJoueurs().size()==1)
+                {
+                    fenetreGagne(jeu.getFenetrePropri());
+                }
+
                 //on ferme la fenêtre
                 nouvelle_fenetre_faillite.close();
             }
@@ -121,4 +137,22 @@ public class FenetreFaillite_1 extends Parent {
         canvas.setOpacity(0.5);
         this.getChildren().add(canvas);
     }
+
+    public void fenetreGagne(Stage fenetre_actuelle)
+    {
+        jeu.fenetreNoire();
+        Stage nouvelle_fenetre_gagne = new Stage();
+        FenetreGagne fenetreGagner = new FenetreGagne(nouvelle_fenetre_gagne, automate, jeu);
+
+        Scene nouvelle_scene = new  Scene(fenetreGagner,500,600);
+
+        nouvelle_fenetre_gagne.setScene(nouvelle_scene);
+
+        //PRECISER QU'IL S'AGIT D'UNE FENETRE MODALE
+        nouvelle_fenetre_gagne.initModality(Modality.WINDOW_MODAL);
+        nouvelle_fenetre_gagne.initOwner(fenetre_actuelle);
+
+        nouvelle_fenetre_gagne.show();
+    }
+
 }
