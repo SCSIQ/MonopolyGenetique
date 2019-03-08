@@ -73,11 +73,10 @@ public class IaVSia extends Parent {
             //création des combo box
         ComboBox nb_ia = new ComboBox();
         nb_ia.getItems().addAll(
-                "20",
-                "40",
-                "60",
-                "80",
-                "100"
+                "2",
+                "3",
+                "4",
+                "5"
         );
         ComboBox nb_mutations= new ComboBox();
         nb_mutations.getItems().addAll(
@@ -144,18 +143,6 @@ public class IaVSia extends Parent {
             @Override
             public void handle(ActionEvent event) {
 
-                /*
-                //ici ajouter lancement automate avec en param le joueur
-                Joueur j = new Joueur(null, null);
-                ArrayList<Joueur> listeJoueurs = new ArrayList<>();
-                listeJoueurs.add(j);
-                /*for(int i = 0; i<Integer.valueOf((String) nb_adversaires.getValue()) ; i++){
-                    listeJoueurs.add(new Joueur());
-                }
-                System.out.println("Nombre de joueurs : "+listeJoueurs.size());
-                Automate automate = new Automate(listeJoueurs);
-                */
-
                 //lancement du tournoi
                 System.out.println("\n-------------------------------------------------------------------------------");
                 System.out.println("    DEBUT DU TOURNOI");
@@ -165,25 +152,14 @@ public class IaVSia extends Parent {
                 System.out.println("Nombre de mutations à effectuer : "+Integer.valueOf((String) nb_mutations.getValue()));
                 System.out.println("Nombre de tours max par partie : "+Integer.valueOf((String) nb_tours.getValue()));
 
-                Tournoi tournoi = new Tournoi(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
-                tournoi.lancerLeTournoi();
+                InitialisationPartieIA partieIA= new InitialisationPartieIA(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
+                partieIA.automatePourIaInitialisation();
 
                 System.out.println("\n-------------------------------------------------------------------------------");
                 System.out.println("    FIN DU TOURNOI");
                 System.out.println("-------------------------------------------------------------------------------\n");
                 //fin lancement du tournoi
 
-                /*
-                Color couleur= Color.BLACK;
-                Stage nouvelle_fenetre_plateau = new Stage();
-                Jeu fenentre_jeu = new Jeu(primaryStage,nouvelle_fenetre_plateau,couleur,automate) ;
-                Scene nouvelle_scene = new Scene(fenentre_jeu,1275,710);
-
-                nouvelle_fenetre_plateau.setScene(nouvelle_scene);
-                //on montre la nouvelle fenêtre
-                nouvelle_fenetre_plateau.show();
-                nouvelle_fenetre.close();
-                */
             }
         });
 

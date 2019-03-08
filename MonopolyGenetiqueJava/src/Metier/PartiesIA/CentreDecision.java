@@ -12,7 +12,6 @@ public class CentreDecision {
     private IA iaCourante;//=(IA)this.automate.getJoueurCourant();
     private Automate automate;
 
-    private HashMap<CritereIA, Double> poids = new HashMap<CritereIA,Double>();
 
     public CentreDecision() {
 

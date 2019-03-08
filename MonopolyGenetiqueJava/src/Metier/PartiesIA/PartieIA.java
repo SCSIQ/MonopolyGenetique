@@ -13,20 +13,29 @@ public class PartieIA {
 
     private Automate automate;
     private ArrayList<Joueur> listeIA;
-    private InitialisationPartieIA initialisationPartieIA = new InitialisationPartieIA();
+    private InitialisationPartieIA initialisationPartieIA;
+    private int nbAI=0;
+    private int nbMutations;
+    private int nbToursMax=0;
 
-    public PartieIA(int nbAI, int nbToursMax) {
+    public PartieIA(int nbAI,int nbMutations, int nbToursMax) {
+
+        this.nbAI=nbAI;
+        this.nbMutations=nbMutations;
+        this.nbToursMax=nbToursMax;
+
+        initialisationPartieIA = new InitialisationPartieIA(nbAI,nbMutations,nbToursMax);
         ArrayList<Color> listeCouleurs = new ArrayList<>();
         for(int i=0 ; i<nbAI ; i++){
             listeCouleurs.add(couleurAdversaire(i));
         }
-        this.listeIA = this.initialisationPartieIA.creationListeIA(nbAI, listeCouleurs);
+        this.listeIA = initialisationPartieIA.getListeDesIA();
     }
 
     public void lancerPartie(int tourTotal){
 
         System.out.println("\n    DEBUT DE LA PARTIE\n");
-        this.automate = this.initialisationPartieIA.automatePourIaInitialisation(this.listeIA,tourTotal);
+        this.automate = this.initialisationPartieIA.automatePourIaInitialisation();
 
         automate.setNombreTourTotal(tourTotal);
         
@@ -40,17 +49,18 @@ public class PartieIA {
                 //cd.priseDeDecision();
 
                 //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
-                /*
+
                 if(iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null){
                     this.automate.evoluer("acheterPropriete");
                 }
-                */
+
 
             }while (iaCourante.getaLanceDes()==false); //si l'IA fait un double, elle rejoue
                 this.automate.evoluer("tourSuivant");
         }
 
-
+        Tournoi tournoi = new Tournoi(nbAI,nbMutations,nbToursMax);
+        tournoi.lancerLeTournoi();
     }
 
     private Color couleurAdversaire(int i)
