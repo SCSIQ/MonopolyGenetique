@@ -51,7 +51,11 @@ public class PartieIA {
                 //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
 
                 if(iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null){
-                    this.automate.evoluer("acheterPropriete");
+                    boolean res = iaCourante.AssezArgent();
+                    if(res)
+                    {
+                        this.automate.evoluer("acheterPropriete");
+                    }
                 }
 
 
@@ -59,8 +63,7 @@ public class PartieIA {
                 this.automate.evoluer("tourSuivant");
         }
 
-        Tournoi tournoi = new Tournoi(nbAI,nbMutations,nbToursMax);
-        tournoi.lancerLeTournoi();
+
     }
 
     private Color couleurAdversaire(int i)
