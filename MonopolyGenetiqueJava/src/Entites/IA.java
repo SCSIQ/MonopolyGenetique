@@ -81,6 +81,15 @@ public class IA extends Joueur {
      */
     public void SortirPrison()
     {
+        //si elle est en prison
+        if(this.getEstEnPrison()==true)
+        {
+            //si elle a une carte libéré de prison
+            if(this.getNbCartesLibereDePrison()>0)
+            {
+                
+            }
+        }
 
     }
 
