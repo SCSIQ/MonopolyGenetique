@@ -81,16 +81,27 @@ public class IA extends Joueur {
 
     }
 
-    public void CalculSituation()
+    public boolean CalculSituation()
     {
         this.initialisationHashMap();
+        double sommePoids= 0.0;
         double note =0.0;
+        boolean noteBonne=false;
 
-        for (CritereIA i : poids.keySet()) {
+        boolean assezArgent = this.AssezArgent();
 
-            note+=poids.get(i);
+        if(assezArgent)
+        {
+           note+= poids.get(argent);
         }
 
+
+        if(note>0.5)
+        {
+            noteBonne=true;
+        }
+
+        return noteBonne;
     }
 
 
