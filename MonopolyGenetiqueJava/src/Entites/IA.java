@@ -18,6 +18,7 @@ public class IA extends Joueur {
 
     private CentreDecision DM;
     private HashMap<CritereIA, Double> poids = new HashMap<CritereIA,Double>();
+    private ArrayList<Double> listePoids =new ArrayList<>();
 
     //CONSTRUCTEURS
     public IA(ArrayList<Cases> listeCases, Color couleur, CentreDecision DM) {
@@ -48,6 +49,16 @@ public class IA extends Joueur {
         poids.put(cartesCouleurs2, 0.8);
     }
 
+    public double sommePoids()
+    {
+        double s=0;
+        for(CritereIA i : poids.keySet())
+        {
+            s+=poids.get(i);
+        }
+
+        return s;
+    }
 
     /**
      * Permet de savoir si IA a assez d'argent pour acheter
@@ -84,7 +95,7 @@ public class IA extends Joueur {
     public boolean CalculSituation()
     {
         this.initialisationHashMap();
-        double sommePoids= 0.0;
+        double sommePoids = this.sommePoids();
         double note =0.0;
         boolean noteBonne=false;
 
@@ -95,6 +106,7 @@ public class IA extends Joueur {
            note+= poids.get(argent);
         }
 
+        note+=note/sommePoids;
 
         if(note>0.5)
         {

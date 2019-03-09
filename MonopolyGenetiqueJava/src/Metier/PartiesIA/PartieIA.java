@@ -51,7 +51,7 @@ public class PartieIA {
                 //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
 
                 if(iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null){
-                    boolean res = iaCourante.AssezArgent();
+                    boolean res = iaCourante.CalculSituation();
                     if(res)
                     {
                         this.automate.evoluer("acheterPropriete");
