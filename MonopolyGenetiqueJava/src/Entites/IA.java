@@ -62,15 +62,15 @@ public class IA extends Joueur {
 
     /**
      * Permet de savoir si IA a assez d'argent pour acheter
-     * @return
+     * @return 1 = assez argent  et 0= pas assez d'argent
      */
-    public boolean AssezArgent()
+    public int AssezArgent()
     {
-        boolean res =true;
+        int res =1;
 
         //Si l'IA n'a pas le double de la propriété qu'elle veut acheter
         if(this.getSolde()<((Proprietes)this.getPion().getCase()).getPrix()*2) {
-            res = false;
+            res = 0;
         }
 
         return res;
@@ -87,7 +87,7 @@ public class IA extends Joueur {
             //si elle a une carte libéré de prison
             if(this.getNbCartesLibereDePrison()>0)
             {
-                
+
             }
         }
 
@@ -108,12 +108,8 @@ public class IA extends Joueur {
         double note =0.0;
         boolean noteBonne=false;
 
-        boolean assezArgent = this.AssezArgent();
+        note+= poids.get(argent)*this.AssezArgent();
 
-        if(assezArgent)
-        {
-           note+= poids.get(argent);
-        }
 
         note+=note/sommePoids;
 
