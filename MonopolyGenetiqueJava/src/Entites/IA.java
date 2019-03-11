@@ -45,8 +45,9 @@ public class IA extends Joueur {
     public void initialisationHashMap()
     {
         poids.put(argent, 0.7);
-        poids.put(cartesCouleurs2, 0.8);
-        poids.put(terrainComplet, 0.6);
+        /*poids.put(cartesCouleurs2, 0.8);
+        poids.put(terrainComplet, 0.6);*/
+        poids.put(sortirPrison,0.8);
     }
 
     public double sommePoids()
@@ -79,17 +80,27 @@ public class IA extends Joueur {
     /**
      *
      */
-    public void SortirPrison()
+    public int SortirPrison()
     {
+        boolean res =false;
+        int ires=0;
+
         //si elle est en prison
         if(this.getEstEnPrison()==true)
         {
-            //si elle a une carte libéré de prison
-            if(this.getNbCartesLibereDePrison()>0)
-            {
+            res = this.utiliserUneCartesLibereDePrison();
 
+            if(res==true)
+            {
+                ires=1;
+            }
+            else if(this.getSolde()>500*2)
+            {
+                ires=1;
             }
         }
+
+          return ires;
 
     }
 
@@ -108,14 +119,25 @@ public class IA extends Joueur {
         double note =0.0;
 
 
-        note+= poids.get(argent)*this.AssezArgent();
+        note+= poids.get(argent)*this.AssezArgent()+poids.get(sortirPrison)*this.SortirPrison();
 
 
         note+=note/sommePoids;
 
         if(note>0.5)
         {
-            automate.evoluer("acheterPropriete");
+            System.out.println("coucou");
+            if(this.AssezArgent()==1)
+            {
+                System.out.println("je suis là");
+                automate.evoluer("acheterPropriete");
+            }
+            if(this.SortirPrison()==1)
+            {
+                System.out.println("lalalère");
+               this.setEstEnPrison(false);
+            }
+
         }
 
     }

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class Joueur {
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////ATTRIBUTS
     private String nom; // nom du joueur
-    //private Color couleur; //couleur du joueur
     private int solde ; // montant de l'argent possédé
     private Pion pion ;
     private Score scoreJoueur; //Score du joueur
@@ -25,19 +25,19 @@ public class Joueur {
     private int essaiesPourSortirDePrison = 0;
     private int nbCartesLibereDePrison = 0; //le nombre de cartes libéré de prison que le joueur possède
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////CONSTRUCTEUR
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
-        this.solde = 500; //a revoir car valeur fausse 150000
+        this.solde = 2500;
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
         this.scoreJoueur = new Score();
-        //this.couleur = couleur;
     }
 
     public Joueur() {
     }
 
 
-    //------------------------------------------------------------------------------------------------------------------
+////////////------------------------------------------------------------------------------------------------------------------
 
     /**
      * cette méthode est temporaire, elle permet simplement de tester le code métier

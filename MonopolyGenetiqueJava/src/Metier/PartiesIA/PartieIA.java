@@ -39,9 +39,6 @@ public class PartieIA {
 
         automate.setNombreTourTotal(tourTotal);
 
-
-        CentreDecision cd = new CentreDecision();
-        //IA iaCourante = (IA) this.automate.getJoueurCourant();
         for(int j=1;j<=tourTotal;j++)
         {
 
@@ -59,10 +56,6 @@ public class PartieIA {
                             iaCourante.CalculSituation(automate);
                         }
 
-                        /*if(iaCourante.getSolde()<0)
-                        {
-                            automate.evoluer("Faillite");
-                        }*/
 
                     }while (iaCourante.getaLanceDes() == false); //si l'IA fait un double, elle rejoue
                         this.automate.evoluer("tourSuivant");

@@ -1,7 +1,9 @@
 package Metier.PartiesIA;
 
 public enum CritereIA {
-    cartesCouleurs2,
+
+    sortirPrison,
     argent,
-    terrainComplet
+    /*cartesCouleurs2,
+    terrainComplet*/
 }
