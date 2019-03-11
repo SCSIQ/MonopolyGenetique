@@ -64,6 +64,7 @@ public class Automate {
         System.out.println(this.etatCourant.toString()+" - - - - - - - - - - ->");
         this.etatCourant.agir(event);
         this.etatCourant = this.etatCourant.transition(event);
+
         System.out.println("- - - - - - - - - - - - - - - - - - - -> "+this.etatCourant.toString());
         if(automatedEvolution == true){
             automatedEvolution = false;

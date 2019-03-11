@@ -32,39 +32,50 @@ public class PartieIA {
         this.listeIA = initialisationPartieIA.getListeDesIA();
     }
 
-    public void lancerPartie(int tourTotal){
+    public void lancerPartie(int tourTotal) {
 
         System.out.println("\n    DEBUT DE LA PARTIE\n");
         this.automate = this.initialisationPartieIA.automatePourIaInitialisation();
 
         automate.setNombreTourTotal(tourTotal);
-        
-        IA iaCourante = (IA)this.automate.getJoueurCourant();
+
+
         CentreDecision cd = new CentreDecision();
+        //IA iaCourante = (IA) this.automate.getJoueurCourant();
+        for(int j=0;j<=tourTotal;j++)
+        {
+            System.out.println("\n                                                                      TOUR : "+automate.getNumTour());
 
-        for (int i = 0; i < 8; i++) {
-            do{
-                this.automate.evoluer("lancerDes"); //l'IA lance les dès
+            for (int i = 0; i < nbAI; i++) {
 
-                //cd.priseDeDecision();
+                    IA iaCourante = (IA) this.automate.getJoueurCourant();
 
-                //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
 
-                if(iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null){
-                    boolean res = iaCourante.CalculSituation();
-                    if(res)
+                    do {
+                        this.automate.evoluer("lancerDes"); //l'IA lance les dès
+
+                        //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
+
+                        if (iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null) {
+                            iaCourante.CalculSituation(automate);
+                        }
+
+                        if(iaCourante.getSolde()<0)
+                        {
+                            automate.evoluer("Faillite");
+                        }
+
+                    }while (iaCourante.getaLanceDes() == false); //si l'IA fait un double, elle rejoue
+                        this.automate.evoluer("tourSuivant");
+
+                    if(automate.getListeJoueurs().size() == 1)
                     {
-                        this.automate.evoluer("acheterPropriete");
+                        automate.evoluer("FinPartie");
                     }
                 }
-
-
-            }while (iaCourante.getaLanceDes()==false); //si l'IA fait un double, elle rejoue
-                this.automate.evoluer("tourSuivant");
-        }
-
-
+            }
     }
+
 
     private Color couleurAdversaire(int i)
     {

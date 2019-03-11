@@ -1,5 +1,6 @@
 package Entites;
 
+import Metier.Automate.Automate;
 import Metier.PartiesIA.CentreDecision;
 import Metier.PartiesIA.CritereIA;
 import Metier.Plateau.Cases;
@@ -11,14 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import static Metier.PartiesIA.CritereIA.argent;
-import static Metier.PartiesIA.CritereIA.cartesCouleurs2;
+import static Metier.PartiesIA.CritereIA.*;
 
 public class IA extends Joueur {
 
     private CentreDecision DM;
     private HashMap<CritereIA, Double> poids = new HashMap<CritereIA,Double>();
-    private ArrayList<Double> listePoids =new ArrayList<>();
 
     //CONSTRUCTEURS
     public IA(ArrayList<Cases> listeCases, Color couleur, CentreDecision DM) {
@@ -47,6 +46,7 @@ public class IA extends Joueur {
     {
         poids.put(argent, 0.7);
         poids.put(cartesCouleurs2, 0.8);
+        poids.put(terrainComplet, 0.6);
     }
 
     public double sommePoids()
@@ -94,19 +94,19 @@ public class IA extends Joueur {
     }
 
     /**
-     *
+     * DOit avoir tous les terrains de la même couleurs
      */
     public void ConstruireMaisons()
     {
 
     }
 
-    public boolean CalculSituation()
+    public void CalculSituation(Automate automate)
     {
         this.initialisationHashMap();
         double sommePoids = this.sommePoids();
         double note =0.0;
-        boolean noteBonne=false;
+
 
         note+= poids.get(argent)*this.AssezArgent();
 
@@ -115,10 +115,9 @@ public class IA extends Joueur {
 
         if(note>0.5)
         {
-            noteBonne=true;
+            automate.evoluer("acheterPropriete");
         }
 
-        return noteBonne;
     }
 
 

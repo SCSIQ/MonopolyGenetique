@@ -19,7 +19,7 @@ public class Tournoi {
         //crée toutes les parties
         //for (int j = 0; j < this.nbIA/4; j++) {
         for (int j = 0; j < 1; j++) {
-            this.listeParties.add(new PartieIA(4,nbMutations, this.nbToursMax));
+            this.listeParties.add(new PartieIA(nbAI,nbMutations, this.nbToursMax));
         }
     }
 
