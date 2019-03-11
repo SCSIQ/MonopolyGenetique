@@ -4,6 +4,7 @@ import Entites.Joueur;
 import Metier.Automate.Automate;
 import Metier.Automate.Etats.ChoixPossibles;
 import Metier.Automate.Etats.Etat;
+import Metier.Automate.Etats.FinPartie;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,16 @@ public class Faillite extends Etat {
 
     @Override
     public Etat transition(String event) {
-        return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
+
+        if(getAutomate().getListeJoueurs().size()>1)
+        {
+            return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());
+        }else
+        {
+            return new FinPartie(super.getAutomate(), super.getListeJoueurs());
+        }
+
+
     }
 
     @Override

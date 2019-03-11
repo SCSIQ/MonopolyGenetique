@@ -61,15 +61,29 @@ public class Automate {
     //cette méthode est appellée soit depuis l'IHM pour une évolutions lors d'un event,
     //soit par un Etat pour une évolution automatique
     public void evoluer(String event){
-        System.out.println(this.etatCourant.toString()+" - - - - - - - - - - ->");
-        this.etatCourant.agir(event);
-        this.etatCourant = this.etatCourant.transition(event);
+        if(this.etatCourant.toString()!="merde")
+        {
+            System.out.println(this.etatCourant.toString()+" - - - - - - - - - - ->");
+            this.etatCourant.agir(event);
 
-        System.out.println("- - - - - - - - - - - - - - - - - - - -> "+this.etatCourant.toString());
-        if(automatedEvolution == true){
-            automatedEvolution = false;
-            this.evoluer(event);
+            this.etatCourant = this.etatCourant.transition(event);
+            System.out.println("- - - - - - - - - - - - - - - - - - - -> "+this.etatCourant.toString());
+
+
+            if(automatedEvolution == true){
+                automatedEvolution = false;
+                this.evoluer(event);
+            }
         }
+        else
+        {
+            automatedEvolution = true;
+            System.out.println("- - - - - - - - - - - - - - - - - - - -> FINI");
+
+
+        }
+
+
     }
 
     //variable permettant de demander à l'automate d'évoluer une fois de plus de façon automatique

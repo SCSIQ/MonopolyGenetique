@@ -62,9 +62,14 @@ public class ChoixPossibles extends Etat {
         else if (event=="Faillite")
         {
             return new Faillite(super.getAutomate(), super.getListeJoueurs());
-        } else if (event=="FinPartie")
+        }
+        else if (event=="FinPartie")
         {
             return new FinPartie(super.getAutomate(), super.getListeJoueurs());
+        }
+        else if (event=="Score Partie")
+        {
+            return null;
         }
         else{
             return new ChoixPossibles(super.getAutomate(), super.getListeJoueurs());

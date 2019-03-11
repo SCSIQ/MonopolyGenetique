@@ -8,10 +8,13 @@ import java.util.ArrayList;
 
 public class DebutTour extends Etat{
 
+    private Automate automate;
+
     public DebutTour(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
         //permet de demander à l'automate d'évoluer une fois du plus de façon automatique
         super.getAutomate().setAutomatedEvolution(true);
+        this.automate=automate;
     }
 
     @Override
@@ -20,7 +23,9 @@ public class DebutTour extends Etat{
         Joueur j = super.getListeJoueurs().get(0);
 
         if(j instanceof IA){
+            System.out.println("    TOUR : "+automate.getNumTour());
             System.out.println("    Joueur IA : "+j.getNom());
+            System.out.println("    SOLDE  "+j.getSolde());
         }
         else
         {

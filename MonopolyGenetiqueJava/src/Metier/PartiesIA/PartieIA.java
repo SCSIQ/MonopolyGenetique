@@ -42,11 +42,10 @@ public class PartieIA {
 
         CentreDecision cd = new CentreDecision();
         //IA iaCourante = (IA) this.automate.getJoueurCourant();
-        for(int j=0;j<=tourTotal;j++)
+        for(int j=1;j<=tourTotal;j++)
         {
-            System.out.println("\n                                                                      TOUR : "+automate.getNumTour());
 
-            for (int i = 0; i < nbAI; i++) {
+            for (int i = 0; i < automate.getListeJoueurs().size(); i++) {
 
                     IA iaCourante = (IA) this.automate.getJoueurCourant();
 
@@ -60,10 +59,10 @@ public class PartieIA {
                             iaCourante.CalculSituation(automate);
                         }
 
-                        if(iaCourante.getSolde()<0)
+                        /*if(iaCourante.getSolde()<0)
                         {
                             automate.evoluer("Faillite");
-                        }
+                        }*/
 
                     }while (iaCourante.getaLanceDes() == false); //si l'IA fait un double, elle rejoue
                         this.automate.evoluer("tourSuivant");

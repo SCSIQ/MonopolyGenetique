@@ -16,12 +16,12 @@ public class FinPartie extends Etat {
 
     @Override
     public void agir(String event) {
-        System.out.println(automate.getJoueurCourant()+" a gagné.");
+        System.out.println(automate.getJoueurCourant().getNom()+" a gagné.");
     }
 
     @Override
     public Etat transition(String event) {
-        return null;
+        return new StatsPartie(getAutomate(),getListeJoueurs());
     }
 
     public String toString() {
