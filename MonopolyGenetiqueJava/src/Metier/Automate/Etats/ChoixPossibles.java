@@ -67,7 +67,7 @@ public class ChoixPossibles extends Etat {
         {
             return new FinPartie(super.getAutomate(), super.getListeJoueurs());
         }
-        else if (event=="Score Partie")
+        else if (event==null)
         {
             return null;
         }

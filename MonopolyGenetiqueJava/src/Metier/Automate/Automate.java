@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class Automate {
 
+    //ATTRIBUTS
     private Etat etatCourant;
     private ArrayList<Joueur> listeJoueurs ;
     private ArrayList<Cartes> listeDesCartesChances;
@@ -25,27 +26,14 @@ public class Automate {
     private Cases casePourAjoutMaison;
     private String contenuCartePiochée;
     private int argentRecupDansParcGratuit;
-
-    public void setNumBouton(int numBouton) {
-        this.numBouton = numBouton;
-    }
-
-    public int getNumBouton() {
-        return numBouton;
-    }
-
+    private int nombreTourTotal;
     private int numBouton =0 ;
 
-    public int getNombreTourTotal() {
-        return nombreTourTotal;
-    }
+    private boolean partieFinie=false;
 
-    public void setNombreTourTotal(int nombreTourTotal) {
-        this.nombreTourTotal = nombreTourTotal;
-    }
 
-    private int nombreTourTotal;
 
+    //CONSTRUCTEUR
     public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune,int nbTour){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
         this.listeDesCartesChances = listeDesCartesChances;
@@ -56,12 +44,14 @@ public class Automate {
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////METHODE
+
     //cette méthode est appellée dès que l'on veut faire évoluer l'automate, à savoir,
     //faire quelque chose dans le jeu comme cliquer sur un bouton
     //cette méthode est appellée soit depuis l'IHM pour une évolutions lors d'un event,
     //soit par un Etat pour une évolution automatique
     public void evoluer(String event){
-        if(this.etatCourant.toString()!="merde")
+        if(partieFinie==false)
         {
             System.out.println(this.etatCourant.toString()+" - - - - - - - - - - ->");
             this.etatCourant.agir(event);
@@ -74,18 +64,37 @@ public class Automate {
                 automatedEvolution = false;
                 this.evoluer(event);
             }
-        }
-        else
+        }else
         {
-            automatedEvolution = true;
-            System.out.println("- - - - - - - - - - - - - - - - - - - -> FINI");
-
-
+          //  System.out.println("- - - - - - - - - - - - - - - - - - - -> FINI");
         }
+
+
+
+
 
 
     }
 
+
+/////////////////////////////////////////////////////////////////////////////////////GETTER SETTERS
+
+    public boolean isPartieFinie() {return partieFinie;}
+    public void setPartieFinie(boolean partieFinie) {this.partieFinie = partieFinie;}
+
+    public void setNumBouton(int numBouton) {
+        this.numBouton = numBouton;
+    }
+    public int getNumBouton() {
+        return numBouton;
+    }
+
+    public int getNombreTourTotal() {
+        return nombreTourTotal;
+    }
+    public void setNombreTourTotal(int nombreTourTotal) {
+        this.nombreTourTotal = nombreTourTotal;
+    }
     //variable permettant de demander à l'automate d'évoluer une fois de plus de façon automatique
     public void setAutomatedEvolution(boolean automatedEvolution) {
         this.automatedEvolution = automatedEvolution;

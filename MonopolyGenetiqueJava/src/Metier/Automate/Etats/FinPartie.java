@@ -12,16 +12,21 @@ public class FinPartie extends Etat {
     public FinPartie(Automate automate, ArrayList<Joueur> listeJoueurs) {
         super(automate, listeJoueurs);
         this.automate=automate;
+        super.getAutomate().setAutomatedEvolution(true);
     }
 
     @Override
     public void agir(String event) {
+
+        automate.setPartieFinie(true);
+
         System.out.println(automate.getJoueurCourant().getNom()+" a gagné.");
+        automate.evoluer(null);
     }
 
     @Override
     public Etat transition(String event) {
-        return new StatsPartie(getAutomate(),getListeJoueurs());
+        return new FinPartie(getAutomate(), getListeJoueurs());
     }
 
     public String toString() {
