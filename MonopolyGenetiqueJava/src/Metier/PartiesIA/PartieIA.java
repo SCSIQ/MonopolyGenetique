@@ -51,7 +51,7 @@ public class PartieIA {
                         this.automate.evoluer("lancerDes"); //l'IA lance les dès
 
                         //ensuite, si elle est sur une propriété appartenant à personne, elle l'achète
-
+                        iaCourante.CalculSituation(automate);
                         if (iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null) {
                             iaCourante.CalculSituation(automate);
                         }

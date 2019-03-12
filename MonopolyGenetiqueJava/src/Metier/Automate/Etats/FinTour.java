@@ -25,6 +25,10 @@ public class FinTour extends Etat{
         getAutomate().setArgentRecupDansParcGratuit(0);
         getAutomate().setTirerCarteChance(-1);
         getAutomate().setTirerCarteCaisseCommune(-1);
+
+        System.out.println("    SOLDE  "+j.getSolde());
+        System.out.println("    CARTE PRISON  "+j.getNbCartesLibereDePrison());
+        System.out.println("    PRISON  "+j.getEstEnPrison());
         System.out.println("\n--------------------------------------\n");
     }
 

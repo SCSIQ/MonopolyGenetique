@@ -23,11 +23,11 @@ public class Joueur {
     private ArrayList<Cases> listeCases;
     private boolean estEnPrison = false;
     private int essaiesPourSortirDePrison = 0;
-    private int nbCartesLibereDePrison = 0; //le nombre de cartes libéré de prison que le joueur possède
+    private int nbCartesLibereDePrison = 1; //le nombre de cartes libéré de prison que le joueur possède
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////CONSTRUCTEUR
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
-        this.solde = 2500;
+        this.solde = 20500;
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
         this.scoreJoueur = new Score();

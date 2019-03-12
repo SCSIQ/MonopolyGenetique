@@ -26,6 +26,8 @@ public class DebutTour extends Etat{
             System.out.println("    TOUR : "+automate.getNumTour());
             System.out.println("    Joueur IA : "+j.getNom());
             System.out.println("    SOLDE  "+j.getSolde());
+            System.out.println("    CARTE PRISON  "+j.getNbCartesLibereDePrison());
+            System.out.println("    PRISON  "+j.getEstEnPrison());
         }
         else
         {
