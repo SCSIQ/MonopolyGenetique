@@ -2,6 +2,8 @@ package Metier.PartiesIA;
 
 import Entites.IA;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeGares.Gare;
+import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
 
@@ -133,6 +135,18 @@ public class Decision {
                     }
                 }
 
+            }else if(ia.getPion().getCase() instanceof ServicePublic) //si c'est une compagnie
+            {
+                if(p instanceof  ServicePublic)
+                {
+                    res=1;
+                }
+            }else if(ia.getPion().getCase() instanceof Gare) //si c'est une gare
+            {
+                if(p instanceof  Gare)
+                {
+                    res=1;
+                }
             }
         }
 
@@ -147,6 +161,16 @@ public class Decision {
 
 /////////////////////////////////////////////////////////////////////////////////////CONSTRUIRE MAISONS OU PAS ///////////////
 
+    public int maisonRapporteLePlus()
+    {
+        int res =0;
 
+        if(ia.getPion().getCase() instanceof Terrain)
+        {
+            //((Terrain) ia.getPion().getCase()).getPrixAjoutMaison();
+        }
+
+        return res;
+    }
 
 }
