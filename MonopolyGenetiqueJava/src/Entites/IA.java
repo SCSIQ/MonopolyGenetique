@@ -35,6 +35,9 @@ public class IA extends Joueur {
 
     //METHODES
 
+    /**
+     * initialise la hashmap des critères avec un poids random pour chaque critères
+     */
     public void initialisationHashMap()
     {
         System.out.println("IA "+this.getNom());
@@ -42,6 +45,8 @@ public class IA extends Joueur {
         poids.put(pasBeaucoupArgent,0.0);
         poids.put(beaucoupArgent,0.0);
         poids.put(aCarteLiberePrison,0.0);
+        poids.put(caseSuivanteMauvaise,0.0);
+        poids.put(caseSuivanteBonne,0.0);
 
         //REMPLISSAGE AVEC LES POIDS ALEA
         for(CritereIA i : poids.keySet())
@@ -56,121 +61,36 @@ public class IA extends Joueur {
 
     }
 
-    public double sommePoids()
-    {
-        double s=0;
-        for(CritereIA i : poids.keySet())
-        {
-            s+=poids.get(i);
-        }
-        System.out.println("somme poids : "+s);
-        return s;
-    }
+///////////////////////////////////////////////////////////////////////////////////////////////////SORTIR OU NON DE PRISON ?????????????????????
 
     /**
-     * Permet de savoir si IA a assez d'argent pour acheter
-     * @return 1 = assez argent  et 0= pas assez d'argent
+     *
+     * @return res la note pour dire qu'il ne veut pas sortir de prison (avec ses critères)
      */
-    public int AssezArgent()
+    public double noteNonSortirPrison()
     {
-        int res = 0;
+        double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent)+decision.noteCaseSuivanteMauvaise()*poids.get(caseSuivanteMauvaise);
 
-        //Si l'IA n'a pas le double de la propriété qu'elle veut acheter
-        if(this.getPion().getCase() instanceof  Proprietes)
-        {
-            if(this.getSolde()>=((Proprietes)this.getPion().getCase()).getPrix()*2) {
-                res = 1;
-            }
-        }
-        else if(this.getPion().getCase() instanceof Prison)
-        {
-            if(this.getSolde()>=1000) {
-                res = 1;
-            }
-        }
-
-
+        res=res/(poids.get(pasBeaucoupArgent)+poids.get(caseSuivanteMauvaise));
         return res;
     }
 
     /**
      *
+     * @return res la note pour dire qu'il veut sortir de prison
      */
-    public int SortirPrison()
-    {
-        int ires=0;
-
-        //si elle est en prison
-        if(this.getEstEnPrison()==true)
-        {
-            if(this.getNbCartesLibereDePrison()>0)
-            {
-                ires=1;
-            }
-            else if(AssezArgent()==1)
-            {
-                ires=1;
-            }
-        }
-
-          return ires;
-
-    }
-
-    /**
-     * Doit avoir tous les terrains de la même couleurs
-     */
-    public int ConstruireMaisons()
-    {
-        return 0;
-    }
-
-    public void CalculSituation(Automate automate)
-    {
-        /*double sommePoids = this.sommePoids();
-        double note = 0.0;*/
-
-
-        //note+= poids.get(argent)*this.AssezArgent()+poids.get(sortirPrison)*this.SortirPrison()+poids.get(terrainComplet)*this.ConstruireMaisons();
-
-
-        /*System.out.println("Note avant : "+note);
-        note+=note/sommePoids;
-        System.out.println("Note : "+note);
-
-        if(note>0.5)
-        {
-            if(this.AssezArgent()==1 && this.getPion().getCase() instanceof  Proprietes)
-            {
-                automate.evoluer("acheterPropriete");
-            }
-            if(this.SortirPrison()==1 && this.getNbCartesLibereDePrison()==0)
-            {
-                jeSorsPrisonEnPayant();
-            } else if(this.SortirPrison()==1 &&this.getNbCartesLibereDePrison()>0)
-            {
-                jeSorsPrisonAvecCarte();
-            }
-
-        }*/
-    }
-
-///////////////////////////////////////////////////////////////////////////////////////////////////SORTIR OU NON DE PRISON ?????????????????????
-    public double noteNonSortirPrison()
-    {
-        double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent);
-
-        return res;
-    }
-
     public double noteOuiSortirPrison()
     {
-        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent)+decision.aCarteLiberePrison()*poids.get(aCarteLiberePrison);
+        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent)+decision.aCarteLiberePrison()*poids.get(aCarteLiberePrison)+decision.noteCaseSuivanteBonne()*poids.get(caseSuivanteBonne);
 
+        res=res/(poids.get(beaucoupArgent)+poids.get(aCarteLiberePrison)+poids.get(caseSuivanteBonne));
         return res;
     }
 
-    //On pèse le pour et le contre pour savoir si on sort de prison
+
+    /**
+     * Pèse le pour et le contre pour savoir s'il sort de prison ou non en fonction des notes obtenues pour le oui ou pour le non
+     */
     public void compareNotePrison()
     {
         double non = noteNonSortirPrison();
@@ -190,5 +110,8 @@ public class IA extends Joueur {
         }
     }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////ACHETER OU NON LA CASE ?????????????????????
+
+///////////////////////////////////////////////////////////////////////////////////////////////////CONSTRUIRE OU NON UNE MAISON ?????????????????????
 
 }

@@ -4,6 +4,8 @@ public enum CritereIA {
 
     pasBeaucoupArgent,
     beaucoupArgent,
-    aCarteLiberePrison
+    aCarteLiberePrison,
+    caseSuivanteMauvaise,
+    caseSuivanteBonne
 
 }

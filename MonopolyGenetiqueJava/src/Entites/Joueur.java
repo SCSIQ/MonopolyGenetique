@@ -27,7 +27,7 @@ public class Joueur {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////CONSTRUCTEUR
     public Joueur(ArrayList<Cases> listeCases, Color couleur) {
-        this.solde = 800;
+        this.solde = 1000;
         this.listeCases = listeCases;
         this.pion = new Pion(this, listeCases.get(0), couleur);
         this.scoreJoueur = new Score();
