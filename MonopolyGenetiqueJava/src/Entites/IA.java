@@ -112,6 +112,25 @@ public class IA extends Joueur {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////ACHETER OU NON LA CASE ?????????????????????
 
+    /*critère pour acheter une case :
+        - argent (beaucoup ou pas beaucoup)
+        - si plusiseurs case de même couleur --> déjà si j'ai une case de la même couleur
+    */
+    public double noteOuiAcheter()
+    {
+       double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent);
+
+       return res;
+    }
+
+    public double noteNonAcheter()
+    {
+        double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent);
+
+        return res;
+    }
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////CONSTRUIRE OU NON UNE MAISON ?????????????????????
 
 }
