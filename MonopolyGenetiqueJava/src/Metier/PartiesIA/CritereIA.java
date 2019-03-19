@@ -6,6 +6,7 @@ public enum CritereIA {
     beaucoupArgent,
     aCarteLiberePrison,
     caseSuivanteMauvaise,
-    caseSuivanteBonne
+    caseSuivanteBonne,
+    dejaUneCase
 
 }

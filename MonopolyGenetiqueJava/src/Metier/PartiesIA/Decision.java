@@ -2,6 +2,7 @@ package Metier.PartiesIA;
 
 import Entites.IA;
 import Metier.Automate.Automate;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
 
 public class Decision {
@@ -106,6 +107,37 @@ public class Decision {
                 res=1;
             }
 
+        }
+
+        return res;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////ACHETER OU PAS ///////////////
+
+    /**
+     *
+     * @return 1 si l'ia courante a eu moins une case de la même couleur que la case où elle est tombée
+     */
+    public int dejaUneCase()
+    {
+        int res = 0;
+        int nbCouleur=0;
+
+        for(Proprietes p : ia.getListePropietes())
+        {
+            if(ia.getPion().getCase() instanceof Terrain)
+            {
+                if(((Terrain) ia.getPion().getCase()).getCouleur() == ((Terrain)p).getCouleur())
+                {
+                    nbCouleur++;
+                }
+
+            }
+        }
+
+        if(nbCouleur>=1)
+        {
+            res=1;
         }
 
         return res;

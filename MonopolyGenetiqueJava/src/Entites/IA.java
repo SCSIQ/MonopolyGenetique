@@ -5,6 +5,7 @@ import Metier.PartiesIA.CentreDecision;
 import Metier.PartiesIA.CritereIA;
 import Metier.PartiesIA.Decision;
 import Metier.Plateau.Cases;
+import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.Prison;
 import javafx.scene.paint.Color;
@@ -47,6 +48,7 @@ public class IA extends Joueur {
         poids.put(aCarteLiberePrison,0.0);
         poids.put(caseSuivanteMauvaise,0.0);
         poids.put(caseSuivanteBonne,0.0);
+        poids.put(dejaUneCase,0.0);
 
         //REMPLISSAGE AVEC LES POIDS ALEA
         for(CritereIA i : poids.keySet())
@@ -116,9 +118,14 @@ public class IA extends Joueur {
         - argent (beaucoup ou pas beaucoup)
         - si plusiseurs case de même couleur --> déjà si j'ai une case de la même couleur
     */
+
+
+
     public double noteOuiAcheter()
     {
-       double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent);
+       double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent)+decision.dejaUneCase()*poids.get(dejaUneCase);
+
+       res=res/(poids.get(beaucoupArgent)+poids.get(dejaUneCase));
 
        return res;
     }
@@ -126,6 +133,8 @@ public class IA extends Joueur {
     public double noteNonAcheter()
     {
         double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent);
+
+        res=res/(poids.get(pasBeaucoupArgent));
 
         return res;
     }
