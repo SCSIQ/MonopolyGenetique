@@ -97,7 +97,7 @@ public class IA extends Joueur {
     {
         double non = noteNonSortirPrison();
         double oui = noteOuiSortirPrison();
-        System.out.println("note non = "+non+"\nnote oui = "+oui);
+        System.out.println("------------------\nPRISON\nnote non = "+non+"\nnote oui = "+oui);
         if(oui>non)//Je fais l'action
         {
             this.setEstEnPrison(false);
@@ -120,7 +120,10 @@ public class IA extends Joueur {
     */
 
 
-
+    /**
+     *
+     * @return le note obtenue en faveur du oui
+     */
     public double noteOuiAcheter()
     {
        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent)+decision.dejaUneCase()*poids.get(dejaUneCase);
@@ -130,6 +133,10 @@ public class IA extends Joueur {
        return res;
     }
 
+    /**
+     *
+     * @return la note obtenue en faveur du non
+     */
     public double noteNonAcheter()
     {
         double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent);
@@ -137,6 +144,19 @@ public class IA extends Joueur {
         res=res/(poids.get(pasBeaucoupArgent));
 
         return res;
+    }
+
+    public void compareNoteAcheter(Automate automate)
+    {
+        double oui = this.noteOuiAcheter();
+        double non = this.noteNonAcheter();
+
+        System.out.println("------------------\nACHETER OU NON \nnote non = "+non+"\nnote oui = "+oui);
+        if(oui>non)//Je fais l'action
+        {
+            automate.evoluer("acheterPropriete");
+        }
+
     }
 
 

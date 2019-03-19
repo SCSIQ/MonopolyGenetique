@@ -127,9 +127,10 @@ public class Decision {
         {
             if(ia.getPion().getCase() instanceof Terrain)
             {
-                if(((Terrain) ia.getPion().getCase()).getCouleur() == ((Terrain)p).getCouleur())
-                {
-                    nbCouleur++;
+                if(p instanceof  Terrain) {
+                    if (((Terrain) ia.getPion().getCase()).getCouleur() == ((Terrain) p).getCouleur()) {
+                        nbCouleur++;
+                    }
                 }
 
             }
