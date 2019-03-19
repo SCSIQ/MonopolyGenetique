@@ -146,6 +146,10 @@ public class IA extends Joueur {
         return res;
     }
 
+    /**
+     * Permet de peser le pour et le contre afin de savoir si l'IA achète ou non
+     * @param automate
+     */
     public void compareNoteAcheter(Automate automate)
     {
         double oui = this.noteOuiAcheter();
@@ -161,5 +165,30 @@ public class IA extends Joueur {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////CONSTRUIRE OU NON UNE MAISON ?????????????????????
+
+    /*
+        Les critères pour construire des maisons
+            - beacoup d'argent (ou pas beaucoup)
+            - si maison la plus rentable (si maison pas rentable)
+     */
+
+    //POUR L'INSTANT QUE L'ARGENT EST GERE !!!!
+    public double noteNonConstruire()
+    {
+        double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent);
+
+        res=res/(poids.get(pasBeaucoupArgent));
+
+        return res;
+    }
+
+    public double noteOuiConstruire()
+    {
+        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent);
+
+        res=res/(poids.get(beaucoupArgent)+poids.get(dejaUneCase));
+
+        return res;
+    }
 
 }
