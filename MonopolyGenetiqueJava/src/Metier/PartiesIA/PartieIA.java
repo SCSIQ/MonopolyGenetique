@@ -55,6 +55,10 @@ public class PartieIA {
                         if (iaCourante.getPion().getCase() instanceof Proprietes && ((Proprietes) iaCourante.getPion().getCase()).getProprio() == null) {
                             iaCourante.CalculSituation(automate);
                         }
+                        if(iaCourante.getEstEnPrison()==true)
+                        {
+                            iaCourante.compareNotePrison();
+                        }
 
 
                     }while (iaCourante.getaLanceDes() == false); //si l'IA fait un double, elle rejoue

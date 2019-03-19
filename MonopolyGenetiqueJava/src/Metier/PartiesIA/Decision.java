@@ -11,11 +11,23 @@ public class Decision {
         this.ia=ia;
     }
 
-    public int estCequeJaiAssezArgent()
+    public int BeaucoupArgent()
     {
         int res = 0;
 
         if(ia.getSolde()>=1000)
+        {
+            res=1;
+        }
+
+        return res;
+    }
+
+    public int pasBeaucoupArgent()
+    {
+        int res = 0;
+
+        if(ia.getSolde()<800)
         {
             res=1;
         }

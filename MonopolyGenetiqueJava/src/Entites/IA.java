@@ -3,6 +3,7 @@ package Entites;
 import Metier.Automate.Automate;
 import Metier.PartiesIA.CentreDecision;
 import Metier.PartiesIA.CritereIA;
+import Metier.PartiesIA.Decision;
 import Metier.Plateau.Cases;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.Prison;
@@ -16,12 +17,14 @@ public class IA extends Joueur {
 
     //ATTRIBUTS
     private HashMap<CritereIA, Double> poids;
+    private Decision decision;
 
     //CONSTRUCTEURS
     public IA(ArrayList<Cases> listeCases, Color couleur, CentreDecision DM) {
         super(listeCases, couleur);
         poids = new HashMap<CritereIA,Double>();
         initialisationHashMap();
+        decision = new Decision(this);
     }
 
     public IA(IA pere, IA mere)
@@ -36,15 +39,15 @@ public class IA extends Joueur {
     {
         System.out.println("IA "+this.getNom());
         //INITIALISATION
-        poids.put(sortirPrison,0.0);
-        poids.put(argent,0.0);
-        poids.put(terrainComplet,0.0);
+        poids.put(pasBeaucoupArgent,0.0);
+        poids.put(beaucoupArgent,0.0);
+        poids.put(aCarteLiberePrison,0.0);
 
         //REMPLISSAGE AVEC LES POIDS ALEA
         for(CritereIA i : poids.keySet())
         {
             Random rand = new Random();
-            Double nb= rand.nextDouble();
+            Double nb= (double) Math.round(rand.nextDouble()*100)/100;
 
             poids.put(i,nb);
 
@@ -124,14 +127,14 @@ public class IA extends Joueur {
 
     public void CalculSituation(Automate automate)
     {
-        double sommePoids = this.sommePoids();
-        double note = 0.0;
+        /*double sommePoids = this.sommePoids();
+        double note = 0.0;*/
 
 
-        note+= poids.get(argent)*this.AssezArgent()+poids.get(sortirPrison)*this.SortirPrison()+poids.get(terrainComplet)*this.ConstruireMaisons();
+        //note+= poids.get(argent)*this.AssezArgent()+poids.get(sortirPrison)*this.SortirPrison()+poids.get(terrainComplet)*this.ConstruireMaisons();
 
 
-        System.out.println("Note avant : "+note);
+        /*System.out.println("Note avant : "+note);
         note+=note/sommePoids;
         System.out.println("Note : "+note);
 
@@ -149,20 +152,42 @@ public class IA extends Joueur {
                 jeSorsPrisonAvecCarte();
             }
 
+        }*/
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////SORTIR OU NON DE PRISON ?????????????????????
+    public double noteNonSortirPrison()
+    {
+        double res = decision.pasBeaucoupArgent()*poids.get(pasBeaucoupArgent);
+
+        return res;
+    }
+
+    public double noteOuiSortirPrison()
+    {
+        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent)+decision.aCarteLiberePrison()*poids.get(aCarteLiberePrison);
+
+        return res;
+    }
+
+    //On pèse le pour et le contre pour savoir si on sort de prison
+    public void compareNotePrison()
+    {
+        double non = noteNonSortirPrison();
+        double oui = noteOuiSortirPrison();
+        System.out.println("note non = "+non+"\nnote oui = "+oui);
+        if(oui>non)//Je fais l'action
+        {
+            this.setEstEnPrison(false);
+            if(this.getNbCartesLibereDePrison()>0)
+            {
+                this.utiliserUneCartesLibereDePrison();
+            }
+            else
+            {
+                this.DecrementerSolde(500);
+            }
         }
-
-    }
-
-
-    public void jeSorsPrisonEnPayant()
-    {
-        this.setEstEnPrison(false);
-        this.DecrementerSolde(500);
-    }
-    public void jeSorsPrisonAvecCarte()
-    {
-        this.setEstEnPrison(false);
-        this.utiliserUneCartesLibereDePrison();
     }
 
 

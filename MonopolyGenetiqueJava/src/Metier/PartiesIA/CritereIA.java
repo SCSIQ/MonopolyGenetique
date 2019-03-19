@@ -2,8 +2,8 @@ package Metier.PartiesIA;
 
 public enum CritereIA {
 
-    sortirPrison,
-    argent,
-    terrainComplet
+    pasBeaucoupArgent,
+    beaucoupArgent,
+    aCarteLiberePrison
 
 }
