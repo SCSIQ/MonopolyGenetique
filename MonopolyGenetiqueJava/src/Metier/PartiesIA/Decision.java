@@ -7,6 +7,8 @@ import Metier.Plateau.ListeProprietes.ListeServicesPublics.ServicePublic;
 import Metier.Plateau.ListeProprietes.ListeTerrains.Terrain;
 import Metier.Plateau.ListeProprietes.Proprietes;
 
+import java.util.ArrayList;
+
 public class Decision {
 
     private IA ia;
@@ -161,16 +163,41 @@ public class Decision {
 
 /////////////////////////////////////////////////////////////////////////////////////CONSTRUIRE MAISONS OU PAS ///////////////
 
-    public int maisonRapporteLePlus()
+    /**
+     * Regarde lequel loyer rapporte le plus avec une maison
+     * @return Terrain qui rapporte le plus
+     */
+    public Terrain maisonRapporteLePlus()
     {
-        int res =0;
+        Terrain t=null;
+        boolean terrain =false; //Permet de récupérer le premier terrain
 
-        if(ia.getPion().getCase() instanceof Terrain)
+        while(terrain)
         {
-            //((Terrain) ia.getPion().getCase()).getPrixAjoutMaison();
+            int i=0;
+            if(ia.getListePropietes().get(i) instanceof  Terrain)
+            {
+                t=(Terrain)ia.getListePropietes().get(i);
+                terrain=true;
+            }
+            i++;
         }
 
-        return res;
+        for(Proprietes p : ia.getListePropietes())
+        {
+            if(ia.getPion().getCase() instanceof Terrain)
+            {
+                if(((Terrain)p).getNbMaisons()==0)
+                {
+                   if(t.getLoyer1Maison()<((Terrain) p).getLoyer1Maison())
+                   {
+                       t=((Terrain)p);
+                   }
+                }
+            }
+        }
+
+        return t;
     }
 
 }
