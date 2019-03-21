@@ -49,6 +49,7 @@ public class IA extends Joueur {
         poids.put(caseSuivanteMauvaise,0.0);
         poids.put(caseSuivanteBonne,0.0);
         poids.put(dejaUneCase,0.0);
+        poids.put(terrainRapportePlus,0.0);
 
         //REMPLISSAGE AVEC LES POIDS ALEA
         for(CritereIA i : poids.keySet())
@@ -184,9 +185,9 @@ public class IA extends Joueur {
 
     public double noteOuiConstruire()
     {
-        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent);
+        double res = decision.BeaucoupArgent()*poids.get(beaucoupArgent)+decision.construireMaison()*poids.get(terrainRapportePlus);
 
-        res=res/(poids.get(beaucoupArgent)+poids.get(dejaUneCase));
+        res=res/(poids.get(beaucoupArgent)+poids.get(terrainRapportePlus));
 
         return res;
     }
