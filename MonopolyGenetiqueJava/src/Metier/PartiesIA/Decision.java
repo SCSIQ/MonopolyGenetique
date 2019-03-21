@@ -177,27 +177,50 @@ public class Decision {
             int i=0;
             if(ia.getListePropietes().get(i) instanceof  Terrain)
             {
-                t=(Terrain)ia.getListePropietes().get(i);
-                terrain=true;
+                //Si le joueur a le groupe de couleur en entier
+                if(((Terrain)ia.getListePropietes().get(i)).getATousLesTerrainsDeMemeCouleur()==true)
+                {
+                    t=(Terrain)ia.getListePropietes().get(i);
+                    terrain=true;
+                }
+
             }
             i++;
         }
-
-        for(Proprietes p : ia.getListePropietes())
+        if(terrain==true)
         {
-            if(ia.getPion().getCase() instanceof Terrain)
+            for(Proprietes p : ia.getListePropietes())
             {
-                if(((Terrain)p).getNbMaisons()==0)
+                if(ia.getPion().getCase() instanceof Terrain)
                 {
-                   if(t.getLoyer1Maison()<((Terrain) p).getLoyer1Maison())
-                   {
-                       t=((Terrain)p);
-                   }
+                    if(((Terrain)p).getNbMaisons()==0)
+                    {
+                        if(t.getLoyer1Maison()<((Terrain) p).getLoyer1Maison())
+                        {
+                            t=((Terrain)p);
+                        }
+                    }
                 }
             }
         }
 
+
         return t;
     }
+
+
+    public int construireMaison()
+    {
+        int res=0;
+        if(this.maisonRapporteLePlus()!=null)
+        {
+            res=1;
+        }
+
+        return res;
+    }
+
+
+
 
 }

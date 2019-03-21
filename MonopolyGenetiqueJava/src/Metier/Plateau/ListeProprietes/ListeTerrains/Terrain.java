@@ -8,6 +8,8 @@ public abstract class Terrain extends Proprietes {
 
     protected CouleurMétier couleur;
 
+    protected boolean aTousLesTerrainsDeMemeCouleur= false;
+
     protected int prixAjoutMaison; /// prix d'une maison
 
     //de 1 à 4 = nombre de maisons, 5 = un hotel
@@ -79,6 +81,10 @@ public abstract class Terrain extends Proprietes {
         return loyerHotel;
     }
 
+
+    public boolean getATousLesTerrainsDeMemeCouleur() {return aTousLesTerrainsDeMemeCouleur; }
+
+
     public int getNbTerrainCouleurPossedees() {
         int nbTerrains = 0;
         for (Proprietes p : super.getProprio().getListePropietes()) {
@@ -87,6 +93,17 @@ public abstract class Terrain extends Proprietes {
                 if(((Terrain)p).couleur == this.couleur)
                 {
                     nbTerrains++;
+                }
+                if(((Terrain)p).getNbTerrainCouleurPossedees()==2 && ((Terrain)p).getCouleur()== CouleurMétier.Marron)
+                {
+                    aTousLesTerrainsDeMemeCouleur=true;
+                }
+                else if(((Terrain)p).getNbTerrainCouleurPossedees()==2 && ((Terrain)p).getCouleur()== CouleurMétier.BleuFonce)
+                {
+                    aTousLesTerrainsDeMemeCouleur=true;
+                }else if (((Terrain)p).getNbTerrainCouleurPossedees()==3)
+                {
+                    aTousLesTerrainsDeMemeCouleur=true;
                 }
             }
         }
