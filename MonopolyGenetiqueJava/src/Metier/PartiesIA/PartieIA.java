@@ -19,6 +19,7 @@ public class PartieIA {
     private int nbMutations;
     private int nbToursMax=0;
     private int nbPartie=0;
+    private Joueur gagnante=null;
 
     public PartieIA(int nbAI,int nbMutations, int nbToursMax,int nbPartie) {
 
@@ -63,37 +64,37 @@ public class PartieIA {
                             iaCourante.compareNotePrison();
                         }
 
-                        if(this.automate.getListeJoueurs().size()==1 || nbToursMax==automate.getNumTour())
-                        {
-                            System.out.println("ON EST DANS LE IF !!!!!8888");
-                            this.listeIaGagnante.add(automate.getListeJoueurs().get(0));
-                            System.out.println("Liste IA gagnantes : ");
-                            for(int k=0;k<listeIaGagnante.size();k++)
-                            {
-                                System.out.println(listeIaGagnante.get(k).getNom());
-                            }
-                            if(compteurPartie<=nbPartie)
-                            {
-                                System.out.println("ON EST DANS LE IF !!!!!");
-                                new PartieIA(nbAI, nbMutations, nbToursMax, nbPartie).lancerPartie(nbToursMax);
-                                compteurPartie++;
-                            }
-                            else
-                            {
-                                automate.evoluer("FinPartie");
-                            }
-                        }
+
 
 
 
                     }while (iaCourante.getaLanceDes() == false); //si l'IA fait un double, elle rejoue
                         this.automate.evoluer("tourSuivant");
 
+                    if(automate.getListeJoueurs().size()== 1)
+                    {
+                        automate.evoluer("FinPartie");
+                    }
+                if(this.automate.getListeJoueurs().size()==1 || nbToursMax==automate.getNumTour())
+                {
+                    gagnante = automate.getListeJoueurs().get(0);
 
+                    System.out.println("IA gagnante : "+gagnante.getNom());
+
+                }
 
                 }
             }
     }
+
+    public Joueur getGagnante() {
+        return gagnante;
+    }
+
+    public void setGagnante(Joueur gagnante) {
+        this.gagnante = gagnante;
+    }
+
 
 
     private Color couleurAdversaire(int i)

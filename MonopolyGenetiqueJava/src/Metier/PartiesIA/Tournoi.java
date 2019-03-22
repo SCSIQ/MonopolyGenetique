@@ -20,7 +20,7 @@ public class Tournoi {
 
         //crée toutes les parties
         //for (int j = 0; j < this.nbIA/4; j++) {
-        for (int j = 0; j < 1; j++) {
+        for (int j = 0; j < nbpartie; j++) {
             this.listeParties.add(new PartieIA(nbAI,nbMutations, this.nbToursMax,nbpartie));
         }
     }
@@ -30,12 +30,14 @@ public class Tournoi {
     }
 
     private void lancerUneSerieDePArties() {
-       // for (int i=0 ; i<nbpartie;i++) {
+       for (PartieIA p : listeParties) {
+           int i=1;
             System.out.println("\n**************************************************************************************************************************************************************************************************\n"
                     +"**************************************************************************************************************************************************************************************************\n"+
-                    "PARTIE "+(1)+"\n");
-            new PartieIA(nbIA,nbMutations,nbToursMax,nbpartie).lancerPartie(nbToursMax);
-       // }
+                    "PARTIE "+(i)+"\n");
+            p.lancerPartie(nbToursMax);
+            i++;
+       }
     }
 
 
