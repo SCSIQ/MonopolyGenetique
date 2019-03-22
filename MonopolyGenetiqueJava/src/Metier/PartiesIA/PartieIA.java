@@ -37,7 +37,7 @@ public class PartieIA {
     }
 
     public void lancerPartie(int tourTotal) {
-
+        int compteurPartie=1;
         System.out.println("\n    DEBUT DE LA PARTIE\n");
         this.automate = this.initialisationPartieIA.automatePourIaInitialisation();
 
@@ -62,19 +62,35 @@ public class PartieIA {
                         {
                             iaCourante.compareNotePrison();
                         }
-                        if(this.automate.getListeJoueurs().size()==1)
+
+                        if(this.automate.getListeJoueurs().size()==1 || nbToursMax==automate.getNumTour())
                         {
+                            System.out.println("ON EST DANS LE IF !!!!!8888");
                             this.listeIaGagnante.add(automate.getListeJoueurs().get(0));
+                            System.out.println("Liste IA gagnantes : ");
+                            for(int k=0;k<listeIaGagnante.size();k++)
+                            {
+                                System.out.println(listeIaGagnante.get(k).getNom());
+                            }
+                            if(compteurPartie<=nbPartie)
+                            {
+                                System.out.println("ON EST DANS LE IF !!!!!");
+                                new PartieIA(nbAI, nbMutations, nbToursMax, nbPartie).lancerPartie(nbToursMax);
+                                compteurPartie++;
+                            }
+                            else
+                            {
+                                automate.evoluer("FinPartie");
+                            }
                         }
+
 
 
                     }while (iaCourante.getaLanceDes() == false); //si l'IA fait un double, elle rejoue
                         this.automate.evoluer("tourSuivant");
 
-                    if(automate.getListeJoueurs().size() == 1)
-                    {
-                        automate.evoluer("FinPartie");
-                    }
+
+
                 }
             }
     }

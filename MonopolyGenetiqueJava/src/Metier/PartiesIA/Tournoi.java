@@ -26,14 +26,16 @@ public class Tournoi {
     }
 
     public void lancerLeTournoi(){
-
         lancerUneSerieDePArties();
     }
 
     private void lancerUneSerieDePArties() {
-        for (PartieIA p : this.listeParties) {
-            p.lancerPartie(nbToursMax);
-        }
+       // for (int i=0 ; i<nbpartie;i++) {
+            System.out.println("\n**************************************************************************************************************************************************************************************************\n"
+                    +"**************************************************************************************************************************************************************************************************\n"+
+                    "PARTIE "+(1)+"\n");
+            new PartieIA(nbIA,nbMutations,nbToursMax,nbpartie).lancerPartie(nbToursMax);
+       // }
     }
 
 
