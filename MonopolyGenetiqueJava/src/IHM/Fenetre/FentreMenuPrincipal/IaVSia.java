@@ -43,7 +43,7 @@ public class IaVSia extends Parent {
 
         //Rectangle
         Rectangle r_contour = new Rectangle();
-        r_contour.setHeight(325);
+        r_contour.setHeight(385);
         r_contour.setWidth(590);
         r_contour.setLayoutX(10);
         r_contour.setLayoutY(10);
@@ -53,21 +53,26 @@ public class IaVSia extends Parent {
 
 
         Label t_nbIA =  new Label("Entrez le nombre d'intelligences artificielles : ");
-        Label t_nbMutations = new Label("Entrez le nombre de mutations à effectuer : ");
+        Label t_nbPartie = new Label("Entrez le nombre de parties : ");
         Label t_nbTours = new Label("Entrez le nombre de tours maximum par partie : ");
+        Label t_nbMutations = new Label("Entrez le nombre de mutations à effectuer : ");
+
 
         //taille
         t_nbIA.setLayoutX(30);
         t_nbMutations.setLayoutX(30);
         t_nbTours.setLayoutX(30);
+        t_nbPartie.setLayoutX(30);
 
         t_nbIA.setLayoutY(105);
-        t_nbMutations.setLayoutY(165);
+        t_nbPartie.setLayoutY(165);
         t_nbTours.setLayoutY(225);
+        t_nbMutations.setLayoutY(285);
 
         t_nbIA.setFont(Font.font("Verdana", FontWeight.NORMAL, 18));
         t_nbMutations.setFont(Font.font("Verdana", FontWeight.NORMAL, 18));
         t_nbTours.setFont(Font.font("Verdana", FontWeight.NORMAL, 18));
+        t_nbPartie.setFont(Font.font("Verdana", FontWeight.NORMAL, 18));
 
 ////////COMBO BOX
             //création des combo box
@@ -78,13 +83,11 @@ public class IaVSia extends Parent {
                 "4",
                 "5"
         );
-        ComboBox nb_mutations= new ComboBox();
-        nb_mutations.getItems().addAll(
-                "100",
-                "200",
-                "300",
-                "400",
-                "500"
+        ComboBox nb_partie= new ComboBox();
+        nb_partie.getItems().addAll(
+                "5",
+                "10",
+                "15"
         );
         ComboBox nb_tours = new ComboBox();
         nb_tours.getItems().addAll(
@@ -93,8 +96,16 @@ public class IaVSia extends Parent {
                 "40",
                 "50"
         );
+        ComboBox nb_mutations = new ComboBox();
+        nb_mutations.getItems().addAll(
+                "20",
+                "30",
+                "40",
+                "50"
+        );
             //affichage du premier élément des combo box
         nb_ia.getSelectionModel().selectFirst();
+        nb_partie.getSelectionModel().selectFirst();
         nb_mutations.getSelectionModel().selectFirst();
         nb_tours.getSelectionModel().selectFirst();
 
@@ -102,14 +113,18 @@ public class IaVSia extends Parent {
         nb_ia.setLayoutX(480);
         nb_ia.setLayoutY(100);
 
-        nb_mutations.setLayoutX(480);
-        nb_mutations.setLayoutY(160);
+        nb_partie.setLayoutX(480);
+        nb_partie.setLayoutY(160);
 
         nb_tours.setLayoutX(480);
         nb_tours.setLayoutY(220);
 
+        nb_mutations.setLayoutX(480);
+        nb_mutations.setLayoutY(280);
+
             //taille
         nb_ia.setPrefSize(100,20);
+        nb_partie.setPrefSize(100,20);
         nb_mutations.setPrefSize(100,20);
         nb_tours.setPrefSize(100, 20);
 
@@ -120,10 +135,10 @@ public class IaVSia extends Parent {
 
             //positionnement
         menu_principal.setTranslateX(30);
-        menu_principal.setTranslateY(290);
+        menu_principal.setTranslateY(350);
 
         commencer_partie.setTranslateX(330);
-        commencer_partie.setTranslateY(290);
+        commencer_partie.setTranslateY(350);
 
             //taille
         menu_principal.setPrefSize(250,30);
@@ -170,15 +185,17 @@ public class IaVSia extends Parent {
 ////////BLOCAGE REDUCTION
 
         nouvelle_fenetre.setMinWidth(630);
-        nouvelle_fenetre.setMinHeight(390);
+        nouvelle_fenetre.setMinHeight(450);
 
         nouvelle_fenetre.setMaxWidth(630);
-        nouvelle_fenetre.setMaxHeight(390);
+        nouvelle_fenetre.setMaxHeight(450);
 
 ////////AJOUT
         this.getChildren().add(r_contour);
         this.getChildren().add(t_titre);
         this.getChildren().add(t_nbIA);
+        this.getChildren().add(t_nbPartie);
+        this.getChildren().add(nb_partie);
         this.getChildren().add(t_nbMutations);
         this.getChildren().add(t_nbTours);
         this.getChildren().add(nb_ia);

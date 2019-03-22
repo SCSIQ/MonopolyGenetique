@@ -13,16 +13,19 @@ public class PartieIA {
 
     private Automate automate;
     private ArrayList<Joueur> listeIA;
+    private ArrayList<Joueur> listeIaGagnante; //liste ou sera stockée les meilleures IA de chaque partie
     private InitialisationPartieIA initialisationPartieIA;
     private int nbAI=0;
     private int nbMutations;
     private int nbToursMax=0;
+    private int nbPartie=0;
 
     public PartieIA(int nbAI,int nbMutations, int nbToursMax) {
 
         this.nbAI=nbAI;
         this.nbMutations=nbMutations;
         this.nbToursMax=nbToursMax;
+        this.listeIaGagnante = new ArrayList<>();
 
         initialisationPartieIA = new InitialisationPartieIA(nbAI,nbMutations,nbToursMax);
         ArrayList<Color> listeCouleurs = new ArrayList<>();
@@ -57,6 +60,10 @@ public class PartieIA {
                         if(iaCourante.getEstEnPrison()==true)
                         {
                             iaCourante.compareNotePrison();
+                        }
+                        if(this.automate.getListeJoueurs().size()==1)
+                        {
+                            this.listeIaGagnante.add(automate.getListeJoueurs().get(0));
                         }
 
 
