@@ -73,15 +73,25 @@ public class PartieIA {
 
                     if(automate.getListeJoueurs().size()== 1)
                     {
+                        setGagnante(automate.getListeJoueurs().get(0));
+                        System.out.println("IA gagnante : "+getGagnante().getNom());
                         automate.evoluer("FinPartie");
                     }
-                if(this.automate.getListeJoueurs().size()==1 || nbToursMax==automate.getNumTour())
-                {
-                    gagnante = automate.getListeJoueurs().get(0);
+                    else if(nbToursMax==automate.getNumTour())
+                    {
+                        int score=automate.getListeJoueurs().get(0).getScoreJoueur().getScoreTotal();
 
-                    System.out.println("IA gagnante : "+gagnante.getNom());
-
-                }
+                        for(int k=0;k<automate.getListeJoueurs().size();k++)
+                        {
+                            if(score<automate.getListeJoueurs().get(k).getScoreJoueur().getScoreTotal())
+                            {
+                                score=automate.getListeJoueurs().get(k).getScoreJoueur().getScoreTotal();
+                                setGagnante(automate.getListeJoueurs().get(k));
+                            }
+                        }
+                        System.out.println("IA gagnante : "+getGagnante().getNom());
+                        automate.evoluer("FinPartie");
+                    }
 
                 }
             }

@@ -181,7 +181,6 @@ public class IaVSia extends Parent {
                         Integer.valueOf((String)nb_partie.getValue()));
                 partieIA.automatePourIaInitialisation();
 
-
                 System.out.println("\n-------------------------------------------------------------------------------");
                 System.out.println("    FIN DU TOURNOI");
                 System.out.println("-------------------------------------------------------------------------------\n");
