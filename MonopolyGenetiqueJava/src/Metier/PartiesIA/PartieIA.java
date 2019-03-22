@@ -20,14 +20,15 @@ public class PartieIA {
     private int nbToursMax=0;
     private int nbPartie=0;
 
-    public PartieIA(int nbAI,int nbMutations, int nbToursMax) {
+    public PartieIA(int nbAI,int nbMutations, int nbToursMax,int nbPartie) {
 
         this.nbAI=nbAI;
         this.nbMutations=nbMutations;
         this.nbToursMax=nbToursMax;
         this.listeIaGagnante = new ArrayList<>();
+        this.nbPartie=nbPartie;
 
-        initialisationPartieIA = new InitialisationPartieIA(nbAI,nbMutations,nbToursMax);
+        initialisationPartieIA = new InitialisationPartieIA(nbAI,nbMutations,nbToursMax,nbPartie);
         ArrayList<Color> listeCouleurs = new ArrayList<>();
         for(int i=0 ; i<nbAI ; i++){
             listeCouleurs.add(couleurAdversaire(i));

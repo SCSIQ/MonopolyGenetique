@@ -14,6 +14,7 @@ public class InitialisationPartieIA extends InitialisationPartie{
     private int nb_ia=0;
     private int nb_mutations=0;
     private int nb_tours=0;
+    private int nb_partie=0;
     private ArrayList<Joueur> listeDesIA;
 
     //GETTER SETTER
@@ -28,11 +29,12 @@ public class InitialisationPartieIA extends InitialisationPartie{
 
 
     //CONSTRUCTEUR
-    public InitialisationPartieIA(int nb_ia, int nb_mutations, int nb_tours)
+    public InitialisationPartieIA(int nb_ia, int nb_mutations, int nb_tours, int nb_partie)
     {
         this.nb_ia=nb_ia;
         this.nb_mutations=nb_mutations;
         this.nb_tours=nb_tours;
+        this.nb_partie=nb_partie;
         listeDesIA=new ArrayList<>();
     }
 

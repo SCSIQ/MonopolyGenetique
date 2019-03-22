@@ -168,9 +168,17 @@ public class IaVSia extends Parent {
                 System.out.println("Nombre de tours max par partie : "+Integer.valueOf((String) nb_tours.getValue()));
 
 
-                Tournoi tournoi = new Tournoi(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
+                Tournoi tournoi = new Tournoi(Integer.valueOf((String) nb_ia.getValue()),
+                        Integer.valueOf((String) nb_mutations.getValue()),
+                        Integer.valueOf((String) nb_tours.getValue()),
+                                Integer.valueOf((String)nb_partie.getValue()));
+
                 tournoi.lancerLeTournoi();
-                InitialisationPartieIA partieIA= new InitialisationPartieIA(Integer.valueOf((String) nb_ia.getValue()),Integer.valueOf((String) nb_mutations.getValue()),Integer.valueOf((String) nb_tours.getValue()));
+
+                InitialisationPartieIA partieIA= new InitialisationPartieIA(Integer.valueOf((String) nb_ia.getValue()),
+                        Integer.valueOf((String) nb_mutations.getValue()),
+                        Integer.valueOf((String) nb_tours.getValue()),
+                        Integer.valueOf((String)nb_partie.getValue()));
                 partieIA.automatePourIaInitialisation();
 
 
