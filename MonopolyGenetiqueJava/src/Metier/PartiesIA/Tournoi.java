@@ -37,6 +37,7 @@ public class Tournoi {
                     "PARTIE "+i+"\n");
             p.lancerPartie(nbToursMax);
             i++;
+
        }
     }
 

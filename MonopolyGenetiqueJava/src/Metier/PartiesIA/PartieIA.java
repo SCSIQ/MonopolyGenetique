@@ -13,7 +13,6 @@ public class PartieIA {
 
     private Automate automate;
     private ArrayList<Joueur> listeIA;
-    private ArrayList<Joueur> listeIaGagnante; //liste ou sera stockée les meilleures IA de chaque partie
     private InitialisationPartieIA initialisationPartieIA;
     private int nbAI=0;
     private int nbMutations;
@@ -26,7 +25,6 @@ public class PartieIA {
         this.nbAI=nbAI;
         this.nbMutations=nbMutations;
         this.nbToursMax=nbToursMax;
-        this.listeIaGagnante = new ArrayList<>();
         this.nbPartie=nbPartie;
 
         initialisationPartieIA = new InitialisationPartieIA(nbAI,nbMutations,nbToursMax,nbPartie);
@@ -73,48 +71,46 @@ public class PartieIA {
 
                     if(automate.getListeJoueurs().size()== 1)
                     {
-
                         fini=true;
-                        setGagnante(automate.getListeJoueurs().get(0));
-                        System.out.println("IA gagnante : "+getGagnante().getNom());
+                        automate.getListeIAGagnantes().add(automate.getListeJoueurs().get(0));
+                        //System.out.println("IA gagnante : "+getGagnante().getNom());
                         automate.evoluer("FinPartie");
-                      //  listeIaGagnante.add(getGagnante());
+                        automate.afficheIAGagnantes();
+
                     }
                     else {
                         this.automate.evoluer("tourSuivant");
                     }
                 }
-            if(nbToursMax==automate.getNumTour())
+            if(nbToursMax>=automate.getNumTour())
             {
 
-                fini=true;
-                int score=automate.getListeJoueurs().get(0).getScoreJoueur().getScoreTotal();
-                setGagnante(automate.getListeJoueurs().get(0));
 
+                int score=automate.getListeJoueurs().get(0).getScoreJoueur().getScoreTotal();
+
+                Joueur joueur= null;
                 for(int k=0;k<automate.getListeJoueurs().size();k++)
                 {
-                    if(score<automate.getListeJoueurs().get(k).getScoreJoueur().getScoreTotal())
+                    if(score<=automate.getListeJoueurs().get(k).getScoreJoueur().getScoreTotal())
                     {
                         score=automate.getListeJoueurs().get(k).getScoreJoueur().getScoreTotal();
-                        setGagnante(automate.getListeJoueurs().get(k));
+                        joueur=automate.getListeJoueurs().get(k);
+
                     }
                 }
-                System.out.println("IA gagnante : "+getGagnante().getNom());
+                //System.out.println("IA gagnante : "+automate.getGagnante().getNom());
+              
+                automate.getListeIAGagnantes().add(joueur);
+                automate.afficheIAGagnantes();
 
-               // listeIaGagnante.add(getGagnante());
                 automate.evoluer("FinPartie");
+                fini=true;
             }
         }
+      }
 
-    }
 
-    public Joueur getGagnante() {
-        return gagnante;
-    }
 
-    public void setGagnante(Joueur gagnante) {
-        this.gagnante = gagnante;
-    }
 
     private Color couleurAdversaire(int i)
     {

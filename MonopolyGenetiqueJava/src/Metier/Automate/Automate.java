@@ -30,7 +30,7 @@ public class Automate {
     private int numBouton =0 ;
 
     private boolean partieFinie=false;
-
+    private ArrayList<Joueur> listeIAGagnantes;
 
 
     //CONSTRUCTEUR
@@ -42,6 +42,8 @@ public class Automate {
         this.nombreTourTotal=nbTour;
         System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
+
+        listeIAGagnantes= new ArrayList<>();
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////METHODE
@@ -78,6 +80,24 @@ public class Automate {
 
 
 /////////////////////////////////////////////////////////////////////////////////////GETTER SETTERS
+
+    public ArrayList<Joueur> getListeIAGagnantes() {
+        return listeIAGagnantes;
+    }
+
+    public void setListeIAGagnantes(ArrayList<Joueur> listeIAGagnantes) {
+        this.listeIAGagnantes = listeIAGagnantes;
+    }
+
+    public void afficheIAGagnantes()
+    {
+        System.out.println("LISTE DES IA GAGNANTES ");
+        for(int i=0; i<getListeIAGagnantes().size(); i++)
+        {
+            System.out.println("        "+getListeIAGagnantes().get(i).getNom());
+        }
+    }
+
 
     public boolean isPartieFinie() {return partieFinie;}
     public void setPartieFinie(boolean partieFinie) {this.partieFinie = partieFinie;}
