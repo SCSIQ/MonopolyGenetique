@@ -72,10 +72,10 @@ public class PartieIA {
                     if(automate.getListeJoueurs().size()== 1)
                     {
                         fini=true;
-                        automate.getListeIAGagnantes().add(automate.getListeJoueurs().get(0));
+                        initialisationPartieIA.getListeIAGagnantes().add(automate.getListeJoueurs().get(0));
                         //System.out.println("IA gagnante : "+getGagnante().getNom());
                         automate.evoluer("FinPartie");
-                        automate.afficheIAGagnantes();
+                        initialisationPartieIA.afficheIAGagnantes();
 
                     }
                     else {
@@ -99,14 +99,15 @@ public class PartieIA {
                     }
                 }
                 //System.out.println("IA gagnante : "+automate.getGagnante().getNom());
-              
-                automate.getListeIAGagnantes().add(joueur);
-                automate.afficheIAGagnantes();
+
+                initialisationPartieIA.getListeIAGagnantes().add(joueur);
 
                 automate.evoluer("FinPartie");
                 fini=true;
             }
         }
+
+        initialisationPartieIA.afficheIAGagnantes();
       }
 
 

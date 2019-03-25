@@ -17,6 +17,8 @@ public class InitialisationPartieIA extends InitialisationPartie{
     private int nb_partie=0;
     private ArrayList<Joueur> listeDesIA;
 
+    private ArrayList<Joueur> listeIAGagnantes;
+
     //GETTER SETTER
     public ArrayList<Joueur> getListeDesIA() {
         return listeDesIA;
@@ -24,6 +26,7 @@ public class InitialisationPartieIA extends InitialisationPartie{
 
     public void setListeDesIA(ArrayList<Joueur> listeDesIA) {
         this.listeDesIA = listeDesIA;
+        this.listeIAGagnantes= new ArrayList<>();
     }
 
 
@@ -36,6 +39,7 @@ public class InitialisationPartieIA extends InitialisationPartie{
         this.nb_tours=nb_tours;
         this.nb_partie=nb_partie;
         listeDesIA=new ArrayList<>();
+        this.listeIAGagnantes= new ArrayList<>();
     }
 
     //METHODES
@@ -47,15 +51,30 @@ public class InitialisationPartieIA extends InitialisationPartie{
         }
     }
 
+    public ArrayList<Joueur> getListeIAGagnantes() {
+        return listeIAGagnantes;
+    }
+
+    public void setListeIAGagnantes(ArrayList<Joueur> listeIAGagnantes) {
+        this.listeIAGagnantes = listeIAGagnantes;
+    }
+
+    public void afficheIAGagnantes()
+    {
+        System.out.println("LISTE DES IA GAGNANTES ");
+        for(int i=0; i<getListeIAGagnantes().size(); i++)
+        {
+            System.out.println("        "+getListeIAGagnantes().get(i).getNom());
+        }
+    }
+
     public Automate automatePourIaInitialisation() {
         super.creationListeCases();
         super.creationListeCartesChances();
         super.creationListeCartesCaisseCommune();
         creationListeIA();
 
-        Automate automate = new Automate(listeDesIA, this.listeDesCartesChances, this.listeDesCartesCaisseCommune,nb_tours);
-
-
+        Automate automate = new Automate(listeDesIA, this.listeDesCartesChances, this.listeDesCartesCaisseCommune,nb_tours, listeIAGagnantes);
 
         return automate;
     }

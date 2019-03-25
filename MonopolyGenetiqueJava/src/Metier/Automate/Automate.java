@@ -34,7 +34,7 @@ public class Automate {
 
 
     //CONSTRUCTEUR
-    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune,int nbTour){
+    public Automate(ArrayList<Joueur> listeJoueurs, ArrayList<Cartes> listeDesCartesChances, ArrayList<Cartes> listeDesCartesCaisseCommune,int nbTour, ArrayList<Joueur> listeIAGagnantes){
         this.listeJoueurs = listeJoueurs; //récupère la liste des joueurs depuis la classe InitialisationPartie
         this.listeDesCartesChances = listeDesCartesChances;
         this.listeDesCartesCaisseCommune = listeDesCartesCaisseCommune;
@@ -42,8 +42,8 @@ public class Automate {
         this.nombreTourTotal=nbTour;
         System.out.println("Etat initial : "+this.etatCourant.toString());
         evoluer(""); //pour passer de l'état LancerDesInitial à l'état ChoixPossibles
+        this.listeIAGagnantes= listeIAGagnantes;
 
-        listeIAGagnantes= new ArrayList<>();
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////METHODE
@@ -81,22 +81,7 @@ public class Automate {
 
 /////////////////////////////////////////////////////////////////////////////////////GETTER SETTERS
 
-    public ArrayList<Joueur> getListeIAGagnantes() {
-        return listeIAGagnantes;
-    }
 
-    public void setListeIAGagnantes(ArrayList<Joueur> listeIAGagnantes) {
-        this.listeIAGagnantes = listeIAGagnantes;
-    }
-
-    public void afficheIAGagnantes()
-    {
-        System.out.println("LISTE DES IA GAGNANTES ");
-        for(int i=0; i<getListeIAGagnantes().size(); i++)
-        {
-            System.out.println("        "+getListeIAGagnantes().get(i).getNom());
-        }
-    }
 
 
     public boolean isPartieFinie() {return partieFinie;}

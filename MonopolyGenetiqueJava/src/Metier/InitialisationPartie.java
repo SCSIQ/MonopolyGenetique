@@ -61,7 +61,7 @@ public abstract class InitialisationPartie {
         creationListeCartesChances();
         creationListeCartesCaisseCommune();
         creationListeJoueurs(nombreJoueurs, listeCouleurs);
-        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances, this.listeDesCartesCaisseCommune,nbTour);
+        Automate automate = new Automate(this.listeJoueurs, this.listeDesCartesChances, this.listeDesCartesCaisseCommune,nbTour, null);
 
         return automate;
     }
