@@ -10,6 +10,8 @@ public class Tournoi {
     private int nbMutations;
     private int nbpartie;
 
+    private InputStream fichierLire;
+    private  FileWriter fichierEcrire;
 
     private int nbToursMax;
 
@@ -27,8 +29,8 @@ public class Tournoi {
 
         System.out.println(System.getProperty("user.home")); //ne renvoit pas le bon répertoire, à voir
         try{
-            InputStream flux=new FileInputStream(System.getProperty("user.home")+"/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/test.txt");
-            InputStreamReader lecture=new InputStreamReader(flux);
+            this.fichierLire=new FileInputStream(System.getProperty("user.home")+"/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/test.txt");
+            InputStreamReader lecture=new InputStreamReader(fichierLire);
             BufferedReader buff=new BufferedReader(lecture);
             String ligne;
             while ((ligne=buff.readLine())!=null){
@@ -39,7 +41,15 @@ public class Tournoi {
         catch (Exception e){
             System.out.println(e.toString());
         }
+        try {
+            fichierEcrire = new FileWriter("" + System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt", true);
+            fichierEcrire.write("COUCOU C'EST MOI");
+            fichierEcrire.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } {
 
+        }
 
     }
 
@@ -53,7 +63,7 @@ public class Tournoi {
             System.out.println("\n**************************************************************************************************************************************************************************************************\n"
                     +"**************************************************************************************************************************************************************************************************\n"+
                     "PARTIE "+i+"\n");
-            p.lancerPartie(nbToursMax);
+            p.lancerPartie(nbToursMax, fichierLire, fichierEcrire);
             i++;
 
        }

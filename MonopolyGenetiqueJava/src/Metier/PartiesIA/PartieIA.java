@@ -7,6 +7,8 @@ import Metier.InitialisationPartieIA;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.scene.paint.Color;
 
+import java.io.FileWriter;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class PartieIA {
@@ -35,7 +37,7 @@ public class PartieIA {
         this.listeIA = initialisationPartieIA.getListeDesIA();
     }
 
-    public void lancerPartie(int tourTotal) {
+    public void lancerPartie(int tourTotal, InputStream fichierLire, FileWriter fichierEcrire) {
         int compteurPartie=1;
         System.out.println("\n    DEBUT DE LA PARTIE\n");
         this.automate = this.initialisationPartieIA.automatePourIaInitialisation();
@@ -76,6 +78,7 @@ public class PartieIA {
                         //System.out.println("IA gagnante : "+getGagnante().getNom());
                         automate.evoluer("FinPartie");
                         initialisationPartieIA.afficheIAGagnantes();
+
 
                     }
                     else {
