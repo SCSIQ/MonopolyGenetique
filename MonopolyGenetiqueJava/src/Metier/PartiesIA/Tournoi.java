@@ -25,6 +25,7 @@ public class Tournoi {
             this.listeParties.add(new PartieIA(nbAI,nbMutations, this.nbToursMax,nbpartie));
         }
 
+        System.out.println(System.getProperty("user.dir")); //ne renvoit pas le bon répertoire, à voir
         try{
             InputStream flux=new FileInputStream("C:/Users/lucie/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/test.txt");
             InputStreamReader lecture=new InputStreamReader(flux);
