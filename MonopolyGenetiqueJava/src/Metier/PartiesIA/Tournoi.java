@@ -1,5 +1,6 @@
 package Metier.PartiesIA;
 
+import java.io.*;
 import java.util.ArrayList;
 
 public class Tournoi {
@@ -23,6 +24,22 @@ public class Tournoi {
         for (int j = 0; j < nbpartie; j++) {
             this.listeParties.add(new PartieIA(nbAI,nbMutations, this.nbToursMax,nbpartie));
         }
+
+        try{
+            InputStream flux=new FileInputStream("C:/Users/lucie/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/test.txt");
+            InputStreamReader lecture=new InputStreamReader(flux);
+            BufferedReader buff=new BufferedReader(lecture);
+            String ligne;
+            while ((ligne=buff.readLine())!=null){
+                System.out.println(ligne);
+            }
+            buff.close();
+        }
+        catch (Exception e){
+            System.out.println(e.toString());
+        }
+
+
     }
 
     public void lancerLeTournoi(){
