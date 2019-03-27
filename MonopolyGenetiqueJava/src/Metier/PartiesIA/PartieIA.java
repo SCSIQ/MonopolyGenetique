@@ -8,6 +8,7 @@ import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.scene.paint.Color;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -79,6 +80,15 @@ public class PartieIA {
                         automate.evoluer("FinPartie");
                         initialisationPartieIA.afficheIAGagnantes();
 
+                        try {
+                            fichierEcrire = new FileWriter("" + System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt", true);
+                            fichierEcrire.write(automate.getJoueurCourant().getNom()+"\n");
+                            fichierEcrire.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+
 
                     }
                     else {
@@ -106,6 +116,14 @@ public class PartieIA {
                 initialisationPartieIA.getListeIAGagnantes().add(joueur);
 
                 automate.evoluer("FinPartie");
+                try {
+                    fichierEcrire = new FileWriter("" + System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt", true);
+                    fichierEcrire.write(joueur.getNom()+" \n");
+                    fichierEcrire.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
                 fini=true;
             }
         }

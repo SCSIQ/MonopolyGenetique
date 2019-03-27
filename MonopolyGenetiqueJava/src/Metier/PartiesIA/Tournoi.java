@@ -29,7 +29,7 @@ public class Tournoi {
 
         System.out.println(System.getProperty("user.home")); //ne renvoit pas le bon répertoire, à voir
         try{
-            this.fichierLire=new FileInputStream(System.getProperty("user.home")+"/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/test.txt");
+            this.fichierLire=new FileInputStream(System.getProperty("user.home")+"/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt");
             InputStreamReader lecture=new InputStreamReader(fichierLire);
             BufferedReader buff=new BufferedReader(lecture);
             String ligne;
@@ -43,7 +43,7 @@ public class Tournoi {
         }
         try {
             fichierEcrire = new FileWriter("" + System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt", true);
-            fichierEcrire.write("COUCOU C'EST MOI");
+            //fichierEcrire.write("COUCOU C'EST MOI");
             fichierEcrire.close();
         } catch (IOException e) {
             e.printStackTrace();
