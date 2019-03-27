@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import static Metier.PartiesIA.CritereIA.*;
+
 public class PartieIA {
 
     private Automate automate;
@@ -82,7 +84,14 @@ public class PartieIA {
 
                         try {
                             fichierEcrire = new FileWriter("" + System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt", true);
-                            fichierEcrire.write(automate.getJoueurCourant().getNom()+"\n");
+                            fichierEcrire.write(automate.getJoueurCourant().getNom()+" "+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(pasBeaucoupArgent)+" "+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(beaucoupArgent)+" "+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(aCarteLiberePrison)+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(caseSuivanteBonne)+" "+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(caseSuivanteMauvaise)+" "+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(dejaUneCase)+" "+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(terrainRapportePlus)+" "+"\n");
                             fichierEcrire.close();
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -118,7 +127,14 @@ public class PartieIA {
                 automate.evoluer("FinPartie");
                 try {
                     fichierEcrire = new FileWriter("" + System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt", true);
-                    fichierEcrire.write(joueur.getNom()+" \n");
+                    fichierEcrire.write(joueur.getNom()+" "+
+                            ((IA)joueur).getPoids().get(pasBeaucoupArgent)+" "+
+                            ((IA)joueur).getPoids().get(beaucoupArgent)+" "+
+                            ((IA)joueur).getPoids().get(aCarteLiberePrison)+
+                            ((IA)joueur).getPoids().get(caseSuivanteBonne)+" "+
+                            ((IA)joueur).getPoids().get(caseSuivanteMauvaise)+" "+
+                            ((IA)joueur).getPoids().get(dejaUneCase)+" "+
+                            ((IA)joueur).getPoids().get(terrainRapportePlus)+" "+"\n");
                     fichierEcrire.close();
                 } catch (IOException e) {
                     e.printStackTrace();

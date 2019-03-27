@@ -20,6 +20,14 @@ public class IA extends Joueur {
     private HashMap<CritereIA, Double> poids;
     private Decision decision;
 
+    public HashMap<CritereIA, Double> getPoids() {
+        return poids;
+    }
+
+    public void setPoids(HashMap<CritereIA, Double> poids) {
+        this.poids = poids;
+    }
+
     //CONSTRUCTEURS
     public IA(ArrayList<Cases> listeCases, Color couleur, CentreDecision DM) {
         super(listeCases, couleur);
