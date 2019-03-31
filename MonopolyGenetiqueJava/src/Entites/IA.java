@@ -10,6 +10,8 @@ import Metier.Plateau.ListeProprietes.Proprietes;
 import Metier.Plateau.Prison;
 import javafx.scene.paint.Color;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 import static Metier.PartiesIA.CritereIA.*;
@@ -32,7 +34,7 @@ public class IA extends Joueur {
     public IA(ArrayList<Cases> listeCases, Color couleur, CentreDecision DM) {
         super(listeCases, couleur);
         poids = new HashMap<CritereIA,Double>();
-        initialisationHashMap();
+        initialisationHashMap(false, null);
         decision = new Decision(this);
     }
 
@@ -47,27 +49,50 @@ public class IA extends Joueur {
     /**
      * initialise la hashmap des critères avec un poids random pour chaque critères
      */
-    public void initialisationHashMap()
+    public void initialisationHashMap(boolean res, File f)
     {
-        System.out.println("IA "+this.getNom());
-        //INITIALISATION
-        poids.put(pasBeaucoupArgent,0.0);
-        poids.put(beaucoupArgent,0.0);
-        poids.put(aCarteLiberePrison,0.0);
-        poids.put(caseSuivanteMauvaise,0.0);
-        poids.put(caseSuivanteBonne,0.0);
-        poids.put(dejaUneCase,0.0);
-        poids.put(terrainRapportePlus,0.0);
+        if(res==false) {
+            System.out.println("IA " + this.getNom());
+            //INITIALISATION
+            poids.put(pasBeaucoupArgent, 0.0);
+            poids.put(beaucoupArgent, 0.0);
+            poids.put(aCarteLiberePrison, 0.0);
+            poids.put(caseSuivanteMauvaise, 0.0);
+            poids.put(caseSuivanteBonne, 0.0);
+            poids.put(dejaUneCase, 0.0);
+            poids.put(terrainRapportePlus, 0.0);
 
-        //REMPLISSAGE AVEC LES POIDS ALEA
-        for(CritereIA i : poids.keySet())
+            //REMPLISSAGE AVEC LES POIDS ALEA
+            for (CritereIA i : poids.keySet()) {
+                Random rand = new Random();
+                Double nb = (double) Math.round(rand.nextDouble() * 100) / 100;
+
+                poids.put(i, nb);
+
+                System.out.println("critères " + i.toString() + "/" + poids.get(i));
+            }
+        } else
         {
-            Random rand = new Random();
-            Double nb= (double) Math.round(rand.nextDouble()*100)/100;
+            Scanner input = null;
+            try {
+                input = new Scanner(f);
 
-            poids.put(i,nb);
+            }catch (FileNotFoundException e)
+            {
+                e.printStackTrace();
+            }
 
-            System.out.println("critères "+i.toString()+"/"+poids.get(i));
+                String[] contenu = input.nextLine().split(" ");
+            System.out.println("JE SUIS LA");
+                poids.put(pasBeaucoupArgent, Double.valueOf(contenu[1]));
+                poids.put(beaucoupArgent, Double.valueOf(contenu[2]));
+                poids.put(aCarteLiberePrison, Double.valueOf(contenu[3]));
+                poids.put(caseSuivanteBonne, Double.valueOf(contenu[4]));
+                poids.put(caseSuivanteMauvaise, Double.valueOf(contenu[5]));
+                poids.put(dejaUneCase, Double.valueOf(contenu[6]));
+                poids.put(terrainRapportePlus, Double.valueOf(contenu[7]));
+                input.remove();
+
         }
 
     }

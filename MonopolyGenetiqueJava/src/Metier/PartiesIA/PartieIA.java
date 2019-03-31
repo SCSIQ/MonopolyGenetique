@@ -7,6 +7,7 @@ import Metier.InitialisationPartieIA;
 import Metier.Plateau.ListeProprietes.Proprietes;
 import javafx.scene.paint.Color;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,11 +41,18 @@ public class PartieIA {
         this.listeIA = initialisationPartieIA.getListeDesIA();
     }
 
-    public void lancerPartie(int tourTotal, InputStream fichierLire, FileWriter fichierEcrire) {
+    public void lancerPartie(int tourTotal, InputStream fichierLire, FileWriter fichierEcrire, int numPartie) {
         int compteurPartie=1;
         System.out.println("\n    DEBUT DE LA PARTIE\n");
         this.automate = this.initialisationPartieIA.automatePourIaInitialisation();
         boolean fini=false;
+
+        if(numPartie<1) {
+            for (int i = 0; i < this.automate.getListeJoueurs().size(); i++) {
+                ((IA) this.automate.getListeJoueurs().get(i)).initialisationHashMap(true, new File(System.getProperty("user.home") + "/Documents/GitHub/MonopolyGenetique/MonopolyGenetiqueJava/src/Metier/PartiesIA/texte/text.txt"));
+
+            }
+        }
 
         automate.setNombreTourTotal(tourTotal);
 
@@ -87,7 +95,7 @@ public class PartieIA {
                             fichierEcrire.write(automate.getJoueurCourant().getNom()+" "+
                                     ((IA)automate.getJoueurCourant()).getPoids().get(pasBeaucoupArgent)+" "+
                                     ((IA)automate.getJoueurCourant()).getPoids().get(beaucoupArgent)+" "+
-                                    ((IA)automate.getJoueurCourant()).getPoids().get(aCarteLiberePrison)+
+                                    ((IA)automate.getJoueurCourant()).getPoids().get(aCarteLiberePrison)+" "+
                                     ((IA)automate.getJoueurCourant()).getPoids().get(caseSuivanteBonne)+" "+
                                     ((IA)automate.getJoueurCourant()).getPoids().get(caseSuivanteMauvaise)+" "+
                                     ((IA)automate.getJoueurCourant()).getPoids().get(dejaUneCase)+" "+
@@ -130,7 +138,7 @@ public class PartieIA {
                     fichierEcrire.write(joueur.getNom()+" "+
                             ((IA)joueur).getPoids().get(pasBeaucoupArgent)+" "+
                             ((IA)joueur).getPoids().get(beaucoupArgent)+" "+
-                            ((IA)joueur).getPoids().get(aCarteLiberePrison)+
+                            ((IA)joueur).getPoids().get(aCarteLiberePrison)+" "+
                             ((IA)joueur).getPoids().get(caseSuivanteBonne)+" "+
                             ((IA)joueur).getPoids().get(caseSuivanteMauvaise)+" "+
                             ((IA)joueur).getPoids().get(dejaUneCase)+" "+
